@@ -123,19 +123,19 @@ export function EpisodeOutlineBuilder() {
       <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-5">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
           <div className="md:col-span-2 space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Episode Title / Working Name
             </label>
             <input
               type="text"
               value={episodeTitle}
               onChange={(e) => setEpisodeTitle(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-sm focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-sm focus:outline-none focus:border-orange-500/70"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Target Duration (Minutes)
             </label>
             <div className="flex items-center gap-2">
@@ -145,9 +145,9 @@ export function EpisodeOutlineBuilder() {
                 max={180}
                 value={targetDuration}
                 onChange={(e) => setTargetDuration(Number(e.target.value))}
-                className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-sm focus:outline-none focus:border-orange-500/70 text-center font-mono font-bold"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-sm focus:outline-none focus:border-orange-500/70 text-center font-mono font-bold"
               />
-              <span className="text-xs text-slate-400">mins</span>
+              <span className="text-xs text-neutral-500">mins</span>
             </div>
           </div>
         </div>
@@ -155,8 +155,8 @@ export function EpisodeOutlineBuilder() {
         {/* Time Budget Status Bar */}
         <div className="p-4 rounded-xl bg-studio-darkest border border-studio-border space-y-2">
           <div className="flex items-center justify-between text-xs font-semibold">
-            <span className="text-slate-300 flex items-center gap-1.5">
-              <Clock className="w-4 h-4 text-orange-400" />
+            <span className="text-neutral-700 dark:text-neutral-300 flex items-center gap-1.5">
+              <Clock className="w-4 h-4 text-orange-500 dark:text-orange-400" />
               Time Budget: {totalBudgeted} of {targetDuration} mins planned
             </span>
             <span
@@ -232,12 +232,12 @@ export function EpisodeOutlineBuilder() {
                     type="text"
                     value={seg.title}
                     onChange={(e) => handleUpdateSegment(seg.id, "title", e.target.value)}
-                    className="w-full bg-transparent text-sm font-bold text-white border-b border-transparent hover:border-studio-border focus:border-orange-500/70 focus:outline-none px-1 py-0.5"
+                    className="w-full bg-transparent text-sm font-bold text-neutral-900 dark:text-white border-b border-transparent hover:border-studio-border focus:border-orange-500/70 focus:outline-none px-1 py-0.5"
                   />
                 </div>
 
                 <div className="flex items-center gap-3 self-end sm:self-center">
-                  <div className="flex items-center gap-1 text-xs text-slate-400">
+                  <div className="flex items-center gap-1 text-xs text-neutral-500">
                     <span>Duration:</span>
                     <input
                       type="number"
@@ -245,14 +245,14 @@ export function EpisodeOutlineBuilder() {
                       max={120}
                       value={seg.durationMin}
                       onChange={(e) => handleUpdateSegment(seg.id, "durationMin", Number(e.target.value))}
-                      className="w-14 px-2 py-1 bg-studio-darkest border border-studio-border rounded text-white font-mono text-xs text-center focus:outline-none"
+                      className="w-14 px-2 py-1 bg-studio-darkest border border-studio-border rounded text-neutral-900 dark:text-white font-mono text-xs text-center focus:outline-none"
                     />
                     <span>min</span>
                   </div>
 
                   <button
                     onClick={() => handleRemoveSegment(seg.id)}
-                    className="p-1 rounded text-slate-500 hover:text-red-400 transition-colors"
+                    className="p-1 rounded text-neutral-400 hover:text-red-500 transition-colors cursor-pointer"
                     title="Remove segment"
                   >
                     <Trash2 className="w-4 h-4" />
@@ -266,7 +266,7 @@ export function EpisodeOutlineBuilder() {
                   value={seg.notes}
                   onChange={(e) => handleUpdateSegment(seg.id, "notes", e.target.value)}
                   placeholder="Key bullet points, quotes, questions, or sponsor copy..."
-                  className="w-full px-3 py-2 rounded-xl bg-studio-darkest border border-studio-border text-xs text-slate-300 placeholder-slate-500 focus:outline-none focus:border-orange-500/70 resize-y"
+                  className="w-full px-3 py-2 rounded-xl bg-studio-darkest border border-studio-border text-xs text-neutral-900 dark:text-slate-300 placeholder-neutral-400 dark:placeholder-slate-500 focus:outline-none focus:border-orange-500/70 resize-y"
                 />
               </div>
             </div>

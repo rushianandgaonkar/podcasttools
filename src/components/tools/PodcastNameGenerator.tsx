@@ -130,15 +130,15 @@ export function PodcastNameGenerator() {
 
           {/* Custom Keyword */}
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
-              Custom Word or Theme <span className="text-slate-500 font-normal">(Optional)</span>
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
+              Custom Word or Theme <span className="text-neutral-500 font-normal">(Optional)</span>
             </label>
             <input
               type="text"
               value={customKeyword}
               onChange={(e) => setCustomKeyword(e.target.value)}
               placeholder="e.g. AI Agents, Marathon, Indie Hacker..."
-              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
         </div>
@@ -146,15 +146,15 @@ export function PodcastNameGenerator() {
         {/* Style Filters */}
         <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-studio-border/60">
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-xs text-slate-400 mr-1">Brand Style:</span>
+            <span className="text-xs text-neutral-600 dark:text-neutral-400 mr-1">Brand Style:</span>
             {(["all", "Authoritative", "Modern", "Clever", "Playful", "Narrative"] as const).map((style) => (
               <button
                 key={style}
                 onClick={() => setSelectedStyle(style)}
-                className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all ${
+                className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer ${
                   selectedStyle === style
                     ? "bg-orange-500 text-white shadow-md shadow-orange-500/20"
-                    : "bg-studio-elevated text-slate-400 hover:text-white border border-studio-border"
+                    : "bg-studio-elevated text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
                 }`}
               >
                 {style === "all" ? "All Styles" : style}
@@ -166,7 +166,7 @@ export function PodcastNameGenerator() {
           {favorites.length > 0 && (
             <button
               onClick={handleExportFavorites}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-orange-400 hover:text-orange-300 border border-studio-border text-xs font-semibold transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-orange-500 hover:text-orange-600 border border-studio-border text-xs font-semibold transition-colors cursor-pointer"
             >
               <Bookmark className="w-3.5 h-3.5 fill-current" />
               Export {favorites.length} Saved
@@ -188,33 +188,33 @@ export function PodcastNameGenerator() {
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-studio-dark border border-studio-border text-slate-400">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-studio-dark border border-studio-border text-neutral-700 dark:text-neutral-300">
                     {item.style}
                   </span>
                   <button
                     onClick={() => toggleFavorite(item.name)}
-                    className="p-1.5 rounded-lg hover:bg-studio-elevated text-slate-400 hover:text-red-400 transition-colors"
+                    className="p-1.5 rounded-lg hover:bg-studio-elevated text-neutral-400 hover:text-red-500 transition-colors"
                     title={isFav ? "Remove from favorites" : "Save to favorites"}
                   >
                     <Heart className={`w-4 h-4 ${isFav ? "fill-red-500 text-red-500" : ""}`} />
                   </button>
                 </div>
 
-                <h3 className="text-base font-bold text-white group-hover:text-orange-400 transition-colors mb-1.5">
+                <h3 className="text-base font-bold text-neutral-900 dark:text-white group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors mb-1.5">
                   {item.name}
                 </h3>
-                <p className="text-xs text-slate-400 leading-relaxed mb-4">
+                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                   {item.tagline}
                 </p>
               </div>
 
               <div className="pt-3 border-t border-studio-border/50 flex items-center justify-between">
-                <span className="text-[11px] text-slate-500">
+                <span className="text-[11px] text-neutral-500">
                   Ready to brand
                 </span>
                 <button
                   onClick={() => handleCopy(item.name)}
-                  className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-slate-300 text-xs font-semibold transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-neutral-700 dark:text-neutral-300 text-xs font-semibold transition-all cursor-pointer"
                 >
                   {isCopied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   <span>{isCopied ? "Copied" : "Copy"}</span>

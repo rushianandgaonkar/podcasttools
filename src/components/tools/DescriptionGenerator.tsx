@@ -55,13 +55,13 @@ ${links}`;
       <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-4">
         {/* Mode Switcher */}
         <div className="flex items-center gap-2 pb-3 border-b border-studio-border/60">
-          <span className="text-xs font-semibold text-slate-400 mr-2">Generate:</span>
+          <span className="text-xs font-semibold text-neutral-700 dark:text-neutral-300 mr-2">Generate:</span>
           <button
             onClick={() => setMode("episode")}
             className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
               mode === "episode"
                 ? "bg-orange-500 text-white shadow-sm"
-                : "bg-studio-darkest text-slate-400 hover:text-white border border-studio-border"
+                : "bg-studio-darkest text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
             }`}
           >
             Episode Description
@@ -71,7 +71,7 @@ ${links}`;
             className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
               mode === "show"
                 ? "bg-orange-500 text-white shadow-sm"
-                : "bg-studio-darkest text-slate-400 hover:text-white border border-studio-border"
+                : "bg-studio-darkest text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
             }`}
           >
             Overall Show / Channel Bio
@@ -80,51 +80,51 @@ ${links}`;
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               {mode === "episode" ? "Episode Title" : "Podcast Name"}
             </label>
             <input
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Target Audience
             </label>
             <input
               type="text"
               value={audience}
               onChange={(e) => setAudience(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
         </div>
 
         <div className="space-y-1.5">
-          <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+          <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
             Key Topics & Takeaways
           </label>
           <textarea
             rows={2}
             value={keyPoints}
             onChange={(e) => setKeyPoints(e.target.value)}
-            className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
+            className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
           />
         </div>
 
         <div className="space-y-1.5">
-          <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+          <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
             Host Links / CTA
           </label>
           <input
             type="text"
             value={links}
             onChange={(e) => setLinks(e.target.value)}
-            className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+            className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
           />
         </div>
       </div>
@@ -135,18 +135,18 @@ ${links}`;
         <div className="lg:col-span-2 p-6 rounded-2xl bg-studio-card border border-studio-border flex flex-col justify-between space-y-4">
           <div>
             <div className="flex items-center justify-between pb-3 border-b border-studio-border/60 mb-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
+              <span className="text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
                 SEO-Optimized Description ({output.length} chars)
               </span>
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 transition-all"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 transition-all cursor-pointer"
               >
                 {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {copied ? "Copied!" : "Copy Description"}
               </button>
             </div>
-            <pre className="p-4 rounded-xl bg-studio-darkest border border-studio-border text-xs text-slate-200 font-sans leading-relaxed whitespace-pre-wrap max-h-[380px] overflow-y-auto">
+            <pre className="p-4 rounded-xl bg-studio-darkest border border-studio-border text-xs text-neutral-900 dark:text-neutral-100 font-sans leading-relaxed whitespace-pre-wrap max-h-[380px] overflow-y-auto select-text">
               {output}
             </pre>
           </div>
@@ -155,19 +155,19 @@ ${links}`;
         {/* Mobile Cut-Off Inspector */}
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-4">
           <div className="flex items-center gap-2 pb-2 border-b border-studio-border/60">
-            <Smartphone className="w-4 h-4 text-orange-400" />
-            <h3 className="text-xs font-bold uppercase tracking-wider text-white">
+            <Smartphone className="w-4 h-4 text-orange-500 dark:text-orange-400" />
+            <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white">
               Mobile &ldquo;See More&rdquo; Cutoff
             </h3>
           </div>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-neutral-600 dark:text-neutral-400">
             Apple Podcasts truncates descriptions after the first ~140 characters. Ensure your high-stakes hook fits here:
           </p>
-          <div className="p-3.5 rounded-xl bg-studio-darkest border border-studio-border text-xs text-white leading-relaxed font-sans">
-            <span className="text-orange-300 font-semibold">{mobileHook}</span>
-            <span className="text-slate-500"> ...more</span>
+          <div className="p-3.5 rounded-xl bg-studio-darkest border border-studio-border text-xs text-neutral-900 dark:text-neutral-100 leading-relaxed font-sans">
+            <span className="text-orange-600 dark:text-orange-300 font-semibold">{mobileHook}</span>
+            <span className="text-neutral-500"> ...more</span>
           </div>
-          <span className="text-[11px] text-emerald-400 font-medium block">
+          <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium block">
             ✓ Primary keyword and listener hook appear before the cut-off.
           </span>
         </div>

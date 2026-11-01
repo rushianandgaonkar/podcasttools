@@ -46,19 +46,19 @@ export function ReviewResponseGenerator() {
       <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Reviewer Name / Handle
             </label>
             <input
               type="text"
               value={reviewer}
               onChange={(e) => setReviewer(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Review Sentiment
             </label>
             <div className="flex gap-2">
@@ -70,10 +70,10 @@ export function ReviewResponseGenerator() {
                 <button
                   key={item.id}
                   onClick={() => setSentiment(item.id as any)}
-                  className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-all ${
+                  className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                     sentiment === item.id
                       ? "bg-orange-500 text-white shadow-sm"
-                      : "bg-studio-darkest text-slate-400 hover:text-white border border-studio-border"
+                      : "bg-studio-darkest text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
                   }`}
                 >
                   {item.label}
@@ -84,14 +84,14 @@ export function ReviewResponseGenerator() {
         </div>
 
         <div className="space-y-1.5">
-          <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+          <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
             What Did the Reviewer Say?
           </label>
           <textarea
             rows={2}
             value={snippet}
             onChange={(e) => setSnippet(e.target.value)}
-            className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
+            className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
           />
         </div>
       </div>
@@ -102,63 +102,63 @@ export function ReviewResponseGenerator() {
         <div className="p-5 rounded-2xl bg-studio-card border border-studio-border flex flex-col justify-between space-y-4">
           <div>
             <div className="flex items-center justify-between pb-2 border-b border-studio-border/60 mb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-white">
+              <span className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white">
                 🎙️ On-Air Shoutout Script
               </span>
               <button
                 onClick={() => handleCopy(responses.onAir, "onair")}
-                className="text-xs text-orange-400 hover:text-orange-300 font-semibold"
+                className="text-xs text-orange-600 dark:text-orange-400 hover:text-orange-500 font-semibold cursor-pointer"
               >
                 {copiedTab === "onair" ? "Copied!" : "Copy"}
               </button>
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed font-sans">
+            <p className="text-xs text-neutral-800 dark:text-slate-200 leading-relaxed font-sans">
               {responses.onAir}
             </p>
           </div>
-          <span className="text-[11px] text-slate-500">Read on microphone during intro or outro</span>
+          <span className="text-[11px] text-neutral-500">Read on microphone during intro or outro</span>
         </div>
 
         {/* Social Media Reply */}
         <div className="p-5 rounded-2xl bg-studio-card border border-studio-border flex flex-col justify-between space-y-4">
           <div>
             <div className="flex items-center justify-between pb-2 border-b border-studio-border/60 mb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-white">
+              <span className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white">
                 💬 Social Media Reply
               </span>
               <button
                 onClick={() => handleCopy(responses.social, "social")}
-                className="text-xs text-orange-400 hover:text-orange-300 font-semibold"
+                className="text-xs text-orange-600 dark:text-orange-400 hover:text-orange-500 font-semibold cursor-pointer"
               >
                 {copiedTab === "social" ? "Copied!" : "Copy"}
               </button>
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed font-sans">
+            <p className="text-xs text-neutral-800 dark:text-slate-200 leading-relaxed font-sans">
               {responses.social}
             </p>
           </div>
-          <span className="text-[11px] text-slate-500">For Twitter, Threads, or Instagram</span>
+          <span className="text-[11px] text-neutral-500">For Twitter, Threads, or Instagram</span>
         </div>
 
         {/* Host Email/DM */}
         <div className="p-5 rounded-2xl bg-studio-card border border-studio-border flex flex-col justify-between space-y-4">
           <div>
             <div className="flex items-center justify-between pb-2 border-b border-studio-border/60 mb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-white">
+              <span className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white">
                 ✉️ Host Direct Message
               </span>
               <button
                 onClick={() => handleCopy(responses.email, "email")}
-                className="text-xs text-orange-400 hover:text-orange-300 font-semibold"
+                className="text-xs text-orange-600 dark:text-orange-400 hover:text-orange-500 font-semibold cursor-pointer"
               >
                 {copiedTab === "email" ? "Copied!" : "Copy"}
               </button>
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed font-sans whitespace-pre-wrap">
+            <p className="text-xs text-neutral-800 dark:text-slate-200 leading-relaxed font-sans whitespace-pre-wrap">
               {responses.email}
             </p>
           </div>
-          <span className="text-[11px] text-slate-500">Private thank-you note or email</span>
+          <span className="text-[11px] text-neutral-500">Private thank-you note or email</span>
         </div>
       </div>
     </div>

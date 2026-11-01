@@ -61,33 +61,33 @@ export function TranscriptFormatter() {
       <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Replace Speaker 1 With:
             </label>
             <input
               type="text"
               value={speaker1}
               onChange={(e) => setSpeaker1(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Replace Speaker 2 With:
             </label>
             <input
               type="text"
               value={speaker2}
               onChange={(e) => setSpeaker2(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
         </div>
 
         {/* Toggles */}
         <div className="flex flex-wrap items-center gap-6 pt-2 border-t border-studio-border/60 text-xs">
-          <label className="flex items-center gap-2 text-slate-300 cursor-pointer">
+          <label className="flex items-center gap-2 text-neutral-700 dark:text-neutral-300 cursor-pointer">
             <input
               type="checkbox"
               checked={stripFillers}
@@ -97,7 +97,7 @@ export function TranscriptFormatter() {
             <span>Strip filler words (&ldquo;um&rdquo;, &ldquo;uh&rdquo;, &ldquo;you know&rdquo;)</span>
           </label>
 
-          <label className="flex items-center gap-2 text-slate-300 cursor-pointer">
+          <label className="flex items-center gap-2 text-neutral-700 dark:text-neutral-300 cursor-pointer">
             <input
               type="checkbox"
               checked={stripTimestamps}
@@ -113,7 +113,7 @@ export function TranscriptFormatter() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Input */}
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-3">
-          <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+          <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
             Paste Raw Automated Transcript:
           </label>
           <textarea
@@ -121,7 +121,7 @@ export function TranscriptFormatter() {
             value={rawText}
             onChange={(e) => setRawText(e.target.value)}
             placeholder="Paste Whisper, Otter, Descript or Zoom raw transcript text..."
-            className="w-full px-4 py-3 rounded-xl bg-studio-darkest border border-studio-border text-white font-mono text-xs focus:outline-none focus:border-orange-500/70 resize-y"
+            className="w-full px-4 py-3 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white font-mono text-xs focus:outline-none focus:border-orange-500/70 resize-y"
           />
         </div>
 
@@ -129,32 +129,32 @@ export function TranscriptFormatter() {
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border flex flex-col justify-between space-y-3">
           <div>
             <div className="flex items-center justify-between pb-2 border-b border-studio-border/60 mb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
+              <span className="text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
                 Formatted Publication-Ready Transcript
               </span>
               <div className="flex items-center gap-2">
                 <button
                   onClick={handleCopy}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 transition-all cursor-pointer"
                 >
                   {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                   {copied ? "Copied!" : "Copy"}
                 </button>
                 <button
                   onClick={handleDownload}
-                  className="p-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-slate-300 border border-studio-border"
+                  className="p-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-neutral-700 dark:text-neutral-300 border border-studio-border cursor-pointer"
                 >
                   <Download className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
-            <pre className="p-4 rounded-xl bg-studio-darkest border border-studio-border text-xs text-slate-200 font-sans leading-relaxed whitespace-pre-wrap max-h-[280px] overflow-y-auto">
+            <pre className="p-4 rounded-xl bg-studio-darkest border border-studio-border text-xs text-neutral-900 dark:text-neutral-100 font-sans leading-relaxed whitespace-pre-wrap max-h-[280px] overflow-y-auto select-text">
               {output}
             </pre>
           </div>
 
-          <div className="text-[11px] text-slate-500 pt-1">
+          <div className="text-[11px] text-neutral-500 pt-1">
             Word count: {output.split(/\s+/).filter(Boolean).length} words
           </div>
         </div>

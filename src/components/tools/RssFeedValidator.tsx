@@ -284,17 +284,17 @@ export function RssFeedValidator() {
             value={feedXml}
             onChange={(e) => setFeedXml(e.target.value)}
             placeholder="Paste your podcast RSS feed XML here (starts with <?xml version='1.0' ...> <rss>)..."
-            className="w-full px-4 py-3 rounded-xl bg-studio-darkest border border-studio-border text-white font-mono text-xs focus:outline-none focus:border-orange-500/70"
+            className="w-full px-4 py-3 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white font-mono text-xs focus:outline-none focus:border-orange-500/70"
           />
         </div>
 
         <div className="flex items-center justify-between pt-1">
-          <span className="text-[11px] text-slate-500">
+          <span className="text-[11px] text-neutral-500">
             Validated 100% in your browser using standard DOMParser.
           </span>
           <button
             onClick={handleValidate}
-            className="px-5 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs shadow-md shadow-orange-500/20 transition-all"
+            className="px-5 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs shadow-md shadow-orange-500/20 transition-all cursor-pointer"
           >
             Run RSS Audit
           </button>
@@ -306,15 +306,15 @@ export function RssFeedValidator() {
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-studio-border/60">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
+              <span className="text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-slate-400 block">
                 Validation Result
               </span>
-              <h3 className="text-lg font-bold text-white">
+              <h3 className="text-lg font-bold text-neutral-900 dark:text-white">
                 {results.showTitle || "Podcast RSS Feed Audit"}
               </h3>
             </div>
-            <div className="text-xs text-slate-400">
-              <span className="font-semibold text-white">{results.episodeCount}</span> episode(s) detected
+            <div className="text-xs text-neutral-600 dark:text-slate-400">
+              <span className="font-semibold text-neutral-900 dark:text-white">{results.episodeCount}</span> episode(s) detected
             </div>
           </div>
 
@@ -327,27 +327,27 @@ export function RssFeedValidator() {
               >
                 <div className="space-y-0.5">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold text-white">{item.label}</span>
-                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-studio-card text-slate-400 border border-studio-border">
+                    <span className="text-xs font-bold text-neutral-900 dark:text-white">{item.label}</span>
+                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-studio-card text-neutral-600 dark:text-slate-400 border border-studio-border">
                       {item.tag}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-400">{item.message}</p>
+                  <p className="text-xs text-neutral-600 dark:text-slate-400">{item.message}</p>
                 </div>
 
                 <div className="flex-shrink-0">
                   {item.status === "pass" && (
-                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
                       <CheckCircle2 className="w-3.5 h-3.5" /> Pass
                     </span>
                   )}
                   {item.status === "warn" && (
-                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">
                       <AlertTriangle className="w-3.5 h-3.5" /> Warning
                     </span>
                   )}
                   {item.status === "fail" && (
-                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-red-400 bg-red-500/10 px-2 py-0.5 rounded-full border border-red-500/20">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-red-600 dark:text-red-400 bg-red-500/10 px-2 py-0.5 rounded-full border border-red-500/20">
                       <XCircle className="w-3.5 h-3.5" /> Error
                     </span>
                   )}
@@ -359,7 +359,7 @@ export function RssFeedValidator() {
           {/* Episode List Preview */}
           {results.episodes.length > 0 && (
             <div className="space-y-3 pt-3 border-t border-studio-border/60">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
                 Recent Episodes in Feed
               </h4>
               <div className="space-y-2">
@@ -368,8 +368,8 @@ export function RssFeedValidator() {
                     key={i}
                     className="p-3 rounded-lg bg-studio-darkest/70 border border-studio-border/60 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-1"
                   >
-                    <span className="font-semibold text-slate-200 line-clamp-1">{ep.title}</span>
-                    <span className="text-[11px] text-slate-500 font-mono whitespace-nowrap">
+                    <span className="font-semibold text-neutral-900 dark:text-slate-200 line-clamp-1">{ep.title}</span>
+                    <span className="text-[11px] text-neutral-500 font-mono whitespace-nowrap">
                       {ep.date}
                     </span>
                   </div>

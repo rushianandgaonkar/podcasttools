@@ -118,13 +118,13 @@ export function CoverArtPreview() {
               <div className="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                 <Upload className="w-6 h-6" />
               </div>
-              <p className="text-sm font-bold text-white mb-1">
+              <p className="text-sm font-bold text-neutral-900 dark:text-white mb-1">
                 Drop your podcast cover art here or click to browse
               </p>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-neutral-600 dark:text-neutral-400">
                 Supports PNG & JPG (Square 1400x1400px to 3000x3000px)
               </p>
-              <div className="mt-3 inline-flex items-center gap-1.5 text-[11px] text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+              <div className="mt-3 inline-flex items-center gap-1.5 text-[11px] text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
                 <ShieldCheck className="w-3.5 h-3.5" /> 100% Client-Side. Never uploaded to cloud.
               </div>
             </div>
@@ -132,7 +132,7 @@ export function CoverArtPreview() {
             <div className="mt-3 text-center">
               <button
                 onClick={handleLoadSample}
-                className="text-xs text-orange-400 hover:text-orange-300 font-medium inline-flex items-center gap-1"
+                className="text-xs text-orange-600 dark:text-orange-400 hover:text-orange-500 font-medium inline-flex items-center gap-1 cursor-pointer"
               >
                 <RotateCcw className="w-3.5 h-3.5" /> Or test with our sample 3000x3000px artwork
               </button>
@@ -141,7 +141,7 @@ export function CoverArtPreview() {
 
           {/* Validation Checklist Card */}
           <div className="p-5 rounded-xl bg-studio-darkest border border-studio-border space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Apple & Spotify 2026 Spec Audit
             </h3>
 
@@ -149,8 +149,8 @@ export function CoverArtPreview() {
               <div className="space-y-2 text-xs">
                 {/* Check 1: 1:1 Aspect ratio */}
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-300">1:1 Square Ratio:</span>
-                  <span className={`font-semibold flex items-center gap-1 ${isSquare ? "text-emerald-400" : "text-red-400"}`}>
+                  <span className="text-neutral-700 dark:text-neutral-300">1:1 Square Ratio:</span>
+                  <span className={`font-semibold flex items-center gap-1 ${isSquare ? "text-emerald-600 dark:text-emerald-400" : "text-red-500"}`}>
                     {isSquare ? <CheckCircle2 className="w-4 h-4" /> : <XCircle className="w-4 h-4" />}
                     {imageMeta.width} x {imageMeta.height} px
                   </span>
@@ -158,8 +158,8 @@ export function CoverArtPreview() {
 
                 {/* Check 2: Resolution bounds */}
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-300">Apple/Spotify Min (1400px):</span>
-                  <span className={`font-semibold flex items-center gap-1 ${isOptimalSize ? "text-emerald-400" : "text-red-400"}`}>
+                  <span className="text-neutral-700 dark:text-neutral-300">Apple/Spotify Min (1400px):</span>
+                  <span className={`font-semibold flex items-center gap-1 ${isOptimalSize ? "text-emerald-600 dark:text-emerald-400" : "text-red-500"}`}>
                     {isOptimalSize ? <CheckCircle2 className="w-4 h-4" /> : <XCircle className="w-4 h-4" />}
                     {isOptimalSize ? "Passed" : "Under 1400px (Rejected)"}
                   </span>
@@ -167,8 +167,8 @@ export function CoverArtPreview() {
 
                 {/* Check 3: Optimal 3000x3000px */}
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-300">Recommended 3000x3000px:</span>
-                  <span className={`font-semibold flex items-center gap-1 ${isRecommended3000 ? "text-emerald-400" : "text-amber-400"}`}>
+                  <span className="text-neutral-700 dark:text-neutral-300">Recommended 3000x3000px:</span>
+                  <span className={`font-semibold flex items-center gap-1 ${isRecommended3000 ? "text-emerald-600 dark:text-emerald-400" : "text-amber-500"}`}>
                     {isRecommended3000 ? <CheckCircle2 className="w-4 h-4" /> : <AlertTriangle className="w-4 h-4" />}
                     {isRecommended3000 ? "Perfect" : "Valid, but 3000px optimal"}
                   </span>
@@ -176,15 +176,15 @@ export function CoverArtPreview() {
 
                 {/* Check 4: File size */}
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-300">File Weight:</span>
-                  <span className={`font-semibold flex items-center gap-1 ${isFileSizeOk ? "text-emerald-400" : "text-amber-400"}`}>
+                  <span className="text-neutral-700 dark:text-neutral-300">File Weight:</span>
+                  <span className={`font-semibold flex items-center gap-1 ${isFileSizeOk ? "text-emerald-600 dark:text-emerald-400" : "text-amber-500"}`}>
                     {isFileSizeOk ? <CheckCircle2 className="w-4 h-4" /> : <AlertTriangle className="w-4 h-4" />}
                     {imageMeta.sizeKb} KB {imageMeta.sizeKb > 1024 && "(Large)"}
                   </span>
                 </div>
               </div>
             ) : (
-              <p className="text-xs text-slate-500 py-4 text-center">
+              <p className="text-xs text-neutral-500 py-4 text-center">
                 Upload your image to run the instant specification audit.
               </p>
             )}
@@ -196,7 +196,7 @@ export function CoverArtPreview() {
       {imageSrc && (
         <div className="space-y-4">
           <div className="flex items-center gap-2 overflow-x-auto pb-1">
-            <span className="text-xs font-semibold text-slate-400 mr-2">Preview Mode:</span>
+            <span className="text-xs font-semibold text-neutral-600 dark:text-neutral-400 mr-2">Preview Mode:</span>
             {[
               { id: "apple", label: "Apple Podcasts Feed" },
               { id: "spotify", label: "Spotify Now Playing" },
@@ -205,10 +205,10 @@ export function CoverArtPreview() {
               <button
                 key={tab.id}
                 onClick={() => setPreviewTab(tab.id as any)}
-                className={`text-xs px-3.5 py-1.5 rounded-xl font-medium transition-all ${
+                className={`text-xs px-3.5 py-1.5 rounded-xl font-medium transition-all cursor-pointer ${
                   previewTab === tab.id
                     ? "bg-orange-500 text-white shadow-md shadow-orange-500/20"
-                    : "bg-studio-card text-slate-300 hover:text-white border border-studio-border"
+                    : "bg-studio-card text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
                 }`}
               >
                 {tab.label}
@@ -219,7 +219,7 @@ export function CoverArtPreview() {
           {/* Preview Container */}
           <div className="p-8 rounded-2xl bg-studio-card border border-studio-border flex items-center justify-center min-h-[400px]">
             {previewTab === "apple" && (
-              <div className="w-full max-w-md bg-[#1C1C1E] rounded-3xl p-6 text-white shadow-2xl border border-white/10">
+              <div className="dark-surface w-full max-w-md bg-[#1C1C1E] rounded-3xl p-6 text-white shadow-2xl border border-white/10">
                 <div className="text-xs font-bold uppercase tracking-wider text-[#A1A1A6] mb-4">
                   Apple Podcasts • Show Page
                 </div>
@@ -243,7 +243,7 @@ export function CoverArtPreview() {
             )}
 
             {previewTab === "spotify" && (
-              <div className="w-full max-w-sm bg-gradient-to-b from-[#2B1B3D] to-[#121212] rounded-3xl p-6 text-white shadow-2xl border border-white/10">
+              <div className="dark-surface w-full max-w-sm bg-gradient-to-b from-[#2B1B3D] to-[#121212] rounded-3xl p-6 text-white shadow-2xl border border-white/10">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-6 text-center">
                   Spotify • Now Playing
                 </div>
@@ -269,10 +269,10 @@ export function CoverArtPreview() {
 
             {previewTab === "tiny" && (
               <div className="space-y-4 text-center max-w-md">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
                   Thumbnail Legibility Stress Test
                 </h4>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-neutral-600 dark:text-neutral-400">
                   This simulates how your cover appears on a smartphone screen in Apple Podcasts search results. If your text is unreadable here, consider increasing your title font size and contrast.
                 </p>
                 <div className="flex items-center justify-center gap-6 pt-4">
@@ -283,7 +283,7 @@ export function CoverArtPreview() {
                       style={{ width: "50px", height: "50px" }}
                       className="rounded-lg shadow object-cover mx-auto"
                     />
-                    <span className="text-[10px] text-slate-400 font-mono">50 x 50 px</span>
+                    <span className="text-[10px] text-neutral-500 font-mono">50 x 50 px</span>
                   </div>
                   <div className="text-center space-y-1">
                     <img
@@ -292,7 +292,7 @@ export function CoverArtPreview() {
                       style={{ width: "80px", height: "80px" }}
                       className="rounded-xl shadow object-cover mx-auto"
                     />
-                    <span className="text-[10px] text-slate-400 font-mono">80 x 80 px</span>
+                    <span className="text-[10px] text-neutral-500 font-mono">80 x 80 px</span>
                   </div>
                 </div>
               </div>

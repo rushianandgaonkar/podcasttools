@@ -90,21 +90,79 @@ body {
 }
 
 /* Adaptive Contrast for Tool Workspaces in Light Mode */
-:root:not(.dark) .tool-workspace .text-white {
+:root:not(.dark) .tool-workspace .text-white:not(button[class*="bg-"]):not(a[class*="bg-"]):not([class*="bg-orange-"]):not([class*="bg-indigo-"]):not([class*="bg-blue-"]):not([class*="bg-emerald-"]):not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-slate-50:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-slate-100:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-gray-50:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-gray-100:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-neutral-50:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-neutral-100:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-zinc-50:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-zinc-100:not(.dark-surface *) {
   color: #171717 !important;
 }
 
-:root:not(.dark) .tool-workspace .text-slate-200,
-:root:not(.dark) .tool-workspace .text-slate-300 {
+:root:not(.dark) .tool-workspace .text-slate-200:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-slate-300:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-gray-200:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-gray-300:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-neutral-200:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-neutral-300:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-zinc-200:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-zinc-300:not(.dark-surface *) {
   color: #262626 !important;
 }
 
-:root:not(.dark) .tool-workspace .text-slate-400 {
+:root:not(.dark) .tool-workspace .text-slate-400:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-gray-400:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-neutral-400:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-zinc-400:not(.dark-surface *) {
   color: #525252 !important;
 }
 
-:root:not(.dark) .tool-workspace .text-slate-500 {
+:root:not(.dark) .tool-workspace .text-slate-500:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-gray-500:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-neutral-500:not(.dark-surface *),
+:root:not(.dark) .tool-workspace .text-zinc-500:not(.dark-surface *) {
   color: #737373 !important;
+}
+
+/* Hover state safety in light mode */
+:root:not(.dark) .tool-workspace .group:hover .group-hover\:text-white {
+  color: #0070f3 !important;
+}
+
+:root:not(.dark) .tool-workspace .group:hover .group-hover\:text-slate-100 {
+  color: #0070f3 !important;
+}
+
+/* Ensure solid action buttons preserve crisp white text */
+:root:not(.dark) .tool-workspace button[class*="bg-orange-"],
+:root:not(.dark) .tool-workspace button[class*="bg-indigo-"],
+:root:not(.dark) .tool-workspace button[class*="bg-blue-"],
+:root:not(.dark) .tool-workspace button[class*="bg-emerald-"],
+:root:not(.dark) .tool-workspace a[class*="bg-orange-"],
+:root:not(.dark) .tool-workspace a[class*="bg-indigo-"],
+:root:not(.dark) .tool-workspace [class*="bg-orange-500"],
+:root:not(.dark) .tool-workspace [class*="bg-indigo-600"] {
+  color: #ffffff !important;
+}
+
+/* Protected simulated mockups in light mode */
+:root:not(.dark) .tool-workspace .dark-surface,
+:root:not(.dark) .tool-workspace .dark-surface * {
+  color: revert;
+}
+:root:not(.dark) .tool-workspace .dark-surface .text-white {
+  color: #ffffff !important;
+}
+:root:not(.dark) .tool-workspace .dark-surface .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+:root:not(.dark) .tool-workspace pre,
+:root:not(.dark) .tool-workspace code {
+  color: #171717;
 }
 
 :root:not(.dark) .tool-workspace input,

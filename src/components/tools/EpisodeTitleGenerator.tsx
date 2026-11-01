@@ -119,8 +119,8 @@ export function EpisodeTitleGenerator() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Topic Input */}
           <div className="space-y-1.5">
-            <label htmlFor="topic-input" className="block text-xs font-bold uppercase tracking-wider text-slate-300">
-              Episode Topic / Keyword <span className="text-orange-400">*</span>
+            <label htmlFor="topic-input" className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
+              Episode Topic / Keyword <span className="text-orange-500">*</span>
             </label>
             <input
               id="topic-input"
@@ -128,14 +128,14 @@ export function EpisodeTitleGenerator() {
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
               placeholder="e.g. Solo SaaS Bootstrapping, Marathon Running..."
-              className="w-full px-4 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-sm focus:outline-none focus:border-orange-500/70 focus:ring-1 focus:ring-orange-500/50"
+              className="w-full px-4 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-sm focus:outline-none focus:border-orange-500/70 focus:ring-1 focus:ring-orange-500/50"
             />
           </div>
 
           {/* Guest Name Input */}
           <div className="space-y-1.5">
-            <label htmlFor="guest-input" className="block text-xs font-bold uppercase tracking-wider text-slate-300">
-              Featured Guest Name <span className="text-slate-500 font-normal">(Optional)</span>
+            <label htmlFor="guest-input" className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
+              Featured Guest Name <span className="text-neutral-500 font-normal">(Optional)</span>
             </label>
             <input
               id="guest-input"
@@ -143,7 +143,7 @@ export function EpisodeTitleGenerator() {
               value={guest}
               onChange={(e) => setGuest(e.target.value)}
               placeholder="e.g. Seth Godin, Alex Hormozi..."
-              className="w-full px-4 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-sm focus:outline-none focus:border-orange-500/70 focus:ring-1 focus:ring-orange-500/50"
+              className="w-full px-4 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-sm focus:outline-none focus:border-orange-500/70 focus:ring-1 focus:ring-orange-500/50"
             />
           </div>
         </div>
@@ -151,7 +151,7 @@ export function EpisodeTitleGenerator() {
         {/* Category / Angle Filter Tabs */}
         <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-studio-border/60">
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-xs text-slate-400 mr-1 flex items-center gap-1">
+            <span className="text-xs text-neutral-600 dark:text-neutral-400 mr-1 flex items-center gap-1">
               <Filter className="w-3.5 h-3.5" /> Filter by:
             </span>
             {(["all", "Curiosity", "How-To", "Contrarian", "Listicle", "Interview"] as const).map((cat) => (
@@ -161,7 +161,7 @@ export function EpisodeTitleGenerator() {
                 className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all ${
                   tone === cat
                     ? "bg-orange-500 text-white shadow-md shadow-orange-500/20"
-                    : "bg-studio-elevated text-slate-400 hover:text-white border border-studio-border"
+                    : "bg-studio-elevated text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
                 }`}
               >
                 {cat === "all" ? "All Angles" : cat}
@@ -173,14 +173,14 @@ export function EpisodeTitleGenerator() {
           <div className="flex items-center gap-2">
             <button
               onClick={handleCopyAll}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border border border-studio-border text-slate-300 hover:text-white text-xs font-medium transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border border border-studio-border text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white text-xs font-medium transition-colors"
             >
               {copiedAll ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
               {copiedAll ? "Copied All!" : "Copy All"}
             </button>
             <button
               onClick={handleExportTxt}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border border border-studio-border text-slate-300 hover:text-white text-xs font-medium transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border border border-studio-border text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white text-xs font-medium transition-colors"
             >
               <Download className="w-3.5 h-3.5" />
               Export TXT
@@ -192,10 +192,10 @@ export function EpisodeTitleGenerator() {
       {/* Generated Titles List */}
       <div className="space-y-3">
         <div className="flex items-center justify-between px-1">
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+          <span className="text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
             Generated Titles ({filteredTitles.length})
           </span>
-          <span className="text-[11px] text-slate-500">
+          <span className="text-[11px] text-neutral-500">
             Tip: Under 65 characters prevents truncation in Apple Podcasts & Spotify.
           </span>
         </div>
@@ -208,29 +208,29 @@ export function EpisodeTitleGenerator() {
             >
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-studio-dark border border-studio-border text-slate-400">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-studio-dark border border-studio-border text-neutral-700 dark:text-neutral-300">
                     {item.category}
                   </span>
                   <span
                     className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${
                       item.rating === "Optimal"
-                        ? "text-emerald-400 bg-emerald-500/10"
+                        ? "text-emerald-500 dark:text-emerald-400 bg-emerald-500/10"
                         : item.rating === "Good"
-                        ? "text-blue-400 bg-blue-500/10"
-                        : "text-amber-400 bg-amber-500/10"
+                        ? "text-blue-500 dark:text-blue-400 bg-blue-500/10"
+                        : "text-amber-500 dark:text-amber-400 bg-amber-500/10"
                     }`}
                   >
                     {item.charCount} chars • {item.rating}
                   </span>
                 </div>
-                <p className="text-sm sm:text-base font-semibold text-slate-100 group-hover:text-white transition-colors">
+                <p className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors">
                   {item.title}
                 </p>
               </div>
 
               <button
                 onClick={() => handleCopySingle(item.title, index)}
-                className="self-end sm:self-center flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-slate-300 text-xs font-semibold transition-all flex-shrink-0"
+                className="self-end sm:self-center flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-neutral-700 dark:text-neutral-300 text-xs font-semibold transition-all flex-shrink-0"
               >
                 {copiedIndex === index ? (
                   <>

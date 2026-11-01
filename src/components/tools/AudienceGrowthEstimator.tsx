@@ -30,40 +30,40 @@ export function AudienceGrowthEstimator() {
       {/* 3 Milestone Metric Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="p-5 rounded-2xl bg-studio-card border border-studio-border">
-          <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+          <span className="text-xs font-semibold text-neutral-600 dark:text-slate-400 uppercase tracking-wider block mb-1">
             Month 3 Projected
           </span>
-          <div className="text-2xl font-bold text-white flex items-baseline gap-1.5">
+          <div className="text-2xl font-bold text-neutral-900 dark:text-white flex items-baseline gap-1.5">
             <span>{month3.perEpisode.toLocaleString()}</span>
-            <span className="text-xs text-orange-400 font-normal">dl / ep</span>
+            <span className="text-xs text-orange-500 dark:text-orange-400 font-normal">dl / ep</span>
           </div>
-          <span className="text-[11px] text-slate-500 mt-1 block">
+          <span className="text-[11px] text-neutral-500 mt-1 block">
             ~{month3.totalMonthlyDownloads.toLocaleString()} total downloads in M3
           </span>
         </div>
 
         <div className="p-5 rounded-2xl bg-studio-card border border-studio-border">
-          <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+          <span className="text-xs font-semibold text-neutral-600 dark:text-slate-400 uppercase tracking-wider block mb-1">
             Month 6 Projected
           </span>
-          <div className="text-2xl font-bold text-white flex items-baseline gap-1.5">
+          <div className="text-2xl font-bold text-neutral-900 dark:text-white flex items-baseline gap-1.5">
             <span>{month6.perEpisode.toLocaleString()}</span>
-            <span className="text-xs text-indigo-400 font-normal">dl / ep</span>
+            <span className="text-xs text-indigo-500 dark:text-indigo-400 font-normal">dl / ep</span>
           </div>
-          <span className="text-[11px] text-slate-500 mt-1 block">
+          <span className="text-[11px] text-neutral-500 mt-1 block">
             ~{month6.totalMonthlyDownloads.toLocaleString()} total downloads in M6
           </span>
         </div>
 
         <div className="p-5 rounded-2xl bg-gradient-to-br from-studio-card to-orange-500/10 border border-orange-500/30">
-          <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+          <span className="text-xs font-semibold text-neutral-600 dark:text-slate-400 uppercase tracking-wider block mb-1">
             Month 12 Milestone
           </span>
-          <div className="text-2xl font-bold text-white flex items-baseline gap-1.5">
-            <span className="text-orange-400">{month12.perEpisode.toLocaleString()}</span>
-            <span className="text-xs text-orange-400 font-normal">dl / ep</span>
+          <div className="text-2xl font-bold text-neutral-900 dark:text-white flex items-baseline gap-1.5">
+            <span className="text-orange-500 dark:text-orange-400">{month12.perEpisode.toLocaleString()}</span>
+            <span className="text-xs text-orange-500 dark:text-orange-400 font-normal">dl / ep</span>
           </div>
-          <span className="text-[11px] text-slate-400 mt-1 block">
+          <span className="text-[11px] text-neutral-600 dark:text-slate-400 mt-1 block">
             ~{month12.totalMonthlyDownloads.toLocaleString()} monthly downloads
           </span>
         </div>
@@ -73,17 +73,17 @@ export function AudienceGrowthEstimator() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Sliders */}
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-5">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-white pb-2 border-b border-studio-border/60 flex items-center gap-2">
-            <TrendingUp className="w-4 h-4 text-orange-400" />
+          <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white pb-2 border-b border-studio-border/60 flex items-center gap-2">
+            <TrendingUp className="w-4 h-4 text-orange-500 dark:text-orange-400" />
             Growth Dynamics
           </h2>
 
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <label className="text-xs font-semibold text-slate-300">
+              <label className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
                 Current Average 30-Day Downloads
               </label>
-              <span className="text-xs font-mono font-bold text-orange-400 bg-studio-darkest px-2 py-1 rounded border border-studio-border">
+              <span className="text-xs font-mono font-bold text-orange-600 dark:text-orange-400 bg-studio-darkest px-2 py-1 rounded border border-studio-border">
                 {startingDownloads.toLocaleString()}
               </span>
             </div>
@@ -124,16 +124,16 @@ export function AudienceGrowthEstimator() {
           </div>
 
           <div className="space-y-1.5 pt-2 border-t border-studio-border/60">
-            <label className="block text-xs font-semibold text-slate-300">Episodes Released per Month</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Episodes Released per Month</label>
             <div className="grid grid-cols-4 gap-2">
               {[2, 4, 8, 12].map((n) => (
                 <button
                   key={n}
                   onClick={() => setEpisodesPerMonth(n)}
-                  className={`py-2 rounded-xl text-xs font-semibold border transition-all ${
+                  className={`py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
                     episodesPerMonth === n
                       ? "bg-orange-500 text-white border-orange-500 shadow-sm"
-                      : "bg-studio-darkest text-slate-400 hover:text-white border-studio-border"
+                      : "bg-studio-darkest text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border-studio-border"
                   }`}
                 >
                   {n} eps
@@ -145,35 +145,35 @@ export function AudienceGrowthEstimator() {
 
         {/* 2026 Industry Download Percentiles */}
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-4">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-white pb-2 border-b border-studio-border/60 flex items-center gap-2">
-            <BarChart2 className="w-4 h-4 text-emerald-400" />
+          <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white pb-2 border-b border-studio-border/60 flex items-center gap-2">
+            <BarChart2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
             Where You Stand Globally (Libsyn 2026 Data)
           </h2>
 
           <div className="space-y-2.5 text-xs">
             <div className="flex items-center justify-between p-2.5 rounded-xl bg-studio-darkest border border-studio-border">
-              <span className="text-slate-300">Top 50% of all shows worldwide:</span>
-              <span className="font-mono font-semibold text-emerald-400">&gt; 150 downloads</span>
+              <span className="text-neutral-700 dark:text-slate-300">Top 50% of all shows worldwide:</span>
+              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">&gt; 150 downloads</span>
             </div>
             <div className="flex items-center justify-between p-2.5 rounded-xl bg-studio-darkest border border-studio-border">
-              <span className="text-slate-300">Top 20% of all shows worldwide:</span>
-              <span className="font-mono font-semibold text-cyan-400">&gt; 1,100 downloads</span>
+              <span className="text-neutral-700 dark:text-slate-300">Top 20% of all shows worldwide:</span>
+              <span className="font-mono font-semibold text-cyan-600 dark:text-cyan-400">&gt; 1,100 downloads</span>
             </div>
             <div className="flex items-center justify-between p-2.5 rounded-xl bg-studio-darkest border border-studio-border">
-              <span className="text-slate-300">Top 10% of all shows worldwide:</span>
-              <span className="font-mono font-semibold text-indigo-400">&gt; 3,500 downloads</span>
+              <span className="text-neutral-700 dark:text-slate-300">Top 10% of all shows worldwide:</span>
+              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">&gt; 3,500 downloads</span>
             </div>
             <div className="flex items-center justify-between p-2.5 rounded-xl bg-studio-darkest border border-studio-border">
-              <span className="text-slate-300">Top 5% of all shows worldwide:</span>
-              <span className="font-mono font-semibold text-purple-400">&gt; 10,000 downloads</span>
+              <span className="text-neutral-700 dark:text-slate-300">Top 5% of all shows worldwide:</span>
+              <span className="font-mono font-semibold text-purple-600 dark:text-purple-400">&gt; 10,000 downloads</span>
             </div>
             <div className="flex items-center justify-between p-2.5 rounded-xl bg-studio-darkest border border-studio-border">
-              <span className="text-slate-300">Top 1% elite tier:</span>
-              <span className="font-mono font-semibold text-amber-400">&gt; 35,000+ downloads</span>
+              <span className="text-neutral-700 dark:text-slate-300">Top 1% elite tier:</span>
+              <span className="font-mono font-semibold text-amber-600 dark:text-amber-400">&gt; 35,000+ downloads</span>
             </div>
           </div>
 
-          <p className="text-[11px] text-slate-500 pt-1 leading-relaxed">
+          <p className="text-[11px] text-neutral-500 pt-1 leading-relaxed">
             Over 90% of podcasts stop publishing after episode 7. Consistency and listener retention are the true compounding engines of audio growth.
           </p>
         </div>

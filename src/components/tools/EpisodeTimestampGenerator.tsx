@@ -117,11 +117,11 @@ export function EpisodeTimestampGenerator() {
                   value={ch.title}
                   onChange={(e) => handleUpdate(ch.id, "title", e.target.value)}
                   placeholder="Segment title..."
-                  className="flex-1 px-3 py-1.5 rounded-lg bg-transparent text-xs text-white focus:outline-none"
+                  className="flex-1 px-3 py-1.5 rounded-lg bg-transparent text-xs text-neutral-900 dark:text-white focus:outline-none"
                 />
                 <button
                   onClick={() => handleRemoveChapter(ch.id)}
-                  className="p-1.5 text-slate-500 hover:text-red-400 rounded transition-colors"
+                  className="p-1.5 text-neutral-400 hover:text-red-500 rounded transition-colors"
                   title="Remove"
                 >
                   <Trash2 className="w-3.5 h-3.5" />
@@ -132,7 +132,7 @@ export function EpisodeTimestampGenerator() {
 
           {/* Quick Raw Paste Converter */}
           <div className="pt-3 border-t border-studio-border/60 space-y-2">
-            <label className="block text-xs font-semibold text-slate-300">
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">
               Or Paste Raw Text to Auto-Convert:
             </label>
             <div className="flex gap-2">
@@ -141,11 +141,11 @@ export function EpisodeTimestampGenerator() {
                 value={rawPaste}
                 onChange={(e) => setRawPaste(e.target.value)}
                 placeholder="e.g. 0:00 Intro, 5:30 Breakthrough, 15:00 Wrap up"
-                className="flex-1 px-3 py-1.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none"
+                className="flex-1 px-3 py-1.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none"
               />
               <button
                 onClick={handleParseRaw}
-                className="px-3 py-1.5 rounded-xl bg-studio-elevated hover:bg-studio-border text-slate-200 text-xs font-medium border border-studio-border"
+                className="px-3 py-1.5 rounded-xl bg-studio-elevated hover:bg-studio-border text-neutral-700 dark:text-neutral-300 text-xs font-medium border border-studio-border cursor-pointer"
               >
                 Auto-Parse
               </button>
@@ -157,24 +157,24 @@ export function EpisodeTimestampGenerator() {
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border flex flex-col justify-between space-y-4">
           <div>
             <div className="flex items-center justify-between pb-3 border-b border-studio-border/60 mb-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
+              <span className="text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
                 YouTube & Spotify Formatted Output
               </span>
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 transition-all"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 transition-all cursor-pointer"
               >
                 {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {copied ? "Copied!" : "Copy Timestamps"}
               </button>
             </div>
 
-            <pre className="p-4 rounded-xl bg-studio-darkest border border-studio-border text-xs font-mono text-slate-200 leading-relaxed overflow-x-auto min-h-[260px] whitespace-pre-wrap">
+            <pre className="p-4 rounded-xl bg-studio-darkest border border-studio-border text-xs font-mono text-neutral-900 dark:text-neutral-100 leading-relaxed overflow-x-auto min-h-[260px] whitespace-pre-wrap select-text">
               {youtubeOutput}
             </pre>
           </div>
 
-          <div className="text-[11px] text-slate-400 pt-2 border-t border-studio-border/60">
+          <div className="text-[11px] text-neutral-600 dark:text-neutral-400 pt-2 border-t border-studio-border/60">
             Paste directly into YouTube video description or your podcast hosting show notes to trigger automatic clickable chapter markers.
           </div>
         </div>

@@ -129,76 +129,76 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
         {/* Left: Input Fields */}
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-4">
           <div className="flex items-center justify-between pb-2 border-b border-studio-border/60">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2">
-              <FileText className="w-4 h-4 text-orange-400" />
+            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white flex items-center gap-2">
+              <FileText className="w-4 h-4 text-orange-500 dark:text-orange-400" />
               Episode Details
             </h2>
             <button
               onClick={handleLoadSample}
-              className="text-xs text-orange-400 hover:text-orange-300 font-medium inline-flex items-center gap-1"
+              className="text-xs text-orange-600 dark:text-orange-400 hover:text-orange-500 font-medium inline-flex items-center gap-1 cursor-pointer"
             >
               <RotateCcw className="w-3.5 h-3.5" /> Load Sample
             </button>
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-slate-300">Episode Title</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Episode Title</label>
             <input
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-slate-300">Featured Guest(s)</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Featured Guest(s)</label>
             <input
               type="text"
               value={guest}
               onChange={(e) => setGuest(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-slate-300">Episode Summary / Hook</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Episode Summary / Hook</label>
             <textarea
               rows={3}
               value={summary}
               onChange={(e) => setSummary(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-slate-300">Timestamps & Chapters</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Timestamps & Chapters</label>
             <textarea
               rows={4}
               value={timestamps}
               onChange={(e) => setTimestamps(e.target.value)}
               placeholder="00:00 - Intro&#10;05:30 - Topic discussion"
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white font-mono text-xs focus:outline-none focus:border-orange-500/70 resize-y"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white font-mono text-xs focus:outline-none focus:border-orange-500/70 resize-y"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-slate-300">Key Takeaways & Lessons</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Key Takeaways & Lessons</label>
             <textarea
               rows={3}
               value={keyTakeaways}
               onChange={(e) => setKeyTakeaways(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-slate-300">Links & Resources Mentioned</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Links & Resources Mentioned</label>
             <textarea
               rows={3}
               value={resources}
               onChange={(e) => setResources(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70 resize-y"
             />
           </div>
         </div>
@@ -213,10 +213,10 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
                   <button
                     key={tab}
                     onClick={() => setOutputTab(tab)}
-                    className={`text-xs px-3 py-1.5 rounded-lg font-medium uppercase tracking-wider transition-all ${
+                    className={`text-xs px-3 py-1.5 rounded-lg font-medium uppercase tracking-wider transition-all cursor-pointer ${
                       outputTab === tab
                         ? "bg-orange-500 text-white shadow-sm"
-                        : "bg-studio-elevated text-slate-400 hover:text-white border border-studio-border"
+                        : "bg-studio-elevated text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
                     }`}
                   >
                     {tab}
@@ -228,14 +228,14 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
               <div className="flex items-center gap-2">
                 <button
                   onClick={handleCopy}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 transition-all cursor-pointer"
                 >
                   {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                   {copied ? "Copied!" : "Copy Show Notes"}
                 </button>
                 <button
                   onClick={handleDownload}
-                  className="p-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-slate-300 hover:text-white border border-studio-border transition-colors"
+                  className="p-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white border border-studio-border transition-colors cursor-pointer"
                   title="Download File"
                 >
                   <Download className="w-4 h-4" />
@@ -244,12 +244,12 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
             </div>
 
             {/* Output Code Area */}
-            <div className="relative rounded-xl bg-studio-darkest border border-studio-border p-4 font-mono text-xs text-slate-200 overflow-x-auto max-h-[520px] overflow-y-auto leading-relaxed whitespace-pre-wrap">
+            <div className="relative rounded-xl bg-studio-darkest border border-studio-border p-4 font-mono text-xs text-neutral-900 dark:text-slate-200 overflow-x-auto max-h-[520px] overflow-y-auto leading-relaxed whitespace-pre-wrap select-text">
               {activeOutput}
             </div>
           </div>
 
-          <div className="text-[11px] text-slate-400 pt-3 border-t border-studio-border/60">
+          <div className="text-[11px] text-neutral-500 pt-3 border-t border-studio-border/60">
             Paste directly into Buzzsprout, Libsyn, Spotify for Podcasters, Podbean, or your website.
           </div>
         </div>

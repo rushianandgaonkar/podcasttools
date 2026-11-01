@@ -153,38 +153,38 @@ export function GuestQuestionGenerator() {
       <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Guest Name
             </label>
             <input
               type="text"
               value={guestName}
               onChange={(e) => setGuestName(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Profession / Role
             </label>
             <input
               type="text"
               value={profession}
               onChange={(e) => setProfession(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Core Episode Topic
             </label>
             <input
               type="text"
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
         </div>
@@ -192,7 +192,7 @@ export function GuestQuestionGenerator() {
         {/* Filter Bar */}
         <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-studio-border/60">
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-xs text-slate-400 mr-1 flex items-center gap-1">
+            <span className="text-xs text-neutral-600 dark:text-neutral-400 mr-1 flex items-center gap-1">
               <Filter className="w-3.5 h-3.5" /> Interview Arc:
             </span>
             {(["all", "Icebreaker", "Tactical", "Failure & Pivot", "Hot Take", "Closing"] as const).map(
@@ -200,10 +200,10 @@ export function GuestQuestionGenerator() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all ${
+                  className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer ${
                     selectedCategory === cat
                       ? "bg-orange-500 text-white shadow-md shadow-orange-500/20"
-                      : "bg-studio-elevated text-slate-400 hover:text-white border border-studio-border"
+                      : "bg-studio-elevated text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
                   }`}
                 >
                   {cat === "all" ? "All Questions" : cat}
@@ -215,14 +215,14 @@ export function GuestQuestionGenerator() {
           <div className="flex items-center gap-2">
             <button
               onClick={handleCopyAll}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-slate-300 hover:text-white border border-studio-border text-xs font-semibold transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white border border-studio-border text-xs font-semibold transition-colors cursor-pointer"
             >
               {copiedAll ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
               {copiedAll ? "Copied Prep Sheet!" : "Copy Prep Sheet"}
             </button>
             <button
               onClick={handleDownload}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-slate-300 hover:text-white border border-studio-border text-xs font-semibold transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white border border-studio-border text-xs font-semibold transition-colors cursor-pointer"
             >
               <Download className="w-3.5 h-3.5" /> Export TXT
             </button>
@@ -239,19 +239,19 @@ export function GuestQuestionGenerator() {
           >
             <div className="space-y-1.5 flex-1">
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-studio-dark border border-studio-border text-orange-400">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-studio-dark border border-studio-border text-orange-500 dark:text-orange-400">
                   {q.category}
                 </span>
-                <span className="text-[11px] text-slate-500">Why it works: {q.context}</span>
+                <span className="text-[11px] text-neutral-500">Why it works: {q.context}</span>
               </div>
-              <p className="text-sm sm:text-base font-semibold text-white leading-relaxed group-hover:text-orange-400 transition-colors">
+              <p className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white leading-relaxed group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
                 &ldquo;{q.question}&rdquo;
               </p>
             </div>
 
             <button
               onClick={() => handleCopySingle(q.question, idx)}
-              className="self-end sm:self-start flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-slate-300 text-xs font-semibold transition-all flex-shrink-0"
+              className="self-end sm:self-start flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-neutral-700 dark:text-neutral-300 text-xs font-semibold transition-all flex-shrink-0 cursor-pointer"
             >
               {copiedIndex === idx ? (
                 <>

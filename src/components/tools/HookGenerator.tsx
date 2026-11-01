@@ -77,35 +77,35 @@ export function HookGenerator() {
               type="text"
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
-              Featured Guest <span className="text-slate-500 font-normal">(Optional)</span>
+            <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
+              Featured Guest <span className="text-neutral-500 font-normal">(Optional)</span>
             </label>
             <input
               type="text"
               value={guest}
               onChange={(e) => setGuest(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
+              className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>
         </div>
 
         {/* Styles Filter */}
         <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-studio-border/60">
-          <span className="text-xs text-slate-400 mr-1">Hook Style:</span>
+          <span className="text-xs text-neutral-600 dark:text-neutral-400 mr-1">Hook Style:</span>
           {(["all", "Contrarian", "Open Loop", "High Stakes", "Big Metric", "Pattern Interrupt"] as const).map(
             (style) => (
               <button
                 key={style}
                 onClick={() => setSelectedStyle(style)}
-                className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all ${
+                className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer ${
                   selectedStyle === style
                     ? "bg-orange-500 text-white shadow-sm"
-                    : "bg-studio-darkest text-slate-400 hover:text-white border border-studio-border"
+                    : "bg-studio-darkest text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
                 }`}
               >
                 {style === "all" ? "All Hooks" : style}
@@ -124,19 +124,19 @@ export function HookGenerator() {
           >
             <div className="space-y-1 flex-1">
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-studio-dark border border-studio-border text-orange-400">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-studio-dark border border-studio-border text-orange-500 dark:text-orange-400">
                   {h.style}
                 </span>
-                <span className="text-[11px] text-slate-500">{h.why}</span>
+                <span className="text-[11px] text-neutral-500">{h.why}</span>
               </div>
-              <p className="text-sm sm:text-base font-semibold text-white leading-relaxed">
+              <p className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white leading-relaxed">
                 {h.hook}
               </p>
             </div>
 
             <button
               onClick={() => handleCopy(h.hook, i)}
-              className="self-end sm:self-center flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-slate-300 text-xs font-semibold transition-all flex-shrink-0"
+              className="self-end sm:self-center flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-neutral-700 dark:text-neutral-300 text-xs font-semibold transition-all flex-shrink-0 cursor-pointer"
             >
               {copiedIndex === i ? (
                 <>
