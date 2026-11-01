@@ -1,0 +1,94 @@
+---
+import "../styles/global.css";
+import { siteConfig } from "../config/site";
+import { Navbar } from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = "Pod Studio — Free Podcast Creator Tools (Titles, Show Notes, CPM, Artwork)",
+  description = siteConfig.description,
+  canonicalUrl = Astro.url.href,
+  ogImage = siteConfig.ogImage,
+  noindex = false,
+} = Astro.props;
+
+const fullTitle = title.includes("Pod Studio") ? title : `${title} | Pod Studio`;
+
+const jsonLdOrg = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/icon.svg`,
+  description: siteConfig.description,
+};
+
+const jsonLdWebsite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${siteConfig.url}/tools?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
+---
+
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="shortcut icon" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0A0A16" />
+
+    {noindex ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    )}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteConfig.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdOrg)} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebsite)} />
+  </head>
+  <body class="bg-background text-foreground min-h-screen flex flex-col selection:bg-orange-500/30 selection:text-orange-200 antialiased">
+    <Navbar client:load />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

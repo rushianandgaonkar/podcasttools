@@ -2,13 +2,16 @@
 
 The all-in-one free toolkit for podcast creators to brainstorm episode titles, format professional show notes, generate outlines, estimate CPM sponsorship earnings, and validate Apple & Spotify cover art specifications—100% client-side in their browser.
 
+Built with **Astro 5 (SSG)**, **React 19 Islands**, and **Tailwind CSS**. Guided by official Astro documentation via the `astro-docs` MCP server.
+
 ## 🚀 Key Architectural Highlights
 
-- **100% Client-Side Privacy:** No audio files, episode outlines, or scripts are sent to remote servers. All calculations and formatting run in browser memory.
-- **Pre-rendered Static HTML (SSG):** All 18 tool pages, category hubs, and guides are pre-rendered at build time with Next.js 15 for sub-second page loads and search engine crawlability.
-- **Single Source of Truth:** Central tool registry in `config/site.ts` powering metadata generation, dynamic sitemaps, category filtering, and related links.
-- **Clean SEO Infrastructure:** Dynamic `app/sitemap.ts` and `app/robots.ts` with explicit AI bot permissions (GPTBot, ClaudeBot, PerplexityBot).
-- **Structured Data:** Full JSON-LD `WebApplication`, `BreadcrumbList`, `Organization`, and `WebSite` schemas.
+- **Astro 5 Static Output (SSG):** All 29 static pages (home, tools directory, 18 tool pages, guides directory, 3 guide deep dives, about, contact, privacy, terms, 404) are pre-rendered into static HTML at build time for instant loading and 100/100 Core Web Vitals crawlability.
+- **Interactive React 19 Islands:** Client hydration is scoped precisely using `client:load` on interactive islands (`<HomeToolGrid />`, `<HeroQuickTool />`, `<ToolDispatcher />`, `<Navbar />`), delivering zero unnecessary JavaScript to static text sections.
+- **100% Client-Side Privacy:** No audio files, episode outlines, or scripts are sent to remote servers. All calculations and formatting run exclusively in browser memory.
+- **Single Source of Truth:** Central tool and guide registry in `src/config/site.ts` powering dynamic routes (`getStaticPaths`), metadata, sitemaps, category filtering, and internal linking.
+- **Clean SEO Infrastructure:** Pre-rendered `robots.txt` and `@astrojs/sitemap` generating `sitemap-index.xml` and `sitemap-0.xml` in `dist/`.
+- **Structured Data:** Full JSON-LD `Organization`, `WebSite`, `BreadcrumbList`, and `WebApplication` schemas embedded in HTML.
 
 ## 🛠️ Included Creator Tools (18 Tools)
 
@@ -44,12 +47,19 @@ The all-in-one free toolkit for podcast creators to brainstorm episode titles, f
 # Install dependencies
 npm install
 
-# Start local development server
+# Start local Astro development server
 npm run dev
 
-# Build production static bundle
+# Run Astro typecheck
+npx astro check
+
+# Build production static bundle (outputs to dist/)
 npm run build
 
-# Start production server
-npm start
+# Preview production build locally
+npm run preview
 ```
+
+## 📋 Quality & Compliance Status
+- **CG-01 to CG-14:** All 14 Critical Integrity Gates PASS (documented in `docs/seo/critical-release-gates.md`).
+- **61 SEO Tasks:** Fully mapped and completed (documented in `docs/seo/implementation-status.md`).

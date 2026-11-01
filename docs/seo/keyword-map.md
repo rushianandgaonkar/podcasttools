@@ -16,3 +16,4 @@
 | **Intro Script Generator** | `/tools/intro-script-generator` | podcast intro script generator | Content / Scripting | podcast intro template, how to start a podcast script, podcast hook script | P1 | Tailored hook-and-intro scripts for solo, co-host, and interview formats |
 | **Audience Growth Estimator** | `/tools/audience-growth-estimator` | podcast download estimator | Analytics / Growth | podcast audience growth calculator, how fast do podcasts grow | P2 | Retention and compounding download projection models based on episode frequency |
 | **Category Finder** | `/tools/category-finder` | best podcast category apple | Discovery / Taxonomy | apple podcast categories list, spotify podcast genre guide | P2 | Searchable Apple Podcasts official category and subcategory taxonomy with competition ratings |
+

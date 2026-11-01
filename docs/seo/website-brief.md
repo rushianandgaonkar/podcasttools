@@ -27,3 +27,4 @@
 - **Deployment strategy:** Cloudflare Pages / Vercel with static HTML pre-rendering.
 - **Analytics and search property:** Privacy-safe GA4 plan / Cloudflare Web Analytics (no cookies, zero PII).
 - **Policy/data handling:** Explicit disclosure that all data processing runs in local browser memory.
+

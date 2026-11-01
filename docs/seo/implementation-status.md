@@ -75,3 +75,4 @@
   - Status: DONE · Evidence: `WebApplication`, `Organization`, `WebSite`, and `BreadcrumbList` JSON-LD schemas implemented.
 - [x] **SEO-034 [P1] Check crawlable HTML links**  
   - Status: DONE · Evidence: Native `<Link>` anchors throughout navbar, footer, category tabs, and related tool blocks.
+

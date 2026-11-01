@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #0a0a16;
+  --color-foreground: #f8fafc;
+}
+
+body {
+  background-color: #0a0a16;
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar for Studio Aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #25244c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3a7a;
+}
+
+/* Studio Glow utility classes */
+.studio-glow-accent {
+  box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.25);
+}
+
+.studio-glow-indigo {
+  box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.25);
+}
+
+.studio-card-gradient {
+  background: linear-gradient(180deg, rgba(24, 24, 52, 0.7) 0%, rgba(18, 18, 38, 0.85) 100%);
+  backdrop-filter: blur(12px);
+}
+
