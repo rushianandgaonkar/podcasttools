@@ -45,7 +45,7 @@ const jsonLdWebsite = {
 ---
 
 <!doctype html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,10 +55,37 @@ const jsonLdWebsite = {
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={canonicalUrl} />
 
+    <!-- Geist & Geist Mono Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Zero-FOUC Theme Script -->
+    <script is:inline>
+      (function () {
+        try {
+          const stored = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = stored ? stored : prefersDark ? "dark" : "light";
+          if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          } else {
+            document.documentElement.classList.add("light");
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (_) {}
+      })();
+    </script>
+
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#0A0A16" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
 
     {noindex ? (
       <meta name="robots" content="noindex, nofollow" />
@@ -84,7 +111,7 @@ const jsonLdWebsite = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdOrg)} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebsite)} />
   </head>
-  <body class="bg-background text-foreground min-h-screen flex flex-col selection:bg-orange-500/30 selection:text-orange-200 antialiased">
+  <body class="bg-[#fafafa] dark:bg-[#000000] text-[#171717] dark:text-[#ededed] min-h-screen flex flex-col font-sans selection:bg-[#0070f3]/20 selection:text-[#0070f3] antialiased">
     <Navbar client:load />
     <main class="flex-1">
       <slot />

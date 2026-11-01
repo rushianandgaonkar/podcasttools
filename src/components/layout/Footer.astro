@@ -4,88 +4,76 @@ import { ShieldCheck } from "lucide-react";
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="w-full border-t border-studio-border/60 bg-[#070712] text-slate-400 text-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-    <!-- Top Section: Brand + Category Columns -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-studio-border/60">
-      <!-- Brand Info -->
-      <div class="lg:col-span-2 space-y-4">
+<footer class="w-full border-t border-neutral-200 dark:border-[#222222] bg-[#fafafa] dark:bg-[#000000] text-neutral-600 dark:text-neutral-400 text-xs transition-colors duration-150">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <!-- Top Grid: Brand & Categorized Links -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-10 border-b border-neutral-200 dark:border-[#222222]">
+      <!-- Brand Summary -->
+      <div class="col-span-2 space-y-3">
         <Logo size="md" />
-        <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
-          The free, all-in-one creator toolkit for podcasters. Generate episode titles, format show notes, calculate sponsorship revenue, and preview Apple/Spotify artwork.
+        <p class="text-xs text-neutral-500 leading-relaxed max-w-sm">
+          A free, client-side toolkit for independent podcast creators. Craft clickable titles, format Markdown show notes, calculate sponsorship CPM rates, and preview Apple/Spotify artwork locally in your browser.
         </p>
 
-        <!-- Privacy Promise Callout -->
-        <div class="p-3.5 rounded-xl bg-studio-card border border-studio-border/80 flex items-start gap-3 max-w-sm">
-          <ShieldCheck className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-          <div class="text-xs space-y-1">
-            <span class="font-semibold text-slate-200 block">
-              100% Client-Side Privacy Guarantee
-            </span>
-            <p class="text-slate-400">
-              Zero audio files, scripts, or personal notes are uploaded to external servers. Everything computes locally in your browser.
-            </p>
-          </div>
+        <!-- Privacy Status Badge -->
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 text-[11px] font-mono">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Zero Server Uploads • In-Memory Execution</span>
         </div>
       </div>
 
-      <!-- Column 1: Ideation & Branding -->
-      <div class="space-y-3">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300">
-          Ideation &amp; Branding
+      <!-- Column 1: Ideation -->
+      <div class="space-y-2.5">
+        <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
+          Ideation
         </h3>
         <ul class="space-y-2 text-xs">
           <li>
-            <a href="/tools/episode-title-generator" class="hover:text-orange-400 transition-colors">
-              Episode Title Generator
+            <a href="/tools/episode-title-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+              Title Generator
             </a>
           </li>
           <li>
-            <a href="/tools/podcast-name-generator" class="hover:text-orange-400 transition-colors">
-              Podcast Name Generator
+            <a href="/tools/podcast-name-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+              Name Generator
             </a>
           </li>
           <li>
-            <a href="/tools/guest-question-generator" class="hover:text-orange-400 transition-colors">
-              Guest Question Generator
+            <a href="/tools/guest-question-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+              Question Generator
             </a>
           </li>
           <li>
-            <a href="/tools/hook-generator" class="hover:text-orange-400 transition-colors">
-              Hook &amp; Cold Open Generator
+            <a href="/tools/hook-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+              Hook Generator
             </a>
           </li>
         </ul>
       </div>
 
-      <!-- Column 2: Content & Production -->
-      <div class="space-y-3">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300">
-          Content &amp; Scripts
+      <!-- Column 2: Content -->
+      <div class="space-y-2.5">
+        <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
+          Content
         </h3>
         <ul class="space-y-2 text-xs">
           <li>
-            <a href="/tools/show-notes-generator" class="hover:text-orange-400 transition-colors">
+            <a href="/tools/show-notes-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Show Notes Generator
             </a>
           </li>
           <li>
-            <a href="/tools/episode-outline-builder" class="hover:text-orange-400 transition-colors">
-              Episode Outline Builder
+            <a href="/tools/episode-outline-builder" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+              Outline Builder
             </a>
           </li>
           <li>
-            <a href="/tools/intro-script-generator" class="hover:text-orange-400 transition-colors">
-              Intro Script Generator
+            <a href="/tools/intro-script-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+              Intro Scripts
             </a>
           </li>
           <li>
-            <a href="/tools/description-generator" class="hover:text-orange-400 transition-colors">
-              Description Generator
-            </a>
-          </li>
-          <li>
-            <a href="/tools/transcript-formatter" class="hover:text-orange-400 transition-colors">
+            <a href="/tools/transcript-formatter" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Transcript Formatter
             </a>
           </li>
@@ -93,60 +81,55 @@ const currentYear = new Date().getFullYear();
       </div>
 
       <!-- Column 3: Tech & Growth -->
-      <div class="space-y-3">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300">
-          Tech &amp; Analytics
+      <div class="space-y-2.5">
+        <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
+          Tech &amp; Growth
         </h3>
         <ul class="space-y-2 text-xs">
           <li>
-            <a href="/tools/monetization-calculator" class="hover:text-orange-400 transition-colors">
-              Sponsorship CPM Calculator
+            <a href="/tools/monetization-calculator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+              CPM Calculator
             </a>
           </li>
           <li>
-            <a href="/tools/cover-art-preview" class="hover:text-orange-400 transition-colors">
-              Cover Art Preview &amp; Specs
+            <a href="/tools/cover-art-preview" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+              Cover Art Preview
             </a>
           </li>
           <li>
-            <a href="/tools/rss-feed-validator" class="hover:text-orange-400 transition-colors">
+            <a href="/tools/rss-feed-validator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               RSS Feed Validator
             </a>
           </li>
           <li>
-            <a href="/tools/episode-timestamp-generator" class="hover:text-orange-400 transition-colors">
-              Timestamp Generator
-            </a>
-          </li>
-          <li>
-            <a href="/tools/category-finder" class="hover:text-orange-400 transition-colors">
-              Category Finder (Apple/Spotify)
+            <a href="/tools/audience-growth-estimator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+              Growth Estimator
             </a>
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Section: Legal & Copyright -->
-    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+    <!-- Bottom Bar -->
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-500">
       <div class="flex items-center gap-2">
-        <span>&copy; {currentYear} Pod Studio. Built for podcast creators worldwide.</span>
+        <span>&copy; {currentYear} Pod Studio. Designed with the Geist design system.</span>
       </div>
 
-      <div class="flex items-center gap-6">
-        <a href="/about" class="hover:text-slate-200 transition-colors">
+      <div class="flex items-center gap-4">
+        <a href="/about" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
           About
         </a>
-        <a href="/contact" class="hover:text-slate-200 transition-colors">
+        <a href="/contact" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
           Contact
         </a>
-        <a href="/privacy" class="hover:text-slate-200 transition-colors">
-          Privacy Policy
+        <a href="/privacy" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          Privacy
         </a>
-        <a href="/terms" class="hover:text-slate-200 transition-colors">
-          Terms of Use
+        <a href="/terms" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          Terms
         </a>
-        <a href="/guides" class="hover:text-slate-200 transition-colors">
+        <a href="/guides" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
           Guides
         </a>
       </div>

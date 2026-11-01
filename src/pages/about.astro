@@ -1,67 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Heart, ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
+import { ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
 ---
 
 <Layout
   title="About Pod Studio — Our Mission for Podcast Creators"
   description="Learn about Pod Studio, our 100% client-side privacy architecture, and our mission to provide free, accessible tools for independent podcast creators worldwide."
 >
-  <div class="w-full py-12 sm:py-20 bg-[#0A0A16]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+  <div class="w-full py-10 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
       <!-- Header -->
-      <div class="space-y-4">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-semibold">
-          <Heart className="w-3.5 h-3.5" /> Built for Creators
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 font-mono text-[11px]">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          ABOUT POD STUDIO
         </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-          Empowering the Next Generation of Audio Storytellers
+        <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white leading-tight">
+          Empowering independent audio creators worldwide.
         </h1>
-        <p class="text-base sm:text-lg text-slate-400 leading-relaxed">
-          Podcasting has exploded into a global medium with over 500 million listeners. Yet for individual creators, the tool ecosystem has become fractured between expensive corporate SaaS subscriptions and invasive ad-heavy websites.
+        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl">
+          Podcasting has grown to 500 million global listeners. Yet creators face a fragmented landscape of expensive subscriptions and privacy-invasive platforms. We built Pod Studio to provide clean, client-side utilities.
         </p>
       </div>
 
       <!-- Core Principles -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/20 flex items-center justify-center">
-            <ShieldCheck className="w-5 h-5" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-2.5">
+          <div class="w-8 h-8 rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-emerald-500">
+            <ShieldCheck className="w-4 h-4" />
           </div>
-          <h2 class="text-lg font-bold text-white">100% Client-Side Privacy</h2>
-          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-            Your episode concepts, unreleased interview notes, and artwork remain strictly on your local device. We never upload your audio, draft scripts, or contact lists to external cloud servers or LLM training databases.
+          <h2 class="text-sm font-semibold text-neutral-900 dark:text-white">100% Client-Side Privacy</h2>
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            Your episode concepts, unreleased interview notes, and artwork remain strictly on your local device. We never upload your audio, draft scripts, or contact lists to external cloud servers.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex items-center justify-center">
-            <Sparkles className="w-5 h-5" />
+        <div class="p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-2.5">
+          <div class="w-8 h-8 rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-[#0070f3]">
+            <Sparkles className="w-4 h-4" />
           </div>
-          <h2 class="text-lg font-bold text-white">Zero Paywalls or Signups</h2>
-          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          <h2 class="text-sm font-semibold text-neutral-900 dark:text-white">Zero Paywalls or Signups</h2>
+          <p class="text-xs text-neutral-500 leading-relaxed">
             Every utility on Pod Studio is free to use without requiring an account, credit card, or email sign-up. We build fast, high-utility tools so you can focus on creating your show.
           </p>
         </div>
       </div>
 
-      <!-- The Story -->
-      <div class="p-8 rounded-2xl bg-studio-card border border-studio-border space-y-4">
-        <h2 class="text-xl font-bold text-white">Why We Built Pod Studio</h2>
-        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-          As podcast hosts and audio producers ourselves, we were exhausted from jumping between four different web apps just to format show notes, calculate fair sponsorship CPM rates, check our cover art dimensions, and draft cold open hooks.
+      <!-- Story Card -->
+      <div class="p-6 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-3">
+        <h2 class="text-base font-semibold text-neutral-900 dark:text-white">Why We Built Pod Studio</h2>
+        <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+          While platforms like Vercel revolutionized web development with instant, edge-first developer workflows, podcast creators were still relying on scattered Google Docs, ad-bloated title generators, and complex spreadsheets for CPM modeling.
         </p>
-        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-          Pod Studio unifies all 18 essential audio utilities into one modern dark studio interface designed for speed, elegance, and keyboard-first productivity.
+        <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+          Pod Studio brings developer-grade precision, speed, and privacy to the creator economy. Every calculation executes deterministically in your browser sandbox.
         </p>
-        <div class="pt-4">
-          <a
-            href="/tools"
-            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold transition-all shadow-md shadow-orange-500/20"
-          >
-            Explore the Toolkit <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
+      </div>
+
+      <div class="text-center pt-2">
+        <a
+          href="/tools"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-xs hover:opacity-90 transition-opacity"
+        >
+          Explore All 18 Free Tools <ArrowRight className="w-3.5 h-3.5" />
+        </a>
       </div>
     </div>
   </div>

@@ -1,50 +1,152 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Geist Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  /* Vercel Geist Tokens from DESIGN.md */
+  --color-canvas: #fafafa;
+  --color-canvas-elevated: #ffffff;
+  --color-ink: #171717;
+  --color-body: #4d4d4d;
+  --color-mute: #8f8f8f;
+  --color-faint: #a1a1a1;
+  --color-hairline: #ebebeb;
+  --color-hairline-soft: #f2f2f2;
+
+  --color-vercel-blue: #0070f3;
+  --color-vercel-blue-deep: #0761d1;
+  --color-vercel-blue-soft: #d3e5ff;
+  --color-vercel-violet: #7928ca;
+  --color-vercel-cyan: #50e3c2;
+  --color-vercel-pink: #ff0080;
+  --color-vercel-magenta: #eb367f;
+  --color-vercel-amber: #f9cb28;
+
+  /* Studio accents mapped to CSS custom properties for seamless light/dark switching */
+  --color-studio-darkest: var(--bg-inset);
+  --color-studio-dark: var(--bg-page);
+  --color-studio-card: var(--bg-card);
+  --color-studio-elevated: var(--bg-card-hover);
+  --color-studio-border: var(--border-subtle);
+  --color-studio-border-hover: var(--border-hover);
+  --color-studio-muted: var(--text-mute);
+  --color-studio-accent: #0070f3;
+}
+
+/* Base Root styles with Dark/Light transitions */
 :root {
-  --color-background: #0a0a16;
-  --color-foreground: #f8fafc;
+  --bg-page: #fafafa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5f5f5;
+  --bg-inset: #f0f0f0;
+  --border-subtle: #ebebeb;
+  --border-hover: #d4d4d4;
+  --text-ink: #171717;
+  --text-body: #4d4d4d;
+  --text-mute: #8f8f8f;
+}
+
+.dark {
+  --bg-page: #000000;
+  --bg-card: #0a0a0a;
+  --bg-card-hover: #141414;
+  --bg-inset: #050505;
+  --border-subtle: #222222;
+  --border-hover: #333333;
+  --text-ink: #ededed;
+  --text-body: #a1a1a1;
+  --text-mute: #666666;
 }
 
 body {
-  background-color: #0a0a16;
-  color: #f8fafc;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  overflow-x: hidden;
+  background-color: var(--bg-page);
+  color: var(--text-ink);
+  font-family: var(--font-sans);
   min-height: 100vh;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Scrollbar for Studio Aesthetics */
+/* Adaptive Contrast for Tool Workspaces in Light Mode */
+:root:not(.dark) .tool-workspace .text-white {
+  color: #171717 !important;
+}
+
+:root:not(.dark) .tool-workspace .text-slate-200,
+:root:not(.dark) .tool-workspace .text-slate-300 {
+  color: #262626 !important;
+}
+
+:root:not(.dark) .tool-workspace .text-slate-400 {
+  color: #525252 !important;
+}
+
+:root:not(.dark) .tool-workspace .text-slate-500 {
+  color: #737373 !important;
+}
+
+:root:not(.dark) .tool-workspace input,
+:root:not(.dark) .tool-workspace textarea,
+:root:not(.dark) .tool-workspace select {
+  background-color: #fafafa !important;
+  color: #171717 !important;
+  border-color: #e5e5e5 !important;
+}
+
+:root:not(.dark) .tool-workspace input:focus,
+:root:not(.dark) .tool-workspace textarea:focus,
+:root:not(.dark) .tool-workspace select:focus {
+  border-color: #171717 !important;
+  outline: none !important;
+}
+
+.dark .tool-workspace input,
+.dark .tool-workspace textarea,
+.dark .tool-workspace select {
+  background-color: #050505 !important;
+  color: #ededed !important;
+  border-color: #262626 !important;
+}
+
+.dark .tool-workspace input:focus,
+.dark .tool-workspace textarea:focus,
+.dark .tool-workspace select:focus {
+  border-color: #404040 !important;
+  outline: none !important;
+}
+
+/* Vercel Hero Mesh Gradient effect */
+.vercel-hero-mesh {
+  background: radial-gradient(circle at 50% 30%, rgba(0, 112, 243, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 20% 20%, rgba(121, 40, 202, 0.06) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(0, 223, 216, 0.06) 0%, transparent 50%);
+}
+
+.dark .vercel-hero-mesh {
+  background: radial-gradient(circle at 50% 30%, rgba(0, 112, 243, 0.16) 0%, transparent 60%),
+              radial-gradient(circle at 20% 20%, rgba(121, 40, 202, 0.12) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(0, 223, 216, 0.10) 0%, transparent 50%);
+}
+
+/* Minimal Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a16;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #25244c;
-  border-radius: 4px;
+  background: rgba(128, 128, 128, 0.2);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d3a7a;
+  background: rgba(128, 128, 128, 0.35);
 }
-
-/* Studio Glow utility classes */
-.studio-glow-accent {
-  box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.25);
-}
-
-.studio-glow-indigo {
-  box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.25);
-}
-
-.studio-card-gradient {
-  background: linear-gradient(180deg, rgba(24, 24, 52, 0.7) 0%, rgba(18, 18, 38, 0.85) 100%);
-  backdrop-filter: blur(12px);
-}
-

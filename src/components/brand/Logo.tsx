@@ -9,101 +9,55 @@ interface LogoProps {
 export function Logo({ size = "md", showText = true, className = "" }: LogoProps) {
   const iconSizes = {
     sm: "w-7 h-7",
-    md: "w-9 h-9",
-    lg: "w-11 h-11",
-    xl: "w-14 h-14",
+    md: "w-8 h-8",
+    lg: "w-10 h-10",
+    xl: "w-12 h-12",
   };
 
   const textSizes = {
-    sm: "text-lg",
-    md: "text-xl",
-    lg: "text-2xl",
-    xl: "text-3xl",
+    sm: "text-base",
+    md: "text-lg",
+    lg: "text-xl",
+    xl: "text-2xl",
   };
 
   return (
     <div className={`flex items-center gap-2.5 select-none ${className}`}>
-      {/* Studio Mic & Soundwave Emblem */}
+      {/* Vercel-Style Geometric Podcast Emblem */}
       <div
-        className={`relative ${iconSizes[size]} rounded-xl bg-gradient-to-br from-indigo-600 via-purple-600 to-orange-500 p-[1.5px] shadow-lg shadow-indigo-500/20 flex-shrink-0 group`}
+        className={`relative ${iconSizes[size]} rounded-lg bg-[#171717] dark:bg-white flex items-center justify-center p-1.5 shadow-sm transition-transform duration-200 group-hover:scale-105 flex-shrink-0`}
       >
-        <div className="w-full h-full bg-[#0B0B18] rounded-[10px] flex items-center justify-center overflow-hidden relative">
-          {/* Subtle audio waveform background */}
-          <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/10 via-transparent to-orange-500/10" />
-
-          {/* SVG Mic Icon with dynamic sound pulses */}
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5/6 h-5/6 relative z-10 transition-transform duration-300 group-hover:scale-105"
-          >
-            {/* Left Sound Wave */}
-            <path
-              d="M3 10V14M1 11V13"
-              stroke="#818CF8"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            {/* Microphone Body */}
-            <rect
-              x="8"
-              y="2.5"
-              width="8"
-              height="11"
-              rx="4"
-              className="fill-indigo-950/80 stroke-orange-400"
-              strokeWidth="1.8"
-            />
-            {/* Mic Grille Lines */}
-            <line x1="9.5" y1="6" x2="14.5" y2="6" stroke="#FB923C" strokeWidth="1.2" strokeLinecap="round" />
-            <line x1="9.5" y1="8.5" x2="14.5" y2="8.5" stroke="#FB923C" strokeWidth="1.2" strokeLinecap="round" />
-            
-            {/* Mic Stand Cradle */}
-            <path
-              d="M5.5 10C5.5 13.5899 8.41015 16.5 12 16.5C15.5899 16.5 18.5 13.5899 18.5 10"
-              stroke="#A5B4FC"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            {/* Mic Stem and Base */}
-            <path
-              d="M12 16.5V20.5M8.5 21.5H15.5"
-              stroke="#A5B4FC"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            {/* Right Sound Wave */}
-            <path
-              d="M21 10V14M23 11V13"
-              stroke="#FB923C"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full text-white dark:text-black"
+        >
+          {/* Vercel Triangle Silhouette with Studio Audio Waveform */}
+          <path
+            d="M12 3L22 20.5H2L12 3Z"
+            fill="currentColor"
+          />
+          {/* Negative-space Soundwave lines cut into the triangle */}
+          <line x1="8.5" y1="17.5" x2="8.5" y2="15" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
+          <line x1="10.25" y1="17.5" x2="10.25" y2="12" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
+          <line x1="12" y1="17.5" x2="12" y2="9.5" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
+          <line x1="13.75" y1="17.5" x2="13.75" y2="12" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
+          <line x1="15.5" y1="17.5" x2="15.5" y2="15" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
+        </svg>
       </div>
 
       {/* Brand Wordmark */}
       {showText && (
-        <div className="flex flex-col">
-          <div className="flex items-center tracking-tight font-extrabold leading-none">
-            <span className={`${textSizes[size]} text-white`}>Pod</span>
-            <span
-              className={`${textSizes[size]} bg-gradient-to-r from-orange-400 via-amber-300 to-indigo-300 bg-clip-text text-transparent ml-1`}
-            >
-              Studio
-            </span>
-            <span className="ml-1.5 px-1.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-md bg-orange-500/10 text-orange-400 border border-orange-500/20">
-              Tools
-            </span>
-          </div>
-          <span className="text-[10px] text-slate-400 font-medium tracking-wide mt-0.5">
-            Creator Suite
+        <div className="flex items-center gap-2">
+          <span className={`${textSizes[size]} font-semibold tracking-[-0.03em] text-[#171717] dark:text-[#ededed]`}>
+            Pod Studio
+          </span>
+          <span className="font-mono text-[10px] uppercase font-medium tracking-wider px-1.5 py-0.5 rounded-[6px] border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400">
+            TOOLS
           </span>
         </div>
       )}
     </div>
   );
 }
-

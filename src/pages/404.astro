@@ -11,54 +11,54 @@ const featuredTools = toolRegistry.slice(0, 4);
   description="Sorry, the podcast creator tool or guide you were looking for could not be found. Explore our 18 free audio production tools."
   noindex={true}
 >
-  <div class="w-full py-16 sm:py-24 bg-[#0A0A16] min-h-[75vh] flex items-center">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-      <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-orange-500/10 border border-orange-500/20 text-orange-400 mx-auto">
-        <Mic className="w-10 h-10 animate-pulse" />
+  <div class="w-full py-16 sm:py-24 min-h-[70vh] flex items-center">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center space-y-6">
+      <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-800 dark:text-neutral-200 mx-auto shadow-2xs">
+        <Mic className="w-5 h-5 text-[#0070f3]" />
       </div>
 
-      <div class="space-y-3">
-        <span class="text-xs uppercase tracking-widest font-bold text-orange-500">Error 404</span>
-        <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+      <div class="space-y-2">
+        <span class="font-mono text-[11px] uppercase tracking-wider text-neutral-400">ERROR 404</span>
+        <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white">
           Track Not Found
         </h1>
-        <p class="text-sm sm:text-base text-slate-400 max-w-lg mx-auto">
-          The frequency you tuned into doesn&apos;t exist or has moved to a new studio room. Check out our suite of free podcast utilities below.
+        <p class="text-xs sm:text-sm text-neutral-500 max-w-md mx-auto">
+          The frequency or page you tuned into does not exist. Browse our free creator tools below.
         </p>
       </div>
 
-      <div class="flex flex-wrap items-center justify-center gap-3">
+      <div class="flex flex-wrap items-center justify-center gap-2.5">
         <a
           href="/"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm transition-all shadow-lg shadow-orange-500/20"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-xs hover:opacity-90 transition-opacity"
         >
-          <Home className="w-4 h-4" /> Studio Home
+          <Home className="w-3.5 h-3.5" /> Studio Home
         </a>
         <a
           href="/tools"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-studio-card hover:bg-studio-card-hover border border-studio-border text-slate-200 font-semibold text-sm transition-all"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-800 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-900 font-medium text-xs transition-colors"
         >
-          <Compass className="w-4 h-4" /> Browse All 18 Tools
+          <Compass className="w-3.5 h-3.5" /> All 18 Tools
         </a>
       </div>
 
-      <div class="pt-8 border-t border-studio-border/60 text-left">
-        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 text-center">
+      <div class="pt-6 border-t border-neutral-200 dark:border-neutral-800 text-left">
+        <h2 class="font-mono text-[11px] uppercase tracking-wider text-neutral-400 mb-3 text-center">
           Popular Free Podcast Tools
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
           {featuredTools.map((tool) => (
             <a
               href={`/tools/${tool.slug}`}
-              class="p-4 rounded-xl bg-studio-card border border-studio-border hover:border-orange-500/40 group transition-all flex items-center justify-between"
+              class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] hover:border-neutral-400 dark:hover:border-neutral-600 group transition-colors flex items-center justify-between"
             >
               <div>
-                <span class="text-xs font-semibold text-orange-400 block">{tool.category}</span>
-                <span class="text-sm font-bold text-white group-hover:text-orange-300 transition-colors">
+                <span class="font-mono text-[9px] uppercase text-neutral-400 block">{tool.category}</span>
+                <span class="text-xs font-semibold text-neutral-900 dark:text-white group-hover:text-[#0070f3] transition-colors">
                   {tool.title}
                 </span>
               </div>
-              <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
+              <ArrowRight className="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#0070f3] group-hover:translate-x-0.5 transition-transform" />
             </a>
           ))}
         </div>

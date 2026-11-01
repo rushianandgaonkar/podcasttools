@@ -1,91 +1,59 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { FileText, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 ---
 
 <Layout
   title="Terms of Service — Pod Studio"
   description="Review the terms and conditions for using Pod Studio's free podcast creator tools, sponsorship calculators, and formatting utilities."
 >
-  <div class="w-full py-12 sm:py-20 bg-[#0A0A16]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+  <div class="w-full py-10 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
       <div class="space-y-3">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-semibold">
-          <FileText className="w-3.5 h-3.5" /> Legal &amp; Usage
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 font-mono text-[11px]">
+          TERMS OF USE
         </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white">
           Terms of Service
         </h1>
-        <p class="text-xs sm:text-sm text-slate-400">
+        <p class="text-xs text-neutral-500 font-mono">
           Last updated: November 1, 2026 • Effective Date: November 1, 2026
         </p>
       </div>
 
-      <div class="p-8 rounded-2xl bg-studio-card border border-studio-border space-y-8 text-xs sm:text-sm text-slate-300 leading-relaxed">
-        <section class="space-y-3">
-          <h2 class="text-base font-bold text-white">1. Agreement to Terms</h2>
+      <div class="p-6 sm:p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-6 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+        <section class="space-y-2">
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">1. Agreement to Terms</h2>
           <p>
-            By accessing or using <strong class="text-white">podstudiotools.com</strong> (referred to as &ldquo;Pod Studio&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), you agree to be bound by these Terms of Service. If you do not agree to these terms, you should not access or use any of our creator tools, guides, or resources.
+            By accessing or using <strong class="text-neutral-900 dark:text-white font-mono">podstudiotools.com</strong> (&ldquo;Pod Studio&rdquo;), you agree to be bound by these Terms of Service.
           </p>
         </section>
 
-        <section class="space-y-3">
-          <h2 class="text-base font-bold text-white">2. Free, Client-Side Utility Nature</h2>
+        <section class="space-y-2">
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">2. Free, Client-Side Utility Nature</h2>
           <p>
-            Pod Studio is engineered as a free, client-side toolkit for independent podcast creators, production teams, and sound designers. We do not require accounts, logins, credit cards, or subscription commitments to access our standard 18 production utilities.
-          </p>
-          <p>
-            All computations, formatting, and file inspections (such as artwork dimensions and client-side XML RSS structure checks) happen locally within your web browser&apos;s memory sandbox.
+            Pod Studio is engineered as a free, client-side toolkit for independent podcast creators and sound designers. We do not require accounts, logins, or payment to access our 18 utilities.
           </p>
         </section>
 
-        <section class="space-y-3">
-          <h2 class="text-base font-bold text-white">3. Intellectual Property &amp; Content Ownership</h2>
-          <ul class="list-disc list-inside space-y-2 text-slate-400">
-            <li>
-              <strong class="text-slate-200">Your Creative Outputs:</strong> Any episode titles, show notes, scripts, hooks, interview outlines, or timestamps generated or formatted using Pod Studio belong 100% to you. We assert zero copyright, royalty, or commercial claim over your generated works.
-            </li>
-            <li>
-              <strong class="text-slate-200">Site Assets:</strong> The website design, logo, vector branding, interactive calculator algorithms, and guide content are proprietary to Pod Studio and protected by applicable copyright and trademark laws.
-            </li>
-          </ul>
-        </section>
-
-        <section class="space-y-3">
-          <h2 class="text-base font-bold text-white">4. Calculators, Estimates &amp; Advisory Disclaimer</h2>
+        <section class="space-y-2">
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">3. Content Ownership</h2>
           <p>
-            Several utilities provided on Pod Studio — including the <strong class="text-white">Podcast Sponsorship &amp; CPM Calculator</strong> and <strong class="text-white">Audience Growth Estimator</strong> — provide mathematical models based on industry benchmark averages (e.g., standard \$18-\$25/CPM ad rates).
-          </p>
-          <p class="text-slate-400">
-            These figures are informational estimates only and do not constitute financial, legal, or guaranteed commercial forecasts. Actual podcast sponsorship deals depend on sponsor relationships, host-read conversion rates, niche audience demographics, and negotiated contracts.
+            Any episode titles, show notes, scripts, hooks, or timestamps generated using Pod Studio belong 100% to you. We assert zero copyright or commercial claims over your generated works.
           </p>
         </section>
 
-        <section class="space-y-3">
-          <h2 class="text-base font-bold text-white">5. RSS Feed Validator Limitations</h2>
+        <section class="space-y-2">
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">4. Calculators &amp; Advisory Estimates</h2>
           <p>
-            The client-side RSS validator performs static syntax and tag verification in compliance with Apple Podcasts and RSS 2.0 specifications. It does not replace live audio server availability tests (e.g. byte-range request support on your media host) and cannot guarantee acceptance by directories with proprietary editorial policies.
+            Calculators on Pod Studio provide mathematical models based on industry benchmark averages (e.g. standard CPM ad rates). These figures are informational estimates and do not constitute financial guarantees.
           </p>
         </section>
 
-        <section class="space-y-3">
-          <h2 class="text-base font-bold text-white">6. Limitation of Liability</h2>
+        <section class="space-y-2 pt-4 border-t border-neutral-100 dark:border-neutral-900">
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">5. Inquiries</h2>
           <p>
-            To the maximum extent permitted by applicable law, Pod Studio and its maintainers shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use our tools, including any missed publishing deadlines or sponsorship discrepancies.
-          </p>
-        </section>
-
-        <section class="space-y-3">
-          <h2 class="text-base font-bold text-white">7. Governing Law &amp; Updates</h2>
-          <p>
-            These terms may be updated periodically to reflect new tools or regulatory shifts. Continued use of Pod Studio following any modifications constitutes acceptance of the modified Terms.
-          </p>
-        </section>
-
-        <section class="space-y-3 pt-4 border-t border-studio-border">
-          <h2 class="text-base font-bold text-white">8. Inquiries &amp; Legal Notices</h2>
-          <p>
-            If you have questions regarding these terms, contact our team directly at <a href="mailto:hello@podstudiotools.com" class="text-orange-400 hover:underline">hello@podstudiotools.com</a> or visit our <a href="/contact" class="text-orange-400 hover:underline">Contact page</a>.
+            Questions? Contact us at <a href="mailto:hello@podstudiotools.com" class="text-[#0070f3] hover:underline font-mono">hello@podstudiotools.com</a> or visit our <a href="/contact" class="text-[#0070f3] hover:underline">Contact page</a>.
           </p>
         </section>
       </div>
@@ -93,9 +61,9 @@ import { FileText, ArrowRight } from "lucide-react";
       <div class="text-center">
         <a
           href="/tools"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm transition-all shadow-lg shadow-orange-500/20"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-xs hover:opacity-90 transition-opacity"
         >
-          Explore the 18 Free Tools <ArrowRight className="w-4 h-4" />
+          Explore All 18 Tools <ArrowRight className="w-3.5 h-3.5" />
         </a>
       </div>
     </div>
