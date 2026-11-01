@@ -81,3 +81,4 @@ export function getHreflangLinks(pathname: string, siteUrl: string = siteConfig.
 
   return links;
 }
+

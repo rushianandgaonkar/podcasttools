@@ -7,7 +7,6 @@ import { LanguageSelector } from "./LanguageSelector";
 import { getLangFromUrl, getLocalizedPath, useTranslations } from "@/i18n/utils";
 import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
 import {
-  Search,
   Menu,
   X,
   ChevronRight,
@@ -41,12 +40,22 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
     }
   }, [initialLang]);
 
-  // Keyboard shortcut ⌘K / Ctrl+K
+  // Keyboard shortcut ⌘K / Ctrl+K and "/"
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      const isInput =
+        target &&
+        (target.tagName === "INPUT" ||
+          target.tagName === "TEXTAREA" ||
+          target.isContentEditable);
+
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
         setSearchOpen((prev) => !prev);
+      } else if (e.key === "/" && !isInput) {
+        e.preventDefault();
+        setSearchOpen(true);
       } else if (e.key === "Escape") {
         setSearchOpen(false);
       }
@@ -94,7 +103,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
             <Logo size="md" />
           </a>
 
-          {/* Desktop Navigation */}
+          {/* Clean Desktop Navigation — Removed redundant single-reference anchors */}
           <nav className="hidden md:flex items-center gap-1">
             <a
               href={getLocalizedPath("/tools", currentLang)}
@@ -108,34 +117,6 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
             </a>
 
             <a
-              href={`${getLocalizedPath("/tools", currentLang)}#ideation`}
-              className="px-3 py-1 rounded-full text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
-            >
-              {t.nav.ideation}
-            </a>
-
-            <a
-              href={`${getLocalizedPath("/tools", currentLang)}#content`}
-              className="px-3 py-1 rounded-full text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
-            >
-              {t.nav.content}
-            </a>
-
-            <a
-              href={`${getLocalizedPath("/tools", currentLang)}#technical`}
-              className="px-3 py-1 rounded-full text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
-            >
-              {t.nav.technical}
-            </a>
-
-            <a
-              href={`${getLocalizedPath("/tools", currentLang)}#growth`}
-              className="px-3 py-1 rounded-full text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
-            >
-              {t.nav.growth}
-            </a>
-
-            <a
               href={getLocalizedPath("/guides", currentLang)}
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                 pathname.includes("/guides")
@@ -145,21 +126,58 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
             >
               {t.nav.guides}
             </a>
+
+            <a
+              href={getLocalizedPath("/about", currentLang)}
+              className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                pathname.includes("/about")
+                  ? "bg-neutral-200/80 dark:bg-neutral-800 text-neutral-900 dark:text-white"
+                  : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900"
+              }`}
+            >
+              {t.nav.about}
+            </a>
+
+            <a
+              href={getLocalizedPath("/contact", currentLang)}
+              className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                pathname.includes("/contact")
+                  ? "bg-neutral-200/80 dark:bg-neutral-800 text-neutral-900 dark:text-white"
+                  : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900"
+              }`}
+            >
+              {t.nav.contact}
+            </a>
           </nav>
 
           {/* Right Action Bar */}
           <div className="flex items-center gap-2">
-            {/* Search Trigger (⌘K) */}
+            {/* Elevated Search Button with interactive hover animation & shortcut */}
             <button
+              type="button"
               onClick={() => setSearchOpen(true)}
-              className="flex items-center gap-2 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-500 dark:text-neutral-400 hover:border-neutral-300 dark:hover:border-neutral-700 text-xs transition-all shadow-2xs"
-              aria-label="Search tools (Press ⌘K)"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] hover:border-[var(--brand-accent)] text-xs text-[var(--text-muted)] hover:text-[var(--text-ink)] shadow-[var(--shadow-button-elevated)] hover:shadow-[var(--shadow-button-elevated-hover)] hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-1 focus:ring-[var(--brand-accent)] cursor-pointer"
+              aria-label="Open tool search command palette"
             >
-              <Search className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline font-normal">Search tools...</span>
-              <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono rounded bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-500">
-                ⌘K
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <span>Search tools...</span>
+              <kbd className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline)] text-[var(--text-body)]">
+                /
               </kbd>
+            </button>
+
+            {/* Mobile Search Icon Trigger */}
+            <button
+              type="button"
+              onClick={() => setSearchOpen(true)}
+              className="sm:hidden p-1.5 rounded-full border border-[var(--border-hairline)] bg-[var(--bg-canvas-elevated)] text-[var(--text-muted)] hover:text-[var(--text-ink)] hover:border-[var(--brand-accent)] cursor-pointer transition-all"
+              aria-label="Search tools"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
             </button>
 
             {/* Language Selector Dropdown */}
@@ -190,83 +208,56 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Clean Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] px-4 py-3 space-y-2">
+          <div className="md:hidden border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] px-4 py-3 space-y-1">
             <a
               href={getLocalizedPath("/tools", currentLang)}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-1.5 rounded-md text-xs font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-900"
+              className="block px-3 py-2 rounded-md text-xs font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
             >
-              {t.nav.allTools}
+              🛠️ {t.nav.allTools}
             </a>
-            <div className="grid grid-cols-2 gap-1 pt-1 border-t border-neutral-200 dark:border-neutral-800">
-              <a
-                href={`${getLocalizedPath("/tools", currentLang)}#ideation`}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-1.5 rounded-md text-xs text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900"
-              >
-                💡 {t.nav.ideation}
-              </a>
-              <a
-                href={`${getLocalizedPath("/tools", currentLang)}#content`}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-1.5 rounded-md text-xs text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900"
-              >
-                📝 {t.nav.content}
-              </a>
-              <a
-                href={`${getLocalizedPath("/tools", currentLang)}#technical`}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-1.5 rounded-md text-xs text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900"
-              >
-                ⚙️ {t.nav.technical}
-              </a>
-              <a
-                href={`${getLocalizedPath("/tools", currentLang)}#growth`}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-1.5 rounded-md text-xs text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900"
-              >
-                📈 {t.nav.growth}
-              </a>
-            </div>
-            <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between text-xs text-neutral-500">
-              <a
-                href={getLocalizedPath("/guides", currentLang)}
-                onClick={() => setMobileMenuOpen(false)}
-                className="hover:underline"
-              >
-                {t.nav.guides}
-              </a>
-              <a
-                href={getLocalizedPath("/about", currentLang)}
-                onClick={() => setMobileMenuOpen(false)}
-                className="hover:underline"
-              >
-                {t.nav.about}
-              </a>
-              <a
-                href={getLocalizedPath("/contact", currentLang)}
-                onClick={() => setMobileMenuOpen(false)}
-                className="hover:underline"
-              >
-                {t.nav.contact}
-              </a>
-            </div>
+            <a
+              href={getLocalizedPath("/guides", currentLang)}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-md text-xs font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
+            >
+              📚 {t.nav.guides}
+            </a>
+            <a
+              href={getLocalizedPath("/about", currentLang)}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-md text-xs font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
+            >
+              ℹ️ {t.nav.about}
+            </a>
+            <a
+              href={getLocalizedPath("/contact", currentLang)}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-md text-xs font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
+            >
+              ✉️ {t.nav.contact}
+            </a>
           </div>
         )}
       </header>
 
-      {/* Global ⌘K Quick Search Modal */}
+      {/* Global Command Palette Quick Search Modal */}
       {searchOpen && (
-        <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/60 backdrop-blur-xs">
+        <div
+          className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/60 backdrop-blur-xs"
+          onClick={() => setSearchOpen(false)}
+        >
           <div
             className="w-full max-w-xl bg-white dark:bg-[#0c0c0c] border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Search Input Bar */}
             <div className="flex items-center px-4 border-b border-neutral-200 dark:border-neutral-800">
-              <Search className="w-4 h-4 text-neutral-400 mr-3 flex-shrink-0" />
+              <svg className="w-4 h-4 text-neutral-400 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
               <input
                 type="text"
                 value={searchQuery}
@@ -317,7 +308,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
                       className="flex items-center justify-between p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900/80 group transition-colors"
                     >
                       <div>
-                        <div className="text-xs font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors">
+                        <div className="text-xs font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-[#0070f3] transition-colors">
                           {t.title}
                         </div>
                         <div className="text-[11px] text-neutral-500 dark:text-neutral-400 line-clamp-1">
@@ -333,7 +324,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
 
             {/* Footer hint */}
             <div className="px-4 py-2 border-t border-neutral-100 dark:border-neutral-800/80 bg-neutral-50/50 dark:bg-neutral-950/50 text-[10px] text-neutral-400 flex items-center justify-between">
-              <span>Navigate with arrow keys</span>
+              <span>Press <kbd className="font-mono bg-neutral-200 dark:bg-neutral-800 px-1 py-0.5 rounded text-[9px]">/</kbd> or <kbd className="font-mono bg-neutral-200 dark:bg-neutral-800 px-1 py-0.5 rounded text-[9px]">⌘K</kbd> anywhere</span>
               <span>18 tools indexed</span>
             </div>
           </div>

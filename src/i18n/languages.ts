@@ -20,3 +20,4 @@ export type SupportedLocale = keyof typeof languages;
 export const defaultLocale: SupportedLocale = "en";
 export const allLocales: SupportedLocale[] = ["en", "es", "ja", "fr", "de", "pt", "ko", "it"];
 export const nonDefaultLocales: SupportedLocale[] = ["es", "ja", "fr", "de", "pt", "ko", "it"];
+

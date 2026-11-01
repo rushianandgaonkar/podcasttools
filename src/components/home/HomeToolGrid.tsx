@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { toolCategories, toolRegistry, type ToolDefinition } from "@/config/site";
 import { ToolIcon } from "@/components/tools/ToolIcon";
 import { ArrowRight, Search } from "lucide-react";
@@ -16,6 +16,21 @@ export function HomeToolGrid({ lang = defaultLocale }: HomeToolGridProps) {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   const t = useTranslations(lang);
+
+  // Sync with URL hash or query param on mount (e.g., #ideation or ?category=content)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash.replace("#", "").toLowerCase();
+      const params = new URLSearchParams(window.location.search);
+      const queryCat = params.get("category")?.toLowerCase();
+
+      const target = hash || queryCat;
+      const validCategories = ["ideation", "content", "technical", "growth"];
+      if (target && validCategories.includes(target)) {
+        setSelectedCategory(target);
+      }
+    }
+  }, []);
 
   const filteredTools = toolRegistry.filter((tool) => {
     const matchesCategory =
@@ -53,6 +68,7 @@ export function HomeToolGrid({ lang = defaultLocale }: HomeToolGridProps) {
             return (
               <button
                 key={cat.id}
+                id={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
                   isSelected

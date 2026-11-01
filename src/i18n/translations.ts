@@ -612,3 +612,4 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
   },
 };
+
