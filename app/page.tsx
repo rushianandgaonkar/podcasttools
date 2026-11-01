@@ -1,0 +1,352 @@
+import React from "react";
+import Link from "next/link";
+import { siteConfig, toolRegistry, guidesRegistry } from "@/config/site";
+import { HomeToolGrid } from "@/components/home/HomeToolGrid";
+import { HeroQuickTool } from "@/components/home/HeroQuickTool";
+import {
+  Mic,
+  ShieldCheck,
+  Zap,
+  Sparkles,
+  DollarSign,
+  FileText,
+  Layers,
+  ArrowRight,
+  CheckCircle2,
+  Clock,
+  BookOpen,
+} from "lucide-react";
+
+export default function HomePage() {
+  return (
+    <div className="flex flex-col items-center w-full">
+      {/* Hero Section */}
+      <section className="w-full relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-studio-dark">
+        {/* Glow Effects */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-studio-glow pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-mic-glow pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+          {/* Trust Pill */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-studio-card border border-studio-border text-slate-300 text-xs font-semibold mb-6 shadow-md">
+            <span className="flex h-2 w-2 rounded-full bg-orange-400 animate-ping" />
+            <span className="text-orange-400 font-bold">New:</span> Free Podcast Suite 2026 • 100% Client-Side
+          </div>
+
+          {/* Main H1 Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight max-w-4xl leading-[1.15] mb-6">
+            Everything You Need to{" "}
+            <span className="bg-gradient-to-r from-orange-400 via-amber-300 to-indigo-300 bg-clip-text text-transparent">
+              Create, Polish & Monetize
+            </span>{" "}
+            Your Podcast
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed mb-8">
+            Stop juggling fragmented apps and expensive monthly subscriptions. Access 18 free utilities to craft high-CTR episode titles, format Markdown show notes, calculate sponsorship CPM rates, and preview Apple/Spotify artwork.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-3.5 mb-14">
+            <a
+              href="#tools-section"
+              className="px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-lg shadow-orange-500/25 transition-all flex items-center gap-2 group"
+            >
+              Browse All 18 Free Tools
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+
+            <Link
+              href="/tools/monetization-calculator"
+              className="px-6 py-3 rounded-xl bg-studio-card hover:bg-studio-elevated text-slate-200 border border-studio-border font-semibold text-sm transition-all flex items-center gap-2"
+            >
+              <DollarSign className="w-4 h-4 text-emerald-400" />
+              Calculate Ad Revenue
+            </Link>
+          </div>
+
+          {/* Interactive Hero Quick Tool */}
+          <HeroQuickTool />
+
+          {/* Trust Highlights Strip */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 max-w-4xl w-full mt-16 pt-10 border-t border-studio-border/60 text-left">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2 text-white font-bold text-lg sm:text-xl">
+                <Sparkles className="w-5 h-5 text-orange-400" />
+                18 Free Tools
+              </div>
+              <p className="text-xs text-slate-400">Ideation, scripts, audio specs & monetization</p>
+            </div>
+
+            <div className="space-y-1">
+              <div className="flex items-center gap-2 text-white font-bold text-lg sm:text-xl">
+                <ShieldCheck className="w-5 h-5 text-emerald-400" />
+                Zero Cloud Uploads
+              </div>
+              <p className="text-xs text-slate-400">100% computed in browser memory</p>
+            </div>
+
+            <div className="space-y-1">
+              <div className="flex items-center gap-2 text-white font-bold text-lg sm:text-xl">
+                <Layers className="w-5 h-5 text-indigo-400" />
+                No Signups Needed
+              </div>
+              <p className="text-xs text-slate-400">Instant access, no email paywalls</p>
+            </div>
+
+            <div className="space-y-1">
+              <div className="flex items-center gap-2 text-white font-bold text-lg sm:text-xl">
+                <Zap className="w-5 h-5 text-amber-400" />
+                Apple & Spotify Spec
+              </div>
+              <p className="text-xs text-slate-400">2026 directory standards verified</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Tools Directory Section */}
+      <section className="w-full py-16 sm:py-24 bg-[#0A0A16] border-t border-studio-border/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-orange-400 mb-2">
+                <Sparkles className="w-3.5 h-3.5" />
+                Full Creator Suite
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Explore All 18 Free Podcast Tools
+              </h2>
+            </div>
+            <p className="text-xs sm:text-sm text-slate-400 max-w-md">
+              Each tool operates standalone and client-side. Click on any tool card below to start using it immediately.
+            </p>
+          </div>
+
+          {/* Interactive Tool Grid with Category Filtering */}
+          <HomeToolGrid />
+        </div>
+      </section>
+
+      {/* Step-by-Step Creator Workflow Section */}
+      <section className="w-full py-16 sm:py-24 bg-studio-card/40 border-t border-studio-border/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-2 block">
+              The Production Loop
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+              How Pod Studio Accelerates Every Episode
+            </h2>
+            <p className="text-sm text-slate-400">
+              From initial brainstorm to directory submission, here is the four-stage framework top creators use to produce weekly episodes in half the time.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {/* Step 1 */}
+            <div className="rounded-2xl bg-studio-card border border-studio-border p-6 relative group hover:border-indigo-500/40 transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex items-center justify-center font-bold text-sm mb-4">
+                01
+              </div>
+              <h3 className="text-base font-bold text-white mb-2">Ideate & Name</h3>
+              <p className="text-xs text-slate-400 leading-relaxed mb-4">
+                Test 30+ title formulas and craft high-impact cold open hooks that prevent early listener drop-off.
+              </p>
+              <Link
+                href="/tools/episode-title-generator"
+                className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1"
+              >
+                Try Title Generator &rarr;
+              </Link>
+            </div>
+
+            {/* Step 2 */}
+            <div className="rounded-2xl bg-studio-card border border-studio-border p-6 relative group hover:border-orange-500/40 transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-orange-500/10 text-orange-400 border border-orange-500/20 flex items-center justify-center font-bold text-sm mb-4">
+                02
+              </div>
+              <h3 className="text-base font-bold text-white mb-2">Outline & Script</h3>
+              <p className="text-xs text-slate-400 leading-relaxed mb-4">
+                Structure your episode run-of-show with timer-budgeted segments and generate engaging intro scripts.
+              </p>
+              <Link
+                href="/tools/episode-outline-builder"
+                className="text-xs font-semibold text-orange-400 hover:text-orange-300 inline-flex items-center gap-1"
+              >
+                Build Run-of-Show &rarr;
+              </Link>
+            </div>
+
+            {/* Step 3 */}
+            <div className="rounded-2xl bg-studio-card border border-studio-border p-6 relative group hover:border-cyan-500/40 transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center font-bold text-sm mb-4">
+                03
+              </div>
+              <h3 className="text-base font-bold text-white mb-2">Format & Polish</h3>
+              <p className="text-xs text-slate-400 leading-relaxed mb-4">
+                Produce publication-ready Markdown show notes with timestamps, key links, and guest bios ready to paste.
+              </p>
+              <Link
+                href="/tools/show-notes-generator"
+                className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1"
+              >
+                Generate Show Notes &rarr;
+              </Link>
+            </div>
+
+            {/* Step 4 */}
+            <div className="rounded-2xl bg-studio-card border border-studio-border p-6 relative group hover:border-emerald-500/40 transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center font-bold text-sm mb-4">
+                04
+              </div>
+              <h3 className="text-base font-bold text-white mb-2">Publish & Monetize</h3>
+              <p className="text-xs text-slate-400 leading-relaxed mb-4">
+                Verify Apple/Spotify cover art specs, lint your RSS feed, and calculate potential sponsorship earnings.
+              </p>
+              <Link
+                href="/tools/monetization-calculator"
+                className="text-xs font-semibold text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1"
+              >
+                Calculate CPM Revenue &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Educational Guides Section */}
+      <section className="w-full py-16 sm:py-24 bg-[#0A0A16] border-t border-studio-border/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-400 mb-2 block">
+                Topical Authority
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                2026 Podcasting Playbooks & Guides
+              </h2>
+            </div>
+            <Link
+              href="/guides"
+              className="text-xs sm:text-sm font-semibold text-slate-300 hover:text-orange-400 transition-colors inline-flex items-center gap-1"
+            >
+              View All Guides <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {guidesRegistry.map((guide) => (
+              <Link
+                key={guide.slug}
+                href={`/guides/${guide.slug}`}
+                className="group rounded-2xl bg-studio-card border border-studio-border p-6 hover:border-orange-500/40 hover:bg-studio-elevated transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between text-xs text-slate-400 mb-3">
+                    <span className="px-2 py-0.5 rounded-full bg-studio-dark border border-studio-border font-medium text-orange-400">
+                      {guide.category}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" />
+                      {guide.readTime}
+                    </span>
+                  </div>
+                  <h3 className="text-base font-bold text-white group-hover:text-orange-400 transition-colors mb-2">
+                    {guide.title}
+                  </h3>
+                  <p className="text-xs text-slate-400 leading-relaxed mb-6">
+                    {guide.description}
+                  </p>
+                </div>
+                <div className="text-xs font-semibold text-orange-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  Read Guide &rarr;
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Prerendered HTML FAQ Accordion Section (People-First SEO) */}
+      <section className="w-full py-16 sm:py-24 bg-studio-card/30 border-t border-studio-border/60">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold uppercase tracking-wider text-orange-400 mb-2 block">
+              Frequently Asked Questions
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
+              Everything You Need to Know About Pod Studio
+            </h2>
+            <p className="text-sm text-slate-400">
+              Honest, transparent answers about privacy, tooling algorithms, and platform compatibility.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {/* FAQ 1 */}
+            <div className="rounded-xl bg-studio-card border border-studio-border p-5">
+              <h3 className="text-base font-bold text-white mb-2">
+                Are these podcast creator tools completely free?
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                Yes, 100% free. There are no paid subscriptions, credit card requirements, or artificial usage limits on any of our 18 tools. You can generate unlimited episode titles, show notes, and monetization calculations.
+              </p>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="rounded-xl bg-studio-card border border-studio-border p-5">
+              <h3 className="text-base font-bold text-white mb-2">
+                How does Pod Studio guarantee my privacy?
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                All tool algorithms, text formatters, calculations, and artwork previews execute 100% locally in your browser memory using client-side JavaScript. We do not upload your show concepts, episode drafts, guest lists, or audio files to any remote server.
+              </p>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="rounded-xl bg-studio-card border border-studio-border p-5">
+              <h3 className="text-base font-bold text-white mb-2">
+                What are the official Apple Podcasts and Spotify cover art requirements for 2026?
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                Both Apple Podcasts and Spotify require artwork to be a 1:1 square ratio, minimum 1400 x 1400 pixels and maximum 3000 x 3000 pixels, in RGB color space (JPEG or PNG format, 72 dpi). Our Cover Art Preview tool tests your art at these exact specifications and displays it on simulated mobile and dark-mode directory layouts.
+              </p>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="rounded-xl bg-studio-card border border-studio-border p-5">
+              <h3 className="text-base font-bold text-white mb-2">
+                How does the Sponsorship & Monetization Calculator estimate revenue?
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                Our calculator uses verified 2026 industry standard CPM (Cost Per Mille / thousand downloads) benchmark rates: Pre-roll ($15–$18 CPM), Mid-roll ($25–$32 CPM), and Post-roll ($10–$14 CPM). You can customize your episode frequency, estimated 30-day downloads per episode, and ad load to project accurate gross revenue.
+              </p>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="rounded-xl bg-studio-card border border-studio-border p-5">
+              <h3 className="text-base font-bold text-white mb-2">
+                Can I export generated show notes to Buzzsprout, Libsyn, or Spotify for Podcasters?
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                Yes. The Show Notes Generator outputs in standard Markdown, HTML, and plain text formats. You can click one button to copy the output and paste it directly into your podcast hosting dashboard (Buzzsprout, Libsyn, Podbean, Transistor, Spotify for Podcasters, or your website CMS).
+              </p>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="rounded-xl bg-studio-card border border-studio-border p-5">
+              <h3 className="text-base font-bold text-white mb-2">
+                Do I need to sign up or create an account?
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                No account or email address is required. All tools are immediately accessible upon visiting the page. We believe creator utilities should be instant and friction-free.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
