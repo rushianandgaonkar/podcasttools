@@ -9,9 +9,9 @@ interface LogoProps {
 export function Logo({ size = "md", showText = true, className = "" }: LogoProps) {
   const iconSizes = {
     sm: "w-7 h-7",
-    md: "w-8 h-8",
-    lg: "w-10 h-10",
-    xl: "w-12 h-12",
+    md: "w-9 h-9",
+    lg: "w-11 h-11",
+    xl: "w-14 h-14",
   };
 
   const textSizes = {
@@ -23,28 +23,65 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
 
   return (
     <div className={`flex items-center gap-2.5 select-none ${className}`}>
-      {/* Vercel-Style Geometric Podcast Emblem */}
+      {/* Studio Mic & Soundwave Emblem */}
       <div
-        className={`relative ${iconSizes[size]} rounded-lg bg-[#171717] dark:bg-white flex items-center justify-center p-1.5 shadow-sm transition-transform duration-200 group-hover:scale-105 flex-shrink-0`}
+        className={`relative ${iconSizes[size]} rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-orange-500 p-[1.5px] shadow-sm flex-shrink-0 group`}
       >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full text-white dark:text-black"
-        >
-          {/* Vercel Triangle Silhouette with Studio Audio Waveform */}
-          <path
-            d="M12 3L22 20.5H2L12 3Z"
-            fill="currentColor"
-          />
-          {/* Negative-space Soundwave lines cut into the triangle */}
-          <line x1="8.5" y1="17.5" x2="8.5" y2="15" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
-          <line x1="10.25" y1="17.5" x2="10.25" y2="12" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
-          <line x1="12" y1="17.5" x2="12" y2="9.5" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
-          <line x1="13.75" y1="17.5" x2="13.75" y2="12" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
-          <line x1="15.5" y1="17.5" x2="15.5" y2="15" stroke="var(--bg-page, #fafafa)" strokeWidth="1.5" strokeLinecap="round" className="stroke-white dark:stroke-black" />
-        </svg>
+        <div className="w-full h-full bg-[#0B0B18] rounded-[10px] flex items-center justify-center overflow-hidden relative">
+          {/* Subtle audio waveform background tint */}
+          <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/10 via-transparent to-orange-500/10" />
+
+          {/* Clean Studio Microphone Icon with dynamic sound pulses */}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-5/6 h-5/6 relative z-10 transition-transform duration-300 group-hover:scale-105"
+          >
+            {/* Left Sound Wave */}
+            <path
+              d="M3.5 10V14M1.5 11.5V12.5"
+              stroke="#818CF8"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+            {/* Microphone Body */}
+            <rect
+              x="8"
+              y="2.5"
+              width="8"
+              height="11"
+              rx="4"
+              className="fill-indigo-950/80 stroke-orange-400"
+              strokeWidth="1.6"
+            />
+            {/* Mic Grille Lines */}
+            <line x1="9.5" y1="5.5" x2="14.5" y2="5.5" stroke="#FB923C" strokeWidth="1.2" strokeLinecap="round" />
+            <line x1="9.5" y1="8" x2="14.5" y2="8" stroke="#FB923C" strokeWidth="1.2" strokeLinecap="round" />
+            
+            {/* Mic Stand Cradle */}
+            <path
+              d="M5.5 9.5C5.5 13.0899 8.41015 16 12 16C15.5899 16 18.5 13.0899 18.5 9.5"
+              stroke="#A5B4FC"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+            {/* Mic Stem and Base */}
+            <path
+              d="M12 16V20M8.5 20.5H15.5"
+              stroke="#A5B4FC"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+            {/* Right Sound Wave */}
+            <path
+              d="M20.5 10V14M22.5 11.5V12.5"
+              stroke="#FB923C"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
       </div>
 
       {/* Brand Wordmark */}

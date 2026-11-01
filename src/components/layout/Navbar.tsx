@@ -3,6 +3,9 @@
 import React, { useState, useEffect } from "react";
 import { Logo } from "@/components/brand/Logo";
 import { toolRegistry } from "@/config/site";
+import { LanguageSelector } from "./LanguageSelector";
+import { getLangFromUrl, getLocalizedPath, useTranslations } from "@/i18n/utils";
+import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
 import {
   Search,
   Menu,
@@ -12,8 +15,13 @@ import {
   Moon,
 } from "lucide-react";
 
-export function Navbar() {
+interface NavbarProps {
+  lang?: SupportedLocale;
+}
+
+export function Navbar({ lang: initialLang }: NavbarProps) {
   const [pathname, setPathname] = useState("");
+  const [currentLang, setCurrentLang] = useState<SupportedLocale>(initialLang || defaultLocale);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -23,11 +31,15 @@ export function Navbar() {
   useEffect(() => {
     setMounted(true);
     if (typeof window !== "undefined") {
-      setPathname(window.location.pathname);
+      const path = window.location.pathname;
+      setPathname(path);
+      const detectedLang = getLangFromUrl(path);
+      setCurrentLang(initialLang || detectedLang);
+
       const isDark = document.documentElement.classList.contains("dark");
       setTheme(isDark ? "dark" : "light");
     }
-  }, []);
+  }, [initialLang]);
 
   // Keyboard shortcut ⌘K / Ctrl+K
   useEffect(() => {
@@ -58,6 +70,8 @@ export function Navbar() {
     }
   };
 
+  const t = useTranslations(currentLang);
+
   const filteredTools = searchQuery.trim()
     ? toolRegistry.filter(
         (t) =>
@@ -72,66 +86,70 @@ export function Navbar() {
       <header className="sticky top-0 z-40 w-full border-b border-neutral-200 dark:border-[#222222] bg-[#fafafa]/80 dark:bg-[#000000]/80 backdrop-blur-md transition-colors duration-150">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group focus:outline-none">
+          <a
+            href={getLocalizedPath("/", currentLang)}
+            className="flex items-center gap-2 group focus:outline-none"
+            aria-label="Pod Studio Home"
+          >
             <Logo size="md" />
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
             <a
-              href="/tools"
+              href={getLocalizedPath("/tools", currentLang)}
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                pathname === "/tools"
+                pathname === "/tools" || pathname.endsWith("/tools")
                   ? "bg-neutral-200/80 dark:bg-neutral-800 text-neutral-900 dark:text-white"
                   : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900"
               }`}
             >
-              All 18 Tools
+              {t.nav.allTools}
             </a>
 
             <a
-              href="/tools#ideation"
+              href={`${getLocalizedPath("/tools", currentLang)}#ideation`}
               className="px-3 py-1 rounded-full text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
             >
-              Ideation
+              {t.nav.ideation}
             </a>
 
             <a
-              href="/tools#content"
+              href={`${getLocalizedPath("/tools", currentLang)}#content`}
               className="px-3 py-1 rounded-full text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
             >
-              Content
+              {t.nav.content}
             </a>
 
             <a
-              href="/tools#technical"
+              href={`${getLocalizedPath("/tools", currentLang)}#technical`}
               className="px-3 py-1 rounded-full text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
             >
-              Technical
+              {t.nav.technical}
             </a>
 
             <a
-              href="/tools#growth"
+              href={`${getLocalizedPath("/tools", currentLang)}#growth`}
               className="px-3 py-1 rounded-full text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
             >
-              Growth &amp; CPM
+              {t.nav.growth}
             </a>
 
             <a
-              href="/guides"
+              href={getLocalizedPath("/guides", currentLang)}
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                pathname.startsWith("/guides")
+                pathname.includes("/guides")
                   ? "bg-neutral-200/80 dark:bg-neutral-800 text-neutral-900 dark:text-white"
                   : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900"
               }`}
             >
-              Guides
+              {t.nav.guides}
             </a>
           </nav>
 
           {/* Right Action Bar */}
           <div className="flex items-center gap-2">
-            {/* Vercel Search Trigger (⌘K) */}
+            {/* Search Trigger (⌘K) */}
             <button
               onClick={() => setSearchOpen(true)}
               className="flex items-center gap-2 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-500 dark:text-neutral-400 hover:border-neutral-300 dark:hover:border-neutral-700 text-xs transition-all shadow-2xs"
@@ -143,6 +161,9 @@ export function Navbar() {
                 ⌘K
               </kbd>
             </button>
+
+            {/* Language Selector Dropdown */}
+            <LanguageSelector currentLang={currentLang} />
 
             {/* Dark / Light Theme Toggle */}
             <button
@@ -157,12 +178,6 @@ export function Navbar() {
                 <Moon className="w-4 h-4 text-neutral-700" />
               )}
             </button>
-
-            {/* 100% Client-Side Pill */}
-            <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white/60 dark:bg-neutral-950/60 text-xs font-mono text-neutral-600 dark:text-neutral-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              <span className="text-[11px]">100% client-side</span>
-            </div>
 
             {/* Mobile Hamburger */}
             <button
@@ -179,139 +194,147 @@ export function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] px-4 py-3 space-y-2">
             <a
-              href="/tools"
+              href={getLocalizedPath("/tools", currentLang)}
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-1.5 rounded-md text-xs font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-900"
             >
-              All 18 Tools
+              {t.nav.allTools}
             </a>
             <div className="grid grid-cols-2 gap-1 pt-1 border-t border-neutral-200 dark:border-neutral-800">
               <a
-                href="/tools#ideation"
+                href={`${getLocalizedPath("/tools", currentLang)}#ideation`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-3 py-1.5 rounded-md text-xs text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900"
               >
-                💡 Ideation
+                💡 {t.nav.ideation}
               </a>
               <a
-                href="/tools#content"
+                href={`${getLocalizedPath("/tools", currentLang)}#content`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-3 py-1.5 rounded-md text-xs text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900"
               >
-                📝 Content
+                📝 {t.nav.content}
               </a>
               <a
-                href="/tools#technical"
+                href={`${getLocalizedPath("/tools", currentLang)}#technical`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-3 py-1.5 rounded-md text-xs text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900"
               >
-                ⚙️ Technical
+                ⚙️ {t.nav.technical}
               </a>
               <a
-                href="/tools#growth"
+                href={`${getLocalizedPath("/tools", currentLang)}#growth`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-3 py-1.5 rounded-md text-xs text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900"
               >
-                💰 CPM &amp; Growth
+                📈 {t.nav.growth}
               </a>
             </div>
-            <a
-              href="/guides"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-1.5 rounded-md text-xs font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-900"
-            >
-              Podcast Playbooks &amp; Guides
-            </a>
-            <a
-              href="/about"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-1.5 rounded-md text-xs text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
-            >
-              About &amp; Trust
-            </a>
+            <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between text-xs text-neutral-500">
+              <a
+                href={getLocalizedPath("/guides", currentLang)}
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:underline"
+              >
+                {t.nav.guides}
+              </a>
+              <a
+                href={getLocalizedPath("/about", currentLang)}
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:underline"
+              >
+                {t.nav.about}
+              </a>
+              <a
+                href={getLocalizedPath("/contact", currentLang)}
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:underline"
+              >
+                {t.nav.contact}
+              </a>
+            </div>
           </div>
         )}
       </header>
 
-      {/* Vercel Command Palette Modal */}
+      {/* Global ⌘K Quick Search Modal */}
       {searchOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/50 backdrop-blur-xs animate-fade-in"
-          onClick={() => setSearchOpen(false)}
-        >
+        <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/60 backdrop-blur-xs">
           <div
-            className="w-full max-w-xl bg-white dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-2xl overflow-hidden"
+            className="w-full max-w-xl bg-white dark:bg-[#0c0c0c] border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Search Input Bar */}
-            <div className="p-3.5 border-b border-neutral-200 dark:border-neutral-800 flex items-center gap-3">
-              <Search className="w-4 h-4 text-neutral-400" />
+            <div className="flex items-center px-4 border-b border-neutral-200 dark:border-neutral-800">
+              <Search className="w-4 h-4 text-neutral-400 mr-3 flex-shrink-0" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Type a command or search tools (e.g. title, CPM, show notes)..."
+                placeholder={t.nav.searchPlaceholder}
                 autoFocus
-                className="flex-1 bg-transparent text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 text-sm focus:outline-none"
+                className="w-full py-3.5 bg-transparent text-sm text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none"
               />
-              <span className="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 text-neutral-400">
+              <button
+                onClick={() => setSearchOpen(false)}
+                className="p-1 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200 text-xs font-mono"
+              >
                 ESC
-              </span>
+              </button>
             </div>
 
             {/* Results List */}
-            <div className="max-h-80 overflow-y-auto p-2 divide-y divide-neutral-100 dark:divide-neutral-900">
-              {filteredTools.length > 0 ? (
-                filteredTools.map((tool) => (
-                  <a
-                    key={tool.id}
-                    href={`/tools/${tool.slug}`}
-                    onClick={() => {
-                      setSearchOpen(false);
-                      setSearchQuery("");
-                    }}
-                    className="flex items-center justify-between p-2.5 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors group"
-                  >
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs font-semibold text-neutral-900 dark:text-white group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors">
-                          {tool.title}
-                        </span>
-                        <span className="text-[10px] font-mono px-1.5 py-0.2 rounded border border-neutral-200 dark:border-neutral-800 text-neutral-500">
-                          {tool.categoryLabel}
-                        </span>
-                      </div>
-                      <p className="text-[11px] text-neutral-500 line-clamp-1 mt-0.5">
-                        {tool.description}
-                      </p>
-                    </div>
-                    <ChevronRight className="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#0070f3] group-hover:translate-x-0.5 transition-all" />
-                  </a>
-                ))
-              ) : searchQuery.trim() ? (
-                <div className="p-6 text-center text-neutral-500 text-xs">
-                  No podcast tools found for &ldquo;{searchQuery}&rdquo;.
+            <div className="max-h-80 overflow-y-auto p-2">
+              {searchQuery.trim() === "" ? (
+                <div className="p-4 text-center">
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                    Type to search all 18 tools, categories, and podcast calculators...
+                  </p>
+                  <div className="mt-3 flex flex-wrap justify-center gap-1.5">
+                    {toolRegistry.slice(0, 5).map((t) => (
+                      <a
+                        key={t.slug}
+                        href={getLocalizedPath(`/tools/${t.slug}`, currentLang)}
+                        onClick={() => setSearchOpen(false)}
+                        className="text-[11px] px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
+                      >
+                        {t.shortTitle}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : filteredTools.length === 0 ? (
+                <div className="p-8 text-center text-xs text-neutral-500">
+                  No tools found matching &quot;{searchQuery}&quot;. Try &quot;title&quot;, &quot;rss&quot;, &quot;cpm&quot;, or &quot;notes&quot;.
                 </div>
               ) : (
-                <div className="p-2 space-y-1">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 px-2 py-1">
-                    Suggested Tools
-                  </div>
-                  {toolRegistry.slice(0, 5).map((tool) => (
+                <div className="space-y-1">
+                  {filteredTools.map((t) => (
                     <a
-                      key={tool.id}
-                      href={`/tools/${tool.slug}`}
+                      key={t.slug}
+                      href={getLocalizedPath(`/tools/${t.slug}`, currentLang)}
                       onClick={() => setSearchOpen(false)}
-                      className="flex items-center justify-between p-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
+                      className="flex items-center justify-between p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900/80 group transition-colors"
                     >
-                      <span className="text-xs text-neutral-700 dark:text-neutral-300">
-                        {tool.title}
-                      </span>
-                      <span className="text-[11px] font-mono text-neutral-400">Open &rarr;</span>
+                      <div>
+                        <div className="text-xs font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors">
+                          {t.title}
+                        </div>
+                        <div className="text-[11px] text-neutral-500 dark:text-neutral-400 line-clamp-1">
+                          {t.description}
+                        </div>
+                      </div>
+                      <ChevronRight className="w-3.5 h-3.5 text-neutral-400 group-hover:translate-x-0.5 transition-transform" />
                     </a>
                   ))}
                 </div>
               )}
+            </div>
+
+            {/* Footer hint */}
+            <div className="px-4 py-2 border-t border-neutral-100 dark:border-neutral-800/80 bg-neutral-50/50 dark:bg-neutral-950/50 text-[10px] text-neutral-400 flex items-center justify-between">
+              <span>Navigate with arrow keys</span>
+              <span>18 tools indexed</span>
             </div>
           </div>
         </div>

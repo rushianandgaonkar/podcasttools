@@ -3,6 +3,8 @@ import "../styles/global.css";
 import { siteConfig } from "../config/site";
 import { Navbar } from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer.astro";
+import { defaultLocale, type SupportedLocale } from "../i18n/languages";
+import { getLangFromUrl, getHreflangLinks } from "../i18n/utils";
 
 interface Props {
   title?: string;
@@ -10,6 +12,7 @@ interface Props {
   canonicalUrl?: string;
   ogImage?: string;
   noindex?: boolean;
+  lang?: SupportedLocale;
 }
 
 const {
@@ -18,9 +21,27 @@ const {
   canonicalUrl = Astro.url.href,
   ogImage = siteConfig.ogImage,
   noindex = false,
+  lang: propLang,
 } = Astro.props;
 
+const lang = propLang || getLangFromUrl(Astro.url);
 const fullTitle = title.includes("Pod Studio") ? title : `${title} | Pod Studio`;
+
+// Generate reciprocal hreflang links for SEO across all 8 languages + x-default
+const hreflangLinks = getHreflangLinks(Astro.url.pathname, siteConfig.url);
+
+const localeOgMap: Record<string, string> = {
+  en: "en_US",
+  es: "es_ES",
+  ja: "ja_JP",
+  fr: "fr_FR",
+  de: "de_DE",
+  pt: "pt_BR",
+  ko: "ko_KR",
+  it: "it_IT",
+};
+
+const currentOgLocale = localeOgMap[lang] || "en_US";
 
 const jsonLdOrg = {
   "@context": "https://schema.org",
@@ -36,6 +57,7 @@ const jsonLdWebsite = {
   "@type": "WebSite",
   name: siteConfig.name,
   url: siteConfig.url,
+  inLanguage: lang,
   potentialAction: {
     "@type": "SearchAction",
     target: `${siteConfig.url}/tools?q={search_term_string}`,
@@ -45,7 +67,7 @@ const jsonLdWebsite = {
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,6 +76,11 @@ const jsonLdWebsite = {
     <link rel="apple-touch-icon" href="/icon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Reciprocal hreflang tags for international SEO -->
+    {hreflangLinks.map((link) => (
+      <link rel="alternate" hreflang={link.lang} href={link.href} />
+    ))}
 
     <!-- Geist & Geist Mono Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -100,6 +127,12 @@ const jsonLdWebsite = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={currentOgLocale} />
+    {Object.entries(localeOgMap)
+      .filter(([key]) => key !== lang)
+      .map(([_, altLocale]) => (
+        <meta property="og:locale:alternate" content={altLocale} />
+      ))}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -112,10 +145,10 @@ const jsonLdWebsite = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebsite)} />
   </head>
   <body class="bg-[#fafafa] dark:bg-[#000000] text-[#171717] dark:text-[#ededed] min-h-screen flex flex-col font-sans selection:bg-[#0070f3]/20 selection:text-[#0070f3] antialiased">
-    <Navbar client:load />
+    <Navbar client:load lang={lang} />
     <main class="flex-1">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

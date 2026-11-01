@@ -4,10 +4,18 @@ import React, { useState } from "react";
 import { toolCategories, toolRegistry, type ToolDefinition } from "@/config/site";
 import { ToolIcon } from "@/components/tools/ToolIcon";
 import { ArrowRight, Search } from "lucide-react";
+import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
+import { getLocalizedPath, useTranslations } from "@/i18n/utils";
 
-export function HomeToolGrid() {
+interface HomeToolGridProps {
+  lang?: SupportedLocale;
+}
+
+export function HomeToolGrid({ lang = defaultLocale }: HomeToolGridProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const t = useTranslations(lang);
 
   const filteredTools = toolRegistry.filter((tool) => {
     const matchesCategory =
@@ -25,7 +33,7 @@ export function HomeToolGrid() {
     <div className="w-full space-y-6" id="tools-section">
       {/* Category Pills & Live Search Bar */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-3 pb-2 border-b border-neutral-200 dark:border-neutral-800">
-        {/* Vercel-Style Category Tabs */}
+        {/* Category Tabs */}
         <div className="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none">
           <button
             onClick={() => setSelectedCategory("all")}
@@ -35,7 +43,7 @@ export function HomeToolGrid() {
                 : "bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
             }`}
           >
-            All Tools ({toolRegistry.length})
+            {t.categories.all} ({toolRegistry.length})
           </button>
 
           {toolCategories.map((cat) => {
@@ -77,7 +85,7 @@ export function HomeToolGrid() {
           {filteredTools.map((tool) => (
             <a
               key={tool.id}
-              href={`/tools/${tool.slug}`}
+              href={getLocalizedPath(`/tools/${tool.slug}`, lang)}
               className="group relative rounded-xl bg-white dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 p-5 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-2xs transition-all duration-200 flex flex-col justify-between"
             >
               <div>
@@ -114,28 +122,23 @@ export function HomeToolGrid() {
               <div className="pt-3 border-t border-neutral-100 dark:border-neutral-900 flex items-center justify-between text-xs">
                 <span className="font-mono text-[10px] text-neutral-400">100% In-Browser</span>
                 <span className="inline-flex items-center gap-1 font-medium text-xs text-neutral-700 dark:text-neutral-300 group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors">
-                  Open Tool <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  {t.toolsSection.launchTool} <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </div>
             </a>
           ))}
         </div>
       ) : (
-        <div className="p-10 text-center rounded-xl bg-white dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800">
-          <p className="text-neutral-700 dark:text-neutral-300 text-xs font-medium mb-1">
-            No tools match &ldquo;{searchQuery}&rdquo;
-          </p>
-          <p className="text-neutral-500 text-[11px] mb-3">
-            Try adjusting your search query or switching categories.
-          </p>
+        <div className="p-12 text-center border border-dashed border-neutral-300 dark:border-neutral-800 rounded-xl bg-white/40 dark:bg-[#0a0a0a]/40">
+          <p className="text-sm text-neutral-500 mb-2">No tools found matching your search.</p>
           <button
             onClick={() => {
-              setSearchQuery("");
               setSelectedCategory("all");
+              setSearchQuery("");
             }}
-            className="text-xs px-3 py-1 rounded-md bg-[#171717] text-white dark:bg-white dark:text-black font-medium transition-opacity hover:opacity-90"
+            className="text-xs text-[#0070f3] hover:underline font-medium"
           >
-            Reset Filters
+            Clear filters
           </button>
         </div>
       )}

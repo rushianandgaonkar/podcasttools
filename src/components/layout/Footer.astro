@@ -1,6 +1,15 @@
 ---
 import { Logo } from "../brand/Logo";
-import { ShieldCheck } from "lucide-react";
+import { LanguageSelector } from "./LanguageSelector";
+import { defaultLocale, type SupportedLocale } from "../../i18n/languages";
+import { useTranslations, getLocalizedPath } from "../../i18n/utils";
+
+interface Props {
+  lang?: SupportedLocale;
+}
+
+const { lang = defaultLocale } = Astro.props;
+const t = useTranslations(lang);
 const currentYear = new Date().getFullYear();
 ---
 
@@ -10,41 +19,43 @@ const currentYear = new Date().getFullYear();
     <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-10 border-b border-neutral-200 dark:border-[#222222]">
       <!-- Brand Summary -->
       <div class="col-span-2 space-y-3">
-        <Logo size="md" />
+        <a href={getLocalizedPath("/", lang)} class="inline-block">
+          <Logo size="md" />
+        </a>
         <p class="text-xs text-neutral-500 leading-relaxed max-w-sm">
-          A free, client-side toolkit for independent podcast creators. Craft clickable titles, format Markdown show notes, calculate sponsorship CPM rates, and preview Apple/Spotify artwork locally in your browser.
+          {t.footer.tagline}
         </p>
 
         <!-- Privacy Status Badge -->
         <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 text-[11px] font-mono">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Zero Server Uploads • In-Memory Execution</span>
+          <span>{t.footer.privacyBadge}</span>
         </div>
       </div>
 
       <!-- Column 1: Ideation -->
       <div class="space-y-2.5">
         <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
-          Ideation
+          {t.nav.ideation}
         </h3>
         <ul class="space-y-2 text-xs">
           <li>
-            <a href="/tools/episode-title-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/episode-title-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Title Generator
             </a>
           </li>
           <li>
-            <a href="/tools/podcast-name-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/podcast-name-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Name Generator
             </a>
           </li>
           <li>
-            <a href="/tools/guest-question-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/guest-question-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Question Generator
             </a>
           </li>
           <li>
-            <a href="/tools/hook-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/hook-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Hook Generator
             </a>
           </li>
@@ -54,26 +65,26 @@ const currentYear = new Date().getFullYear();
       <!-- Column 2: Content -->
       <div class="space-y-2.5">
         <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
-          Content
+          {t.nav.content}
         </h3>
         <ul class="space-y-2 text-xs">
           <li>
-            <a href="/tools/show-notes-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/show-notes-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Show Notes Generator
             </a>
           </li>
           <li>
-            <a href="/tools/episode-outline-builder" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/episode-outline-builder", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Outline Builder
             </a>
           </li>
           <li>
-            <a href="/tools/intro-script-generator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/intro-script-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Intro Scripts
             </a>
           </li>
           <li>
-            <a href="/tools/transcript-formatter" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/transcript-formatter", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Transcript Formatter
             </a>
           </li>
@@ -83,26 +94,26 @@ const currentYear = new Date().getFullYear();
       <!-- Column 3: Tech & Growth -->
       <div class="space-y-2.5">
         <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
-          Tech &amp; Growth
+          {t.nav.technical} &amp; {t.nav.growth}
         </h3>
         <ul class="space-y-2 text-xs">
           <li>
-            <a href="/tools/monetization-calculator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/monetization-calculator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               CPM Calculator
             </a>
           </li>
           <li>
-            <a href="/tools/cover-art-preview" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/cover-art-preview", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Cover Art Preview
             </a>
           </li>
           <li>
-            <a href="/tools/rss-feed-validator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/rss-feed-validator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               RSS Feed Validator
             </a>
           </li>
           <li>
-            <a href="/tools/audience-growth-estimator" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            <a href={getLocalizedPath("/tools/audience-growth-estimator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
               Growth Estimator
             </a>
           </li>
@@ -111,26 +122,28 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <!-- Bottom Bar -->
-    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-500">
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
       <div class="flex items-center gap-2">
         <span>&copy; {currentYear} Pod Studio. Designed with the Geist design system.</span>
       </div>
 
-      <div class="flex items-center gap-4">
-        <a href="/about" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-          About
+      <!-- Footer Language Selector & Legal Links -->
+      <div class="flex flex-wrap items-center gap-4">
+        <LanguageSelector client:visible currentLang={lang} variant="footer" />
+        <a href={getLocalizedPath("/about", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          {t.nav.about}
         </a>
-        <a href="/contact" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-          Contact
+        <a href={getLocalizedPath("/contact", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          {t.nav.contact}
         </a>
-        <a href="/privacy" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-          Privacy
+        <a href={getLocalizedPath("/privacy", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          {t.nav.privacy}
         </a>
-        <a href="/terms" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-          Terms
+        <a href={getLocalizedPath("/terms", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          {t.nav.terms}
         </a>
-        <a href="/guides" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-          Guides
+        <a href={getLocalizedPath("/guides", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          {t.nav.guides}
         </a>
       </div>
     </div>

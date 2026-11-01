@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { Sparkles, Copy, Check, ArrowRight } from "lucide-react";
+import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
+import { getLocalizedPath } from "@/i18n/utils";
 
 const EXAMPLE_TOPICS = [
   "AI & Automation",
@@ -19,7 +21,11 @@ const TITLE_FORMULAS = [
   (topic: string) => `The Secret Framework Behind ${topic} Success`,
 ];
 
-export function HeroQuickTool() {
+interface HeroQuickToolProps {
+  lang?: SupportedLocale;
+}
+
+export function HeroQuickTool({ lang = defaultLocale }: HeroQuickToolProps) {
   const [topic, setTopic] = useState("AI & Automation");
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
@@ -35,7 +41,7 @@ export function HeroQuickTool() {
 
   return (
     <div className="w-full max-w-2xl mx-auto rounded-xl bg-white dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 p-5 sm:p-6 shadow-sm relative overflow-hidden transition-colors duration-150">
-      {/* Vercel-style Top Eyebrow & Status */}
+      {/* Top Eyebrow & Status */}
       <div className="flex items-center justify-between mb-4 pb-3 border-b border-neutral-100 dark:border-neutral-900">
         <div className="flex items-center gap-2">
           <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
@@ -120,7 +126,7 @@ export function HeroQuickTool() {
       <div className="pt-3 flex items-center justify-between border-t border-neutral-100 dark:border-neutral-900 text-xs">
         <span className="text-neutral-500 text-[11px]">Looking for 30+ emotional triggers?</span>
         <a
-          href="/tools/episode-title-generator"
+          href={getLocalizedPath("/tools/episode-title-generator", lang)}
           className="inline-flex items-center gap-1 font-medium text-xs text-[#0070f3] hover:underline"
         >
           Open Generator <ArrowRight className="w-3.5 h-3.5" />
