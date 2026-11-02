@@ -162,7 +162,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-              <span>Search tools...</span>
+              <span>{t.searchModal.btnText}</span>
               <kbd className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-[var(--bg-canvas-subtle)] border border-[var(--border-hairline)] text-[var(--text-body)]">
                 /
               </kbd>
@@ -279,7 +279,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
               {searchQuery.trim() === "" ? (
                 <div className="p-4 text-center">
                   <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                    Type to search all 18 tools, categories, and podcast calculators...
+                    {t.searchModal.prompt}
                   </p>
                   <div className="mt-3 flex flex-wrap justify-center gap-1.5">
                     {toolRegistry.slice(0, 5).map((t) => (
@@ -296,7 +296,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
                 </div>
               ) : filteredTools.length === 0 ? (
                 <div className="p-8 text-center text-xs text-neutral-500">
-                  No tools found matching &quot;{searchQuery}&quot;. Try &quot;title&quot;, &quot;rss&quot;, &quot;cpm&quot;, or &quot;notes&quot;.
+                  {t.searchModal.noResults} &quot;{searchQuery}&quot;.
                 </div>
               ) : (
                 <div className="space-y-1">
@@ -324,8 +324,8 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
 
             {/* Footer hint */}
             <div className="px-4 py-2 border-t border-neutral-100 dark:border-neutral-800/80 bg-neutral-50/50 dark:bg-neutral-950/50 text-[10px] text-neutral-400 flex items-center justify-between">
-              <span>Press <kbd className="font-mono bg-neutral-200 dark:bg-neutral-800 px-1 py-0.5 rounded text-[9px]">/</kbd> or <kbd className="font-mono bg-neutral-200 dark:bg-neutral-800 px-1 py-0.5 rounded text-[9px]">⌘K</kbd> anywhere</span>
-              <span>18 tools indexed</span>
+              <span>{t.searchModal.shortcutHint}</span>
+              <span>{t.searchModal.toolsIndexed}</span>
             </div>
           </div>
         </div>

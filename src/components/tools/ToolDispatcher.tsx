@@ -20,11 +20,14 @@ import { AudienceGrowthEstimator } from "./AudienceGrowthEstimator";
 import { ReviewResponseGenerator } from "./ReviewResponseGenerator";
 import { CollabFinder } from "./CollabFinder";
 
+import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
+
 interface ToolDispatcherProps {
   slug: string;
+  lang?: SupportedLocale;
 }
 
-export function ToolDispatcher({ slug }: ToolDispatcherProps) {
+export function ToolDispatcher({ slug, lang = defaultLocale }: ToolDispatcherProps) {
   const renderTool = () => {
     switch (slug) {
       case "episode-title-generator":

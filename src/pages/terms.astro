@@ -1,69 +1,72 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { siteConfig } from "../config/site";
+import { useTranslations, getLocalizedPath } from "../i18n/utils";
 import { ArrowRight } from "lucide-react";
+
+const lang = "en";
+const t = useTranslations(lang);
+const term = t.legalPages.terms;
 ---
 
 <Layout
-  title="Terms of Service — Pod Studio"
+  title={`Terms of Service | ${t.nav.terms} — Pod Studio`}
   description="Review the terms and conditions for using Pod Studio's free podcast creator tools, sponsorship calculators, and formatting utilities."
+  lang={lang}
+  canonicalUrl={`${siteConfig.url}/terms`}
 >
   <div class="w-full py-10 sm:py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
       <div class="space-y-3">
         <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 font-mono text-[11px]">
-          TERMS OF USE
+          {t.legalPages.termsBadge}
         </div>
         <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white">
-          Terms of Service
+          {t.nav.terms}
         </h1>
         <p class="text-xs text-neutral-500 font-mono">
-          Last updated: November 1, 2026 • Effective Date: November 1, 2026
+          {t.legalPages.lastUpdated}
         </p>
       </div>
 
       <div class="p-6 sm:p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-6 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
         <section class="space-y-2">
-          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">1. Agreement to Terms</h2>
-          <p>
-            By accessing or using <strong class="text-neutral-900 dark:text-white font-mono">podstudiotools.com</strong> (&ldquo;Pod Studio&rdquo;), you agree to be bound by these Terms of Service.
-          </p>
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">{term.s1Title}</h2>
+          <p>{term.s1Text}</p>
         </section>
 
         <section class="space-y-2">
-          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">2. Free, Client-Side Utility Nature</h2>
-          <p>
-            Pod Studio is engineered as a free, client-side toolkit for independent podcast creators and sound designers. We do not require accounts, logins, or payment to access our 18 utilities.
-          </p>
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">{term.s2Title}</h2>
+          <p>{term.s2Text}</p>
         </section>
 
         <section class="space-y-2">
-          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">3. Content Ownership</h2>
-          <p>
-            Any episode titles, show notes, scripts, hooks, or timestamps generated using Pod Studio belong 100% to you. We assert zero copyright or commercial claims over your generated works.
-          </p>
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">{term.s3Title}</h2>
+          <p>{term.s3Text}</p>
         </section>
 
         <section class="space-y-2">
-          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">4. Calculators &amp; Advisory Estimates</h2>
-          <p>
-            Calculators on Pod Studio provide mathematical models based on industry benchmark averages (e.g. standard CPM ad rates). These figures are informational estimates and do not constitute financial guarantees.
-          </p>
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">{term.s4Title}</h2>
+          <p>{term.s4Text}</p>
         </section>
 
         <section class="space-y-2 pt-4 border-t border-neutral-100 dark:border-neutral-900">
-          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">5. Inquiries</h2>
-          <p>
-            Questions? Contact us at <a href="mailto:hello@podstudiotools.com" class="text-[#0070f3] hover:underline font-mono">hello@podstudiotools.com</a> or visit our <a href="/contact" class="text-[#0070f3] hover:underline">Contact page</a>.
+          <h2 class="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">{term.s5Title}</h2>
+          <p>{term.s5Text}</p>
+          <p class="pt-1">
+            <a href={`mailto:${siteConfig.creator.contactEmail}`} class="text-[#0070f3] font-mono hover:underline inline-flex items-center gap-1">
+              {siteConfig.creator.contactEmail}
+            </a>
           </p>
         </section>
       </div>
 
       <div class="text-center">
         <a
-          href="/tools"
+          href={getLocalizedPath("/tools", lang)}
           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-xs hover:opacity-90 transition-opacity"
         >
-          Explore All 18 Tools <ArrowRight className="w-3.5 h-3.5" />
+          {t.legalPages.exploreAllTools} <ArrowRight className="w-3.5 h-3.5" />
         </a>
       </div>
     </div>

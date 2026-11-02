@@ -14,6 +14,7 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: SupportedLocale };
 const t = useTranslations(lang);
+const f = t.contactForm;
 ---
 
 <Layout
@@ -33,7 +34,7 @@ const t = useTranslations(lang);
           {t.nav.contact} — Pod Studio
         </h1>
         <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-xl">
-          Have a tool suggestion, feedback on our formulas, or want to report a platform spec update? We would love to hear from you.
+          {f.subtitle}
         </p>
       </div>
 
@@ -43,9 +44,9 @@ const t = useTranslations(lang);
           <div class="w-8 h-8 rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-[#0070f3]">
             <Mail className="w-4 h-4" />
           </div>
-          <h2 class="text-sm font-semibold text-neutral-900 dark:text-white">Direct Email</h2>
+          <h2 class="text-sm font-semibold text-neutral-900 dark:text-white">{f.directEmailTitle}</h2>
           <p class="text-xs text-neutral-500 leading-relaxed">
-            For general support or feedback:
+            {f.directEmailDesc}
           </p>
           <a
             href={`mailto:${siteConfig.creator.contactEmail}`}
@@ -54,16 +55,15 @@ const t = useTranslations(lang);
             {siteConfig.creator.contactEmail}
           </a>
           <div class="pt-2 border-t border-neutral-100 dark:border-neutral-900 text-[11px] font-mono text-neutral-400">
-            Response: within 24-48 business hours.
+            {f.responseNotice}
           </div>
         </div>
 
         <!-- Contact Message Composer (React Island) -->
         <div class="md:col-span-2">
-          <ContactForm client:load />
+          <ContactForm lang={lang} client:load />
         </div>
       </div>
     </div>
   </div>
 </Layout>
-

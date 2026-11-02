@@ -27,7 +27,7 @@ const t = useTranslations(lang);
       <div class="space-y-3">
         <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 font-mono text-[11px]">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          ABOUT POD STUDIO
+          {t.aboutPage.badge}
         </div>
         <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white leading-tight">
           {t.hero.titleStart} {t.hero.titleHighlight}.
@@ -62,7 +62,7 @@ const t = useTranslations(lang);
 
       <!-- Story Card -->
       <div class="p-6 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-3">
-        <h2 class="text-base font-semibold text-neutral-900 dark:text-white">Why Pod Studio</h2>
+        <h2 class="text-base font-semibold text-neutral-900 dark:text-white">{t.aboutPage.whyTitle}</h2>
         <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
           {t.hero.description}
         </p>
@@ -73,7 +73,7 @@ const t = useTranslations(lang);
           href={getLocalizedPath("/tools", lang)}
           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-xs hover:opacity-90 transition-opacity"
         >
-          {t.hero.primaryCta} <ArrowRight className="w-3.5 h-3.5" />
+          {t.aboutPage.cta} <ArrowRight className="w-3.5 h-3.5" />
         </a>
       </div>
     </div>

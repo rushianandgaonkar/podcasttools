@@ -2,12 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import { siteConfig } from "../config/site";
 import { ContactForm } from "../components/layout/ContactForm";
+import { useTranslations } from "../i18n/utils";
 import { Mail } from "lucide-react";
+
+const lang = "en";
+const t = useTranslations(lang);
+const f = t.contactForm;
 ---
 
 <Layout
-  title="Contact the Pod Studio Team | Free Podcast Creator Toolkit"
+  title={`Contact the Pod Studio Team | ${t.nav.contact}`}
   description="Get in touch with the Pod Studio team for support, feature suggestions, or questions."
+  lang={lang}
+  canonicalUrl={`${siteConfig.url}/contact`}
 >
   <div class="w-full py-10 sm:py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
@@ -17,10 +24,10 @@ import { Mail } from "lucide-react";
           SUPPORT &amp; INQUIRIES
         </div>
         <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white">
-          Contact the Pod Studio Team
+          {t.nav.contact} — Pod Studio
         </h1>
         <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-xl">
-          Have a tool suggestion, feedback on our formulas, or want to report a platform spec update? We would love to hear from you.
+          {f.subtitle}
         </p>
       </div>
 
@@ -30,9 +37,9 @@ import { Mail } from "lucide-react";
           <div class="w-8 h-8 rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-[#0070f3]">
             <Mail className="w-4 h-4" />
           </div>
-          <h2 class="text-sm font-semibold text-neutral-900 dark:text-white">Direct Email</h2>
+          <h2 class="text-sm font-semibold text-neutral-900 dark:text-white">{f.directEmailTitle}</h2>
           <p class="text-xs text-neutral-500 leading-relaxed">
-            For general support or feedback:
+            {f.directEmailDesc}
           </p>
           <a
             href={`mailto:${siteConfig.creator.contactEmail}`}
@@ -41,13 +48,13 @@ import { Mail } from "lucide-react";
             {siteConfig.creator.contactEmail}
           </a>
           <div class="pt-2 border-t border-neutral-100 dark:border-neutral-900 text-[11px] font-mono text-neutral-400">
-            Response: within 24-48 business hours.
+            {f.responseNotice}
           </div>
         </div>
 
         <!-- Contact Message Composer (React Island) -->
         <div class="md:col-span-2">
-          <ContactForm client:load />
+          <ContactForm lang={lang} client:load />
         </div>
       </div>
     </div>
