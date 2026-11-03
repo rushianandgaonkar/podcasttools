@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import { siteConfig, guidesRegistry } from "../config/site";
 import { HeroQuickTool } from "../components/home/HeroQuickTool";
 import { HomeToolGrid } from "../components/home/HomeToolGrid";
+import { defaultLocale } from "../i18n/languages";
+import { useTranslations, getLocalizedPath } from "../i18n/utils";
 import {
   Sparkles,
   ShieldCheck,
@@ -12,67 +14,72 @@ import {
   Clock,
   ArrowUpRight,
 } from "lucide-react";
+
+const lang = defaultLocale;
+const t = useTranslations(lang);
 ---
 
 <Layout
-  title="Pod Studio — Free Podcast Creator Tools (Titles, Show Notes, CPM, Artwork)"
-  description={siteConfig.description}
+  title={`Pod Studio — ${t.hero.titleStart} ${t.hero.titleHighlight}`}
+  description={t.hero.description}
+  lang={lang}
+  canonicalUrl={siteConfig.url}
 >
   <div class="flex flex-col items-center w-full">
     <!-- Hero Section with Vercel Mesh Gradient Bloom -->
     <section class="w-full relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden vercel-hero-mesh border-b border-neutral-200 dark:border-neutral-800">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center text-center">
-        <!-- Vercel Mono Technical Eyebrow -->
+        <!-- Eyebrow -->
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 text-neutral-600 dark:text-neutral-400 text-xs font-mono mb-6 shadow-2xs backdrop-blur-xs">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          <span>POD STUDIO 2026 • 100% CLIENT-SIDE SUITE</span>
+          <span>{t.hero.badge}</span>
         </div>
 
-        <!-- Main Display Headline (Geist Sans 600, Tight Negative Tracking) -->
+        <!-- Main Display Headline -->
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.04em] text-neutral-900 dark:text-white max-w-4xl leading-[1.12] mb-5">
-          Everything you need to create, polish &amp; monetize your podcast.
+          {t.hero.titleStart} <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-400 to-indigo-400">{t.hero.titleHighlight}</span>.
         </h1>
 
         <!-- Subheading -->
         <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed mb-8">
-          Stop juggling fragmented apps and expensive monthly subscriptions. 18 free utilities to craft high-CTR episode titles, format Markdown show notes, calculate sponsorship CPM rates, and preview Apple/Spotify artwork.
+          {t.hero.description}
         </p>
 
-        <!-- Vercel Marketing Button Pills -->
+        <!-- CTA Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
           <a
             href="#tools-section"
             class="px-5 py-2.5 rounded-full bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-xs sm:text-sm hover:opacity-90 transition-opacity flex items-center gap-2 shadow-sm"
           >
-            Browse All 18 Free Tools
+            {t.hero.primaryCta}
             <ArrowRight className="w-3.5 h-3.5" />
           </a>
 
           <a
-            href="/tools/monetization-calculator"
+            href={getLocalizedPath("/tools/monetization-calculator", lang)}
             class="px-5 py-2.5 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800 font-medium text-xs sm:text-sm transition-colors"
           >
-            Calculate Ad Revenue &rarr;
+            {t.hero.secondaryCta} &rarr;
           </a>
         </div>
 
         <!-- Interactive Hero Quick Tool Island -->
-        <HeroQuickTool client:load />
+        <HeroQuickTool client:load lang={lang} />
 
-        <!-- 4 Vercel Trust Cards Strip -->
+        <!-- 4 Trust Cards Strip -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl w-full mt-12 text-left">
           <div class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xs">
             <div class="flex items-center gap-1.5 text-neutral-900 dark:text-white font-medium text-xs mb-0.5">
               <Sparkles className="w-3.5 h-3.5 text-[#0070f3]" />
-              18 Free Tools
+              {t.nav.allTools}
             </div>
-            <p class="text-[11px] text-neutral-500">Titles, notes, audio &amp; CPM</p>
+            <p class="text-[11px] text-neutral-500">{t.categories.ideation}</p>
           </div>
 
           <div class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xs">
             <div class="flex items-center gap-1.5 text-neutral-900 dark:text-white font-medium text-xs mb-0.5">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-              Zero Cloud Uploads
+              {t.hero.trustPills.privacy}
             </div>
             <p class="text-[11px] text-neutral-500">100% in-browser memory</p>
           </div>
@@ -80,17 +87,17 @@ import {
           <div class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xs">
             <div class="flex items-center gap-1.5 text-neutral-900 dark:text-white font-medium text-xs mb-0.5">
               <Layers className="w-3.5 h-3.5 text-indigo-500" />
-              No Account Required
+              {t.hero.trustPills.free}
             </div>
-            <p class="text-[11px] text-neutral-500">Instant access, no friction</p>
+            <p class="text-[11px] text-neutral-500">No signups required</p>
           </div>
 
           <div class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xs">
             <div class="flex items-center gap-1.5 text-neutral-900 dark:text-white font-medium text-xs mb-0.5">
               <Zap className="w-3.5 h-3.5 text-amber-500" />
-              Apple &amp; Spotify Spec
+              {t.hero.trustPills.formulas}
             </div>
-            <p class="text-[11px] text-neutral-500">2026 directory verified</p>
+            <p class="text-[11px] text-neutral-500">Apple &amp; Spotify spec</p>
           </div>
         </div>
       </div>
@@ -104,91 +111,16 @@ import {
             CREATOR UTILITIES
           </span>
           <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-neutral-900 dark:text-white">
-            Explore All 18 Free Podcast Tools
+            {t.toolsSection.title}
           </h2>
         </div>
         <p class="text-xs text-neutral-500 max-w-xs sm:text-right">
-          Every tool computes locally in your browser memory.
+          {t.toolsSection.subtitle}
         </p>
       </div>
 
       <!-- Interactive Tool Grid Island -->
-      <HomeToolGrid client:load />
-    </section>
-
-    <!-- 4-Step Production Flow Section -->
-    <section class="w-full py-16 sm:py-20 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-100/40 dark:bg-neutral-950/40">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="font-mono text-xs uppercase tracking-wider text-neutral-500 block mb-1">
-            PRODUCTION RUN-OF-SHOW
-          </span>
-          <h2 class="text-xl sm:text-3xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white mb-2">
-            How Pod Studio Accelerates Every Episode
-          </h2>
-          <p class="text-xs sm:text-sm text-neutral-500">
-            A cohesive four-stage workflow to take any show concept from idea to top directory charts.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <!-- Step 1 -->
-          <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5 flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-[10px] uppercase text-neutral-400 block mb-2 font-medium">STAGE 01</span>
-              <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1.5">Ideate &amp; Name</h3>
-              <p class="text-xs text-neutral-500 leading-relaxed mb-4">
-                Test 30+ title formulas and craft high-impact cold open hooks to retain listener attention.
-              </p>
-            </div>
-            <a href="/tools/episode-title-generator" class="text-xs font-medium text-[#0070f3] hover:underline inline-flex items-center gap-1">
-              Title Generator <ArrowRight className="w-3 h-3" />
-            </a>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5 flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-[10px] uppercase text-neutral-400 block mb-2 font-medium">STAGE 02</span>
-              <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1.5">Outline &amp; Script</h3>
-              <p class="text-xs text-neutral-500 leading-relaxed mb-4">
-                Structure your episode run-of-show with timer-budgeted segments and generate engaging intro scripts.
-              </p>
-            </div>
-            <a href="/tools/episode-outline-builder" class="text-xs font-medium text-[#0070f3] hover:underline inline-flex items-center gap-1">
-              Outline Builder <ArrowRight className="w-3 h-3" />
-            </a>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5 flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-[10px] uppercase text-neutral-400 block mb-2 font-medium">STAGE 03</span>
-              <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1.5">Format &amp; Polish</h3>
-              <p class="text-xs text-neutral-500 leading-relaxed mb-4">
-                Generate Markdown show notes with timestamps, key links, and guest bios ready to paste.
-              </p>
-            </div>
-            <a href="/tools/show-notes-generator" class="text-xs font-medium text-[#0070f3] hover:underline inline-flex items-center gap-1">
-              Show Notes <ArrowRight className="w-3 h-3" />
-            </a>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5 flex flex-col justify-between">
-            <div>
-              <span class="font-mono text-[10px] uppercase text-neutral-400 block mb-2 font-medium">STAGE 04</span>
-              <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1.5">Publish &amp; Monetize</h3>
-              <p class="text-xs text-neutral-500 leading-relaxed mb-4">
-                Validate Apple/Spotify artwork specs, test RSS feed syntax, and calculate sponsorship CPM rates.
-              </p>
-            </div>
-            <a href="/tools/monetization-calculator" class="text-xs font-medium text-[#0070f3] hover:underline inline-flex items-center gap-1">
-              CPM Calculator <ArrowRight className="w-3 h-3" />
-            </a>
-          </div>
-        </div>
-      </div>
+      <HomeToolGrid client:load lang={lang} />
     </section>
 
     <!-- Educational Playbooks Section -->
@@ -202,15 +134,15 @@ import {
             2026 Podcasting Guides &amp; Benchmarks
           </h2>
         </div>
-        <a href="/guides" class="text-xs font-medium text-[#0070f3] hover:underline inline-flex items-center gap-1">
-          View All Guides <ArrowUpRight className="w-3.5 h-3.5" />
+        <a href={getLocalizedPath("/guides", lang)} class="text-xs font-medium text-[#0070f3] hover:underline inline-flex items-center gap-1">
+          {t.nav.guides} <ArrowUpRight className="w-3.5 h-3.5" />
         </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         {guidesRegistry.map((guide) => (
           <a
-            href={`/guides/${guide.slug}`}
+            href={getLocalizedPath(`/guides/${guide.slug}`, lang)}
             class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex flex-col justify-between"
           >
             <div>
@@ -231,94 +163,60 @@ import {
               </p>
             </div>
             <div class="text-xs font-medium text-neutral-700 dark:text-neutral-300 group-hover:text-[#0070f3] inline-flex items-center gap-1">
-              Read Guide <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+              {t.nav.guides} <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </a>
         ))}
       </div>
     </section>
 
-    <!-- Prerendered HTML FAQ Accordion (Vercel Style) -->
+    <!-- Prerendered HTML FAQ Accordion -->
     <section class="w-full py-16 sm:py-20 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-100/30 dark:bg-neutral-950/30">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-10">
           <span class="font-mono text-xs uppercase tracking-wider text-neutral-500 block mb-1">
-            FREQUENTLY ASKED QUESTIONS
+            {t.toolDetail.faqs}
           </span>
           <h2 class="text-xl sm:text-3xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white mb-2">
-            Everything You Need to Know About Pod Studio
+            Pod Studio {t.toolDetail.faqs}
           </h2>
           <p class="text-xs sm:text-sm text-neutral-500">
-            Transparent answers on privacy, tooling algorithms, and directory compatibility.
+            Answers to common questions about privacy, formulas, and client-side processing.
           </p>
         </div>
 
         <div class="space-y-3">
-          <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5">
-            <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1.5">
-              Are these podcast creator tools completely free?
-            </h3>
-            <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-              Yes, 100% free. There are no paid subscriptions, credit card prompts, or artificial usage limits on any of our 18 tools. You can generate unlimited titles, show notes, and monetization calculations.
-            </p>
-          </div>
+          <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
+            <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
+              <span>Are these tools really 100% free with no account required?</span>
+              <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="pt-3 text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-900 mt-3">
+              Yes, entirely free with zero paywalls, account signups, or usage limits. All computation runs purely inside your browser memory using modern web standards.
+            </div>
+          </details>
 
-          <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5">
-            <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1.5">
-              How does Pod Studio guarantee my privacy?
-            </h3>
-            <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-              All tool algorithms, text formatters, calculations, and artwork previews execute 100% locally in your browser memory using client-side JavaScript. We do not upload your show concepts, episode drafts, guest lists, or audio files to any remote server.
-            </p>
-          </div>
+          <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
+            <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
+              <span>Do my audio files, show notes, or RSS feeds get saved to a server?</span>
+              <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="pt-3 text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-900 mt-3">
+              No. Pod Studio is built strictly client-side. All processing (parsing RSS feeds, calculating CPM, validating artwork) happens in volatile browser memory. We never store or log your content.
+            </div>
+          </details>
 
-          <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5">
-            <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1.5">
-              What are the official Apple Podcasts and Spotify cover art requirements for 2026?
-            </h3>
-            <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-              Both Apple Podcasts and Spotify require artwork to be a 1:1 square ratio, minimum 1400 x 1400 pixels and maximum 3000 x 3000 pixels, in RGB color space (JPEG or PNG format, 72 dpi). Our Cover Art Preview tool tests your art at these exact specifications and displays it on simulated mobile and dark-mode directory layouts.
-            </p>
-          </div>
-
-          <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5">
-            <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1.5">
-              How does the Sponsorship &amp; Monetization Calculator estimate revenue?
-            </h3>
-            <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-              Our calculator uses verified 2026 industry standard CPM (Cost Per Mille / thousand downloads) benchmark rates: Pre-roll ($15–$18 CPM), Mid-roll ($25–$32 CPM), and Post-roll ($10–$14 CPM). You can customize your episode frequency, estimated 30-day downloads per episode, and ad load to project accurate gross revenue.
-            </p>
-          </div>
-
-          <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5">
-            <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1.5">
-              Can I export generated show notes to Buzzsprout, Libsyn, or Spotify for Podcasters?
-            </h3>
-            <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
-              Yes. The Show Notes Generator outputs in standard Markdown, HTML, and plain text formats. You can click one button to copy the output and paste it directly into your podcast hosting dashboard (Buzzsprout, Libsyn, Podbean, Transistor, Spotify for Podcasters, or your website CMS).
-            </p>
-          </div>
+          <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
+            <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
+              <span>Which podcast directories are supported for specs and validation?</span>
+              <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="pt-3 text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-900 mt-3">
+              Our tools adhere to the latest 2026 technical requirements published by Apple Podcasts, Spotify for Creators, YouTube Music Podcasts, and the Podcast Index namespace specifications.
+            </div>
+          </details>
         </div>
       </div>
-    </section>
-
-    <!-- Vercel CTA Band (from DESIGN.md) -->
-    <section class="w-full py-16 sm:py-24 border-t border-neutral-200 dark:border-neutral-800 text-center max-w-4xl mx-auto px-4 sm:px-6">
-      <span class="font-mono text-xs uppercase tracking-wider text-neutral-400 block mb-2 font-medium">
-        POD STUDIO FREE CREATOR SUITE
-      </span>
-      <h2 class="text-2xl sm:text-4xl font-semibold tracking-[-0.04em] text-neutral-900 dark:text-white mb-4">
-        Start creating without server limits.
-      </h2>
-      <p class="text-xs sm:text-sm text-neutral-500 max-w-md mx-auto mb-8">
-        No accounts, no subscriptions, and zero data uploads. Built for independent creators and sound teams.
-      </p>
-      <a
-        href="/tools"
-        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-sm hover:opacity-90 transition-opacity shadow-sm"
-      >
-        Explore All 18 Tools <ArrowRight className="w-4 h-4" />
-      </a>
     </section>
   </div>
 </Layout>

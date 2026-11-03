@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { guidesRegistry, type GuideDefinition } from "../../config/site";
+import { siteConfig, guidesRegistry, type GuideDefinition } from "../../config/site";
+import { useTranslations, getLocalizedPath } from "../../i18n/utils";
 import { Clock, ChevronRight, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export async function getStaticPaths() {
@@ -16,12 +17,15 @@ interface Props {
 
 const { guide } = Astro.props;
 const { slug } = Astro.params;
+const lang = "en";
+const t = useTranslations(lang);
 ---
 
 <Layout
-  title={`${guide.title} | Pod Studio`}
+  title={`${guide.title} | ${t.nav.guides} — Pod Studio`}
   description={guide.description}
-  canonicalUrl={`https://podstudiotools.com/guides/${guide.slug}`}
+  lang={lang}
+  canonicalUrl={`${siteConfig.url}/guides/${guide.slug}`}
 >
   <div class="w-full py-8 sm:py-14">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">

@@ -62,12 +62,12 @@ const toolMetaMap: Record<string, ToolStoryMeta> = {
     credit: "Jonathan Farber / Unsplash",
   },
   "show-notes-generator": {
-    src: "https://images.unsplash.com/photo-1447069387593-a5de0862481e?auto=format&fit=crop&w=800&q=80",
+    src: "https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=800&q=80",
     avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
     author: "Sarah Chen",
     fallback: "SC",
     stage: "02",
-    credit: "Unsplash",
+    credit: "CoWomen / Unsplash",
   },
   "podcast-name-generator": {
     src: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=80",
@@ -110,12 +110,12 @@ const toolMetaMap: Record<string, ToolStoryMeta> = {
     credit: "Will Francis / Unsplash",
   },
   "rss-feed-validator": {
-    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    src: "https://images.unsplash.com/photo-1535406208535-1429839cfd13?auto=format&fit=crop&w=800&q=80",
     avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&h=100&fit=crop&crop=face",
     author: "Elena Rostova",
     fallback: "ER",
     stage: "08",
-    credit: "Unsplash",
+    credit: "Alexander Popov / Unsplash",
   },
   "episode-timestamp-generator": {
     src: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=800&q=80",
@@ -150,12 +150,12 @@ const toolMetaMap: Record<string, ToolStoryMeta> = {
     credit: "Unsplash",
   },
   "category-finder": {
-    src: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80",
+    src: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
     avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop&crop=face",
     author: "Amara Okafor",
     fallback: "AO",
     stage: "13",
-    credit: "Unsplash",
+    credit: "Paul Esch-Laurent / Unsplash",
   },
   "hook-generator": {
     src: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",

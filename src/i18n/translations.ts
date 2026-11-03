@@ -168,8 +168,8 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     hero: {
       badge: "100% Free · Client-Side Execution · Zero Logins",
-      titleStart: "The Production Toolkit for",
-      titleHighlight: "Serious Podcasters",
+      titleStart: "Everything you need to create, polish &",
+      titleHighlight: "monetize your podcast",
       description:
         "18 deterministic, zero-server tools built for podcast hosts, producers, and audio engineers. High-converting titles, bulletproof RSS feeds, precise timestamps, and accurate CPM monetization.",
       primaryCta: "Explore All 18 Tools",

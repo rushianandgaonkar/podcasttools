@@ -1,11 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { siteConfig } from "../config/site";
+import { defaultLocale } from "../i18n/languages";
+import { useTranslations, getLocalizedPath } from "../i18n/utils";
 import { ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
+
+const lang = defaultLocale;
+const t = useTranslations(lang);
 ---
 
 <Layout
   title="About Pod Studio — Our Mission for Podcast Creators"
   description="Learn about Pod Studio, our 100% client-side privacy architecture, and our mission to provide free, accessible tools for independent podcast creators worldwide."
+  lang={lang}
+  canonicalUrl={`${siteConfig.url}/about`}
 >
   <div class="w-full py-10 sm:py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
