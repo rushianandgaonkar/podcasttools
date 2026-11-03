@@ -20,12 +20,19 @@
   - 32 Legal & Trust Pages: `/about/`, `/contact/`, `/privacy/`, `/terms/` across all 8 locales
   - 1 Error Page: `/404.html` (with noindex)
 - **Rendered UI & Text Nodes Audit:**
+  - `src/i18n/toolsData.ts`: Complete translation dictionary for all 18 tools (titles, short titles, descriptions, long descriptions, categories) across all 8 languages (`en`, `es`, `ja`, `fr`, `de`, `pt`, `ko`, `it`).
+  - `src/i18n/guidesData.ts`: Complete translation of all 3 research guides (titles, descriptions, categories, read times, and full article bodies including sections, headings, formulas, benchmark cards, and CTAs) across all 8 languages.
+  - `src/i18n/toolUiTranslations.ts`: Interactive tool workspaces (CPM Calculator, Title Generator, Show Notes, Cover Art) localized across all 8 languages.
+  - `src/components/home/HomeToolGrid.tsx`: Visual Stories Carousel and tools directory grid dynamically render localized titles, descriptions, category tabs, and buttons.
+  - `src/components/home/HeroQuickTool.tsx`: Real-time interactive title tester with localized example topics, title formulas, and UI copy.
+  - `src/components/layout/Footer.astro`: All tool links and category labels in the footer dynamically localized per locale.
+  - `src/pages/[lang]/guides/[slug].astro`: Renders fully localized guide articles with zero hardcoded English fallback.
+  - `src/pages/[lang]/tools/[slug].astro`: Renders fully localized tool titles, descriptions, 3-step workflow cards, and related tools.
   - `src/pages/[lang]/privacy.astro`: Full localized policy text across all 5 sections for all 8 languages.
   - `src/pages/[lang]/terms.astro`: Full localized terms of service across all 5 sections for all 8 languages.
   - `src/pages/[lang]/about.astro`: Localized badges, story cards, and mission statement.
   - `src/components/layout/ContactForm.tsx`: All input labels, placeholders, zero-log privacy notices, and submit buttons localized per active locale.
-  - `src/components/layout/Navbar.tsx`: Search command palette button, prompt, no-results state, and keyboard shortcuts localized per active locale.
-  - `src/pages/[lang]/tools/[slug].astro`: 3-step workflow cards ("01. Configure", "02. Process Locally", "03. Export & Publish"), client memory badges, and breadcrumb trails fully translated.
+  - `src/components/layout/Navbar.tsx`: Search command palette button, prompt, no-results state, and tool suggestions localized per active locale.
 - **Dynamic Routing & Alternates:**
   - Language selector switches routes preserving current sub-path where available (e.g. `/tools/monetization-calculator` -> `/es/tools/monetization-calculator`).
   - Reciprocal `hreflang` tags pre-rendered in HTML `<head>` on every page plus `xhtml:link` in `sitemap-0.xml`.

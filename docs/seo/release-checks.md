@@ -30,8 +30,13 @@ Verify that critical SEO tags are rendered in static server HTML (not dependent 
 # Check Homepage HTML for essential SEO tags
 Get-Content dist/index.html | Select-String -Pattern '<title|<meta name="description"|<link rel="canonical"|<link rel="alternate" hreflang="|<h1'
 
-# Check a primary tool page
+# Check a primary tool page (English & Localized)
 Get-Content dist/tools/episode-title-generator/index.html | Select-String -Pattern '<title|<meta name="description"|<link rel="canonical"|tool-workspace'
+Get-Content dist/es/tools/episode-title-generator/index.html | Select-String -Pattern '<title|<meta name="description"|<link rel="canonical"|tool-workspace'
+
+# Check a research guide page (English & Localized)
+Get-Content dist/guides/podcast-sponsorship-cpm-guide-2026/index.html | Select-String -Pattern '<title|<meta name="description"|<h1'
+Get-Content dist/es/guides/podcast-sponsorship-cpm-guide-2026/index.html | Select-String -Pattern '<title|<meta name="description"|<h1'
 ```
 
 **Acceptance Criteria:**

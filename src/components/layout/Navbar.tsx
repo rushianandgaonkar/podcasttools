@@ -6,6 +6,7 @@ import { toolRegistry } from "@/config/site";
 import { LanguageSelector } from "./LanguageSelector";
 import { getLangFromUrl, getLocalizedPath, useTranslations } from "@/i18n/utils";
 import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
+import { getLocalizedTool } from "@/i18n/toolsData";
 import {
   Menu,
   X,
@@ -80,13 +81,14 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
   };
 
   const t = useTranslations(currentLang);
+  const localizedTools = toolRegistry.map((tool) => getLocalizedTool(tool, currentLang));
 
   const filteredTools = searchQuery.trim()
-    ? toolRegistry.filter(
-        (t) =>
-          t.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          t.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          t.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase())
+    ? localizedTools.filter(
+        (tool) =>
+          tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          tool.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : [];
 
@@ -282,14 +284,14 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
                     {t.searchModal.prompt}
                   </p>
                   <div className="mt-3 flex flex-wrap justify-center gap-1.5">
-                    {toolRegistry.slice(0, 5).map((t) => (
+                    {localizedTools.slice(0, 5).map((tool) => (
                       <a
-                        key={t.slug}
-                        href={getLocalizedPath(`/tools/${t.slug}`, currentLang)}
+                        key={tool.slug}
+                        href={getLocalizedPath(`/tools/${tool.slug}`, currentLang)}
                         onClick={() => setSearchOpen(false)}
                         className="text-[11px] px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
                       >
-                        {t.shortTitle}
+                        {tool.shortTitle}
                       </a>
                     ))}
                   </div>

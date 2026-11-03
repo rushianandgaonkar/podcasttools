@@ -31,7 +31,7 @@ export function ToolDispatcher({ slug, lang = defaultLocale }: ToolDispatcherPro
   const renderTool = () => {
     switch (slug) {
       case "episode-title-generator":
-        return <EpisodeTitleGenerator />;
+        return <EpisodeTitleGenerator lang={lang} />;
       case "show-notes-generator":
         return <ShowNotesGenerator />;
       case "podcast-name-generator":
@@ -41,7 +41,7 @@ export function ToolDispatcher({ slug, lang = defaultLocale }: ToolDispatcherPro
       case "guest-question-generator":
         return <GuestQuestionGenerator />;
       case "monetization-calculator":
-        return <MonetizationCalculator />;
+        return <MonetizationCalculator lang={lang} />;
       case "cover-art-preview":
         return <CoverArtPreview />;
       case "rss-feed-validator":

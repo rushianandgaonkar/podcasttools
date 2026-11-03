@@ -1,9 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { DollarSign, TrendingUp, HelpCircle, Layers, BarChart3, CheckCircle2 } from "lucide-react";
+import { DollarSign, BarChart3 } from "lucide-react";
+import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
+import { getToolUi } from "@/i18n/toolUiTranslations";
 
-export function MonetizationCalculator() {
+interface MonetizationCalculatorProps {
+  lang?: SupportedLocale;
+}
+
+export function MonetizationCalculator({ lang = defaultLocale }: MonetizationCalculatorProps) {
   const [downloads, setDownloads] = useState<number>(5000);
   const [episodesPerMonth, setEpisodesPerMonth] = useState<number>(4);
   const [hasPreRoll, setHasPreRoll] = useState<boolean>(true);
@@ -16,6 +22,8 @@ export function MonetizationCalculator() {
   const [includePatreon, setIncludePatreon] = useState<boolean>(false);
   const [patreonBackers, setPatreonBackers] = useState<number>(100);
   const [patreonPrice, setPatreonPrice] = useState<number>(7);
+
+  const ui = getToolUi(lang).cpmCalculator;
 
   // Calculations
   const effectiveDownloads = downloads * (fillRate / 100);
@@ -32,12 +40,12 @@ export function MonetizationCalculator() {
 
   // Industry percentile tier indicator
   const getTier = (dl: number) => {
-    if (dl >= 35000) return { label: "Top 1% Worldwide", color: "text-amber-400 bg-amber-500/10 border-amber-500/30" };
-    if (dl >= 10000) return { label: "Top 5% Worldwide", color: "text-purple-400 bg-purple-500/10 border-purple-500/30" };
-    if (dl >= 3500) return { label: "Top 10% Worldwide", color: "text-indigo-400 bg-indigo-500/10 border-indigo-500/30" };
-    if (dl >= 1100) return { label: "Top 20% Worldwide", color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/30" };
-    if (dl >= 150) return { label: "Top 50% Worldwide", color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30" };
-    return { label: "Emerging Show", color: "text-slate-400 bg-slate-500/10 border-slate-500/30" };
+    if (dl >= 35000) return { label: ui.top1, color: "text-amber-400 bg-amber-500/10 border-amber-500/30" };
+    if (dl >= 10000) return { label: ui.top5, color: "text-purple-400 bg-purple-500/10 border-purple-500/30" };
+    if (dl >= 3500) return { label: ui.top10, color: "text-indigo-400 bg-indigo-500/10 border-indigo-500/30" };
+    if (dl >= 1100) return { label: ui.top20, color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/30" };
+    if (dl >= 150) return { label: ui.top50, color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30" };
+    return { label: ui.emerging, color: "text-slate-400 bg-slate-500/10 border-slate-500/30" };
   };
 
   const tier = getTier(downloads);
@@ -49,28 +57,28 @@ export function MonetizationCalculator() {
         {/* Monthly Projection */}
         <div className="p-5 rounded-2xl bg-gradient-to-br from-studio-card via-studio-card to-orange-500/10 border border-orange-500/30 shadow-lg">
           <span className="text-xs font-semibold text-neutral-600 dark:text-slate-400 uppercase tracking-wider block mb-1">
-            Projected Monthly Gross
+            {ui.monthlyGross}
           </span>
           <div className="text-3xl font-extrabold text-neutral-900 dark:text-white flex items-baseline gap-1">
             <span className="text-orange-500 dark:text-orange-400">$</span>
             {Math.round(totalMonthly).toLocaleString()}
           </div>
           <span className="text-[11px] text-neutral-600 dark:text-slate-400 mt-1 block">
-            Across {episodesPerMonth} episodes ({fillRate}% ad fill)
+            {ui.acrossEpisodes(episodesPerMonth, fillRate)}
           </span>
         </div>
 
         {/* Annual Projection */}
         <div className="p-5 rounded-2xl bg-gradient-to-br from-studio-card via-studio-card to-indigo-500/10 border border-indigo-500/30 shadow-lg">
           <span className="text-xs font-semibold text-neutral-600 dark:text-slate-400 uppercase tracking-wider block mb-1">
-            Projected Annual Gross
+            {ui.annualGross}
           </span>
           <div className="text-3xl font-extrabold text-neutral-900 dark:text-white flex items-baseline gap-1">
             <span className="text-indigo-600 dark:text-indigo-400">$</span>
             {Math.round(totalAnnual).toLocaleString()}
           </div>
           <span className="text-[11px] text-neutral-600 dark:text-slate-400 mt-1 block">
-            12-month run rate
+            {ui.runRate12m}
           </span>
         </div>
 
@@ -78,7 +86,7 @@ export function MonetizationCalculator() {
         <div className="p-5 rounded-2xl bg-studio-card border border-studio-border shadow-lg">
           <div className="flex items-center justify-between mb-1">
             <span className="text-xs font-semibold text-neutral-600 dark:text-slate-400 uppercase tracking-wider">
-              Per-Episode Average
+              {ui.perEpisode}
             </span>
             <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${tier.color}`}>
               {tier.label}
@@ -89,7 +97,7 @@ export function MonetizationCalculator() {
             {Math.round(totalSponsorPerEp).toLocaleString()}
           </div>
           <span className="text-[11px] text-neutral-600 dark:text-slate-400 mt-1 block">
-            Gross sponsorship per release
+            {ui.grossPerRelease}
           </span>
         </div>
       </div>
@@ -100,17 +108,17 @@ export function MonetizationCalculator() {
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-5">
           <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white pb-2 border-b border-studio-border/60 flex items-center gap-2">
             <DollarSign className="w-4 h-4 text-orange-500 dark:text-orange-400" />
-            Audience & Episode Parameters
+            {ui.parameters}
           </h2>
 
           {/* Downloads Slider */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <label className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                Average 30-Day Downloads per Episode
+                {ui.downloadsLabel}
               </label>
               <span className="text-xs font-bold font-mono text-orange-600 dark:text-orange-400 bg-studio-darkest px-2 py-1 rounded border border-studio-border">
-                {downloads.toLocaleString()} downloads
+                {downloads.toLocaleString()}
               </span>
             </div>
             <input
@@ -133,12 +141,13 @@ export function MonetizationCalculator() {
           {/* Episodes / Month */}
           <div className="space-y-1.5">
             <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-              Episodes Released Per Month
+              {ui.episodesPerMonth}
             </label>
             <div className="grid grid-cols-4 gap-2">
               {[1, 2, 4, 8].map((num) => (
                 <button
                   key={num}
+                  type="button"
                   onClick={() => setEpisodesPerMonth(num)}
                   className={`py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
                     episodesPerMonth === num
@@ -146,7 +155,7 @@ export function MonetizationCalculator() {
                       : "bg-studio-darkest text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border-studio-border"
                   }`}
                 >
-                  {num} {num === 1 ? "Ep/mo" : "Eps/mo"}
+                  {num} / mo
                 </button>
               ))}
             </div>
@@ -155,7 +164,7 @@ export function MonetizationCalculator() {
           {/* Ad Slot Options */}
           <div className="space-y-3 pt-3 border-t border-studio-border/60">
             <span className="text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 block">
-              Sponsorship Slots & CPM Rates
+              {ui.adSlots}
             </span>
 
             {/* Pre-roll */}
@@ -167,7 +176,7 @@ export function MonetizationCalculator() {
                   onChange={(e) => setHasPreRoll(e.target.checked)}
                   className="rounded accent-orange-500 w-4 h-4 cursor-pointer"
                 />
-                <span className="text-xs font-semibold text-neutral-900 dark:text-slate-200">Pre-Roll (15-30s)</span>
+                <span className="text-xs font-semibold text-neutral-900 dark:text-slate-200">{ui.preRoll}</span>
               </label>
               <div className="flex items-center gap-1.5 text-xs text-neutral-600 dark:text-slate-400">
                 <span>CPM $</span>
@@ -190,7 +199,7 @@ export function MonetizationCalculator() {
                   onChange={(e) => setHasMidRoll(e.target.checked)}
                   className="rounded accent-orange-500 w-4 h-4 cursor-pointer"
                 />
-                <span className="text-xs font-semibold text-neutral-900 dark:text-slate-200">Mid-Roll (60s Host-Read)</span>
+                <span className="text-xs font-semibold text-neutral-900 dark:text-slate-200">{ui.midRoll}</span>
               </label>
               <div className="flex items-center gap-1.5 text-xs text-neutral-600 dark:text-slate-400">
                 <span>CPM $</span>
@@ -213,7 +222,7 @@ export function MonetizationCalculator() {
                   onChange={(e) => setHasPostRoll(e.target.checked)}
                   className="rounded accent-orange-500 w-4 h-4 cursor-pointer"
                 />
-                <span className="text-xs font-semibold text-neutral-900 dark:text-slate-200">Post-Roll (15s End)</span>
+                <span className="text-xs font-semibold text-neutral-900 dark:text-slate-200">{ui.postRoll}</span>
               </label>
               <div className="flex items-center gap-1.5 text-xs text-neutral-600 dark:text-slate-400">
                 <span>CPM $</span>
@@ -232,7 +241,7 @@ export function MonetizationCalculator() {
           <div className="space-y-1.5 pt-2 border-t border-studio-border/60">
             <div className="flex items-center justify-between">
               <label className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                Sponsor Sell-Through / Fill Rate
+                {ui.fillRate}
               </label>
               <span className="text-xs font-mono font-bold text-neutral-900 dark:text-white">{fillRate}%</span>
             </div>
@@ -252,27 +261,27 @@ export function MonetizationCalculator() {
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-6">
           <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white pb-2 border-b border-studio-border/60 flex items-center gap-2">
             <BarChart3 className="w-4 h-4 text-indigo-500 dark:text-indigo-400" />
-            Monthly Revenue Breakdown
+            {ui.breakdown}
           </h2>
 
           {/* Breakdown Rows */}
           <div className="space-y-3">
             <div className="flex items-center justify-between p-3 rounded-xl bg-studio-darkest border border-studio-border text-xs">
-              <span className="text-neutral-700 dark:text-slate-300">Pre-Roll Sponsorship ({hasPreRoll ? `$${preRollCpm} CPM` : "Off"})</span>
+              <span className="text-neutral-700 dark:text-slate-300">Pre-Roll ({hasPreRoll ? `$${preRollCpm} CPM` : "Off"})</span>
               <span className="font-mono font-bold text-neutral-900 dark:text-white">
                 ${Math.round(preRollRevPerEp * episodesPerMonth).toLocaleString()}
               </span>
             </div>
 
             <div className="flex items-center justify-between p-3 rounded-xl bg-studio-darkest border border-studio-border text-xs">
-              <span className="text-neutral-700 dark:text-slate-300">Mid-Roll Sponsorship ({hasMidRoll ? `$${midRollCpm} CPM` : "Off"})</span>
+              <span className="text-neutral-700 dark:text-slate-300">Mid-Roll ({hasMidRoll ? `$${midRollCpm} CPM` : "Off"})</span>
               <span className="font-mono font-bold text-orange-600 dark:text-orange-400">
                 ${Math.round(midRollRevPerEp * episodesPerMonth).toLocaleString()}
               </span>
             </div>
 
             <div className="flex items-center justify-between p-3 rounded-xl bg-studio-darkest border border-studio-border text-xs">
-              <span className="text-neutral-700 dark:text-slate-300">Post-Roll Sponsorship ({hasPostRoll ? `$${postRollCpm} CPM` : "Off"})</span>
+              <span className="text-neutral-700 dark:text-slate-300">Post-Roll ({hasPostRoll ? `$${postRollCpm} CPM` : "Off"})</span>
               <span className="font-mono font-bold text-neutral-900 dark:text-white">
                 ${Math.round(postRollRevPerEp * episodesPerMonth).toLocaleString()}
               </span>
@@ -311,4 +320,3 @@ export function MonetizationCalculator() {
     </div>
   );
 }
-

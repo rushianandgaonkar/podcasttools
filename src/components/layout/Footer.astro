@@ -3,6 +3,7 @@ import { Logo } from "../brand/Logo";
 import { LanguageSelector } from "./LanguageSelector";
 import { defaultLocale, type SupportedLocale } from "../../i18n/languages";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
+import { toolsData } from "../../i18n/toolsData";
 
 interface Props {
   lang?: SupportedLocale;
@@ -11,6 +12,9 @@ interface Props {
 const { lang = defaultLocale } = Astro.props;
 const t = useTranslations(lang);
 const currentYear = new Date().getFullYear();
+
+const getToolName = (slug: string) =>
+  toolsData[lang]?.[slug]?.shortTitle || toolsData.en[slug]?.shortTitle || slug;
 ---
 
 <footer class="w-full border-t border-neutral-200 dark:border-[#222222] bg-[#fafafa] dark:bg-[#000000] text-neutral-600 dark:text-neutral-400 text-xs transition-colors duration-150">
@@ -41,22 +45,22 @@ const currentYear = new Date().getFullYear();
         <ul class="space-y-2 text-xs">
           <li>
             <a href={getLocalizedPath("/tools/episode-title-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Title Generator
+              {getToolName("episode-title-generator")}
             </a>
           </li>
           <li>
             <a href={getLocalizedPath("/tools/podcast-name-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Name Generator
+              {getToolName("podcast-name-generator")}
             </a>
           </li>
           <li>
             <a href={getLocalizedPath("/tools/guest-question-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Question Generator
+              {getToolName("guest-question-generator")}
             </a>
           </li>
           <li>
             <a href={getLocalizedPath("/tools/hook-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Hook Generator
+              {getToolName("hook-generator")}
             </a>
           </li>
         </ul>
@@ -70,22 +74,22 @@ const currentYear = new Date().getFullYear();
         <ul class="space-y-2 text-xs">
           <li>
             <a href={getLocalizedPath("/tools/show-notes-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Show Notes Generator
+              {getToolName("show-notes-generator")}
             </a>
           </li>
           <li>
             <a href={getLocalizedPath("/tools/episode-outline-builder", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Outline Builder
+              {getToolName("episode-outline-builder")}
             </a>
           </li>
           <li>
             <a href={getLocalizedPath("/tools/intro-script-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Intro Scripts
+              {getToolName("intro-script-generator")}
             </a>
           </li>
           <li>
             <a href={getLocalizedPath("/tools/transcript-formatter", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Transcript Formatter
+              {getToolName("transcript-formatter")}
             </a>
           </li>
         </ul>
@@ -99,22 +103,22 @@ const currentYear = new Date().getFullYear();
         <ul class="space-y-2 text-xs">
           <li>
             <a href={getLocalizedPath("/tools/monetization-calculator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              CPM Calculator
+              {getToolName("monetization-calculator")}
             </a>
           </li>
           <li>
             <a href={getLocalizedPath("/tools/cover-art-preview", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Cover Art Preview
+              {getToolName("cover-art-preview")}
             </a>
           </li>
           <li>
             <a href={getLocalizedPath("/tools/rss-feed-validator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              RSS Feed Validator
+              {getToolName("rss-feed-validator")}
             </a>
           </li>
           <li>
             <a href={getLocalizedPath("/tools/audience-growth-estimator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              Growth Estimator
+              {getToolName("audience-growth-estimator")}
             </a>
           </li>
         </ul>

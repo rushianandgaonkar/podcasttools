@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { siteConfig, guidesRegistry } from "../../config/site";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
+import { getLocalizedGuide } from "../../i18n/guidesData";
 import { BookOpen, Clock, ArrowRight } from "lucide-react";
 
 const lang = "en";
@@ -30,34 +31,37 @@ const t = useTranslations(lang);
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {guidesRegistry.map((guide) => (
-          <a
-            href={getLocalizedPath(`/guides/${guide.slug}`, lang)}
-            class="group p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex flex-col justify-between"
-          >
-            <div>
-              <div class="flex items-center justify-between text-xs text-neutral-400 mb-2.5">
-                <span class="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">
-                  {guide.category}
-                </span>
-                <span class="flex items-center gap-1 font-mono text-[10px]">
-                  <Clock className="w-3 h-3" />
-                  {guide.readTime}
-                </span>
+        {guidesRegistry.map((guide) => {
+          const loc = getLocalizedGuide(guide, lang);
+          return (
+            <a
+              href={getLocalizedPath(`/guides/${guide.slug}`, lang)}
+              class="group p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center justify-between text-xs text-neutral-400 mb-2.5">
+                  <span class="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">
+                    {loc.category}
+                  </span>
+                  <span class="flex items-center gap-1 font-mono text-[10px]">
+                    <Clock className="w-3 h-3" />
+                    {loc.readTime}
+                  </span>
+                </div>
+                <h2 class="text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors mb-1.5">
+                  {loc.title}
+                </h2>
+                <p class="text-xs text-neutral-500 leading-relaxed line-clamp-3 mb-4">
+                  {loc.description}
+                </p>
               </div>
-              <h2 class="text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors mb-1.5">
-                {guide.title}
-              </h2>
-              <p class="text-xs text-neutral-500 leading-relaxed line-clamp-3 mb-4">
-                {guide.description}
-              </p>
-            </div>
 
-            <div class="pt-3 border-t border-neutral-100 dark:border-neutral-900 text-xs font-medium text-neutral-700 dark:text-neutral-300 group-hover:text-[#0070f3] inline-flex items-center gap-1">
-              Read Guide <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-            </div>
-          </a>
-        ))}
+              <div class="pt-3 border-t border-neutral-100 dark:border-neutral-900 text-xs font-medium text-neutral-700 dark:text-neutral-300 group-hover:text-[#0070f3] inline-flex items-center gap-1">
+                Read Guide <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   </div>

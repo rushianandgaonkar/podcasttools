@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
 import { getLocalizedPath, useTranslations } from "@/i18n/utils";
+import { getLocalizedTool } from "@/i18n/toolsData";
 import {
   Stories,
   StoriesContent,
@@ -243,8 +244,12 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
     }
   }, []);
 
+  const localizedTools = useMemo(() => {
+    return toolRegistry.map((tool) => getLocalizedTool(tool, lang));
+  }, [lang]);
+
   const filteredTools = useMemo(() => {
-    return toolRegistry.filter((tool) => {
+    return localizedTools.filter((tool) => {
       const matchesCategory =
         selectedCategory === "all" || tool.category === selectedCategory;
       const matchesSearch =
@@ -255,7 +260,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
 
       return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [localizedTools, selectedCategory, searchQuery]);
 
   return (
     <div className="w-full space-y-6" id="tools-section">
@@ -275,8 +280,9 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
           </button>
 
           {toolCategories.map((cat) => {
-            const count = toolRegistry.filter((item) => item.category === cat.id).length;
+            const count = localizedTools.filter((item) => item.category === cat.id).length;
             const isSelected = selectedCategory === cat.id;
+            const catLabel = t.categories[cat.id as keyof typeof t.categories] || cat.label;
 
             return (
               <button
@@ -289,7 +295,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
                     : "bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
                 }`}
               >
-                {cat.label} ({count})
+                {catLabel} ({count})
               </button>
             );
           })}
@@ -463,7 +469,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
                         <div className="w-full flex items-center justify-between pt-1.5 border-t border-white/15 text-[10px]">
                           <span className="text-neutral-300 font-mono">100% Client-Side</span>
                           <span className="text-white font-medium inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-[#60a5fa]">
-                            Launch Tool &rarr;
+                            {t.toolsSection.launchTool} &rarr;
                           </span>
                         </div>
                       </StoryAuthor>

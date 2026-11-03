@@ -4,6 +4,7 @@ import { siteConfig, toolRegistry, type ToolDefinition } from "../../config/site
 import { ToolDispatcher } from "../../components/tools/ToolDispatcher";
 import { ToolIcon } from "../../components/tools/ToolIcon";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
+import { getLocalizedTool } from "../../i18n/toolsData";
 import {
   ShieldCheck,
   Zap,
@@ -23,14 +24,16 @@ interface Props {
   tool: ToolDefinition;
 }
 
-const { tool } = Astro.props;
+const { tool: rawTool } = Astro.props;
 const lang = "en";
 const t = useTranslations(lang);
+const tool = getLocalizedTool(rawTool, lang);
 
 // Related tools from the same category or featured
 const relatedTools = toolRegistry
-  .filter((t) => t.slug !== tool.slug && (t.category === tool.category || t.featured))
-  .slice(0, 3);
+  .filter((t) => t.slug !== tool.slug && (t.category === rawTool.category || t.featured))
+  .slice(0, 3)
+  .map((rel) => getLocalizedTool(rel, lang));
 
 // Structured Data Schemas
 const webAppSchema = {
