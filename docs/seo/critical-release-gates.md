@@ -71,6 +71,12 @@ All previously identified language hardcoding and contrast issues have been repa
 
 | Gate | Severity | Route(s) | Locale(s) | Expected Behavior | Actual Observed | Status |
 |---|---|---|---|---|---|---|
+| **Gate A** | P0 | Homepage & Tools | All 8 | Fully translated FAQs / Q&As | Localized 5-item FAQ accordion & FAQPage schema in all 8 languages | **PASS (TEST PASSED)** |
+| **Gate A** | P0 | `/tools/guest-question-generator` | All 8 | Localized Interview Q&A generator | Full 14-question arc, categories, and prep sheet in all 8 languages | **PASS (TEST PASSED)** |
+| **Gate A** | P0 | `/tools/episode-title-generator` | All 8 | Localized title formulas | Full psychological title templates in all 8 languages | **PASS (TEST PASSED)** |
+| **Gate B** | P0 | Tool Workspaces | All 8 | High-contrast visible COPY buttons | Repaired CSS substring selector & added crisp high-contrast button styling | **PASS (TEST PASSED)** |
+| **Gate C** | P0 | `/robots.txt` | Root | 2026 AI + Search crawler directives | Dedicated GPTBot, ClaudeBot, PerplexityBot, Applebot, Bingbot rules | **PASS (TEST PASSED)** |
+| **Gate C** | P0 | All Pages | All 8 | Exactly 1 semantic H1 & descriptive Alt text | Single H1 on all 225 pages, accessible Logo & artwork preview alt attributes | **PASS (TEST PASSED)** |
 | **Gate A** | P0 | `/[lang]/privacy/` | All 8 | Fully translated legal text per locale | 5 translated sections rendered via `t.legalPages.privacy` | **PASS (TEST PASSED)** |
 | **Gate A** | P0 | `/[lang]/terms/` | All 8 | Fully translated terms per locale | 5 translated sections rendered via `t.legalPages.terms` | **PASS (TEST PASSED)** |
 | **Gate A** | P1 | `/[lang]/contact/` | All 8 | Form inputs & buttons in target language | Localized labels, inputs, and notices via `t.contactForm` | **PASS (TEST PASSED)** |

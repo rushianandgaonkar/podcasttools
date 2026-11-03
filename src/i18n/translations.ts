@@ -138,6 +138,15 @@ export interface UITranslations {
     step3Desc: string;
     homeBreadcrumb: string;
   };
+  faq: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
   commonToolUi: {
     copy: string;
     copied: string;
@@ -291,6 +300,33 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       step3Desc: "One-click copy markdown or download verified files directly to your production workflow.",
       homeBreadcrumb: "Home",
     },
+    faq: {
+      eyebrow: "FREQUENTLY ASKED QUESTIONS",
+      title: "Frequently Asked Questions",
+      subtitle: "Answers to common questions about privacy, formulas, and client-side processing.",
+      items: [
+        {
+          question: "Are these tools really 100% free with no account required?",
+          answer: "Yes, entirely free with zero paywalls, account signups, or usage limits. All computation runs purely inside your browser memory using modern web standards.",
+        },
+        {
+          question: "Do my audio files, show notes, or RSS feeds get saved to a server?",
+          answer: "No. Pod Studio is built strictly client-side. All processing (parsing RSS feeds, calculating CPM, validating artwork) happens in volatile browser memory. We never store, inspect, or log your content.",
+        },
+        {
+          question: "Which podcast directories are supported for specs and validation?",
+          answer: "Our tools adhere to the latest 2026 technical requirements published by Apple Podcasts, Spotify for Creators, YouTube Music Podcasts, and the Podcast Index namespace specifications.",
+        },
+        {
+          question: "Who owns the rights to the generated titles, show notes, and scripts?",
+          answer: "You do. You retain 100% intellectual property and commercial rights to all generated titles, transcripts, questions, and show notes. Use them freely across any podcast platform or sponsor pitch.",
+        },
+        {
+          question: "Can I export outputs to hosts like Buzzsprout, Libsyn, Spotify, or Podbean?",
+          answer: "Yes. All markdown notes, chapter timestamps, and sanitized titles copy directly into Buzzsprout, Libsyn, Spotify for Creators, Podbean, Transistor, Captivate, and Apple Podcasts Connect.",
+        },
+      ],
+    },
     commonToolUi: {
       copy: "Copy",
       copied: "Copied!",
@@ -440,6 +476,33 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       step3Title: "03. Exportar y Publicar",
       step3Desc: "Copia en markdown con un solo clic o descarga archivos verificados directamente a tu flujo de producción.",
       homeBreadcrumb: "Inicio",
+    },
+    faq: {
+      eyebrow: "PREGUNTAS FRECUENTES",
+      title: "Preguntas Frecuentes",
+      subtitle: "Respuestas a dudas comunes sobre privacidad, fórmulas y procesamiento en el navegador.",
+      items: [
+        {
+          question: "¿Son estas herramientas para podcasts realmente 100% gratuitas y sin registro?",
+          answer: "Sí, son totalmente gratuitas, sin muros de pago, sin suscripciones y sin límites de uso. Todo el procesamiento se realiza en la memoria de tu navegador mediante estándares web modernos.",
+        },
+        {
+          question: "¿Se guardan mis archivos de audio, notas del episodio o feeds RSS en un servidor?",
+          answer: "No. Pod Studio está diseñado estrictamente para el cliente. Todo el procesamiento (análisis de RSS, cálculo de CPM, validación de carátulas) ocurre en la memoria volátil de tu navegador. Nunca almacenamos ni registramos tu contenido.",
+        },
+        {
+          question: "¿Qué directorios de podcasts son compatibles con las especificaciones y validaciones?",
+          answer: "Nuestras herramientas cumplen rigurosamente con los requisitos técnicos oficiales de 2026 establecidos por Apple Podcasts, Spotify for Creators, YouTube Music y las especificaciones del Podcast Index.",
+        },
+        {
+          question: "¿Quién tiene los derechos sobre los títulos, notas y guiones generados?",
+          answer: "Tú eres el propietario total. Conservas el 100% de los derechos de autor y de explotación comercial sobre todos los títulos, escaletas, preguntas y notas creadas con nuestras herramientas.",
+        },
+        {
+          question: "¿Puedo exportar los resultados a plataformas como Buzzsprout, Libsyn o Spotify?",
+          answer: "Sí. Todas las notas en markdown, marcas de tiempo y títulos se copian directamente en Buzzsprout, Libsyn, Spotify for Creators, Podbean, Transistor, Captivate y Apple Podcasts Connect.",
+        },
+      ],
     },
     commonToolUi: {
       copy: "Copiar",
@@ -591,6 +654,33 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       step3Desc: "ワンクリックでMarkdownをコピー、または検証済みファイルを制作環境にすぐ保存できます。",
       homeBreadcrumb: "ホーム",
     },
+    faq: {
+      eyebrow: "よくあるご質問 (FAQ)",
+      title: "よくあるご質問",
+      subtitle: "プライバシー、計算式、ブラウザ内処理に関するご質問と回答。",
+      items: [
+        {
+          question: "これらのポッドキャストツールは本当に完全無料でアカウント登録も不要ですか？",
+          answer: "はい。利用制限、登録手続き、有料プランは一切ありません。すべての計算や処理は最新のWeb標準に基づきブラウザ内のメモリ上で直接実行されます。",
+        },
+        {
+          question: "音声ファイル、ショーノート、RSSフィードがサーバーに保存されることはありますか？",
+          answer: "いいえ。Pod Studioは徹底したクライアントサイド設計です。RSSフィードの解析、CPM計算、アートワーク検証などはすべてブラウザの揮発性メモリ上で実行され、サーバーに保存・送信されることは一切ありません。",
+        },
+        {
+          question: "どのポッドキャスト配信プラットフォームの仕様に対応していますか？",
+          answer: "Apple Podcasts、Spotify for Creators、YouTube Music Podcasts、およびPodcast Indexが定める2026年の最新技術仕様や規格に準拠しています。",
+        },
+        {
+          question: "生成されたタイトルやショーノート、台本の著作権はどうなりますか？",
+          answer: "すべてクリエイターであるあなたに帰属します。生成されたタイトル、台本、質問リスト、ショーノートの商用利用権および知的財産権は100%あなたが保有します。",
+        },
+        {
+          question: "BuzzsproutやLibsyn、Spotify、Podbeanなどのホスティングにエクスポートできますか？",
+          answer: "はい。生成されたMarkdownショーノート、タイムスタンプ、タイトルは、Buzzsprout、Libsyn、Spotify for Creators、Podbean、Transistorなどにそのまま貼り付けてご活用いただけます。",
+        },
+      ],
+    },
     commonToolUi: {
       copy: "コピー",
       copied: "コピー完了!",
@@ -740,6 +830,33 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       step3Title: "03. Exporter & Publier",
       step3Desc: "Copiez en markdown en un clic ou téléchargez les fichiers directement dans votre flux de production.",
       homeBreadcrumb: "Accueil",
+    },
+    faq: {
+      eyebrow: "QUESTIONS FRÉQUENTES",
+      title: "Questions Fréquemment Posées",
+      subtitle: "Réponses aux questions courantes sur la confidentialité, les formules et l'exécution locale.",
+      items: [
+        {
+          question: "Ces outils pour podcast sont-ils réellement 100 % gratuits et sans création de compte ?",
+          answer: "Oui, entièrement gratuits sans aucun abonnement payant, inscription obligatoire ni restriction d'usage. Tous les calculs s'exécutent directement dans la mémoire de votre navigateur via les standards web modernes.",
+        },
+        {
+          question: "Mes fichiers audio, notes d'émission ou flux RSS sont-ils enregistrés sur un serveur ?",
+          answer: "Non. Pod Studio est conçu exclusivement côté client. Tous les traitements (analyse des flux RSS, calcul des CPM, validation des pochettes) s'effectuent dans la mémoire volatile de votre navigateur. Nous ne conservons ni n'enregistrons aucun contenu.",
+        },
+        {
+          question: "Quels annuaires et plateformes de podcast sont pris en charge ?",
+          answer: "Nos outils respectent scrupuleusement les spécifications techniques 2026 publiées par Apple Podcasts, Spotify for Creators, YouTube Music Podcasts ainsi que le namespace Podcast Index.",
+        },
+        {
+          question: "Qui détient les droits sur les titres, notes et scripts générés ?",
+          answer: "Vous exclusivement. Vous conservez 100 % de la propriété intellectuelle et des droits commerciaux sur tous les titres, scripts, questions d'interview et notes générés.",
+        },
+        {
+          question: "Puis-je exporter mes résultats vers des hébergeurs comme Buzzsprout, Libsyn ou Spotify ?",
+          answer: "Oui. Toutes les notes en markdown, chapitres avec horodatages et titres optimisés se copient en un clic vers Buzzsprout, Libsyn, Spotify for Creators, Podbean, Transistor et Apple Podcasts.",
+        },
+      ],
     },
     commonToolUi: {
       copy: "Copier",
@@ -891,6 +1008,33 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       step3Desc: "Mit einem Klick Markdown kopieren oder geprüfte Dateien direkt in Ihren Workflow übernehmen.",
       homeBreadcrumb: "Startseite",
     },
+    faq: {
+      eyebrow: "HÄUFIG GESTELLTE FRAGEN",
+      title: "Häufig Gestellte Fragen",
+      subtitle: "Antworten auf häufige Fragen zu Datenschutz, Berechnungsformeln und lokaler Verarbeitung.",
+      items: [
+        {
+          question: "Sind diese Podcast-Tools wirklich zu 100 % kostenlos und ohne Konto nutzbar?",
+          answer: "Ja, absolut kostenlos ohne Paywalls, Registrierungszwang oder Nutzungslimits. Sämtliche Berechnungen laufen direkt im Arbeitsspeicher deines Browsers über moderne Webstandards.",
+        },
+        {
+          question: "Werden meine Audiodateien, Shownotes oder RSS-Feeds auf einem Server gespeichert?",
+          answer: "Nein. Pod Studio arbeitet strikt clientseitig. Alle Verarbeitungen (RSS-Validierung, CPM-Kalkulation, Cover-Art-Prüfung) finden im flüchtigen Browserspeicher statt. Wir speichern oder protokollieren deine Inhalte niemals.",
+        },
+        {
+          question: "Welche Podcast-Verzeichnisse werden für Spezifikationen und Prüfungen unterstützt?",
+          answer: "Unsere Tools entsprechen den aktuellen technischen 2026-Standards von Apple Podcasts, Spotify for Creators, YouTube Music Podcasts sowie den Spezifikationen des Podcast Index.",
+        },
+        {
+          question: "Wer besitzt die Rechte an den generierten Titeln, Shownotes und Skripten?",
+          answer: "Ausschließlich du selbst. Du behältst 100 % der Urheber- und Verwertungsrechte an allen generierten Episodentiteln, Fragen, Shownotes und Skripten für beliebige kommerzielle Zwecke.",
+        },
+        {
+          question: "Kann ich die Ausgaben zu Hostern wie Buzzsprout, Libsyn, Spotify oder Podbean exportieren?",
+          answer: "Ja. Sämtliche Markdown-Shownotes, Kapitel-Zeitstempel und geprüften Titel lassen sich mit einem Klick in Buzzsprout, Libsyn, Spotify for Creators, Podbean, Transistor und Apple Podcasts einfügen.",
+        },
+      ],
+    },
     commonToolUi: {
       copy: "Kopieren",
       copied: "Kopiert!",
@@ -1040,6 +1184,33 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       step3Title: "03. Exportar e Publicar",
       step3Desc: "Copie em markdown com um clique ou baixe os arquivos prontos para a sua rotina de publicação.",
       homeBreadcrumb: "Início",
+    },
+    faq: {
+      eyebrow: "PERGUNTAS FREQUENTES",
+      title: "Perguntas Frequentes",
+      subtitle: "Respostas sobre privacidade, fórmulas matemáticas e processamento seguro no navegador.",
+      items: [
+        {
+          question: "Essas ferramentas para podcast são realmente 100% gratuitas e sem necessidade de conta?",
+          answer: "Sim, totalmente gratuitas, sem planos pagos, cadastros ou limites de uso. Todo o processamento ocorre diretamente na memória do seu navegador através de padrões web modernos.",
+        },
+        {
+          question: "Meus arquivos de áudio, notas de episódio ou feeds RSS ficam salvos em algum servidor?",
+          answer: "Não. O Pod Studio opera estritamente no lado do cliente. Todas as operações (validação de RSS, cálculo de CPM, conferência de capas) ocorrem na memória volátil do navegador. Jamais armazenamos ou monitoramos seus dados.",
+        },
+        {
+          question: "Quais diretórios de podcast são suportados nas especificações e validações?",
+          answer: "Nossas ferramentas seguem rigorosamente os requisitos técnicos de 2026 homologados pela Apple Podcasts, Spotify for Creators, YouTube Music Podcasts e especificações do Podcast Index.",
+        },
+        {
+          question: "De quem são os direitos dos títulos, notas de episódio e roteiros gerados?",
+          answer: "Totalmente seus. Você retém 100% da propriedade intelectual e dos direitos comerciais sobre todos os títulos, roteiros, perguntas e notas gerados.",
+        },
+        {
+          question: "Posso exportar os resultados para agregadores como Buzzsprout, Libsyn ou Spotify?",
+          answer: "Sim. Todas as notas em markdown, timestamps de capítulos e títulos são formatados para colagem imediata no Buzzsprout, Libsyn, Spotify for Creators, Podbean, Transistor e Apple Podcasts.",
+        },
+      ],
     },
     commonToolUi: {
       copy: "Copiar",
@@ -1191,6 +1362,33 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       step3Desc: "클릭 한 번으로 마크다운을 복사하거나 검증된 파일을 제작 파이프라인으로 다운로드하세요.",
       homeBreadcrumb: "홈",
     },
+    faq: {
+      eyebrow: "자주 묻는 질문 (FAQ)",
+      title: "자주 묻는 질문",
+      subtitle: "개인정보 보호, 수익 산출 공식 및 브라우저 로컬 연산에 대한 답변입니다.",
+      items: [
+        {
+          question: "이 팟캐스트 제작 도구들은 정말 계정 생성 없이 100% 무료인가요?",
+          answer: "네, 유료 결제나 계정 가입, 사용량 제한 없이 완전 무료입니다. 모든 알고리즘과 데이터 처리는 최신 웹 표준을 활용하여 브라우저 메모리 내에서 즉각적으로 실행됩니다.",
+        },
+        {
+          question: "오디오 파일, 쇼노트, RSS 피드가 서버에 저장되거나 전송되나요?",
+          answer: "아니요. Pod Studio는 100% 클라이언트 사이드로 설계되었습니다. RSS 피드 파싱, CPM 수익 계산, 커버 아트 검증 등 모든 과정이 브라우저의 휘발성 메모리에서 실행되며 서버로 전송되거나 저장되지 않습니다.",
+        },
+        {
+          question: "어떤 팟캐스트 플랫폼 규격 및 검증을 지원하나요?",
+          answer: "Apple Podcasts, Spotify for Creators, YouTube Music Podcasts 및 최신 2026년 Podcast Index 네임스페이스 기술 규격을 완벽하게 지원합니다.",
+        },
+        {
+          question: "생성된 에피소드 제목, 쇼노트, 스크립트의 저작권은 누구에게 있나요?",
+          answer: "100% 창작자인 귀하에게 귀속됩니다. 생성된 모든 제목, 인터뷰 질문, 쇼노트, 스크립트는 어떤 팟캐스트 플랫폼이나 광고 제휴에서도 자유롭게 상업적으로 사용하실 수 있습니다.",
+        },
+        {
+          question: "Buzzsprout, Libsyn, Spotify, Podbean 같은 호스팅 플랫폼으로 바로 내보낼 수 있나요?",
+          answer: "네. 마크다운 쇼노트, 챕터 타임스탬프, 에피소드 제목은 원클릭으로 복사하여 Buzzsprout, Libsyn, Spotify for Creators, Podbean, Transistor 등에 즉시 붙여넣을 수 있습니다.",
+        },
+      ],
+    },
     commonToolUi: {
       copy: "복사",
       copied: "복사 완료!",
@@ -1340,6 +1538,33 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       step3Title: "03. Esporta e Pubblica",
       step3Desc: "Copia in markdown con un solo clic o scarica i file verificati direttamente nel tuo flusso di produzione.",
       homeBreadcrumb: "Home",
+    },
+    faq: {
+      eyebrow: "DOMANDE FREQUENTI",
+      title: "Domande Frequenti",
+      subtitle: "Risposte alle domande più comuni su privacy, formule di calcolo ed esecuzione nel browser.",
+      items: [
+        {
+          question: "Questi strumenti per podcast sono davvero gratuiti al 100% senza registrazione?",
+          answer: "Sì, interamente gratuiti senza abbonamenti, registrazioni o limiti di utilizzo. Tutte le elaborazioni avvengono nella memoria volatile del browser tramite moderni standard web.",
+        },
+        {
+          question: "I miei file audio, le note dell'episodio o i feed RSS vengono salvati su un server?",
+          answer: "No. Pod Studio è concepito rigorosamente lato client. Qualsiasi operazione (analisi feed RSS, calcolo CPM, verifica artwork) avviene nella memoria volatile del tuo browser. Non salviamo né tracciamo mai i tuoi dati.",
+        },
+        {
+          question: "Quali directory di podcast sono supportate per specifiche e validazione?",
+          answer: "I nostri strumenti sono allineati ai requisiti tecnici 2026 di Apple Podcasts, Spotify for Creators, YouTube Music Podcasts e alle specifiche namespace del Podcast Index.",
+        },
+        {
+          question: "A chi appartengono i diritti dei titoli, delle note e dei copioni generati?",
+          answer: "A te al 100%. Mantieni la piena proprietà intellettuale e tutti i diritti commerciali sui titoli, copioni, domande per interviste e show notes generati.",
+        },
+        {
+          question: "Posso esportare i risultati su piattaforme come Buzzsprout, Libsyn o Spotify?",
+          answer: "Sì. Tutte le note in markdown, i timestamp dei capitoli e i titoli ottimizzati possono essere copiati direttamente in Buzzsprout, Libsyn, Spotify for Creators, Podbean, Transistor e Apple Podcasts.",
+        },
+      ],
     },
     commonToolUi: {
       copy: "Copia",

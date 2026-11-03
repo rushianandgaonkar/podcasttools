@@ -45,158 +45,158 @@ interface ToolStoryMeta {
 }
 
 const defaultMeta: ToolStoryMeta = {
-  src: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80",
+  src: "/images/tools/podcasttools_01_title-generator.png",
   avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
   author: "Alex Johnson",
   fallback: "AJ",
   stage: "01",
-  credit: "Unsplash",
+  credit: "Pod Studio Tools",
 };
 
 const toolMetaMap: Record<string, ToolStoryMeta> = {
   "episode-title-generator": {
-    src: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_01_title-generator.png",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
     author: "Alex Johnson",
     fallback: "AJ",
     stage: "01",
-    credit: "Jonathan Farber / Unsplash",
+    credit: "Pod Studio Tools",
   },
   "show-notes-generator": {
-    src: "https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_02_show-notes-generator.png",
     avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
     author: "Sarah Chen",
     fallback: "SC",
     stage: "02",
-    credit: "CoWomen / Unsplash",
+    credit: "Pod Studio Tools",
   },
   "podcast-name-generator": {
-    src: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_03_name-domain-checker.png",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
     author: "Mike Rodriguez",
     fallback: "MR",
     stage: "03",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
   "episode-outline-builder": {
-    src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_04_episode-outline-builder.png",
     avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face",
     author: "Emma Wilson",
     fallback: "EW",
     stage: "04",
-    credit: "Christopher Gower / Unsplash",
+    credit: "Pod Studio Tools",
   },
   "guest-question-generator": {
-    src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_05_guest-interview-questions.png",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
     author: "David Kim",
     fallback: "DK",
     stage: "05",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
   "monetization-calculator": {
-    src: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_06_sponsorship-cpm-calculator.png",
     avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop&crop=face",
     author: "Felipe Ramos",
     fallback: "FR",
     stage: "06",
-    credit: "Felipe Ramos / Unsplash",
+    credit: "Pod Studio Tools",
   },
   "cover-art-preview": {
-    src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_07_cover-art-previewer.png",
     avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=face",
     author: "Will Francis",
     fallback: "WF",
     stage: "07",
-    credit: "Will Francis / Unsplash",
+    credit: "Pod Studio Tools",
   },
   "rss-feed-validator": {
-    src: "https://images.unsplash.com/photo-1535406208535-1429839cfd13?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_08_rss-feed-validator.png",
     avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&h=100&fit=crop&crop=face",
     author: "Elena Rostova",
     fallback: "ER",
     stage: "08",
-    credit: "Alexander Popov / Unsplash",
+    credit: "Pod Studio Tools",
   },
   "episode-timestamp-generator": {
-    src: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_09_chapter-timestamp-generator.png",
     avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
     author: "Austin Neill",
     fallback: "AN",
     stage: "09",
-    credit: "Austin Neill / Unsplash",
+    credit: "Pod Studio Tools",
   },
   "intro-script-generator": {
-    src: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_10_hook-intro-script-generator.png",
     avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
     author: "Marcus Vance",
     fallback: "MV",
     stage: "10",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
   "audience-growth-estimator": {
-    src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_11_audience-download-growth.png",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face",
     author: "Maya Lin",
     fallback: "ML",
     stage: "11",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
   "description-generator": {
-    src: "https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_12_show-episode-description.png",
     avatar: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=100&h=100&fit=crop&crop=face",
     author: "Jordan Reed",
     fallback: "JR",
     stage: "12",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
   "category-finder": {
-    src: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_13_apple-spotify-category-finder.png",
     avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop&crop=face",
     author: "Amara Okafor",
     fallback: "AO",
     stage: "13",
-    credit: "Paul Esch-Laurent / Unsplash",
+    credit: "Pod Studio Tools",
   },
   "hook-generator": {
-    src: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_14_social-hook-clip-quotes.png",
     avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&h=100&fit=crop&crop=face",
     author: "Samir Patel",
     fallback: "SP",
     stage: "14",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
   "transcript-formatter": {
-    src: "https://images.unsplash.com/photo-1593697821252-0c9137d9fc45?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_15_transcript-cleaner-formatter.png",
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
     author: "Chloe Bennett",
     fallback: "CB",
     stage: "15",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
   "trailer-script-builder": {
-    src: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_16_trailer-script-builder.png",
     avatar: "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=100&h=100&fit=crop&crop=face",
     author: "Liam O'Connor",
     fallback: "LO",
     stage: "16",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
   "review-response-generator": {
-    src: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_17_review-response-shoutout.png",
     avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face",
     author: "Hannah Abbott",
     fallback: "HA",
     stage: "17",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
   "collab-finder": {
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    src: "/images/tools/podcasttools_18_guest-pitch-collab-outreach.png",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
     author: "Carlos Mendez",
     fallback: "CM",
     stage: "18",
-    credit: "Unsplash",
+    credit: "Pod Studio Tools",
   },
 };
 
@@ -488,6 +488,19 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
                 className="group relative rounded-xl bg-white dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 p-5 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-2xs transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
+                  {/* Tool Image Preview */}
+                  {tool.image && (
+                    <div className="w-full aspect-[16/9] rounded-lg overflow-hidden mb-3.5 border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900">
+                      <img
+                        src={tool.image}
+                        alt={tool.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+
                   {/* Header: Icon + Category Badge */}
                   <div className="flex items-center justify-between mb-3">
                     <div className="w-8 h-8 rounded-md bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 flex items-center justify-center text-neutral-800 dark:text-neutral-200 group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors">

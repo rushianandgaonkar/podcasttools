@@ -44,6 +44,7 @@ const webAppSchema = {
   "@type": "WebApplication",
   name: tool.title,
   url: `${siteConfig.url}/${lang}/tools/${tool.slug}`,
+  image: `${siteConfig.url}${tool.image}`,
   inLanguage: lang,
   description: tool.description,
   applicationCategory: "MultimediaApplication",
@@ -80,6 +81,20 @@ const breadcrumbSchema = {
     },
   ],
 };
+
+const toolFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  inLanguage: lang,
+  mainEntity: t.faq.items.slice(0, 3).map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
 ---
 
 <Layout
@@ -87,10 +102,12 @@ const breadcrumbSchema = {
   description={tool.description}
   lang={lang}
   canonicalUrl={`${siteConfig.url}/${lang}/tools/${tool.slug}`}
+  ogImage={`${siteConfig.url}${tool.image}`}
 >
   <!-- Structured Data Injections -->
   <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(toolFaqSchema)} />
 
   <div class="w-full py-8 sm:py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
@@ -201,6 +218,29 @@ const breadcrumbSchema = {
                   {t.toolsSection.launchTool} <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Tool FAQ Accordion -->
+        <div class="pt-6 border-t border-neutral-200 dark:border-neutral-800">
+          <h2 class="text-lg sm:text-xl font-semibold tracking-[-0.02em] text-neutral-900 dark:text-white mb-2">
+            {t.toolDetail.faqs}
+          </h2>
+          <p class="text-xs text-neutral-500 mb-4">
+            {t.faq.subtitle}
+          </p>
+          <div class="space-y-3">
+            {t.faq.items.slice(0, 3).map((faq) => (
+              <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
+                <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
+                  <span>{faq.question}</span>
+                  <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <div class="pt-3 text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-900 mt-3">
+                  {faq.answer}
+                </div>
+              </details>
             ))}
           </div>
         </div>

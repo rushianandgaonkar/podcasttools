@@ -136,7 +136,7 @@ export function HookGenerator() {
 
             <button
               onClick={() => handleCopy(h.hook, i)}
-              className="self-end sm:self-center flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-neutral-700 dark:text-neutral-300 text-xs font-semibold transition-all flex-shrink-0 cursor-pointer"
+              className="self-end sm:self-center flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 hover:!bg-orange-500 hover:!text-white hover:!border-orange-500 text-xs font-semibold transition-all flex-shrink-0 cursor-pointer shadow-2xs"
             >
               {copiedIndex === i ? (
                 <>

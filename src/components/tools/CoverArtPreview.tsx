@@ -226,7 +226,7 @@ export function CoverArtPreview() {
                 <div className="flex gap-4 items-center">
                   <img
                     src={imageSrc}
-                    alt="Cover preview"
+                    alt="Apple Podcasts show page artwork preview"
                     className="w-32 h-32 rounded-2xl shadow-lg flex-shrink-0 object-cover"
                   />
                   <div className="space-y-1">
@@ -249,7 +249,7 @@ export function CoverArtPreview() {
                 </div>
                 <img
                   src={imageSrc}
-                  alt="Cover preview"
+                  alt="Spotify player now playing cover art preview"
                   className="w-full aspect-square rounded-xl shadow-2xl object-cover mb-6"
                 />
                 <div className="space-y-1 mb-4">
@@ -279,7 +279,7 @@ export function CoverArtPreview() {
                   <div className="text-center space-y-1">
                     <img
                       src={imageSrc}
-                      alt="50px thumbnail"
+                      alt="Apple Podcasts search results 50x50px miniature thumbnail preview"
                       style={{ width: "50px", height: "50px" }}
                       className="rounded-lg shadow object-cover mx-auto"
                     />
@@ -288,7 +288,7 @@ export function CoverArtPreview() {
                   <div className="text-center space-y-1">
                     <img
                       src={imageSrc}
-                      alt="80px thumbnail"
+                      alt="Spotify mobile player 80x80px album thumbnail preview"
                       style={{ width: "80px", height: "80px" }}
                       className="rounded-xl shadow object-cover mx-auto"
                     />

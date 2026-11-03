@@ -214,7 +214,7 @@ export function PodcastNameGenerator() {
                 </span>
                 <button
                   onClick={() => handleCopy(item.name)}
-                  className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-neutral-700 dark:text-neutral-300 text-xs font-semibold transition-all cursor-pointer"
+                  className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 hover:!bg-orange-500 hover:!text-white hover:!border-orange-500 text-xs font-semibold transition-all cursor-pointer shadow-2xs"
                 >
                   {isCopied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   <span>{isCopied ? "Copied" : "Copy"}</span>

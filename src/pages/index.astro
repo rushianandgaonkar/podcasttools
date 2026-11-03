@@ -18,6 +18,21 @@ import {
 
 const lang = defaultLocale;
 const t = useTranslations(lang);
+
+// FAQ Schema.org Structured Data
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  inLanguage: lang,
+  mainEntity: t.faq.items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
 ---
 
 <Layout
@@ -26,6 +41,7 @@ const t = useTranslations(lang);
   lang={lang}
   canonicalUrl={siteConfig.url}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <div class="flex flex-col items-center w-full">
     <!-- Hero Section with Vercel Mesh Gradient Bloom -->
     <section class="w-full relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden vercel-hero-mesh border-b border-neutral-200 dark:border-neutral-800">
@@ -174,51 +190,33 @@ const t = useTranslations(lang);
       </div>
     </section>
 
-    <!-- Prerendered HTML FAQ Accordion -->
+    <!-- Prerendered Localized HTML FAQ Accordion -->
     <section class="w-full py-16 sm:py-20 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-100/30 dark:bg-neutral-950/30">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-10">
           <span class="font-mono text-xs uppercase tracking-wider text-neutral-500 block mb-1">
-            {t.toolDetail.faqs}
+            {t.faq.eyebrow}
           </span>
           <h2 class="text-xl sm:text-3xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white mb-2">
-            Pod Studio {t.toolDetail.faqs}
+            {t.faq.title}
           </h2>
           <p class="text-xs sm:text-sm text-neutral-500">
-            Answers to common questions about privacy, formulas, and client-side processing.
+            {t.faq.subtitle}
           </p>
         </div>
 
         <div class="space-y-3">
-          <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
-            <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
-              <span>Are these tools really 100% free with no account required?</span>
-              <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
-            </summary>
-            <div class="pt-3 text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-900 mt-3">
-              Yes, entirely free with zero paywalls, account signups, or usage limits. All computation runs purely inside your browser memory using modern web standards.
-            </div>
-          </details>
-
-          <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
-            <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
-              <span>Do my audio files, show notes, or RSS feeds get saved to a server?</span>
-              <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
-            </summary>
-            <div class="pt-3 text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-900 mt-3">
-              No. Pod Studio is built strictly client-side. All processing (parsing RSS feeds, calculating CPM, validating artwork) happens in volatile browser memory. We never store or log your content.
-            </div>
-          </details>
-
-          <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
-            <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
-              <span>Which podcast directories are supported for specs and validation?</span>
-              <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
-            </summary>
-            <div class="pt-3 text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-900 mt-3">
-              Our tools adhere to the latest 2026 technical requirements published by Apple Podcasts, Spotify for Creators, YouTube Music Podcasts, and the Podcast Index namespace specifications.
-            </div>
-          </details>
+          {t.faq.items.map((item) => (
+            <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
+              <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
+                <span>{item.question}</span>
+                <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="pt-3 text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-900 mt-3">
+                {item.answer}
+              </div>
+            </details>
+          ))}
         </div>
       </div>
     </section>

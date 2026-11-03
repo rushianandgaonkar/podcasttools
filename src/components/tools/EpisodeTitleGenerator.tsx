@@ -19,14 +19,36 @@ interface EpisodeTitleGeneratorProps {
 export function EpisodeTitleGenerator({ lang = defaultLocale }: EpisodeTitleGeneratorProps) {
   const ui = getToolUi(lang).titleGenerator;
 
-  const [topic, setTopic] = useState("AI Productivity Tools");
+  const defaultTopicMap: Record<SupportedLocale, string> = {
+    en: "AI Productivity Tools",
+    es: "Herramientas de IA",
+    ja: "AI生産性ツール",
+    fr: "Outils de Productivité IA",
+    de: "KI-Produktivitätstools",
+    pt: "Ferramentas de IA",
+    ko: "AI 생산성 도구",
+    it: "Strumenti di Produttività IA",
+  };
+
+  const fallbackTopicMap: Record<SupportedLocale, string> = {
+    en: "Your Topic",
+    es: "Tu Tema",
+    ja: "テーマ",
+    fr: "Votre Sujet",
+    de: "Dein Thema",
+    pt: "Seu Tema",
+    ko: "에피소드 주제",
+    it: "Il Tuo Tema",
+  };
+
+  const [topic, setTopic] = useState(() => defaultTopicMap[lang] || "AI Productivity Tools");
   const [guest, setGuest] = useState("");
   const [tone, setTone] = useState<string>("all");
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [copiedAll, setCopiedAll] = useState(false);
 
   const formulas = useMemo(() => {
-    const t = topic.trim() || "Your Topic";
+    const t = topic.trim() || fallbackTopicMap[lang] || "Your Topic";
     const g = guest.trim();
 
     // Multilingual templates
@@ -78,6 +100,136 @@ export function EpisodeTitleGenerator({ lang = defaultLocale }: EpisodeTitleGene
             ]
           : [
               { title: `トップランナーが明かす【${t}】の本質と実践`, category: "Interview" as const },
+            ]),
+      ];
+    } else if (lang === "fr") {
+      list = [
+        { title: `La vérité inconfortable sur ${t} en 2026`, category: "Curiosity" },
+        { title: `Pourquoi la plupart échoueront sur ${t} cette année`, category: "Curiosity" },
+        { title: `Ce qui arrive vraiment quand on mise tout sur ${t}`, category: "Curiosity" },
+        { title: `La face cachée de ${t} dont personne ne parle`, category: "Curiosity" },
+        { title: `Est-ce la fin de ${t} ? La brutale réalité`, category: "Curiosity" },
+        { title: `Comment maîtriser ${t} en 30 jours (Sans s'épuiser)`, category: "How-To" },
+        { title: `Le guide étape par étape pour dominer ${t}`, category: "How-To" },
+        { title: `La routine quotidienne de 15 min pour maîtriser ${t}`, category: "How-To" },
+        { title: `Pourquoi tout ce qu'on vous a dit sur ${t} est faux`, category: "Contrarian" },
+        { title: `Arrêtez d'aborder ${t} de la mauvaise façon (Faites ceci)`, category: "Contrarian" },
+        { title: `Avis impopulaire : pourquoi ${t} est surcoté`, category: "Contrarian" },
+        { title: `7 erreurs coûteuses que font les créateurs avec ${t}`, category: "Listicle" },
+        { title: `5 règles inégociables pour réussir avec ${t}`, category: "Listicle" },
+        { title: `3 vérités difficiles sur ${t} que j'aurais aimé savoir`, category: "Listicle" },
+        ...(g
+          ? [
+              { title: `${g} : La méthode exacte pour conquérir ${t}`, category: "Interview" as const },
+              { title: `Dans les coulisses avec ${g} : Leçons réelles sur ${t}`, category: "Interview" as const },
+              { title: `${g} explique pourquoi la plupart échouent sur ${t}`, category: "Interview" as const },
+            ]
+          : [
+              { title: `Analyse d'experts : Comment les leaders abordent ${t}`, category: "Interview" as const },
+            ]),
+      ];
+    } else if (lang === "de") {
+      list = [
+        { title: `Die unbequeme Wahrheit über ${t} im Jahr 2026`, category: "Curiosity" },
+        { title: `Warum die meisten dieses Jahr an ${t} scheitern`, category: "Curiosity" },
+        { title: `Was wirklich passiert, wenn du voll auf ${t} setzt`, category: "Curiosity" },
+        { title: `Die dunkle Seite von ${t}, über die niemand spricht`, category: "Curiosity" },
+        { title: `Ist ${t} am Ende? Die schonungslose Realität`, category: "Curiosity" },
+        { title: `Wie du ${t} in 30 Tagen meisterst (Ohne Burnout)`, category: "How-To" },
+        { title: `Die Schritt-für-Schritt-Anleitung für moderne ${t}`, category: "How-To" },
+        { title: `Die 15-Minuten-Tagesroutine zur Beherrschung von ${t}`, category: "How-To" },
+        { title: `Warum alles, was man dir über ${t} erzählt hat, falsch ist`, category: "Contrarian" },
+        { title: `Mach ${t} nicht mehr auf die harte Tour (Mach das)`, category: "Contrarian" },
+        { title: `Unpopuläre Meinung: Warum ${t} überbewertet ist`, category: "Contrarian" },
+        { title: `7 teure Fehler, die Creator bei ${t} machen`, category: "Listicle" },
+        { title: `5 unverhandelbare Regeln für den Erfolg bei ${t}`, category: "Listicle" },
+        { title: `3 harte Wahrheiten über ${t}, die ich früher wissen wollte`, category: "Listicle" },
+        ...(g
+          ? [
+              { title: `${g}: Die exakte Formel für den Erfolg bei ${t}`, category: "Interview" as const },
+              { title: `Im Gespräch mit ${g}: Wahre Lektionen über ${t}`, category: "Interview" as const },
+              { title: `${g} erklärt, warum fast alle bei ${t} scheitern`, category: "Interview" as const },
+            ]
+          : [
+              { title: `Experten-Analyse: Wie Top-Leader ${t} meistern`, category: "Interview" as const },
+            ]),
+      ];
+    } else if (lang === "pt") {
+      list = [
+        { title: `A verdade desconfortável sobre ${t} em 2026`, category: "Curiosity" },
+        { title: `Por que a maioria vai falhar em ${t} este ano`, category: "Curiosity" },
+        { title: `O que realmente acontece quando você aposta tudo em ${t}`, category: "Curiosity" },
+        { title: `O lado oculto de ${t} que ninguém quer revelar`, category: "Curiosity" },
+        { title: `${t} morreu? A dura realidade revelada`, category: "Curiosity" },
+        { title: `Como dominar ${t} em 30 dias (Sem se esgotar)`, category: "How-To" },
+        { title: `O método passo a passo para dominar ${t}`, category: "How-To" },
+        { title: `A rotina diária de 15 minutos para dominar ${t}`, category: "How-To" },
+        { title: `Por que tudo o que te ensinaram sobre ${t} está errado`, category: "Contrarian" },
+        { title: `Pare de fazer ${t} do jeito difícil (Faça isso)`, category: "Contrarian" },
+        { title: `Opinião impopular: Por que ${t} é superestimado`, category: "Contrarian" },
+        { title: `7 erros caros que criadores cometem em ${t}`, category: "Listicle" },
+        { title: `5 regras inegociáveis para vencer em ${t}`, category: "Listicle" },
+        { title: `3 verdades brutais sobre ${t} que eu deveria saber antes`, category: "Listicle" },
+        ...(g
+          ? [
+              { title: `${g}: O método exato para dominar ${t}`, category: "Interview" as const },
+              { title: `Conversando com ${g}: Lições reais sobre ${t}`, category: "Interview" as const },
+              { title: `${g} explica por que a maioria falha em ${t}`, category: "Interview" as const },
+            ]
+          : [
+              { title: `Análise com especialistas: Como grandes líderes aplicam ${t}`, category: "Interview" as const },
+            ]),
+      ];
+    } else if (lang === "ko") {
+      list = [
+        { title: `2026년 아무도 말해주지 않는 【${t}】의 불편한 진실`, category: "Curiosity" },
+        { title: `올해 대부분의 사람들이 【${t}】에서 실패하는 이유`, category: "Curiosity" },
+        { title: `【${t}】에 모든 것을 걸었을 때 실제로 일어나는 일`, category: "Curiosity" },
+        { title: `아무도 이야기하지 않는 【${t}】의 어두운 이면`, category: "Curiosity" },
+        { title: `【${t}】은(는) 정말 끝났을까? 냉혹한 현실 분석`, category: "Curiosity" },
+        { title: `번아웃 없이 30일 만에 【${t}】 마스터하는 실전 비법`, category: "How-To" },
+        { title: `현대적인 【${t}】을(를) 위한 단계별 플레이북`, category: "How-To" },
+        { title: `하루 15분 루틴으로 【${t}】 완벽 정복하기`, category: "How-To" },
+        { title: `당신이 【${t}】에 대해 알고 있던 상식이 틀린 이유`, category: "Contrarian" },
+        { title: `어렵게 【${t}】 하지 마세요 (지금 바로 바꿀 한 가지)`, category: "Contrarian" },
+        { title: `언포퓰러 오피니언: 【${t}】이(가) 과대평가된 진짜 이유`, category: "Contrarian" },
+        { title: `크리에이터들이 【${t}】에서 저지르는 가장 값비싼 실수 7가지`, category: "Listicle" },
+        { title: `【${t}】에서 압도적으로 성공하기 위한 5가지 절대 법칙`, category: "Listicle" },
+        { title: `더 일찍 알았더라면 좋았을 【${t}】에 대한 3가지 진실`, category: "Listicle" },
+        ...(g
+          ? [
+              { title: `${g}의 직강: 【${t}】을(를) 정복하는 실전 가이드`, category: "Interview" as const },
+              { title: `${g}에게 직접 들은 【${t}】의 핵심 노하우`, category: "Interview" as const },
+              { title: `${g}이(가) 밝히는 【${t}】 실패 원인과 극복법`, category: "Interview" as const },
+            ]
+          : [
+              { title: `업계 전문가 심층 분석: 리더들이 【${t}】에 접근하는 방식`, category: "Interview" as const },
+            ]),
+      ];
+    } else if (lang === "it") {
+      list = [
+        { title: `La verità scomoda su ${t} nel 2026`, category: "Curiosity" },
+        { title: `Perché la maggior parte fallirà in ${t} quest'anno`, category: "Curiosity" },
+        { title: `Cosa succede davvero quando punti tutto su ${t}`, category: "Curiosity" },
+        { title: `Il lato oscuro di ${t} di cui nessuno parla mai`, category: "Curiosity" },
+        { title: `${t} è morto? La brutale realtà spiegata`, category: "Curiosity" },
+        { title: `Come padroneggiare ${t} in 30 giorni (Senza bruciarsi)`, category: "How-To" },
+        { title: `La guida passo-passo per dominare ${t}`, category: "How-To" },
+        { title: `La routine quotidiana di 15 minuti per dominare ${t}`, category: "How-To" },
+        { title: `Perché tutto quello che ti hanno detto su ${t} è falso`, category: "Contrarian" },
+        { title: `Smetti di affrontare ${t} nel modo difficile (Fai questo)`, category: "Contrarian" },
+        { title: `Opinione impopolare: Perché ${t} è sopravvalutato`, category: "Contrarian" },
+        { title: `7 costosi errori che i creator commettono in ${t}`, category: "Listicle" },
+        { title: `5 regole non negoziabili per avere successo in ${t}`, category: "Listicle" },
+        { title: `3 dure verità su ${t} che avrei voluto conoscere prima`, category: "Listicle" },
+        ...(g
+          ? [
+              { title: `${g}: Il metodo esatto per padroneggiare ${t}`, category: "Interview" as const },
+              { title: `A tu per tu con ${g}: Lezioni vere su ${t}`, category: "Interview" as const },
+              { title: `${g} spiega perché quasi tutti falliscono in ${t}`, category: "Interview" as const },
+            ]
+          : [
+              { title: `Analisi degli esperti: Come i top leader affrontano ${t}`, category: "Interview" as const },
             ]),
       ];
     } else {
@@ -284,7 +436,7 @@ export function EpisodeTitleGenerator({ lang = defaultLocale }: EpisodeTitleGene
               <button
                 type="button"
                 onClick={() => handleCopySingle(item.title, index)}
-                className="self-end sm:self-center flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-studio-dark hover:bg-orange-500 hover:text-white border border-studio-border text-neutral-700 dark:text-neutral-300 text-xs font-semibold transition-all flex-shrink-0 cursor-pointer"
+                className="self-end sm:self-center flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 hover:!bg-orange-500 hover:!text-white hover:!border-orange-500 text-xs font-semibold transition-all flex-shrink-0 cursor-pointer shadow-2xs"
               >
                 {copiedIndex === index ? (
                   <>

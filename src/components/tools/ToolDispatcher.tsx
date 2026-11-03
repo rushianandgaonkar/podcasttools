@@ -39,7 +39,7 @@ export function ToolDispatcher({ slug, lang = defaultLocale }: ToolDispatcherPro
       case "episode-outline-builder":
         return <EpisodeOutlineBuilder />;
       case "guest-question-generator":
-        return <GuestQuestionGenerator />;
+        return <GuestQuestionGenerator lang={lang} />;
       case "monetization-calculator":
         return <MonetizationCalculator lang={lang} />;
       case "cover-art-preview":

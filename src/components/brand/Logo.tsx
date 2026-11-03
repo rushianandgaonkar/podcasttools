@@ -35,6 +35,8 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
           <svg
             viewBox="0 0 24 24"
             fill="none"
+            role="img"
+            aria-label="Pod Studio Logo"
             xmlns="http://www.w3.org/2000/svg"
             className="w-5/6 h-5/6 relative z-10 transition-transform duration-300 group-hover:scale-105"
           >

@@ -170,15 +170,14 @@ body {
   color: #0070f3 !important;
 }
 
-/* Ensure solid action buttons preserve crisp white text */
-:root:not(.dark) .tool-workspace button[class*="bg-orange-"],
-:root:not(.dark) .tool-workspace button[class*="bg-indigo-"],
-:root:not(.dark) .tool-workspace button[class*="bg-blue-"],
-:root:not(.dark) .tool-workspace button[class*="bg-emerald-"],
-:root:not(.dark) .tool-workspace a[class*="bg-orange-"],
-:root:not(.dark) .tool-workspace a[class*="bg-indigo-"],
-:root:not(.dark) .tool-workspace [class*="bg-orange-500"],
-:root:not(.dark) .tool-workspace [class*="bg-indigo-600"] {
+/* Ensure solid action buttons preserve crisp white text (excluding hover-only modifiers) */
+:root:not(.dark) .tool-workspace button:where([class~="bg-orange-500"], [class~="bg-orange-600"], [class~="bg-indigo-600"], [class~="bg-blue-600"], [class~="bg-emerald-600"]),
+:root:not(.dark) .tool-workspace a:where([class~="bg-orange-500"], [class~="bg-orange-600"], [class~="bg-indigo-600"]) {
+  color: #ffffff !important;
+}
+
+:root:not(.dark) .tool-workspace button[class*="hover:bg-orange"]:hover,
+:root:not(.dark) .tool-workspace button[class*="hover:bg-indigo"]:hover {
   color: #ffffff !important;
 }
 
