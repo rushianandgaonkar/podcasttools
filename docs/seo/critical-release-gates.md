@@ -21,6 +21,7 @@
   - 1 Error Page: `/404.html` (with noindex)
 - **Rendered UI & Text Nodes Audit:**
   - `src/i18n/toolsData.ts`: Complete translation dictionary for all 18 tools (titles, short titles, descriptions, long descriptions, categories) across all 8 languages (`en`, `es`, `ja`, `fr`, `de`, `pt`, `ko`, `it`).
+  - `src/i18n/toolFaqs/`: 18 unique 5-item FAQ datasets (90 intent-aligned Q&As per locale × 8 locales = 720 total Q&As) with dedicated JSON-LD FAQPage schema and matching HTML accordions per tool.
   - `src/i18n/guidesData.ts`: Complete translation of all 3 research guides (titles, descriptions, categories, read times, and full article bodies including sections, headings, formulas, benchmark cards, and CTAs) across all 8 languages.
   - `src/i18n/toolUiTranslations.ts`: Interactive tool workspaces (CPM Calculator, Title Generator, Show Notes, Cover Art) localized across all 8 languages.
   - `src/components/home/HomeToolGrid.tsx`: Visual Stories Carousel and tools directory grid dynamically render localized titles, descriptions, category tabs, and buttons.
@@ -71,7 +72,7 @@ All previously identified language hardcoding and contrast issues have been repa
 
 | Gate | Severity | Route(s) | Locale(s) | Expected Behavior | Actual Observed | Status |
 |---|---|---|---|---|---|---|
-| **Gate A** | P0 | Homepage & Tools | All 8 | Fully translated FAQs / Q&As | Localized 5-item FAQ accordion & FAQPage schema in all 8 languages | **PASS (TEST PASSED)** |
+| **Gate A** | P0 | Homepage & Tools | All 8 | Fully translated FAQs / Q&As | 18 unique 5-item FAQ sets per tool (720 total Q&As) + 5 homepage FAQs with matching FAQPage schema | **PASS (TEST PASSED)** |
 | **Gate A** | P0 | `/tools/guest-question-generator` | All 8 | Localized Interview Q&A generator | Full 14-question arc, categories, and prep sheet in all 8 languages | **PASS (TEST PASSED)** |
 | **Gate A** | P0 | `/tools/episode-title-generator` | All 8 | Localized title formulas | Full psychological title templates in all 8 languages | **PASS (TEST PASSED)** |
 | **Gate B** | P0 | Tool Workspaces | All 8 | High-contrast visible COPY buttons | Repaired CSS substring selector & added crisp high-contrast button styling | **PASS (TEST PASSED)** |

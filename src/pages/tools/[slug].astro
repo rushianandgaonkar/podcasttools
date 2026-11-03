@@ -5,6 +5,7 @@ import { ToolDispatcher } from "../../components/tools/ToolDispatcher";
 import { ToolIcon } from "../../components/tools/ToolIcon";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
 import { getLocalizedTool } from "../../i18n/toolsData";
+import { getLocalizedToolFaqs } from "../../i18n/toolFaqs";
 import {
   ShieldCheck,
   Zap,
@@ -28,6 +29,7 @@ const { tool: rawTool } = Astro.props;
 const lang = "en";
 const t = useTranslations(lang);
 const tool = getLocalizedTool(rawTool, lang);
+const toolFaqs = getLocalizedToolFaqs(tool.slug, lang);
 
 // Related tools from the same category or featured
 const relatedTools = toolRegistry
@@ -83,7 +85,7 @@ const toolFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   inLanguage: lang,
-  mainEntity: t.faq.items.slice(0, 3).map((item) => ({
+  mainEntity: toolFaqs.map((item) => ({
     "@type": "Question",
     name: item.question,
     acceptedAnswer: {
@@ -233,7 +235,7 @@ const toolFaqSchema = {
             {t.faq.subtitle}
           </p>
           <div class="space-y-3">
-            {t.faq.items.slice(0, 3).map((faq) => (
+            {toolFaqs.map((faq) => (
               <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
                 <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
                   <span>{faq.question}</span>
