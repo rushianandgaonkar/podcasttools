@@ -57,3 +57,4 @@ export function getLocalizedToolFaqs(slug: string, lang: SupportedLocale = "en")
 
   return items;
 }
+

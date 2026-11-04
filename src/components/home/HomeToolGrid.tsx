@@ -20,7 +20,6 @@ import {
   StoriesContent,
   Story,
   StoryAuthor,
-  StoryAuthorImage,
   StoryAuthorName,
   StoryImage,
   StoryOverlay,
@@ -36,9 +35,6 @@ interface HomeToolGridProps {
 
 interface ToolStoryMeta {
   src: string;
-  avatar: string;
-  author: string;
-  fallback: string;
   stage: string;
   video?: string;
   credit: string;
@@ -46,9 +42,6 @@ interface ToolStoryMeta {
 
 const defaultMeta: ToolStoryMeta = {
   src: "/images/tools/podcasttools_01_title-generator.png",
-  avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
-  author: "Alex Johnson",
-  fallback: "AJ",
   stage: "01",
   credit: "Pod Studio Tools",
 };
@@ -56,145 +49,91 @@ const defaultMeta: ToolStoryMeta = {
 const toolMetaMap: Record<string, ToolStoryMeta> = {
   "episode-title-generator": {
     src: "/images/tools/podcasttools_01_title-generator.png",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
-    author: "Alex Johnson",
-    fallback: "AJ",
     stage: "01",
     credit: "Pod Studio Tools",
   },
   "show-notes-generator": {
     src: "/images/tools/podcasttools_02_show-notes-generator.png",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
-    author: "Sarah Chen",
-    fallback: "SC",
     stage: "02",
     credit: "Pod Studio Tools",
   },
   "podcast-name-generator": {
     src: "/images/tools/podcasttools_03_name-domain-checker.png",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-    author: "Mike Rodriguez",
-    fallback: "MR",
     stage: "03",
     credit: "Pod Studio Tools",
   },
   "episode-outline-builder": {
     src: "/images/tools/podcasttools_04_episode-outline-builder.png",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face",
-    author: "Emma Wilson",
-    fallback: "EW",
     stage: "04",
     credit: "Pod Studio Tools",
   },
   "guest-question-generator": {
     src: "/images/tools/podcasttools_05_guest-interview-questions.png",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
-    author: "David Kim",
-    fallback: "DK",
     stage: "05",
     credit: "Pod Studio Tools",
   },
   "monetization-calculator": {
     src: "/images/tools/podcasttools_06_sponsorship-cpm-calculator.png",
-    avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop&crop=face",
-    author: "Felipe Ramos",
-    fallback: "FR",
     stage: "06",
     credit: "Pod Studio Tools",
   },
   "cover-art-preview": {
     src: "/images/tools/podcasttools_07_cover-art-previewer.png",
-    avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=face",
-    author: "Will Francis",
-    fallback: "WF",
     stage: "07",
     credit: "Pod Studio Tools",
   },
   "rss-feed-validator": {
     src: "/images/tools/podcasttools_08_rss-feed-validator.png",
-    avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&h=100&fit=crop&crop=face",
-    author: "Elena Rostova",
-    fallback: "ER",
     stage: "08",
     credit: "Pod Studio Tools",
   },
   "episode-timestamp-generator": {
     src: "/images/tools/podcasttools_09_chapter-timestamp-generator.png",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
-    author: "Austin Neill",
-    fallback: "AN",
     stage: "09",
     credit: "Pod Studio Tools",
   },
   "intro-script-generator": {
     src: "/images/tools/podcasttools_10_hook-intro-script-generator.png",
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
-    author: "Marcus Vance",
-    fallback: "MV",
     stage: "10",
     credit: "Pod Studio Tools",
   },
   "audience-growth-estimator": {
     src: "/images/tools/podcasttools_11_audience-download-growth.png",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face",
-    author: "Maya Lin",
-    fallback: "ML",
     stage: "11",
     credit: "Pod Studio Tools",
   },
   "description-generator": {
     src: "/images/tools/podcasttools_12_show-episode-description.png",
-    avatar: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=100&h=100&fit=crop&crop=face",
-    author: "Jordan Reed",
-    fallback: "JR",
     stage: "12",
     credit: "Pod Studio Tools",
   },
   "category-finder": {
     src: "/images/tools/podcasttools_13_apple-spotify-category-finder.png",
-    avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop&crop=face",
-    author: "Amara Okafor",
-    fallback: "AO",
     stage: "13",
     credit: "Pod Studio Tools",
   },
   "hook-generator": {
     src: "/images/tools/podcasttools_14_social-hook-clip-quotes.png",
-    avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&h=100&fit=crop&crop=face",
-    author: "Samir Patel",
-    fallback: "SP",
     stage: "14",
     credit: "Pod Studio Tools",
   },
   "transcript-formatter": {
     src: "/images/tools/podcasttools_15_transcript-cleaner-formatter.png",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
-    author: "Chloe Bennett",
-    fallback: "CB",
     stage: "15",
     credit: "Pod Studio Tools",
   },
   "trailer-script-builder": {
     src: "/images/tools/podcasttools_16_trailer-script-builder.png",
-    avatar: "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=100&h=100&fit=crop&crop=face",
-    author: "Liam O'Connor",
-    fallback: "LO",
     stage: "16",
     credit: "Pod Studio Tools",
   },
   "review-response-generator": {
     src: "/images/tools/podcasttools_17_review-response-shoutout.png",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face",
-    author: "Hannah Abbott",
-    fallback: "HA",
     stage: "17",
     credit: "Pod Studio Tools",
   },
   "collab-finder": {
     src: "/images/tools/podcasttools_18_guest-pitch-collab-outreach.png",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
-    author: "Carlos Mendez",
-    fallback: "CM",
     stage: "18",
     credit: "Pod Studio Tools",
   },
@@ -443,23 +382,12 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
                         </div>
                       </StoryTitle>
 
-                      {/* Bottom Bar: Creator Avatar, Title, Description, & CTA */}
-                      <StoryAuthor className="p-3 text-white flex-col items-start gap-1">
-                        <div className="flex items-center gap-2 w-full mb-1">
-                          <StoryAuthorImage
-                            src={meta.avatar}
-                            name={meta.author}
-                            fallback={meta.fallback}
-                            className="size-6 border-white/30 shrink-0"
-                          />
-                          <div className="flex flex-col min-w-0">
-                            <StoryAuthorName className="text-xs font-semibold text-white truncate leading-tight">
-                              {tool.title}
-                            </StoryAuthorName>
-                            <span className="text-[10px] text-neutral-300 font-mono truncate">
-                              {meta.author}
-                            </span>
-                          </div>
+                      {/* Bottom Bar: Title, Description, & CTA */}
+                      <StoryAuthor className="p-3 text-white flex flex-col items-start gap-1">
+                        <div className="w-full mb-1">
+                          <StoryAuthorName className="text-xs font-semibold text-white truncate leading-tight block">
+                            {tool.title}
+                          </StoryAuthorName>
                         </div>
 
                         <p className="text-[11px] text-neutral-200 line-clamp-2 leading-snug mb-2 font-normal">

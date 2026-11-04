@@ -111,3 +111,4 @@ for (const locale of locales) {
 
 console.log(`\nTotal tool pages audited: ${totalChecked}/144. All passed: ${allPassed}`);
 if (!allPassed) process.exit(1);
+

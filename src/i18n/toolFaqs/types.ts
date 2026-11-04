@@ -4,3 +4,4 @@ export interface FAQItem {
 }
 
 export type ToolFaqsRecord = Record<string, FAQItem[]>;
+

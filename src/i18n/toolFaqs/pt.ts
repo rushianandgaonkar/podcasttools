@@ -398,3 +398,4 @@ export const ptFaqs: ToolFaqsRecord = {
     }
   ]
 };
+

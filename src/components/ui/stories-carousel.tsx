@@ -158,12 +158,12 @@ export const StoryAuthor = ({
   <div
     className={cn(
       'absolute right-0 bottom-0 left-0 z-10',
-      'p-3 text-white',
+      'p-3 text-white flex items-center gap-2',
       className
     )}
     {...props}
   >
-    <div className="flex items-center gap-2">{children}</div>
+    {children}
   </div>
 );
 
