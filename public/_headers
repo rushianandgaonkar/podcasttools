@@ -1,5 +1,9 @@
 # Cloudflare Pages Headers for Pod Studio (podstudiotools.com)
 
+# Staging and preview host isolation (prevent accidental duplicate indexing)
+https://*.pages.dev/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
 # Security and Privacy Headers across all routes
 /*
   X-Frame-Options: DENY
@@ -7,6 +11,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   X-XSS-Protection: 1; mode=block
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
 # Static Asset Caching (Astro bundled chunks with content hashes)
 /_astro/*
@@ -25,4 +30,3 @@
 
 /robots.txt
   Cache-Control: public, max-age=3600, stale-while-revalidate=600
-
