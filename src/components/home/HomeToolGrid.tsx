@@ -15,11 +15,28 @@ import { getLocalizedPath, useTranslations } from "@/i18n/utils";
 import { getLocalizedTool } from "@/i18n/toolsData";
 import { OfferCarousel, type Offer } from "@/components/ui/offer-carousel";
 import { getToolImage } from "@/lib/toolImages";
+import type { PageCopy } from "@/i18n/pageCopy";
 
 interface HomeToolGridProps {
   lang?: SupportedLocale;
   defaultView?: "carousel" | "grid";
+  /** Localized control labels (from pageCopy[lang].grid); English defaults are used if omitted. */
+  labels?: PageCopy["grid"];
 }
+
+const DEFAULT_LABELS: PageCopy["grid"] = {
+  carousel: "Carousel",
+  grid: "Grid",
+  carouselView: "Carousel view",
+  gridView: "Grid view",
+  filterPlaceholder: "Filter tools...",
+  inBrowser: "Runs in your browser",
+  noResults: "No tools match your search.",
+  clearFilters: "Clear filters",
+  toolsCarousel: "Tools carousel",
+  toolSingular: "tool",
+  toolPlural: "tools",
+};
 
 const CARD_CREDIT = "Pod Studio Tools";
 
@@ -28,10 +45,21 @@ const categoryAccent: Record<string, string> = Object.fromEntries(
   toolCategories.map((cat) => [cat.id, cat.accent])
 );
 
-export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }: HomeToolGridProps) {
+export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", labels = DEFAULT_LABELS }: HomeToolGridProps) {
   const [viewMode, setViewMode] = useState<"carousel" | "grid">(defaultView);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
+
+  // Support /tools?q=… deep links (used by the WebSite SearchAction structured data)
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get("q");
+      if (q) {
+        setSearchQuery(q);
+        setViewMode("grid");
+      }
+    } catch (_) {}
+  }, []);
 
   const t = useTranslations(lang);
 
@@ -143,11 +171,11 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
                   ? "bg-white dark:bg-[#1a1a1a] text-neutral-900 dark:text-white shadow-2xs"
                   : "text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
               }`}
-              aria-label="Carousel View"
-              title="Carousel View"
+              aria-label={labels.carouselView}
+              title={labels.carouselView}
             >
               <SlidersHorizontal className="w-3.5 h-3.5" />
-              <span>Carousel</span>
+              <span>{labels.carousel}</span>
             </button>
             <button
               type="button"
@@ -157,11 +185,11 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
                   ? "bg-white dark:bg-[#1a1a1a] text-neutral-900 dark:text-white shadow-2xs"
                   : "text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
               }`}
-              aria-label="Grid View"
-              title="Grid View"
+              aria-label={labels.gridView}
+              title={labels.gridView}
             >
               <LayoutGrid className="w-3.5 h-3.5" />
-              <span>Grid</span>
+              <span>{labels.grid}</span>
             </button>
           </div>
 
@@ -172,7 +200,8 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Filter tools..."
+              placeholder={labels.filterPlaceholder}
+              aria-label={labels.filterPlaceholder}
               className="w-full pl-8 pr-3 py-1.5 rounded-md bg-white dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs placeholder-neutral-400 focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
             />
           </div>
@@ -188,10 +217,10 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
               <div className="flex items-center gap-2">
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-900 dark:text-white">
                   <Sparkles className="w-3.5 h-3.5 text-[#0070f3]" />
-                  Tools Carousel
+                  {labels.toolsCarousel}
                 </span>
                 <span className="font-mono text-[10px] px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-700">
-                  {filteredTools.length} {filteredTools.length === 1 ? "tool" : "tools"}
+                  {filteredTools.length} {filteredTools.length === 1 ? labels.toolSingular : labels.toolPlural}
                 </span>
               </div>
 
@@ -271,7 +300,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
 
                 {/* Bottom Card Action */}
                 <div className="pt-3 border-t border-neutral-100 dark:border-neutral-900 flex items-center justify-between text-xs">
-                  <span className="font-mono text-[10px] text-neutral-400">100% In-Browser</span>
+                  <span className="font-mono text-[10px] text-neutral-400">{labels.inBrowser}</span>
                   <span className="inline-flex items-center gap-1 font-medium text-xs text-neutral-700 dark:text-neutral-300 group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors">
                     {t.toolsSection.launchTool} <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                   </span>
@@ -282,7 +311,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
         )
       ) : (
         <div className="p-12 text-center border border-dashed border-neutral-300 dark:border-neutral-800 rounded-xl bg-white/40 dark:bg-[#0a0a0a]/40">
-          <p className="text-sm text-neutral-500 mb-2">No tools found matching your search.</p>
+          <p className="text-sm text-neutral-500 mb-2">{labels.noResults}</p>
           <button
             onClick={() => {
               setSelectedCategory("all");
@@ -290,7 +319,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
             }}
             className="text-xs text-[#0070f3] hover:underline font-medium"
           >
-            Clear filters
+            {labels.clearFilters}
           </button>
         </div>
       )}

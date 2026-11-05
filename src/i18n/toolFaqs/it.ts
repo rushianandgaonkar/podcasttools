@@ -52,7 +52,7 @@ export const itFaqs: ToolFaqsRecord = {
     },
     {
       question: "Questo generatore verifica la disponibilità dei domini in tempo reale?",
-      answer: "Al momento no. Nonostante l'indicazione nel titolo della pagina, lo strumento propone idee creative di nomi e non esegue verifiche live presso registrar o query DNS. Ti invitiamo a verificare il dominio desiderato separatamente presso un registrar accreditato."
+      answer: "No. Lo strumento propone idee creative di nomi e non esegue verifiche live presso registrar o query DNS. Ti invitiamo a verificare il dominio desiderato separatamente presso un registrar accreditato."
     },
     {
       question: "Posso generare nomi per diversi generi e nicchie di podcast?",

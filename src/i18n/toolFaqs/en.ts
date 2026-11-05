@@ -52,7 +52,7 @@ export const enFaqs: ToolFaqsRecord = {
     },
     {
       question: "Does this podcast name generator check domain availability?",
-      answer: "Not currently. Despite the tool’s broader page title, the implemented generator creates name ideas only; it does not perform a live registrar or DNS availability check. Verify your preferred domain separately with a domain registrar before purchasing or announcing the name."
+      answer: "No. The generator creates name ideas only; it does not perform a live registrar or DNS availability check. Verify your preferred domain separately with a domain registrar before purchasing or announcing the name."
     },
     {
       question: "Can I create podcast names for different niches?",

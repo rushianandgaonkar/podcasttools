@@ -52,7 +52,7 @@ export const deFaqs: ToolFaqsRecord = {
     },
     {
       question: "Prüft dieser Podcast-Namensgenerator die Domain-Verfügbarkeit?",
-      answer: "Derzeit nicht. Trotz des Seitentitels erstellt der Generator Namensideen, führt jedoch keine Live-Prüfung bei Domain-Registraren oder DNS-Servern durch. Prüfen Sie Ihre Wunschdomain separat bei einem Registrar, bevor Sie den Namen ankündigen oder sichern."
+      answer: "Nein. Der Generator erstellt Namensideen, führt jedoch keine Live-Prüfung bei Domain-Registraren oder DNS-Servern durch. Prüfen Sie Ihre Wunschdomain separat bei einem Registrar, bevor Sie den Namen ankündigen oder sichern."
     },
     {
       question: "Kann ich Podcast-Namen für verschiedene Nischen und Genres erstellen?",

@@ -52,7 +52,7 @@ export const esFaqs: ToolFaqsRecord = {
     },
     {
       question: "¿Este generador de nombres de podcast comprueba la disponibilidad de dominios?",
-      answer: "Actualmente no. A pesar del título de la página, el generador únicamente propone ideas creativas de nombres; no realiza consultas en tiempo real a registradores ni verificaciones de DNS. Verifica el dominio por separado en tu registrador de confianza antes de anunciar tu programa."
+      answer: "No. El generador únicamente propone ideas creativas de nombres; no realiza consultas en tiempo real a registradores ni verificaciones de DNS. Verifica el dominio por separado en tu registrador de confianza antes de anunciar tu programa."
     },
     {
       question: "¿Puedo generar nombres de podcast para diferentes temáticas o nichos?",

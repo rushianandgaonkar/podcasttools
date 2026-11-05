@@ -52,7 +52,7 @@ export const frFaqs: ToolFaqsRecord = {
     },
     {
       question: "Ce générateur vérifie-t-il la disponibilité des noms de domaine ?",
-      answer: "Pas actuellement. Malgré l'intitulé de la page, l'outil se concentre sur la génération d'idées créatives de noms et n'effectue pas de requêtes DNS ou de recherche WHOIS en direct. Nous vous invitons à tester le nom de domaine souhaité auprès d'un bureau d'enregistrement officiel avant de fixer votre choix."
+      answer: "Non. L'outil se concentre sur la génération d'idées créatives de noms et n'effectue pas de requêtes DNS ou de recherche WHOIS en direct. Nous vous invitons à tester le nom de domaine souhaité auprès d'un bureau d'enregistrement officiel avant de fixer votre choix."
     },
     {
       question: "Puis-je générer des noms de podcast pour différentes thématiques ?",

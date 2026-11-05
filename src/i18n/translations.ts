@@ -176,11 +176,11 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       terms: "Terms",
     },
     hero: {
-      badge: "100% Free · Client-Side Execution · Zero Logins",
-      titleStart: "Everything you need to create, polish &",
-      titleHighlight: "monetize your podcast",
+      badge: "100% Free · Runs in Your Browser · No Sign-Up",
+      titleStart: "Free podcast tools to create, polish &",
+      titleHighlight: "monetize your show",
       description:
-        "18 deterministic, zero-server tools built for podcast hosts, producers, and audio engineers. High-converting titles, bulletproof RSS feeds, precise timestamps, and accurate CPM monetization.",
+        "18 free tools for podcast hosts and producers. Write better episode titles and show notes, check your RSS feed and cover art, and estimate sponsorship revenue — all in your browser, with no sign-up.",
       primaryCta: "Explore All 18 Tools",
       secondaryCta: "Calculate Ad Revenue",
       clientSideNotice: "Runs 100% locally in your browser memory. Audio & files never leave your device.",
@@ -202,7 +202,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       growthDesc: "Calculate CPM sponsorship earnings, estimate download growth, and reply to reviews.",
     },
     toolsSection: {
-      title: "Complete Studio Suite",
+      title: "All Podcast Tools",
       subtitle: "Click any tool below to launch the interactive workspace. Zero accounts or signups required.",
       launchTool: "Open Tool",
       freeBadge: "Free",
@@ -354,10 +354,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     hero: {
       badge: "100% Gratis · Ejecución en Navegador · Sin Registros",
-      titleStart: "El Kit de Producción para",
-      titleHighlight: "Creadores de Podcasts",
+      titleStart: "Herramientas gratis para crear, pulir y",
+      titleHighlight: "monetizar tu podcast",
       description:
-        "18 herramientas deterministas sin servidor para presentadores, productores e ingenieros de audio. Títulos con alto CTR, feeds RSS impecables, marcas de tiempo precisas y cálculo de monetización CPM.",
+        "18 herramientas gratuitas para presentadores y productores de podcasts. Escribe mejores títulos y notas de episodio, revisa tu feed RSS y tu portada, y calcula ingresos por patrocinio, todo en tu navegador y sin registro.",
       primaryCta: "Ver Las 18 Herramientas",
       secondaryCta: "Calcular Ingresos Publicitarios",
       clientSideNotice: "Se ejecuta 100% localmente en la memoria del navegador. Tus audios y datos nunca salen de tu dispositivo.",
@@ -379,7 +379,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       growthDesc: "Calcula patrocinios CPM, proyecta descargas y redacta respuestas a reseñas.",
     },
     toolsSection: {
-      title: "Suite de Producción Completa",
+      title: "Todas las herramientas para podcast",
       subtitle: "Haz clic en cualquier herramienta para iniciar el espacio de trabajo. Sin registros ni cuentas.",
       launchTool: "Abrir Herramienta",
       freeBadge: "Gratis",
@@ -531,10 +531,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     hero: {
       badge: "完全無料 · ブラウザ完結 · ログイン不要",
-      titleStart: "本格派ポッドキャスターのための",
-      titleHighlight: "制作スタジオキット",
+      titleStart: "企画から収益化まで、すべて無料の",
+      titleHighlight: "ポッドキャスト制作ツール",
       description:
-        "ポッドキャストのパーソナリティ、プロデューサー、音声エンジニア向けに設計された18の決定論的ブラウザツール。クリック率を高めるタイトル、規格準拠RSS、正確なタイムスタンプ、CPM収益シミュレーション。",
+        "ポッドキャストのホストや制作者向けの無料ツール18種類。エピソードタイトルやショーノートの作成、RSSフィードやカバーアートのチェック、スポンサー収益の試算まで、登録不要でブラウザだけで完結します。",
       primaryCta: "18種類のツールを見る",
       secondaryCta: "広告収益を計算する",
       clientSideNotice: "ブラウザのローカルメモリで100%動作。音声やファイルがサーバーに送信されることは一切ありません。",
@@ -556,7 +556,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       growthDesc: "CPMスポンサー収益計算、リスナー増加予測、レビュー返信文作成。",
     },
     toolsSection: {
-      title: "スタジオ制作ツール一覧",
+      title: "ポッドキャスト制作ツール一覧",
       subtitle: "アカウント登録なしですぐにワークスペースをご利用いただけます。",
       launchTool: "ツールを開く",
       freeBadge: "無料",
@@ -708,10 +708,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     hero: {
       badge: "100% Gratuit · Exécution Locale · Sans Inscription",
-      titleStart: "La Boîte à Outils de Production pour",
-      titleHighlight: "Podcasteurs Exigeants",
+      titleStart: "Des outils podcast gratuits pour créer, peaufiner et",
+      titleHighlight: "monétiser votre émission",
       description:
-        "18 outils déterministes sans serveur conçus pour les animateurs, producteurs et ingénieurs du son. Titres percutants, flux RSS conformes, horodatages précis et calcul de monétisation CPM.",
+        "18 outils gratuits pour animateurs et producteurs de podcasts. Rédigez de meilleurs titres et notes d'épisode, vérifiez votre flux RSS et votre pochette, et estimez vos revenus de sponsoring, directement dans votre navigateur, sans inscription.",
       primaryCta: "Découvrir les 18 Outils",
       secondaryCta: "Calculer les Revenus Publicitaires",
       clientSideNotice: "Fonctionne à 100% localement dans votre navigateur. Vos données et fichiers ne quittent jamais votre appareil.",
@@ -733,7 +733,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       growthDesc: "Calcul des revenus de sponsoring CPM, estimation d'audience et réponses aux avis.",
     },
     toolsSection: {
-      title: "Suite de Production Complète",
+      title: "Tous les outils podcast",
       subtitle: "Cliquez sur un outil pour ouvrir l'espace de travail interactif. Aucun compte requis.",
       launchTool: "Ouvrir l'outil",
       freeBadge: "Gratuit",
@@ -885,10 +885,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     hero: {
       badge: "100% Kostenlos · Lokale Ausführung · Ohne Anmeldung",
-      titleStart: "Das Produktions-Toolkit für",
-      titleHighlight: "Ambitionierte Podcaster",
+      titleStart: "Kostenlose Podcast-Tools zum Planen, Produzieren und",
+      titleHighlight: "Monetarisieren",
       description:
-        "18 deterministische Client-Side-Tools für Podcast-Hosts, Produzenten und Audio-Engineers. Klickstarke Episodentitel, fehlerfreie RSS-Feeds, exakte Timestamps und präzise CPM-Einnahmenberechnung.",
+        "18 kostenlose Tools für Podcast-Hosts und Produzenten. Schreiben Sie bessere Episodentitel und Shownotes, prüfen Sie RSS-Feed und Cover und schätzen Sie Sponsoring-Einnahmen – direkt im Browser, ohne Anmeldung.",
       primaryCta: "Alle 18 Tools ansehen",
       secondaryCta: "Werbeeinnahmen berechnen",
       clientSideNotice: "Läuft zu 100% lokal im Browserspeicher. Ihre Dateien und Audiodaten verlassen niemals Ihr Gerät.",
@@ -910,7 +910,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       growthDesc: "CPM-Sponsoring berechnen, Hörer-Wachstum prognostizieren und Rezensionen beantworten.",
     },
     toolsSection: {
-      title: "Komplette Studio-Suite",
+      title: "Alle Podcast-Tools",
       subtitle: "Klicken Sie auf ein Tool, um direkt im Browser loszulegen. Keine Registrierung notwendig.",
       launchTool: "Tool öffnen",
       freeBadge: "Kostenlos",
@@ -1062,10 +1062,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     hero: {
       badge: "100% Grátis · Execução no Navegador · Sem Cadastro",
-      titleStart: "O Kit de Produção para",
-      titleHighlight: "Criadores de Podcasts",
+      titleStart: "Ferramentas grátis para criar, aprimorar e",
+      titleHighlight: "monetizar seu podcast",
       description:
-        "18 ferramentas determinísticas sem servidor para podcasters, produtores e engenheiros de áudio. Títulos de alto clique, feeds RSS perfeitos, marcações de tempo precisas e cálculo de monetização CPM.",
+        "18 ferramentas gratuitas para apresentadores e produtores de podcast. Escreva títulos e notas de episódio melhores, verifique seu feed RSS e sua capa e estime a receita de patrocínio, tudo no navegador e sem cadastro.",
       primaryCta: "Explorar as 18 Ferramentas",
       secondaryCta: "Calcular Ganhos de Anúncios",
       clientSideNotice: "Executa 100% localmente na memória do seu navegador. Seus arquivos de áudio nunca saem do seu computador.",
@@ -1087,7 +1087,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       growthDesc: "Calcule patrocínios CPM, estime crescimento de downloads e responda a avaliações.",
     },
     toolsSection: {
-      title: "Suite de Produção Completa",
+      title: "Todas as ferramentas de podcast",
       subtitle: "Clique em qualquer ferramenta para iniciar. Sem necessidade de conta ou login.",
       launchTool: "Abrir Ferramenta",
       freeBadge: "Grátis",
@@ -1239,10 +1239,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     hero: {
       badge: "100% 무료 · 브라우저 로컬 실행 · 로그인 불필요",
-      titleStart: "프로페셔널 크리에이터를 위한",
-      titleHighlight: "팟캐스트 제작 툴킷",
+      titleStart: "기획부터 수익화까지, 무료",
+      titleHighlight: "팟캐스트 제작 도구",
       description:
-        "팟캐스트 진행자, 프로듀서, 음향 엔지니어를 위해 정밀 설계된 18개 클라이언트 사이드 도구. 높은 클릭률의 에피소드 제목, 표준 준수 RSS 피드, 정밀 타임스탬프, IAB 기준 CPM 광고 수익 계산기.",
+        "팟캐스트 진행자와 제작자를 위한 무료 도구 18종. 에피소드 제목과 쇼노트 작성, RSS 피드와 커버 아트 점검, 스폰서 수익 예측까지 가입 없이 브라우저에서 바로 사용하세요.",
       primaryCta: "18개 도구 전체 보기",
       secondaryCta: "광고 수익 계산하기",
       clientSideNotice: "브라우저 로컬 메모리에서 100% 안전하게 실행됩니다. 오디오와 텍스트 데이터가 외부 서버로 전송되지 않습니다.",
@@ -1264,7 +1264,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       growthDesc: "CPM 스폰서 수익 시뮬레이션, 청취자 다운로드 성장률 예측, 리뷰 피드백 작성.",
     },
     toolsSection: {
-      title: "올인원 스튜디오 툴킷",
+      title: "전체 팟캐스트 도구",
       subtitle: "원하는 도구를 클릭하여 브라우저에서 바로 사용하세요. 회원가입이 필요 없습니다.",
       launchTool: "도구 열기",
       freeBadge: "무료",
@@ -1416,10 +1416,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     hero: {
       badge: "100% Gratuito · Esecuzione Locale · Nessun Accesso",
-      titleStart: "Il Toolkit di Produzione per",
-      titleHighlight: "Podcaster Professionisti",
+      titleStart: "Strumenti gratuiti per creare, rifinire e",
+      titleHighlight: "monetizzare il tuo podcast",
       description:
-        "18 strumenti deterministici client-side per conduttori, produttori e tecnici audio. Titoli ad alto click-through, feed RSS a prova di errore, timestamp precisi e calcolo della monetizzazione CPM.",
+        "18 strumenti gratuiti per conduttori e produttori di podcast. Scrivi titoli e note degli episodi migliori, controlla feed RSS e copertina e stima i ricavi delle sponsorizzazioni, direttamente nel browser e senza registrazione.",
       primaryCta: "Esplora i 18 Strumenti",
       secondaryCta: "Calcola Ricavi Pubblicitari",
       clientSideNotice: "Funziona al 100% nella memoria del tuo browser. Audio e file non lasciano mai il tuo dispositivo.",
@@ -1441,7 +1441,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       growthDesc: "Calcola i ricavi sponsor CPM, stima la crescita dei download e rispondi alle recensioni.",
     },
     toolsSection: {
-      title: "Suite di Produzione Completa",
+      title: "Tutti gli strumenti per podcast",
       subtitle: "Clicca su uno strumento per aprire l'area di lavoro. Nessuna registrazione richiesta.",
       launchTool: "Apri Strumento",
       freeBadge: "Gratuito",

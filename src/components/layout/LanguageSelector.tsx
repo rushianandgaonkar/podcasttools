@@ -23,6 +23,18 @@ const orderedLocaleKeys: SupportedLocale[] = [
   "en",
 ];
 
+// Localized "Select language" label (kept here so the client bundle stays small)
+const selectLanguageLabel: Record<SupportedLocale, string> = {
+  en: "Select language",
+  es: "Seleccionar idioma",
+  ja: "言語を選択",
+  fr: "Choisir la langue",
+  de: "Sprache wählen",
+  pt: "Selecionar idioma",
+  ko: "언어 선택",
+  it: "Seleziona lingua",
+};
+
 export function LanguageSelector({
   currentLang,
   className = "",
@@ -79,7 +91,7 @@ export function LanguageSelector({
         <div className="flex items-center gap-2">
           <Globe className="w-3.5 h-3.5 text-neutral-500 dark:text-neutral-400" />
           <label htmlFor="footer-language-select" className="sr-only">
-            Select Language
+            {selectLanguageLabel[activeLang] ?? selectLanguageLabel.en}
           </label>
           <select
             id="footer-language-select"
@@ -131,7 +143,7 @@ export function LanguageSelector({
           className="absolute right-0 mt-1.5 w-48 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0c0c0c] shadow-lg py-1 z-50 animate-in fade-in zoom-in-95 duration-100 backdrop-blur-md"
         >
           <div className="px-3 py-1.5 border-b border-neutral-100 dark:border-neutral-800/80 text-[10px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
-            Select Language
+            {selectLanguageLabel[activeLang] ?? selectLanguageLabel.en}
           </div>
 
           <div className="max-h-72 overflow-y-auto py-1">

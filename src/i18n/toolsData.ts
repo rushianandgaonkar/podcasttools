@@ -26,7 +26,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Content & Scripting",
     },
     "podcast-name-generator": {
-      title: "Podcast Name Generator & Domain Checker",
+      title: "Podcast Name Generator",
       shortTitle: "Podcast Name Generator",
       description: "Brainstorm memorable podcast names categorized by format, tone, and genre with trademark guidelines.",
       longDescription: "Find the perfect identity for your show. Generate punchy, memorable, and available podcast titles categorized by industry, interview style, storytelling, and comedy formats.",
@@ -1043,6 +1043,87 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
   },
 };
 
+/** Localized labels for the English badge values used in config/site.ts. */
+const badgeLabels: Partial<Record<SupportedLocale, Record<string, string>>> = {
+  es: {
+    "Creative": "Creativo",
+    "Essential": "Esencial",
+    "Financial": "Finanzas",
+    "Host Favorite": "Favorito",
+    "Popular": "Popular",
+    "Technical": "Técnico",
+    "Utility": "Utilidad",
+    "Visual QA": "Control visual",
+    "Workflow": "Flujo de trabajo",
+  },
+  ja: {
+    "Creative": "クリエイティブ",
+    "Essential": "必須",
+    "Financial": "収益",
+    "Host Favorite": "ホストに人気",
+    "Popular": "人気",
+    "Technical": "技術",
+    "Utility": "便利ツール",
+    "Visual QA": "ビジュアル確認",
+    "Workflow": "ワークフロー",
+  },
+  fr: {
+    "Creative": "Créatif",
+    "Essential": "Essentiel",
+    "Financial": "Finances",
+    "Host Favorite": "Coup de cœur",
+    "Popular": "Populaire",
+    "Technical": "Technique",
+    "Utility": "Utilitaire",
+    "Visual QA": "Contrôle visuel",
+    "Workflow": "Workflow",
+  },
+  de: {
+    "Creative": "Kreativ",
+    "Essential": "Unverzichtbar",
+    "Financial": "Finanzen",
+    "Host Favorite": "Host-Favorit",
+    "Popular": "Beliebt",
+    "Technical": "Technik",
+    "Utility": "Werkzeug",
+    "Visual QA": "Visuelle Prüfung",
+    "Workflow": "Workflow",
+  },
+  pt: {
+    "Creative": "Criativo",
+    "Essential": "Essencial",
+    "Financial": "Finanças",
+    "Host Favorite": "Favorito",
+    "Popular": "Popular",
+    "Technical": "Técnico",
+    "Utility": "Utilitário",
+    "Visual QA": "Checagem visual",
+    "Workflow": "Fluxo de trabalho",
+  },
+  ko: {
+    "Creative": "크리에이티브",
+    "Essential": "필수",
+    "Financial": "수익",
+    "Host Favorite": "진행자 추천",
+    "Popular": "인기",
+    "Technical": "기술",
+    "Utility": "유틸리티",
+    "Visual QA": "시각 점검",
+    "Workflow": "워크플로",
+  },
+  it: {
+    "Creative": "Creativo",
+    "Essential": "Essenziale",
+    "Financial": "Finanza",
+    "Host Favorite": "Preferito",
+    "Popular": "Popolare",
+    "Technical": "Tecnico",
+    "Utility": "Utilità",
+    "Visual QA": "Controllo visivo",
+    "Workflow": "Flusso di lavoro",
+  },
+};
+
 export function getLocalizedTool(tool: ToolDefinition, lang: SupportedLocale): ToolDefinition {
   const loc = toolsData[lang]?.[tool.slug];
   if (!loc) return tool;
@@ -1053,6 +1134,7 @@ export function getLocalizedTool(tool: ToolDefinition, lang: SupportedLocale): T
     description: loc.description || tool.description,
     longDescription: loc.longDescription || tool.longDescription,
     categoryLabel: loc.categoryLabel || tool.categoryLabel,
+    badge: tool.badge ? badgeLabels[lang]?.[tool.badge] ?? tool.badge : tool.badge,
   };
 }
 

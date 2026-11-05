@@ -4,6 +4,8 @@ import { LanguageSelector } from "./LanguageSelector";
 import { defaultLocale, type SupportedLocale } from "../../i18n/languages";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
 import { toolsData } from "../../i18n/toolsData";
+import { usePageCopy } from "../../i18n/pageCopy";
+import { toolRegistry } from "../../config/site";
 
 interface Props {
   lang?: SupportedLocale;
@@ -11,16 +13,24 @@ interface Props {
 
 const { lang = defaultLocale } = Astro.props;
 const t = useTranslations(lang);
+const copy = usePageCopy(lang);
 const currentYear = new Date().getFullYear();
 
 const getToolName = (slug: string) =>
   toolsData[lang]?.[slug]?.shortTitle || toolsData.en[slug]?.shortTitle || slug;
+
+const footerColumns = [
+  { id: "ideation", label: t.nav.ideation },
+  { id: "content", label: t.nav.content },
+  { id: "technical", label: t.nav.technical },
+  { id: "growth", label: t.nav.growth },
+].map((col) => ({ ...col, tools: toolRegistry.filter((tool) => tool.category === col.id) }));
 ---
 
 <footer class="w-full border-t border-neutral-200 dark:border-[#222222] bg-[#fafafa] dark:bg-[#000000] text-neutral-600 dark:text-neutral-400 text-xs transition-colors duration-150">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
     <!-- Top Grid: Brand & Categorized Links -->
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-10 border-b border-neutral-200 dark:border-[#222222]">
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 pb-10 border-b border-neutral-200 dark:border-[#222222]">
       <!-- Brand Summary -->
       <div class="col-span-2 space-y-3">
         <a href={getLocalizedPath("/", lang)} class="inline-block">
@@ -37,98 +47,29 @@ const getToolName = (slug: string) =>
         </div>
       </div>
 
-      <!-- Column 1: Ideation -->
-      <div class="space-y-2.5">
-        <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
-          {t.nav.ideation}
-        </h3>
-        <ul class="space-y-2 text-xs">
-          <li>
-            <a href={getLocalizedPath("/tools/episode-title-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("episode-title-generator")}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath("/tools/podcast-name-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("podcast-name-generator")}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath("/tools/guest-question-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("guest-question-generator")}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath("/tools/hook-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("hook-generator")}
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Column 2: Content -->
-      <div class="space-y-2.5">
-        <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
-          {t.nav.content}
-        </h3>
-        <ul class="space-y-2 text-xs">
-          <li>
-            <a href={getLocalizedPath("/tools/show-notes-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("show-notes-generator")}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath("/tools/episode-outline-builder", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("episode-outline-builder")}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath("/tools/intro-script-generator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("intro-script-generator")}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath("/tools/transcript-formatter", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("transcript-formatter")}
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Tech & Growth -->
-      <div class="space-y-2.5">
-        <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
-          {t.nav.technical} &amp; {t.nav.growth}
-        </h3>
-        <ul class="space-y-2 text-xs">
-          <li>
-            <a href={getLocalizedPath("/tools/monetization-calculator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("monetization-calculator")}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath("/tools/cover-art-preview", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("cover-art-preview")}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath("/tools/rss-feed-validator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("rss-feed-validator")}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath("/tools/audience-growth-estimator", lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
-              {getToolName("audience-growth-estimator")}
-            </a>
-          </li>
-        </ul>
-      </div>
+      <!-- One column per tool category: links to all 18 tools -->
+      {footerColumns.map((col) => (
+        <div class="space-y-2.5">
+          <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">
+            {col.label}
+          </h3>
+          <ul class="space-y-2 text-xs">
+            {col.tools.map((tool) => (
+              <li>
+                <a href={getLocalizedPath(`/tools/${tool.slug}`, lang)} class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+                  {getToolName(tool.slug)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
 
     <!-- Bottom Bar -->
     <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
       <div class="flex items-center gap-2">
-        <span>&copy; {currentYear} Pod Studio. Designed with the Geist design system.</span>
+        <span>&copy; {currentYear} Pod Studio. {copy.footer.rights}</span>
       </div>
 
       <!-- Footer Language Selector & Legal Links -->

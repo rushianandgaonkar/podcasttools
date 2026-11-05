@@ -1,0 +1,113 @@
+---
+/**
+ * Shared About page for every locale. All copy lives in src/i18n/pageCopy.ts.
+ */
+import Layout from "../../layouts/Layout.astro";
+import { siteConfig } from "../../config/site";
+import type { SupportedLocale } from "../../i18n/languages";
+import { getLocalizedPath } from "../../i18n/utils";
+import { usePageCopy } from "../../i18n/pageCopy";
+import ToolMosaic from "../brand/ToolMosaic.astro";
+import { ShieldCheck, Sparkles, ArrowRight, CheckCircle2 } from "lucide-react";
+
+interface Props {
+  lang: SupportedLocale;
+}
+
+const { lang } = Astro.props;
+const copy = usePageCopy(lang);
+const a = copy.about;
+const pageUrl = `${siteConfig.url}${getLocalizedPath("/about", lang)}`;
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: copy.meta.aboutTitle,
+  description: copy.meta.aboutDescription,
+  url: pageUrl,
+  inLanguage: lang,
+  mainEntity: {
+    "@type": "Organization",
+    name: siteConfig.name,
+    alternateName: siteConfig.brandName,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/apple-touch-icon.png`,
+    email: siteConfig.creator.contactEmail,
+  },
+};
+---
+
+<Layout
+  title={copy.meta.aboutTitle}
+  description={copy.meta.aboutDescription}
+  lang={lang}
+  canonicalUrl={pageUrl}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(aboutSchema)} />
+  <div class="w-full py-10 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 font-mono text-[11px] uppercase">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          {a.badge}
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white leading-tight">
+          {a.heading}
+        </h1>
+        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl">
+          {a.intro}
+        </p>
+      </div>
+
+      <ToolMosaic lang={lang} />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-2.5">
+          <div class="w-8 h-8 rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-emerald-500">
+            <ShieldCheck className="w-4 h-4" />
+          </div>
+          <h2 class="text-sm font-semibold text-neutral-900 dark:text-white">{a.privacyTitle}</h2>
+          <p class="text-xs text-neutral-500 leading-relaxed">{a.privacyText}</p>
+        </div>
+
+        <div class="p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-2.5">
+          <div class="w-8 h-8 rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-[#0070f3]">
+            <Sparkles className="w-4 h-4" />
+          </div>
+          <h2 class="text-sm font-semibold text-neutral-900 dark:text-white">{a.freeTitle}</h2>
+          <p class="text-xs text-neutral-500 leading-relaxed">{a.freeText}</p>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-3">
+        <h2 class="text-base font-semibold text-neutral-900 dark:text-white">{a.storyTitle}</h2>
+        <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">{a.storyP1}</p>
+        <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">{a.storyP2}</p>
+      </div>
+
+      <div class="space-y-3">
+        <h2 class="text-base font-semibold text-neutral-900 dark:text-white">{a.howTitle}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {a.howItems.map((item) => (
+            <div class="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a]">
+              <div class="flex items-center gap-1.5 text-xs font-semibold text-neutral-900 dark:text-white mb-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                {item.title}
+              </div>
+              <p class="text-xs text-neutral-500 leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="text-center pt-2">
+        <a
+          href={getLocalizedPath("/tools", lang)}
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-xs hover:opacity-90 transition-opacity"
+        >
+          {a.cta} <ArrowRight className="w-3.5 h-3.5" />
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

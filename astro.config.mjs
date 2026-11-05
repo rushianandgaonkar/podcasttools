@@ -20,6 +20,8 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
+      // Keep error pages out of the sitemap (they are not meant to rank)
+      filter: (page) => !/\/(400|404|500)\/?$/.test(new URL(page).pathname),
       i18n: {
         defaultLocale: "en",
         locales: {

@@ -52,7 +52,7 @@ export const ptFaqs: ToolFaqsRecord = {
     },
     {
       question: "Este gerador de nomes de podcast verifica a disponibilidade de domínios?",
-      answer: "Atualmente não. Embora o título da página mencione verificação de domínio, a ferramenta implementada gera apenas ideias criativas de nomes; ela não consulta servidores DNS ou empresas registradoras em tempo real. Verifique seu domínio desejado separadamente em um registrador oficial."
+      answer: "Não. A ferramenta gera apenas ideias criativas de nomes; ela não consulta servidores DNS ou empresas registradoras em tempo real. Verifique seu domínio desejado separadamente em um registrador oficial."
     },
     {
       question: "Posso criar nomes de podcast para nichos e formatos diferentes?",

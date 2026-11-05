@@ -49,19 +49,27 @@ const localeOgMap: Record<string, string> = {
 
 const currentOgLocale = localeOgMap[lang] || "en_US";
 
+// alternateName helps search engines treat "Pod Studio", "Pod Studio Tools" and
+// "podstudiotools.com" as one brand entity (distinct from similarly named sites).
 const jsonLdOrg = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteConfig.url}/#organization`,
   name: siteConfig.name,
+  alternateName: [siteConfig.brandName, siteConfig.domain],
   url: siteConfig.url,
-  logo: `${siteConfig.url}/icon.svg`,
+  logo: `${siteConfig.url}/apple-touch-icon.png`,
+  email: siteConfig.creator.contactEmail,
   description: siteConfig.description,
 };
 
 const jsonLdWebsite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteConfig.url}/#website`,
   name: siteConfig.name,
+  alternateName: siteConfig.brandName,
+  publisher: { "@id": `${siteConfig.url}/#organization` },
   url: siteConfig.url,
   inLanguage: lang,
   potentialAction: {

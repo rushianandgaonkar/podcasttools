@@ -1,5 +1,6 @@
 import type { SupportedLocale } from "./languages";
 import type { GuideDefinition } from "../config/site";
+import { getGuideExtra, type GuideFaq } from "./guideExtras";
 
 export interface LocalizedGuideArticle {
   title: string;
@@ -22,6 +23,10 @@ export interface LocalizedGuideArticle {
       description: string;
     }>;
   }[];
+  /** Optional short SEO <title> (merged from guideExtras). */
+  metaTitle?: string;
+  /** Optional FAQ block (merged from guideExtras). */
+  faqs?: GuideFaq[];
   cta: {
     title: string;
     description: string;
@@ -1032,7 +1037,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
   },
 };
 
-export function getLocalizedGuide(guide: GuideDefinition, lang: SupportedLocale): LocalizedGuideArticle {
+function getBaseGuide(guide: GuideDefinition, lang: SupportedLocale): LocalizedGuideArticle {
   const loc = guidesData[lang]?.[guide.slug];
   if (!loc) {
     const en = guidesData.en?.[guide.slug];
@@ -1054,3 +1059,25 @@ export function getLocalizedGuide(guide: GuideDefinition, lang: SupportedLocale)
   return loc;
 }
 
+/**
+ * Returns the localized guide merged with its long-form extras
+ * (additional sections, FAQs, realistic read time and corrected copy).
+ */
+export function getLocalizedGuide(guide: GuideDefinition, lang: SupportedLocale): LocalizedGuideArticle {
+  const base = getBaseGuide(guide, lang);
+  const extra = getGuideExtra(guide.slug, lang);
+  if (!extra) return base;
+
+  const sections = base.sections.map((section, i) =>
+    i === 0 && extra.firstHeading ? { ...section, heading: extra.firstHeading } : section,
+  );
+
+  return {
+    ...base,
+    metaTitle: extra.metaTitle,
+    description: extra.description ?? base.description,
+    readTime: base.readTime.replace(/\d+/, String(extra.readMinutes)),
+    sections: [...sections, ...extra.sections],
+    faqs: extra.faqs,
+  };
+}
