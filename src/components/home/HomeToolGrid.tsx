@@ -8,25 +8,12 @@ import {
   Search,
   LayoutGrid,
   SlidersHorizontal,
-  ChevronLeft,
-  ChevronRight,
   Sparkles,
 } from "lucide-react";
 import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
 import { getLocalizedPath, useTranslations } from "@/i18n/utils";
 import { getLocalizedTool } from "@/i18n/toolsData";
-import {
-  Stories,
-  StoriesContent,
-  Story,
-  StoryAuthor,
-  StoryAuthorName,
-  StoryImage,
-  StoryOverlay,
-  StoryTitle,
-  StoryVideo,
-} from "@/components/ui/stories-carousel";
-import type { CarouselApi } from "@/components/ui/carousel";
+import { OfferCarousel, type Offer } from "@/components/ui/offer-carousel";
 
 interface HomeToolGridProps {
   lang?: SupportedLocale;
@@ -143,30 +130,8 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
   const [viewMode, setViewMode] = useState<"carousel" | "grid">(defaultView);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [api, setApi] = useState<CarouselApi>();
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
 
   const t = useTranslations(lang);
-
-  // Carousel API scroll state observation
-  useEffect(() => {
-    if (!api) return;
-
-    const updateScrollState = () => {
-      setCanScrollPrev(api.canScrollPrev());
-      setCanScrollNext(api.canScrollNext());
-    };
-
-    updateScrollState();
-    api.on("select", updateScrollState);
-    api.on("reInit", updateScrollState);
-
-    return () => {
-      api.off("select", updateScrollState);
-      api.off("reInit", updateScrollState);
-    };
-  }, [api]);
 
   // Sync with URL hash or query param on mount (e.g., #ideation or ?category=content)
   useEffect(() => {
@@ -200,6 +165,22 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
       return matchesCategory && matchesSearch;
     });
   }, [localizedTools, selectedCategory, searchQuery]);
+
+  const carouselOffers: Offer[] = filteredTools.map((tool) => {
+    const meta = toolMetaMap[tool.slug] || defaultMeta;
+    return {
+      id: tool.id,
+      imageSrc: meta.src,
+      imageAlt: tool.title,
+      tag: tool.categoryLabel,
+      title: tool.title,
+      description: tool.description,
+      brandLogoSrc: "/favicon.svg",
+      brandName: meta.credit,
+      promoCode: `Tool ${meta.stage} · ${t.toolsSection.launchTool}`,
+      href: getLocalizedPath(`/tools/${tool.slug}`, lang),
+    };
+  });
 
   return (
     <div className="w-full space-y-6" id="tools-section">
@@ -297,115 +278,16 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
               <div className="flex items-center gap-2">
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-900 dark:text-white">
                   <Sparkles className="w-3.5 h-3.5 text-[#0070f3]" />
-                  Stories Carousel
+                  Tools Carousel
                 </span>
                 <span className="font-mono text-[10px] px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-700">
                   {filteredTools.length} {filteredTools.length === 1 ? "tool" : "tools"}
                 </span>
               </div>
 
-              {/* Prev / Next Buttons */}
-              <div className="flex items-center gap-1.5">
-                <button
-                  type="button"
-                  onClick={() => api?.scrollPrev()}
-                  disabled={!canScrollPrev}
-                  className="w-7 h-7 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-all shadow-2xs"
-                  aria-label="Previous tools"
-                  title="Previous tools"
-                >
-                  <ChevronLeft className="w-3.5 h-3.5" />
-                </button>
-                <button
-                  type="button"
-                  onClick={() => api?.scrollNext()}
-                  disabled={!canScrollNext}
-                  className="w-7 h-7 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-all shadow-2xs"
-                  aria-label="Next tools"
-                  title="Next tools"
-                >
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
             </div>
 
-            {/* Stories Carousel */}
-            <Stories
-              setApi={setApi}
-              opts={{
-                align: "start",
-                dragFree: true,
-                loop: false,
-              }}
-              className="w-full"
-            >
-              <StoriesContent className="gap-3 py-2 px-1">
-                {filteredTools.map((tool) => {
-                  const meta = toolMetaMap[tool.slug] || defaultMeta;
-                  const localizedHref = getLocalizedPath(`/tools/${tool.slug}`, lang);
-
-                  return (
-                    <Story
-                      key={tool.id}
-                      className="aspect-[3/4] !w-[220px] sm:!w-[250px] shrink-0 select-none shadow-sm hover:shadow-xl transition-all duration-300 rounded-2xl"
-                      onClick={() => {
-                        window.location.href = localizedHref;
-                      }}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " ") {
-                          e.preventDefault();
-                          window.location.href = localizedHref;
-                        }
-                      }}
-                      aria-label={`${tool.title} — ${tool.categoryLabel}`}
-                    >
-                      {/* Visual Content: Video or Stock Photography */}
-                      {meta.video ? (
-                        <StoryVideo src={meta.video} poster={meta.src} />
-                      ) : (
-                        <StoryImage src={meta.src} alt={tool.title} />
-                      )}
-
-                      {/* Top & Bottom Contrast Gradients */}
-                      <StoryOverlay side="top" className="h-20 from-black/75 via-black/35 to-transparent" />
-                      <StoryOverlay side="bottom" className="h-36 from-black/95 via-black/60 to-transparent" />
-
-                      {/* Top Bar: Category Pill & Stage Badge */}
-                      <StoryTitle className="p-3">
-                        <div className="flex items-center justify-between text-white">
-                          <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/50 backdrop-blur-md border border-white/20 font-medium">
-                            {tool.categoryLabel}
-                          </span>
-                          <span className="font-mono text-[10px] font-bold px-1.5 py-0.5 rounded bg-white/20 text-white backdrop-blur-md border border-white/20">
-                            {meta.stage}
-                          </span>
-                        </div>
-                      </StoryTitle>
-
-                      {/* Bottom Bar: Title, Description, & CTA */}
-                      <StoryAuthor className="p-3 text-white flex flex-col items-start gap-1">
-                        <div className="w-full mb-1">
-                          <StoryAuthorName className="text-xs font-semibold text-white truncate leading-tight block">
-                            {tool.title}
-                          </StoryAuthorName>
-                        </div>
-
-                        <p className="text-[11px] text-neutral-200 line-clamp-2 leading-snug mb-2 font-normal">
-                          {tool.description}
-                        </p>
-
-                        <div className="w-full flex items-center justify-between pt-1.5 border-t border-white/15 text-[10px]">
-                          <span className="text-neutral-300 font-mono">100% Client-Side</span>
-                          <span className="text-white font-medium inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-[#60a5fa]">
-                            {t.toolsSection.launchTool} &rarr;
-                          </span>
-                        </div>
-                      </StoryAuthor>
-                    </Story>
-                  );
-                })}
-              </StoriesContent>
-            </Stories>
+            <OfferCarousel offers={carouselOffers} />
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

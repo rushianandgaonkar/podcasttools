@@ -585,3 +585,4 @@ export function ShaderBackground({ className }: { className?: string }) {
     <canvas ref={canvasRef} className={className} style={{ display: "block", width: "100%", height: "100%" }} />
   )
 }
+
