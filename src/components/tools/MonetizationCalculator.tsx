@@ -4,6 +4,12 @@ import React, { useState } from "react";
 import { DollarSign, BarChart3 } from "lucide-react";
 import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
 import { getToolUi } from "@/i18n/toolUiTranslations";
+import { RevenueMixBar } from "./visuals/RevenueMixBar";
+
+// Validated categorical order (light + dark): pre-roll, mid-roll, post-roll
+const SLOT_COLORS = { pre: "#ea580c", mid: "#0891b2", post: "#6366f1" } as const;
+// "Pre-Roll Ad (15-30s)" → "Pre-Roll Ad" for compact legends
+const shortLabel = (label: string) => label.replace(/\s*\(.*\)\s*$/, "");
 
 interface MonetizationCalculatorProps {
   lang?: SupportedLocale;
@@ -264,24 +270,40 @@ export function MonetizationCalculator({ lang = defaultLocale }: MonetizationCal
             {ui.breakdown}
           </h2>
 
+          {/* Revenue Mix Visual */}
+          <RevenueMixBar
+            total={monthlySponsor}
+            segments={[
+              { id: "pre", label: shortLabel(ui.preRoll), value: preRollRevPerEp * episodesPerMonth, color: SLOT_COLORS.pre },
+              { id: "mid", label: shortLabel(ui.midRoll), value: midRollRevPerEp * episodesPerMonth, color: SLOT_COLORS.mid },
+              { id: "post", label: shortLabel(ui.postRoll), value: postRollRevPerEp * episodesPerMonth, color: SLOT_COLORS.post },
+            ]}
+          />
+
           {/* Breakdown Rows */}
           <div className="space-y-3">
             <div className="flex items-center justify-between p-3 rounded-xl bg-studio-darkest border border-studio-border text-xs">
-              <span className="text-neutral-700 dark:text-slate-300">Pre-Roll ({hasPreRoll ? `$${preRollCpm} CPM` : "Off"})</span>
+              <span className="text-neutral-700 dark:text-slate-300 inline-flex items-center gap-2">
+                <span aria-hidden="true" className="w-2.5 h-2.5 rounded-[3px]" style={{ backgroundColor: SLOT_COLORS.pre }} />
+                Pre-Roll ({hasPreRoll ? `$${preRollCpm} CPM` : "Off"})</span>
               <span className="font-mono font-bold text-neutral-900 dark:text-white">
                 ${Math.round(preRollRevPerEp * episodesPerMonth).toLocaleString()}
               </span>
             </div>
 
             <div className="flex items-center justify-between p-3 rounded-xl bg-studio-darkest border border-studio-border text-xs">
-              <span className="text-neutral-700 dark:text-slate-300">Mid-Roll ({hasMidRoll ? `$${midRollCpm} CPM` : "Off"})</span>
-              <span className="font-mono font-bold text-orange-600 dark:text-orange-400">
+              <span className="text-neutral-700 dark:text-slate-300 inline-flex items-center gap-2">
+                <span aria-hidden="true" className="w-2.5 h-2.5 rounded-[3px]" style={{ backgroundColor: SLOT_COLORS.mid }} />
+                Mid-Roll ({hasMidRoll ? `$${midRollCpm} CPM` : "Off"})</span>
+              <span className="font-mono font-bold text-neutral-900 dark:text-white">
                 ${Math.round(midRollRevPerEp * episodesPerMonth).toLocaleString()}
               </span>
             </div>
 
             <div className="flex items-center justify-between p-3 rounded-xl bg-studio-darkest border border-studio-border text-xs">
-              <span className="text-neutral-700 dark:text-slate-300">Post-Roll ({hasPostRoll ? `$${postRollCpm} CPM` : "Off"})</span>
+              <span className="text-neutral-700 dark:text-slate-300 inline-flex items-center gap-2">
+                <span aria-hidden="true" className="w-2.5 h-2.5 rounded-[3px]" style={{ backgroundColor: SLOT_COLORS.post }} />
+                Post-Roll ({hasPostRoll ? `$${postRollCpm} CPM` : "Off"})</span>
               <span className="font-mono font-bold text-neutral-900 dark:text-white">
                 ${Math.round(postRollRevPerEp * episodesPerMonth).toLocaleString()}
               </span>

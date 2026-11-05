@@ -60,6 +60,17 @@ npm run build
 npm run preview
 ```
 
+## 🎨 Visual Assets
+
+| What | Source (edit this) | Generated output | Regenerate |
+|---|---|---|---|
+| Tool illustrations | `assets/tool-illustrations/*.png` (masters, not deployed) | `public/images/tools/*-sm.webp`, `*-lg.webp`, `src/config/toolImages.generated.json` | `node scripts/optimize-tool-images.mjs` |
+| Share cards (OG/Twitter) | `src/config/site.ts` (titles, categories) | `public/og-image.png`, `public/og/tools/*.png`, `public/og/guides/*.png`, `public/apple-touch-icon.png` | `node scripts/generate-og-images.mjs`* |
+
+\* One-time setup for the OG script: `npm i -D playwright && npx playwright install chromium` (Node 22.18+).
+
+Brand, category and chart colours are documented in `DESIGN.md` → *Pod Studio Brand Layer*.
+
 ## 📋 Quality & Compliance Status
 - **CG-01 to CG-14:** All 14 Critical Integrity Gates PASS (documented in `docs/seo/critical-release-gates.md`).
 - **61 SEO Tasks:** Fully mapped and completed (documented in `docs/seo/implementation-status.md`).

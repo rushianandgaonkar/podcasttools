@@ -1,7 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Mic, ArrowRight, Home, Compass } from "lucide-react";
+import { ArrowRight, Home, Compass } from "lucide-react";
 import { toolRegistry } from "../config/site";
+import { getToolImage } from "../lib/toolImages";
+import SignalLost from "../components/brand/SignalLost.astro";
 
 const featuredTools = toolRegistry.slice(0, 4);
 ---
@@ -13,9 +15,7 @@ const featuredTools = toolRegistry.slice(0, 4);
 >
   <div class="w-full py-16 sm:py-24 min-h-[70vh] flex items-center">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center space-y-6">
-      <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-800 dark:text-neutral-200 mx-auto shadow-2xs">
-        <Mic className="w-5 h-5 text-[#0070f3]" />
-      </div>
+      <SignalLost class="w-full max-w-sm h-auto mx-auto" />
 
       <div class="space-y-2">
         <span class="font-mono text-[11px] uppercase tracking-wider text-neutral-400">ERROR 404</span>
@@ -52,7 +52,16 @@ const featuredTools = toolRegistry.slice(0, 4);
               href={`/tools/${tool.slug}`}
               class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] hover:border-neutral-400 dark:hover:border-neutral-600 group transition-colors flex items-center justify-between"
             >
-              <div>
+              <img
+                src={getToolImage(tool.image).src.replace("-lg.webp", "-sm.webp")}
+                width="40"
+                height="50"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                class="w-10 h-10 rounded-md object-cover object-[50%_30%] border border-neutral-200 dark:border-neutral-800 shrink-0 mr-3"
+              />
+              <div class="flex-1 min-w-0">
                 <span class="font-mono text-[9px] uppercase text-neutral-400 block">{tool.category}</span>
                 <span class="text-xs font-semibold text-neutral-900 dark:text-white group-hover:text-[#0070f3] transition-colors">
                   {tool.title}

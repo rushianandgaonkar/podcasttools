@@ -3,10 +3,13 @@ import Layout from "../../layouts/Layout.astro";
 import { siteConfig, guidesRegistry } from "../../config/site";
 import { HeroQuickTool } from "../../components/home/HeroQuickTool";
 import { HomeToolGrid } from "../../components/home/HomeToolGrid";
+import HeroArt from "../../components/home/HeroArt.astro";
+import HowItWorks from "../../components/home/HowItWorks.astro";
 import { ShaderBackground } from "../../components/ui/silk-shader";
 import { nonDefaultLocales, type SupportedLocale } from "../../i18n/languages";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
 import { getLocalizedGuide } from "../../i18n/guidesData";
+import GuideCover from "../../components/brand/GuideCover.astro";
 import {
   Sparkles,
   ShieldCheck,
@@ -92,8 +95,11 @@ const faqSchema = {
           </a>
         </div>
 
-        <!-- Interactive Hero Quick Tool Island -->
-        <HeroQuickTool client:load lang={lang} />
+        <!-- Interactive Hero Quick Tool Island (flanked by floating tool illustrations on xl screens) -->
+        <div class="relative w-full">
+          <HeroArt />
+          <HeroQuickTool client:load lang={lang} />
+        </div>
 
         <!-- 4 Trust Cards Strip -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl w-full mt-12 text-left">
@@ -152,6 +158,9 @@ const faqSchema = {
       <HomeToolGrid client:load lang={lang} />
     </section>
 
+    <!-- How It Works (3-step visual strip) -->
+    <HowItWorks lang={lang} />
+
     <!-- Educational Playbooks Section -->
     <section class="w-full py-16 sm:py-20 border-t border-neutral-200 dark:border-neutral-800 max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
@@ -177,6 +186,7 @@ const faqSchema = {
               class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex flex-col justify-between"
             >
               <div>
+                <GuideCover slug={guide.slug} class="aspect-[2/1] mb-4 -mt-1" />
                 <div class="flex items-center justify-between text-xs text-neutral-400 mb-2.5">
                   <span class="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">
                     {loc.category}

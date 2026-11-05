@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 export interface Offer {
   id: string | number;
   imageSrc: string;
+  /** Optional responsive srcset (e.g. "a-sm.webp 480w, a-lg.webp 960w") */
+  imageSrcSet?: string;
   imageAlt: string;
   tag: string;
   title: string;
@@ -15,6 +17,8 @@ export interface Offer {
   brandName: string;
   promoCode?: string;
   href: string;
+  /** Optional category accent colour (hex) shown as a thin bar on the card */
+  accent?: string;
 }
 
 interface OfferCardProps {
@@ -34,11 +38,20 @@ const OfferCard = React.forwardRef<HTMLAnchorElement, OfferCardProps>(({ offer }
     {/* Background Image */}
     <img
       src={offer.imageSrc}
+      srcSet={offer.imageSrcSet || undefined}
+      sizes="300px"
       alt={offer.imageAlt}
       loading="lazy"
       decoding="async"
-      className="absolute inset-0 w-full h-2/4 object-cover transition-transform duration-500 group-hover/card:scale-110"
+      className="absolute inset-0 w-full h-2/4 object-cover object-[50%_30%] transition-transform duration-500 group-hover/card:scale-110"
     />
+    {offer.accent && (
+      <span
+        aria-hidden="true"
+        className="absolute left-0 right-0 top-1/2 h-0.5 z-[1]"
+        style={{ backgroundColor: offer.accent }}
+      />
+    )}
     {/* Card Content */}
     <div className="absolute bottom-0 left-0 right-0 h-2/4 bg-card p-5 flex flex-col justify-between">
       <div className="space-y-2">

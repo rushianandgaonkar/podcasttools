@@ -13,7 +13,7 @@ export function CoverArtPreview() {
     type: string;
   } | null>(null);
 
-  const [previewTab, setPreviewTab] = useState<"apple" | "spotify" | "mobile" | "tiny">("apple");
+  const [previewTab, setPreviewTab] = useState<"apple" | "spotify" | "mobile" | "safe" | "tiny">("apple");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -200,12 +200,14 @@ export function CoverArtPreview() {
             {[
               { id: "apple", label: "Apple Podcasts Feed" },
               { id: "spotify", label: "Spotify Now Playing" },
+              { id: "mobile", label: "Phone Lock Screen" },
+              { id: "safe", label: "Safe Zone & Crop Check" },
               { id: "tiny", label: "50x50px Search Thumbnail (Legibility Test)" },
             ].map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setPreviewTab(tab.id as any)}
-                className={`text-xs px-3.5 py-1.5 rounded-xl font-medium transition-all cursor-pointer ${
+                className={`text-xs px-3.5 py-1.5 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer ${
                   previewTab === tab.id
                     ? "bg-orange-500 text-white shadow-md shadow-orange-500/20"
                     : "bg-studio-card text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
@@ -264,6 +266,76 @@ export function CoverArtPreview() {
                   <span>14:20</span>
                   <span>45:00</span>
                 </div>
+              </div>
+            )}
+
+            {previewTab === "mobile" && (
+              <div className="dark-surface">
+              <div className="relative w-[260px] h-[520px] rounded-[44px] border-[10px] border-neutral-900 dark:border-neutral-700 bg-gradient-to-b from-[#1e1b4b] via-[#312e81] to-[#0f172a] shadow-2xl overflow-hidden text-white">
+                {/* notch */}
+                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-6 rounded-full bg-black" />
+                <div className="pt-14 text-center">
+                  <div className="text-[11px] font-medium text-white/80">Tuesday, 14 April</div>
+                  <div className="text-6xl font-semibold tracking-tight leading-none mt-1 text-white">9:41</div>
+                </div>
+                {/* Now-playing widget */}
+                <div className="absolute left-3 right-3 bottom-24 rounded-3xl bg-white/15 backdrop-blur-md p-3 border border-white/10">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={imageSrc}
+                      alt="Lock screen now playing artwork preview"
+                      className="w-14 h-14 rounded-lg object-cover shadow"
+                    />
+                    <div className="min-w-0">
+                      <p className="text-[12px] font-semibold text-white truncate">Ep. 1: Future of Audio</p>
+                      <p className="text-[11px] text-white/70 truncate">Deep Signal with Sarah Chen</p>
+                    </div>
+                  </div>
+                  <div className="mt-3 h-1 rounded-full bg-white/25 overflow-hidden">
+                    <div className="h-full w-2/5 bg-white" />
+                  </div>
+                  <div className="mt-2 flex items-center justify-center gap-8 text-white" aria-hidden="true">
+                    <span className="text-lg">⏮</span>
+                    <span className="text-2xl">⏸</span>
+                    <span className="text-lg">⏭</span>
+                  </div>
+                </div>
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 rounded-full bg-white/70" />
+              </div>
+              </div>
+            )}
+
+            {previewTab === "safe" && (
+              <div className="w-full max-w-2xl grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+                <div className="relative mx-auto w-64 h-64 rounded-xl overflow-hidden shadow-lg">
+                  <img src={imageSrc} alt="Cover art with safe zone overlay" className="w-full h-full object-cover" />
+                  {/* outer 10% margin shaded */}
+                  <div className="absolute inset-0 pointer-events-none" style={{ boxShadow: "inset 0 0 0 25.6px rgba(220,38,38,0.28)" }} />
+                  {/* 80% safe area */}
+                  <div className="absolute inset-[10%] border-2 border-dashed border-white/90 rounded-md pointer-events-none" />
+                  {/* circular crop used by some apps & social avatars */}
+                  <div className="absolute inset-0 rounded-full border-2 border-cyan-300/90 pointer-events-none" />
+                  {/* rule-of-thirds grid */}
+                  <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 pointer-events-none">
+                    {Array.from({ length: 9 }).map((_, i) => (
+                      <div key={i} className="border border-white/15" />
+                    ))}
+                  </div>
+                </div>
+                <ul className="space-y-3 text-xs text-neutral-700 dark:text-neutral-300">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 w-4 h-4 rounded border-2 border-dashed border-neutral-500 shrink-0" />
+                    <span><b className="text-neutral-900 dark:text-white">Safe area (80%)</b> — keep your show title and face inside this box.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 w-4 h-4 rounded bg-red-500/40 shrink-0" />
+                    <span><b className="text-neutral-900 dark:text-white">Edge margin</b> — rounded corners and app chrome can clip anything here.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 w-4 h-4 rounded-full border-2 border-cyan-400 shrink-0" />
+                    <span><b className="text-neutral-900 dark:text-white">Circle crop</b> — how your art looks as a round avatar in some apps and social shares.</span>
+                  </li>
+                </ul>
               </div>
             )}
 

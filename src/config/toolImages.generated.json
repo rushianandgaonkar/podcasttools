@@ -1,0 +1,218 @@
+{
+  "podcasttools_01_title-generator": {
+    "sm": {
+      "src": "/images/tools/podcasttools_01_title-generator-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_01_title-generator-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_02_show-notes-generator": {
+    "sm": {
+      "src": "/images/tools/podcasttools_02_show-notes-generator-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_02_show-notes-generator-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_03_name-domain-checker": {
+    "sm": {
+      "src": "/images/tools/podcasttools_03_name-domain-checker-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_03_name-domain-checker-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_04_episode-outline-builder": {
+    "sm": {
+      "src": "/images/tools/podcasttools_04_episode-outline-builder-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_04_episode-outline-builder-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_05_guest-interview-questions": {
+    "sm": {
+      "src": "/images/tools/podcasttools_05_guest-interview-questions-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_05_guest-interview-questions-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_06_sponsorship-cpm-calculator": {
+    "sm": {
+      "src": "/images/tools/podcasttools_06_sponsorship-cpm-calculator-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_06_sponsorship-cpm-calculator-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_07_cover-art-previewer": {
+    "sm": {
+      "src": "/images/tools/podcasttools_07_cover-art-previewer-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_07_cover-art-previewer-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_08_rss-feed-validator": {
+    "sm": {
+      "src": "/images/tools/podcasttools_08_rss-feed-validator-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_08_rss-feed-validator-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_09_chapter-timestamp-generator": {
+    "sm": {
+      "src": "/images/tools/podcasttools_09_chapter-timestamp-generator-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_09_chapter-timestamp-generator-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_10_hook-intro-script-generator": {
+    "sm": {
+      "src": "/images/tools/podcasttools_10_hook-intro-script-generator-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_10_hook-intro-script-generator-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_11_audience-download-growth": {
+    "sm": {
+      "src": "/images/tools/podcasttools_11_audience-download-growth-sm.webp",
+      "width": 480,
+      "height": 640
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_11_audience-download-growth-lg.webp",
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "podcasttools_12_show-episode-description": {
+    "sm": {
+      "src": "/images/tools/podcasttools_12_show-episode-description-sm.webp",
+      "width": 480,
+      "height": 640
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_12_show-episode-description-lg.webp",
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "podcasttools_13_apple-spotify-category-finder": {
+    "sm": {
+      "src": "/images/tools/podcasttools_13_apple-spotify-category-finder-sm.webp",
+      "width": 480,
+      "height": 640
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_13_apple-spotify-category-finder-lg.webp",
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "podcasttools_14_social-hook-clip-quotes": {
+    "sm": {
+      "src": "/images/tools/podcasttools_14_social-hook-clip-quotes-sm.webp",
+      "width": 480,
+      "height": 640
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_14_social-hook-clip-quotes-lg.webp",
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "podcasttools_15_transcript-cleaner-formatter": {
+    "sm": {
+      "src": "/images/tools/podcasttools_15_transcript-cleaner-formatter-sm.webp",
+      "width": 480,
+      "height": 640
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_15_transcript-cleaner-formatter-lg.webp",
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "podcasttools_16_trailer-script-builder": {
+    "sm": {
+      "src": "/images/tools/podcasttools_16_trailer-script-builder-sm.webp",
+      "width": 480,
+      "height": 640
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_16_trailer-script-builder-lg.webp",
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "podcasttools_17_review-response-shoutout": {
+    "sm": {
+      "src": "/images/tools/podcasttools_17_review-response-shoutout-sm.webp",
+      "width": 480,
+      "height": 640
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_17_review-response-shoutout-lg.webp",
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "podcasttools_18_guest-pitch-collab-outreach": {
+    "sm": {
+      "src": "/images/tools/podcasttools_18_guest-pitch-collab-outreach-sm.webp",
+      "width": 480,
+      "height": 640
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_18_guest-pitch-collab-outreach-lg.webp",
+      "width": 768,
+      "height": 1024
+    }
+  }
+}

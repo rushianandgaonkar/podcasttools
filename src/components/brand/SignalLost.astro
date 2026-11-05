@@ -1,0 +1,70 @@
+---
+/** "Signal lost" 404 illustration: studio mic, live waveform that flatlines. Inline SVG, theme-aware. */
+interface Props {
+  class?: string;
+}
+const { class: className = "" } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 360 150"
+  class={`text-neutral-300 dark:text-neutral-700 ${className}`}
+  role="img"
+  aria-label="A microphone whose waveform drops to a flat line"
+>
+  <defs>
+    <linearGradient id="sl-wave" x1="0" x2="1">
+      <stop offset="0" stop-color="#7c3aed" />
+      <stop offset="0.55" stop-color="#ea580c" />
+      <stop offset="0.75" stop-color="#ea580c" stop-opacity="0.2" />
+      <stop offset="1" stop-color="currentColor" />
+    </linearGradient>
+    <radialGradient id="sl-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.25" />
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <circle cx="60" cy="72" r="58" fill="url(#sl-glow)" />
+
+  <!-- microphone -->
+  <g transform="translate(60 72)">
+    <rect x="-16" y="-44" width="32" height="54" rx="16" class="fill-white dark:fill-[#0a0a0a]" stroke="#7c3aed" stroke-width="3" />
+    <path d="M-8 -28h16M-8 -18h16M-8 -8h16" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round" opacity="0.6" />
+    <path d="M-26 -6a26 26 0 0 0 52 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+    <path d="M0 20v20M-14 40h28" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- waveform → flatline -->
+  <path
+    class="sl-wave"
+    d="M100 72 L112 72 L118 52 L124 92 L130 40 L136 104 L142 58 L148 86 L154 64 L160 80 L166 70 L172 74 L178 72 L340 72"
+    fill="none"
+    stroke="url(#sl-wave)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="340" cy="72" r="4" fill="currentColor" />
+
+  <!-- dropped-signal marks -->
+  <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <path d="M226 46l10 10M236 46l-10 10" />
+    <path d="M276 92l8 8M284 92l-8 8" opacity="0.7" />
+  </g>
+</svg>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .sl-wave {
+      stroke-dasharray: 420;
+      stroke-dashoffset: 420;
+      animation: sl-draw 1.6s ease-out forwards;
+    }
+  }
+  @keyframes sl-draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+</style>

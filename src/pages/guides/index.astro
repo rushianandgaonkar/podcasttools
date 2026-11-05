@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { siteConfig, guidesRegistry } from "../../config/site";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
 import { getLocalizedGuide } from "../../i18n/guidesData";
+import GuideCover from "../../components/brand/GuideCover.astro";
 import { BookOpen, Clock, ArrowRight } from "lucide-react";
 
 const lang = "en";
@@ -39,6 +40,7 @@ const t = useTranslations(lang);
               class="group p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex flex-col justify-between"
             >
               <div>
+                <GuideCover slug={guide.slug} class="aspect-[2/1] mb-4 -mt-1" />
                 <div class="flex items-center justify-between text-xs text-neutral-400 mb-2.5">
                   <span class="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">
                     {loc.category}

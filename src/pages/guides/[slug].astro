@@ -3,6 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import { siteConfig, guidesRegistry, type GuideDefinition } from "../../config/site";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
 import { getLocalizedGuide } from "../../i18n/guidesData";
+import { getGuideOgImage } from "../../lib/toolImages";
+import GuideCover from "../../components/brand/GuideCover.astro";
 import { Clock, ChevronRight, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export async function getStaticPaths() {
@@ -27,6 +29,7 @@ const locGuide = getLocalizedGuide(guide, lang);
   description={locGuide.description}
   lang={lang}
   canonicalUrl={`${siteConfig.url}/guides/${guide.slug}`}
+  ogImage={getGuideOgImage(guide.slug)}
 >
   <div class="w-full py-8 sm:py-14">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
@@ -63,6 +66,8 @@ const locGuide = getLocalizedGuide(guide, lang);
         <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
           {locGuide.description}
         </p>
+
+        <GuideCover slug={guide.slug} class="aspect-[2/1] sm:aspect-[5/2] mt-5" />
       </div>
 
       <!-- Localized Guide Content -->

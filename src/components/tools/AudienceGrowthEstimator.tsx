@@ -1,7 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import { TrendingUp, Users, ArrowUpRight, BarChart2, CheckCircle2 } from "lucide-react";
+import { TrendingUp, Users, ArrowUpRight, BarChart2, CheckCircle2, LineChart } from "lucide-react";
+import { GrowthChart } from "./visuals/GrowthChart";
+
+// Libsyn / Podtrac percentile thresholds (downloads per episode, first 30 days)
+const PERCENTILE_THRESHOLDS = [
+  { value: 150, label: "Top 50%" },
+  { value: 1100, label: "Top 20%" },
+  { value: 3500, label: "Top 10%" },
+  { value: 10000, label: "Top 5%" },
+  { value: 35000, label: "Top 1%" },
+];
 
 export function AudienceGrowthEstimator() {
   const [startingDownloads, setStartingDownloads] = useState<number>(350);
@@ -67,6 +77,21 @@ export function AudienceGrowthEstimator() {
             ~{month12.totalMonthlyDownloads.toLocaleString()} monthly downloads
           </span>
         </div>
+      </div>
+
+      {/* 12-Month Trajectory Chart */}
+      <div className="p-6 rounded-2xl bg-studio-card border border-studio-border">
+        <div className="flex items-center justify-between gap-3 pb-3 mb-3 border-b border-studio-border/60">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white flex items-center gap-2">
+            <LineChart className="w-4 h-4 text-orange-500 dark:text-orange-400" />
+            12-Month Download Trajectory
+          </h2>
+          <span className="text-[11px] font-mono text-neutral-500">downloads per episode · dashed = global percentiles</span>
+        </div>
+        <GrowthChart
+          points={months.map((m, i) => ({ label: `M${i + 1}`, value: m.perEpisode }))}
+          thresholds={PERCENTILE_THRESHOLDS}
+        />
       </div>
 
       {/* Control Sliders & Percentile Benchmark Split */}

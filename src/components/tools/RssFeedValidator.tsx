@@ -1,7 +1,50 @@
 "use client";
 
 import React, { useState } from "react";
-import { Rss, CheckCircle2, AlertTriangle, XCircle, RotateCcw, FileCode, ExternalLink } from "lucide-react";
+import { Rss, CheckCircle2, AlertTriangle, XCircle, RotateCcw, FileCode, ExternalLink, ClipboardCheck } from "lucide-react";
+
+/** Feed health ring: pass = 1, warning = 0.5, error = 0 */
+function HealthRing({ items }: { items: ValidationItem[] }) {
+  const pass = items.filter((i) => i.status === "pass").length;
+  const warn = items.filter((i) => i.status === "warn").length;
+  const fail = items.filter((i) => i.status === "fail").length;
+  const score = items.length ? Math.round(((pass + warn * 0.5) / items.length) * 100) : 0;
+  const r = 26;
+  const c = 2 * Math.PI * r;
+  const color = fail > 0 ? "#dc2626" : warn > 0 ? "#d97706" : "#059669";
+  const verdict = fail > 0 ? "Fix errors before submitting" : warn > 0 ? "Submittable, with warnings" : "Ready for Apple & Spotify";
+
+  return (
+    <div className="flex items-center gap-3">
+      <svg width="64" height="64" viewBox="0 0 64 64" role="img" aria-label={`Feed health ${score} out of 100`}>
+        <circle cx="32" cy="32" r={r} fill="none" strokeWidth="6" className="stroke-neutral-200 dark:stroke-neutral-800" />
+        <circle
+          cx="32"
+          cy="32"
+          r={r}
+          fill="none"
+          stroke={color}
+          strokeWidth="6"
+          strokeLinecap="round"
+          strokeDasharray={`${(score / 100) * c} ${c}`}
+          transform="rotate(-90 32 32)"
+          style={{ transition: "stroke-dasharray 600ms ease" }}
+        />
+        <text x="32" y="36.5" textAnchor="middle" fontSize="15" fontWeight="700" className="fill-neutral-900 dark:fill-white">
+          {score}
+        </text>
+      </svg>
+      <div className="space-y-1">
+        <span className="block text-xs font-semibold text-neutral-900 dark:text-white">{verdict}</span>
+        <div className="flex items-center gap-2 text-[11px] font-mono">
+          <span className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400"><CheckCircle2 className="w-3 h-3" />{pass}</span>
+          <span className="inline-flex items-center gap-1 text-amber-600 dark:text-amber-400"><AlertTriangle className="w-3 h-3" />{warn}</span>
+          <span className="inline-flex items-center gap-1 text-red-600 dark:text-red-400"><XCircle className="w-3 h-3" />{fail}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 interface ValidationItem {
   tag: string;
@@ -301,6 +344,26 @@ export function RssFeedValidator() {
         </div>
       </div>
 
+      {/* Empty state: skeleton of the report that will appear */}
+      {!results && (
+        <div className="p-6 rounded-2xl border border-dashed border-studio-border bg-studio-card/40 flex flex-col sm:flex-row items-center gap-6">
+          <div className="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 text-orange-500 flex items-center justify-center shrink-0">
+            <ClipboardCheck className="w-7 h-7" />
+          </div>
+          <div className="flex-1 w-full space-y-2" aria-hidden="true">
+            {["w-2/3", "w-1/2", "w-3/4", "w-2/5"].map((w, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-neutral-200 dark:bg-neutral-800" />
+                <span className={`h-2 rounded-full bg-neutral-200 dark:bg-neutral-800 ${w}`} />
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-neutral-500 max-w-[220px] text-center sm:text-left">
+            Paste your feed (or load the sample) and run the audit — a scored checklist of every Apple &amp; Spotify requirement appears here.
+          </p>
+        </div>
+      )}
+
       {/* Audit Report */}
       {results && (
         <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-6">
@@ -313,8 +376,11 @@ export function RssFeedValidator() {
                 {results.showTitle || "Podcast RSS Feed Audit"}
               </h3>
             </div>
-            <div className="text-xs text-neutral-600 dark:text-slate-400">
-              <span className="font-semibold text-neutral-900 dark:text-white">{results.episodeCount}</span> episode(s) detected
+            <div className="flex flex-col sm:items-end gap-1.5">
+              <HealthRing items={results.items} />
+              <div className="text-xs text-neutral-600 dark:text-slate-400">
+                <span className="font-semibold text-neutral-900 dark:text-white">{results.episodeCount}</span> episode(s) detected
+              </div>
             </div>
           </div>
 

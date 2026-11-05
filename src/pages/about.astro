@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { siteConfig } from "../config/site";
 import { defaultLocale } from "../i18n/languages";
 import { useTranslations, getLocalizedPath } from "../i18n/utils";
+import ToolMosaic from "../components/brand/ToolMosaic.astro";
 import { ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
 
 const lang = defaultLocale;
@@ -30,6 +31,9 @@ const t = useTranslations(lang);
           Podcasting has grown to 500 million global listeners. Yet creators face a fragmented landscape of expensive subscriptions and privacy-invasive platforms. We built Pod Studio to provide clean, client-side utilities.
         </p>
       </div>
+
+      <!-- Brand visual: tool mosaic + stats -->
+      <ToolMosaic lang={lang} />
 
       <!-- Core Principles -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

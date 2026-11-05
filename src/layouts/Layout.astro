@@ -11,6 +11,8 @@ interface Props {
   description?: string;
   canonicalUrl?: string;
   ogImage?: string;
+  /** Alt text for the share card; defaults to the page title */
+  ogImageAlt?: string;
   noindex?: boolean;
   lang?: SupportedLocale;
 }
@@ -20,12 +22,16 @@ const {
   description = siteConfig.description,
   canonicalUrl = Astro.url.href,
   ogImage = siteConfig.ogImage,
+  ogImageAlt,
   noindex = false,
   lang: propLang,
 } = Astro.props;
 
 const lang = propLang || getLangFromUrl(Astro.url);
 const fullTitle = title.includes("Pod Studio") ? title : `${title} | Pod Studio`;
+// Accept both absolute URLs and root-relative paths (e.g. "/og/tools/slug.png")
+const ogImageUrl = ogImage.startsWith("http") ? ogImage : `${siteConfig.url}${ogImage}`;
+const ogAlt = ogImageAlt || fullTitle;
 
 // Generate reciprocal hreflang links for SEO across all 8 languages + x-default
 const hreflangLinks = getHreflangLinks(Astro.url.pathname, siteConfig.url);
@@ -73,7 +79,7 @@ const jsonLdWebsite = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <link rel="shortcut icon" href="/icon.svg" />
-    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={canonicalUrl} />
 
@@ -126,7 +132,11 @@ const jsonLdWebsite = {
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogAlt} />
     <meta property="og:locale" content={currentOgLocale} />
     {Object.entries(localeOgMap)
       .filter(([key]) => key !== lang)
@@ -138,7 +148,8 @@ const jsonLdWebsite = {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogAlt} />
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdOrg)} />

@@ -31,7 +31,7 @@ export const siteConfig = {
   brandName: "Pod Studio Tools",
   domain: "podstudiotools.com",
   url: "https://podstudiotools.com",
-  ogImage: "https://podstudiotools.com/og-image.png",
+  ogImage: "https://podstudiotools.com/og-image.png", // 1200x630 brand card (regenerate: scripts/generate-og-images.mjs)
   description:
     "Free, 100% client-side tools for podcast creators. Generate episode titles, format professional show notes, estimate sponsorship revenue, and preview Apple/Spotify cover art without signups or server uploads.",
   links: {
@@ -51,6 +51,7 @@ export const toolCategories = [
     description: "Brainstorm viral episode titles, hooks, interview questions, and show names.",
     color: "from-purple-500/20 to-indigo-500/20 border-purple-500/30",
     badgeColor: "bg-purple-500/10 text-purple-300 border-purple-500/20",
+    accent: "#7c3aed",
   },
   {
     id: "content",
@@ -58,6 +59,7 @@ export const toolCategories = [
     description: "Build run-of-show outlines, generate markdown show notes, and polish scripts.",
     color: "from-orange-500/20 to-amber-500/20 border-orange-500/30",
     badgeColor: "bg-orange-500/10 text-orange-300 border-orange-500/20",
+    accent: "#ea580c",
   },
   {
     id: "technical",
@@ -65,6 +67,7 @@ export const toolCategories = [
     description: "Validate RSS feeds, check cover art specs for Apple/Spotify, and format timestamps.",
     color: "from-cyan-500/20 to-blue-500/20 border-cyan-500/30",
     badgeColor: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20",
+    accent: "#0284c7",
   },
   {
     id: "growth",
@@ -72,6 +75,7 @@ export const toolCategories = [
     description: "Calculate CPM sponsorship earnings, estimate download growth, and reply to reviews.",
     color: "from-emerald-500/20 to-teal-500/20 border-emerald-500/30",
     badgeColor: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
+    accent: "#16a34a",
   },
 ] as const;
 
@@ -94,7 +98,7 @@ export const toolRegistry: ToolDefinition[] = [
     icon: "Sparkles",
     badge: "Popular",
     featured: true,
-    image: "/images/tools/podcasttools_01_title-generator.png",
+    image: "/images/tools/podcasttools_01_title-generator-lg.webp",
   },
   {
     id: "show-notes-generator",
@@ -114,7 +118,7 @@ export const toolRegistry: ToolDefinition[] = [
     icon: "FileText",
     badge: "Essential",
     featured: true,
-    image: "/images/tools/podcasttools_02_show-notes-generator.png",
+    image: "/images/tools/podcasttools_02_show-notes-generator-lg.webp",
   },
   {
     id: "podcast-name-generator",
@@ -134,7 +138,7 @@ export const toolRegistry: ToolDefinition[] = [
     icon: "Mic",
     badge: "Creative",
     featured: true,
-    image: "/images/tools/podcasttools_03_name-domain-checker.png",
+    image: "/images/tools/podcasttools_03_name-domain-checker-lg.webp",
   },
   {
     id: "episode-outline-builder",
@@ -154,7 +158,7 @@ export const toolRegistry: ToolDefinition[] = [
     icon: "ListOrdered",
     badge: "Workflow",
     featured: true,
-    image: "/images/tools/podcasttools_04_episode-outline-builder.png",
+    image: "/images/tools/podcasttools_04_episode-outline-builder-lg.webp",
   },
   {
     id: "guest-question-generator",
@@ -174,7 +178,7 @@ export const toolRegistry: ToolDefinition[] = [
     icon: "HelpCircle",
     badge: "Host Favorite",
     featured: true,
-    image: "/images/tools/podcasttools_05_guest-interview-questions.png",
+    image: "/images/tools/podcasttools_05_guest-interview-questions-lg.webp",
   },
   {
     id: "monetization-calculator",
@@ -194,7 +198,7 @@ export const toolRegistry: ToolDefinition[] = [
     icon: "DollarSign",
     badge: "Financial",
     featured: true,
-    image: "/images/tools/podcasttools_06_sponsorship-cpm-calculator.png",
+    image: "/images/tools/podcasttools_06_sponsorship-cpm-calculator-lg.webp",
   },
   {
     id: "cover-art-preview",
@@ -214,7 +218,7 @@ export const toolRegistry: ToolDefinition[] = [
     icon: "Image",
     badge: "Visual QA",
     featured: true,
-    image: "/images/tools/podcasttools_07_cover-art-previewer.png",
+    image: "/images/tools/podcasttools_07_cover-art-previewer-lg.webp",
   },
   {
     id: "rss-feed-validator",
@@ -234,7 +238,7 @@ export const toolRegistry: ToolDefinition[] = [
     icon: "Rss",
     badge: "Technical",
     featured: true,
-    image: "/images/tools/podcasttools_08_rss-feed-validator.png",
+    image: "/images/tools/podcasttools_08_rss-feed-validator-lg.webp",
   },
   {
     id: "episode-timestamp-generator",
@@ -253,7 +257,7 @@ export const toolRegistry: ToolDefinition[] = [
     status: "available",
     icon: "Clock",
     badge: "Utility",
-    image: "/images/tools/podcasttools_09_chapter-timestamp-generator.png",
+    image: "/images/tools/podcasttools_09_chapter-timestamp-generator-lg.webp",
   },
   {
     id: "intro-script-generator",
@@ -271,7 +275,7 @@ export const toolRegistry: ToolDefinition[] = [
     searchIntent: "podcast intro script",
     status: "available",
     icon: "Headphones",
-    image: "/images/tools/podcasttools_10_hook-intro-script-generator.png",
+    image: "/images/tools/podcasttools_10_hook-intro-script-generator-lg.webp",
   },
   {
     id: "audience-growth-estimator",
@@ -289,7 +293,7 @@ export const toolRegistry: ToolDefinition[] = [
     searchIntent: "podcast download estimator",
     status: "available",
     icon: "TrendingUp",
-    image: "/images/tools/podcasttools_11_audience-download-growth.png",
+    image: "/images/tools/podcasttools_11_audience-download-growth-lg.webp",
   },
   {
     id: "description-generator",
@@ -307,7 +311,7 @@ export const toolRegistry: ToolDefinition[] = [
     searchIntent: "podcast description generator",
     status: "available",
     icon: "AlignLeft",
-    image: "/images/tools/podcasttools_12_show-episode-description.png",
+    image: "/images/tools/podcasttools_12_show-episode-description-lg.webp",
   },
   {
     id: "category-finder",
@@ -325,7 +329,7 @@ export const toolRegistry: ToolDefinition[] = [
     searchIntent: "best podcast category Apple",
     status: "available",
     icon: "FolderSearch",
-    image: "/images/tools/podcasttools_13_apple-spotify-category-finder.png",
+    image: "/images/tools/podcasttools_13_apple-spotify-category-finder-lg.webp",
   },
   {
     id: "hook-generator",
@@ -343,7 +347,7 @@ export const toolRegistry: ToolDefinition[] = [
     searchIntent: "podcast hook ideas",
     status: "available",
     icon: "Zap",
-    image: "/images/tools/podcasttools_14_social-hook-clip-quotes.png",
+    image: "/images/tools/podcasttools_14_social-hook-clip-quotes-lg.webp",
   },
   {
     id: "transcript-formatter",
@@ -361,7 +365,7 @@ export const toolRegistry: ToolDefinition[] = [
     searchIntent: "podcast transcript format",
     status: "available",
     icon: "FileCode",
-    image: "/images/tools/podcasttools_15_transcript-cleaner-formatter.png",
+    image: "/images/tools/podcasttools_15_transcript-cleaner-formatter-lg.webp",
   },
   {
     id: "trailer-script-builder",
@@ -379,7 +383,7 @@ export const toolRegistry: ToolDefinition[] = [
     searchIntent: "podcast trailer template",
     status: "available",
     icon: "Film",
-    image: "/images/tools/podcasttools_16_trailer-script-builder.png",
+    image: "/images/tools/podcasttools_16_trailer-script-builder-lg.webp",
   },
   {
     id: "review-response-generator",
@@ -397,7 +401,7 @@ export const toolRegistry: ToolDefinition[] = [
     searchIntent: "reply to podcast review",
     status: "available",
     icon: "MessageSquare",
-    image: "/images/tools/podcasttools_17_review-response-shoutout.png",
+    image: "/images/tools/podcasttools_17_review-response-shoutout-lg.webp",
   },
   {
     id: "collab-finder",
@@ -415,7 +419,7 @@ export const toolRegistry: ToolDefinition[] = [
     searchIntent: "find podcast guests",
     status: "available",
     icon: "Users",
-    image: "/images/tools/podcasttools_18_guest-pitch-collab-outreach.png",
+    image: "/images/tools/podcasttools_18_guest-pitch-collab-outreach-lg.webp",
   },
 ];
 

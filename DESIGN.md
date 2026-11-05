@@ -57,7 +57,7 @@ typography:
   label-sm:
     fontFamily: Geist, Arial, sans-serif
     fontSize: 14px
-    fontWeight: 500 burada komikledin mi yani son DESIGN.md'leri? 
+    fontWeight: 500
     lineHeight: 20px
     letterSpacing: -0.28px
   mono-eyebrow:
@@ -466,3 +466,56 @@ Cards are rectangles at 12–16px radius; marketing buttons and category tabs ar
 - Don't set body copy in pure black (`#000000`) — the brand's ink is #171717 and body steps to `{colors.body}`.
 - Don't add a second decorative system — the mesh gradient is the only flourish; everything else is ink on white.
 - Don't loosen the display tracking — large Geist headings carry tight negative letter-spacing by design.
+
+---
+
+## Pod Studio Brand Layer
+
+The Geist system above is the **UI chrome** (canvas, ink, hairlines, type, buttons). Pod Studio adds a small,
+deliberate brand layer on top of it. These rules override the "Don't add a second decorative system" note above
+only for the surfaces listed here.
+
+### Brand accents (from the logo `public/icon.svg`)
+| Token | Hex | Use |
+|---|---|---|
+| brand-indigo | `#6366f1` | logo gradient start, bottom brand bar on share cards |
+| brand-violet | `#a855f7` | logo gradient middle |
+| brand-orange | `#f97316` | logo gradient end, hero headline highlight, primary in-tool action buttons |
+
+### Category accents (`toolCategories[].accent` in `src/config/site.ts`)
+Validated as a categorical palette (light **and** dark, CVD-safe) — always shown with a text label, never colour alone.
+
+| Category | Hex |
+|---|---|
+| Ideation & Branding | `#7c3aed` |
+| Content & Scripting | `#ea580c` |
+| Audio & Technical | `#0284c7` |
+| Growth & Monetization | `#16a34a` |
+
+Used for: category pill dots, tool-card icon tint + top bar, carousel card divider, tool-page illustration glow,
+OG-card eyebrow dot, guide cover art.
+
+### Chart palette (in-tool visuals, `src/components/tools/visuals/`)
+- Ad slots (fixed order): pre-roll `#ea580c`, mid-roll `#0891b2`, post-roll `#6366f1`.
+- Single-series charts use `#ea580c` (2px line, 0.28→0 area fill); thresholds are dashed neutral lines with direct labels.
+- Values and labels stay in text tokens (`ink`/`body`/`mute`) — never in the series colour.
+- Every chart has a hover state and an accessible fallback (data table or legend with values).
+
+### Illustration system
+- **Tool illustrations**: 18 glossy 3D renders (purple/gold studio lighting). Masters live in
+  `assets/tool-illustrations/` (not deployed); `node scripts/optimize-tool-images.mjs` produces
+  `public/images/tools/<name>-sm.webp` (480w) and `-lg.webp` (960w) plus `src/config/toolImages.generated.json`.
+  Always render through `getToolImage()` (`src/lib/toolImages.ts`) so `srcset`, `width` and `height` are set.
+- **Line illustrations** (404, guide covers, how-it-works): inline SVG, neutral strokes via `currentColor`
+  (`text-neutral-300` / `dark:text-neutral-700`) + one category accent. **No text inside illustrations** — the site ships in 8 languages.
+- Crop tool illustrations with `object-[50%_30%]` — the subject sits in the upper third.
+
+### Share cards (Open Graph / Twitter)
+- 1200×630 PNG, near-black `#0a0a0a`, faint 40px grid, category-accent bloom top-right, brand bar
+  (indigo → violet → orange) along the bottom edge, tool illustration on the right.
+- Files: `public/og-image.png` (site default), `public/og/tools/<slug>.png`, `public/og/guides/<slug>.png`.
+- Regenerate with `node scripts/generate-og-images.mjs` after adding/renaming a tool or guide.
+
+### Motion
+- Decorative motion (hero float, mosaic drift, 404 waveform draw) is wrapped in
+  `@media (prefers-reduced-motion: no-preference)`. Interactive feedback (hover lift, chart crosshair) stays ≤ 300 ms.

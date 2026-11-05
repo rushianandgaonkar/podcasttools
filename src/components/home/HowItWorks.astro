@@ -1,0 +1,170 @@
+---
+/**
+ * "How it works" strip — three steps with inline-SVG illustrations (no images, no baked-in text).
+ * Copy is localized inline for all 8 locales.
+ */
+import type { SupportedLocale } from "../../i18n/languages";
+
+interface Props {
+  lang: SupportedLocale;
+}
+const { lang } = Astro.props;
+
+type Copy = { eyebrow: string; title: string; steps: [string, string][] };
+
+const copy: Record<SupportedLocale, Copy> = {
+  en: {
+    eyebrow: "HOW IT WORKS",
+    title: "From idea to publish-ready in three steps",
+    steps: [
+      ["Pick a tool", "Choose from 18 focused utilities for titles, show notes, CPM, artwork, RSS and more."],
+      ["Add your details", "Type, paste or drop a file. Everything runs in your browser and never leaves your device."],
+      ["Copy or download", "Grab clean Markdown, HTML or text and paste it straight into your host or YouTube."],
+    ],
+  },
+  es: {
+    eyebrow: "CÓMO FUNCIONA",
+    title: "De la idea a la publicación en tres pasos",
+    steps: [
+      ["Elige una herramienta", "18 utilidades para títulos, notas del episodio, CPM, portadas, RSS y más."],
+      ["Añade tus datos", "Escribe, pega o suelta un archivo. Todo se ejecuta en tu navegador y nunca sale de tu dispositivo."],
+      ["Copia o descarga", "Obtén Markdown, HTML o texto limpio y pégalo directamente en tu hosting o en YouTube."],
+    ],
+  },
+  ja: {
+    eyebrow: "使い方",
+    title: "アイデアから公開まで、たった3ステップ",
+    steps: [
+      ["ツールを選ぶ", "タイトル、ショーノート、CPM、アートワーク、RSSなど18種類の専用ツール。"],
+      ["情報を入力", "入力・貼り付け・ファイルのドロップだけ。処理はすべてブラウザ内で行われ、端末の外に出ません。"],
+      ["コピーまたはダウンロード", "整ったMarkdown・HTML・テキストを、ホスティングやYouTubeにそのまま貼り付け。"],
+    ],
+  },
+  fr: {
+    eyebrow: "COMMENT ÇA MARCHE",
+    title: "De l'idée à la publication en trois étapes",
+    steps: [
+      ["Choisissez un outil", "18 utilitaires dédiés : titres, notes d'épisode, CPM, visuels, RSS et plus."],
+      ["Ajoutez vos infos", "Tapez, collez ou déposez un fichier. Tout s'exécute dans votre navigateur, rien ne quitte votre appareil."],
+      ["Copiez ou téléchargez", "Récupérez du Markdown, HTML ou texte propre à coller dans votre hébergeur ou sur YouTube."],
+    ],
+  },
+  de: {
+    eyebrow: "SO FUNKTIONIERT'S",
+    title: "Von der Idee zur Veröffentlichung in drei Schritten",
+    steps: [
+      ["Tool wählen", "18 spezialisierte Werkzeuge für Titel, Shownotes, CPM, Cover, RSS und mehr."],
+      ["Details eingeben", "Tippen, einfügen oder Datei ablegen. Alles läuft in deinem Browser und verlässt nie dein Gerät."],
+      ["Kopieren oder herunterladen", "Sauberes Markdown, HTML oder Text direkt in deinen Host oder YouTube einfügen."],
+    ],
+  },
+  pt: {
+    eyebrow: "COMO FUNCIONA",
+    title: "Da ideia à publicação em três passos",
+    steps: [
+      ["Escolha uma ferramenta", "18 utilitários para títulos, show notes, CPM, capas, RSS e muito mais."],
+      ["Adicione seus dados", "Digite, cole ou solte um arquivo. Tudo roda no seu navegador e nunca sai do seu dispositivo."],
+      ["Copie ou baixe", "Pegue Markdown, HTML ou texto limpo e cole direto no seu host ou no YouTube."],
+    ],
+  },
+  ko: {
+    eyebrow: "이용 방법",
+    title: "아이디어부터 발행까지 단 3단계",
+    steps: [
+      ["도구 선택", "제목, 쇼노트, CPM, 커버 아트, RSS 등 18가지 전용 도구."],
+      ["정보 입력", "입력하거나 붙여넣거나 파일을 끌어다 놓으세요. 모든 처리는 브라우저 안에서만 이루어집니다."],
+      ["복사 또는 다운로드", "깔끔한 Markdown, HTML, 텍스트를 호스팅 서비스나 YouTube에 바로 붙여넣으세요."],
+    ],
+  },
+  it: {
+    eyebrow: "COME FUNZIONA",
+    title: "Dall'idea alla pubblicazione in tre passaggi",
+    steps: [
+      ["Scegli uno strumento", "18 utility dedicate a titoli, show notes, CPM, copertine, RSS e altro."],
+      ["Aggiungi i dettagli", "Scrivi, incolla o trascina un file. Tutto gira nel browser e non lascia mai il tuo dispositivo."],
+      ["Copia o scarica", "Ottieni Markdown, HTML o testo pulito da incollare nel tuo host o su YouTube."],
+    ],
+  },
+};
+
+const c = copy[lang] ?? copy.en;
+const accents = ["#7c3aed", "#0284c7", "#ea580c"];
+---
+
+<section class="w-full py-16 sm:py-20 border-t border-neutral-200 dark:border-neutral-800 max-w-6xl mx-auto px-4 sm:px-6">
+  <div>
+    <div class="mb-8">
+      <span class="font-mono text-xs uppercase tracking-wider text-neutral-500 block mb-1">{c.eyebrow}</span>
+      <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-neutral-900 dark:text-white">{c.title}</h2>
+    </div>
+
+    <ol class="relative grid grid-cols-1 md:grid-cols-3 gap-4">
+      {c.steps.map(([title, body], i) => (
+        <li class="relative rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5 flex flex-col">
+          <div
+            class="relative mb-4 h-28 rounded-lg overflow-hidden border border-neutral-100 dark:border-neutral-900 bg-neutral-50 dark:bg-[#0d0d0d] text-neutral-300 dark:text-neutral-700"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 240 112" class="w-full h-full">
+              <defs>
+                <radialGradient id={`hiw-g${i}`} cx="50%" cy="40%" r="60%">
+                  <stop offset="0" stop-color={accents[i]} stop-opacity="0.22" />
+                  <stop offset="1" stop-color={accents[i]} stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <rect width="240" height="112" fill={`url(#hiw-g${i})`} />
+
+              {i === 0 && (
+                <g>
+                  {[0, 1, 2].map((r) =>
+                    [0, 1, 2, 3, 4].map((col) => (
+                      <rect x={50 + col * 30} y={16 + r * 28} width="22" height="22" rx="5" fill="currentColor" opacity="0.6" />
+                    ))
+                  )}
+                  <rect x="106" y="40" width="30" height="30" rx="7" fill={accents[0]} />
+                  <path d="M114 55l5 5 9-10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M146 76l10 22 4-9 9-4z" fill="#171717" class="dark:fill-white" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" />
+                </g>
+              )}
+
+              {i === 1 && (
+                <g>
+                  <rect x="40" y="14" width="160" height="86" rx="8" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M40 30h160" stroke="currentColor" stroke-width="2" />
+                  <circle cx="51" cy="22" r="2.5" fill="currentColor" />
+                  <circle cx="60" cy="22" r="2.5" fill="currentColor" />
+                  <circle cx="69" cy="22" r="2.5" fill="currentColor" />
+                  <rect x="56" y="42" width="84" height="8" rx="4" fill="currentColor" opacity="0.7" />
+                  <rect x="56" y="58" width="64" height="8" rx="4" fill="currentColor" opacity="0.5" />
+                  <rect x="56" y="74" width="74" height="8" rx="4" fill="currentColor" opacity="0.5" />
+                  <g transform="translate(160 50)">
+                    <rect x="-14" y="2" width="28" height="22" rx="4" fill={accents[1]} />
+                    <path d="M-8 2v-7a8 8 0 0 1 16 0v7" fill="none" stroke={accents[1]} stroke-width="3" />
+                    <circle cx="0" cy="12" r="3" fill="#fff" />
+                  </g>
+                </g>
+              )}
+
+              {i === 2 && (
+                <g>
+                  <rect x="56" y="16" width="70" height="84" rx="8" fill="currentColor" opacity="0.55" />
+                  <rect x="70" y="10" width="42" height="12" rx="4" fill="currentColor" />
+                  <rect x="66" y="38" width="50" height="5" rx="2.5" fill="#fff" opacity="0.8" />
+                  <rect x="66" y="50" width="40" height="5" rx="2.5" fill="#fff" opacity="0.6" />
+                  <rect x="66" y="62" width="46" height="5" rx="2.5" fill="#fff" opacity="0.6" />
+                  <circle cx="160" cy="58" r="26" fill={accents[2]} />
+                  <path d="M160 44v24M150 59l10 10 10-10" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              )}
+            </svg>
+          </div>
+          <span class="font-mono text-[11px] font-semibold mb-1 text-neutral-500 inline-flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full" style={`background:${accents[i]}`}></span>0{i + 1}
+          </span>
+          <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-1">{title}</h3>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{body}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

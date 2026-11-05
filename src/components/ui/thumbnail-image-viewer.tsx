@@ -40,7 +40,7 @@ export type Props = {
 
 export const sampleImages: GalleryImage[] = [
   {
-    src: "/images/tools/podcasttools_01_title-generator.png",
+    src: "/images/tools/podcasttools_01_title-generator-lg.webp",
     alt: "Podcast Episode Title Generator interface and formula cards",
     title: "Podcast Episode Title Generator",
     location: "Ideation / 01",
@@ -49,7 +49,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Generate high-CTR, click-worthy podcast episode titles using tested psychological formulas.",
   },
   {
-    src: "/images/tools/podcasttools_02_show-notes-generator.png",
+    src: "/images/tools/podcasttools_02_show-notes-generator-lg.webp",
     alt: "Podcast Show Notes Generator Markdown and HTML builder interface",
     title: "Podcast Show Notes Generator",
     location: "Content / 02",
@@ -58,7 +58,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Create structured, SEO-friendly podcast show notes with timestamps, guest bios, and links.",
   },
   {
-    src: "/images/tools/podcasttools_03_name-domain-checker.png",
+    src: "/images/tools/podcasttools_03_name-domain-checker-lg.webp",
     alt: "Podcast Name Generator and domain availability checker",
     title: "Podcast Name Generator",
     location: "Ideation / 03",
@@ -67,7 +67,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Discover memorable, brandable podcast name ideas across 6 distinct creative styles.",
   },
   {
-    src: "/images/tools/podcasttools_04_episode-outline-builder.png",
+    src: "/images/tools/podcasttools_04_episode-outline-builder-lg.webp",
     alt: "Podcast Episode Outline and run of show timing builder",
     title: "Podcast Episode Outline Builder",
     location: "Content / 04",
@@ -76,7 +76,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Structure your episode with an interactive run-of-show planner and segment timers.",
   },
   {
-    src: "/images/tools/podcasttools_05_guest-interview-questions.png",
+    src: "/images/tools/podcasttools_05_guest-interview-questions-lg.webp",
     alt: "Podcast Guest Interview Question Generator interface",
     title: "Podcast Interview Question Generator",
     location: "Ideation / 05",
@@ -85,7 +85,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Generate deep, engaging podcast interview questions tailored to your guest.",
   },
   {
-    src: "/images/tools/podcasttools_06_sponsorship-cpm-calculator.png",
+    src: "/images/tools/podcasttools_06_sponsorship-cpm-calculator-lg.webp",
     alt: "Podcast Sponsorship and CPM ad revenue calculator dashboard",
     title: "Podcast Sponsorship & Monetization Calculator",
     location: "Growth / 06",
@@ -94,7 +94,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Calculate potential ad revenue based on download numbers and 2026 industry CPM rates.",
   },
   {
-    src: "/images/tools/podcasttools_07_cover-art-previewer.png",
+    src: "/images/tools/podcasttools_07_cover-art-previewer-lg.webp",
     alt: "Apple Podcasts and Spotify Cover Art Previewer and specs validator",
     title: "Podcast Cover Art Preview & Size Checker",
     location: "Technical / 07",
@@ -103,7 +103,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Test how your artwork looks at Apple Podcasts and Spotify specs and tiny thumbnail sizes.",
   },
   {
-    src: "/images/tools/podcasttools_08_rss-feed-validator.png",
+    src: "/images/tools/podcasttools_08_rss-feed-validator-lg.webp",
     alt: "Podcast RSS Feed Validator and XML linter compliance checker",
     title: "Podcast RSS Feed Validator & Linter",
     location: "Technical / 08",
@@ -112,7 +112,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Validate your podcast RSS XML feed for required iTunes tags and compliance.",
   },
   {
-    src: "/images/tools/podcasttools_09_chapter-timestamp-generator.png",
+    src: "/images/tools/podcasttools_09_chapter-timestamp-generator-lg.webp",
     alt: "Podcast Timestamp and Chapter Marker generator for YouTube and Spotify",
     title: "Podcast Timestamp & Chapter Marker Generator",
     location: "Technical / 09",
@@ -121,7 +121,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Format episode chapters and timecodes into one-click copyable formats for YouTube and Spotify.",
   },
   {
-    src: "/images/tools/podcasttools_10_hook-intro-script-generator.png",
+    src: "/images/tools/podcasttools_10_hook-intro-script-generator-lg.webp",
     alt: "Podcast Hook and Intro Script Generator framework interface",
     title: "Podcast Intro Script Generator",
     location: "Content / 10",
@@ -130,7 +130,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Generate punchy, listener-retaining podcast intro scripts with proven hooks.",
   },
   {
-    src: "/images/tools/podcasttools_11_audience-download-growth.png",
+    src: "/images/tools/podcasttools_11_audience-download-growth-lg.webp",
     alt: "Podcast Audience and Download Growth Estimator analytics model",
     title: "Podcast Audience & Download Growth Estimator",
     location: "Growth / 11",
@@ -139,7 +139,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Model realistic podcast audience growth over 12 months based on cadence and retention.",
   },
   {
-    src: "/images/tools/podcasttools_12_show-episode-description.png",
+    src: "/images/tools/podcasttools_12_show-episode-description-lg.webp",
     alt: "Podcast Show and Episode Description Generator interface",
     title: "Podcast Show & Episode Description Generator",
     location: "Content / 12",
@@ -148,7 +148,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Craft searchable, conversion-focused podcast descriptions that boost directory ranking.",
   },
   {
-    src: "/images/tools/podcasttools_13_apple-spotify-category-finder.png",
+    src: "/images/tools/podcasttools_13_apple-spotify-category-finder-lg.webp",
     alt: "Apple Podcasts and Spotify Category and genre taxonomy finder",
     title: "Apple Podcasts & Spotify Category Finder",
     location: "Technical / 13",
@@ -157,7 +157,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Explore official Apple Podcasts taxonomy to find low-competition genres where you can rank.",
   },
   {
-    src: "/images/tools/podcasttools_14_social-hook-clip-quotes.png",
+    src: "/images/tools/podcasttools_14_social-hook-clip-quotes-lg.webp",
     alt: "Podcast Social Hook and Viral Clip Quote Generator interface",
     title: "Podcast Hook & Cold Open Generator",
     location: "Ideation / 14",
@@ -166,7 +166,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Create irresistible cold opens and curiosity hooks that retain listeners in minute one.",
   },
   {
-    src: "/images/tools/podcasttools_15_transcript-cleaner-formatter.png",
+    src: "/images/tools/podcasttools_15_transcript-cleaner-formatter-lg.webp",
     alt: "Podcast Transcript Formatter and Whisper cleaner interface",
     title: "Podcast Transcript Formatter & Cleaner",
     location: "Content / 15",
@@ -175,7 +175,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Clean raw automated AI audio transcripts into formatted paragraphs with speaker tags.",
   },
   {
-    src: "/images/tools/podcasttools_16_trailer-script-builder.png",
+    src: "/images/tools/podcasttools_16_trailer-script-builder-lg.webp",
     alt: "Podcast Trailer Script Builder 5-part framework interface",
     title: "Podcast Trailer Script Builder",
     location: "Content / 16",
@@ -184,7 +184,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Write a compelling 60 to 90-second launch trailer script that converts listeners into subscribers.",
   },
   {
-    src: "/images/tools/podcasttools_17_review-response-shoutout.png",
+    src: "/images/tools/podcasttools_17_review-response-shoutout-lg.webp",
     alt: "Podcast Review Response and listener shoutout script generator",
     title: "Podcast Review Response Generator",
     location: "Growth / 17",
@@ -193,7 +193,7 @@ export const sampleImages: GalleryImage[] = [
     description: "Generate heartfelt shoutouts and diplomatic replies to 5-star praises and feedback.",
   },
   {
-    src: "/images/tools/podcasttools_18_guest-pitch-collab-outreach.png",
+    src: "/images/tools/podcasttools_18_guest-pitch-collab-outreach-lg.webp",
     alt: "Podcast Guest Pitch and Collab Outreach proposal builder interface",
     title: "Podcast Guest Pitch & Collab Outreach Builder",
     location: "Growth / 18",

@@ -14,117 +14,19 @@ import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
 import { getLocalizedPath, useTranslations } from "@/i18n/utils";
 import { getLocalizedTool } from "@/i18n/toolsData";
 import { OfferCarousel, type Offer } from "@/components/ui/offer-carousel";
+import { getToolImage } from "@/lib/toolImages";
 
 interface HomeToolGridProps {
   lang?: SupportedLocale;
   defaultView?: "carousel" | "grid";
 }
 
-interface ToolStoryMeta {
-  src: string;
-  stage: string;
-  video?: string;
-  credit: string;
-}
+const CARD_CREDIT = "Pod Studio Tools";
 
-const defaultMeta: ToolStoryMeta = {
-  src: "/images/tools/podcasttools_01_title-generator.png",
-  stage: "01",
-  credit: "Pod Studio Tools",
-};
-
-const toolMetaMap: Record<string, ToolStoryMeta> = {
-  "episode-title-generator": {
-    src: "/images/tools/podcasttools_01_title-generator.png",
-    stage: "01",
-    credit: "Pod Studio Tools",
-  },
-  "show-notes-generator": {
-    src: "/images/tools/podcasttools_02_show-notes-generator.png",
-    stage: "02",
-    credit: "Pod Studio Tools",
-  },
-  "podcast-name-generator": {
-    src: "/images/tools/podcasttools_03_name-domain-checker.png",
-    stage: "03",
-    credit: "Pod Studio Tools",
-  },
-  "episode-outline-builder": {
-    src: "/images/tools/podcasttools_04_episode-outline-builder.png",
-    stage: "04",
-    credit: "Pod Studio Tools",
-  },
-  "guest-question-generator": {
-    src: "/images/tools/podcasttools_05_guest-interview-questions.png",
-    stage: "05",
-    credit: "Pod Studio Tools",
-  },
-  "monetization-calculator": {
-    src: "/images/tools/podcasttools_06_sponsorship-cpm-calculator.png",
-    stage: "06",
-    credit: "Pod Studio Tools",
-  },
-  "cover-art-preview": {
-    src: "/images/tools/podcasttools_07_cover-art-previewer.png",
-    stage: "07",
-    credit: "Pod Studio Tools",
-  },
-  "rss-feed-validator": {
-    src: "/images/tools/podcasttools_08_rss-feed-validator.png",
-    stage: "08",
-    credit: "Pod Studio Tools",
-  },
-  "episode-timestamp-generator": {
-    src: "/images/tools/podcasttools_09_chapter-timestamp-generator.png",
-    stage: "09",
-    credit: "Pod Studio Tools",
-  },
-  "intro-script-generator": {
-    src: "/images/tools/podcasttools_10_hook-intro-script-generator.png",
-    stage: "10",
-    credit: "Pod Studio Tools",
-  },
-  "audience-growth-estimator": {
-    src: "/images/tools/podcasttools_11_audience-download-growth.png",
-    stage: "11",
-    credit: "Pod Studio Tools",
-  },
-  "description-generator": {
-    src: "/images/tools/podcasttools_12_show-episode-description.png",
-    stage: "12",
-    credit: "Pod Studio Tools",
-  },
-  "category-finder": {
-    src: "/images/tools/podcasttools_13_apple-spotify-category-finder.png",
-    stage: "13",
-    credit: "Pod Studio Tools",
-  },
-  "hook-generator": {
-    src: "/images/tools/podcasttools_14_social-hook-clip-quotes.png",
-    stage: "14",
-    credit: "Pod Studio Tools",
-  },
-  "transcript-formatter": {
-    src: "/images/tools/podcasttools_15_transcript-cleaner-formatter.png",
-    stage: "15",
-    credit: "Pod Studio Tools",
-  },
-  "trailer-script-builder": {
-    src: "/images/tools/podcasttools_16_trailer-script-builder.png",
-    stage: "16",
-    credit: "Pod Studio Tools",
-  },
-  "review-response-generator": {
-    src: "/images/tools/podcasttools_17_review-response-shoutout.png",
-    stage: "17",
-    credit: "Pod Studio Tools",
-  },
-  "collab-finder": {
-    src: "/images/tools/podcasttools_18_guest-pitch-collab-outreach.png",
-    stage: "18",
-    credit: "Pod Studio Tools",
-  },
-};
+// Category accent colours (shared with config/site.ts → toolCategories[].accent)
+const categoryAccent: Record<string, string> = Object.fromEntries(
+  toolCategories.map((cat) => [cat.id, cat.accent])
+);
 
 export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }: HomeToolGridProps) {
   const [viewMode, setViewMode] = useState<"carousel" | "grid">(defaultView);
@@ -167,17 +69,20 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
   }, [localizedTools, selectedCategory, searchQuery]);
 
   const carouselOffers: Offer[] = filteredTools.map((tool) => {
-    const meta = toolMetaMap[tool.slug] || defaultMeta;
+    const stage = String(toolRegistry.findIndex((item) => item.slug === tool.slug) + 1).padStart(2, "0");
+    const img = getToolImage(tool.image);
     return {
       id: tool.id,
-      imageSrc: meta.src,
+      imageSrc: img.src,
+      imageSrcSet: img.srcSet,
       imageAlt: tool.title,
       tag: tool.categoryLabel,
       title: tool.title,
       description: tool.description,
       brandLogoSrc: "/favicon.svg",
-      brandName: meta.credit,
-      promoCode: `Tool ${meta.stage} · ${t.toolsSection.launchTool}`,
+      brandName: CARD_CREDIT,
+      promoCode: `Tool ${stage} · ${t.toolsSection.launchTool}`,
+      accent: categoryAccent[tool.category],
       href: getLocalizedPath(`/tools/${tool.slug}`, lang),
     };
   });
@@ -215,6 +120,11 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
                     : "bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
                 }`}
               >
+                <span
+                  aria-hidden="true"
+                  className="inline-block w-1.5 h-1.5 rounded-full mr-1.5 align-middle"
+                  style={{ backgroundColor: cat.accent }}
+                />
                 {catLabel} ({count})
               </button>
             );
@@ -299,21 +209,40 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel" }:
               >
                 <div>
                   {/* Tool Image Preview */}
-                  {tool.image && (
-                    <div className="w-full aspect-[16/9] rounded-lg overflow-hidden mb-3.5 border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900">
-                      <img
-                        src={tool.image}
-                        alt={tool.title}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  )}
+                  {tool.image && (() => {
+                    const img = getToolImage(tool.image);
+                    return (
+                      <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-3.5 border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900">
+                        <img
+                          src={img.src}
+                          srcSet={img.srcSet}
+                          sizes="(min-width: 1024px) 360px, (min-width: 768px) 50vw, 100vw"
+                          width={img.width}
+                          height={img.height}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover object-[50%_30%] group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <span
+                          aria-hidden="true"
+                          className="absolute inset-x-0 top-0 h-0.5"
+                          style={{ backgroundColor: categoryAccent[tool.category] }}
+                        />
+                      </div>
+                    );
+                  })()}
 
                   {/* Header: Icon + Category Badge */}
                   <div className="flex items-center justify-between mb-3">
-                    <div className="w-8 h-8 rounded-md bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 flex items-center justify-center text-neutral-800 dark:text-neutral-200 group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors">
+                    <div
+                      className="w-8 h-8 rounded-md border flex items-center justify-center transition-colors"
+                      style={{
+                        color: categoryAccent[tool.category],
+                        backgroundColor: `${categoryAccent[tool.category]}14`,
+                        borderColor: `${categoryAccent[tool.category]}33`,
+                      }}
+                    >
                       <ToolIcon name={tool.icon} className="w-4 h-4" />
                     </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Clock, Plus, Trash2, Copy, Check, Download, RotateCcw } from "lucide-react";
+import { ChapterTimeline } from "./visuals/ChapterTimeline";
 
 interface ChapterRow {
   id: string;
@@ -179,6 +180,9 @@ export function EpisodeTimestampGenerator() {
           </div>
         </div>
       </div>
+
+      {/* Visual timeline + YouTube chapter rules */}
+      <ChapterTimeline chapters={chapters} />
     </div>
   );
 }

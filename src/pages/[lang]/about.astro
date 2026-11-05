@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { siteConfig } from "../../config/site";
 import { nonDefaultLocales, type SupportedLocale } from "../../i18n/languages";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
+import ToolMosaic from "../../components/brand/ToolMosaic.astro";
 import { ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
 
 export function getStaticPaths() {
@@ -36,6 +37,9 @@ const t = useTranslations(lang);
           {t.footer.tagline}
         </p>
       </div>
+
+      <!-- Brand visual: tool mosaic + stats -->
+      <ToolMosaic lang={lang} />
 
       <!-- Core Principles -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

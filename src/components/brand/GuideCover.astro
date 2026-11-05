@@ -1,0 +1,110 @@
+---
+/**
+ * Text-free, theme-aware cover art for guide cards & article headers.
+ * Pure inline SVG: zero network requests, works in all 8 locales (no baked-in text).
+ */
+interface Props {
+  slug: string;
+  class?: string;
+}
+
+const { slug, class: className = "" } = Astro.props;
+
+const variants: Record<string, { accent: string; kind: "revenue" | "artwork" | "titles" }> = {
+  "podcast-sponsorship-cpm-guide-2026": { accent: "#16a34a", kind: "revenue" },
+  "apple-spotify-cover-art-specs-guide": { accent: "#0284c7", kind: "artwork" },
+  "how-to-write-clickable-episode-titles": { accent: "#7c3aed", kind: "titles" },
+};
+const { accent, kind } = variants[slug] ?? { accent: "#ea580c", kind: "titles" };
+const gid = `gc-${slug.replace(/[^a-z0-9]/gi, "")}`;
+const bars = [38, 52, 46, 68, 74, 96];
+---
+
+<div
+  class={`relative overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-[#0d0d0d] text-neutral-300 dark:text-neutral-700 ${className}`}
+  aria-hidden="true"
+>
+  <svg viewBox="0 0 320 160" class="block w-full h-full" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <radialGradient id={`${gid}-glow`} cx="78%" cy="18%" r="70%">
+        <stop offset="0" stop-color={accent} stop-opacity="0.28" />
+        <stop offset="1" stop-color={accent} stop-opacity="0" />
+      </radialGradient>
+      <pattern id={`${gid}-grid`} width="16" height="16" patternUnits="userSpaceOnUse">
+        <path d="M16 0H0V16" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.6" />
+      </pattern>
+    </defs>
+    <rect width="320" height="160" fill={`url(#${gid}-grid)`} />
+    <rect width="320" height="160" fill={`url(#${gid}-glow)`} />
+
+    {kind === "revenue" && (
+      <g>
+        <line x1="40" y1="132" x2="280" y2="132" stroke="currentColor" stroke-width="1.5" />
+        {bars.map((h, i) => (
+          <rect
+            x={52 + i * 34}
+            y={132 - h}
+            width="22"
+            height={h}
+            rx="4"
+            fill={accent}
+            opacity={0.35 + i * 0.12}
+          />
+        ))}
+        <path
+          d={`M63 ${132 - 46} L97 ${132 - 60} L131 ${132 - 56} L165 ${132 - 80} L199 ${132 - 88} L233 ${132 - 110}`}
+          fill="none"
+          stroke={accent}
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle cx="233" cy={132 - 110} r="5" fill={accent} />
+        <g transform="translate(262 44)">
+          <circle r="16" fill="none" stroke={accent} stroke-width="2" />
+          <path d="M0 -8v16M4.5 -5c-1-1.6-8-2-8 1.2s8 1.6 8 5-7 3-8 1.2" fill="none" stroke={accent} stroke-width="2" stroke-linecap="round" />
+        </g>
+      </g>
+    )}
+
+    {kind === "artwork" && (
+      <g>
+        {[0, 1, 2].map((r) =>
+          [0, 1, 2, 3].map((c) => (
+            <rect
+              x={44 + c * 44}
+              y={22 + r * 40}
+              width="34"
+              height="34"
+              rx="6"
+              fill="currentColor"
+              opacity="0.55"
+            />
+          ))
+        )}
+        <rect x="216" y="30" width="84" height="84" rx="12" fill={accent} opacity="0.9" />
+        <rect x="228" y="42" width="60" height="60" rx="6" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.9" />
+        <path d="M216 126h84M216 122v8M300 122v8" stroke={accent} stroke-width="1.5" />
+        <path d="M308 30v84M304 30h8M304 114h8" stroke={accent} stroke-width="1.5" />
+        <rect x="132" y="62" width="34" height="34" rx="6" fill={accent} opacity="0.55" />
+      </g>
+    )}
+
+    {kind === "titles" && (
+      <g>
+        {[0, 1, 2].map((i) => (
+          <g transform={`translate(${56 + i * 10} ${26 + i * 40})`}>
+            <rect width="200" height="30" rx="8" fill="currentColor" opacity={0.45 + i * 0.15} />
+            <rect x="40" y="10" width={120 - i * 24} height="4" rx="2" fill="#fff" opacity="0.7" />
+            <rect x="40" y="18" width={80 - i * 12} height="3" rx="1.5" fill="#fff" opacity="0.4" />
+            <circle cx="20" cy="15" r="8" fill={accent} opacity={i === 2 ? 1 : 0.6} />
+            <path d="M16 15l3 3 5-6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+        ))}
+        <g transform="translate(262 34)">
+          <path d="M0 -14l3.5 9.5 10 .5-8 6 3 9.5L0 6l-8.5 5.5 3-9.5-8-6 10-.5z" fill={accent} />
+        </g>
+      </g>
+    )}
+  </svg>
+</div>
