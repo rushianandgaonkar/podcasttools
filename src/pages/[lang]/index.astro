@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { siteConfig, guidesRegistry } from "../../config/site";
 import { HeroQuickTool } from "../../components/home/HeroQuickTool";
 import { HomeToolGrid } from "../../components/home/HomeToolGrid";
+import { ShaderBackground } from "../../components/ui/silk-shader";
 import { nonDefaultLocales, type SupportedLocale } from "../../i18n/languages";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
 import { getLocalizedGuide } from "../../i18n/guidesData";
@@ -49,8 +50,13 @@ const faqSchema = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <div class="flex flex-col items-center w-full">
-    <!-- Hero Section -->
+    <!-- Hero Section with Vercel Mesh Gradient Bloom & Silk Shader -->
     <section class="w-full relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden vercel-hero-mesh border-b border-neutral-200 dark:border-neutral-800">
+      <!-- Silk Shader Interactive WebGL Background -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-60 dark:opacity-25 dark:invert" aria-hidden="true">
+        <ShaderBackground client:load className="w-full h-full object-cover" />
+      </div>
+
       <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center text-center">
         <!-- Eyebrow -->
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 text-neutral-600 dark:text-neutral-400 text-xs font-mono mb-6 shadow-2xs backdrop-blur-xs">
