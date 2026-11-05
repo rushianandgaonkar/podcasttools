@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Mic, ArrowRight, Home, Compass, AlertTriangle } from "lucide-react";
+import { toolRegistry } from "../config/site";
+
+const featuredTools = toolRegistry.slice(0, 4);
+---
+
+<Layout
+  title="500 — Server Error | Pod Studio"
+  description="An unexpected server error occurred while processing your audio or podcast request. Explore our 18 free creator tools or return to home."
+  noindex={true}
+>
+  <div class="w-full py-16 sm:py-24 min-h-[70vh] flex items-center">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center space-y-6">
+      <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-red-200 dark:border-red-900/50 bg-red-50 dark:bg-red-950/20 text-red-600 dark:text-red-400 mx-auto shadow-2xs">
+        <AlertTriangle className="w-5 h-5 text-red-500" />
+      </div>
+
+      <div class="space-y-2">
+        <span class="font-mono text-[11px] uppercase tracking-wider text-red-500 font-medium">ERROR 500</span>
+        <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white">
+          Signal Dropped
+        </h1>
+        <p class="text-xs sm:text-sm text-neutral-500 max-w-md mx-auto">
+          We encountered an unexpected broadcast error while processing this transmission. Our sound engineers have been alerted. You can return home or browse our creator tools below.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-2.5">
+        <a
+          href="/"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-xs hover:opacity-90 transition-opacity"
+        >
+          <Home className="w-3.5 h-3.5" /> Studio Home
+        </a>
+        <a
+          href="/tools"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-800 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-900 font-medium text-xs transition-colors"
+        >
+          <Compass className="w-3.5 h-3.5" /> All 18 Tools
+        </a>
+      </div>
+
+      <div class="pt-6 border-t border-neutral-200 dark:border-neutral-800 text-left">
+        <h2 class="font-mono text-[11px] uppercase tracking-wider text-neutral-400 mb-3 text-center">
+          Popular Free Podcast Tools
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          {featuredTools.map((tool) => (
+            <a
+              href={`/tools/${tool.slug}`}
+              class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] hover:border-neutral-400 dark:hover:border-neutral-600 group transition-colors flex items-center justify-between"
+            >
+              <div>
+                <span class="font-mono text-[9px] uppercase text-neutral-400 block">{tool.category}</span>
+                <span class="text-xs font-semibold text-neutral-900 dark:text-white group-hover:text-[#0070f3] transition-colors">
+                  {tool.title}
+                </span>
+              </div>
+              <ArrowRight className="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#0070f3] group-hover:translate-x-0.5 transition-transform" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+

@@ -31,3 +31,13 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# cloudflare workers
+.wrangler/
+.dev.vars
+
+# audit and temporary cache
+.beyondseo-runtime/
+.beyondseo-source/
+beyondseo-audit/
+*.zip

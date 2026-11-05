@@ -7,7 +7,11 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "postbuild": "node -e \"const fs = require('fs'); if (fs.existsSync('dist/400/index.html')) fs.copyFileSync('dist/400/index.html', 'dist/400.html');\"",
     "preview": "astro preview",
+    "preview:worker": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types",
     "astro": "astro"
   },
   "dependencies": {
@@ -24,10 +28,12 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261104.1",
     "@types/node": "^22.13.4",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "astro": "^7.4.4",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "wrangler": "^4.157.0"
   }
 }

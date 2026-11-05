@@ -1,7 +1,10 @@
-# Cloudflare Pages Headers for Pod Studio (podstudiotools.com)
+# Cloudflare Headers for Pod Studio (podstudiotools.com)
 
 # Staging and preview host isolation (prevent accidental duplicate indexing)
-https://*.pages.dev/*
+https://:project.workers.dev/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+https://:project.pages.dev/*
   X-Robots-Tag: noindex, nofollow, noarchive
 
 # Security and Privacy Headers across all routes

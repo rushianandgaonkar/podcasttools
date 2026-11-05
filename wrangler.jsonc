@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pod-studio-tools",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-03-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist",
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "none",
+    "run_worker_first": [
+      "/400",
+      "/400/*",
+      "/500",
+      "/500/*"
+    ]
+  },
+  "observability": {
+    "enabled": true
+  }
+}
