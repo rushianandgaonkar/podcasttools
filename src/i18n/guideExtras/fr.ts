@@ -2,9 +2,16 @@ import type { GuideExtrasRecord } from "./types";
 
 export const frGuideExtras: GuideExtrasRecord = {
   "podcast-sponsorship-cpm-guide-2026": {
-    metaTitle: "Guide du Sponsoring et des CPM Podcast 2026 | Pod Studio",
-    readMinutes: 5,
+    metaTitle: "Tarifs Publicitaires Podcast & CPM 2026 | Pod Studio",
+    firstHeading: "Tarifs publicitaires pour podcast et prix CPM",
+    readMinutes: 6,
     sections: [
+      {
+        heading: "Tarifs Publicitaires Podcast et Paliers CPM 2026",
+        paragraphs: [
+          "D'après les benchmarks AdvertiseCast 2026 et l'étude IAB/PwC sur les revenus publicitaires, les tarifs des annonces audio restent parmi les plus attractifs du numérique. Les annonceurs paient des tarifs élevés car les recommandations incarnées par l'animateur captent une écoute attentive et génèrent un fort impact de marque.",
+        ],
+      },
       {
         heading: "Exemple chiffré : tarifer un épisode",
         paragraphs: [
@@ -49,110 +56,111 @@ export const frGuideExtras: GuideExtrasRecord = {
           "Il n'y a pas de seuil universel. Les régies fixent souvent des minimums, mais des sponsors directs dans une niche précise peuvent travailler avec de petites émissions si l'audience correspond bien. La régularité et des données fiables comptent plus qu'un gros chiffre ponctuel.",
       },
       {
-        question: "Les sponsors paient-ils au téléchargement ou à l'épisode ?",
+        question: "Les sponsors paient-ils au téléchargement ou par épisode ?",
         answer:
-          "Les contrats au CPM sont tarifés pour 1 000 téléchargements, généralement comptés sur les 30 à 45 premiers jours. Certains sponsors préfèrent un forfait par épisode ou par campagne, et l'affiliation rémunère à la vente ou à l'inscription. Mettez toujours par écrit la façon dont les téléchargements sont mesurés et rapportés.",
+          "Les contrats au CPM sont tarifés pour 1 000 téléchargements, généralement comptés sur les 30 à 45 jours suivant la sortie. Certains sponsors préfèrent un forfait fixe par épisode ou par campagne, et l'affiliation rémunère à la vente ou à l'inscription. Précisez toujours par écrit comment les écoutes sont mesurées.",
       },
     ],
   },
   "apple-spotify-cover-art-specs-guide": {
-    metaTitle: "Pochette Podcast : Specs Apple et Spotify | Pod Studio",
-    readMinutes: 5,
+    metaTitle: "Pochette de Podcast pour Apple et Spotify | Pod Studio",
+    firstHeading: "Exigences de taille de la pochette de podcast",
+    readMinutes: 6,
     sections: [
       {
-        heading: "Concevoir d'abord pour la vignette",
+        heading: "Pensez d'abord au format miniature",
         paragraphs: [
-          "La plupart des gens découvrent votre pochette à la taille d'un bout de doigt : dans les résultats de recherche, les classements et les listes « à suivre ». Un visuel superbe en grand peut devenir une tache illisible une fois réduit.",
+          "La plupart des gens découvrent votre visuel à la taille d'un timbre — dans les résultats de recherche, les classements et les files d'attente. Un visuel superbe en grand format peut devenir illisible une fois réduit.",
         ],
         list: [
-          { title: "Peu de mots, en grand", description: "Le nom de l'émission dans une police affirmée suffit souvent. Gardez les slogans pour la description." },
-          { title: "Contraste maximal", description: "Texte clair sur fond foncé, ou l'inverse. Évitez les photos chargées derrière le texte." },
+          { title: "Peu de mots, en grand", description: "Le titre de l'émission dans une typographie grasse suffit souvent. Gardez les sous-titres pour la description." },
+          { title: "Un contraste maximal", description: "Texte clair sur fond sombre ou inversement. Évitez les photos chargées derrière le texte." },
           { title: "Un seul point focal", description: "Un visage, une icône ou le titre — pas les trois en concurrence." },
         ],
       },
       {
         heading: "Zones de sécurité et recadrage",
         paragraphs: [
-          "Certaines applis arrondissent les coins ou ajoutent de petits badges. Gardez titre, logo et visages dans la zone centrale du carré — environ les 80 % du centre — pour que rien d'important ne soit coupé.",
+          "Certaines applications arrondissent les coins des visuels ou ajoutent des badges par-dessus. Gardez votre titre, votre logo et les visages dans les 80 % centraux du carré pour que rien d'important ne soit masqué.",
         ],
       },
       {
-        heading: "Motifs de refus fréquents",
+        heading: "Motifs fréquents de rejet",
         paragraphs: ["Au-delà de la taille et du format, les annuaires vérifient le contenu et la qualité. Évitez :"],
         list: [
-          { title: "Logos et marques des plateformes", description: "N'utilisez pas les logos d'Apple Podcasts ou de Spotify et ne suggérez pas un partenariat inexistant." },
-          { title: "Images basse résolution ou déformées", description: "Un visuel agrandi, flou ou étiré peut être refusé ou paraître peu professionnel." },
-          { title: "Images explicites ou trompeuses", description: "La pochette doit être appropriée et représenter honnêtement l'émission." },
+          { title: "Logos et marques de plateformes", description: "N'utilisez pas les logos d'Apple Podcasts ou de Spotify, et ne laissez pas entendre un partenariat que vous n'avez pas." },
+          { title: "Images basse résolution ou déformées", description: "Une image pixelisée ou étirée peut être refusée et nuit à votre crédibilité." },
+          { title: "Visuels trompeurs ou explicites", description: "L'image doit convenir à tous les publics et représenter l'émission honnêtement." },
         ],
       },
       {
-        heading: "Check-list avant l'envoi",
-        paragraphs: ["Avant l'envoi, vérifiez que votre fichier est :"],
+        heading: "Liste de contrôle avant mise en ligne",
+        paragraphs: ["Avant d'importer le fichier, vérifiez qu'il est :"],
         list: [
-          { title: "Carré en 3000 × 3000 px", description: "Exactement 1:1, dans la plage 1400–3000 px." },
-          { title: "En JPEG ou PNG RVB", description: "Espace colorimétrique RVB, pas CMJN, avec la bonne extension .jpg ou .png." },
-          { title: "Lisible en 50 × 50 px", description: "Contrôlez-le dans un petit aperçu avant de publier." },
-          { title: "Enregistré sous un nouveau nom", description: "Lors d'une mise à jour, un nouveau nom de fichier aide les applis à détecter le changement." },
+          { title: "Carré à 3 000 × 3 000 px", description: "Strictement 1:1, dans la fourchette 1 400–3 000 px." },
+          { title: "JPEG ou PNG en RVB", description: "Espace colorimétrique RVB, pas CMJN, avec l'extension .jpg ou .png." },
+          { title: "Lisible à 50 × 50 px", description: "Vérifiez dans un aperçu réduit avant de publier." },
+          { title: "Enregistré sous un nouveau nom de fichier", description: "Quand vous mettez à jour votre visuel, changer de nom de fichier aide les applications à voir la modification." },
         ],
       },
     ],
     faqs: [
       {
-        question: "Quelle taille pour une pochette de podcast ?",
+        question: "Quelle taille doit faire la pochette d'un podcast ?",
         answer:
-          "Utilisez une image carrée de 3000 × 3000 pixels. Apple Podcasts accepte de 1400 × 1400 à 3000 × 3000 pixels en JPEG ou PNG, en RVB ; un carré de 3000 px convient aussi à Spotify et aux autres applis.",
+          "Utilisez une image carrée de 3 000 × 3 000 pixels. Apple Podcasts accepte de 1 400 × 1 400 à 3 000 × 3 000 pixels en JPEG ou PNG avec un profil RVB ; ce format convient aussi à Spotify et aux autres applications.",
       },
       {
-        question: "Puis-je utiliser la même pochette sur Apple Podcasts et Spotify ?",
+        question: "Peut-on utiliser la même pochette sur Apple Podcasts et Spotify ?",
         answer:
-          "Oui. Les deux lisent la pochette depuis votre flux RSS ou les réglages de votre hébergeur : un seul carré de 3000 × 3000 px conforme aux exigences d'Apple fonctionne sur les principales applis.",
+          "Oui. Tous deux lisent le visuel depuis votre flux RSS ou les réglages de votre hébergeur. Un seul carré de 3 000 × 3 000 px conforme aux critères d'Apple fonctionnera partout.",
       },
       {
-        question: "Pourquoi ma nouvelle pochette ne s'affiche-t-elle pas ?",
+        question: "Pourquoi ma nouvelle pochette n'apparaît-elle pas ?",
         answer:
-          "Les applis mettent les pochettes en cache : une mise à jour peut prendre de quelques heures à plusieurs jours. Vérifiez que votre flux pointe vers l'URL de la nouvelle image — un nouveau nom de fichier aide — et que le fichier respecte toujours la taille et le format requis.",
+          "Les applications gardent les images en cache, la mise à jour peut donc prendre de quelques heures à plusieurs jours. Vérifiez que votre flux pointe vers la nouvelle URL d'image — un nouveau nom de fichier aide — et que le fichier respecte bien la taille et le format demandés.",
       },
     ],
   },
   "how-to-write-clickable-episode-titles": {
-    metaTitle: "Écrire des Titres d'Épisodes de Podcast | Pod Studio",
+    metaTitle: "Comment Écrire des Titres de Podcast Clicables | Pod Studio",
     description:
-      "Des formules éprouvées pour des titres d'épisodes qui se démarquent sur Apple Podcasts et Spotify, avec exemples, conseils de recherche et erreurs à éviter.",
-    firstHeading: "Pourquoi le titre de l'épisode compte autant",
+      "Des formules éprouvées pour des titres d'épisodes qui ressortent sur Apple Podcasts et Spotify — avec exemples, conseils de recherche et erreurs à éviter.",
+    firstHeading: "Pourquoi le titre de votre épisode compte tant",
     readMinutes: 5,
     sections: [
       {
-        heading: "Cinq autres formules à essayer",
-        paragraphs: ["Combinez-les avec les trois archétypes ci-dessus pour explorer plusieurs angles d'un même épisode :"],
+        heading: "Cinq autres formules à tester",
+        paragraphs: ["Combinez-les avec les trois modèles ci-dessus pour explorer différents angles pour un même épisode :"],
         list: [
-          { title: "4. La promesse pratique", description: "« Comment lancer un podcast avec 100 € de budget » — clair, recherché et utile." },
-          { title: "5. La liste numérotée", description: "« 7 questions d'interview qui font naître de meilleures histoires » — l'attente est claire d'un coup d'œil." },
-          { title: "6. L'accroche par l'invité", description: "« [Nom de l'invité] : bâtir une marque sans réseaux sociaux » — quand l'invité est l'attraction." },
-          { title: "7. La question directe", description: "« L'e-mail de prospection est-il mort en 2026 ? » — donne envie de connaître la réponse." },
-          { title: "8. Le récit d'erreur", description: "« L'erreur de prix qui nous a coûté notre première année » — un enjeu concret, une vraie leçon." },
+          { title: "4. La promesse pratique", description: "« Comment lancer un podcast avec 100 $ de budget » — clair, recherchable et utile." },
+          { title: "5. La liste numérotée", description: "« 7 questions d'interview qui déclenchent de meilleures histoires » — pose les attentes en un coup d'œil." },
+          { title: "6. L'accroche sur l'invité", description: "« [Nom de l'invité] : bâtir une marque sans réseaux sociaux » — quand l'invité attire." },
+          { title: "7. La question directe", description: "« L'email à froid est-il mort en 2026 ? » — donne envie d'écouter la réponse." },
+          { title: "8. Le cadrage sur l'erreur", description: "« L'erreur de tarification qui nous a coûté notre première année » — enjeu précis, vraie leçon." },
         ],
       },
       {
-        heading: "Titres et recherche de podcasts",
+        heading: "Les titres et la recherche dans les applications",
         paragraphs: [
-          "Les moteurs de recherche d'Apple Podcasts et de Spotify tiennent compte des mots présents dans les titres et descriptions de l'émission et des épisodes. Employer les mots que vos auditeurs taperaient — « budget », « préparation marathon », « true crime Lyon » — aide les bonnes personnes à trouver l'épisode.",
-          "Placez-les tôt, car les titres sont souvent coupés sur petit écran. Un sujet clair au début vaut mieux qu'une formule astucieuse qu'on ne comprend qu'après l'écoute.",
+          "La recherche d'Apple Podcasts et de Spotify regarde les mots du titre et de la description de l'émission et des épisodes. Utiliser les mots que vos auditeurs taperaient — « budget », « marathon », « faits divers » — aide les bonnes personnes à vous trouver.",
+          "Placez ces mots au début, car les titres sont souvent coupés sur petit écran. Un sujet clair dès le départ vaut mieux qu'une formule astucieuse qu'on ne comprend qu'après écoute.",
         ],
       },
       {
-        heading: "Erreurs de titre fréquentes",
-        paragraphs: ["Ces habitudes font perdre des écoutes sans bruit :"],
+        heading: "Les erreurs courantes dans les titres",
+        paragraphs: ["Ces habitudes coûtent des écoutes sans qu'on s'en rende compte :"],
         list: [
-          { title: "Commencer par le numéro d'épisode", description: "Les applis affichent déjà le numéro ; « Ép. 112 : » gaspille les caractères les plus visibles." },
-          { title: "Teasers vagues", description: "« Une super conversation » ne dit rien à un nouvel auditeur sur la raison d'écouter." },
-          { title: "Clickbait non tenu", description: "Trop promettre entraîne des abandons rapides et des avis négatifs." },
-          { title: "Blagues d'initiés", description: "Les références comprises seulement des habitués rendent l'épisode invisible pour les nouveaux." },
+          { title: "Commencer par le numéro d'épisode", description: "Les applications affichent déjà les numéros ; « Ép. 112 : » gâche vos caractères les plus visibles." },
+          { title: "Les accroches floues", description: "« Une super conversation » ne dit rien aux nouveaux auditeurs sur les raisons d'écouter." },
+          { title: "Le piège à clics qui déçoit", description: "Trop promettre entraîne des abandons rapides et des avis négatifs." },
+          { title: "Les blagues d'initiés", description: "Les références que seuls les habitués comprennent rendent l'épisode invisible aux nouveaux arrivants." },
         ],
       },
       {
-        heading: "Une routine simple pour titrer",
+        heading: "Une routine simple pour vos titres",
         paragraphs: [
-          "Écrivez au moins dix options avec différentes formules, gardez-en trois et lisez-les sur votre téléphone comme un auditeur. Choisissez celle qui annonce le plus clairement le bénéfice. Avec le temps, comparez les téléchargements de la première semaine selon le style de titre pour savoir ce qui parle à votre public.",
+          "Écrivez au moins dix options avec différentes formules, retenez-en trois et lisez-les sur votre téléphone comme le ferait un auditeur. Choisissez celle dont le bénéfice est le plus clair.",
         ],
       },
     ],
@@ -160,17 +168,239 @@ export const frGuideExtras: GuideExtrasRecord = {
       {
         question: "Faut-il mettre le numéro d'épisode dans le titre ?",
         answer:
-          "En général non. Les flux de podcast disposent d'un champ dédié au numéro d'épisode que les applis peuvent afficher ; le répéter dans le titre prend une place mieux utilisée pour le sujet. Les émissions feuilletonnantes où l'ordre compte sont la principale exception.",
+          "En général, non. Les flux prévoient un champ séparé pour le numéro d'épisode, que les applications affichent. Le répéter dans le titre prend de la place au détriment du sujet. Les séries narratives où l'ordre compte font exception.",
       },
       {
-        question: "Quelle longueur pour un titre d'épisode ?",
+        question: "Quelle longueur doit faire un titre d'épisode ?",
         answer:
-          "Il n'existe pas de limite officielle valable partout, mais plus court est plus sûr. Placez l'idée principale dans les premiers mots pour qu'elle résiste à la troncature sur téléphone, en voiture ou sur une montre.",
+          "Il n'y a pas de limite officielle unique, mais le plus court est le plus sûr. Gardez l'idée centrale dans les premiers mots pour qu'elle reste lisible sur téléphone, tableau de bord de voiture ou montre.",
       },
       {
-        question: "Puis-je modifier le titre d'un épisode déjà publié ?",
+        question: "Peut-on modifier un titre d'épisode après publication ?",
         answer:
-          "Oui. Modifiez-le chez votre hébergeur et le changement passera dans votre flux RSS ; les applis peuvent mettre un peu de temps à se mettre à jour. Ne changez pas le GUID de l'épisode, sinon les applis risquent de le traiter comme un nouvel épisode.",
+          "Oui. Modifiez-le chez votre hébergeur et le changement se répercutera via votre flux RSS ; l'actualisation dans les applications peut prendre du temps. Ne modifiez pas le GUID de l'épisode, sinon les applications pourraient le traiter comme un nouvel épisode.",
+      },
+    ],
+  },
+  "how-much-do-podcasts-make": {
+    metaTitle: "Combien Gagne un Podcast en 2026 ? | Pod Studio",
+    readMinutes: 8,
+    sections: [
+      {
+        heading: "Les Trois Leviers Qui Multiplient les Revenus",
+        paragraphs: [
+          "Les podcasts qui gagnent le plus d'argent par rapport à leur audience activent trois leviers stratégiques : le pouvoir d'achat de leur niche, la régularité de diffusion et des canaux de conversion directe.",
+          "Une émission de finance écoutée par 1 000 dirigeants générera bien plus de revenus via des contrats de conseil qu'un podcast humoristique touchant 50 000 adolescents via des bannières automatisées.",
+        ],
+        list: [
+          {
+            title: "Pouvoir d'Achat de la Cible",
+            description: "Les secteurs B2B, l'investissement et les technologies négocient des CPM mid-roll de 40 à 60 € contre 18 à 22 € pour le divertissement général.",
+          },
+          {
+            title: "Fréquence et Volume d'Épisodes",
+            description: "Publier deux fois par semaine double votre inventaire publicitaire vendable sans exiger le double d'auditeurs uniques.",
+          },
+          {
+            title: "Canaux de Conversion Directe",
+            description: "Collecter les adresses email pour vendre des formations, adhésions de cercle privé et ateliers à forte valeur ajoutée.",
+          },
+        ],
+      },
+      {
+        heading: "Quand Peut-on Vivre Pleinement de Son Podcast ?",
+        paragraphs: [
+          "La plupart des créateurs se consacrent à 100 % à leur podcast lorsque les revenus combinés récurrents (sponsors, membres et prestations) couvrent largement leurs frais pendant au moins six mois d'affilée. Ce seuil est généralement franchi entre 10 000 et 20 000 écoutes par épisode ou grâce à une activité B2B bien établie.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Combien d'écoutes faut-il pour commencer à gagner de l'argent ?",
+        answer:
+          "Vous pouvez générer des revenus dès 200 à 500 auditeurs fidèles si vous proposez du conseil, du coaching ou des programmes d'affiliation spécialisés. Pour le sponsoring CPM traditionnel, les marques demandent généralement entre 1 000 et 5 000 écoutes par épisode sur les 30 premiers jours.",
+      },
+      {
+        question: "Combien gagne en moyenne un podcast à 1 000 écoutes par épisode ?",
+        answer:
+          "Un podcast hebdomadaire de 1 000 écoutes gagne environ 100 à 300 € par mois en publicité CPM. En y ajoutant une page de mécénat Patreon avec 30 membres à 5 €/mois et de l'affiliation, les revenus oscillent entre 300 et 700 € par mois.",
+      },
+      {
+        question: "Comment les plus grands podcasts gagnent-ils des millions sans dépendre du CPM ?",
+        answer:
+          "Les créateurs majeurs exploitent leur audience pour bâtir de véritables entreprises : logiciels SaaS, marques de produits physiques, livres à succès, investissements dans des start-ups et tournées de spectacles vivants à guichet fermé.",
+      },
+      {
+        question: "Peut-on monétiser un podcast avec moins de 500 auditeurs ?",
+        answer:
+          "Absolument. Les micro-podcasts sont très rentables quand ils servent d'outil d'acquisition client pour des prestations professionnelles de consulting ou d'agence où un seul contrat signé rentabilise toute l'année.",
+      },
+    ],
+  },
+  "how-to-monetize-a-podcast": {
+    metaTitle: "Monétiser un Podcast et Trouver des Sponsors | Pod Studio",
+    readMinutes: 8,
+    sections: [
+      {
+        heading: "La Méthode en 4 Étapes pour Contacter des Sponsors",
+        paragraphs: [
+          "Suivez ce processus systématique pour décrocher vos premiers partenariats publicitaires :",
+        ],
+        list: [
+          {
+            title: "1. Lister 20 Marques Actives",
+            description: "Identifiez les entreprises qui sponsorisent déjà des podcasts ou chaînes YouTube dans votre secteur.",
+          },
+          {
+            title: "2. Identifier le Décideur sur LinkedIn",
+            description: "Cherchez les intitulés de poste comme « Responsable Partenariats », « Media Buyer » ou « Head of Marketing ».",
+          },
+          {
+            title: "3. Envoyer une Proposition Précise et Personnalisée",
+            description: "Complimentez une de leurs campagnes récentes, présentez vos chiffres d'audience précis et proposez un test sans risque sur 2 épisodes.",
+          },
+          {
+            title: "4. Relancer Une Seule Fois avec de la Valeur",
+            description: "Envoyez une relance courtoise après 5 jours ouvrés en citant un avis auditeur récent qui fait référence à leur univers de produits.",
+          },
+        ],
+      },
+      {
+        heading: "Forfaits Fixes vs Négociation au CPM",
+        paragraphs: [
+          "Pour les émissions de moins de 10 000 écoutes, négocier des forfaits fixes par lot d'épisodes (par exemple 400 € pour 4 épisodes) est souvent bien plus rentable que l'application stricte du CPM. L'annonceur sécurise son budget et vous bénéficiez d'un revenu garanti.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Quand faut-il commencer à démarcher des sponsors ?",
+        answer:
+          "Vous pouvez démarcher des marques dès que vous avez publié 10 épisodes réguliers et que vous disposez d'un noyau d'auditeurs actifs. Pour les marques de niche, la qualité de l'engagement et l'adéquation de la cible comptent bien plus que les gros volumes bruts.",
+      },
+      {
+        question: "Quelle est la différence entre sponsoring CPM et affiliation ?",
+        answer:
+          "Le CPM paie un montant fixe garanti pour 1 000 téléchargements, quel que soit le nombre d'achats. L'affiliation verse une commission variable uniquement quand un auditeur clique sur votre lien ou utilise votre code promo pour acheter.",
+      },
+      {
+        question: "Comment concevoir un kit média d'une page efficace ?",
+        answer:
+          "Limitez-vous à une seule page claire. Présentez le logo, la bio de l'hôte, le profil précis de l'auditeur type, la moyenne des écoutes à 30 jours, les formats publicitaires et une adresse de contact directe. Évitez les chiffres trompeurs comme le total cumulé historique.",
+      },
+      {
+        question: "Faut-il privilégier Patreon ou Apple Podcasts Subscriptions ?",
+        answer:
+          "Les deux ont des atouts. Apple Subscriptions permet un achat en un clic dans l'application native (Apple prélève 15 à 30 %). Patreon vous donne accès direct aux adresses email de vos soutiens et fonctionne sur toutes les applications de lecture.",
+      },
+    ],
+  },
+  "podcast-topic-ideas": {
+    metaTitle: "100 Idées de Sujets et Épisodes de Podcast | Pod Studio",
+    readMinutes: 9,
+    sections: [
+      {
+        heading: "Comment Valider une Idée Avant d'Enregistrer",
+        paragraphs: [
+          "Avant de passer des heures sur votre conducteur et l'enregistrement, testez votre idée avec ces 3 questions :",
+          "1. Ce sujet résout-il un problème concret ou répond-il à une question urgente de mon auditeur type ?",
+          "2. Ai-je un point de vue à contre-courant, une anecdote personnelle ou un invité capable d'apporter une vraie valeur ajoutée ?",
+          "3. Puis-je résumer le thème dans un titre percutant de moins de 60 caractères qui incite au clic dans les applications ?",
+        ],
+      },
+      {
+        heading: "Construire un Calendrier Éditorial à 90 Jours",
+        paragraphs: [
+          "Pour éviter l'épuisement créatif, organisez vos thèmes en saisons de 12 semaines. Alternez entre épisodes solo d'expertise, interviews approfondies et sessions de questions-réponses pour préserver un rythme de production serein.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Comment savoir si une idée mérite un épisode complet ?",
+        answer:
+          "Une idée est suffisamment solide si vous pouvez dégager au moins trois sous-points distincts, illustrer avec un cas concret ou une histoire vécue et formuler un enseignement pratique. Si vous n'avez qu'un conseil rapide, intégrez-le comme rubrique de 5 minutes plutôt qu'en épisode entier.",
+      },
+      {
+        question: "Comment trouver de nouvelles idées de podcast chaque semaine ?",
+        answer:
+          "Parcourez les commentaires sous les vidéos YouTube populaires de votre domaine, observez les questions récurrentes sur Reddit ou les forums spécialisés, et invitez vos auditeurs à vous soumettre leurs questions par message vocal.",
+      },
+      {
+        question: "Les épisodes doivent-ils toujours rester cantonnés à une seule niche ?",
+        answer:
+          "Pendant vos 50 premiers épisodes, restez strictement concentré sur votre thématique principale pour fidéliser votre cible. Une fois la relation de confiance établie, vous pourrez ouvrir progressivement vers des sujets périphériques.",
+      },
+      {
+        question: "Qu'est-ce qui rend une rubrique récurrente mémorable ?",
+        answer:
+          "Une excellente rubrique dispose d'un nom percutant, d'un jingle sonore identifiable, d'une durée stricte (moins de 3 à 5 minutes) et d'un déroulé régulier que les auditeurs attendent avec impatience.",
+      },
+    ],
+  },
+  "how-to-start-a-podcast": {
+    metaTitle: "Comment Créer un Podcast en 2026 : Le Guide | Pod Studio",
+    readMinutes: 12,
+    sections: [
+      {
+        heading: "Configurer l'Hébergement et la Distribution du Podcast",
+        paragraphs: [
+          "Dès que vous choisissez un hébergeur dédié comme Buzzsprout, Libsyn ou Podbean, la plateforme génère automatiquement l'URL de votre flux RSS. Vous déposez ce lien une seule fois dans Apple Podcasts Connect et Spotify for Podcasters.",
+          "Chaque nouvel épisode publié sur votre hébergeur sera ensuite répercuté automatiquement dans les applications d'écoute sous quelques heures, sans aucune manipulation manuelle supplémentaire.",
+        ],
+      },
+      {
+        heading: "Le Plan de Promotion des 30 Premiers Jours",
+        paragraphs: [
+          "Le jour du lancement n'est que la première étape. Durant le premier mois, concentrez-vous sur la transformation de vos premiers auditeurs en abonnés réguliers :",
+        ],
+        list: [
+          {
+            title: "Mobilisation du Premier Cercle",
+            description: "Envoyez un message direct à vos proches et collègues pour les inviter à écouter, s'abonner et laisser un premier avis sur Apple Podcasts.",
+          },
+          {
+            title: "Kit de Partage pour les Invités",
+            description: "Fournissez à chaque intervenant des extraits vidéo verticaux, des citations visuelles et des textes prêts à poster le matin de la diffusion.",
+          },
+          {
+            title: "Promotion Croisée",
+            description: "Intervenez comme invité dans 2 ou 3 autres podcasts de votre univers pour vous faire connaître directement auprès d'amateurs d'audio.",
+          },
+        ],
+      },
+      {
+        heading: "Les Pièges Fréquents Qui Découragent les Débutants",
+        paragraphs: [
+          "Évitez les erreurs responsables de l'arrêt de 70 % des podcasts : passer des semaines à hésiter sur un micro en oubliant l'acoustique de la pièce, publier de façon désordonnée, numéroter les titres d'épisodes et baisser les bras avant la 25e émission.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Combien coûte le lancement d'un podcast en 2026 ?",
+        answer:
+          "Vous pouvez démarrer avec une qualité professionnelle pour moins de 150 €. Un micro dynamique USB fiable (comme l'Audio-Technica ATR2100x) coûte environ 79 €, un casque de monitoring 40 €, le logiciel de montage (Audacity) est gratuit et l'hébergement coûte entre 12 et 15 € par mois.",
+      },
+      {
+        question: "Peut-on créer un podcast uniquement avec son smartphone ?",
+        answer:
+          "Oui, certaines applications permettent d'enregistrer sur mobile. Toutefois, pour fidéliser une audience sur la durée, l'usage d'un vrai micro USB branché à un ordinateur dans un environnement calme apporte un gain de clarté sonore déterminant.",
+      },
+      {
+        question: "Avec combien d'épisodes faut-il lancer son émission ?",
+        answer:
+          "L'idéal est de mettre en ligne votre bande-annonce plus 3 épisodes complets le premier jour. Lorsqu'un auditeur découvre et apprécie votre premier épisode, en avoir deux autres disponibles immédiatement favorise l'écoute en rafale et l'abonnement immédiat.",
+      },
+      {
+        question: "Combien de temps prend la validation sur Apple Podcasts ?",
+        answer:
+          "La vérification par Apple Podcasts prend en général entre 24 heures et 5 jours ouvrés. Soumettez votre flux RSS au moins une à deux semaines avant votre date de lancement officielle pour éviter toute mauvaise surprise.",
+      },
+      {
+        question: "Quelle est la principale erreur des débutants en podcast ?",
+        answer:
+          "Le manque de régularité. Sauter des semaines désoriente les habitudes des auditeurs et pousse les algorithmes des plateformes à moins recommander votre émission. La constance de parution l'emporte toujours sur la recherche de la perfection.",
       },
     ],
   },

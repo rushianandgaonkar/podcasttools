@@ -23,6 +23,8 @@ export interface GuideDefinition {
   description: string;
   readTime: string;
   publishedAt: string;
+  /** ISO date of the last substantive content update; falls back to publishedAt */
+  updatedAt?: string;
   category: string;
 }
 
@@ -83,16 +85,16 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: "episode-title-generator",
     slug: "episode-title-generator",
-    title: "Podcast Episode Title Generator",
+    title: "Podcast Title Generator",
     shortTitle: "Episode Title Generator",
     description:
       "Generate high-CTR, click-worthy podcast episode titles using tested psychological formulas and audience hooks.",
     longDescription:
-      "Stuck on naming your podcast episode? Enter your topic, guest name, and episode format to instantly produce 30+ clickable, searchable titles tested for high listener conversion across Apple Podcasts and Spotify.",
+      "Stuck on naming your podcast episode? Enter your topic, guest name, and episode format to instantly produce 15+ clickable, searchable titles tested for high listener conversion across Apple Podcasts and Spotify.",
     category: "ideation",
     categoryLabel: "Ideation & Branding",
-    primaryKeyword: "podcast episode title generator",
-    secondaryKeywords: ["podcast episode title ideas", "podcast title formulas", "catchy episode names"],
+    primaryKeyword: "podcast title generator",
+    secondaryKeywords: ["podcast episode title generator", "podcast episode title ideas", "podcast title formulas"],
     searchIntent: "podcast episode title ideas",
     status: "available",
     icon: "Sparkles",
@@ -111,8 +113,8 @@ export const toolRegistry: ToolDefinition[] = [
       "Turn your episode details into clean Markdown, HTML, or plain text show notes ready to paste into Libsyn, Buzzsprout, Podbean, Spotify for Podcasters, or your website.",
     category: "content",
     categoryLabel: "Content & Scripting",
-    primaryKeyword: "podcast show notes generator",
-    secondaryKeywords: ["podcast show notes template", "how to write podcast show notes", "podcast show notes format"],
+    primaryKeyword: "podcast show notes template",
+    secondaryKeywords: ["podcast show notes generator", "how to write podcast show notes", "podcast show notes format"],
     searchIntent: "podcast show notes template",
     status: "available",
     icon: "FileText",
@@ -143,7 +145,7 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: "episode-outline-builder",
     slug: "episode-outline-builder",
-    title: "Podcast Episode Outline Builder",
+    title: "Podcast Script Template & Episode Outline Builder",
     shortTitle: "Episode Outline Builder",
     description:
       "Structure your episode with an interactive run-of-show planner, segment timers, and talking point notes.",
@@ -151,8 +153,8 @@ export const toolRegistry: ToolDefinition[] = [
       "Never run out of things to say or lose control of pacing. Plan your hook, intro, core segments, ad breaks, Q&A, and outro with live time budgeting.",
     category: "content",
     categoryLabel: "Content & Scripting",
-    primaryKeyword: "podcast episode outline",
-    secondaryKeywords: ["podcast script template", "podcast run of show", "interview outline structure"],
+    primaryKeyword: "podcast script template",
+    secondaryKeywords: ["podcast episode outline", "podcast run of show", "podcast outro script"],
     searchIntent: "podcast episode outline",
     status: "available",
     icon: "ListOrdered",
@@ -163,7 +165,7 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: "guest-question-generator",
     slug: "guest-question-generator",
-    title: "Podcast Interview Question Generator",
+    title: "Podcast Interview Questions Generator",
     shortTitle: "Guest Question Generator",
     description:
       "Generate deep, engaging podcast interview questions categorized by icebreakers, career breakthroughs, tactical secrets, and hot takes.",
@@ -171,8 +173,8 @@ export const toolRegistry: ToolDefinition[] = [
       "Avoid asking the same boring questions your guest has answered on 10 other podcasts. Generate customized interview arcs that unlock untold stories and actionable insights.",
     category: "ideation",
     categoryLabel: "Ideation & Branding",
-    primaryKeyword: "podcast interview questions generator",
-    secondaryKeywords: ["podcast interview questions", "deep interview questions", "guest interview prep"],
+    primaryKeyword: "podcast interview questions",
+    secondaryKeywords: ["podcast interview questions generator", "questions to ask podcast guests", "guest interview prep"],
     searchIntent: "podcast interview questions",
     status: "available",
     icon: "HelpCircle",
@@ -183,7 +185,7 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: "monetization-calculator",
     slug: "monetization-calculator",
-    title: "Podcast Sponsorship & Monetization Calculator",
+    title: "Podcast Income Calculator",
     shortTitle: "Monetization Calculator",
     description:
       "Calculate potential ad revenue based on download numbers, episode frequency, and 2026 industry CPM rates.",
@@ -191,9 +193,9 @@ export const toolRegistry: ToolDefinition[] = [
       "Estimate your monthly and annual podcast revenue with realistic industry CPM rates for Pre-roll ($15-$18), Mid-roll ($25-$32), and Post-roll ($10-$14), plus dynamic host-read vs programmatic models.",
     category: "growth",
     categoryLabel: "Growth & Monetization",
-    primaryKeyword: "podcast sponsorship calculator",
-    secondaryKeywords: ["podcast monetization calculator", "podcast ad revenue calculator", "podcast CPM calculator"],
-    searchIntent: "podcast sponsorship calculator",
+    primaryKeyword: "podcast income calculator",
+    secondaryKeywords: ["how much do podcasts make", "podcast cpm calculator", "podcast sponsorship calculator"],
+    searchIntent: "podcast income calculator",
     status: "available",
     icon: "DollarSign",
     badge: "Financial",
@@ -203,7 +205,7 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: "cover-art-preview",
     slug: "cover-art-preview",
-    title: "Podcast Cover Art Preview & Size Checker",
+    title: "Podcast Cover Art Size Checker & Preview",
     shortTitle: "Cover Art Preview",
     description:
       "Test how your podcast cover art looks at Apple Podcasts and Spotify thumbnails, dark/light modes, and mobile lock screens.",
@@ -252,7 +254,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: "technical",
     categoryLabel: "Audio & Technical",
     primaryKeyword: "podcast timestamp format",
-    secondaryKeywords: ["podcast timestamp generator", "youtube podcast chapters", "podcast chapter markers"],
+    secondaryKeywords: ["podcast timestamp generator", "youtube chapters generator", "youtube podcast chapters", "podcast chapter markers"],
     searchIntent: "podcast timestamp format",
     status: "available",
     icon: "Clock",
@@ -271,7 +273,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: "content",
     categoryLabel: "Content & Scripting",
     primaryKeyword: "podcast intro script",
-    secondaryKeywords: ["podcast intro generator", "podcast script template", "how to start a podcast intro"],
+    secondaryKeywords: ["podcast intro examples", "podcast intro generator", "how to start a podcast intro"],
     searchIntent: "podcast intro script",
     status: "available",
     icon: "Headphones",
@@ -316,7 +318,7 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: "category-finder",
     slug: "category-finder",
-    title: "Apple Podcasts & Spotify Category Finder",
+    title: "Apple Podcast Categories & Spotify Category Finder",
     shortTitle: "Category Finder",
     description:
       "Explore official Apple Podcasts taxonomy and subcategories to find low-competition genres where your show can rank.",
@@ -324,9 +326,9 @@ export const toolRegistry: ToolDefinition[] = [
       "Search the complete Apple Podcasts category and subcategory hierarchy. Discover which primary and secondary categories maximize your discoverability on directory charts.",
     category: "technical",
     categoryLabel: "Audio & Technical",
-    primaryKeyword: "best podcast category apple",
-    secondaryKeywords: ["apple podcast categories", "podcast category list", "spotify podcast genres"],
-    searchIntent: "best podcast category Apple",
+    primaryKeyword: "apple podcast categories",
+    secondaryKeywords: ["podcast category list", "best podcast category apple", "spotify podcast genres"],
+    searchIntent: "apple podcast categories",
     status: "available",
     icon: "FolderSearch",
     image: "/images/tools/podcasttools_13_apple-spotify-category-finder-lg.webp",
@@ -352,7 +354,7 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: "transcript-formatter",
     slug: "transcript-formatter",
-    title: "Podcast Transcript Formatter & Cleaner",
+    title: "Podcast Transcript Formatter",
     shortTitle: "Transcript Formatter",
     description:
       "Clean raw automated AI audio transcripts into formatted paragraphs with speaker tags, timestamps, and readability improvements.",
@@ -426,27 +428,66 @@ export const toolRegistry: ToolDefinition[] = [
 export const guidesRegistry: GuideDefinition[] = [
   {
     slug: "podcast-sponsorship-cpm-guide-2026",
-    title: "Podcast Sponsorship & CPM Guide (2026 Benchmarks)",
-    description: "Everything you need to know about pre-roll, mid-roll, host-read ads, dynamic insertion, and industry CPM benchmarks.",
-    readTime: "5 min read",
+    title: "Podcast Ad Rates & CPM Benchmarks (2026)",
+    description: "Learn current podcast ad rates and industry CPM benchmarks for 2026. Explore pricing for pre-roll, mid-roll, and host-read sponsorships. Free complete guide.",
+    readTime: "6 min read",
     publishedAt: "2026-10-15",
+    updatedAt: "2026-11-06",
     category: "Monetization",
   },
   {
     slug: "apple-spotify-cover-art-specs-guide",
     title: "Apple Podcasts & Spotify Cover Art Specs: The Definitive Checklist",
-    description: "Master dimensions, color profile, safe zones, text hierarchy, and why 3000x3000px square art is required.",
+    description: "Complete podcast cover art size requirements for Apple Podcasts and Spotify. Master 3000x3000px dimensions, color profiles, and safe zones. Free checklist.",
     readTime: "5 min read",
     publishedAt: "2026-10-18",
+    updatedAt: "2026-11-06",
     category: "Design",
   },
   {
     slug: "how-to-write-clickable-episode-titles",
     title: "How to Write Podcast Episode Titles That Actually Get Clicks",
-    description: "Proven formulas for podcast episode titles that stand out in Apple Podcasts and Spotify — with examples, search tips and the mistakes to avoid.",
+    description: "Master 12 psychological formulas to write podcast episode titles that get clicks on Apple Podcasts and Spotify. Boost downloads and retention. Free guide.",
     readTime: "5 min read",
     publishedAt: "2026-10-22",
+    updatedAt: "2026-11-05",
     category: "Marketing",
+  },
+  {
+    slug: "how-much-do-podcasts-make",
+    title: "How Much Do Podcasts Make? Real Numbers by Audience Size",
+    description: "Discover how much podcasts make in 2026. Explore real ad CPM revenue, listener subscriptions, sponsorships, and earnings by download size. Free creator guide.",
+    readTime: "8 min read",
+    publishedAt: "2026-11-06",
+    updatedAt: "2026-11-06",
+    category: "Monetization",
+  },
+  {
+    slug: "how-to-monetize-a-podcast",
+    title: "How to Monetize a Podcast (and Get Your First Sponsor)",
+    description: "Learn how to monetize a podcast and land your first sponsor. Master 8 proven revenue streams, rate cards, and sponsor pitch templates.",
+    readTime: "8 min read",
+    publishedAt: "2026-11-06",
+    updatedAt: "2026-11-06",
+    category: "Monetization",
+  },
+  {
+    slug: "podcast-topic-ideas",
+    title: "Podcast Topic Ideas, Episode Ideas & Segment Ideas",
+    description: "Explore 100 podcast topic ideas, episode concepts, and segment formats across popular niches. Break creative blocks and hook listeners.",
+    readTime: "9 min read",
+    publishedAt: "2026-11-06",
+    updatedAt: "2026-11-06",
+    category: "Content",
+  },
+  {
+    slug: "how-to-start-a-podcast",
+    title: "How to Start a Podcast: A Step-by-Step Guide",
+    description: "Step-by-step guide on how to start a podcast in 2026. Learn concept planning, equipment, recording, hosting, RSS feeds, and directory distribution.",
+    readTime: "12 min read",
+    publishedAt: "2026-11-06",
+    updatedAt: "2026-11-06",
+    category: "Production",
   },
 ];
 

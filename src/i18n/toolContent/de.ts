@@ -2,363 +2,692 @@ import type { ToolContentRecord } from "./types";
 
 export const deToolContent: ToolContentRecord = {
   "episode-title-generator": {
-    metaTitle: "Kostenloser Podcast-Episodentitel-Generator | Pod Studio",
+    metaTitle: "Kostenloser Podcast-Titel-Generator | Pod Studio",
     metaDescription:
-      "Machen Sie aus Ihrem Episodenthema Dutzende klare, klickstarke Titel. Nach Stil filtern – Neugier, How-to, Gegenthese – und Favoriten kopieren. Kostenlos.",
+      "Erstelle klickstarke Folgentitel mit unserem kostenlosen Podcast-Titel-Generator. Formeln für Neugier, How-To und Gäste für Apple und Spotify. Gratis.",
     overview: [
-      "Der Episodentitel-Generator macht aus einem Thema – und optional einem Gastnamen – eine lange Liste von Titelideen nach bewährten Mustern: How-to-Versprechen, Neugier-Lücken, Gegenthesen, Zahlenlisten und gastzentrierte Hooks.",
-      "Er ist für Hosts gedacht, die wissen, worum es in der Folge geht, aber nicht, wie sie es sagen sollen. Probieren Sie schnell verschiedene Blickwinkel aus und wählen Sie den Titel, der die Folge ehrlich beschreibt und auf dem Smartphone gut lesbar ist.",
+      "Der Podcast-Titel-Generator verwandelt das Thema deiner Episode und den Namen eines Gastes in klickstarke Titelideen, basierend auf psychologisch bewährten Mustern: Neugier-Gaps, konkrete How-To-Versprechen und pointierte Gegenthesen.",
+      "Entwickelt für Hosts, die genau wissen, worum es in der Folge geht, aber nach prägnanten Titeln suchen, die auf Smartphone-Bildschirmen in Apple Podcasts und Spotify sofort ins Auge fallen.",
     ],
     steps: [
-      { title: "Folge beschreiben", text: "Geben Sie das Hauptthema in wenigen Worten ein, z. B. „Budgetplanung für Freelancer“ oder „die ersten 100 Abonnenten“." },
-      { title: "Gast hinzufügen (optional)", text: "Nennen Sie Namen oder Fachgebiet des Gastes, wenn er der Hauptgrund zum Zuhören ist." },
-      { title: "Nach Stil filtern", text: "Wechseln Sie zwischen Neugier-, How-to-, Gegenthese- und weiteren Formeln, um Blickwinkel zu vergleichen." },
-      { title: "Kopieren oder exportieren", text: "Kopieren Sie einen Titel oder exportieren Sie die ganze Liste als Textdatei für Ihr Team." },
+      { title: "Beschreibe die Folge", text: "Gib das Hauptthema in wenigen Worten ein, etwa «Budget für Freelancer» oder «Die ersten 100 Abonnenten»." },
+      { title: "Gast ergänzen (optional)", text: "Füge den Namen oder die Expertise des Gastes hinzu, wenn dieser der Hauptgrund zum Einschalten ist." },
+      { title: "Nach Stil filtern", text: "Wechsle zwischen Neugier-, How-To-, Contrarian- und Listen-Formeln, um verschiedene Blickwinkel zu vergleichen." },
+      { title: "Kopieren oder exportieren", text: "Kopiere einzelne Favoriten oder exportiere die Titelauswahl als Textdatei für dein Team." },
     ],
     tips: [
-      "Setzen Sie die konkretesten, suchbaren Wörter in die erste Titelhälfte – Podcast-Apps schneiden das Ende oft ab.",
-      "Versprechen Sie nur, was die Folge hält. Ehrliche Titel sorgen für mehr Durchhörer und weniger schlechte Bewertungen.",
-      "Lassen Sie Episodennummer und Showname weg, sofern Ihre Hörer sie nicht brauchen.",
+      "Platziere die wichtigsten Suchbegriffe in der ersten Hälfte des Titels – viele Podcast-Apps kürzen nach 60 Zeichen ab.",
+      "Versprich nur, was die Folge auch hält. Treffende Titel sorgen für längere Hörzeiten und bessere Bewertungen.",
+      "Lass Folgennummern und den Podcast-Namen weg, sofern deine Hörer nicht zwingend darauf angewiesen sind.",
     ],
   },
   "show-notes-generator": {
-    metaTitle: "Podcast-Shownotes-Generator & Vorlage | Pod Studio",
+    metaTitle: "Podcast-Show-Notes-Generator & Vorlage | Pod Studio",
     metaDescription:
-      "Erstellen Sie saubere Shownotes mit Zusammenfassung, Gast, Zeitstempeln, Kernaussagen und Links. Export als Markdown, HTML oder Text. Kostenlos.",
+      "Erstelle strukturierte Folgentexte mit einer kostenlosen Podcast-Show-Notes-Vorlage. Exportiere Zusammenfassungen, Zeitstempel, Gäste-Infos und Links. Gratis.",
     overview: [
-      "Der Show-Notes-Generator ordnet Ihre Episodendetails zu gut strukturierten Shownotes: kurze Zusammenfassung, Gast, Kapitel mit Zeitstempeln, Kernaussagen und erwähnte Ressourcen.",
-      "Die Ausgabe gibt es als Markdown, HTML oder reinen Text – direkt einfügbar bei Buzzsprout, Libsyn, Podbean, Spotify for Creators, YouTube oder auf Ihrer Website, ohne neu zu formatieren.",
+      "Der Show-Notes-Generator strukturiert alle Angaben deiner Aufnahme in professionelle, suchmaschinenoptimierte Episoden-Texte: Folgen-Zusammenfassung, Gast-Kurzbiografie, Zeitstempel-Kapitel und Link-Listen.",
+      "Die Ausgabe erfolgt wahlweise als Markdown, HTML oder reiner Text – bereit zum direkten Einfügen in Buzzsprout, Libsyn, Podbean, Spotify for Podcasters, YouTube oder deine eigene Website.",
     ],
     steps: [
-      { title: "Grunddaten eintragen", text: "Geben Sie den Episodentitel und eine Zusammenfassung in ein, zwei Sätzen ein, die zum Zuhören motiviert." },
-      { title: "Gäste und Kapitel ergänzen", text: "Tragen Sie die Gäste ein und fügen Sie Zeitstempel im Format „00:00 Thema“ zeilenweise ein." },
-      { title: "Kernaussagen und Links", text: "Notieren Sie die wichtigsten Learnings sowie erwähnte Bücher, Tools oder Websites." },
-      { title: "Format wählen und kopieren", text: "Wählen Sie Markdown, HTML oder Text passend zu Ihrem Hoster und kopieren Sie die fertigen Notes." },
+      { title: "Grunddaten eintragen", text: "Gib den Episodentitel und eine Zusammenfassung ein, die den Hörer-Mehrwert auf den Punkt bringt." },
+      { title: "Gäste & Kapitel ergänzen", text: "Trage Gäste ein und füge Zeitstempel im Format «00:00 Thema» zeilenweise ein." },
+      { title: "Takeaways & Links festhalten", text: "Notiere die wichtigsten Erkenntnisse sowie erwähnte Bücher, Tools oder Websites." },
+      { title: "Format wählen & kopieren", text: "Wähle Markdown, HTML oder Plain Text passend zu deinem Hoster und kopiere die fertigen Notizen." },
     ],
     tips: [
-      "Schreiben Sie den ersten Satz für Menschen und Suchmaschinen – ihn zeigen die meisten Apps vor „mehr“.",
-      "Nehmen Sie nur Zeitstempel auf, die Sie am finalen Schnitt geprüft haben; falsche Kapitel frustrieren.",
-      "Nutzen Sie jede Woche dieselbe Struktur, damit Stammhörer Links schnell finden.",
+      "Formuliere den ersten Satz für Menschen und Suchmaschinen gleichermaßen – er ist der sichtbare Teil vor dem «Mehr»-Button.",
+      "Verwende nur Zeitstempel, die du mit dem finalen Master abgeglichen hast; falsche Kapitelangaben frustrieren Hörer.",
+      "Behalte jede Woche dieselbe Struktur bei, damit Stammhörer empfohlene Ressourcen sofort finden.",
+    ],
+    sections: [
+      {
+        heading: "Podcast-Show-Notes-Vorlage",
+        intro: "Klare, suchmaschinenoptimierte Notizen helfen deinen Hörern und bieten Suchmaschinen wertvollen Text zum Indexieren:",
+        template: `# Episodentitel: Hörerwachstum meistern im Jahr 2026
+
+## Episoden-Zusammenfassung
+In dieser Folge sprechen wir mit der Audio-Strategin Elena Rostova über aktuelle Benchmarks der Hörerbindung. Elena erklärt, warum wöchentliche Verlässlichkeit kurzfristige Social-Media-Hypes schlägt, wie du Kapitelmarken für maximale Durchhörquoten setzt und welche Kennzahlen Werbepartner bei Sponsoring-Anfragen wirklich sehen wollen.
+
+## Zeitstempel & Kapitel
+- [00:00] Teaser & Themenüberblick
+- [02:15] Elenas Werdegang in der Audioproduktion
+- [07:45] Die 30-Sekunden-Regel für den Erhalt der Aufmerksamkeit
+- [14:20] Die Bepreisung deiner ersten Sponsor-Platzierung
+- [23:10] Häufige SEO-Fehler in Show Notes vermeiden
+- [31:00] Schnellfragerunde & abschließende Gedanken
+
+## Zentrale Erkenntnisse
+1. Fessele Hörer mit einem konkreten Nutzenversprechen in den ersten 30 Sekunden.
+2. Strukturiere Show Notes mit klaren Zeitstempel-Überschriften, um Suchmaschinen-Rankings zu verbessern.
+3. Vom Host persönlich gelesene Mid-Roll-Ads erzielen über 85 % Hörer-Aufmerksamkeit im Vergleich zu programmatischer Werbung.
+
+## In dieser Folge erwähnt
+- Buch: *Sound Reporting: The NPR Guide to Audio Journalism*
+- Tool: Pod Studio Episoden-Ablauf-Planer
+- Vernetze dich mit Elena: @elenaaudio auf LinkedIn & Twitter
+
+## Unterstütze die Show
+Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung auf Apple Podcasts und folge uns auf Spotify!`,
+      },
     ],
   },
   "podcast-name-generator": {
     metaTitle: "Kostenloser Podcast-Namen-Generator | Pod Studio",
     metaDescription:
-      "Finden Sie einprägsame Podcast-Namen nach Nische, Thema und Markenstil. Erstellen Sie eine Shortlist und prüfen Sie Domains und Marken selbst. Kostenlos.",
+      "Finde einprägsame Podcast-Namen-Ideen nach Genre mit unserem kostenlosen Podcast-Namen-Generator. Prüfe Verfügbarkeit und Marken unkompliziert. Gratis.",
     overview: [
-      "Der Podcast-Namen-Generator schlägt Shownamen auf Basis Ihrer Nische, eines optionalen eigenen Worts oder Themas und des gewünschten Markenstils vor – von klar und auffindbar bis verspielt und markenstark.",
-      "Es ist ein Brainstorming-Tool: Domain- oder Markenverfügbarkeit wird nicht geprüft. Erstellen Sie eine Shortlist und prüfen Sie den Namen vor der Ankündigung bei einem Domain-Registrar, in Podcast-Verzeichnissen und per Markenrecherche.",
+      "Der Podcast-Namen-Generator liefert dir einprägsame Podcast-Namen-Ideen nach Genre, Themenstichworten und gewünschtem Markenton – von klar und suchbar bis hin zu originell und autoritär.",
+      "Nutze diese Podcast-Namen-Ideen, um eine aussagekräftige Favoritenliste zu erstellen, und überprüfe anschließend die Verfügbarkeit in Apple Podcasts, Spotify und Domain-Verzeichnissen vor der offiziellen Ankündigung.",
     ],
     steps: [
-      { title: "Nische wählen", text: "Wählen Sie das passende Genre, etwa Tech, Finanzen, True Crime oder Persönlichkeitsentwicklung." },
-      { title: "Eigenes Wort (optional)", text: "Geben Sie ein Wort oder Thema ein, das im Namen vorkommen soll – ein Thema, Ort oder wiederkehrende Idee." },
-      { title: "Stil wählen und vormerken", text: "Wechseln Sie den Markenstil und merken Sie sich drei bis fünf Namen, die Sie jede Folge gern aussprechen würden." },
-      { title: "Vor dem Start prüfen", text: "Suchen Sie bei Apple Podcasts und Spotify nach Dubletten und prüfen Sie Domain und Social-Handles selbst." },
+      { title: "Genre auswählen", text: "Wähle die passende Kategorie: Tech, Finanzen, True Crime, persönliche Weiterentwicklung und mehr." },
+      { title: "Wunschbegriff ergänzen (optional)", text: "Gib ein Wort oder Motiv ein, das im Titel vorkommen soll: ein Ort, ein Kernbegriff oder ein Fachgebiet." },
+      { title: "Stil wählen & favorisieren", text: "Wechsle zwischen Marken-Stilen und sichere dir drei bis fünf Namen, die du in jeder Episode gerne aussprichst." },
+      { title: "Vor dem Launch prüfen", text: "Suche auf Apple Podcasts und Spotify nach Duplikaten und prüfe Webdomains und Social-Media-Handles." },
     ],
     tips: [
-      "Sprechen Sie jeden Namen laut aus – wer ihn nach einmal Hören nicht schreiben kann, empfiehlt ihn seltener weiter.",
-      "Ein klares Themenwort hilft neuen Hörern, Sie in der Podcast-Suche zu finden.",
-      "Vermeiden Sie Namen, die an einen Trend oder eine Jahreszahl gebunden sind – der Name soll auch in Folge 200 passen.",
+      "Sprich jeden Namen laut aus: Wenn Hörer ihn nach einmaligem Hören nicht fehlerfrei tippen können, leidet die Weiterempfehlung.",
+      "Ein klarer Fachbegriff im Titel hilft neuen Hörern, deine Sendung in der Podcast-Suche zu entdecken.",
+      "Vermeide Namen, die an Jahreszahlen oder kurzlebige Trends gebunden sind; der Titel soll auch in Folge 200 noch passen.",
+    ],
+    sections: [
+      {
+        heading: "Podcast-Namen-Ideen nach Genre",
+        intro: "Auf der Suche nach kreativen Podcast-Namen-Ideen? Entdecke diese kuratierten Titelkonzepte nach Themenfeldern:",
+        groups: [
+          {
+            category: "Business & Startups",
+            items: [
+              "Der Bootstrapped Gründer",
+              "Skalieren mit System",
+              "Von Null zur Seed-Runde",
+              "Marktmacher Podcast",
+            ],
+          },
+          {
+            category: "True Crime & Kriminalfälle",
+            items: [
+              "Ungelöst & Verschwiegen",
+              "Cold-Case-Chroniken",
+              "Hinter dem Absperrband",
+              "Im Schatten des Zweifels",
+            ],
+          },
+          {
+            category: "Comedy & Gesellschaft",
+            items: [
+              "Niemand Hat Gefragt",
+              "Leicht Zynisch",
+              "Mit Humor Genommen",
+              "Der Alltägliche Wahnsinn",
+            ],
+          },
+          {
+            category: "Gesundheit & Wohlbefinden",
+            items: [
+              "Körper & Geist Protokoll",
+              "Die Langlebigkeits-Formel",
+              "Ursachen-Forschung Radio",
+              "Das Vitalitäts-Labor",
+            ],
+          },
+          {
+            category: "Technologie & Künstliche Intelligenz",
+            items: [
+              "Prompt & Paradigma",
+              "Der Neuronale Wandel",
+              "Silizium & Code",
+              "Zukunftssicher",
+            ],
+          },
+          {
+            category: "Glaube & Spiritualität",
+            items: [
+              "Stille & Einkehr",
+              "Der Pilgerpfad",
+              "Verwurzelt Leben",
+              "Glaube im Alltag",
+            ],
+          },
+        ],
+      },
     ],
   },
   "episode-outline-builder": {
-    metaTitle: "Podcast-Ablaufplan & Run-of-Show-Planer | Pod Studio",
+    metaTitle: "Podcast-Skript-Vorlage & Ablauf-Planer | Pod Studio",
     metaDescription:
-      "Erstellen Sie einen getimten Podcast-Ablaufplan mit Cold Open, Intro, Segmenten, Sponsoring und Outro. So bleibt die Aufnahme im Zeitplan. Kostenlose Vorlage.",
+      "Strukturiere deine Show mit einer kostenlosen Podcast-Skript-Vorlage und Ablauf-Planer. Plane Segmente, Werbepausen, Timecodes und Leitfäden. Gratis.",
     overview: [
-      "Der Ablauf-Planer erstellt einen getimten Run of Show: einen Produktionsfahrplan mit jedem Segment, seiner ungefähren Startzeit und der geplanten Länge.",
-      "So sind Host, Gast und Produktion bei Musikakzenten, Sponsor-Reads, Interviewblöcken und Calls to Action synchron – ohne jedes Wort zu skripten.",
+      "Der Episoden-Ablauf-Planer erstellt einen getakteten Sendeplan für deine Aufnahmen: Ordne Gesprächszeit für Teaser, Intromusik, Themenschwerpunkte, Sponsoren-Einblendungen und Call-to-Actions übersichtlich an.",
+      "Er hilft Moderatoren, Co-Hosts und Produzenten, das Sendetempo zu halten und verlässliche Episodenlängen zu erreichen, ohne jedes einzelne Wort ausformulieren zu müssen.",
     ],
     steps: [
-      { title: "Folge benennen", text: "Geben Sie einen Arbeitstitel ein, damit Sie den Ablauf später wiederfinden." },
-      { title: "Ziel-Länge festlegen", text: "Tragen Sie die Gesamtdauer in Minuten ein und sehen Sie, wie sich die Segmentzeiten summieren." },
-      { title: "Segmente bearbeiten", text: "Passen Sie Cold Open, Intro, Hauptteile, Mid-Roll-Pause und Outro an oder fügen Sie welche hinzu – mit Notizen." },
-      { title: "Ablauf exportieren", text: "Exportieren Sie den Plan als Markdown und schicken Sie ihn vor der Aufnahme an Gast oder Produktion." },
+      { title: "Episode benennen", text: "Trage einen Arbeitstitel ein, damit der Sendeplan später eindeutig zugeordnet werden kann." },
+      { title: "Ziel-Dauer festlegen", text: "Gib die geplante Gesamtdauer in Minuten ein, um zu sehen, wie sich die Abschnitte addieren." },
+      { title: "Blöcke bearbeiten", text: "Passe Kaltstart, Intro, Hauptteile, Werbeinseln und Outro an und hinterlege kurze Stichpunkte." },
+      { title: "Ablauf exportieren", text: "Exportiere den Ablauf als Markdown und sende ihn vor der Aufnahme an Gast oder Toningenieur." },
     ],
     tips: [
-      "Planen Sie das Mid-Roll-Sponsoring an einer natürlichen Pause, etwa nach einem Drittel bis zur Hälfte der Folge.",
-      "Lassen Sie ein paar Minuten Puffer für Abschweifungen – die besten Momente sind oft ungeplant.",
-      "Schicken Sie Gästen den Ablauf vorab, damit sie Geschichten vorbereiten, nicht nur Antworten.",
+      "Platziere Mid-Roll-Sponsoren bei natürlichen Themenwechseln, etwa in der Mitte der Folge.",
+      "Plane einige Minuten Puffer für spontane Anekdoten ein – die besten Momente entstehen ungeplant.",
+      "Schicke Gästen den Ablauf vorab, damit sie konkrete Geschichten statt allgemeiner Antworten parat haben.",
+    ],
+    sections: [
+      {
+        heading: "Kostenlose Podcast-Skript-Vorlage",
+        intro: "Nutze diese modulare Podcast-Skript-Vorlage, um deine Aufnahmen professionell zu gliedern – ganz gleich ob für Solo-Episoden oder ausführliche Interviews:",
+        template: `[00:00 - 01:00] COLD OPEN / HOOK
+- Hook: Prägnantes Zitat, provokante These oder offene Frage, die Hörer sofort packt.
+- Episoden-Versprechen: "In der heutigen Folge erfährst du, wie..."
+
+[01:00 - 02:30] INTRO & PRE-ROLL-SPONSOR
+- Show-Jingle / Musikalischer Trenner
+- Begrüßung: Host-Vorstellung, Sendungs-Claim und kurzer Themenkontext.
+- Pre-Roll-Sponsor (15-30s): "Diese Episode wird unterstützt von..."
+
+[02:30 - 12:00] ABSCHNITT 1: DIE GRUNDLAGE & DAS PROBLEM
+- Ausgangssituation und Themenaufschlag.
+- Persönliche Anekdote oder Vorstellung des Interviewgastes.
+- Erste zentrale Erkenntnis #1.
+
+[12:00 - 13:30] MID-ROLL-WERBEBLOCK
+- Flüssige Überleitung: "Gleich geht es weiter mit der wichtigsten Lektion nach einem kurzen Hinweis..."
+- Mid-Roll-Sponsoren 1 & 2 (vom Host persönlich gelesene 60-Sekunden-Empfehlung mit Rabattcode).
+
+[13:30 - 25:00] ABSCHNITT 2: DER DEEP DIVE & DER DURCHBRUCH
+- Methodische Aufarbeitung: Schritte, Arbeitsrahmen oder Blick hinter die Kulissen.
+- Typische Fallstricke und kontraintuitive Erkenntnisse.
+- Zweite zentrale Erkenntnis #2.
+
+[25:00 - 35:00] ABSCHNITT 3: PRAKTISCHE UMSETZUNG & HÖRER-Q&A
+- Direkt umsetzbare Tipps für die Hörer.
+- Schnellfragerunde oder Beantwortung von Community-Sprachnachrichten.
+- Dritte zentrale Erkenntnis #3.
+
+[35:00 - 38:00] ZUSAMMENFASSUNG, CALL-TO-ACTION & OUTRO
+- 60-Sekunden-Zusammenfassung der wichtigsten Punkte.
+- Klarer Call-to-Action (CTA): "Abonniere die Show auf Spotify und bewerte uns auf Apple Podcasts."
+- Ausblick auf die nächste Episode.
+- Musikalisches Ausblenden.`,
+      },
     ],
   },
   "guest-question-generator": {
     metaTitle: "Podcast-Interviewfragen-Generator | Pod Studio",
     metaDescription:
-      "Erzeugen Sie Interviewfragen für jeden Gast: Eisbrecher, Werdegang, Fehler und Wendepunkte, Learnings und Schnellfragen. Kostenlos, ohne Anmeldung.",
+      "Erstelle fesselnde Podcast-Interviewfragen für jeden Gast. Eisbrecher, spannende Anekdoten, Wendepunkte und prägnante Schnellfragerunden. Kostenlos.",
     overview: [
-      "Der Interviewfragen-Generator baut einen vollständigen Interviewbogen: von Eisbrechern und dem Werdegang über Wendepunkte und Learnings bis zu Prognosen und einer Schnellfragerunde.",
-      "Geben Sie Namen, Beruf und Episodenthema ein und erhalten Sie eine passende Startliste, die Sie mit eigener Recherche verfeinern.",
+      "Der Podcast-Interviewfragen-Generator entwirft einen durchdachten Gesprächsbogen für deine Gäste-Interviews: von sympathischen Eisbrechern über persönliche Wendepunkte bis hin zu tiefgehenden Praxis-Frameworks und prägnanten Schnellfragerunden.",
+      "Gib Name, Fachgebiet und Folgenthema deines Gastes ein, um maßgeschneiderte Fragenkataloge zu generieren, die oberflächliche PR-Standardantworten umgehen und echte Insights zutage fördern.",
     ],
     steps: [
-      { title: "Gastdaten eingeben", text: "Tragen Sie Namen, Beruf oder Rolle des Gastes und das Hauptthema der Folge ein." },
-      { title: "Nach Phase filtern", text: "Filtern Sie Fragen nach Phase – Eisbrecher, Werdegang, Fehler & Pivot bis zum Abschluss." },
-      { title: "Bogen prüfen", text: "Behalten Sie Fragen, die Geschichten auslösen, statt Ein-Wort-Antworten." },
-      { title: "Vorbereitungsblatt kopieren", text: "Kopieren Sie das Blatt oder exportieren Sie es als Text und ergänzen Sie Nachfragen zur aktuellen Arbeit des Gastes." },
+      { title: "Gastdaten eingeben", text: "Trage Name, Berufsbezeichnung und das Kern-Thema der Episode ein." },
+      { title: "Nach Gesprächsphase filtern", text: "Strukturiere Fragen nach Phasen: Einstieg, Werdegang, Hürden und Schnellfragerunde." },
+      { title: "Gesprächsbogen prüfen", text: "Wähle Fragen aus, die lebhafte Geschichten statt knapper Ja/Nein-Antworten provozieren." },
+      { title: "Vorbereitungsbogen sichern", text: "Kopiere den Bogen oder lade ihn als Textdatei herunter, um eigene Anmerkungen zu ergänzen." },
     ],
     tips: [
-      "Fragen Sie nach einem konkreten Moment – „Erzählen Sie vom Tag, an dem …“ – statt nach allgemeinen Meinungen.",
-      "Legen Sie zwei, drei Pflichtfragen fest und lassen Sie den Rest dem Gesprächsfluss.",
-      "Heben Sie die persönlichste Frage für die Mitte auf, wenn der Gast aufgetaut ist.",
+      "Frage nach einem konkreten Tag oder Schlüsselmoment («Erzähl vom Tag, an dem...») statt nach abstrakten Meinungen.",
+      "Lege zwei bis drei unverzichtbare Kernfragen fest und halte den Rest flexibel.",
+      "Hebe dir die persönlichste Frage für die Mitte auf, sobald eine vertraute Atmosphäre herrscht.",
+    ],
+    sections: [
+      {
+        heading: "Podcast-Interviewfragen für jeden Gast",
+        intro: "Herausragende Interviews entstehen dann, wenn man den Lebenslauf hinter sich lässt und echte Geschichten erforscht. Hier sind 18 wirkungsvolle Fragen nach Phasen:",
+        groups: [
+          {
+            category: "Eisbrecher & Erste Eindrücke",
+            items: [
+              "Welche Überzeugung aus deinen ersten Karrierejahren hältst du heute für komplett falsch?",
+              "Was war das allererste Projekt, das in dir die Leidenschaft für dein Fachgebiet entfacht hat?",
+              "Wenn du heute nicht in diesem Bereich tätig wärst: Auf welchem unerwarteten Pfad wärst du gelandet?",
+              "Welcher Ratschlag wird in deiner Branche ständig wiederholt, sollte aber ignoriert werden?",
+            ],
+          },
+          {
+            category: "Geschichten, Wendepunkte & Rückschläge",
+            items: [
+              "Erzähl uns vom tiefsten Tiefpunkt deiner Reise – wie sah der Morgen danach aus?",
+              "An welchem Scheideweg war Aufgeben die einfachste Option, und was ließ dich weitermachen?",
+              "Welcher Mentor oder Kritiker hat mit einem einzigen Satz deine Arbeitsweise für immer verändert?",
+              "Was musstest du aktiv verlernen, um dein heutiges Niveau zu erreichen?",
+            ],
+          },
+          {
+            category: "Taktische Einblicke & Meisterklasse",
+            items: [
+              "Führe uns Schritt für Schritt durch deine fokussiertesten Stunden am Vormittag.",
+              "Welches Tool, welcher Hebel oder welche Gewohnheit treibt 80 % deiner heutigen Ergebnisse?",
+              "Wenn alles gleichzeitig chaotisch wirkt: Welches genaue Protokoll arbeitest du dann ab?",
+              "Welche kontraintuitive Entscheidung hast du getroffen, vor der dich alle gewarnt hatten?",
+              "Welches unterschätzte Problem in deiner Nische wird in zwei Jahren jedes Unternehmen beschäftigen?",
+            ],
+          },
+          {
+            category: "Abschluss & Schnellfragerunde",
+            items: [
+              "Welches Buch oder welche Ressource hast du öfter verschenkt oder empfohlen als jede andere?",
+              "Was war deine beste Investition von unter 100 Euro in den letzten zwölf Monaten?",
+              "Was bedeutet Erfolg heute für dich im Vergleich zu deinen Anfängen?",
+              "Wenn du eine Botschaft auf eine Plakatwand vor Millionen Kreativen schreiben könntest: Was stünde dort?",
+              "Wo können Hörer dich finden und deine aktuellen Projekte unterstützen?",
+            ],
+          },
+        ],
+      },
     ],
   },
   "monetization-calculator": {
-    metaTitle: "Podcast-TKP- & Sponsoring-Umsatzrechner | Pod Studio",
+    metaTitle: "Podcast-Einnahmen-Rechner: TKP & Sponsoring | Pod Studio",
     metaDescription:
-      "Schätzen Sie Werbeeinnahmen aus Downloads, TKP, Werbeplätzen und Auslastung. Vergleichen Sie Pre-, Mid- und Post-Roll plus Hörerunterstützung. Kostenlos.",
+      "Berechne deine Einnahmen mit unserem kostenlosen Podcast-Einnahmen-Rechner. Modelliere Host-Read-TKP-Werbung, Hörerzahlen und Sponsoring-Deals. Gratis.",
     overview: [
-      "Der TKP- & Umsatzrechner schätzt, was Ihre Show mit Werbung verdienen kann – mit der Standardformel: (Downloads ÷ 1.000) × TKP × verkaufte Werbeplätze.",
-      "Passen Sie Downloads pro Folge, Veröffentlichungsrhythmus, Pre-, Mid- und Post-Roll, Auslastung und Mitgliedschaften an und sehen Sie Prognosen pro Monat, pro Folge und pro Jahr – ideal für Sponsorenpreise und Ziele.",
+      "Der Podcast-Einnahmen-Rechner prognostiziert dein Erlöspotenzial anhand gängiger Branchenformeln: (Downloads ÷ 1.000) × TKP × belegte Werbeplätze.",
+      "Kalkuliere Monats- und Jahresumsätze für Pre-Roll-, Mid-Roll- und Post-Roll-Slots, variiere Belegungsquoten und berücksichtige Einnahmen aus Hörer-Abonnements für fundierte Verhandlungen.",
     ],
     steps: [
-      { title: "Downloads eingeben", text: "Nutzen Sie die durchschnittlichen Downloads pro Folge in den ersten 30 Tagen laut Ihrem Hoster." },
-      { title: "Rhythmus festlegen", text: "Geben Sie an, wie viele Folgen Sie pro Monat veröffentlichen." },
-      { title: "Werbeplätze einstellen", text: "Aktivieren Sie Pre-, Mid- und Post-Roll, legen Sie je einen TKP fest und schätzen Sie die Auslastung." },
-      { title: "Prüfen und exportieren", text: "Vergleichen Sie die Aufschlüsselung, ergänzen Sie Mitgliedschaftseinnahmen und exportieren Sie die Prognose." },
+      { title: "Downloads eingeben", text: "Trage deine durchschnittlichen Downloads pro Episode in den ersten 30 Tagen laut Hoster ein." },
+      { title: "Episodenfrequenz wählen", text: "Gib an, wie viele Folgen du pro Monat veröffentlichst." },
+      { title: "Werbeplätze einstellen", text: "Aktiviere Pre-Roll, Mid-Roll oder Post-Roll, bestimme den TKP und schätze die Auslastung." },
+      { title: "Übersicht prüfen & exportieren", text: "Vergleiche die Erlösströme, ergänze Mitgliedschaften und exportiere deine Hochrechnung." },
     ],
     tips: [
-      "Vom Host gelesene Mid-Rolls erzielen meist die höchsten TKPs, weil die Aufmerksamkeit dann am größten ist.",
-      "Rechnen Sie bei der Auslastung vorsichtig – die meisten unabhängigen Shows verkaufen nicht jeden Platz.",
-      "Nutzen Sie verifizierte Downloadzahlen im Pitch; Sponsoren fragen oft nach Screenshots vom Hoster.",
+      "Persönlich gelesene Mid-Roll-Spots erzielen meist die höchsten TKPs, da Hörer zur Folgenmitte maximal aufmerksam sind.",
+      "Kalkuliere bei der Auslastung konservativ – die meisten Indie-Podcasts verkaufen nicht jeden Slot in jedem Monat.",
+      "Nutze für Angebote stets belegbare Zahlen; Werbekunden fordern oft Screenshots aus dem Hoster-Dashboard an.",
+    ],
+    sections: [
+      {
+        heading: "Wie viel verdienen Podcasts?",
+        paragraphs: [
+          "Die Einnahmen eines Podcasts hängen stark von den verifizierten 30-Tage-Downloads, der Veröffentlichungsfrequenz und den verfügbaren Werbeplätzen ab. Shows mit 1.000 bis 5.000 Downloads pro Episode verdienen typischerweise zwischen 50 und 300 Euro pro Folge durch eine Kombination aus TKP-Sponsorings und Affiliate-Links.",
+          "Etablierte Independent-Podcasts mit 10.000 bis 50.000 Downloads erzielen TKP-Raten von 25 bis 35 Euro für persönliche Empfehlungen und erwirtschaften so mehrere tausend Euro monatlich, ergänzt durch Fan-Mitgliedschaften und Merchandising.",
+        ],
+        link: {
+          text: "Lies den vollständigen Datenreport: Wie viel verdienen Podcasts 2026? →",
+          href: "/guides/how-much-do-podcasts-make",
+        },
+      },
     ],
   },
   "cover-art-preview": {
-    metaTitle: "Podcast-Cover-Vorschau für Apple & Spotify | Pod Studio",
+    metaTitle: "Podcast-Cover-Größenprüfer: Apple & Spotify | Pod Studio",
     metaDescription:
-      "Sehen Sie Ihr Podcast-Cover wie in Apple Podcasts, Spotify, auf dem Sperrbildschirm und als kleines Thumbnail. Größe und Lesbarkeit prüfen. Kostenlos.",
+      "Prüfe die Podcast-Cover-Größe und Spezifikationen für Apple und Spotify. Teste 3000x3000px Grafiken auf Sperrbildschirmen, Dark Mode und Feeds. Gratis.",
     overview: [
-      "Die Cover-Vorschau zeigt Ihr Podcast-Artwork in Layouts im Stil von Apple Podcasts und Spotify, auf dem Smartphone-Sperrbildschirm und als winziges Such-Thumbnail.",
-      "Ihr Bild verlässt nie Ihr Gerät. Es wird gegen die übliche Verzeichnisvorgabe geprüft – quadratisch, zwischen 1400 × 1400 und 3000 × 3000 Pixel –, damit Sie Probleme vor dem Upload erkennen.",
+      "Der Podcast-Cover-Größenprüfer simuliert dein Cover-Design in realistischen Verzeichnis-Ansichten von Apple Podcasts und Spotify, auf Smartphone-Sperrbildschirmen und als 50x50px Miniaturansicht.",
+      "Die Prüfung erfolgt zu 100 % lokal in deinem Browser und verifiziert offizielle Richtlinien: quadratisches 1:1-Seitenverhältnis, RGB-Farbraum und Abmessungen zwischen 1400x1400px und 3000x3000px.",
     ],
     steps: [
-      { title: "Artwork laden", text: "Ziehen Sie eine JPG- oder PNG-Datei hinein (oder testen Sie das Beispiel). Die Verarbeitung erfolgt nur im Browser." },
-      { title: "Vorgaben prüfen", text: "Sehen Sie, ob das Bild quadratisch ist und im empfohlenen Pixelbereich liegt." },
-      { title: "Ansichten wechseln", text: "Vergleichen Sie Apple-Podcasts-Feed, Spotify-Wiedergabe, Sperrbildschirm, Safe-Zone und 50 × 50 px Thumbnail." },
-      { title: "Anpassen und erneut testen", text: "Ändern Sie Schriftgröße oder Kontrast im Grafikprogramm und laden Sie die neue Version zum Vergleich." },
+      { title: "Grafik hochladen", text: "Ziehe eine JPG- oder PNG-Datei per Drag & Drop hinein (oder teste das Beispielbild). Alles bleibt privat im Browser." },
+      { title: "Spezifikationen prüfen", text: "Erkenne sofort, ob das Bild quadratisch ist und im empfohlenen Pixelbereich liegt." },
+      { title: "Mockups durchschalten", text: "Vergleiche Apple-Podcasts-Feed, Spotify-Player, Sperrbildschirm und die 50 × 50 px Miniaturansicht." },
+      { title: "Optimieren & neu testen", text: "Passe Schriftgröße oder Kontraste in deinem Grafikprogramm an und lade die neue Version erneut hoch." },
     ],
     tips: [
-      "Ist der Titel als Thumbnail nicht lesbar, nutzen Sie weniger Wörter oder eine größere Schrift.",
-      "Platzieren Sie wichtigen Text nicht am Rand – manche Apps runden die Ecken ab.",
-      "Testen Sie im hellen und dunklen Modus; dünne dunkle Schrift verschwindet leicht auf dunklem Hintergrund.",
+      "Wenn der Show-Name in der Miniaturansicht unlesbar ist, wähle weniger Text oder eine größere Typografie.",
+      "Platziere wichtige Elemente nicht zu nah am Rand – manche Apps schneiden die Ecken abgerundet ab.",
+      "Teste die Darstellung im Hell- und Dunkelmodus; filigrane dunkle Schriften gehen auf schwarzem Grund schnell verloren.",
     ],
   },
   "rss-feed-validator": {
-    metaTitle: "Kostenloser Podcast-RSS-Feed-Validator | Pod Studio",
+    metaTitle: "Podcast RSS-Feed Validator & Checker | Pod Studio",
     metaDescription:
-      "Prüfen Sie Ihren Podcast-RSS-Feed auf fehlende Tags, defekte Enclosures, Artwork- und GUID-Probleme, bevor Sie bei Apple oder Spotify einreichen. Kostenlos.",
+      "Überprüfe deinen Podcast RSS-Feed vor dem Einreichen bei Apple Podcasts und Spotify auf fehlende Tags, defekte Audio-Links und Cover-Fehler. Kostenlos.",
     overview: [
-      "Der RSS-Feed Validator findet die Probleme, die eine Veröffentlichung am häufigsten blockieren oder verzögern: ungültiges XML, fehlende Show-Metadaten, Artwork-Probleme, doppelte oder fehlende GUIDs und Folgen ohne nutzbares Audio-Enclosure.",
-      "Jeder Befund wird verständlich erklärt, inklusive Hinweis zur Behebung – so beheben Sie Fehler im Hoster-Dashboard, bevor Apple Podcasts oder Spotify den Feed ablehnen.",
+      "Der RSS-Feed Validator spürt typische Ursachen auf, die Veröffentlichungen verzögern oder ablehnen lassen: fehlerhaftes XML, fehlende Metadaten, unpassende Cover-Grafiken, doppelte GUIDs oder nicht erreichbare Audiodateien.",
+      "Jeder Befund wird verständlich erläutert, damit du gezielte Korrekturen im Dashboard deines Podcast-Hosters vornehmen kannst, bevor Verzeichnisse den Feed abweisen.",
     ],
     steps: [
-      { title: "Feed einfügen", text: "Fügen Sie das XML Ihres Feeds ein (oder laden Sie das Beispiel)." },
-      { title: "Prüfung starten", text: "Der Validator analysiert den Feed im Browser und prüft Pflicht- und empfohlene Tags." },
-      { title: "Befunde lesen", text: "Erst Fehler, dann Warnungen. Jeder Punkt erklärt, warum er wichtig ist." },
-      { title: "Beheben und erneut prüfen", text: "Passen Sie die Einstellungen beim Hoster an, fügen Sie den aktualisierten Feed ein und prüfen Sie erneut." },
+      { title: "Feed einfügen", text: "Füge die XML-URL deines Feeds ein (oder lade den Beispielfeed) in das Prüffeld." },
+      { title: "Prüfung starten", text: "Der Validator analysiert die Tags direkt im Browser auf Pflicht- und Empfehlungsangaben." },
+      { title: "Ergebnisse durchsehen", text: "Lies zuerst kritische Fehler und anschließend Optimierungshinweise mit Erklärung." },
+      { title: "Beheben & erneut prüfen", text: "Passe die Einstellungen bei deinem Hoster an und teste den aktualisierten Feed erneut." },
     ],
     tips: [
-      "Ändern Sie nie die GUID einer veröffentlichten Folge – Apps könnten sie als neue Folge behandeln.",
-      "Prüfen Sie, ob das Explicit-Tag korrekt gesetzt ist; es beeinflusst, wo Ihre Show erscheint.",
-      "Validieren Sie nach Hoster-Wechsel oder neuem Cover erneut – das sind die häufigsten Ursachen neuer Fehler.",
+      "Ändere niemals die GUID einer bereits veröffentlichten Episode – Apps könnten sie sonst doppelt listen.",
+      "Achte auf die korrekte Explicit-Kennzeichnung, da sie Einfluss auf die Sichtbarkeit in verschiedenen Regionen hat.",
+      "Führe nach einem Hoster-Wechsel oder Cover-Update stets eine Re-Validierung durch.",
     ],
   },
   "episode-timestamp-generator": {
-    metaTitle: "Podcast-Kapitelmarken & Zeitstempel-Generator | Pod Studio",
+    metaTitle: "Podcast-Zeitstempel & Kapitel-Generator | Pod Studio",
     metaDescription:
-      "Machen Sie aus Notizen saubere Kapitelmarken für YouTube, Spotify und Shownotes. Einheitliches Zeitformat mit einem Klick. Kostenlos, ohne Anmeldung.",
+      "Erstelle saubere Podcast-Zeitstempel und YouTube-Kapitel für deine Folgen. Generiere klickbare Markierungen für Spotify, Apple Podcasts und Web. Gratis.",
     overview: [
-      "Der Kapitelmarken-Generator macht aus Ihren Aufnahmenotizen saubere Kapitel wie „00:00 Einleitung“ und „05:12 Werdegang des Gastes“ – mit einer visuellen Zeitleiste der Folge.",
-      "Nutzen Sie das Ergebnis in YouTube- und Spotify-Beschreibungen und Shownotes, damit Hörer direkt zur gewünschten Stelle springen und Suchmaschinen den Inhalt besser verstehen.",
+      "Der Zeitstempel-Generator formatiert deine Produktionsnotizen in einheitliche Kapitel-Zeitstempel und klickbare YouTube-Kapitel für Videobeschreibungen, Spotify-Markierungen und Show Notes.",
+      "Ermögliche deinen Hörern das direkte Ansteuern gewünschter Themenblöcke und helfe Suchmaschinen, einzelne Abschnitte deiner Episoden präzise zu indexieren.",
     ],
     steps: [
-      { title: "Kapitel hinzufügen", text: "Geben Sie jedes Kapitel mit Startzeit und Titel ein oder fügen Sie eine Liste wie „0:00 Intro, 5:30 Durchbruch“ ein." },
-      { title: "Format einheitlich halten", text: "Verwenden Sie ein Zeitformat und listen Sie Kapitel in der richtigen Reihenfolge." },
-      { title: "Zeitleiste prüfen", text: "Prüfen Sie die Zeitleiste auf Lücken, Dubletten oder zu kurze Kapitel." },
-      { title: "Kapitel kopieren", text: "Kopieren Sie die Liste in Shownotes, YouTube-Beschreibung oder Ihren Hoster." },
+      { title: "Kapitel hinzufügen", text: "Trage Startzeit und Kurztitel für jedes Kapitel ein oder füge eine rohe Liste ein." },
+      { title: "Format einheitlich halten", text: "Nutze ein durchgängiges Zeitformat und ordne die Kapitel streng chronologisch." },
+      { title: "Zeitstrahl kontrollieren", text: "Prüfe die visuelle Zeitleiste auf Lücken, Dopplungen oder zu kurze Abschnitte." },
+      { title: "Kapitel kopieren", text: "Füge die Liste mit einem Klick in deine Show Notes, Videobeschreibungen oder den Hoster ein." },
     ],
     tips: [
-      "YouTube zeigt Kapitel nur an, wenn der erste Zeitstempel 00:00 ist.",
-      "Formulieren Sie Kapitel wie Mini-Überschriften – konkret schlägt vage („Preisfehler im ersten Jahr“ statt „Teil 2“).",
-      "Planen Sie Kapitel von mindestens ein paar Minuten; zu viele Mini-Kapitel sind unübersichtlich.",
+      "YouTube verlangt zwingend, dass der erste Zeitstempel bei 00:00 beginnt, um die Kapitelanzeige im Player zu aktivieren.",
+      "Formuliere Kapitelüberschriften prägnant: «Preisfindungs-Fehler im ersten Jahr» ist wirksamer als «Teil 2».",
+      "Plane Abschnitte von mindestens einigen Minuten ein, um die Übersichtlichkeit zu wahren.",
+    ],
+    sections: [
+      {
+        heading: "So formatierst du Zeitstempel und YouTube-Kapitel",
+        paragraphs: [
+          "Klickbare Kapitel machen lange Episoden zugänglich und erlauben es Hörern, gezielt zu den relevantesten Themen zu springen. Auf YouTube erzeugen Zeitangaben im Format «00:00 Intro» in der Videobeschreibung automatisch sichtbare Abschnitte auf der Fortschrittsleiste des Players.",
+          "Damit deine Zeitangaben sowohl YouTube-Kapitel als auch Spotify-Kapitelmarken zuverlässig aktivieren, starte stets mit einem Zeitstempel bei 00:00 (oder 0:00), erstelle mindestens drei aufeinanderfolgende Kapitel und stelle sicher, dass jeder Abschnitt mindestens zehn Sekunden lang ist.",
+        ],
+      },
     ],
   },
   "intro-script-generator": {
-    metaTitle: "Podcast-Intro- & Cold-Open-Skript-Generator | Pod Studio",
+    metaTitle: "Podcast-Intro-Skript-Generator & Hooks | Pod Studio",
     metaDescription:
-      "Schreiben Sie ein kurzes Podcast-Intro mit Hook, das Hörer zum Bleiben bringt. Für Interview-, Solo- und Story-Formate. Kostenloser Intro-Generator.",
+      "Schreibe fesselnde Eröffnungen mit unserem Podcast-Intro-Skript-Generator. Entdecke bewährte Intro-Beispiele für Solo-, Co-Host- und Gast-Shows. Gratis.",
     overview: [
-      "Der Intro-Skript-Generator hilft bei den ersten 30–60 Sekunden einer Folge: einem Hook, der Neugier oder Relevanz weckt, gefolgt von einer kurzen Vorstellung, die Erwartungen setzt.",
-      "Wählen Sie Format und Tonalität, ergänzen Sie ein paar Details und erhalten Sie ein sprechfertiges Skript in Teleprompter-Ansicht, das Sie an Ihren Stil anpassen.",
+      "Der Podcast-Intro-Skript-Generator hilft dir beim Verfassen der ersten 30 bis 60 Sekunden einer Episode: eine mitreißende Hook gefolgt von einer präzisen Begrüßung, die Absprungraten drastisch senkt.",
+      "Wähle Sendeformat, Gastdetails und Vortragston, um teleprompter-taugliche Manuskripte mit Neugier-Triggern und klaren Hörer-Mehrwerten zu erstellen.",
     ],
     steps: [
-      { title: "Format und Ton wählen", text: "Wählen Sie Gastinterview, Solo oder Story sowie energiegeladen, nachdenklich oder locker." },
-      { title: "Details ergänzen", text: "Geben Sie Thema oder Versprechen der Folge und ggf. Name und Titel des Gastes ein." },
-      { title: "Skript erzeugen", text: "Sie erhalten ein kurzes Skript vom Hook über die Vorstellung bis „Das erfahren Sie heute“." },
-      { title: "Laut lesen", text: "Üben Sie es ein-, zweimal und streichen Sie Sätze, die nicht nach Ihnen klingen." },
+      { title: "Format & Tonfall wählen", text: "Entscheide dich für Interview, Solo oder Story und wähle zwischen dynamisch, reflektiert oder locker." },
+      { title: "Details ergänzen", text: "Trage Folgenthema, Kernversprechen und gegebenenfalls den Namen deines Gastes ein." },
+      { title: "Skript generieren", text: "Erhalte ein kurzes Manuskript mit Einstiegshook, Vorstellung und klarem Episodenausblick." },
+      { title: "Laut vorlesen", text: "Sprich den Text probeweise ein und passe Formulierungen an deine persönliche Sprechweise an." },
     ],
     tips: [
-      "Kommen Sie in den ersten 15 Sekunden zur Sache – dort entscheiden viele Hörer, ob sie bleiben.",
-      "Ein starkes Gastzitat ist ein hervorragender Cold Open vor der Titelmusik.",
-      "Halten Sie wiederkehrende Intros kurz; lange Hinweise und Sponsoren gehören weiter nach hinten.",
+      "Komm in den ersten 15 Sekunden auf den Punkt – hier entscheidet sich, ob der Hörer dranbleibt.",
+      "Ein prägnantes Originalzitat deines Gastes eignet sich hervorragend als Cold Open vor dem Intro-Jingle.",
+      "Halte die Standardbegrüßung kurz; organisatorische Hinweise gehören in spätere Abschnitte.",
+    ],
+    sections: [
+      {
+        heading: "Podcast-Intro-Beispiele",
+        intro: "Die ersten dreißig Sekunden entscheiden darüber, ob ein Hörer die Folge beendet oder weiterspringt. Hier sind fünf praxiserprobte Podcast-Intro-Beispiele:",
+        list: [
+          {
+            title: "1. Die Solo-Hook mit hohem Einsatz",
+            description: "«Die meisten Gründer arbeiten fünf Jahre an ihrem Startup, bevor sie merken, dass sie am falschen Produkt bauen. Heute teile ich die drei Validierungstests, die mir 80.000 Euro erspart hätten. Willkommen beim Gründer-Playbook».",
+          },
+          {
+            title: "2. Der lebhafte Co-Host-Dialog",
+            description: "«Schön, dass ihr wieder dabei seid beim Kaffeeklatsch. Ich bin Alex und wie immer mit mir am Mikrofon: Jordan. Jordan, bevor wir über das Apple-Event diskutieren: Erzähl allen kurz, warum du gestern fast deinen Zug verpasst hättest...».",
+          },
+          {
+            title: "3. Der Interview-Teaser mit Schlüsselzitat",
+            description: "«“Wenn du deinen größten Kunden nicht vor dem sechsten Monat kündigst, geht deine Agentur unter.” Das sagte mein heutiger Gast David Miller zehn Minuten vor Aufnahmebeginn. Heute erklärt er, wie er ohne Burnout siebenstellige Umsätze aufbaute».",
+          },
+          {
+            title: "4. Der immersive narrative Einstieg",
+            description: "«An einem eisigen Dienstagmorgen im Februar 2014 gingen in einem Rechenzentrum in Virginia zweiunddreißig Server auf einmal offline. Was folgte, war der bis heute größte ungeklärte Krypto-Raub der Geschichte. Ihr hört Schattenwelten».",
+          },
+          {
+            title: "5. Der pragmatische Business- & Tech-Einstieg",
+            description: "«Möchtest du auf Platz eins bei Google ranken, ohne hunderte Backlinks aufzubauen? In den nächsten zwanzig Minuten zerlegen wir exakt jene Content-Architektur, mit der wir monatlich 450.000 Besucher generieren».",
+          },
+        ],
+      },
     ],
   },
   "audience-growth-estimator": {
-    metaTitle: "Podcast-Download- & Hörerwachstums-Rechner | Pod Studio",
+    metaTitle: "Podcast-Hörer- & Download-Wachstumsprognose | Pod Studio",
     metaDescription:
-      "Prognostizieren Sie Ihre Podcast-Downloads für 12 Monate aus aktuellen Zahlen, Veröffentlichungsrhythmus und monatlicher Wachstumsrate. Kostenlos.",
+      "Berechne deine Podcast-Downloads auf 12 Monate basierend auf aktuellen Zahlen, Veröffentlichungsrhythmus und Monatsrate. Kostenloser Wachstumsrechner.",
     overview: [
-      "Der Wachstumsrechner prognostiziert künftige Downloads, indem er eine monatliche Wachstumsrate auf Ihre aktuellen Downloads pro Folge anwendet und mit Ihrem Veröffentlichungsrhythmus multipliziert.",
-      "Das ist eine einfache Zinseszins-Illustration, keine Vorhersage: Saisonalität, virale Spitzen und Abwanderung fließen nicht ein. Nutzen Sie sie für realistische Ziele und um zu sehen, wie kleine Verbesserungen sich übers Jahr summieren.",
+      "Der Wachstumsrechner simuliert die Entwicklung deiner Downloadzahlen, indem er eine monatliche Wachstumsrate auf deine aktuellen Werte anwendet und mit der Veröffentlichungsfrequenz hochrechnet.",
+      "Er dient als anschauliches Rechenmodell für den Zinseszinseffekt im Audio-Bereich und hilft dir dabei, erreichbare Meilensteine zu definieren und den Effekt stetiger kleiner Verbesserungen einzuschätzen.",
     ],
     steps: [
-      { title: "Aktuelle Downloads", text: "Tragen Sie Ihre aktuellen durchschnittlichen 30-Tage-Downloads pro Folge ein." },
-      { title: "Rhythmus festlegen", text: "Geben Sie an, wie viele Folgen Sie monatlich veröffentlichen." },
-      { title: "Wachstumsrate wählen", text: "Wählen Sie einen monatlichen Prozentsatz, der Ihrem Trend oder Ziel entspricht." },
-      { title: "Diagramm lesen", text: "Prüfen Sie den 12-Monats-Verlauf und sehen Sie, wo Sie im Vergleich zu weltweiten Download-Perzentilen stehen." },
+      { title: "Aktuelle Downloads eingeben", text: "Trage deinen 30-Tage-Downloadschnitt pro Episode laut Hoster ein." },
+      { title: "Frequenz bestimmen", text: "Gib an, wie viele Folgen du regulär pro Monat veröffentlichst." },
+      { title: "Wachstumsrate wählen", text: "Wähle einen Prozentsatz pro Monat, der zu deinen Zielen oder bisherigen Trends passt." },
+      { title: "Entwicklung ablesen", text: "Verfolge die 12-Monats-Kurve und vergleiche deine Werte mit globalen Verteilungs-Percentilen." },
     ],
     tips: [
-      "Starten Sie mit einer moderaten Rate – durch den Zinseszins wirken optimistische Werte schnell dramatisch.",
-      "Kombinieren Sie die Prognose mit dem TKP-Rechner, um zu sehen, wann Sponsoring realistisch wird.",
-      "Vergleichen Sie die Prognose monatlich mit Ihren echten Zahlen und passen Sie die Eingaben an.",
+      "Beginne mit einer moderaten Wachstumsannahme; Zinseszinseffekte lassen optimistische Zahlen rasch unrealistisch wirken.",
+      "Kombiniere diese Prognose mit dem TKP-Rechner, um zu planen, ab wann Sponsoring wirtschaftlich sinnvoll wird.",
+      "Gleiche deine Prognose monatlich mit den tatsächlichen Zahlen ab und passe die Werte an.",
     ],
   },
   "description-generator": {
-    metaTitle: "Podcast- & Episodenbeschreibung-Generator | Pod Studio",
+    metaTitle: "Podcast-Kanal- & Folgen-Beschreibungs-Generator | Pod Studio",
     metaDescription:
-      "Schreiben Sie klare Show- und Episodenbeschreibungen für Apple Podcasts und Spotify – mit Hinweis, wo mobil „mehr“ abschneidet. Kostenlos, ohne Anmeldung.",
+      "Schreibe treffende Beschreibungen für deinen Podcast-Kanal und einzelne Episoden auf Apple Podcasts und Spotify. Kostenloses SEO-Text-Werkzeug.",
     overview: [
-      "Der Beschreibungs-Generator entwirft zwei Arten von Texten: die Showbeschreibung, die Versprechen und Zielgruppe Ihres Podcasts erklärt, und Episodenbeschreibungen, die eine einzelne Folge zusammenfassen.",
-      "Gute Beschreibungen helfen beim Abonnieren und helfen Apps, Ihre Show einzuordnen. Deshalb stehen die wichtigsten Infos am Anfang – dort, wo Apps sie anzeigen.",
+      "Der Beschreibungs-Generator verfasst zwei Arten von Texten: die übergeordnete Sendungsbeschreibung (Konzept und Zielgruppe) sowie pointierte Teaser für jede einzelne Folge.",
+      "Treffsichere Beschreibungen erleichtern Hörern das Abonnieren und signalisieren Streaming-Verzeichnissen eindeutig, worum es geht – mit den wichtigsten Schlüsselbegriffen direkt im sichtbaren Textanfang.",
     ],
     steps: [
-      { title: "Modus wählen", text: "Wählen Sie, ob Sie die Showbeschreibung oder eine Episodenbeschreibung schreiben." },
-      { title: "Das Wichtigste eintragen", text: "Geben Sie Zielgruppe, Kernthemen und Takeaways sowie Links oder Call to Action ein." },
-      { title: "Abschneidepunkt prüfen", text: "Sehen Sie, wo mobile Apps bei „…mehr“ abschneiden, und stellen Sie Hook und Keyword nach vorne." },
-      { title: "Bearbeiten und einfügen", text: "Passen Sie den Text an Ihren Stil an und fügen Sie ihn bei Ihrem Hoster ein." },
+      { title: "Textart wählen", text: "Entscheide dich zwischen einer allgemeinen Show-Beschreibung oder einem Folgentext." },
+      { title: "Eckdaten erfassen", text: "Gib Zielgruppe, Kerninhalte, wesentliche Learnings und Handlungsaufrufe ein." },
+      { title: "Sichtbarkeitsgrenze prüfen", text: "Prüfe, wo Mobil-Apps den Text vor dem «Mehr»-Button abschneiden, und setze Kern-Keywords nach vorne." },
+      { title: "Feinschliff & übernehmen", text: "Passe Formulierungen an deinen Stil an und füge den fertigen Text bei deinem Hoster ein." },
     ],
     tips: [
-      "Der erste Satz zählt am meisten – viele Apps zeigen nur ein bis zwei Zeilen vor „mehr“.",
-      "Sprechen Sie die Zielgruppe direkt an („für Gründer:innen am Anfang“), damit sie sich wiedererkennt.",
-      "Nutzen Sie Keywords natürlich, niemals als Liste; Apple kann Spam-Beschreibungen ablehnen.",
+      "Der erste Satz ist entscheidend: Viele Apps zeigen nur eine oder zwei Zeilen vor dem Weiterlesen-Link an.",
+      "Sprich deine Wunschhörer direkt an («Für Startup-Gründer»), damit sich die Richtigen sofort angesprochen fühlen.",
+      "Nutze natürliche Suchbegriffe und vermeide aneinandergereihte Keyword-Listen.",
     ],
   },
   "category-finder": {
-    metaTitle: "Apple-Podcasts-Kategorie-Finder | Pod Studio",
+    metaTitle: "Apple Podcasts Kategorien-Finder | Pod Studio",
     metaDescription:
-      "Finden Sie die besten Apple-Podcasts-Kategorien und Unterkategorien für Ihre Show. Nach Thema suchen und den exakten XML-Tag kopieren. Kostenlos.",
+      "Durchsuche die vollständige Liste der Apple Podcasts Kategorien und Spotify-Genres. Finde Nischenkategorien mit geringer Konkurrenz für deine Show. Gratis.",
     overview: [
-      "Der Kategorie-Finder hilft bei der Wahl der passenden Apple-Podcasts-Kategorie und Unterkategorie. Apple erlaubt bis zu zwei Kategorien; die primäre ist am sichtbarsten.",
-      "Suchen Sie nach Thema oder Stichwort, sehen Sie passende Kategorien und Unterkategorien und kopieren Sie den exakten XML-Tag für Ihren RSS-Feed mit einem Klick.",
+      "Der Kategorie-Finder navigiert dich durch die offizielle Taxonomie von Apple Podcasts und Spotify, um Haupt- und Unterkategorien mit den besten Auffindbarkeits- und Chart-Chancen für deine Sendung zu ermitteln.",
+      "Durchsuche offizielle Kategorien, vergleiche nach Themenbereichen und schätze die Wettbewerbsdichte ab, um deine Show optimal zu platzieren.",
     ],
     steps: [
-      { title: "Nach Thema suchen", text: "Geben Sie Ihr Hauptthema ein, z. B. „persönliche Finanzen“ oder „True Crime“." },
-      { title: "Optionen vergleichen", text: "Vergleichen Sie die vorgeschlagenen Kategorien und Unterkategorien." },
-      { title: "Primäre Kategorie wählen", text: "Wählen Sie die Kategorie, die die meisten Ihrer Folgen am besten beschreibt." },
-      { title: "XML-Tag kopieren", text: "Klicken Sie auf eine Unterkategorie, um ihren iTunes-Tag zu kopieren, oder wählen Sie sie im Hoster-Dashboard." },
+      { title: "Nach Thema suchen", text: "Tippe dein Hauptthema ein, zum Beispiel «Persönliche Finanzen» oder «True Crime»." },
+      { title: "Vorschläge vergleichen", text: "Prüfe die passenden Kategorien und Unterkategorien übersichtlich nebeneinander." },
+      { title: "Hauptkategorie festlegen", text: "Wähle die Kategorie, die den Schwerpunkt der meisten Episoden am besten beschreibt." },
+      { title: "XML-Tag übernehmen", text: "Kopiere den passenden iTunes-Kategorie-Tag oder wähle ihn im Dashboard deines Hosters aus." },
     ],
     tips: [
-      "Wählen Sie die Kategorie, die Ihre Hörer durchstöbern würden – nicht die mit der wenigsten Konkurrenz.",
-      "Eine präzise Unterkategorie verschafft neuen Shows oft bessere Sichtbarkeit.",
-      "Prüfen Sie vor der Veröffentlichung die aktuelle offizielle Apple-Liste; Kategorienamen ändern sich gelegentlich.",
+      "Wähle die Kategorie, in der deine Zielgruppe stöbert – nicht zwingend die mit den wenigsten Mitbewerbern.",
+      "Eine präzise Unterkategorie bietet neuen Sendungen oft bessere Chancen, in Charts wahrgenommen zu werden.",
+      "Prüfe vor Veröffentlichung die aktuelle Liste von Apple, da Kategorie-Bezeichnungen gelegentlich angepasst werden.",
+    ],
+    sections: [
+      {
+        heading: "Übersicht der Apple Podcasts Kategorien",
+        intro: "Nachfolgend findest du die vollständige offizielle Taxonomie der von Apple Podcasts und Spotify unterstützten Haupt- und Unterkategorien:",
+        groups: [
+          {
+            category: "Kunst & Gestaltung",
+            items: ["Bücher", "Design", "Mode & Beauty", "Essen & Trinken", "Darstellende Künste", "Bildende Kunst"],
+          },
+          {
+            category: "Wirtschaft & Karriere",
+            items: ["Karriere", "Unternehmertum", "Investieren", "Management", "Marketing", "Gemeinnützige Organisationen"],
+          },
+          {
+            category: "Comedy & Unterhaltung",
+            items: ["Comedy-Interviews", "Improvisation", "Stand-Up"],
+          },
+          {
+            category: "Bildung & Wissen",
+            items: ["Kurse", "Anleitungen & How-To", "Sprachenlernen", "Persönlichkeitsentwicklung"],
+          },
+          {
+            category: "Fiktion & Hörspiel",
+            items: ["Comedy-Fiktion", "Drama", "Science-Fiction"],
+          },
+          {
+            category: "Politik & Verwaltung",
+            items: ["Öffentliche Verwaltung", "Kommunalpolitik", "Bundespolitik"],
+          },
+          {
+            category: "Geschichte",
+            items: ["Antike", "Mittelalter", "Militärgeschichte", "Zeitgeschichte", "Regionalgeschichte"],
+          },
+          {
+            category: "Gesundheit & Fitness",
+            items: ["Alternative Medizin", "Fitness", "Medizin", "Mentale Gesundheit", "Ernährung", "Sexualität"],
+          },
+          {
+            category: "Kinder & Familie",
+            items: ["Lerninhalte für Kinder", "Elternschaft", "Haustiere", "Geschichten für Kinder"],
+          },
+          {
+            category: "Freizeit & Hobbys",
+            items: ["Anime & Manga", "Automobil", "Luftfahrt", "Handwerk", "Spiele & Gaming", "Haus & Garten", "Videospiele"],
+          },
+          {
+            category: "Musik",
+            items: ["Musik-Kritik", "Musikgeschichte", "Musiker-Interviews"],
+          },
+          {
+            category: "Nachrichten & Politik",
+            items: ["Wirtschaftsnachrichten", "Tagesnachrichten", "Unterhaltung", "Politischer Kommentar", "Sportnachrichten", "Tech-News"],
+          },
+          {
+            category: "Religion & Spiritualität",
+            items: ["Buddhismus", "Christentum", "Hinduismus", "Islam", "Judentum", "Spiritualität"],
+          },
+          {
+            category: "Wissenschaft",
+            items: ["Astronomie", "Chemie", "Geowissenschaften", "Biologie", "Mathematik", "Physik", "Sozialwissenschaften"],
+          },
+          {
+            category: "Gesellschaft & Kultur",
+            items: ["Dokumentationen", "Persönliche Tagebücher", "Philosophie", "Reisen & Orte", "Beziehungen"],
+          },
+          {
+            category: "Sport",
+            items: ["Fußball", "Basketball", "Radsport", "Laufsport", "Schwimmen", "Tennis", "Wintersport", "Motorsport"],
+          },
+          {
+            category: "Technologie",
+            items: ["Künstliche Intelligenz", "Programmierung", "Consumer Tech", "Cyber-Sicherheit", "Software"],
+          },
+          {
+            category: "True Crime & Kriminalfälle",
+            items: ["Kriminal-Ermittlungen", "Serientäter", "Ungelöste Rätsel"],
+          },
+          {
+            category: "Film & Fernsehen",
+            items: ["Serien-Reviews", "Filmkritiken", "Filmgeschichte", "Regisseur-Interviews"],
+          },
+        ],
+      },
     ],
   },
   "hook-generator": {
-    metaTitle: "Hook-Generator für Podcast-Clips & Social Media | Pod Studio",
+    metaTitle: "Podcast-Hook- & Cold-Open-Generator | Pod Studio",
     metaDescription:
-      "Schreiben Sie Hooks, die das Scrollen stoppen – für Podcast-Clips auf TikTok, Reels, Shorts und LinkedIn. Stil wählen, vergleichen, kopieren. Kostenlos.",
+      "Schreibe packende Cold Opens und Audio-Hooks mit unserem kostenlosen Podcast-Hook-Generator. Verhindere Hörer-Absprünge in den ersten 60 Sekunden. Gratis.",
     overview: [
-      "Der Social-Media-Hooks-Generator schreibt kurze, prägnante Einstiegssätze für Podcast-Clips und Posts, damit die besten Momente einer Folge auch für sich allein funktionieren.",
-      "Geben Sie das Episodenthema und optional den Gast ein, wählen Sie einen Hook-Stil und erhalten Sie mehrere Zeilen für Bildschirmtext oder Captions auf TikTok, Reels, YouTube Shorts oder LinkedIn.",
+      "Der Podcast-Hook- & Cold-Open-Generator formuliert packende Einstiegszitate und neugierig machende Video-Hooks aus deinen Themen, um Hörer von der ersten Sekunde an zu fesseln.",
+      "Erstelle prägnante Textzeilen, optimiert für Kurzvideos auf TikTok, Instagram Reels und YouTube Shorts sowie für aufmerksamkeitsstarke Cold Opens zu Episodenbeginn.",
     ],
     steps: [
-      { title: "Thema eingeben", text: "Beschreiben Sie Thema oder Branche der Folge, aus der der Clip stammt." },
-      { title: "Gast hinzufügen (optional)", text: "Nennen Sie den Gast, wenn Name oder Expertise das Zugpferd sind." },
-      { title: "Hook-Stil wählen", text: "Filtern Sie nach Stil und vergleichen Sie mehrere Einstiege." },
-      { title: "Kopieren und posten", text: "Nutzen Sie den besten Hook als Bildschirmtext oder Caption und verlinken Sie die ganze Folge." },
+      { title: "Thema eingeben", text: "Beschreibe den Inhalt der Folge oder die Branche, an die sich der Clip richtet." },
+      { title: "Gast erwähnen (optional)", text: "Füge den Gast hinzu, wenn dessen Bekanntheit oder Fachwissen der Hauptanreiz ist." },
+      { title: "Hook-Stil wählen", text: "Filtere nach Stil und vergleiche verschiedene provokante oder neugierig machende Ansätze." },
+      { title: "Kopieren & posten", text: "Nutze die beste Zeile als Text-Overlay oder Caption und verlinke auf die vollständige Episode." },
     ],
     tips: [
-      "Die erste Zeile hat etwa zwei Sekunden – beginnen Sie mit der konkretesten Aussage.",
-      "Der Clip muss halten, was der Hook verspricht; irreführende Hooks kosten Vertrauen.",
-      "Untertiteln Sie jeden Clip – viele schauen ohne Ton.",
+      "Die erste Zeile hat etwa zwei Sekunden, um die Aufmerksamkeit zu sichern: Beginne mit der konkretesten Aussage.",
+      "Achte darauf, dass der Clip das Versprechen der Hook auch einlöst, um das Vertrauen deiner Hörer zu erhalten.",
+      "Versehe jedes Video mit Untertiteln; viele Nutzer schauen Social-Media-Videos ohne Ton an.",
     ],
   },
   "transcript-formatter": {
-    metaTitle: "Podcast-Transkript bereinigen & formatieren | Pod Studio",
+    metaTitle: "Podcast-Transkript-Formatierer & Cleaner | Pod Studio",
     metaDescription:
-      "Bereinigen Sie Podcast-Transkripte: Sprechernamen setzen, Füllwörter und Zeitstempel entfernen, Text veröffentlichungsfertig machen. Kostenlos und privat.",
+      "Bringe Audiotexte in das offizielle Podcast-Transkript-Format. Füge Sprecher-Labels hinzu, glätte Absätze und entferne Füllwörter mühelos. Kostenlos.",
     overview: [
-      "Der Transkript-Bereiniger räumt Texttranskripte beliebiger Dienste auf. Ersetzen Sie generische Sprecherlabels durch echte Namen, entfernen Sie gängige englische Füllwörter (um, uh …) und behalten oder löschen Sie Inline-Zeitstempel.",
-      "Er arbeitet mit eingefügtem Text – Audio wird nicht transkribiert. Das Ergebnis ist besser lesbar und bereit als barrierefreies Transkript, Blogartikel oder Shownotes-Auszug.",
+      "Der Podcast-Transkript-Formatierer bereinigt automatisierte Sprach-zu-Text-Exporte und bringt sie in das saubere Podcast-Transkript-Format: mit Sprecher-Zuweisung, Zeitstempeln und gut lesbaren Absätzen.",
+      "Die Bereinigung erfolgt vollständig lokal in deinem Browser, sodass deine Texte privat bleiben und direkt für Episoden-Websites oder Blogbeiträge bereitstehen.",
     ],
     steps: [
-      { title: "Transkript einfügen", text: "Kopieren Sie den Textexport Ihres Transkriptionsdienstes in den Editor." },
-      { title: "Sprecher benennen", text: "Ersetzen Sie „SPEAKER_00“ & Co. durch echte Namen und entscheiden Sie, ob Zeitstempel entfernt werden." },
-      { title: "Ergebnis prüfen", text: "Lesen Sie das formatierte Transkript und korrigieren Sie bei Bedarf manuell." },
-      { title: "Kopieren oder herunterladen", text: "Kopieren Sie den sauberen Text oder laden Sie ihn für Website oder Hoster herunter." },
+      { title: "Transkript einfügen", text: "Kopiere den Textexport deines Transkriptionsdienstes in den Editor." },
+      { title: "Sprecher benennen", text: "Ersetze generische Labels wie «SPRECHER_0» durch echte Namen und entscheide über Zeitstempel." },
+      { title: "Vorschau prüfen", text: "Überprüfe das formatierte Transkript und nimm letzte manuelle Korrekturen vor." },
+      { title: "Kopieren oder herunterladen", text: "Kopiere den sauberen Text oder lade ihn zur Veröffentlichung auf deiner Website herunter." },
     ],
     tips: [
-      "Veröffentlichte Transkripte machen Folgen barrierefrei und geben Suchmaschinen echten Text zum Indexieren.",
-      "Entfernen Sie Füllwörter für die Lesbarkeit, aber behalten Sie, was den Sinn eines Zitats ändert.",
-      "Prüfen Sie Namen und Fachbegriffe – hier irren Transkriptionstools oft.",
+      "Veröffentlichte Transkripte machen deinen Podcast barrierefrei und liefern Suchmaschinen indexierbaren Volltext.",
+      "Entferne Füllwörter für bessere Lesbarkeit, behalte aber charakteristische Wendungen bei.",
+      "Lies Fachbegriffe und Eigennamen gegen; automatische Tools machen hier die meisten Fehler.",
+    ],
+    sections: [
+      {
+        heading: "Standardmäßiges Podcast-Transkript-Format (Beispiel)",
+        intro: "Streaming-Dienste und Suchmaschinen erwarten Transkripte mit klar gekennzeichneten Sprechern, konsistenten Zeitstempeln und sauberen Absätzen:",
+        template: `[00:00:02] Sarah Lindemann (Host):
+Willkommen zurück bei Kreative Horizonte. Heute sprechen wir darüber, wie unabhängige Podcaster planbare Einnahmen erzielen können, ohne ihre redaktionelle Unabhängigkeit aufzugeben. Mein heutiger Gast ist Markus Winter, Gründer von AudioFirst Media. Markus, herzlich willkommen in der Show.
+
+[00:00:24] Markus Winter (Gast):
+Vielen Dank für die Einladung, Sarah. Freut mich sehr, hier zu sein. Ehrlich gesagt sehe ich den größten Fehler bei neuen Hosts darin, dass sie sich zu früh auf Sponsoren-TKPs versteifen, bevor sie überhaupt eine verlässliche Hörerbindung aufgebaut haben.
+
+[00:00:41] Sarah Lindemann (Host):
+Lass uns das genauer beleuchten. Wenn du von "Hörerbindung" sprichst: Wie sieht das in der Praxis für jemanden aus, der gerade seine ersten zwanzig Folgen veröffentlicht?
+
+[00:00:52] Markus Winter (Gast):
+Das steht und fällt mit drei Faktoren: einem verlässlichen Einstieg, der innerhalb der ersten dreißig Sekunden klaren Mehrwert verspricht, einem strukturierten Spannungsbogen und einem einzelnen, glasklaren Call-to-Action am Ende der Folge.`,
+      },
     ],
   },
   "trailer-script-builder": {
-    metaTitle: "Podcast-Trailer-Skript-Baukasten | Pod Studio",
+    metaTitle: "Podcast-Trailer-Skript-Baukasten & Vorlage | Pod Studio",
     metaDescription:
-      "Schreiben Sie ein Trailer-Skript, das Ihre Show, die Zielgruppe und den Grund zum Abonnieren erklärt. Bewährte Struktur für 60–90 Sekunden. Kostenlos.",
+      "Schreibe ein kurzes Podcast-Trailer-Skript, das dein Konzept erklärt und Hörer zum Abonnieren bewegt. Strukturierte 60-90-Sekunden-Vorlage. Kostenlos.",
     overview: [
-      "Der Trailer-Skript-Baukasten liefert eine bewährte Struktur: Hook, worum es geht, für wen die Show ist, was sie besonders macht und eine klare Aufforderung zum Folgen.",
-      "Viele Verzeichnisse zeigen den Trailer prominent auf der Showseite – oft hören neue Hörer ihn zuerst. Dieses Tool hilft, die 60–90 Sekunden optimal zu nutzen.",
+      "Der Trailer-Skript-Baukasten liefert eine praxiserprobte Struktur für den Trailer deines Podcasts: eine starke Einstiegshook, das Sende-Versprechen, die Zielgruppe und ein eindeutiger Handlungsaufruf.",
+      "Da viele Verzeichnisse den Trailer prominent oben auf deiner Sendungsseite platzieren, ist er oft der allererste Eindruck für neue Hörer. Mit diesem Tool machst du diese 60 bis 90 Sekunden wirkungsvoll.",
     ],
     steps: [
-      { title: "Show-Basisdaten", text: "Tragen Sie Showtitel, Host-Namen und Veröffentlichungsrhythmus ein." },
-      { title: "Große Frage formulieren", text: "Schreiben Sie die zentrale Frage Ihrer Show und Ihr Versprechen an die Hörer." },
-      { title: "Skript erzeugen", text: "Sie erhalten ein strukturiertes Skript mit Hook, Hauptteil und Call to Action." },
-      { title: "Aufnehmen und kürzen", text: "Lesen Sie es laut, stoppen Sie die Zeit und streichen Sie Wiederholungen." },
+      { title: "Eckdaten angeben", text: "Trage Sendungstitel, deinen Namen und den geplanten Veröffentlichungsrhythmus ein." },
+      { title: "Leitfrage formulieren", text: "Formuliere die Kernfrage, um die sich dein Podcast dreht, und das Versprechen an die Hörer." },
+      { title: "Skript generieren", text: "Erhalte ein gegliedertes Manuskript mit Einstieg, Hauptteil und Call-to-Action." },
+      { title: "Einsprechen & kürzen", text: "Lies das Manuskript laut vor, stoppe die Zeit und streiche redundante Sätze." },
     ],
     tips: [
-      "Bauen Sie einen kurzen echten Ausschnitt aus einer Folge ein – zeigen statt erzählen.",
-      "Enden Sie mit genau einer Aufforderung: der Show in der eigenen App folgen.",
-      "Aktualisieren Sie den Trailer, wenn sich Fokus oder Format der Show ändern.",
+      "Binde einen echten kurzen O-Ton aus einer Episode ein, wenn du schon einen hast – Hören überzeugt mehr als Erzählen.",
+      "Schließe mit einer einzelnen klaren Handlung ab: Die Show in der bevorzugten App abonnieren.",
+      "Aktualisiere deinen Trailer, falls sich der Schwerpunkt oder das Format deiner Sendung spürbar ändert.",
     ],
   },
   "review-response-generator": {
-    metaTitle: "Antworten auf Podcast-Rezensionen erstellen | Pod Studio",
+    metaTitle: "Podcast-Rezensions-Danksagungen & Feedback | Pod Studio",
     metaDescription:
-      "Antworten Sie auf Hörerbewertungen und schreiben Sie On-Air-Shoutouts – für Lob wie Kritik. Freundliche, professionelle Vorlagen. Kostenloses Tool.",
+      "Verfasse herzliche Antworten auf Podcast-Bewertungen und Hörer-Danksagungen für Lob und Kritik gleichermaßen. Professionelle Vorlagen. Kostenlos.",
     overview: [
-      "Der Generator für Rezensions-Danksagungen hilft Ihnen, auf Hörerbewertungen zu antworten und On-Air-Shoutouts zu schreiben, die Unterstützern danken und mehr Menschen zum Bewerten anregen.",
-      "Er deckt begeisterte Bewertungen, konstruktives Feedback und unfaire Kritik ab – mit respektvollen Antworten ohne Rechtfertigungsdruck, die bei Bedarf konkrete Verbesserungen nennen.",
+      "Der Rezensions-Danksagungs-Generator unterstützt dich dabei, wertschätzend auf Hörer-Feedback zu reagieren und persönliche Shoutouts für die nächste Aufnahme vorzubereiten.",
+      "Er deckt begeistertes Lob, konstruktive Kritik und schwierige Rückmeldungen ab – stets mit einem respektvollen, professionellen und verbindlichen Tonfall.",
     ],
     steps: [
-      { title: "Rezension eingeben", text: "Tragen Sie Name oder Handle der Person und den Inhalt der Bewertung ein." },
-      { title: "Tonalität festlegen", text: "Markieren Sie die Bewertung als 5-Sterne-Lob, konstruktiv oder kritisch." },
-      { title: "Format wählen", text: "Sie erhalten ein On-Air-Shoutout-Skript, eine Social-Media-Antwort und eine private Dankesnachricht." },
-      { title: "Persönlich machen", text: "Greifen Sie ein Detail der Bewertung auf, damit die Person merkt, dass Sie sie gelesen haben." },
+      { title: "Bewertung einfügen", text: "Trage Name oder Pseudonym des Hörers und den Text der Bewertung ein." },
+      { title: "Grundstimmung wählen", text: "Wähle zwischen 5-Sterne-Lob, konstruktivem Feedback oder kritischer Rückmeldung." },
+      { title: "Format aussuchen", text: "Erhalte einen Text zum Vorlesen in der Sendung, eine Social-Media-Antwort und ein Dankesschreiben." },
+      { title: "Persönlich anpassen", text: "Ergänze ein konkretes Detail aus dem Feedback, um zu zeigen, dass du es aufmerksam gelesen hast." },
     ],
     tips: [
-      "Lesen Sie jeden Monat ein paar Bewertungen vor – einer der einfachsten Wege zu mehr Ratings.",
-      "Nennen oder verspotten Sie nie kritische Rezensenten; antworten Sie auf das Argument, nicht die Person.",
-      "Danken Sie für konkretes Feedback und sagen Sie, was Sie dadurch geändert haben.",
+      "Lies jeden Monat einige Bewertungen in der Sendung vor – das motiviert andere Hörer am wirksamsten zur Sterne-Vergabe.",
+      "Stelle kritische Hörer niemals öffentlich bloß; antworte sachlich auf den Inhalt, nicht auf die Person.",
+      "Bedanke dich für konkrete Anregungen und erwähne, was du daraufhin in der Show verbessert hast.",
     ],
   },
   "collab-finder": {
-    metaTitle: "Podcast-Gastanfrage & Kooperations-Pitch | Pod Studio",
+    metaTitle: "Gast-Pitches & Podcast-Kooperations-Mails | Pod Studio",
     metaDescription:
-      "Schreiben Sie Gast-Pitches und Cross-Promotion-Mails, die beantwortet werden. Gegenseitiger Nutzen und nächster Schritt klar formuliert. Kostenlose Vorlagen.",
+      "Schreibe Gast-Anfragen und Kooperations-Mails zwischen Podcasts, die Antworten erhalten. Stelle gegenseitigen Nutzen und Format klar heraus. Kostenlos.",
     overview: [
-      "Der Gast- & Kooperations-Pitch-Generator entwirft E-Mails, um sich als Gast vorzuschlagen, Gäste in Ihre Show einzuladen oder eine Cross-Promotion mit einem anderen Podcast vorzuschlagen.",
-      "Jeder Entwurf erklärt, wen Ihre Show erreicht, das vorgeschlagene Format, den Nutzen für beide Seiten und einen einfachen nächsten Schritt – genau das, worauf vielbeschäftigte Hosts achten.",
+      "Der Kooperations-Pitch-Generator entwirft individuelle Anschreiben, um dich als Gast vorzuschlagen, Wunschgäste in deine Show einzuladen oder gemeinsame Cross-Promotionen zu vereinbaren.",
+      "Jeder Entwurf bringt Zielgruppe, vorgeschlagenes Format, beiderseitigen Nutzen und den nächsten unkomplizierten Schritt auf den Punkt.",
     ],
     steps: [
-      { title: "Ziel wählen", text: "Sich als Gast pitchen, einen Gast einladen oder einen Promo- bzw. Feed-Tausch vorschlagen." },
-      { title: "Beide Shows eintragen", text: "Geben Sie Zielshow und Host, Ihren Podcastnamen und Ihren konkreten Mehrwert an." },
-      { title: "E-Mail erzeugen", text: "Sie erhalten einen knappen Entwurf mit Betreff, Nutzenversprechen und klarem Call to Action." },
-      { title: "Personalisieren und senden", text: "Nennen Sie eine Folge, die Ihnen gefallen hat, und senden Sie von Ihrer eigenen Adresse." },
+      { title: "Ziel festlegen", text: "Bewirb dich als Gast, lade einen Experten ein oder schlage gegenseitige Promo vor." },
+      { title: "Beide Shows beschreiben", text: "Gib den Ziel-Podcast, den Host-Namen und den konkreten Mehrwert an, den du beisteuern kannst." },
+      { title: "Pitch generieren", text: "Erhalte ein kompaktes Anschreiben mit Betreffzeile, Nutzenversprechen und Call-to-Action." },
+      { title: "Personalisieren & absenden", text: "Erwähne eine konkrete Folge, die du gehört hast, und sende die Nachricht über dein Mailprogramm." },
     ],
     tips: [
-      "Halten Sie die erste E-Mail kurz – fünf, sechs Sätze genügen.",
-      "Teilen Sie nur überprüfbare Reichweitenzahlen; geschönte Zahlen zerstören schnell Vertrauen.",
-      "Haken Sie nach einer Woche einmal nach und ziehen Sie dann freundlich weiter.",
+      "Halte die erste Nachricht kurz: Fünf bis sechs präzise Sätze genügen völlig.",
+      "Nenne nur Hörerzahlen, die du bei Nachfrage belegen kannst; übertriebene Zahlen kosten sofort Vertrauen.",
+      "Hake nach einer Woche freundlich nach, falls du noch keine Rückmeldung erhalten hast.",
     ],
   },
 };

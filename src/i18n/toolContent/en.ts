@@ -2,21 +2,21 @@ import type { ToolContentRecord } from "./types";
 
 export const enToolContent: ToolContentRecord = {
   "episode-title-generator": {
-    metaTitle: "Free Podcast Episode Title Generator | Pod Studio",
+    metaTitle: "Free Podcast Title Generator for Episodes | Pod Studio",
     metaDescription:
-      "Turn an episode topic into dozens of clear, clickable podcast titles. Filter by style — curiosity, how-to, contrarian — and copy your favorite. Free, no sign-up.",
+      "Generate high-CTR episode titles with our free podcast title generator. Browse curiosity, how-to, and guest formulas for Apple and Spotify. Free, no sign-up.",
     overview: [
-      "The Episode Title Generator turns a topic, and optionally a guest name, into a long list of title ideas built on proven patterns: how-to promises, curiosity gaps, contrarian takes, numbered lists and guest-led hooks.",
-      "It is built for hosts who know what the episode is about but are stuck on how to say it. Use it to explore angles quickly, then pick the title that describes the episode honestly and reads well on a small phone screen.",
+      "The Podcast Title Generator turns your episode topic, and optionally a guest name, into high-CTR title ideas built on proven psychological frameworks: curiosity gaps, how-to promises, contrarian viewpoints, and guest-led hooks.",
+      "Built for podcast hosts who know what their episode covers but need click-worthy headlines tested for high listener conversion across Apple Podcasts and Spotify phone screens.",
     ],
     steps: [
       { title: "Describe the episode", text: "Type the main topic in a few words, such as “budgeting for freelancers” or “first 100 subscribers”." },
       { title: "Add a guest (optional)", text: "Include the guest’s name or expertise when they are the main reason people will press play." },
-      { title: "Filter by style", text: "Switch between curiosity, how-to, contrarian and other formulas to compare different angles side by side." },
-      { title: "Copy or export", text: "Copy a single title, or export the full list as a text file to share with your co-host or editor." },
+      { title: "Filter by style", text: "Switch between curiosity, how-to, contrarian and listicle formulas to compare angles side by side." },
+      { title: "Copy or export", text: "Copy a single title or export your favorite titles as a text file to share with your co-host or editor." },
     ],
     tips: [
-      "Put the most specific, searchable words in the first half of the title — podcast apps often cut off the end.",
+      "Put the most specific, searchable words in the first half of the title — mobile apps often cut off after 60 characters.",
       "Promise only what the episode delivers. Accurate titles earn better completion rates and fewer negative reviews.",
       "Leave episode numbers and your show name out of the title unless your listeners rely on them.",
     ],
@@ -24,10 +24,10 @@ export const enToolContent: ToolContentRecord = {
   "show-notes-generator": {
     metaTitle: "Free Podcast Show Notes Generator & Template | Pod Studio",
     metaDescription:
-      "Create clean podcast show notes with a summary, guest bio, timestamps, key takeaways and links. Export as Markdown, HTML or plain text. Free, no sign-up.",
+      "Create structured episode notes with a free podcast show notes template. Export summaries, timestamps, guest bios, and resource links. Free, no sign-up.",
     overview: [
-      "The Show Notes Generator assembles your episode details into well-structured show notes: a short summary, featured guest, chapter timestamps, key takeaways and the resources you mentioned.",
-      "Output is available as Markdown, HTML or plain text, so you can paste it straight into Buzzsprout, Libsyn, Podbean, Spotify for Creators, YouTube or your own website without reformatting.",
+      "The Show Notes Generator assembles your episode details into clean, search-optimized show notes featuring an episode summary, featured guest bio, chapter timestamps, key takeaways, and referenced resource links.",
+      "Output is formatted in Markdown, HTML, or plain text, ready to paste directly into Buzzsprout, Libsyn, Podbean, Spotify for Podcasters, YouTube descriptions, or your website.",
     ],
     steps: [
       { title: "Fill in the basics", text: "Enter the episode title and a one- or two-sentence summary that explains why someone should listen." },
@@ -40,14 +40,45 @@ export const enToolContent: ToolContentRecord = {
       "Only include timestamps you have checked against the final edit; wrong chapters frustrate listeners.",
       "Reuse the same structure every week so regular listeners know where to find links and resources.",
     ],
+    sections: [
+      {
+        heading: "Podcast show notes template",
+        intro: "Clean, search-optimized show notes help listeners follow along and give search engines rich text to index:",
+        template: `# Episode Title: Mastering Audience Growth in 2026
+
+## Episode Summary
+In this episode, we sit down with audio strategist Elena Rostova to dissect the latest listener retention benchmarks. Elena shares why weekly release consistency beats viral social spikes, how to structure chapter markers for maximum completion rates, and the metrics sponsors actually look for when evaluating your media kit.
+
+## Timestamps & Chapters
+- [00:00] Cold open & episode overview
+- [02:15] Elena's background in audio production
+- [07:45] The 30-second rule for hook retention
+- [14:20] How to price your first sponsor read
+- [23:10] The biggest show note SEO mistakes to avoid
+- [31:00] Rapid-fire Q&A and closing thoughts
+
+## Key Takeaways
+1. Hook listeners with a specific promise in the first 30 seconds.
+2. Structure your show notes with clear timestamp headers to improve search engine rankings.
+3. Mid-roll host-read endorsements retain 85%+ listener attention compared to programmatic ads.
+
+## Mentioned in This Episode
+- Book: *Sound Reporting: The NPR Guide to Audio Journalism*
+- Tool: Pod Studio Episode Outline Builder
+- Connect with Elena: @elenaaudio on Twitter / LinkedIn
+
+## Support the Show
+If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and follow us on Spotify!`,
+      },
+    ],
   },
   "podcast-name-generator": {
-    metaTitle: "Free Podcast Name Generator — Show Name Ideas | Pod Studio",
+    metaTitle: "Podcast Name Generator: Free Podcast Name Ideas | Pod Studio",
     metaDescription:
-      "Brainstorm memorable podcast name ideas by niche, theme and brand style. Shortlist your favorites, then check domains and trademarks yourself. Free, no sign-up.",
+      "Generate catchy show names with our free podcast name generator. Explore creative podcast name ideas by niche and check availability. Free, no sign-up.",
     overview: [
-      "The Podcast Name Generator suggests show names based on your niche, an optional custom word or theme, and the brand style you want — from straightforward and searchable to playful and brandable.",
-      "It is a brainstorming tool: it does not check domain or trademark availability. Use it to build a shortlist, then confirm the name with a domain registrar, podcast directories and a trademark search before you announce it.",
+      "The Podcast Name Generator helps you brainstorm memorable, brandable podcast name ideas categorized by niche, custom keywords, and creative tone — from direct and searchable to playful and authoritative.",
+      "Use these podcast name ideas to build a strong shortlist for your new show, then verify directory availability on Apple Podcasts, Spotify, and domain registrars before announcing your brand.",
     ],
     steps: [
       { title: "Pick your niche", text: "Choose the genre that fits your show, such as tech, finance, true crime or personal growth." },
@@ -60,14 +91,76 @@ export const enToolContent: ToolContentRecord = {
       "Including a clear topic word helps new listeners find you in podcast search.",
       "Avoid names that depend on a trend or a year; you want something that still fits in episode 200.",
     ],
+    sections: [
+      {
+        heading: "Podcast name ideas by niche",
+        intro: "Looking for creative podcast name ideas? Browse these curated title concepts across top podcasting categories:",
+        groups: [
+          {
+            category: "Business & Startups",
+            items: [
+              "The Bootstrapped Founder",
+              "Scale & Strategy",
+              "Zero to Seed",
+              "Market Movers Podcast",
+            ],
+          },
+          {
+            category: "True Crime & Mystery",
+            items: [
+              "Unsolved & Unspoken",
+              "Cold Case Almanac",
+              "Behind the Yellow Tape",
+              "Shadow of Suspicion",
+            ],
+          },
+          {
+            category: "Comedy & Entertainment",
+            items: [
+              "Nobody Asked For This",
+              "Slightly Cynical",
+              "Laughing Through It",
+              "The Daily Ridiculous",
+            ],
+          },
+          {
+            category: "Health & Wellness",
+            items: [
+              "Mind & Muscle Protocol",
+              "The Longevity Habit",
+              "Root Cause Radio",
+              "Modern Wellness Lab",
+            ],
+          },
+          {
+            category: "Tech & Artificial Intelligence",
+            items: [
+              "Prompt & Paradigm",
+              "The Neural Shift",
+              "Silicon & Code",
+              "Future Proofed",
+            ],
+          },
+          {
+            category: "Faith & Spirituality",
+            items: [
+              "Grace in the Quiet",
+              "The Pilgrim Way",
+              "Rooted & Reaching",
+              "Everyday Faith",
+            ],
+          },
+        ],
+      },
+    ],
   },
   "episode-outline-builder": {
-    metaTitle: "Podcast Episode Outline & Run-of-Show Builder | Pod Studio",
+    metaTitle: "Podcast Script Template & Outline Builder | Pod Studio",
     metaDescription:
-      "Build a timed podcast run of show with cold open, intro, segments, sponsor reads and outro. Keep recordings on schedule. Free template, no sign-up.",
+      "Structure your show with a free podcast script template and outline builder. Plan segments, ad breaks, timecodes, and talking points. Free, no sign-up.",
     overview: [
-      "The Episode Outline Builder creates a timed run of show: a production roadmap that lists each segment, roughly when it starts and how long it should last.",
-      "It helps hosts, guests and producers stay in sync on music cues, sponsor reads, interview blocks and calls to action, without scripting every word of the conversation.",
+      "The Episode Outline Builder creates a timed podcast run of show: an interactive production roadmap that allocates minutes across hooks, intro music, core segments, sponsor reads, and calls to action.",
+      "It helps hosts, co-hosts, and producers maintain conversational pacing and hit target episode lengths without scripting every single word.",
     ],
     steps: [
       { title: "Name the episode", text: "Enter a working title so the run of show is easy to identify later." },
@@ -80,14 +173,53 @@ export const enToolContent: ToolContentRecord = {
       "Leave a few minutes of buffer for tangents — the best moments are often unplanned.",
       "Send guests the outline in advance so they can prepare stories, not just answers.",
     ],
+    sections: [
+      {
+        heading: "Free podcast script template",
+        intro: "Use this battle-tested, modular podcast script template to structure your episodes cleanly, whether you record solo, with a co-host, or with an interview guest:",
+        template: `[00:00 - 01:00] COLD OPEN / HOOK
+- Hook: High-stakes quote, provocative statement, or open loop that grabs attention.
+- Episode Promise: "In today's episode, you're going to learn..."
+
+[01:00 - 02:30] INTRO & SPONSOR PRE-ROLL
+- Show Intro Music / Stinger
+- Welcome & Host Intro: Name, show tagline, and brief episode context.
+- Pre-Roll Sponsor (15-30s): "Support for today's episode comes from..."
+
+[02:30 - 12:00] SEGMENT 1: THE FOUNDATION / ORIGIN
+- Core problem or theme setup.
+- Personal anecdote, guest introduction, or case study background.
+- Key takeaway #1.
+
+[12:00 - 13:30] MID-ROLL SPONSOR BREAK
+- Natural transition: "We'll be right back with the biggest takeaway after a quick word..."
+- Mid-Roll Sponsor 1 & 2 (60s host-read endorsement + promo code).
+
+[13:30 - 25:00] SEGMENT 2: THE DEEP DIVE / BREAKTHROUGH
+- Tactical breakdown: steps, framework, or behind-the-scenes discussion.
+- Counter-intuitive insights or common mistakes to avoid.
+- Key takeaway #2.
+
+[25:00 - 35:00] SEGMENT 3: ACTIONABLE IMPLEMENTATION & AUDIENCE Q&A
+- Practical implementation steps for the listener.
+- Rapid-fire round, community voicemail, or hot take.
+- Key takeaway #3.
+
+[35:00 - 38:00] RECAP, CTA & OUTRO
+- 60-second summary of main points.
+- Single Call to Action (CTA): "Leave a review on Apple Podcasts / Subscribe on Spotify."
+- Next episode teaser.
+- Outro music fade out.`,
+      },
+    ],
   },
   "guest-question-generator": {
-    metaTitle: "Podcast Interview Question Generator | Pod Studio",
+    metaTitle: "Podcast Interview Questions Generator (Free) | Pod Studio",
     metaDescription:
-      "Generate thoughtful podcast interview questions for any guest, from icebreakers to deep-dive stories and rapid-fire rounds. Free, no sign-up required.",
+      "Generate memorable podcast interview questions for any guest. Get thoughtful icebreakers, deep story prompts, and rapid-fire questions. Free, no sign-up.",
     overview: [
-      "The Guest Question Generator builds a full question arc for your interview, moving from easy icebreakers and origin stories to turning points, lessons learned, predictions and a rapid-fire round.",
-      "Enter the guest’s name, profession and the episode topic to get a tailored starting list you can refine with your own research.",
+      "The Podcast Interview Questions Generator builds a comprehensive question arc for your guest interviews, transitioning naturally from friendly icebreakers and origin stories to vulnerable pivot points, tactical frameworks, and rapid-fire rounds.",
+      "Enter your guest’s name, profession, and episode topic to generate tailored interview prep sheets that bypass standard PR talking points and uncover untold insights.",
     ],
     steps: [
       { title: "Add guest details", text: "Enter the guest’s name, their profession or role, and the core episode topic." },
@@ -100,14 +232,60 @@ export const enToolContent: ToolContentRecord = {
       "Keep two or three must-ask questions and let the rest flex around the conversation.",
       "Save your most personal question for the middle, once the guest is comfortable.",
     ],
+    sections: [
+      {
+        heading: "Podcast interview questions to ask any guest",
+        intro: "Great interviews happen when you skip the resume and dig into the real stories. Here are 18 high-impact interview questions grouped by conversation stage:",
+        groups: [
+          {
+            category: "Icebreakers & First Impressions",
+            items: [
+              "What is something you believed early in your career that you now think is completely wrong?",
+              "What was the very first project or job that made you fall in love with your field?",
+              "If you were not doing what you do today, what unexpected path would you be on?",
+              "What is the most common piece of advice in your industry that people should ignore?",
+            ],
+          },
+          {
+            category: "Stories, Failures & Turning Points",
+            items: [
+              "Tell me about the single lowest moment in your journey — what did the day after look like?",
+              "What was the critical turning point where giving up was the easiest option, but you pushed through?",
+              "Who was the one mentor or critic whose words permanently altered how you work?",
+              "What did you have to unlearn in order to reach your next level of growth?",
+            ],
+          },
+          {
+            category: "Tactical Insights & Masterclass",
+            items: [
+              "Walk us step-by-step through how you structure your highest-focus hours each morning.",
+              "What is the single most effective tool, metric, or habit that drives 80% of your current results?",
+              "When everything feels chaotic or overwhelming, what is the exact protocol you run?",
+              "What is the counter-intuitive decision you made that everyone warned you against?",
+              "What is a problem in your space that nobody is talking about yet, but everyone will be in two years?",
+            ],
+          },
+          {
+            category: "Closing Reflections & Rapid-Fire",
+            items: [
+              "What is the one book or resource you have gifted or recommended more than any other?",
+              "What is the best investment of under $100 you have made in the last 12 months?",
+              "What does success actually look like to you today compared to when you started?",
+              "If you could put one billboard up in front of millions of creators, what would it say?",
+              "Where can listeners find you, support your work, and follow your latest projects?",
+            ],
+          },
+        ],
+      },
+    ],
   },
   "monetization-calculator": {
-    metaTitle: "Podcast CPM & Sponsorship Revenue Calculator | Pod Studio",
+    metaTitle: "Podcast Income Calculator: Ad Revenue & CPM | Pod Studio",
     metaDescription:
-      "Estimate podcast ad revenue from downloads, CPM rates, ad slots and fill rate. Compare pre-roll, mid-roll and post-roll plus listener support. Free calculator.",
+      "Calculate your show earnings with our free podcast income calculator. Model host-read CPM ad revenue, downloads, and sponsorship deals. Free, no sign-up.",
     overview: [
-      "The CPM & Sponsorship Calculator estimates what your show could earn from ads using the standard formula: (downloads ÷ 1,000) × CPM × filled ad placements.",
-      "Adjust downloads per episode, release frequency, pre-roll, mid-roll and post-roll slots, fill rate and listener memberships to see monthly, per-episode and annual projections — useful for pricing sponsors and setting goals.",
+      "The Podcast Income Calculator estimates your potential earnings using standard industry CPM rates and download benchmarks: (downloads ÷ 1,000) × CPM × filled ad inventory slots.",
+      "Model monthly and annual projections across pre-roll, mid-roll, and post-roll slots, dynamic fill rates, and direct listener memberships to negotiate sponsorship deals with confidence.",
     ],
     steps: [
       { title: "Enter your downloads", text: "Use your average downloads per episode in the first 30 days, as reported by your host." },
@@ -120,14 +298,27 @@ export const enToolContent: ToolContentRecord = {
       "Be conservative with fill rate — most independent shows do not sell every slot every month.",
       "Use verified download numbers when you pitch; sponsors may ask for screenshots from your host.",
     ],
+    sections: [
+      {
+        heading: "How much do podcasts make?",
+        paragraphs: [
+          "Podcast earnings vary widely based on verified 30-day download volume, release frequency, and ad slot inventory. Shows with 1,000 to 5,000 downloads per episode typically earn between $50 and $300 per episode through a combination of CPM sponsorship slots and affiliate links.",
+          "Larger independent podcasts averaging 10,000 to 50,000 downloads per episode command premium host-read CPM rates between $25 and $35, generating thousands of dollars per month in direct sponsor revenue alongside listener memberships and merch.",
+        ],
+        link: {
+          text: "Read the full data report: How Much Do Podcasts Make in 2026? →",
+          href: "/guides/how-much-do-podcasts-make",
+        },
+      },
+    ],
   },
   "cover-art-preview": {
-    metaTitle: "Podcast Cover Art Previewer: Apple & Spotify | Pod Studio",
+    metaTitle: "Podcast Cover Art Size Checker: Apple & Spotify | Pod Studio",
     metaDescription:
-      "Preview your podcast cover art as it appears in Apple Podcasts, Spotify, lock screens and small thumbnails. Check size and readability. Free, private.",
+      "Verify your podcast cover art size and specs for Apple and Spotify. Preview 3000x3000px artwork on mobile locks, dark mode, and feeds. Free, no sign-up.",
     overview: [
-      "The Cover Art Previewer shows how your podcast artwork looks in Apple Podcasts-style and Spotify-style layouts, on a mobile lock screen and as a tiny search thumbnail.",
-      "Your image never leaves your device. It is checked against the common directory requirement of a square image between 1400 × 1400 and 3000 × 3000 pixels, so you can catch problems before you upload.",
+      "The Podcast Cover Art Size Checker & Preview tool tests your artwork in realistic Apple Podcasts and Spotify directory feeds, mobile lock screen players, and 50x50px thumbnail views.",
+      "Your image is verified 100% locally in your browser against strict directory specifications: exactly 1:1 square aspect ratio, RGB color space, and dimensions between 1400x1400px and 3000x3000px.",
     ],
     steps: [
       { title: "Upload your artwork", text: "Drop a JPG or PNG file (or try the sample artwork). It is processed only in your browser." },
@@ -162,12 +353,12 @@ export const enToolContent: ToolContentRecord = {
     ],
   },
   "episode-timestamp-generator": {
-    metaTitle: "Podcast Chapter Markers & Timestamp Generator | Pod Studio",
+    metaTitle: "Podcast Timestamp & Chapter Marker Generator | Pod Studio",
     metaDescription:
-      "Turn rough notes into clean chapter timestamps for YouTube, Spotify and podcast show notes. Consistent HH:MM:SS formatting in one click. Free, no sign-up.",
+      "Generate clean podcast timestamp format and YouTube chapters generator timecodes. Create clickable markers for Spotify, Apple, and web. Free, no sign-up.",
     overview: [
-      "The Timestamp & Chapter Generator turns your recording notes into tidy chapter markers such as “00:00 Introduction” and “05:12 Guest background”, with a visual timeline of the episode.",
-      "Use the output in YouTube descriptions, Spotify episode descriptions and show notes to help listeners jump to the part they care about — and to give search engines a clearer picture of what the episode covers.",
+      "The Timestamp Generator converts your production notes into formatted timecodes and YouTube chapter markers that trigger interactive scrub bars on YouTube, Spotify, and podcast player apps.",
+      "Give listeners easy navigation between topics and help search engines index individual segments to improve discoverability across Google and directory charts.",
     ],
     steps: [
       { title: "Add your chapters", text: "Enter each chapter as a start time and a short title, or paste a quick list such as “0:00 Intro, 5:30 Breakthrough”." },
@@ -180,14 +371,23 @@ export const enToolContent: ToolContentRecord = {
       "Write chapter labels as mini headlines — specific beats vague (“Pricing mistakes in year one” vs. “Part 2”).",
       "Aim for chapters of at least a few minutes; too many tiny chapters are hard to scan.",
     ],
+    sections: [
+      {
+        heading: "How to format timestamps and YouTube chapters",
+        paragraphs: [
+          "Clickable chapters make long episodes approachable and let listeners navigate directly to the topics they care about most. On YouTube, timestamps formatted as “00:00 Intro” placed in the video description automatically generate a segmented scrub bar on the video player.",
+          "To ensure your timecodes trigger YouTube chapters and Spotify chapter markers correctly, always include a timestamp starting at 00:00 (or 0:00), provide at least three chapters in ascending chronological order, and ensure each segment is at least ten seconds long.",
+        ],
+      },
+    ],
   },
   "intro-script-generator": {
-    metaTitle: "Podcast Intro Script & Cold Open Generator | Pod Studio",
+    metaTitle: "Podcast Intro Script Generator + Intro Examples | Pod Studio",
     metaDescription:
-      "Write a short podcast intro and cold open hook that tells listeners why to stay. Templates for interview and solo shows. Free intro script generator.",
+      "Write hook-driven hooks with our podcast intro script generator. Explore proven intro examples for solo, co-host, and interview shows. Free, no sign-up.",
     overview: [
-      "The Intro Script Generator helps you write the first 30–60 seconds of an episode: a hook that creates curiosity or relevance, followed by a short host introduction that sets expectations.",
-      "Choose a format and delivery tone, fill in a few details, and get a ready-to-read script in a teleprompter-style view that you can adapt to your voice.",
+      "The Podcast Intro Script Generator drafts punchy 30-to-60 second cold opens and episode introductions that hook listener attention and drastically reduce first-minute abandonment rates.",
+      "Select your show format, guest details, and delivery tone to generate teleprompter-ready scripts built on curiosity triggers, bold promises, and high-stakes teasers.",
     ],
     steps: [
       { title: "Choose format and tone", text: "Pick guest interview, solo or story format, and a high-energy, reflective or conversational delivery." },
@@ -199,6 +399,34 @@ export const enToolContent: ToolContentRecord = {
       "Get to the point within the first 15 seconds — that is where many listeners decide to stay or skip.",
       "A strong guest quote makes an excellent cold open before your theme music.",
       "Keep recurring intros short; long sponsor or housekeeping segments belong later.",
+    ],
+    sections: [
+      {
+        heading: "Podcast intro examples",
+        intro: "The first thirty seconds decide whether a listener finishes your episode or taps away. Here are five proven podcast intro examples you can adapt for your show:",
+        list: [
+          {
+            title: "1. The Solo High-Stakes Hook",
+            description: "“Most people spend five years grinding at their startup before discovering they built the wrong product. Today, I'm sharing the three validation tests that would have saved me $80,000. Welcome to Founders Playbook.”",
+          },
+          {
+            title: "2. The Co-Host Banter & Teaser",
+            description: "“Welcome back to The Watercooler. I'm Alex, and with me as always is Jordan. Jordan, before we debate today's Apple event, tell everyone why you almost got arrested at the airport yesterday...”",
+          },
+          {
+            title: "3. The Guest Interview Teaser",
+            description: "““If you don't fire your biggest client by month six, your agency will die.” That's what today's guest, David Miller, told me ten minutes before we hit record. Here's how he scaled to seven figures without burnout.”",
+          },
+          {
+            title: "4. The Narrative Storytelling Cold Open",
+            description: "“On a freezing Tuesday morning in February 2014, thirty-two servers in a Virginia datacenter went dark. What followed was the largest unsolved cryptocurrency breach in history. This is Darknet Chronicles.”",
+          },
+          {
+            title: "5. The Actionable Business & Tech Intro",
+            description: "“Want to rank on page one of Google without building hundreds of backlinks? In the next twenty minutes, we're breaking down the exact programmatic content architecture we used to generate 450,000 monthly visits.”",
+          },
+        ],
+      },
     ],
   },
   "audience-growth-estimator": {
@@ -242,12 +470,12 @@ export const enToolContent: ToolContentRecord = {
     ],
   },
   "category-finder": {
-    metaTitle: "Apple Podcasts & Spotify Category Finder | Pod Studio",
+    metaTitle: "Apple Podcast Categories List & Category Finder | Pod Studio",
     metaDescription:
-      "Find the best Apple Podcasts categories and subcategories for your show. Search by topic, compare options and choose your primary category. Free tool.",
+      "Browse the complete list of official apple podcast categories and Spotify genres. Find low-competition subcategories to rank your show. Free, no sign-up.",
     overview: [
-      "The Category Finder helps you choose the right Apple Podcasts category and subcategory for your show. Apple lets you select up to two categories, and the primary one is the most prominent.",
-      "Search by topic or keyword to see matching categories and subcategories, then copy the exact XML tag for your RSS feed with one click.",
+      "The Category Finder helps you navigate the official Apple Podcasts taxonomy and Spotify podcast genres to find primary and secondary categories where your show has the best discoverability and chart ranking potential.",
+      "Explore official category tiers, search by topic, and compare niche competition levels to position your podcast effectively.",
     ],
     steps: [
       { title: "Search by topic", text: "Type your main subject, such as “personal finance” or “true crime”." },
@@ -260,14 +488,98 @@ export const enToolContent: ToolContentRecord = {
       "A precise subcategory often gives a new show a better chance of being discovered.",
       "Check Apple’s current official list before publishing, as category names occasionally change.",
     ],
+    sections: [
+      {
+        heading: "Apple Podcasts categories list",
+        intro: "Below is the complete official taxonomy of primary and secondary categories recognized by Apple Podcasts and Spotify for directory placement and chart ranking:",
+        groups: [
+          {
+            category: "Arts",
+            items: ["Books", "Design", "Fashion & Beauty", "Food", "Performing Arts", "Visual Arts"],
+          },
+          {
+            category: "Business",
+            items: ["Careers", "Entrepreneurship", "Investing", "Management", "Marketing", "Non-Profit"],
+          },
+          {
+            category: "Comedy",
+            items: ["Comedy Interviews", "Improv", "Stand-Up"],
+          },
+          {
+            category: "Education",
+            items: ["Courses", "How To", "Language Learning", "Self-Improvement"],
+          },
+          {
+            category: "Fiction",
+            items: ["Comedy Fiction", "Drama", "Science Fiction"],
+          },
+          {
+            category: "Government",
+            items: ["Government", "Municipal", "National", "Public Administration"],
+          },
+          {
+            category: "History",
+            items: ["Ancient", "Medieval", "Military", "Modern", "Regional History"],
+          },
+          {
+            category: "Health & Fitness",
+            items: ["Alternative Health", "Fitness", "Medicine", "Mental Health", "Nutrition", "Sexuality"],
+          },
+          {
+            category: "Kids & Family",
+            items: ["Education for Kids", "Parenting", "Pets & Animals", "Stories for Kids"],
+          },
+          {
+            category: "Leisure",
+            items: ["Animation & Manga", "Automotive", "Aviation", "Crafts", "Games", "Hobbies", "Home & Garden", "Video Games"],
+          },
+          {
+            category: "Music",
+            items: ["Music Commentary", "Music History", "Music Interviews"],
+          },
+          {
+            category: "News",
+            items: ["Business News", "Daily News", "Entertainment News", "News Commentary", "Politics", "Sports News", "Tech News"],
+          },
+          {
+            category: "Religion & Spirituality",
+            items: ["Buddhism", "Christianity", "Hinduism", "Islam", "Judaism", "Religion", "Spirituality"],
+          },
+          {
+            category: "Science",
+            items: ["Astronomy", "Chemistry", "Earth Sciences", "Life Sciences", "Mathematics", "Natural Sciences", "Nature", "Physics", "Social Sciences"],
+          },
+          {
+            category: "Society & Culture",
+            items: ["Documentary", "Personal Journals", "Philosophy", "Places & Travel", "Relationships"],
+          },
+          {
+            category: "Sports",
+            items: ["Baseball", "Basketball", "Cricket", "Football", "Golf", "Hockey", "Rugby", "Running", "Soccer", "Swimming", "Tennis", "Volleyball", "Wilderness", "Wrestling"],
+          },
+          {
+            category: "Technology",
+            items: ["Artificial Intelligence", "Coding", "Consumer Tech", "Cybersecurity", "Software", "Tech News"],
+          },
+          {
+            category: "True Crime",
+            items: ["Investigations", "Serial Cases", "Unsolved Mysteries"],
+          },
+          {
+            category: "TV & Film",
+            items: ["After Shows", "Film Criticisms", "Film History", "Film Interviews", "TV Reviews"],
+          },
+        ],
+      },
+    ],
   },
   "hook-generator": {
-    metaTitle: "Podcast Clip Hook & Social Quote Generator | Pod Studio",
+    metaTitle: "Podcast Hook & Cold Open Generator | Pod Studio",
     metaDescription:
-      "Write scroll-stopping hooks for podcast clips on TikTok, Reels, YouTube Shorts and LinkedIn. Pick a style, compare options and copy. Free, no sign-up.",
+      "Craft punchy cold opens and audio hooks with our free podcast hook generator. Stop listener drop-off in the first 60 seconds of show. Free, no sign-up.",
     overview: [
-      "The Social Hook & Clip Generator writes short, scroll-stopping opening lines for podcast clips and posts, so the best moments of an episode can work on their own.",
-      "Enter the episode subject and, optionally, a featured guest, then pick a hook style to get several lines you can use as on-screen text or captions on TikTok, Instagram Reels, YouTube Shorts or LinkedIn.",
+      "The Podcast Hook & Cold Open Generator creates scroll-stopping opening lines and high-curiosity video hooks from your episode concepts, keeping listeners engaged from the first few seconds.",
+      "Enter your episode topic and guest to generate hooks optimized for TikTok, Instagram Reels, YouTube Shorts, and on-air podcast cold opens.",
     ],
     steps: [
       { title: "Enter the subject", text: "Describe the episode subject or industry the clip is about." },
@@ -282,12 +594,12 @@ export const enToolContent: ToolContentRecord = {
     ],
   },
   "transcript-formatter": {
-    metaTitle: "Podcast Transcript Cleaner & Formatter | Pod Studio",
+    metaTitle: "Podcast Transcript Format & Cleaner Tool | Pod Studio",
     metaDescription:
-      "Clean up podcast transcripts: standardize speaker labels, remove filler words and timestamps, and format for show notes or blogs. Free, private, in-browser.",
+      "Clean AI audio text into standard podcast transcript format. Add speaker tags, format clean paragraphs, and remove filler words easily. Free, no sign-up.",
     overview: [
-      "The Transcript Cleaner tidies text transcripts from any transcription service. Replace generic speaker labels with real names, remove common filler words such as “um” and “uh”, and strip or keep inline timestamps.",
-      "It works on text you paste in — it does not transcribe audio. The result is easier to read and ready to publish as an accessible transcript, blog post or show-notes excerpt.",
+      "The Podcast Transcript Formatter cleans raw automated speech-to-text exports into standard podcast transcript format with clean speaker tags, stripped filler words, and publication-ready paragraphs.",
+      "Runs 100% in your browser for complete privacy, preparing accessible transcripts ready for episode web pages, SEO show notes, and blog adaptations.",
     ],
     steps: [
       { title: "Paste your transcript", text: "Copy the text export from your transcription service and paste it into the editor." },
@@ -299,6 +611,23 @@ export const enToolContent: ToolContentRecord = {
       "Publishing transcripts makes episodes accessible and gives search engines real text to index.",
       "Remove fillers for readability, but keep wording that changes the meaning of a quote.",
       "Proofread names and technical terms — transcription tools often get these wrong.",
+    ],
+    sections: [
+      {
+        heading: "Standard podcast transcript format (example)",
+        intro: "Podcast directories and web crawlers expect transcripts formatted with clear speaker labels, consistent timestamp markers, and clean paragraphs:",
+        template: `[00:00:02] Sarah Jenkins (Host):
+Welcome back to The Creative Frontier. Today we're diving into how independent audio creators can build sustainable revenue without selling out. My guest today is Marcus Vance, founder of AudioFirst Media. Marcus, welcome to the show.
+
+[00:00:24] Marcus Vance (Guest):
+Thanks for having me, Sarah. It's great to be here. Honestly, the biggest mistake I see new hosts make is focusing on sponsor CPMs before they've even built a predictable listener retention loop.
+
+[00:00:41] Sarah Jenkins (Host):
+Let's unpack that. When you say "retention loop", what does that look like in practice for someone publishing their first twenty episodes?
+
+[00:00:52] Marcus Vance (Guest):
+It comes down to three things: a repeatable episode opening that promises clear value within thirty seconds, consistent segment pacing so the listener never gets lost, and a single, focused call to action at the end.`,
+      },
     ],
   },
   "trailer-script-builder": {

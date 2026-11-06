@@ -42,6 +42,8 @@ export interface ToolUiDictionary {
     interview: string;
     copyAll: string;
     exportTxt: string;
+    titlesLabel: string;
+    titleLengthNote: string;
     copied: string;
     copy: string;
     optimal: string;
@@ -115,6 +117,8 @@ export const toolUiTranslations: Record<SupportedLocale, ToolUiDictionary> = {
       interview: "Guest & Interview",
       copyAll: "Copy All Titles",
       exportTxt: "Export TXT",
+      titlesLabel: "Titles",
+      titleLengthNote: "Apple & Spotify Best Practice: < 65 chars",
       copied: "Copied!",
       copy: "Copy",
       optimal: "Optimal",
@@ -187,6 +191,8 @@ export const toolUiTranslations: Record<SupportedLocale, ToolUiDictionary> = {
       interview: "Invitado y Entrevista",
       copyAll: "Copiar Todos los Títulos",
       exportTxt: "Exportar TXT",
+      titlesLabel: "Títulos",
+      titleLengthNote: "Buena práctica en Apple y Spotify: < 65 caracteres",
       copied: "¡Copiado!",
       copy: "Copiar",
       optimal: "Óptimo",
@@ -259,6 +265,8 @@ export const toolUiTranslations: Record<SupportedLocale, ToolUiDictionary> = {
       interview: "ゲスト & 対談",
       copyAll: "全タイトルを一括コピー",
       exportTxt: "テキストファイルで出力",
+      titlesLabel: "タイトル",
+      titleLengthNote: "Apple・Spotifyの推奨：65文字未満",
       copied: "コピー完了！",
       copy: "コピー",
       optimal: "最適",
@@ -331,6 +339,8 @@ export const toolUiTranslations: Record<SupportedLocale, ToolUiDictionary> = {
       interview: "Invité & Interview",
       copyAll: "Copier Tous les Titres",
       exportTxt: "Exporter en TXT",
+      titlesLabel: "Titres",
+      titleLengthNote: "Bonne pratique Apple et Spotify : < 65 caractères",
       copied: "Copié !",
       copy: "Copier",
       optimal: "Optimal",
@@ -403,6 +413,8 @@ export const toolUiTranslations: Record<SupportedLocale, ToolUiDictionary> = {
       interview: "Gast & Interview",
       copyAll: "Alle Titel kopieren",
       exportTxt: "Als TXT exportieren",
+      titlesLabel: "Titel",
+      titleLengthNote: "Best Practice für Apple & Spotify: < 65 Zeichen",
       copied: "Kopiert!",
       copy: "Kopieren",
       optimal: "Optimal",
@@ -475,6 +487,8 @@ export const toolUiTranslations: Record<SupportedLocale, ToolUiDictionary> = {
       interview: "Convidado & Entrevista",
       copyAll: "Copiar Todos os Títulos",
       exportTxt: "Exportar em TXT",
+      titlesLabel: "Títulos",
+      titleLengthNote: "Boa prática no Apple e Spotify: < 65 caracteres",
       copied: "Copiado!",
       copy: "Copiar",
       optimal: "Excelente",
@@ -547,6 +561,8 @@ export const toolUiTranslations: Record<SupportedLocale, ToolUiDictionary> = {
       interview: "게스트 & 인터뷰",
       copyAll: "모든 제목 전체 복사",
       exportTxt: "텍스트 파일로 저장",
+      titlesLabel: "제목",
+      titleLengthNote: "Apple·Spotify 권장: 65자 미만",
       copied: "복사 완료!",
       copy: "복사",
       optimal: "최적 길이",
@@ -619,6 +635,8 @@ export const toolUiTranslations: Record<SupportedLocale, ToolUiDictionary> = {
       interview: "Ospite & Intervista",
       copyAll: "Copia Tutti i Titoli",
       exportTxt: "Esporta in TXT",
+      titlesLabel: "Titoli",
+      titleLengthNote: "Buona pratica Apple e Spotify: < 65 caratteri",
       copied: "Copiato!",
       copy: "Copia",
       optimal: "Ottimale",

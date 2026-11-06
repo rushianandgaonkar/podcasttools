@@ -2,157 +2,159 @@ import type { GuideExtrasRecord } from "./types";
 
 export const deGuideExtras: GuideExtrasRecord = {
   "podcast-sponsorship-cpm-guide-2026": {
-    metaTitle: "Podcast-Sponsoring & TKP-Preise 2026 | Pod Studio",
-    readMinutes: 5,
+    metaTitle: "Podcast-Werbepreise & TKP 2026: Leitfaden | Pod Studio",
+    firstHeading: "Podcast-Werbepreise und TKP-Kalkulation verstehen",
+    readMinutes: 6,
     sections: [
       {
-        heading: "Rechenbeispiel: Preis für eine Folge",
+        heading: "Podcast-Werbepreise und TKP-Benchmarks 2026",
         paragraphs: [
-          "Angenommen, Ihre Folgen erreichen in den ersten 30 Tagen im Schnitt 5.000 Downloads. Teilen Sie durch 1.000 – das ergibt 5 „Einheiten“ – und multiplizieren Sie mit dem TKP jedes Werbeplatzes.",
-          "Bei 18 $ für Pre-Roll, 25 $ für ein vom Host gelesenes Mid-Roll und 10 $ für Post-Roll ist eine voll verkaufte Folge 90 $ + 125 $ + 50 $ = 265 $ wert. Bei vier Folgen pro Monat und voller Auslastung sind das rund 1.060 $ im Monat – vor Agentur- oder Netzwerkprovision.",
-        ],
-        formula: "5.000 ÷ 1.000 = 5 → (5 × 18 $) + (5 × 25 $) + (5 × 10 $) = 265 $ pro Folge",
-      },
-      {
-        heading: "Host-Read vs. programmatische Werbung",
-        paragraphs: [
-          "Host-Read-Spots werden vom Sponsor geschrieben oder freigegeben und mit Ihrer eigenen Stimme gesprochen. Hörer vertrauen ihnen, daher erzielen sie die höchsten Preise. Sie können fest in die Folge eingesprochen oder dynamisch eingefügt werden, um sie später auszutauschen.",
-          "Programmatische Werbung wird automatisiert über ein Werbenetzwerk gebucht und vom Hoster eingefügt. Der TKP ist meist niedriger, aber sie füllt Inventar, das Sie nicht direkt verkauft haben – praktisch für ältere Folgen, die weiter gehört werden.",
+          "Laut den aktuellen AdvertiseCast-Erhebungen und der IAB/PwC-Marktstudie erzielen Podcast-Werbeplätze überdurchschnittlich hohe Renditen. Werbekunden zahlen erstklassige Preise, da persönlich vom Moderator gesprochene Empfehlungen im Ohr des Hörers deutlich mehr Aufmerksamkeit binden als flüchtige Werbebanner.",
         ],
       },
       {
-        heading: "Was in einen Sponsoren-Pitch gehört",
-        paragraphs: ["Sponsoren wollen Passung und Risiko schnell einschätzen. Ein einseitiges Media-Kit sollte enthalten:"],
+        heading: "Rechenbeispiel: Preis für eine Episode",
+        paragraphs: [
+          "Angenommen, Ihre Episoden erreichen in den ersten 30 Tagen durchschnittlich 5.000 Downloads. Teilen Sie durch 1.000, um 5 „Einheiten“ zu erhalten, und multiplizieren Sie mit dem TKP der jeweiligen Platzierung.",
+          "Bei 18 $ für einen Pre-Roll, 25 $ für einen vom Host gesprochenen Mid-Roll und 10 $ für einen Post-Roll ist eine vollständig ausgebuchte Episode 90 $ + 125 $ + 50 $ = 265 $ wert. Bei vier Episoden im Monat und voller Auslastung sind das rund 1.060 $ monatlich vor Vermarkterprovision.",
+        ],
+        formula: "5.000 ÷ 1.000 = 5 → (5 × 18 $) + (5 × 25 $) + (5 × 10 $) = 265 $ pro Episode",
+      },
+      {
+        heading: "Host-Read vs. Programmatische Werbung",
+        paragraphs: [
+          "Host-Read-Anzeigen werden vom Werbekunden gebrieft und mit Ihrer eigenen Stimme eingesprochen. Hörer vertrauen ihnen, weshalb sie die höchsten Erlöse erzielen. Sie können fest in die Episode eingesprochen („baked-in“) oder dynamisch eingefügt werden, um sie später auszutauschen.",
+          "Programmatische Werbung wird automatisch über ein Werbenetzwerk eingebucht und von Ihrem Hoster ausgespielt. Sie erzielt meist niedrigere TKPs, füllt aber Plätze, die Sie nicht direkt vermarkten konnten — praktisch für ältere Folgen, die weiterhin gehört werden.",
+        ],
+      },
+      {
+        heading: "Was in ein Sponsoren-Pitch gehört",
+        paragraphs: ["Sponsoren wollen Passgenauigkeit und Risiko schnell einschätzen. Ein einseitiges Media-Kit sollte enthalten:"],
         list: [
-          { title: "Hörerprofil", description: "Wer zuhört, wofür sich die Hörer interessieren und warum das zu den Kunden des Sponsors passt." },
-          { title: "Verifizierte Downloads", description: "Durchschnittliche 30-Tage-Downloads pro Folge, auf Nachfrage mit Screenshots vom Hoster." },
-          { title: "Werbeplätze und Preise", description: "Verfügbare Plätze, ihre Länge und Ihr TKP oder Pauschalpreis." },
-          { title: "Wirkungsnachweis", description: "Ein Beispiel-Read, bisherige Ergebnisse oder ein Gutscheincode, mit dem der Sponsor die Resonanz messen kann." },
+          { title: "Zielgruppenprofil", description: "Wer zuhört, was diese Menschen beschäftigt und warum das zu den Kunden des Sponsors passt." },
+          { title: "Verifizierte Downloadzahlen", description: "Durchschnittliche 30-Tage-Downloads pro Episode, bei Bedarf mit Screenshots des Hosters." },
+          { title: "Platzierungen und Preise", description: "Verfügbare Werbeplätze, deren Länge und Ihr TKP- oder Pauschalpreis." },
+          { title: "Leistungsnachweis", description: "Eine Beispielaufnahme, bisherige Kampagnenergebnisse oder ein Rabattcode zur Erfolgsmessung." },
         ],
       },
       {
-        heading: "Möglichkeiten für kleinere Shows",
+        heading: "Möglichkeiten für kleinere Sendungen",
         paragraphs: [
-          "Wenn sich TKP-Deals noch nicht lohnen, starten viele unabhängige Shows mit Pauschalpreisen pro Folge, Affiliate-Links oder Gutscheincodes mit Provision pro Verkauf sowie direkter Hörerunterstützung über Mitgliedschaften. So entsteht eine Erfolgsbilanz, mit der Sie bei wachsendem Publikum TKP-Deals verhandeln.",
+          "Wenn reine TKP-Deals bei Ihrer Reichweite noch nicht lohnen, starten viele unabhängige Sendungen mit Pauschalbeträgen pro Folge, Affiliate-Links oder Hörer-Abonnements. Das schafft Verlässlichkeit, mit der Sie später bei steigenden Zahlen größere Werbedeals verhandeln können.",
         ],
       },
     ],
     faqs: [
       {
-        question: "Welcher TKP ist für einen kleinen Podcast realistisch?",
+        question: "Was ist ein guter TKP für einen kleinen Podcast?",
         answer:
-          "Einen festen Satz gibt es nicht. Die Spannen in diesem Ratgeber sind ein Ausgangspunkt: Nischen-Shows mit klar definiertem, kaufbereitem Publikum können oft mehr verlangen, breite Unterhaltungsformate eher weniger. Viele kleine Shows beginnen mit Pauschal- oder Affiliate-Deals und wechseln zum TKP, sobald die Downloads stabil sind.",
+          "Es gibt keinen starren Einheitspreis. Die Spannen in diesem Leitfaden dienen als Orientierung; spitze Nischenformate mit kaufkräftiger Zielgruppe können oft mehr ansetzen, breite Unterhaltungssendungen weniger. Viele kleinere Sendungen beginnen mit Pauschalen oder Affiliate-Modellen und wechseln erst bei stabiler Reichweite zu TKP-Preisen.",
       },
       {
-        question: "Wie viele Downloads brauche ich für Sponsoren?",
+        question: "Wie viele Downloads brauche ich für erste Werbepartner?",
         answer:
-          "Es gibt keine allgemeine Schwelle. Werbenetzwerke setzen oft Mindest-Downloads voraus, doch Direktsponsoren aus einer bestimmten Nische arbeiten auch mit kleineren Shows, wenn das Publikum gut passt. Regelmäßigkeit und saubere Zahlen zählen mehr als eine einzelne große Zahl.",
+          "Es gibt keine feste Schwelle. Große Werbenetzwerke verlangen meist Mindestreichweiten, aber direkte Nischensponsoren arbeiten auch mit kleineren Sendungen zusammen, wenn die Hörer genau der gesuchten Zielgruppe entsprechen. Verlässlichkeit und saubere Daten zählen mehr als eine einzelne Spitzenzahl.",
       },
       {
-        question: "Zahlen Sponsoren pro Download oder pro Folge?",
+        question: "Zahlen Sponsoren pro Download oder pro Episode?",
         answer:
-          "TKP-Deals werden pro 1.000 Downloads abgerechnet, meist gezählt in den ersten 30–45 Tagen. Manche Sponsoren bevorzugen einen Pauschalpreis pro Folge oder Kampagne; Affiliate-Deals zahlen pro Verkauf oder Anmeldung. Halten Sie immer schriftlich fest, wie Downloads gemessen und berichtet werden.",
+          "TKP-Vereinbarungen werden pro 1.000 Downloads abgerechnet, gemessen meist über die ersten 30 bis 45 Tage nach Veröffentlichung. Manche Partner bevorzugen feste Pauschalpreise pro Episode oder Kampagne. Halten Sie die Messmethode immer schriftlich fest.",
       },
     ],
   },
   "apple-spotify-cover-art-specs-guide": {
-    metaTitle: "Podcast-Cover: Vorgaben für Apple & Spotify | Pod Studio",
-    readMinutes: 5,
+    metaTitle: "Podcast-Cover-Maße für Apple und Spotify | Pod Studio",
+    firstHeading: "Anforderungen an die Podcast-Cover-Größe",
+    readMinutes: 6,
     sections: [
       {
-        heading: "Zuerst für das Thumbnail gestalten",
+        heading: "Zuerst an die Miniaturansicht denken",
         paragraphs: [
-          "Die meisten sehen Ihr Cover zuerst in Fingerkuppengröße – in Suchergebnissen, Charts und „Als Nächstes“-Listen. Ein Motiv, das groß großartig aussieht, kann verkleinert zum unlesbaren Fleck werden.",
+          "Die meisten Menschen sehen Ihr Cover zuerst in Daumennagelgröße — in Suchergebnissen, Charts und Wiedergabelisten. Ein Design, das in Großansicht überzeugt, kann verkleinert schnell unlesbar wirken.",
         ],
         list: [
-          { title: "Wenige, große Wörter", description: "Der Showname in einer kräftigen Schrift reicht meistens. Slogans gehören in die Beschreibung." },
-          { title: "Maximaler Kontrast", description: "Helle Schrift auf dunklem Grund oder umgekehrt. Keine unruhigen Fotos hinter Text." },
-          { title: "Ein Blickfang", description: "Ein Gesicht, ein Icon oder der Titel – nicht alle drei im Wettbewerb." },
+          { title: "Wenige, große Worte", description: "Der Sendungsname in klarer, fetter Schrift genügt meist. Untertitel gehören in die Beschreibung." },
+          { title: "Maximaler Kontrast", description: "Helle Schrift auf dunklem Grund oder umgekehrt. Vermeiden Sie unruhige Fotomuster hinter Texten." },
+          { title: "Ein klarer Blickfang", description: "Ein Gesicht, ein Symbol oder der Titel — nicht alle drei im Wettstreit." },
         ],
       },
       {
-        heading: "Safe-Zones und Zuschnitt",
+        heading: "Sicherheitsbereiche und Zuschnitt",
         paragraphs: [
-          "Manche Apps runden die Ecken ab oder legen kleine Badges darüber. Halten Sie Titel, Logo und Gesichter im zentralen Bereich des Quadrats – etwa den mittleren 80 % –, damit nichts Wichtiges abgeschnitten wird.",
+          "Manche Apps runden die Bildecken ab oder blenden Abzeichen ein. Platzieren Sie Titel, Logo und Gesichter im mittleren Bereich des Quadrats — etwa den zentralen 80 % —, damit nichts Wichtiges abgeschnitten wird.",
         ],
       },
       {
-        heading: "Häufige Ablehnungsgründe",
-        paragraphs: ["Neben Größe und Format prüfen Verzeichnisse Inhalt und Qualität. Vermeiden Sie:"],
+        heading: "Typische Ablehnungsgründe der Plattformen",
+        paragraphs: ["Neben Maßen und Dateiformat prüfen Plattformen auch Inhalt und Gestaltung. Vermeiden Sie:"],
         list: [
-          { title: "Plattform-Logos und Marken", description: "Verwenden Sie keine Logos von Apple Podcasts oder Spotify und suggerieren Sie keine Partnerschaft, die es nicht gibt." },
-          { title: "Niedrige Auflösung oder verzerrte Bilder", description: "Hochskalierte, unscharfe oder gestreckte Cover können abgelehnt werden oder unprofessionell wirken." },
-          { title: "Explizite oder irreführende Motive", description: "Das Cover muss angemessen sein und die Show ehrlich darstellen." },
+          { title: "Plattform-Logos und Markenzeichen", description: "Verwenden Sie keine Logos von Apple Podcasts oder Spotify und erwecken Sie keinen falschen Eindruck offizieller Partnerschaften." },
+          { title: "Pixelige oder verzerrte Bilder", description: "Hochskalierte oder unscharfe Grafiken werden abgelehnt und wirken unprofessionell." },
+          { title: "Irreführende oder unpassende Motive", description: "Das Cover muss jugendfrei sein und den Inhalt der Sendung ehrlich widerspiegeln." },
         ],
       },
       {
-        heading: "Checkliste vor dem Upload",
-        paragraphs: ["Prüfen Sie vor dem Upload, ob Ihre Datei:"],
+        heading: "Checkliste vor dem Hochladen",
+        paragraphs: ["Prüfen Sie vor dem Upload folgende Punkte:"],
         list: [
-          { title: "Quadratisch mit 3000 × 3000 px ist", description: "Genau 1:1, im Bereich 1400–3000 px." },
-          { title: "JPEG oder PNG in RGB ist", description: "RGB-Farbraum statt CMYK, mit korrekter Endung .jpg oder .png." },
-          { title: "Bei 50 × 50 px lesbar ist", description: "Prüfen Sie es vor der Veröffentlichung in einer kleinen Vorschau." },
-          { title: "Unter neuem Dateinamen gespeichert ist", description: "Bei einem Update hilft ein neuer Dateiname, damit Apps die Änderung bemerken." },
+          { title: "Quadratisch mit 3000 × 3000 px", description: "Exakt 1:1, im Bereich zwischen 1400 und 3000 Pixeln." },
+          { title: "JPEG oder PNG im RGB-Farbraum", description: "RGB-Farbraum verwenden (kein CMYK) mit korrekter Dateiendung." },
+          { title: "Lesbar bei 50 × 50 px", description: "In einer kleinen Vorschau vor der Veröffentlichung prüfen." },
+          { title: "Unter neuem Dateinamen gespeichert", description: "Ein neuer Dateiname hilft Verzeichnissen, die Aktualisierung schneller zu erkennen." },
         ],
       },
     ],
     faqs: [
       {
-        question: "Welche Größe sollte ein Podcast-Cover haben?",
+        question: "Welche Maße muss ein Podcast-Cover haben?",
         answer:
-          "Verwenden Sie ein quadratisches Bild mit 3000 × 3000 Pixeln. Apple Podcasts akzeptiert 1400 × 1400 bis 3000 × 3000 Pixel als JPEG oder PNG im RGB-Farbraum; ein 3000-px-Quadrat funktioniert auch bei Spotify und anderen Apps.",
+          "Empfohlen wird ein quadratisches Bild mit 3000 × 3000 Pixeln. Apple Podcasts akzeptiert 1400 × 1400 bis 3000 × 3000 Pixel als JPEG oder PNG im RGB-Farbraum; diese Maße funktionieren auch bei Spotify und allen anderen Verzeichnissen.",
       },
       {
         question: "Kann ich dasselbe Cover für Apple Podcasts und Spotify nutzen?",
         answer:
-          "Ja. Beide lesen das Cover aus Ihrem RSS-Feed bzw. den Hoster-Einstellungen – ein einziges 3000 × 3000 px großes Quadrat, das Apples Vorgaben erfüllt, funktioniert in allen großen Apps.",
+          "Ja. Beide Plattformen laden die Grafik direkt aus Ihrem RSS-Feed oder Hosting-Dashboard. Eine einzige 3000 × 3000 Pixel große Datei genügt für alle Verzeichnisse.",
       },
       {
         question: "Warum wird mein neues Cover nicht angezeigt?",
         answer:
-          "Podcast-Apps speichern Cover im Cache, daher kann ein Update von einigen Stunden bis zu mehreren Tagen dauern. Prüfen Sie, ob Ihr Feed auf die neue Bild-URL zeigt – ein neuer Dateiname hilft – und ob die Datei weiterhin Größe und Format erfüllt.",
+          "Podcast-Apps cachen Bilddateien, weshalb Aktualisierungen zwischen wenigen Stunden und einigen Tagen dauern können. Stellen Sie sicher, dass Ihr Feed auf die neue Bild-URL verweist — ein veränderter Dateiname beschleunigt diesen Vorgang.",
       },
     ],
   },
   "how-to-write-clickable-episode-titles": {
-    metaTitle: "Podcast-Episodentitel, die geklickt werden | Pod Studio",
+    metaTitle: "Klickstarke Podcast-Titel Schreiben | Pod Studio",
     description:
-      "Bewährte Formeln für Podcast-Episodentitel, die in Apple Podcasts und Spotify auffallen – mit Beispielen, Suchtipps und Fehlern, die Sie vermeiden sollten.",
-    firstHeading: "Warum der Episodentitel so wichtig ist",
+      "Erprobte Formeln für Podcast-Episodentitel, die bei Apple Podcasts und Spotify auffallen — mit Beispielen, Suchtipps und Fehlern, die man meidet.",
+    firstHeading: "Warum Ihr Episodentitel so entscheidend ist",
     readMinutes: 5,
     sections: [
       {
         heading: "Fünf weitere Formeln zum Ausprobieren",
-        paragraphs: ["Kombinieren Sie sie mit den drei Archetypen oben, um verschiedene Blickwinkel auf dieselbe Folge zu testen:"],
+        paragraphs: ["Kombinieren Sie diese Ansätze mit den Grundmustern, um verschiedene Blickwinkel zu testen:"],
         list: [
-          { title: "4. Das How-to-Versprechen", description: "„So startest du einen Podcast mit 100 € Budget“ – klar, suchbar und nützlich." },
-          { title: "5. Die Zahlenliste", description: "„7 Interviewfragen, die bessere Geschichten hervorbringen“ – die Erwartung ist sofort klar." },
-          { title: "6. Der Gast als Aufhänger", description: "„[Name des Gastes] über Markenaufbau ohne Social Media“ – wenn der Gast das Zugpferd ist." },
-          { title: "7. Die direkte Frage", description: "„Ist Kaltakquise per E-Mail 2026 tot?“ – macht neugierig auf die Antwort." },
-          { title: "8. Die Fehler-Geschichte", description: "„Der Preisfehler, der uns das erste Jahr gekostet hat“ – konkreter Einsatz, echte Lektion." },
+          { title: "4. Das Praxis-Versprechen", description: "„Podcast starten mit 100 Euro Budget“ — klar, suchbar und sofort nützlich." },
+          { title: "5. Die Aufzählungsliste", description: "„7 Interviewfragen, die tiefere Geschichten wecken“ — steckt den Rahmen direkt ab." },
+          { title: "6. Der Name im Fokus", description: "„[Name des Gastes] über Markenaufbau ohne Social Media“ — wenn der Gast das Zugpferd ist." },
+          { title: "7. Die offene Streitfrage", description: "„Ist Kaltakquise 2026 tot?“ — lädt Hörer zum Reinhören ein." },
+          { title: "8. Der Warnungs-Rahmen", description: "„Der Preisgestaltungsfehler, der uns ein ganzes Jahr kostete“ — echter Lerneffekt mit spürbarem Risiko." },
         ],
       },
       {
-        heading: "Titel und Podcast-Suche",
+        heading: "Episodentitel und die Suche in Verzeichnissen",
         paragraphs: [
-          "Die Suche in Apple Podcasts und Spotify berücksichtigt die Wörter in Show- und Episodentiteln sowie Beschreibungen. Wer die Begriffe nutzt, die Hörer tatsächlich eintippen – „Budget“, „Marathontraining“, „True Crime Berlin“ –, wird von den richtigen Menschen gefunden.",
-          "Setzen Sie diese Wörter nach vorn, denn Titel werden auf kleinen Bildschirmen oft abgeschnitten. Ein klares Thema am Anfang schlägt eine clevere Formulierung, die man erst nach dem Hören versteht.",
+          "Die Suche von Apple Podcasts und Spotify scannt Worte im Sendungs- und Episodentitel. Worte, die Ihre Zielgruppe tatsächlich tippt — „Geldanlage“, „Marathontraining“, „Unternehmensgründung“ —, helfen den passenden Hörern beim Finden.",
+          "Platzieren Sie wichtige Suchbegriffe weit vorn, da lange Titel auf kleinen Displays nach rund 60 Zeichen abgeschnitten werden.",
         ],
       },
       {
-        heading: "Häufige Titelfehler",
-        paragraphs: ["Diese Gewohnheiten kosten unbemerkt Plays:"],
+        heading: "Typische Titelfehler",
+        paragraphs: ["Diese Gewohnheiten kosten unbemerkt Hörer:"],
         list: [
-          { title: "Mit der Episodennummer beginnen", description: "Apps zeigen die Nummer ohnehin an; „Folge 112:“ verschwendet die sichtbarsten Zeichen." },
-          { title: "Vage Teaser", description: "„Ein tolles Gespräch“ sagt neuen Hörern nicht, warum sie auf Play drücken sollten." },
-          { title: "Clickbait ohne Einlösung", description: "Zu große Versprechen führen zu frühen Abbrüchen und schlechten Bewertungen." },
-          { title: "Insider-Witze", description: "Anspielungen, die nur Stammhörer verstehen, machen die Folge für Neue unsichtbar." },
-        ],
-      },
-      {
-        heading: "Eine einfache Titel-Routine",
-        paragraphs: [
-          "Schreiben Sie mindestens zehn Varianten mit verschiedenen Formeln, wählen Sie drei aus und lesen Sie sie auf dem Smartphone so, wie Hörer sie sehen. Nehmen Sie die mit dem klarsten Nutzen. Vergleichen Sie mit der Zeit die Downloads der ersten Woche je Titelstil, um zu lernen, worauf Ihr Publikum reagiert.",
+          { title: "Mit der Episodennummer beginnen", description: "Apps zeigen Folgennummern separat an; „Folge 112:“ verschwendet die sichtbarsten Zeichen." },
+          { title: "Zu vage Andeutungen", description: "„Ein tolles Gespräch“ verrät neuen Hörern nicht, warum sie einschalten sollten." },
+          { title: "Enttäuschender Clickbait", description: "Zu viel versprechen führt zu schnellem Abspringen und schlechten Bewertungen." },
+          { title: "Insider-Witze", description: "Wortwitze, die nur Stammhörer verstehen, schrecken neue Interessenten ab." },
         ],
       },
     ],
@@ -160,17 +162,239 @@ export const deGuideExtras: GuideExtrasRecord = {
       {
         question: "Gehört die Episodennummer in den Titel?",
         answer:
-          "Meist nicht. Podcast-Feeds haben ein eigenes Feld für die Episodennummer, das Apps anzeigen können; sie im Titel zu wiederholen, kostet Platz, der dem Thema gehören sollte. Hauptausnahme sind serielle Shows, bei denen die Reihenfolge zählt.",
+          "In der Regel nein. Podcast-Feeds haben dafür ein eigenes Datenfeld, das Player anzeigen. Die Nummer im Titel verbraucht nur Platz, der für das eigentliche Thema besser genutzt ist.",
       },
       {
         question: "Wie lang sollte ein Episodentitel sein?",
         answer:
-          "Ein überall gültiges offizielles Limit gibt es nicht, aber kürzer ist sicherer. Stellen Sie die Kernaussage in die ersten Wörter, damit sie auf Smartphone, im Auto oder auf der Smartwatch nicht abgeschnitten wird.",
+          "Es gibt keine starre Obergrenze, aber kurz ist sicherer. Bringen Sie den Kern in den ersten Worten unter, damit er auf Smartphone-Displays lesbar bleibt.",
       },
       {
-        question: "Kann ich einen Episodentitel nach der Veröffentlichung ändern?",
+        question: "Kann man den Titel nach Veröffentlichung ändern?",
         answer:
-          "Ja. Ändern Sie ihn beim Hoster, dann gelangt die Änderung über den RSS-Feed in die Apps; die Aktualisierung kann etwas dauern. Ändern Sie nicht die GUID der Folge, sonst behandeln Apps sie womöglich als neue Folge.",
+          "Ja. Ändern Sie ihn in Ihrem Hosting-Dashboard; die Anpassung wird über den Feed aktualisiert. Ändern Sie jedoch keinesfalls die GUID der Folge, da sie sonst doppelt gelistet werden könnte.",
+      },
+    ],
+  },
+  "how-much-do-podcasts-make": {
+    metaTitle: "Wie Viel Geld Verdient ein Podcast 2026? | Pod Studio",
+    readMinutes: 8,
+    sections: [
+      {
+        heading: "Die Drei Stellschrauben für Höhere Podcast-Umsätze",
+        paragraphs: [
+          "Podcasts, die gemessen an ihren Hörerzahlen überdurchschnittlich viel verdienen, nutzen drei entscheidende Stellschrauben: Kaufkraft der Zielgruppe, Veröffentlichungsfrequenz und direkte Kundenbeziehungen.",
+          "Ein Fach-Podcast, der 1.000 leitende Geschäftsführer im B2B-Bereich erreicht, erzielt über hochwertige Beratungsverträge ein Vielfaches der Umsätze einer Unterhaltungssendung mit 50.000 jugendlichen Hörern über Werbebanner.",
+        ],
+        list: [
+          {
+            title: "Kaufkraft der Hörer",
+            description: "Geschäftskunden, Finanzen und Technologie erzielen Mid-Roll-TKPs von 40 € bis 60 € im Vergleich zu 18 € bis 22 € bei allgemeiner Unterhaltung.",
+          },
+          {
+            title: "Frequenz und Veröffentlichungsrhythmus",
+            description: "Zwei Episoden pro Woche verdoppeln das vermarktbare Werbeinventar im Monat, ohne die doppelte Anzahl an Einzelhörern zu erfordern.",
+          },
+          {
+            title: "Direkte Verkaufskanäle",
+            description: "Aufbau eigener E-Mail-Verteiler für den Verkauf margenstarker Kurse, Fachworkshops und Beratungsmandate.",
+          },
+        ],
+      },
+      {
+        heading: "Wann Kann Man Vom Eigenen Podcast Leben?",
+        paragraphs: [
+          "Creator wagen meist dann den Schritt in die hauptberufliche Podcast-Produktion, wenn die wiederkehrenden Einnahmen aus Sponsoring, Hörerbeiträgen und Dienstleistungen die privaten Lebenshaltungskosten für mindestens sechs aufeinanderfolgende Monate zuverlässig decken. Dies tritt meist ab 10.000 bis 20.000 Downloads pro Folge oder durch ein profitables B2B-Beratungsmodell ein.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Ab wie vielen Downloads verdient man mit einem Podcast Geld?",
+        answer:
+          "Sie können bereits ab 200 bis 500 treuen Hörern Geld verdienen, wenn Sie spezialisierte Beratung, Coaching oder hochpreisige B2B-Dienstleistungen anbieten. Für klassisches Sponsoring nach TKP setzen Vermarkter meist 1.000 bis 5.000 Downloads pro Folge innerhalb der ersten 30 Tage voraus.",
+      },
+      {
+        question: "Was verdient ein Podcast mit 1.000 Downloads im Schnitt?",
+        answer:
+          "Eine wöchentliche Sendung mit 1.000 Downloads erwirtschaftet über reine TKP-Werbung etwa 100 bis 300 Euro monatlich. Ergänzt um 30 treue Patreon-Unterstützer zu 5 Euro im Monat und gezielte Buchempfehlungen per Affiliate-Link steigt das Einkommen oft auf 300 bis 700 Euro pro Monat.",
+      },
+      {
+        question: "Wie verdienen Top-Podcaster Millionen ohne reine Werbespots?",
+        answer:
+          "Erfolgreiche Audio-Unternehmer nutzen ihre Bekanntheit zum Aufbau von Softwareunternehmen, Produktlinien, Bestseller-Büchern, Beteiligungen an Start-ups und ausverkauften Live-Tourneen.",
+      },
+      {
+        question: "Kann man einen Podcast mit unter 500 Hörern monetarisieren?",
+        answer:
+          "Ja. Nischen-Podcasts sind hervorragende Vertrauensverstärker für Berater, Agenturinhaber und Dienstleister, bei denen ein einzelner gewonnener Neukunde die Jahreskosten der Sendung um ein Vielfaches übersteigt.",
+      },
+    ],
+  },
+  "how-to-monetize-a-podcast": {
+    metaTitle: "Podcast Monetarisieren & Sponsoren Finden | Pod Studio",
+    readMinutes: 8,
+    sections: [
+      {
+        heading: "Die 4-Schritte-Methode für die Sponsoren-Akquise",
+        paragraphs: [
+          "Mit diesem systematischen Vorgehen gewinnen Sie verlässlich Ihre ersten Werbepartner:",
+        ],
+        list: [
+          {
+            title: "1. Liste von 20 aktiven Werbetreibenden anlegen",
+            description: "Suchen Sie gezielt Unternehmen heraus, die bereits in anderen Podcasts oder YouTube-Kanälen Ihrer Branche werben.",
+          },
+          {
+            title: "2. Entscheider auf LinkedIn recherchieren",
+            description: "Suchen Sie nach Positionen wie „Head of Marketing“, „Brand Partnerships“ oder „Media Buyer“.",
+          },
+          {
+            title: "3. Kurze, wertorientierte Anfrage senden",
+            description: "Beziehen Sie sich auf eine konkrete Kampagne der Marke, nennen Sie Ihre exakten Hörerprofile und schlagen Sie ein Testpaket über 2 Folgen vor.",
+          },
+          {
+            title: "4. Einmalig höflich nachhaken",
+            description: "Haken Sie nach fünf Werktagen mit einem wertvollen Impuls nach — etwa einer aktuellen Hörer-Rückmeldung zu Produkten der Kategorie.",
+          },
+        ],
+      },
+      {
+        heading: "Pauschalbeträge im Vergleich zu TKP-Verhandlungen",
+        paragraphs: [
+          "Für Sendungen mit unter 10.000 Downloads pro Folge ist die Vereinbarung fixer Pauschalpreise (z. B. 400 € für ein Paket aus 4 Folgen) meist lukrativer als starre TKP-Rechnungen. Dem Werbekunden bringt es Planungssicherheit und Ihnen garantierte Erlöse.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Wann sollte man erste Sponsoren ansprechen?",
+        answer:
+          "Sie können Sponsoren ansprechen, sobald Sie mindestens 10 regelmäßige Episoden veröffentlicht haben und eine engagierte Hörerschaft nachweisen können. Passgenauigkeit und Zielgruppenfokus wiegen bei Nischenmarken oft schwerer als reine Massenreichweite.",
+      },
+      {
+        question: "Worin liegt der Unterschied zwischen TKP-Werbung und Affiliate-Sponsoring?",
+        answer:
+          "TKP-Werbung vergütet einen festen Betrag pro 1.000 Hörer, unabhängig davon, wie viele Personen kaufen. Affiliate-Partnerschaften zahlen eine variable Provision nur dann, wenn ein Hörer über Ihren Link oder Gutscheincode tatsächlich bestellt.",
+      },
+      {
+        question: "Wie baut man ein überzeugendes einseitiges Media-Kit auf?",
+        answer:
+          "Beschränken Sie sich auf eine übersichtliche Seite. Zeigen Sie Sendungslogo, Moderatorprofil, Zielgruppen-Avatar, verifizierte 30-Tage-Downloads, Werbeformate und Kontaktdaten. Vermeiden Sie irrelevante Zahlen wie Gesamtdownloads über alle Jahre.",
+      },
+      {
+        question: "Ist Patreon oder Apple Podcasts Subscriptions besser für Mitgliedschaften?",
+        answer:
+          "Beide Modelle haben Vorteile. Apple Subscriptions erlaubt den unkomplizierten Ein-Klick-Kauf direkt in der Podcast-App (Apple behält 15–30 % ein). Patreon gewährt Ihnen direkten Zugriff auf die E-Mail-Adressen Ihrer Unterstützer und funktioniert app-übergreifend.",
+      },
+    ],
+  },
+  "podcast-topic-ideas": {
+    metaTitle: "100 Podcast-Themenideen & Episodenformate | Pod Studio",
+    readMinutes: 9,
+    sections: [
+      {
+        heading: "Wie Sie Ein Thema Vor der Aufnahme Prüfen",
+        paragraphs: [
+          "Bevor Sie Zeit in Recherche und Aufnahme investieren, filtern Sie das Thema mit diesen 3 Fragen:",
+          "1. Löst dieses Thema ein brennendes Problem oder eine konkrete Frage meiner Zielgruppe?",
+          "2. Bringe ich eine unerwartete These, persönliche Erfahrungen oder einen echten Experten mit, der über oberflächliche Standardtipps hinausgeht?",
+          "3. Lässt sich die Kernaussage in einer provokanten Überschrift unter 60 Zeichen zusammenfassen, die beim Scrollen im Podcast-Feed ins Auge sticht?",
+        ],
+      },
+      {
+        heading: "Einen 90-Tage-Redaktionsplan Erstellen",
+        paragraphs: [
+          "Um kreative Erschöpfung zu vermeiden, unterteilen Sie Ihre Themen in 12-Wochen-Staffeln. Wechseln Sie systematisch zwischen Solo-Lehrstunden, praxisnahen Interviews und Hörerfrage-Episoden ab, um die Produktionsroutine aufrechtzuerhalten.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Woran erkennt man, ob ein Thema für eine ganze Episode trägt?",
+        answer:
+          "Ein Thema ist stark genug, wenn Sie mindestens drei eigenständige Unterpunkte gliedern, ein echtes Fallbeispiel erzählen und dem Hörer einen konkreten Handlungsschritt mitgeben können. Reicht der Inhalt nur für einen kurzen Impuls, machen Sie daraus eine 5-minütige Rubrik.",
+      },
+      {
+        question: "Wie generiert man jede Woche neue Podcast-Themen?",
+        answer:
+          "Durchforsten Sie Kommentarspalten unter erfolgreichen Fachvideos auf YouTube, analysieren Sie wiederkehrende Fragen in Fachforen und Reddit und ermutigen Sie Ihre Hörer, Fragen per Sprachnachricht einzureichen.",
+      },
+      {
+        question: "Sollte man immer streng bei einer Nische bleiben?",
+        answer:
+          "In den ersten 50 Episoden sollten Sie sich strikt auf Ihre Kern-Nische fokussieren, damit neue Hörer den Wert der Sendung sofort erfassen. Sobald eine gefestigte Hörerbindung besteht, können Sie den Themenkreis schrittweise erweitern.",
+      },
+      {
+        question: "Was macht eine wiederkehrende Podcast-Rubrik unverwechselbar?",
+        answer:
+          "Eine gelungene Rubrik hat einen kurzen, einprägsamen Namen, ein vertrautes kurzes Audio-Jingle, ein klares Zeitlimit (3 bis maximal 5 Minuten) und einen verlässlichen Ablauf, auf den sich die Hörer jede Woche freuen.",
+      },
+    ],
+  },
+  "how-to-start-a-podcast": {
+    metaTitle: "Podcast Starten 2026: Schritt-für-Schritt | Pod Studio",
+    readMinutes: 12,
+    sections: [
+      {
+        heading: "Einrichtung von Podcast-Hosting und Audio-Verteilung",
+        paragraphs: [
+          "Sobald Sie sich für einen spezialisierten Podcast-Hoster wie Buzzsprout, Libsyn oder Podbean entscheiden, generiert dieser die URL Ihres RSS-Feeds. Diese URL hinterlegen Sie genau einmalig bei Apple Podcasts Connect und Spotify for Podcasters.",
+          "Jede neue Episode, die Sie anschließend auf Ihrer Hosting-Plattform hochladen, wird binnen weniger Stunden vollautomatisch von allen Hörer-Apps übernommen.",
+        ],
+      },
+      {
+        heading: "Der Promotion-Plan für die Ersten 30 Tage",
+        paragraphs: [
+          "Der Tag der Veröffentlichung ist nur der Startschuss. Im ersten Monat steht die Gewinnung aktiver Stammhörer und Rezensenten im Fokus:",
+        ],
+        list: [
+          {
+            title: "Direktansprache im Netzwerk",
+            description: "Schreiben Sie Freunde, Familie und Geschäftspartner persönlich an und bitten Sie um Abonnement und ehrliche Rezensionen bei Apple Podcasts.",
+          },
+          {
+            title: "Materialpaket für Interview-Gäste",
+            description: "Stellen Sie jedem Gast am Tag der Veröffentlichung kurze Hochkant-Videoclips, Bildzitate und vorbereitete Textvorschläge bereit.",
+          },
+          {
+            title: "Crossover-Auftritte in Partner-Podcasts",
+            description: "Seien Sie Gast in 2–3 artverwandten Sendungen Ihrer Branche, um sich direkt aktiven Audio-Hörern vorzustellen.",
+          },
+        ],
+      },
+      {
+        heading: "Typische Fehler, Die Neue Podcaster Ausbremsen",
+        paragraphs: [
+          "Vermeiden Sie die Fallen, an denen 70 % aller Podcasts scheitern: wochenlanges Grübeln über teure Mikrofone bei völliger Vernachlässigung der Raumakustik, unregelmäßige Veröffentlichungen, Folgennummern ganz vorn im Titel und das Aufgeben vor Folge 25.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Was kostet es, 2026 einen Podcast zu starten?",
+        answer:
+          "Ein professionell klingender Einstieg ist für unter 150 Euro möglich. Ein bewährtes dynamisches USB-Mikrofon (wie das Audio-Technica ATR2100x) kostet rund 79 Euro, ein geschlossener Kopfhörer ca. 40 Euro, Audacity ist kostenlos und das Hosting kostet ab 12 Euro monatlich.",
+      },
+      {
+        question: "Kann man einen Podcast komplett auf dem Smartphone starten?",
+        answer:
+          "Ja, mobile Apps ermöglichen Aufnahmen unterwegs. Für ein langfristiges Hörerwachstum sorgt ein echtes dynamisches USB-Mikrofon am Laptop in einem ruhigen Raum jedoch für eine hörbar überlegene Klangqualität.",
+      },
+      {
+        question: "Mit wie vielen Episoden sollte man an den Start gehen?",
+        answer:
+          "Starten Sie am Tag der Veröffentlichung mit einem kurzen Trailer plus 3 vollwertigen Folgen. Wenn ein neuer Hörer Ihre erste Folge mag, laden zwei weitere Folgen direkt zum Weiterhören und Abonnieren ein.",
+      },
+      {
+        question: "Wie lange dauert die Freischaltung bei Apple Podcasts?",
+        answer:
+          "Die Überprüfung bei Apple Podcasts dauert in der Regel zwischen 24 Stunden und 5 Werktagen. Reichen Sie den RSS-Feed mindestens ein bis zwei Wochen vor dem geplanten Veröffentlichungstermin ein.",
+      },
+      {
+        question: "Was ist der größte Fehler von Podcast-Einsteigern?",
+        answer:
+          "Fehlende Verlässlichkeit. Ausgefallene Veröffentlichungstage stören die Hörgewohnheiten des Publikums und führen dazu, dass Plattformen die Sendung seltener empfehlen. Regelmäßigkeit schlägt Perfektionismus.",
       },
     ],
   },

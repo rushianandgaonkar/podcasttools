@@ -1,3 +1,23 @@
+export interface ToolSectionGroup {
+  category: string;
+  items: string[];
+}
+
+export interface ToolSectionListItem {
+  title: string;
+  description: string;
+}
+
+export interface ToolSection {
+  heading: string;
+  intro?: string;
+  paragraphs?: string[];
+  template?: string;
+  groups?: ToolSectionGroup[];
+  list?: ToolSectionListItem[];
+  link?: { text: string; href: string };
+}
+
 /**
  * Unique, per-tool landing-page copy. Replaces the generic three-step block
  * that was identical on every tool page (thin/duplicate content), and gives
@@ -14,6 +34,8 @@ export interface ToolContent {
   steps: Array<{ title: string; text: string }>;
   /** Three practical tips. */
   tips: string[];
+  /** Optional rich content sections (H2s, templates, samples, and taxonomy). */
+  sections?: ToolSection[];
 }
 
 export type ToolContentRecord = Record<string, ToolContent>;

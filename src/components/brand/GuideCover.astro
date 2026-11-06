@@ -14,6 +14,10 @@ const variants: Record<string, { accent: string; kind: "revenue" | "artwork" | "
   "podcast-sponsorship-cpm-guide-2026": { accent: "#16a34a", kind: "revenue" },
   "apple-spotify-cover-art-specs-guide": { accent: "#0284c7", kind: "artwork" },
   "how-to-write-clickable-episode-titles": { accent: "#7c3aed", kind: "titles" },
+  "how-much-do-podcasts-make": { accent: "#16a34a", kind: "revenue" },
+  "how-to-monetize-a-podcast": { accent: "#10b981", kind: "revenue" },
+  "podcast-topic-ideas": { accent: "#f59e0b", kind: "titles" },
+  "how-to-start-a-podcast": { accent: "#6366f1", kind: "artwork" },
 };
 const { accent, kind } = variants[slug] ?? { accent: "#ea580c", kind: "titles" };
 const gid = `gc-${slug.replace(/[^a-z0-9]/gi, "")}`;

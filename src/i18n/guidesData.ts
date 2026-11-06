@@ -1,6 +1,7 @@
 import type { SupportedLocale } from "./languages";
 import type { GuideDefinition } from "../config/site";
 import { getGuideExtra, type GuideFaq } from "./guideExtras";
+import { newGuidesByLocale } from "./newGuides";
 
 export interface LocalizedGuideArticle {
   title: string;
@@ -37,41 +38,42 @@ export interface LocalizedGuideArticle {
 
 export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideArticle>> = {
   en: {
+    ...newGuidesByLocale.en,
     "podcast-sponsorship-cpm-guide-2026": {
-      title: "Podcast Sponsorship & CPM Guide (2026 Benchmarks)",
-      description: "Everything you need to know about pre-roll, mid-roll, host-read ads, dynamic insertion, and industry CPM benchmarks.",
-      readTime: "7 min read",
+      title: "Podcast Ad Rates & CPM Benchmarks (2026)",
+      description: "Everything you need to know about podcast ad rates, industry CPM benchmarks, pre-roll, mid-roll, and host-read sponsorships.",
+      readTime: "6 min read",
       publishedAt: "2026-10-15",
       category: "Monetization",
       sections: [
         {
-          heading: "Understanding Podcast CPM Pricing",
+          heading: "Understanding Podcast Ad Rates & CPM Pricing",
           paragraphs: [
-            "In the podcast advertising industry, sponsorship inventory is priced using the CPM metric (Cost Per Mille, Latin for thousand downloads). A CPM represents the fee a sponsor pays for every 1,000 verified downloads an episode achieves over its initial 30 to 45-day release window.",
+            "In the podcast advertising industry, podcast ad rates and sponsorship inventory are priced using the CPM metric (Cost Per Mille, Latin for thousand downloads). A CPM represents the fee a sponsor pays for every 1,000 verified downloads an episode achieves over its initial 30 to 45-day release window.",
           ],
           formula: "Total Ad Cost = (Estimated 30-Day Downloads / 1,000) × CPM Rate",
         },
         {
-          heading: "2026 Industry CPM Benchmarks",
+          heading: "Podcast Ad Rates & 2026 Industry CPM Benchmarks",
           paragraphs: [
-            "Actual advertising rates vary depending on show niche, listener buying power, and ad placement. Host-read mid-rolls consistently command the highest premium due to proven engagement and listener trust.",
+            "According to AdvertiseCast 2026 benchmarks and IAB/PwC industry research, actual podcast ad rates vary depending on show niche, listener buying power, and ad placement. Host-read mid-rolls consistently command the highest premium due to proven engagement and listener trust.",
           ],
           cards: [
             {
               title: "Pre-Roll (15-30s)",
               value: "$15 – $18 CPM",
-              description: "First 5 minutes of episode before core conversation starts",
+              description: "First 5 minutes of episode before core conversation starts (AdvertiseCast 2026)",
             },
             {
               title: "Mid-Roll (60s Host-Read)",
               value: "$25 – $35 CPM",
-              description: "Center of episode, highest retention and listener action",
+              description: "Center of episode, highest retention and listener action (AdvertiseCast 2026)",
               highlight: true,
             },
             {
               title: "Post-Roll (15s)",
               value: "$10 – $14 CPM",
-              description: "Outro audio segment after episode conclusion",
+              description: "Outro audio segment after episode conclusion (AdvertiseCast 2026)",
             },
           ],
         },
@@ -91,7 +93,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
       category: "Design",
       sections: [
         {
-          heading: "Official Apple Podcasts & Spotify Artwork Specifications",
+          heading: "Podcast cover art size requirements",
           paragraphs: [
             "Both Apple Podcasts and Spotify have strict technical requirements for podcast cover art. Submitting artwork that violates these specifications will cause your show to be rejected or fail directory indexing.",
           ],
@@ -153,7 +155,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
         },
       ],
       cta: {
-        title: "Generate 30+ Formula-Backed Titles",
+        title: "Generate 15+ Formula-Backed Titles",
         description: "Enter your episode topic and guest name into our title generator for instant ideas.",
         buttonText: "Generate Titles Now",
         toolSlug: "episode-title-generator",
@@ -162,41 +164,42 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
   },
 
   es: {
+    ...newGuidesByLocale.es,
     "podcast-sponsorship-cpm-guide-2026": {
-      title: "Guía de Patrocinio y CPM de Podcast (Puntos de Referencia 2026)",
-      description: "Todo lo que necesitas saber sobre anuncios pre-roll, mid-roll, leídos por el anfitrión, inserción dinámica y tarifas CPM del sector.",
-      readTime: "Lectura de 7 min",
+      title: "Tarifas de Publicidad y CPM de Podcast (2026)",
+      description: "Todo sobre tarifas de publicidad, puntos de referencia CPM del sector (AdvertiseCast), anuncios pre-roll, mid-roll e inserción dinámica.",
+      readTime: "Lectura de 6 min",
       publishedAt: "2026-10-15",
       category: "Monetización",
       sections: [
         {
-          heading: "Cómo se Calculan las Tarifas CPM de Podcasts",
+          heading: "Cómo se Calculan las Tarifas de Publicidad y CPM",
           paragraphs: [
-            "En la industria publicitaria de podcasts, los espacios de patrocinio se cotizan mediante la métrica CPM (Coste Por Mil descargas). El CPM representa la tarifa que paga un patrocinador por cada 1.000 descargas verificadas que logra un episodio durante su ventana inicial de lanzamiento de 30 a 45 días.",
+            "En la industria publicitaria de podcasts, las tarifas de publicidad y los espacios de patrocinio se cotizan mediante la métrica CPM (Coste Por Mil descargas). El CPM representa la tarifa que paga un patrocinador por cada 1.000 descargas verificadas que logra un episodio durante su ventana inicial de lanzamiento de 30 a 45 días.",
           ],
           formula: "Coste Total del Anuncio = (Descargas Estimadas a 30 Días / 1.000) × Tarifa CPM",
         },
         {
-          heading: "Puntos de Referencia de CPM en la Industria (2026)",
+          heading: "Tarifas de Publicidad y Benchmarks CPM de la Industria (2026)",
           paragraphs: [
-            "Las tarifas publicitarias reales varían según el nicho del programa, el poder adquisitivo de los oyentes y la ubicación del anuncio. Los anuncios mid-roll leídos por el presentador mantienen las tarifas más altas gracias a su elevada tasa de conversión.",
+            "Según los puntos de referencia de AdvertiseCast 2026 y estudios de IAB/PwC, las tarifas publicitarias reales varían según el nicho del programa, el poder adquisitivo de los oyentes y la ubicación del anuncio. Los anuncios mid-roll leídos por el presentador mantienen las tarifas más altas gracias a su elevada tasa de conversión.",
           ],
           cards: [
             {
               title: "Pre-Roll (15-30s)",
               value: "$15 – $18 CPM",
-              description: "Primeros 5 minutos del episodio antes del núcleo de la conversación",
+              description: "Primeros 5 minutos del episodio antes del núcleo de la conversación (AdvertiseCast 2026)",
             },
             {
               title: "Mid-Roll (60s Leído por Anfitrión)",
               value: "$25 – $35 CPM",
-              description: "Centro del episodio con la mayor retención y acción del oyente",
+              description: "Centro del episodio con la mayor retención y acción del oyente (AdvertiseCast 2026)",
               highlight: true,
             },
             {
               title: "Post-Roll (15s)",
               value: "$10 – $14 CPM",
-              description: "Segmento de cierre al concluir el episodio",
+              description: "Segmento de cierre al concluir el episodio (AdvertiseCast 2026)",
             },
           ],
         },
@@ -216,7 +219,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
       category: "Diseño",
       sections: [
         {
-          heading: "Especificaciones Oficiales de Portada para Apple Podcasts y Spotify",
+          heading: "Requisitos de tamaño para la portada del podcast",
           paragraphs: [
             "Tanto Apple Podcasts como Spotify imponen requisitos técnicos estrictos para las portadas de podcasts. Enviar una imagen que no cumpla estas especificaciones provocará el rechazo del programa o fallos de indexación en los directorios.",
           ],
@@ -278,7 +281,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
         },
       ],
       cta: {
-        title: "Genera más de 30 Títulos con Fórmulas Probadas",
+        title: "Genera más de 15 Títulos con Fórmulas Probadas",
         description: "Introduce el tema de tu episodio y el nombre del invitado para obtener sugerencias instantáneas.",
         buttonText: "Generar Títulos Ahora",
         toolSlug: "episode-title-generator",
@@ -287,41 +290,42 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
   },
 
   ja: {
+    ...newGuidesByLocale.ja,
     "podcast-sponsorship-cpm-guide-2026": {
-      title: "ポッドキャスト スポンサー料・CPM相場ガイド（2026年最新ベンチマーク）",
-      description: "プレロール、ミッドロール、ホストリード広告、ダイナミック挿入、業界の最新CPM相場を完全解説。",
-      readTime: "7分で読める",
+      title: "ポッドキャスト広告料金＆CPM相場（2026年最新ベンチマーク）",
+      description: "AdvertiseCast 2026やIAB/PwC調査に基づくポッドキャスト広告料金、業界最新CPM相場、プレロール・ミッドロール広告を完全解説。",
+      readTime: "6分で読める",
       publishedAt: "2026-10-15",
       category: "収益化",
       sections: [
         {
-          heading: "ポッドキャストのCPM広告料金の仕組み",
+          heading: "ポッドキャスト広告料金とCPMの仕組み",
           paragraphs: [
             "ポッドキャスト広告業界では、広告枠の価格設定に「CPM」（インプレッション単価、ラテン語で1,000回再生あたりのコスト）が用いられます。CPMは、エピソード公開後30〜45日間の検証済みダウンロード数1,000回に対してスポンサーが支払う金額を表します。",
           ],
           formula: "総広告費用 = (推定30日間ダウンロード数 / 1,000) × CPM料率",
         },
         {
-          heading: "2026年 業界CPMベンチマーク基準",
+          heading: "ポッドキャスト広告料金と2026年 業界CPMベンチマーク基準",
           paragraphs: [
-            "実際の広告単価は、番組のジャンル、リスナー層の購買力、挿入位置によって異なります。パーソナリティが自らの言葉で紹介するホストリード形式のミッドロール枠は、圧倒的な信頼性とエンゲージメントにより最高水準のCPMを維持しています。",
+            "AdvertiseCast 2026やIAB/PwCの業界調査によると、実際の広告単価は、番組のジャンル、リスナー層の購買力、挿入位置によって異なります。パーソナリティが自らの言葉で紹介するホストリード形式のミッドロール枠は、圧倒的な信頼性とエンゲージメントにより最高水準のCPMを維持しています。",
           ],
           cards: [
             {
               title: "プレロール（15〜30秒）",
               value: "$15 – $18 CPM",
-              description: "番組本編が本格的に始まる前の冒頭5分以内に挿入される広告",
+              description: "番組本編が本格的に始まる前の冒頭5分以内に挿入される広告 (AdvertiseCast 2026)",
             },
             {
               title: "ミッドロール（60秒・ホストリード）",
               value: "$25 – $35 CPM",
-              description: "番組中盤の最も離脱率が低くリスナーの関心が高い時間帯に挿入",
+              description: "番組中盤の最も離脱率が低くリスナーの関心が高い時間帯に挿入 (AdvertiseCast 2026)",
               highlight: true,
             },
             {
               title: "ポストロール（15秒）",
               value: "$10 – $14 CPM",
-              description: "番組エンディング後のアウトロ部分に挿入される枠",
+              description: "番組エンディング後のアウトロ部分に挿入される枠 (AdvertiseCast 2026)",
             },
           ],
         },
@@ -341,7 +345,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
       category: "デザイン",
       sections: [
         {
-          heading: "Apple Podcasts & Spotify 公式アートワーク技術仕様",
+          heading: "ポッドキャストカバーアートのサイズ要件",
           paragraphs: [
             "Apple PodcastsおよびSpotifyは、ポッドキャストのアートワークに対して厳格な技術仕様を設けています。基準を満たさない画像は、配信審査でのリジェクトや検索結果でのインデックス不良の原因となります。",
           ],
@@ -403,7 +407,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
         },
       ],
       cta: {
-        title: "心理法則に基づいたタイトルを30件以上自動生成",
+        title: "心理法則に基づいたタイトルを15件以上自動生成",
         description: "テーマとゲスト名を入力するだけで、高クリック率のタイトル候補を瞬時に提案。",
         buttonText: "タイトル生成ツールを開く",
         toolSlug: "episode-title-generator",
@@ -412,41 +416,42 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
   },
 
   fr: {
+    ...newGuidesByLocale.fr,
     "podcast-sponsorship-cpm-guide-2026": {
-      title: "Guide du Sponsoring et CPM de Podcast (Benchmarks 2026)",
-      description: "Tout ce qu'il faut savoir sur les formats pré-roll, mid-roll, annonces lues par l'hôte, insertion dynamique et tarifs CPM.",
-      readTime: "7 min de lecture",
+      title: "Tarifs Publicitaires et Guide CPM de Podcast (Benchmarks 2026)",
+      description: "Tout savoir sur les tarifs publicitaires de podcast, les benchmarks CPM 2026 (AdvertiseCast), pré-roll, mid-roll et sponsoring lu par l'hôte.",
+      readTime: "6 min de lecture",
       publishedAt: "2026-10-15",
       category: "Monétisation",
       sections: [
         {
-          heading: "Comprendre la Tarification au CPM des Podcasts",
+          heading: "Comprendre les Tarifs Publicitaires et le CPM des Podcasts",
           paragraphs: [
-            "Dans la publicité pour podcast, l'espace publicitaire est vendu selon la métrique CPM (Coût Pour Mille écoutes). Le CPM correspond au montant versé par un annonceur pour 1 000 écoutes vérifiées sur les 30 à 45 premiers jours suivant la publication de l'épisode.",
+            "Dans la publicité pour podcast, les tarifs publicitaires et l'espace sont vendus selon la métrique CPM (Coût Pour Mille écoutes). Le CPM correspond au montant versé par un annonceur pour 1 000 écoutes vérifiées sur les 30 à 45 premiers jours suivant la publication de l'épisode.",
           ],
           formula: "Coût Total Publicitaire = (Écoutes Estimées à 30 Jours / 1 000) × Tarif CPM",
         },
         {
-          heading: "Repères CPM du Secteur en 2026",
+          heading: "Tarifs Publicitaires et Repères CPM du Secteur en 2026",
           paragraphs: [
-            "Les tarifs publicitaires réels fluctuent selon la thématique de l'émission, le pouvoir d'achat des auditeurs et l'emplacement de l'annonce. Les mid-rolls lus directement par l'hôte bénéficient des tarifs les plus élevés en raison d'un fort taux d'engagement.",
+            "Selon les benchmarks AdvertiseCast 2026 et l'étude IAB/PwC, les tarifs publicitaires réels fluctuent selon la thématique de l'émission, le pouvoir d'achat des auditeurs et l'emplacement de l'annonce. Les mid-rolls lus directement par l'hôte bénéficient des tarifs les plus élevés en raison d'un fort taux d'engagement.",
           ],
           cards: [
             {
               title: "Pré-Roll (15-30s)",
               value: "15 $ – 18 $ CPM",
-              description: "Diffusé dans les 5 premières minutes avant le cœur de la conversation",
+              description: "Diffusé dans les 5 premières minutes avant le cœur de la conversation (AdvertiseCast 2026)",
             },
             {
               title: "Mid-Roll (60s Lu par l'Hôte)",
               value: "25 $ – 35 $ CPM",
-              description: "Diffusé au milieu de l'épisode, bénéficiant de la rétention maximale",
+              description: "Diffusé au milieu de l'épisode, bénéficiant de la rétention maximale (AdvertiseCast 2026)",
               highlight: true,
             },
             {
               title: "Post-Roll (15s)",
               value: "10 $ – 14 $ CPM",
-              description: "Segment diffusé lors de la conclusion de l'épisode",
+              description: "Segment diffusé lors de la conclusion de l'épisode (AdvertiseCast 2026)",
             },
           ],
         },
@@ -466,7 +471,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
       category: "Design",
       sections: [
         {
-          heading: "Spécifications Officielles Apple Podcasts et Spotify",
+          heading: "Exigences de taille pour la pochette de podcast",
           paragraphs: [
             "Apple Podcasts et Spotify appliquent des critères techniques stricts pour les pochettes de podcasts. Une image non conforme risque d'entraîner le rejet de votre émission ou des dysfonctionnements d'indexation.",
           ],
@@ -528,7 +533,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
         },
       ],
       cta: {
-        title: "Générez Plus de 30 Titres à Fort Impact",
+        title: "Générez Plus de 15 Titres à Fort Impact",
         description: "Saisissez votre sujet et le nom de votre invité pour obtenir instantanément des idées percutantes.",
         buttonText: "Générer des Titres",
         toolSlug: "episode-title-generator",
@@ -537,41 +542,42 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
   },
 
   de: {
+    ...newGuidesByLocale.de,
     "podcast-sponsorship-cpm-guide-2026": {
-      title: "Podcast-Sponsoring & TKP-Guide (Benchmarks 2026)",
-      description: "Alles über Pre-Roll-, Mid-Roll- und Host-Read-Anzeigen, dynamische Werbeeinblendung und aktuelle TKP-Richtwerte.",
-      readTime: "7 Min. Lesezeit",
+      title: "Podcast-Werbepreise & TKP-Benchmarks (2026)",
+      description: "Alles über Podcast-Werbepreise, Industrie-TKP-Benchmarks 2026 (AdvertiseCast), Pre-Roll-, Mid-Roll- und Host-Read-Sponsorings.",
+      readTime: "6 Min. Lesezeit",
       publishedAt: "2026-10-15",
       category: "Monetarisierung",
       sections: [
         {
-          heading: "Verständnis der Podcast-TKP-Preismodelle",
+          heading: "Verständnis der Podcast-Werbepreise und TKP-Modelle",
           paragraphs: [
-            "In der Podcast-Werbung werden Werbeplätze nach dem TKP (Tausender-Kontakt-Preis, im Englischen CPM) berechnet. Der TKP gibt den Betrag an, den ein Werbekunde pro 1.000 verifizierten Downloads einer Episode innerhalb der ersten 30 bis 45 Tage bezahlt.",
+            "In der Podcast-Werbung werden Werbepreise und Werbeplätze nach dem TKP (Tausender-Kontakt-Preis, im Englischen CPM) berechnet. Der TKP gibt den Betrag an, den ein Werbekunde pro 1.000 verifizierten Downloads einer Episode innerhalb der ersten 30 bis 45 Tage bezahlt.",
           ],
           formula: "Gesamte Werbekosten = (Geschätzte 30-Tage-Downloads / 1.000) × TKP-Satz",
         },
         {
-          heading: "Branchenübliche TKP-Benchmarks 2026",
+          heading: "Podcast-Werbepreise und Branchenübliche TKP-Benchmarks 2026",
           paragraphs: [
-            "Die tatsächlichen Werbepreise variieren je nach Nische, Kaufkraft der Hörer und Platzierung. Vom Host persönlich eingesprochene Mid-Rolls erzielen aufgrund des Vertrauens der Community die höchsten TKP-Werte.",
+            "Laut den Benchmarks von AdvertiseCast 2026 und der IAB/PwC-Studie variieren die tatsächlichen Podcast-Werbepreise je nach Nische, Kaufkraft der Hörer und Platzierung. Vom Host persönlich eingesprochene Mid-Rolls erzielen aufgrund des Vertrauens der Community die höchsten TKP-Werte.",
           ],
           cards: [
             {
               title: "Pre-Roll (15-30s)",
               value: "15 € – 18 € TKP",
-              description: "In den ersten 5 Minuten der Episode vor dem Hauptteil platziert",
+              description: "In den ersten 5 Minuten der Episode vor dem Hauptteil platziert (AdvertiseCast 2026)",
             },
             {
               title: "Mid-Roll (60s Host-Read)",
               value: "25 € – 35 € TKP",
-              description: "In der Mitte der Episode mit maximaler Hörerbindung platziert",
+              description: "In der Mitte der Episode mit maximaler Hörerbindung platziert (AdvertiseCast 2026)",
               highlight: true,
             },
             {
               title: "Post-Roll (15s)",
               value: "10 € – 14 € TKP",
-              description: "Im Abspann nach dem Hauptgespräch platziert",
+              description: "Im Abspann nach dem Hauptgespräch platziert (AdvertiseCast 2026)",
             },
           ],
         },
@@ -591,7 +597,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
       category: "Design",
       sections: [
         {
-          heading: "Offizielle Grafik-Spezifikationen für Apple Podcasts & Spotify",
+          heading: "Größenanforderungen für Podcast-Cover-Bilder",
           paragraphs: [
             "Sowohl Apple Podcasts als auch Spotify stellen strenge technische Anforderungen an das Podcast-Cover. Eine fehlerhafte Datei führt zur Ablehnung des Podcasts oder zu Darstellungsfehlern in den Verzeichnissen.",
           ],
@@ -653,7 +659,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
         },
       ],
       cta: {
-        title: "Generiere über 30 Titel mit Erfolgsformeln",
+        title: "Generiere über 15 Titel mit Erfolgsformeln",
         description: "Gib Thema und Gast ein, um sofort vorschlagsstarke Titelideen zu erhalten.",
         buttonText: "Titel jetzt generieren",
         toolSlug: "episode-title-generator",
@@ -662,24 +668,25 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
   },
 
   pt: {
+    ...newGuidesByLocale.pt,
     "podcast-sponsorship-cpm-guide-2026": {
-      title: "Guia de Patrocínio e CPM de Podcast (Benchmarks 2026)",
-      description: "Tudo o que você precisa saber sobre anúncios pre-roll, mid-roll, lidos pelo apresentador, inserção dinâmica e valores de CPM.",
-      readTime: "Leitura de 7 min",
+      title: "Preços de Anúncios e Guia de CPM de Podcast (Benchmarks 2026)",
+      description: "Tudo o que você precisa saber sobre preços de anúncios de podcast, métricas CPM 2026 (AdvertiseCast), pré-roll, mid-roll e patrocínios lidos pelo anfitrião.",
+      readTime: "Leitura de 6 min",
       publishedAt: "2026-10-15",
       category: "Monetização",
       sections: [
         {
-          heading: "Como Funciona a Precificação por CPM em Podcasts",
+          heading: "Como Funcionam os Preços de Anúncios e a Precificação por CPM",
           paragraphs: [
-            "No mercado de publicidade em podcast, os espaços comerciais são negociados pela métrica de CPM (Custo Por Mil downloads). O CPM representa o valor pago pelo anunciante a cada 1.000 downloads comprovados do episódio em sua janela de lançamento de 30 a 45 dias.",
+            "No mercado de publicidade em podcast, os preços de anúncios e os espaços comerciais são negociados pela métrica de CPM (Custo Por Mil downloads). O CPM representa o valor pago pelo anunciante a cada 1.000 downloads comprovados do episódio em sua janela de lançamento de 30 a 45 dias.",
           ],
           formula: "Custo Total do Anúncio = (Downloads Estimados em 30 Dias / 1.000) × Taxa de CPM",
         },
         {
-          heading: "Benchmarks de CPM do Mercado em 2026",
+          heading: "Preços de Anúncios e Benchmarks de CPM do Mercado em 2026",
           paragraphs: [
-            "Os valores reais de publicidade variam conforme o nicho do programa, o poder de compra da audiência e o formato do anúncio. Anúncios mid-roll lidos pelo próprio apresentador garantem as maiores remunerações por causa da alta retenção.",
+            "Segundo benchmarks da AdvertiseCast 2026 e estudos da IAB/PwC, os valores reais de publicidade variam conforme o nicho do programa, o poder de compra da audiência e o formato do anúncio. Anúncios mid-roll lidos pelo próprio apresentador garantem as maiores remunerações por causa da alta retenção.",
           ],
           cards: [
             {
@@ -716,7 +723,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
       category: "Design",
       sections: [
         {
-          heading: "Especificações Técnicas Oficiais para Capas de Podcast",
+          heading: "Requisitos de tamanho da capa de podcast",
           paragraphs: [
             "A Apple Podcasts e o Spotify aplicam critérios técnicos rigorosos para aprovação de capas. Enviar um arquivo fora do padrão pode levar à recusa do podcast ou problemas de exibição nos diretórios de busca.",
           ],
@@ -778,7 +785,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
         },
       ],
       cta: {
-        title: "Gere Mais de 30 Títulos Baseados em Fórmulas",
+        title: "Gere Mais de 15 Títulos Baseados em Fórmulas",
         description: "Insira o tema do seu episódio e o convidado para receber sugestões instantâneas de títulos atraentes.",
         buttonText: "Gerar Títulos Agora",
         toolSlug: "episode-title-generator",
@@ -787,41 +794,42 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
   },
 
   ko: {
+    ...newGuidesByLocale.ko,
     "podcast-sponsorship-cpm-guide-2026": {
-      title: "팟캐스트 스폰서십 및 CPM 단가 가이드 (2026년 최신 벤치마크)",
-      description: "프리롤, 미드롤, 호스트 리드 광고, 동적 삽입 광고 및 업계 표준 CPM 단가에 대한 완벽 해설.",
-      readTime: "7분 소요",
+      title: "팟캐스트 광고 단가 및 2026 CPM 기준 가이드",
+      description: "AdvertiseCast 2026 및 IAB/PwC 연구 기준 팟캐스트 광고 단가, CPM 업계 벤치마크, 프리롤, 미드롤, 호스트 리드 광고 완벽 정리.",
+      readTime: "6분 소요",
       publishedAt: "2026-10-15",
       category: "수익화",
       sections: [
         {
-          heading: "팟캐스트 CPM 광고 단가의 원리와 계산법",
+          heading: "팟캐스트 광고 단가 및 CPM 요율 이해하기",
           paragraphs: [
-            "팟캐스트 광고 업계에서는 광고 인벤토리 가격을 책정할 때 'CPM'(1,000회 청취당 비용, Cost Per Mille) 기준을 사용합니다. CPM은 에피소드 공개 후 최초 30~45일간 기록된 검증된 다운로드 수 1,000회당 광고주가 지불하는 금액을 의미합니다.",
+            "팟캐스트 광고 업계에서는 광고 단가와 인벤토리 가격을 책정할 때 'CPM'(1,000회 청취당 비용, Cost Per Mille) 기준을 사용합니다. CPM은 에피소드 공개 후 최초 30~45일간 기록된 검증된 다운로드 수 1,000회당 광고주가 지불하는 금액을 의미합니다.",
           ],
           formula: "총 광고 비용 = (예상 30일 다운로드 수 / 1,000) × CPM 단가",
         },
         {
-          heading: "2026년 업계 표준 CPM 벤치마크 단가",
+          heading: "팟캐스트 광고 단가 및 2026년 업계 표준 CPM 벤치마크",
           paragraphs: [
-            "실제 광고 단가는 방송 카테고리, 청취자의 구매력, 광고 삽입 위치에 따라 차이가 납니다. 진행자가 직접 육성으로 읽어주는 호스트 리드 미드롤 광고는 높은 청취율과 신뢰도 덕분에 가장 높은 단가를 형성합니다.",
+            "AdvertiseCast 2026 벤치마크와 IAB/PwC 연구에 따르면, 실제 광고 단가는 방송 카테고리, 청취자의 구매력, 광고 삽입 위치에 따라 차이가 납니다. 진행자가 직접 육성으로 읽어주는 호스트 리드 미드롤 광고는 높은 청취율과 신뢰도 덕분에 가장 높은 단가를 형성합니다.",
           ],
           cards: [
             {
               title: "프리롤 (15~30초)",
               value: "$15 – $18 CPM",
-              description: "본격적인 본방송 시작 전 오프닝 5분 이내에 배치되는 광고",
+              description: "본격적인 본방송 시작 전 오프닝 5분 이내에 배치되는 광고 (AdvertiseCast 2026)",
             },
             {
               title: "미드롤 (60초 진행자 낭독)",
               value: "$25 – $35 CPM",
-              description: "청취 집중도와 잔존율이 가장 높은 방송 중반부에 배치",
+              description: "청취 집중도와 잔존율이 가장 높은 방송 중반부에 배치 (AdvertiseCast 2026)",
               highlight: true,
             },
             {
               title: "포스트롤 (15초)",
               value: "$10 – $14 CPM",
-              description: "에피소드 종료 후 클로징 멘트 뒤에 배치되는 광고",
+              description: "에피소드 종료 후 클로징 멘트 뒤에 배치되는 광고 (AdvertiseCast 2026)",
             },
           ],
         },
@@ -841,7 +849,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
       category: "디자인",
       sections: [
         {
-          heading: "Apple Podcasts 및 Spotify 공식 아트워크 기술 규격",
+          heading: "팟캐스트 커버 아트 규격 및 사이즈 요구사항",
           paragraphs: [
             "Apple Podcasts와 Spotify는 팟캐스트 커버 아트에 대해 엄격한 기술 요건을 적용합니다. 규격을 위반한 이미지를 제출할 경우 등록이 거절되거나 검색 디렉토리 노출에 문제가 생길 수 있습니다.",
           ],
@@ -903,7 +911,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
         },
       ],
       cta: {
-        title: "심리 공식 기반의 매력적인 제목 30개 생성하기",
+        title: "심리 공식 기반의 매력적인 제목 15개 생성하기",
         description: "방송 주제와 게스트 이름을 입력하면 클릭률 높은 제목을 즉시 추천해 드립니다.",
         buttonText: "지금 제목 생성하기",
         toolSlug: "episode-title-generator",
@@ -912,24 +920,25 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
   },
 
   it: {
+    ...newGuidesByLocale.it,
     "podcast-sponsorship-cpm-guide-2026": {
-      title: "Guida alle Sponsorizzazioni e CPM per Podcast (Benchmark 2026)",
-      description: "Tutto quello che devi sapere su pre-roll, mid-roll, annunci letti dall'host, inserzione dinamica e tariffe CPM di settore.",
-      readTime: "7 min di lettura",
+      title: "Tariffe Pubblicitarie e Benchmark CPM per Podcast (2026)",
+      description: "Tutto quello che devi sapere sulle tariffe pubblicitarie per podcast, benchmark CPM 2026 (AdvertiseCast), pre-roll, mid-roll e sponsorizzazioni host-read.",
+      readTime: "6 min di lettura",
       publishedAt: "2026-10-15",
       category: "Monetizzazione",
       sections: [
         {
-          heading: "Comprendere il Modello di Prezzo CPM nei Podcast",
+          heading: "Comprendere le Tariffe Pubblicitarie e il CPM nei Podcast",
           paragraphs: [
-            "Nel mercato pubblicitario dei podcast, gli spazi commerciali sono venduti in base alla metrica CPM (Costo Per Mille ascolti). Il CPM rappresenta l'importo pagato dallo sponsor per ogni 1.000 ascolti certificati che un episodio ottiene nei primi 30-45 giorni di uscita.",
+            "Nel mercato pubblicitario dei podcast, le tariffe pubblicitarie e gli spazi commerciali sono venduti in base alla metrica CPM (Costo Per Mille ascolti). Il CPM rappresenta l'importo pagato dallo sponsor per ogni 1.000 ascolti certificati che un episodio ottiene nei primi 30-45 giorni di uscita.",
           ],
           formula: "Costo Totale Inserzione = (Ascolti Stimati a 30 Giorni / 1.000) × Tariffa CPM",
         },
         {
-          heading: "Benchmark CPM del Settore nel 2026",
+          heading: "Tariffe Pubblicitarie e Benchmark CPM del Settore nel 2026",
           paragraphs: [
-            "Le tariffe pubblicitarie effettive variano in base al settore dello show, al potere d'acquisto degli ascoltatori e alla collocazione dell'annuncio. I mid-roll letti direttamente dall'host spuntano i compensi più alti per via della massima attenzione del pubblico.",
+            "Secondo i benchmark di AdvertiseCast 2026 e le analisi IAB/PwC, le tariffe pubblicitarie effettive variano in base al settore dello show, al potere d'acquisto degli ascoltatori e alla collocazione dell'annuncio. I mid-roll letti direttamente dall'host spuntano i compensi più alti per via della massima attenzione del pubblico.",
           ],
           cards: [
             {
@@ -966,7 +975,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
       category: "Design",
       sections: [
         {
-          heading: "Specifiche Grafiche Ufficiali per Apple Podcasts e Spotify",
+          heading: "Requisiti di dimensione per la copertina del podcast",
           paragraphs: [
             "Sia Apple Podcasts che Spotify applicano standard tecnici rigorosi per le copertine dei podcast. Inviare un file non conforme comporta il rifiuto della trasmissione o anomalie nell'indicizzazione.",
           ],
@@ -1028,7 +1037,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
         },
       ],
       cta: {
-        title: "Genera Oltre 30 Titoli Efficaci",
+        title: "Genera Oltre 15 Titoli Efficaci",
         description: "Inserisci argomento e ospite nel nostro generatore per ricevere subito idee vincenti.",
         buttonText: "Genera Titoli Ora",
         toolSlug: "episode-title-generator",

@@ -39,8 +39,7 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-# Host & Canonical XML Sitemap
-Host: https://podstudiotools.com
+# Sitemap
 Sitemap: ${sitemapURL.href}
 `;
 

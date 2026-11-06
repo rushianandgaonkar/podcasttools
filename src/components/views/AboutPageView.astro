@@ -107,6 +107,12 @@ const aboutSchema = {
         >
           {a.cta} <ArrowRight className="w-3.5 h-3.5" />
         </a>
+        <p class="mt-4 text-xs text-neutral-500">
+          <a
+            href={`mailto:${siteConfig.creator.contactEmail}`}
+            class="underline underline-offset-2 hover:text-neutral-900 dark:hover:text-white transition-colors"
+          >{siteConfig.creator.contactEmail}</a>
+        </p>
       </div>
     </div>
   </div>

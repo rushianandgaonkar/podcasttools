@@ -22,6 +22,8 @@ export default defineConfig({
     sitemap({
       // Keep error pages out of the sitemap (they are not meant to rank)
       filter: (page) => !/\/(400|404|500)\/?$/.test(new URL(page).pathname),
+      // Build-date lastmod: signals a fresh sitemap on each deploy.
+      lastmod: new Date(),
       i18n: {
         defaultLocale: "en",
         locales: {

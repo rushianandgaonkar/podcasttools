@@ -398,10 +398,10 @@ export function EpisodeTitleGenerator({ lang = defaultLocale }: EpisodeTitleGene
       <div className="space-y-3">
         <div className="flex items-center justify-between px-1">
           <span className="text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
-            Titles ({filteredTitles.length})
+            {ui.titlesLabel} ({filteredTitles.length})
           </span>
           <span className="text-[11px] text-neutral-500">
-            Apple &amp; Spotify Best Practice: &lt; 65 chars
+            {ui.titleLengthNote}
           </span>
         </div>
 
