@@ -454,6 +454,15 @@ export const guidesRegistry: GuideDefinition[] = [
     category: "Marketing",
   },
   {
+    slug: "how-to-come-up-with-catchy-podcast-episode-titles",
+    title: "How to Come Up With a Catchy Podcast Episode Title",
+    description: "Not sure how to title your next episode? Use this 5-step process, do's and don'ts, and before/after examples to write catchy podcast episode titles fast.",
+    readTime: "6 min read",
+    publishedAt: "2026-11-06",
+    updatedAt: "2026-11-06",
+    category: "Marketing",
+  },
+  {
     slug: "how-much-do-podcasts-make",
     title: "How Much Do Podcasts Make? Real Numbers by Audience Size",
     description: "Discover how much podcasts make in 2026. Explore real ad CPM revenue, listener subscriptions, sponsorships, and earnings by download size. Free creator guide.",

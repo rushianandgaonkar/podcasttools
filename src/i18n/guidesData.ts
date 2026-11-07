@@ -2,6 +2,8 @@ import type { SupportedLocale } from "./languages";
 import type { GuideDefinition } from "../config/site";
 import { getGuideExtra, type GuideFaq } from "./guideExtras";
 import { newGuidesByLocale } from "./newGuides";
+import { catchyTitlesGuideEn } from "./newGuides/catchyTitles.en";
+import { catchyTitlesGuideByLocale } from "./newGuides/catchyTitles.locales";
 
 export interface LocalizedGuideArticle {
   title: string;
@@ -39,6 +41,7 @@ export interface LocalizedGuideArticle {
 export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideArticle>> = {
   en: {
     ...newGuidesByLocale.en,
+    ...catchyTitlesGuideEn,
     "podcast-sponsorship-cpm-guide-2026": {
       title: "Podcast Ad Rates & CPM Benchmarks (2026)",
       description: "Everything you need to know about podcast ad rates, industry CPM benchmarks, pre-roll, mid-roll, and host-read sponsorships.",
@@ -165,6 +168,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
 
   es: {
     ...newGuidesByLocale.es,
+    ...catchyTitlesGuideByLocale.es,
     "podcast-sponsorship-cpm-guide-2026": {
       title: "Tarifas de Publicidad y CPM de Podcast (2026)",
       description: "Todo sobre tarifas de publicidad, puntos de referencia CPM del sector (AdvertiseCast), anuncios pre-roll, mid-roll e inserción dinámica.",
@@ -291,6 +295,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
 
   ja: {
     ...newGuidesByLocale.ja,
+    ...catchyTitlesGuideByLocale.ja,
     "podcast-sponsorship-cpm-guide-2026": {
       title: "ポッドキャスト広告料金＆CPM相場（2026年最新ベンチマーク）",
       description: "AdvertiseCast 2026やIAB/PwC調査に基づくポッドキャスト広告料金、業界最新CPM相場、プレロール・ミッドロール広告を完全解説。",
@@ -417,6 +422,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
 
   fr: {
     ...newGuidesByLocale.fr,
+    ...catchyTitlesGuideByLocale.fr,
     "podcast-sponsorship-cpm-guide-2026": {
       title: "Tarifs Publicitaires et Guide CPM de Podcast (Benchmarks 2026)",
       description: "Tout savoir sur les tarifs publicitaires de podcast, les benchmarks CPM 2026 (AdvertiseCast), pré-roll, mid-roll et sponsoring lu par l'hôte.",
@@ -543,6 +549,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
 
   de: {
     ...newGuidesByLocale.de,
+    ...catchyTitlesGuideByLocale.de,
     "podcast-sponsorship-cpm-guide-2026": {
       title: "Podcast-Werbepreise & TKP-Benchmarks (2026)",
       description: "Alles über Podcast-Werbepreise, Industrie-TKP-Benchmarks 2026 (AdvertiseCast), Pre-Roll-, Mid-Roll- und Host-Read-Sponsorings.",
@@ -669,6 +676,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
 
   pt: {
     ...newGuidesByLocale.pt,
+    ...catchyTitlesGuideByLocale.pt,
     "podcast-sponsorship-cpm-guide-2026": {
       title: "Preços de Anúncios e Guia de CPM de Podcast (Benchmarks 2026)",
       description: "Tudo o que você precisa saber sobre preços de anúncios de podcast, métricas CPM 2026 (AdvertiseCast), pré-roll, mid-roll e patrocínios lidos pelo anfitrião.",
@@ -795,6 +803,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
 
   ko: {
     ...newGuidesByLocale.ko,
+    ...catchyTitlesGuideByLocale.ko,
     "podcast-sponsorship-cpm-guide-2026": {
       title: "팟캐스트 광고 단가 및 2026 CPM 기준 가이드",
       description: "AdvertiseCast 2026 및 IAB/PwC 연구 기준 팟캐스트 광고 단가, CPM 업계 벤치마크, 프리롤, 미드롤, 호스트 리드 광고 완벽 정리.",
@@ -921,6 +930,7 @@ export const guidesData: Record<SupportedLocale, Record<string, LocalizedGuideAr
 
   it: {
     ...newGuidesByLocale.it,
+    ...catchyTitlesGuideByLocale.it,
     "podcast-sponsorship-cpm-guide-2026": {
       title: "Tariffe Pubblicitarie e Benchmark CPM per Podcast (2026)",
       description: "Tutto quello che devi sapere sulle tariffe pubblicitarie per podcast, benchmark CPM 2026 (AdvertiseCast), pre-roll, mid-roll e sponsorizzazioni host-read.",

@@ -19,3 +19,4 @@ export const newGuidesByLocale: Record<SupportedLocale, Record<string, Localized
   ja: jaNewGuides,
   ko: koNewGuides,
 };
+
