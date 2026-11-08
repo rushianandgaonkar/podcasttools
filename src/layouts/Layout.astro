@@ -137,7 +137,7 @@ const jsonLdWebsite = {
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#faf9f5" media="(prefers-color-scheme: light)" />
 
     {noindex ? (
       <meta name="robots" content="noindex, nofollow" />
@@ -174,7 +174,7 @@ const jsonLdWebsite = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdOrg)} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebsite)} />
   </head>
-  <body class="bg-[#fafafa] dark:bg-[#000000] text-[#171717] dark:text-[#ededed] min-h-screen flex flex-col font-sans selection:bg-[#0070f3]/20 selection:text-[#0070f3] antialiased">
+  <body class="bg-[#faf9f5] dark:bg-[#000000] text-[#141413] dark:text-[#faf9f5] min-h-screen flex flex-col font-sans selection:bg-[#a9583e]/20 selection:text-[#a9583e] antialiased">
     <Navbar client:load lang={lang} />
     <main class="flex-1">
       <slot />

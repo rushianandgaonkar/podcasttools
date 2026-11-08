@@ -12,7 +12,7 @@ export const koNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "2026년 팟캐스트 수익의 현실",
         paragraphs: [
           "팟캐스트 수익은 취미로 운영하는 채널의 0원에서부터 인기 차트 최상위권 프로그램의 연간 수억 원에 이르기까지 폭넓습니다. 하지만 대다수의 독립 팟캐스터에게 실제 수익은 '공개 후 30일간의 검증된 다운로드 수', '청취자의 구매력', 그리고 '단순 광고를 넘어선 다각화된 비즈니스 모델'에 의해 결정됩니다.",
-          "AdvertiseCast의 업계 지표, IAB/PwC 팟캐스트 광고 보고서, Patreon의 창작자 통계에 따르면 성공적인 팟캐스터들은 진행자 직접 낭독 광고, 제휴 마케팅, 유료 팬 멤버십, 자체 전문 서비스 판매를 유기적으로 결합합니다. 무료 <a href=\"/ko/tools/monetization-calculator\" class=\"text-[#0070f3] underline font-medium\">팟캐스트 수익 계산기</a>를 통해 내 채널의 예상 매출을 시뮬레이션해 보세요.",
+          "AdvertiseCast의 업계 지표, IAB/PwC 팟캐스트 광고 보고서, Patreon의 창작자 통계에 따르면 성공적인 팟캐스터들은 진행자 직접 낭독 광고, 제휴 마케팅, 유료 팬 멤버십, 자체 전문 서비스 판매를 유기적으로 결합합니다. 무료 <a href=\"/ko/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 수익 계산기</a>를 통해 내 채널의 예상 매출을 시뮬레이션해 보세요.",
         ],
       },
       {
@@ -91,7 +91,7 @@ export const koNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "팟캐스트로 돈을 버는 8가지 검증된 방법",
         paragraphs: [
           "팟캐스트 수익화는 수만 명의 청취자를 가진 대형 방송사만의 전유물이 아닙니다. 오늘날의 크리에이터들은 대형 광고 대행사를 기다리지 않고, 상호 보완적인 여러 수익 채널을 결합하여 자립적인 비즈니스를 구축하고 있습니다.",
-          "청취자가 300명이든 30,000명이든, 청취자가 당신에게 보내는 신뢰를 바탕으로 지금 당장 수익화를 시작할 수 있습니다. 방송 내 광고 배치 시점은 무료 <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">팟캐스트 큐시트 작성기</a>를 활용해 설계하세요.",
+          "청취자가 300명이든 30,000명이든, 청취자가 당신에게 보내는 신뢰를 바탕으로 지금 당장 수익화를 시작할 수 있습니다. 방송 내 광고 배치 시점은 무료 <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 큐시트 작성기</a>를 활용해 설계하세요.",
         ],
         list: [
           {
@@ -131,7 +131,7 @@ export const koNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "팟캐스트 첫 스폰서 협찬 유치하는 법",
         paragraphs: [
-          "첫 협찬사를 찾기 위해 에이전시가 필요하지는 않습니다. 핵심은 '내 방송의 청취자 층을 고객으로 확보하고 싶어 하는 기업'을 찾고, 청취자가 진행자의 추천을 얼마나 깊이 신뢰하는지 입증하는 것입니다. 맞춤형 제안서 작성에는 <a href=\"/ko/tools/collab-finder\" class=\"text-[#0070f3] underline font-medium\">게스트 섭외 및 협업 제안서 작성기</a>를 활용하세요.",
+          "첫 협찬사를 찾기 위해 에이전시가 필요하지는 않습니다. 핵심은 '내 방송의 청취자 층을 고객으로 확보하고 싶어 하는 기업'을 찾고, 청취자가 진행자의 추천을 얼마나 깊이 신뢰하는지 입증하는 것입니다. 맞춤형 제안서 작성에는 <a href=\"/ko/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">게스트 섭외 및 협업 제안서 작성기</a>를 활용하세요.",
           "미국 IAB와 Edison Research 조사에 따르면 진행자가 직접 진정성 있게 읽어주는 광고는 70% 이상의 높은 브랜드 인지도와 신뢰도를 기록합니다. 기업 담당자에게 접근할 때는 총 다운로드 숫자보다 청취자 페르소나의 적합성을 부각하세요.",
         ],
       },
@@ -179,7 +179,7 @@ export const koNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "더 이상 방송 소재로 고민하지 마세요",
         paragraphs: [
           "팟캐스트 발행이 중단되는 가장 흔한 원인은 매주 녹음 날이 다가올 때마다 '무슨 이야기를 해야 하나' 막막해지기 때문입니다. 오랫동안 청취율을 유지하는 인기 팟캐스트는 매주 맨땅에서 기발한 아이디어를 짜내는 것이 아니라, 이미 검증된 주제 프레임워크와 정기 코너 라이브러리를 운영합니다.",
-          "아래에 인기 분야별로 엄선한 100가지의 구체적인 팟캐스트 주제 아이디어, 회차 기획 포맷, 고정 코너 구성을 모았습니다. 마음에 드는 주제를 고른 뒤 <a href=\"/ko/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">에피소드 제목 생성기</a>로 클릭을 부르는 헤드라인을 완성해 보세요.",
+          "아래에 인기 분야별로 엄선한 100가지의 구체적인 팟캐스트 주제 아이디어, 회차 기획 포맷, 고정 코너 구성을 모았습니다. 마음에 드는 주제를 고른 뒤 <a href=\"/ko/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">에피소드 제목 생성기</a>로 클릭을 부르는 헤드라인을 완성해 보세요.",
         ],
       },
       {
@@ -233,7 +233,7 @@ export const koNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "팟캐스트 고정 코너 아이디어 (20선)",
         paragraphs: [
-          "규칙적인 고정 코너는 청취자에게 친근감을 주고 <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">큐시트 작성기</a>에서의 대본 구성을 매우 수월하게 만들어 줍니다:",
+          "규칙적인 고정 코너는 청취자에게 친근감을 주고 <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">큐시트 작성기</a>에서의 대본 구성을 매우 수월하게 만들어 줍니다:",
         ],
         list: [
           {
@@ -269,13 +269,13 @@ export const koNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "1단계: 니치 주제, 방송 포맷, 타깃 청취자 설정",
         paragraphs: [
           "성공하는 방송은 명확한 가치 제안에서 출발합니다: '이 방송은 누구를 위한 것이며, 청취자는 매회 어떤 구체적인 가치를 얻어가는가?' 타깃을 좁혀 정의해야 잠재 청취자가 소개글을 읽었을 때 '바로 나를 위한 방송'이라고 즉시 느낄 수 있습니다.",
-          "1인 진행, 2인 공동 진행, 게스트 인터뷰 중 주력 포맷을 결정하세요. 무료 <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">팟캐스트 큐시트 작성기</a>를 활용해 회차별 시간 배분을 설계해 보세요.",
+          "1인 진행, 2인 공동 진행, 게스트 인터뷰 중 주력 포맷을 결정하세요. 무료 <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 큐시트 작성기</a>를 활용해 회차별 시간 배분을 설계해 보세요.",
         ],
       },
       {
         heading: "2단계: 기억하기 쉽고 검색에 유리한 프로그램 이름 짓기",
         paragraphs: [
-          "팟캐스트 이름은 발음하기 편하고 한 번 들어도 기억에 남아야 하며, 청취자들이 앱에서 실제로 검색할 만한 키워드를 품고 있어야 합니다. 모호한 언어유희는 피하고 <a href=\"/ko/tools/podcast-name-generator\" class=\"text-[#0070f3] underline font-medium\">팟캐스트 이름 생성기</a>에서 후보군을 비교해 보세요.",
+          "팟캐스트 이름은 발음하기 편하고 한 번 들어도 기억에 남아야 하며, 청취자들이 앱에서 실제로 검색할 만한 키워드를 품고 있어야 합니다. 모호한 언어유희는 피하고 <a href=\"/ko/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 이름 생성기</a>에서 후보군을 비교해 보세요.",
         ],
       },
       {
@@ -306,27 +306,27 @@ export const koNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "4단계: 공식 규격을 충족하는 커버 아트 디자인",
         paragraphs: [
           "커버 아트는 Apple 팟캐스트와 Spotify 디렉터리에서 내 채널의 첫인상을 좌우합니다. 두 플랫폼 공통으로 '완벽한 1:1 정방형', '해상도 1400x1400px ~ 3000x3000px', 'RGB 색상 모드' 규격을 엄격히 요구합니다.",
-          "스마트폰의 50x50px 초소형 썸네일에서도 방송 제목이 또렷이 읽히는지 <a href=\"/ko/tools/cover-art-preview\" class=\"text-[#0070f3] underline font-medium\">커버 아트 규격 확인 및 미리보기</a> 도구로 사전 검증하세요.",
+          "스마트폰의 50x50px 초소형 썸네일에서도 방송 제목이 또렷이 읽히는지 <a href=\"/ko/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">커버 아트 규격 확인 및 미리보기</a> 도구로 사전 검증하세요.",
         ],
       },
       {
         heading: "5단계: 예고편(트레일러) 및 초기 3개 회차 녹음",
         paragraphs: [
-          "정식 오픈에 앞서 방송의 기획 의도를 60~90초로 요약하고 채널 팔로우를 요청하는 트레일러 음원을 제작하세요. <a href=\"/ko/tools/trailer-script-builder\" class=\"text-[#0070f3] underline font-medium\">트레일러 대본 작성기</a>로 초안을 잡고, <a href=\"/ko/tools/intro-script-generator\" class=\"text-[#0070f3] underline font-medium\">오프닝 대본 생성기</a>로 매력적인 도입부를 구성할 수 있습니다.",
-          "게스트 인터뷰 회차를 준비 중이라면 판에 박힌 이력 읊기를 탈피할 수 있도록 <a href=\"/ko/tools/guest-question-generator\" class=\"text-[#0070f3] underline font-medium\">인터뷰 질문 생성기</a>를 통해 진솔한 질문지를 준비하세요.",
+          "정식 오픈에 앞서 방송의 기획 의도를 60~90초로 요약하고 채널 팔로우를 요청하는 트레일러 음원을 제작하세요. <a href=\"/ko/tools/trailer-script-builder\" class=\"text-[#a9583e] underline font-medium\">트레일러 대본 작성기</a>로 초안을 잡고, <a href=\"/ko/tools/intro-script-generator\" class=\"text-[#a9583e] underline font-medium\">오프닝 대본 생성기</a>로 매력적인 도입부를 구성할 수 있습니다.",
+          "게스트 인터뷰 회차를 준비 중이라면 판에 박힌 이력 읊기를 탈피할 수 있도록 <a href=\"/ko/tools/guest-question-generator\" class=\"text-[#a9583e] underline font-medium\">인터뷰 질문 생성기</a>를 통해 진솔한 질문지를 준비하세요.",
         ],
       },
       {
         heading: "6단계: 팟캐스트 전문 호스팅 선정 및 RSS 피드 검증",
         paragraphs: [
           "오디오 파일은 Apple이나 Spotify 서버에 직접 업로드하는 것이 아닙니다. Buzzsprout, Podbean, Libsyn, Spotify for Podcasters 같은 전용 미디어 호스팅에 파일을 올리고, 호스팅이 생성해 주는 RSS XML 피드 주소를 활용합니다.",
-          "디렉터리에 피드를 등록하기 전, 필수 태그 누락이나 음원 재생 오류가 없는지 <a href=\"/ko/tools/rss-feed-validator\" class=\"text-[#0070f3] underline font-medium\">RSS 피드 유효성 검사기</a>로 사전에 철저히 검사하세요.",
+          "디렉터리에 피드를 등록하기 전, 필수 태그 누락이나 음원 재생 오류가 없는지 <a href=\"/ko/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">RSS 피드 유효성 검사기</a>로 사전에 철저히 검사하세요.",
         ],
       },
       {
         heading: "7단계: 검색 최적화 제목, 쇼노트 및 카테고리 설정",
         paragraphs: [
-          "신규 청취자의 자연 유입은 메타데이터가 좌우합니다. 클릭률 높은 헤드라인을 <a href=\"/ko/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">에피소드 제목 생성기</a>로 만들고, 타임스탬프가 포함된 체계적인 설명을 <a href=\"/ko/tools/show-notes-generator\" class=\"text-[#0070f3] underline font-medium\">쇼노트 생성기</a>로 작성하며, <a href=\"/ko/tools/category-finder\" class=\"text-[#0070f3] underline font-medium\">카테고리 검색기</a>를 통해 순위 경쟁에 유리한 공식 카테고리를 지정하세요.",
+          "신규 청취자의 자연 유입은 메타데이터가 좌우합니다. 클릭률 높은 헤드라인을 <a href=\"/ko/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">에피소드 제목 생성기</a>로 만들고, 타임스탬프가 포함된 체계적인 설명을 <a href=\"/ko/tools/show-notes-generator\" class=\"text-[#a9583e] underline font-medium\">쇼노트 생성기</a>로 작성하며, <a href=\"/ko/tools/category-finder\" class=\"text-[#a9583e] underline font-medium\">카테고리 검색기</a>를 통해 순위 경쟁에 유리한 공식 카테고리를 지정하세요.",
         ],
       },
       {

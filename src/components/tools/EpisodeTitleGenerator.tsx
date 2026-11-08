@@ -428,7 +428,7 @@ export function EpisodeTitleGenerator({ lang = defaultLocale }: EpisodeTitleGene
                     {item.charCount} chars • {item.rating === "Optimal" ? ui.optimal : item.rating === "Good" ? ui.good : ui.tooLong}
                   </span>
                 </div>
-                <p className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors">
+                <p className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-[#a9583e] dark:group-hover:text-[#a9583e] transition-colors">
                   {item.title}
                 </p>
               </div>

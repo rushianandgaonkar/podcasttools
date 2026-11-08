@@ -125,7 +125,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
             onClick={() => setSelectedCategory("all")}
             className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
               selectedCategory === "all"
-                ? "bg-[#171717] text-white dark:bg-white dark:text-black shadow-2xs"
+                ? "bg-[#a9583e] hover:bg-[#8f4630] text-white shadow-2xs"
                 : "bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
             }`}
           >
@@ -144,7 +144,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
                   isSelected
-                    ? "bg-[#171717] text-white dark:bg-white dark:text-black shadow-2xs"
+                    ? "bg-[#a9583e] hover:bg-[#8f4630] text-white shadow-2xs"
                     : "bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
                 }`}
               >
@@ -216,7 +216,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
             <div className="flex items-center justify-between mb-4 px-1">
               <div className="flex items-center gap-2">
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-900 dark:text-white">
-                  <Sparkles className="w-3.5 h-3.5 text-[#0070f3]" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#a9583e]" />
                   {labels.toolsCarousel}
                 </span>
                 <span className="font-mono text-[10px] px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-700">
@@ -288,7 +288,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-sm font-semibold tracking-[-0.01em] text-neutral-900 dark:text-neutral-100 group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors mb-1.5">
+                  <h3 className="text-sm font-semibold tracking-[-0.01em] text-neutral-900 dark:text-neutral-100 group-hover:text-[#a9583e] dark:group-hover:text-[#a9583e] transition-colors mb-1.5">
                     {tool.title}
                   </h3>
 
@@ -301,7 +301,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
                 {/* Bottom Card Action */}
                 <div className="pt-3 border-t border-neutral-100 dark:border-neutral-900 flex items-center justify-between text-xs">
                   <span className="font-mono text-[10px] text-neutral-400">{labels.inBrowser}</span>
-                  <span className="inline-flex items-center gap-1 font-medium text-xs text-neutral-700 dark:text-neutral-300 group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors">
+                  <span className="inline-flex items-center gap-1 font-medium text-xs text-neutral-700 dark:text-neutral-300 group-hover:text-[#a9583e] dark:group-hover:text-[#a9583e] transition-colors">
                     {t.toolsSection.launchTool} <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                   </span>
                 </div>
@@ -317,7 +317,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
               setSelectedCategory("all");
               setSearchQuery("");
             }}
-            className="text-xs text-[#0070f3] hover:underline font-medium"
+            className="text-xs text-[#a9583e] hover:underline font-medium"
           >
             {labels.clearFilters}
           </button>

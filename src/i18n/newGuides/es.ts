@@ -12,7 +12,7 @@ export const esNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "¿Cuánto Gana un Podcast en 2026?",
         paragraphs: [
           "Los ingresos de un podcast varían desde cero en programas aficionados hasta cientos de miles de euros al año en grandes cadenas de audio. Sin embargo, para la mayoría de los creadores independientes, los ingresos están ligados al volumen verificado de descargas a 30 días, el poder adquisitivo del oyente y la diversificación de fuentes de monetización.",
-          "Según estudios de mercado de AdvertiseCast, el informe IAB/PwC sobre publicidad en podcasts y datos de Patreon, los podcasters generan ingresos combinando patrocinios leídos por el anfitrión, marketing de afiliados, membresías y venta de productos o servicios propios. Utiliza nuestra <a href=\"/es/tools/monetization-calculator\" class=\"text-[#0070f3] underline font-medium\">Calculadora de Ingresos de Podcast</a> gratuita para estimar tu potencial.",
+          "Según estudios de mercado de AdvertiseCast, el informe IAB/PwC sobre publicidad en podcasts y datos de Patreon, los podcasters generan ingresos combinando patrocinios leídos por el anfitrión, marketing de afiliados, membresías y venta de productos o servicios propios. Utiliza nuestra <a href=\"/es/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Calculadora de Ingresos de Podcast</a> gratuita para estimar tu potencial.",
         ],
       },
       {
@@ -91,7 +91,7 @@ export const esNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Las 8 Formas Comprobadas de Monetizar un Podcast",
         paragraphs: [
           "Monetizar un podcast ya no está reservado a producciones con decenas de miles de oyentes. Los creadores actuales construyen ingresos sólidos combinando varios canales complementarios sin depender de agencias externas.",
-          "Tengas 300 oyentes o 30.000, puedes empezar a monetizar alineando tu oferta con la confianza de tu audiencia. Planifica tus pausas publicitarias con nuestro <a href=\"/es/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Creador de Escaletas de Podcast</a>.",
+          "Tengas 300 oyentes o 30.000, puedes empezar a monetizar alineando tu oferta con la confianza de tu audiencia. Planifica tus pausas publicitarias con nuestro <a href=\"/es/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Creador de Escaletas de Podcast</a>.",
         ],
         list: [
           {
@@ -131,7 +131,7 @@ export const esNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "Cómo conseguir patrocinadores para un podcast",
         paragraphs: [
-          "Conseguir tu primer patrocinador no requiere un representante. Consiste en identificar marcas que ya invierten en llegar a tu público objetivo y demostrar que tus oyentes valoran tus recomendaciones. Redacta propuestas profesionales con nuestro <a href=\"/es/tools/collab-finder\" class=\"text-[#0070f3] underline font-medium\">Generador de Propuestas y Colaboraciones</a>.",
+          "Conseguir tu primer patrocinador no requiere un representante. Consiste en identificar marcas que ya invierten en llegar a tu público objetivo y demostrar que tus oyentes valoran tus recomendaciones. Redacta propuestas profesionales con nuestro <a href=\"/es/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">Generador de Propuestas y Colaboraciones</a>.",
           "Según la IAB y Edison Research, los anuncios leídos por el presentador logran un recuerdo de marca superior al 70%, muy por encima de los banners en internet. Al contactar patrocinadores, destaca la afinidad con la audiencia y datos de escucha reales.",
         ],
       },
@@ -179,7 +179,7 @@ export const esNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "No te Quedes sin Temas para tu Podcast",
         paragraphs: [
           "El motivo principal por el que muchos podcasters abandonan es el estrés de buscar qué contar cada semana. Los mejores podcasts no inventan la rueda en cada grabación, sino que recurren a un banco estructurado de temas comprobados y secciones recurrentes.",
-          "A continuación tienes una selección de 100 ideas para temas de podcast, formatos de episodios y secciones organizadas por géneros populares. Cuando elijas un tema, usa nuestro <a href=\"/es/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Generador de Títulos de Podcast</a> para crear titulares atractivos.",
+          "A continuación tienes una selección de 100 ideas para temas de podcast, formatos de episodios y secciones organizadas por géneros populares. Cuando elijas un tema, usa nuestro <a href=\"/es/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Generador de Títulos de Podcast</a> para crear titulares atractivos.",
         ],
       },
       {
@@ -233,7 +233,7 @@ export const esNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "Ideas para secciones de podcast",
         paragraphs: [
-          "Las secciones fijas dan identidad a tu programa y facilitan la estructura en nuestro <a href=\"/es/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Creador de Escaletas</a>. Aquí tienes 20 ideas:",
+          "Las secciones fijas dan identidad a tu programa y facilitan la estructura en nuestro <a href=\"/es/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Creador de Escaletas</a>. Aquí tienes 20 ideas:",
         ],
         list: [
           {
@@ -269,13 +269,13 @@ export const esNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Paso 1: Define tu Temática, Formato y Público Objetivo",
         paragraphs: [
           "Todo buen podcast comienza con una promesa clara: ¿a quién se dirige y qué valor concreto aporta cada entrega? Acota tu nicho para que cuando un oyente lea tu descripción piense de inmediato: «este programa está hecho para mí».",
-          "Decide si grabarás en solitario, con coanfitrión o mediante entrevistas. Utiliza nuestro <a href=\"/es/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Creador de Escaletas de Podcast</a> para planificar los tiempos de cada bloque.",
+          "Decide si grabarás en solitario, con coanfitrión o mediante entrevistas. Utiliza nuestro <a href=\"/es/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Creador de Escaletas de Podcast</a> para planificar los tiempos de cada bloque.",
         ],
       },
       {
         heading: "Paso 2: Elige un Nombre Memorável y Buscable",
         paragraphs: [
-          "El título de tu programa debe ser fácil de recordar, sencillo de pronunciar y contener términos que tus oyentes busquen habitualmente. Evita juegos de palabras confusos y prueba nombres con nuestro <a href=\"/es/tools/podcast-name-generator\" class=\"text-[#0070f3] underline font-medium\">Generador de Nombres de Podcast</a>.",
+          "El título de tu programa debe ser fácil de recordar, sencillo de pronunciar y contener términos que tus oyentes busquen habitualmente. Evita juegos de palabras confusos y prueba nombres con nuestro <a href=\"/es/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">Generador de Nombres de Podcast</a>.",
         ],
       },
       {
@@ -306,27 +306,27 @@ export const esNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Paso 4: Diseña una Portada Conforme a las Especificaciones",
         paragraphs: [
           "La portada es tu escaparate en Apple Podcasts y Spotify. Ambas plataformas exigen formato 1:1 perfectamente cuadrado, resolución de entre 1400x1400px y 3000x3000px y espacio de color RGB.",
-          "Asegúrate de que el título sea legible incluso a tamaño miniatura de 50x50 píxeles comprobándolo en nuestro <a href=\"/es/tools/cover-art-preview\" class=\"text-[#0070f3] underline font-medium\">Comprobador de Portadas de Podcast</a>.",
+          "Asegúrate de que el título sea legible incluso a tamaño miniatura de 50x50 píxeles comprobándolo en nuestro <a href=\"/es/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">Comprobador de Portadas de Podcast</a>.",
         ],
       },
       {
         heading: "Paso 5: Graba el Tráiler y los Primeros Episodios",
         paragraphs: [
-          "Antes de publicar, prepara un tráiler de 60 a 90 segundos que resuma la temática e invite a seguir el canal. Escribe el guión con nuestro <a href=\"/es/tools/trailer-script-builder\" class=\"text-[#0070f3] underline font-medium\">Creador de Guiones para Tráiler</a> y crea aperturas impactantes con el <a href=\"/es/tools/intro-script-generator\" class=\"text-[#0070f3] underline font-medium\">Generador de Guiones de Introducción</a>.",
-          "Si harás entrevistas, diseña preguntas memorables que vayan más allá del currículum con el <a href=\"/es/tools/guest-question-generator\" class=\"text-[#0070f3] underline font-medium\">Generador de Preguntas de Entrevista</a>.",
+          "Antes de publicar, prepara un tráiler de 60 a 90 segundos que resuma la temática e invite a seguir el canal. Escribe el guión con nuestro <a href=\"/es/tools/trailer-script-builder\" class=\"text-[#a9583e] underline font-medium\">Creador de Guiones para Tráiler</a> y crea aperturas impactantes con el <a href=\"/es/tools/intro-script-generator\" class=\"text-[#a9583e] underline font-medium\">Generador de Guiones de Introducción</a>.",
+          "Si harás entrevistas, diseña preguntas memorables que vayan más allá del currículum con el <a href=\"/es/tools/guest-question-generator\" class=\"text-[#a9583e] underline font-medium\">Generador de Preguntas de Entrevista</a>.",
         ],
       },
       {
         heading: "Paso 6: Elige Alojamiento y Valida tu Feed RSS",
         paragraphs: [
           "Los archivos de audio no se suben directamente a Spotify o Apple Podcasts. Se alojan en una plataforma especializada (Buzzsprout, Podbean, Libsyn, Spotify for Podcasters) que genera un feed RSS en formato XML.",
-          "Antes de enviar tu feed a los directorios, revisa que no falten etiquetas ni haya enlaces rotos con nuestro <a href=\"/es/tools/rss-feed-validator\" class=\"text-[#0070f3] underline font-medium\">Validador de Feed RSS de Podcast</a>.",
+          "Antes de enviar tu feed a los directorios, revisa que no falten etiquetas ni haya enlaces rotos con nuestro <a href=\"/es/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">Validador de Feed RSS de Podcast</a>.",
         ],
       },
       {
         heading: "Paso 7: Optimiza Títulos, Notas y Categorías",
         paragraphs: [
-          "La visibilidad depende de tus textos. Diseña títulos atractivos con el <a href=\"/es/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Generador de Títulos de Episodio</a>, estructura notas completas con el <a href=\"/es/tools/show-notes-generator\" class=\"text-[#0070f3] underline font-medium\">Generador de Show Notes</a> y elige tu categoría oficial con el <a href=\"/es/tools/category-finder\" class=\"text-[#0070f3] underline font-medium\">Buscador de Categorías de Apple Podcasts</a>.",
+          "La visibilidad depende de tus textos. Diseña títulos atractivos con el <a href=\"/es/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Generador de Títulos de Episodio</a>, estructura notas completas con el <a href=\"/es/tools/show-notes-generator\" class=\"text-[#a9583e] underline font-medium\">Generador de Show Notes</a> y elige tu categoría oficial con el <a href=\"/es/tools/category-finder\" class=\"text-[#a9583e] underline font-medium\">Buscador de Categorías de Apple Podcasts</a>.",
         ],
       },
       {

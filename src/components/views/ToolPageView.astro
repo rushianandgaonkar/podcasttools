@@ -127,7 +127,7 @@ const toolFaqSchema = {
               {tool.categoryLabel}
             </span>
             {tool.badge && (
-              <span class="font-mono text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 bg-[#171717] dark:bg-white text-white dark:text-black">
+              <span class="font-mono text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 bg-[#a9583e] hover:bg-[#8f4630] text-white">
                 {tool.badge}
               </span>
             )}
@@ -199,7 +199,7 @@ const toolFaqSchema = {
             <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 list-none p-0 m-0">
               {content.steps.map((step, i) => (
                 <li class="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a]">
-                  <span class="font-mono text-xs font-semibold text-[#0070f3] block mb-1">
+                  <span class="font-mono text-xs font-semibold text-[#a9583e] block mb-1">
                     {String(i + 1).padStart(2, "0")} · {step.title}
                   </span>
                   <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">{step.text}</p>
@@ -209,15 +209,15 @@ const toolFaqSchema = {
           ) : (
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div class="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a]">
-                <span class="font-mono text-xs font-semibold text-[#0070f3] block mb-1">{t.toolSteps.step1Title}</span>
+                <span class="font-mono text-xs font-semibold text-[#a9583e] block mb-1">{t.toolSteps.step1Title}</span>
                 <p class="text-xs text-neutral-600 dark:text-neutral-400">{t.toolSteps.step1Desc}</p>
               </div>
               <div class="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a]">
-                <span class="font-mono text-xs font-semibold text-[#0070f3] block mb-1">{t.toolSteps.step2Title}</span>
+                <span class="font-mono text-xs font-semibold text-[#a9583e] block mb-1">{t.toolSteps.step2Title}</span>
                 <p class="text-xs text-neutral-600 dark:text-neutral-400">{t.toolSteps.step2Desc}</p>
               </div>
               <div class="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a]">
-                <span class="font-mono text-xs font-semibold text-[#0070f3] block mb-1">{t.toolSteps.step3Title}</span>
+                <span class="font-mono text-xs font-semibold text-[#a9583e] block mb-1">{t.toolSteps.step3Title}</span>
                 <p class="text-xs text-neutral-600 dark:text-neutral-400">{t.toolSteps.step3Desc}</p>
               </div>
             </div>
@@ -261,7 +261,7 @@ const toolFaqSchema = {
                     <ul class="space-y-1.5 list-none p-0 m-0">
                       {group.items.map((item) => (
                         <li class="text-xs text-neutral-600 dark:text-neutral-400 flex items-start gap-2">
-                          <span class="w-1.5 h-1.5 rounded-full bg-[#0070f3] mt-1.5 shrink-0"></span>
+                          <span class="w-1.5 h-1.5 rounded-full bg-[#a9583e] mt-1.5 shrink-0"></span>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -289,7 +289,7 @@ const toolFaqSchema = {
               <p class="text-xs sm:text-sm pt-1">
                 <a
                   href={getLocalizedPath(section.link.href, lang)}
-                  class="text-[#0070f3] hover:underline font-medium inline-flex items-center gap-1"
+                  class="text-[#a9583e] hover:underline font-medium inline-flex items-center gap-1"
                 >
                   {section.link.text} <ArrowRight className="w-3 h-3" />
                 </a>
@@ -314,13 +314,13 @@ const toolFaqSchema = {
                     <div class="w-6 h-6 rounded bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-neutral-700 dark:text-neutral-300">
                       <ToolIcon name={relTool.icon} className="w-3.5 h-3.5" />
                     </div>
-                    <span class="text-xs font-semibold text-neutral-900 dark:text-white group-hover:text-[#0070f3] transition-colors">
+                    <span class="text-xs font-semibold text-neutral-900 dark:text-white group-hover:text-[#a9583e] transition-colors">
                       {relTool.shortTitle}
                     </span>
                   </div>
                   <p class="text-xs text-neutral-500 line-clamp-2 mb-3">{relTool.description}</p>
                 </div>
-                <span class="text-xs font-medium text-[#0070f3] inline-flex items-center gap-1">
+                <span class="text-xs font-medium text-[#a9583e] inline-flex items-center gap-1">
                   {fillTool(copy.toolPage.openTool, relTool.shortTitle)}
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </span>

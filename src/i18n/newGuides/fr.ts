@@ -12,7 +12,7 @@ export const frNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Combien Gagne un Podcast en 2026 ?",
         paragraphs: [
           "Les revenus d'un podcast vont de zéro pour les amateurs à des centaines de milliers d'euros par an pour les émissions en tête des classements. Pour la grande majorité des créateurs indépendants, les gains sont directement liés aux téléchargements vérifiés sur 30 jours, au pouvoir d'achat de l'audience et à la diversité des sources de revenus.",
-          "Selon les données d'AdvertiseCast, de l'étude IAB/PwC sur la publicité audio et les statistiques Patreon, les créateurs monétisent via les annonces lues par l'hôte, l'affiliation, les abonnements participatifs et la vente directe. Utilisez notre <a href=\"/fr/tools/monetization-calculator\" class=\"text-[#0070f3] underline font-medium\">Calculateur de Revenus de Podcast</a> gratuit pour simuler votre potentiel.",
+          "Selon les données d'AdvertiseCast, de l'étude IAB/PwC sur la publicité audio et les statistiques Patreon, les créateurs monétisent via les annonces lues par l'hôte, l'affiliation, les abonnements participatifs et la vente directe. Utilisez notre <a href=\"/fr/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Calculateur de Revenus de Podcast</a> gratuit pour simuler votre potentiel.",
         ],
       },
       {
@@ -91,7 +91,7 @@ export const frNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Les 8 Façons Éprouvées de Monétiser un Podcast",
         paragraphs: [
           "Générer des revenus avec un podcast n'est plus réservé aux émissions réalisant des dizaines de milliers d'écoutes. Les créateurs d'aujourd'hui bâtissent des modèles pérennes en cumulant plusieurs sources de revenus complémentaires sans dépendre d'intermédiaires.",
-          "Que vous ayez 300 auditeurs ou 30 000, vous pouvez commencer à monétiser dès aujourd'hui en adaptant vos offres à la confiance de votre audience. Structurez vos coupures avec notre <a href=\"/fr/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Créateur de Conducteur de Podcast</a>.",
+          "Que vous ayez 300 auditeurs ou 30 000, vous pouvez commencer à monétiser dès aujourd'hui en adaptant vos offres à la confiance de votre audience. Structurez vos coupures avec notre <a href=\"/fr/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Créateur de Conducteur de Podcast</a>.",
         ],
         list: [
           {
@@ -131,7 +131,7 @@ export const frNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "Comment trouver des sponsors pour un podcast",
         paragraphs: [
-          "Trouver son premier sponsor ne nécessite pas d'agence. La clé consiste à contacter des entreprises qui investissent déjà pour toucher votre public cible et à prouver l'engagement de votre communauté. Rédigez des propositions convaincantes avec notre <a href=\"/fr/tools/collab-finder\" class=\"text-[#0070f3] underline font-medium\">Générateur de Pitch et Partenariats</a>.",
+          "Trouver son premier sponsor ne nécessite pas d'agence. La clé consiste à contacter des entreprises qui investissent déjà pour toucher votre public cible et à prouver l'engagement de votre communauté. Rédigez des propositions convaincantes avec notre <a href=\"/fr/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">Générateur de Pitch et Partenariats</a>.",
           "D'après l'IAB et Edison Research, les annonces lues par l'animateur obtiennent un taux de mémorisation de marque supérieur à 70 %. Lorsque vous contactez des marques, mettez en avant l'affinité de votre audience et des données de téléchargement vérifiées.",
         ],
       },
@@ -179,7 +179,7 @@ export const frNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Ne Soyez Plus Jamais à Court d'Idées pour Votre Podcast",
         paragraphs: [
           "La raison principale pour laquelle tant de podcasters abandonnent est l'angoisse hebdomadaire de trouver un sujet percutant. Les podcasts qui durent ne réinventent pas leur ligne éditoriale chaque semaine : ils s'appuient sur un vivier structuré de thèmes éprouvés et de rubriques rituelles.",
-          "Découvrez ci-dessous 100 idées concrètes de sujets de podcast, formats d'émissions et rubriques réparties sur les thématiques les plus populaires. Dès votre choix arrêté, formulez des titres accrocheurs grâce à notre <a href=\"/fr/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Générateur de Titres de Podcast</a>.",
+          "Découvrez ci-dessous 100 idées concrètes de sujets de podcast, formats d'émissions et rubriques réparties sur les thématiques les plus populaires. Dès votre choix arrêté, formulez des titres accrocheurs grâce à notre <a href=\"/fr/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Générateur de Titres de Podcast</a>.",
         ],
       },
       {
@@ -233,7 +233,7 @@ export const frNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "Idées de rubriques de podcast",
         paragraphs: [
-          "Les rubriques récurrentes fidélisent vos auditeurs et facilitent la préparation de vos épisodes dans notre <a href=\"/fr/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Créateur de Conducteur</a>. En voici 20 :",
+          "Les rubriques récurrentes fidélisent vos auditeurs et facilitent la préparation de vos épisodes dans notre <a href=\"/fr/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Créateur de Conducteur</a>. En voici 20 :",
         ],
         list: [
           {
@@ -269,13 +269,13 @@ export const frNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Étape 1 : Définir Votre Thématique, Votre Format et Vos Auditeurs",
         paragraphs: [
           "Un podcast réussi repose sur une promesse éditoriale claire : à qui s'adresse l'émission et quelle valeur concrète apporte chaque épisode ? Ciblez une thématique précise afin que l'auditeur potentiel se dise immédiatement : « ce podcast a été pensé pour moi ».",
-          "Choisissez votre format principal : prise de parole solo, duo d'animateurs ou entretiens. Utilisez notre <a href=\"/fr/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Créateur de Conducteur de Podcast</a> gratuit pour équilibrer le rythme de vos séquences.",
+          "Choisissez votre format principal : prise de parole solo, duo d'animateurs ou entretiens. Utilisez notre <a href=\"/fr/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Créateur de Conducteur de Podcast</a> gratuit pour équilibrer le rythme de vos séquences.",
         ],
       },
       {
         heading: "Étape 2 : Trouver un Nom Mémorable et Facile à Rechercher",
         paragraphs: [
-          "Le nom de votre podcast doit être facile à mémoriser, simple à prononcer à haute voix et comporter des termes fréquemment recherchés. Évitez les jeux de mots obscurs et explorez des dizaines d'idées avec notre <a href=\"/fr/tools/podcast-name-generator\" class=\"text-[#0070f3] underline font-medium\">Générateur de Noms de Podcast</a>.",
+          "Le nom de votre podcast doit être facile à mémoriser, simple à prononcer à haute voix et comporter des termes fréquemment recherchés. Évitez les jeux de mots obscurs et explorez des dizaines d'idées avec notre <a href=\"/fr/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">Générateur de Noms de Podcast</a>.",
         ],
       },
       {
@@ -306,27 +306,27 @@ export const frNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Étape 4 : Concevoir une Pochette aux Normes Officielles",
         paragraphs: [
           "Votre pochette est la vitrine de votre émission sur les applications. Apple Podcasts et Spotify imposent un format carré 1:1 strict, avec une résolution comprise entre 1400x1400px et 3000x3000px en espace colorimétrique RVB.",
-          "Assurez-vous que votre titre reste lisible à l'échelle d'une petite vignette de 50x50 pixels grâce à notre <a href=\"/fr/tools/cover-art-preview\" class=\"text-[#0070f3] underline font-medium\">Vérificateur de Pochette de Podcast</a>.",
+          "Assurez-vous que votre titre reste lisible à l'échelle d'une petite vignette de 50x50 pixels grâce à notre <a href=\"/fr/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">Vérificateur de Pochette de Podcast</a>.",
         ],
       },
       {
         heading: "Étape 5 : Enregistrer la Bande-Annonce et les Premiers Épisodes",
         paragraphs: [
-          "Avant le grand lancement, produisez une bande-annonce (trailer) de 60 à 90 secondes qui présente le concept et invite à s'abonner. Rédigez-la avec notre <a href=\"/fr/tools/trailer-script-builder\" class=\"text-[#0070f3] underline font-medium\">Créateur de Script de Bande-Annonce</a> et soignez votre accroche grâce au <a href=\"/fr/tools/intro-script-generator\" class=\"text-[#0070f3] underline font-medium\">Générateur d'Introduction de Podcast</a>.",
-          "Si vous recevez des intervenants, préparez des questions percutantes qui évitent les banalités avec le <a href=\"/fr/tools/guest-question-generator\" class=\"text-[#0070f3] underline font-medium\">Générateur de Questions pour Interview</a>.",
+          "Avant le grand lancement, produisez une bande-annonce (trailer) de 60 à 90 secondes qui présente le concept et invite à s'abonner. Rédigez-la avec notre <a href=\"/fr/tools/trailer-script-builder\" class=\"text-[#a9583e] underline font-medium\">Créateur de Script de Bande-Annonce</a> et soignez votre accroche grâce au <a href=\"/fr/tools/intro-script-generator\" class=\"text-[#a9583e] underline font-medium\">Générateur d'Introduction de Podcast</a>.",
+          "Si vous recevez des intervenants, préparez des questions percutantes qui évitent les banalités avec le <a href=\"/fr/tools/guest-question-generator\" class=\"text-[#a9583e] underline font-medium\">Générateur de Questions pour Interview</a>.",
         ],
       },
       {
         heading: "Étape 6 : Choisir un Hébergeur et Valider Votre Flux RSS",
         paragraphs: [
           "Vos fichiers audio ne sont pas hébergés directement sur Spotify ou Apple Podcasts. Vous les déposez sur un hébergeur dédié (Buzzsprout, Podbean, Libsyn, Acast) qui génère un flux RSS au format XML.",
-          "Avant toute soumission aux plateformes, contrôlez l'absence de balises manquantes ou d'erreurs de balises audio avec notre <a href=\"/fr/tools/rss-feed-validator\" class=\"text-[#0070f3] underline font-medium\">Validateur de Flux RSS de Podcast</a>.",
+          "Avant toute soumission aux plateformes, contrôlez l'absence de balises manquantes ou d'erreurs de balises audio avec notre <a href=\"/fr/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">Validateur de Flux RSS de Podcast</a>.",
         ],
       },
       {
         heading: "Étape 7 : Optimiser Titres, Notes et Catégories pour le Référencement",
         paragraphs: [
-          "La découverte organique repose sur vos métadonnées. Créez des titres stimulants avec le <a href=\"/fr/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Générateur de Titres d'Épisode</a>, rédigez des notes structurées grâce au <a href=\"/fr/tools/show-notes-generator\" class=\"text-[#0070f3] underline font-medium\">Générateur de Show Notes</a> et sélectionnez votre catégorie officielle avec le <a href=\"/fr/tools/category-finder\" class=\"text-[#0070f3] underline font-medium\">Navigateur de Catégories Apple Podcasts</a>.",
+          "La découverte organique repose sur vos métadonnées. Créez des titres stimulants avec le <a href=\"/fr/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Générateur de Titres d'Épisode</a>, rédigez des notes structurées grâce au <a href=\"/fr/tools/show-notes-generator\" class=\"text-[#a9583e] underline font-medium\">Générateur de Show Notes</a> et sélectionnez votre catégorie officielle avec le <a href=\"/fr/tools/category-finder\" class=\"text-[#a9583e] underline font-medium\">Navigateur de Catégories Apple Podcasts</a>.",
         ],
       },
       {

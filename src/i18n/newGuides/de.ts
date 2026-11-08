@@ -12,7 +12,7 @@ export const deNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Wie Viel Geld Verdient ein Podcast im Jahr 2026?",
         paragraphs: [
           "Die Einnahmen eines Podcasts reichen von null Euro für Gelegenheits-Hobbyprojekte bis hin zu Hunderttausenden von Euro monatlich für reichweitenstarke Mediennetzwerke. Für die breite Mehrheit unabhängiger Creator hängen die Erlöse jedoch direkt von den verifizierten Downloads innerhalb von 30 Tagen, der Zahlungsbereitschaft der Zielgruppe und der Vielfalt der Monetarisierungswege ab.",
-          "Branchenerhebungen von AdvertiseCast, dem IAB/PwC Podcast Advertising Report und Daten von Patreon belegen, dass erfolgreiche Podcaster Einnahmen aus einer Kombination von Host-Read-Sponsoring, Affiliate-Marketing, Hörer-Mitgliedschaften und eigenen Angeboten erzielen. Nutzen Sie unseren kostenlosen <a href=\"/de/tools/monetization-calculator\" class=\"text-[#0070f3] underline font-medium\">Podcast-Einnahmenrechner</a>, um Ihr individuelles Potenzial zu kalkulieren.",
+          "Branchenerhebungen von AdvertiseCast, dem IAB/PwC Podcast Advertising Report und Daten von Patreon belegen, dass erfolgreiche Podcaster Einnahmen aus einer Kombination von Host-Read-Sponsoring, Affiliate-Marketing, Hörer-Mitgliedschaften und eigenen Angeboten erzielen. Nutzen Sie unseren kostenlosen <a href=\"/de/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Podcast-Einnahmenrechner</a>, um Ihr individuelles Potenzial zu kalkulieren.",
         ],
       },
       {
@@ -91,7 +91,7 @@ export const deNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Die 8 Bewährten Wege zur Podcast-Monetarisierung",
         paragraphs: [
           "Einen Podcast zu monetarisieren ist längst nicht mehr nur Sendungen mit riesigen Reichweiten vorbehalten. Moderne Creator bauen stabile Umsätze auf, indem sie mehrere komplementäre Einnahmequellen kombinieren, statt auf Vermarktungsnetzwerke zu warten.",
-          "Ganz gleich, ob Sie 300 Hörer haben oder 30.000: Sie können sofort Erlöse erzielen, wenn Ihr Angebot exakt auf die Bedürfnisse Ihrer Hörer abgestimmt ist. Planen Sie Ihre Werbeblöcke mit unserem <a href=\"/de/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Podcast-Episoden-Gliederungsplaner</a>.",
+          "Ganz gleich, ob Sie 300 Hörer haben oder 30.000: Sie können sofort Erlöse erzielen, wenn Ihr Angebot exakt auf die Bedürfnisse Ihrer Hörer abgestimmt ist. Planen Sie Ihre Werbeblöcke mit unserem <a href=\"/de/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Podcast-Episoden-Gliederungsplaner</a>.",
         ],
         list: [
           {
@@ -131,7 +131,7 @@ export const deNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "Podcast Sponsoren finden",
         paragraphs: [
-          "Um erste Sponsoren zu gewinnen, brauchen Sie keine Agentur. Entscheidend ist, Unternehmen anzusprechen, die bereits Geld ausgeben, um genau Ihre Zielgruppe zu erreichen, und aufzuzeigen, wie intensiv Ihre Hörer Ihnen vertrauen. Verfassen Sie professionelle Anfragen mit unserem <a href=\"/de/tools/collab-finder\" class=\"text-[#0070f3] underline font-medium\">Anfrage- und Kooperations-Generator</a>.",
+          "Um erste Sponsoren zu gewinnen, brauchen Sie keine Agentur. Entscheidend ist, Unternehmen anzusprechen, die bereits Geld ausgeben, um genau Ihre Zielgruppe zu erreichen, und aufzuzeigen, wie intensiv Ihre Hörer Ihnen vertrauen. Verfassen Sie professionelle Anfragen mit unserem <a href=\"/de/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">Anfrage- und Kooperations-Generator</a>.",
           "Untersuchungen des IAB und von Edison Research zeigen, dass persönlich vom Moderator gesprochene Empfehlungen eine Markenerinnerung von über 70 % erzielen. Punkten Sie beim Erstkontakt mit präzisen Zielgruppendaten und verifizierten Downloadzahlen.",
         ],
       },
@@ -179,7 +179,7 @@ export const deNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Nie Wieder Ohne Thema vor dem Mikrofon Stehen",
         paragraphs: [
           "Der häufigste Grund für das Aufgeben neuer Podcasts ist der wöchentliche Druck, spontan ein spannendes Thema finden zu müssen. Dauerhaft erfolgreiche Shows erfinden das Rad nicht jede Woche neu, sondern bedienen sich aus einem strukturierten Fundus bewährter Themenmuster und fester Rubriken.",
-          "Hier finden Sie 100 praxiserprobte Podcast-Themenideen, Episodenformate und Rubrikenideen für die gefragtesten Podcast-Genres. Sobald Sie ein Thema gewählt haben, erstellen Sie mit unserem <a href=\"/de/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Podcast-Titel-Generator</a> klickstarke Überschriften.",
+          "Hier finden Sie 100 praxiserprobte Podcast-Themenideen, Episodenformate und Rubrikenideen für die gefragtesten Podcast-Genres. Sobald Sie ein Thema gewählt haben, erstellen Sie mit unserem <a href=\"/de/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Podcast-Titel-Generator</a> klickstarke Überschriften.",
         ],
       },
       {
@@ -233,7 +233,7 @@ export const deNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "Podcast Rubrikenideen",
         paragraphs: [
-          "Feste Rubriken geben Ihrer Sendung Wiedererkennungswert und erleichtern die Vorbereitung im <a href=\"/de/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Episoden-Gliederungsplaner</a>. 20 Ideen:",
+          "Feste Rubriken geben Ihrer Sendung Wiedererkennungswert und erleichtern die Vorbereitung im <a href=\"/de/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Episoden-Gliederungsplaner</a>. 20 Ideen:",
         ],
         list: [
           {
@@ -269,13 +269,13 @@ export const deNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Schritt 1: Konzept, Format und Zielgruppe Definieren",
         paragraphs: [
           "Jeder erfolgreiche Podcast gründet auf einem klaren Nutzenversprechen: An wen richtet sich die Sendung und welchen konkreten Mehrwert nimmt der Hörer aus jeder einzelnen Episode mit? Je schärfer Ihre Nische, desto eher fühlt sich ein neuer Hörer unmittelbar verstanden.",
-          "Wählen Sie Ihr Hauptformat: Solo-Vortrag, Co-Host-Gespräch oder Experten-Interviews. Nutzen Sie unseren kostenlosen <a href=\"/de/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Podcast-Episoden-Gliederungsplaner</a>, um die Zeitblöcke Ihrer Episoden auszubalancieren.",
+          "Wählen Sie Ihr Hauptformat: Solo-Vortrag, Co-Host-Gespräch oder Experten-Interviews. Nutzen Sie unseren kostenlosen <a href=\"/de/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Podcast-Episoden-Gliederungsplaner</a>, um die Zeitblöcke Ihrer Episoden auszubalancieren.",
         ],
       },
       {
         heading: "Schritt 2: Einen Einprägsamen, Suchbaren Namen Finden",
         paragraphs: [
-          "Ihr Podcast-Name sollte leicht zu merken, gut auszusprechen und mit relevanten Suchbegriffen versehen sein. Vermeiden Sie verwirrende Wortspiele und prüfen Sie verschiedene Namensstile mit unserem <a href=\"/de/tools/podcast-name-generator\" class=\"text-[#0070f3] underline font-medium\">Podcast-Namensgenerator</a>.",
+          "Ihr Podcast-Name sollte leicht zu merken, gut auszusprechen und mit relevanten Suchbegriffen versehen sein. Vermeiden Sie verwirrende Wortspiele und prüfen Sie verschiedene Namensstile mit unserem <a href=\"/de/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">Podcast-Namensgenerator</a>.",
         ],
       },
       {
@@ -306,27 +306,27 @@ export const deNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Schritt 4: Richtlinienkonformes Cover-Artwork Gestalten",
         paragraphs: [
           "Ihr Cover ist das Schaufenster Ihrer Sendung auf den Plattformen. Apple Podcasts und Spotify verlangen zwingend ein quadratisches 1:1-Format mit einer Auflösung zwischen 1400x1400px und 3000x3000px im RGB-Farbraum.",
-          "Stellen Sie sicher, dass Ihr Sendungstitel auch in einer winzigen 50x50-Pixel-Vorschau mühelos lesbar bleibt, indem Sie ihn mit unserem <a href=\"/de/tools/cover-art-preview\" class=\"text-[#0070f3] underline font-medium\">Podcast-Cover-Vorschaubetrachter</a> prüfen.",
+          "Stellen Sie sicher, dass Ihr Sendungstitel auch in einer winzigen 50x50-Pixel-Vorschau mühelos lesbar bleibt, indem Sie ihn mit unserem <a href=\"/de/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">Podcast-Cover-Vorschaubetrachter</a> prüfen.",
         ],
       },
       {
         heading: "Schritt 5: Trailer und Erste Folgen Einsprechen",
         paragraphs: [
-          "Produzieren Sie vor dem Start einen 60- bis 90-sekündigen Trailer, der das Konzept vorstellt und zum Abonnieren aufruft. Nutzen Sie dafür unseren <a href=\"/de/tools/trailer-script-builder\" class=\"text-[#0070f3] underline font-medium\">Podcast-Trailer-Skript-Builder</a> und formulieren Sie fesselnde Einstiege mit dem <a href=\"/de/tools/intro-script-generator\" class=\"text-[#0070f3] underline font-medium\">Podcast-Intro-Skript-Generator</a>.",
-          "Wenn Sie Gäste einladen, bereiten Sie tiefgründige Interviewfragen abseits von Standard-Lebensläufen vor mit unserem <a href=\"/de/tools/guest-question-generator\" class=\"text-[#0070f3] underline font-medium\">Interviewfragen-Generator</a>.",
+          "Produzieren Sie vor dem Start einen 60- bis 90-sekündigen Trailer, der das Konzept vorstellt und zum Abonnieren aufruft. Nutzen Sie dafür unseren <a href=\"/de/tools/trailer-script-builder\" class=\"text-[#a9583e] underline font-medium\">Podcast-Trailer-Skript-Builder</a> und formulieren Sie fesselnde Einstiege mit dem <a href=\"/de/tools/intro-script-generator\" class=\"text-[#a9583e] underline font-medium\">Podcast-Intro-Skript-Generator</a>.",
+          "Wenn Sie Gäste einladen, bereiten Sie tiefgründige Interviewfragen abseits von Standard-Lebensläufen vor mit unserem <a href=\"/de/tools/guest-question-generator\" class=\"text-[#a9583e] underline font-medium\">Interviewfragen-Generator</a>.",
         ],
       },
       {
         heading: "Schritt 6: Podcast-Host Wählen und RSS-Feed Prüfen",
         paragraphs: [
           "Audiodateien werden nicht direkt bei Spotify oder Apple hochgeladen, sondern bei einem spezialisierten Hoster (wie Buzzsprout, Podbean oder Libsyn), der einen standardisierten XML-Feed (RSS) erzeugt.",
-          "Prüfen Sie Ihren Feed vor dem Einreichen mit unserem <a href=\"/de/tools/rss-feed-validator\" class=\"text-[#0070f3] underline font-medium\">Podcast-RSS-Feed-Validator</a> auf fehlende Pflicht-Tags oder fehlerhafte Audio-Verknüpfungen.",
+          "Prüfen Sie Ihren Feed vor dem Einreichen mit unserem <a href=\"/de/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">Podcast-RSS-Feed-Validator</a> auf fehlende Pflicht-Tags oder fehlerhafte Audio-Verknüpfungen.",
         ],
       },
       {
         heading: "Schritt 7: Titel, Shownotes und Kategorien SEO-Optimieren",
         paragraphs: [
-          "Auffindbarkeit entsteht durch gute Metadaten. Formulieren Sie klickstarke Überschriften mit dem <a href=\"/de/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Podcast-Titel-Generator</a>, erstellen Sie saubere Shownotes mit dem <a href=\"/de/tools/show-notes-generator\" class=\"text-[#0070f3] underline font-medium\">Shownotes-Generator</a> und wählen Sie die beste Rubrik mit dem <a href=\"/de/tools/category-finder\" class=\"text-[#0070f3] underline font-medium\">Apple-Podcast-Kategorien-Finder</a>.",
+          "Auffindbarkeit entsteht durch gute Metadaten. Formulieren Sie klickstarke Überschriften mit dem <a href=\"/de/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Podcast-Titel-Generator</a>, erstellen Sie saubere Shownotes mit dem <a href=\"/de/tools/show-notes-generator\" class=\"text-[#a9583e] underline font-medium\">Shownotes-Generator</a> und wählen Sie die beste Rubrik mit dem <a href=\"/de/tools/category-finder\" class=\"text-[#a9583e] underline font-medium\">Apple-Podcast-Kategorien-Finder</a>.",
         ],
       },
       {

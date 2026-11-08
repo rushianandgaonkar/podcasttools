@@ -89,10 +89,10 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
       {/* Brand Wordmark */}
       {showText && (
         <div className="flex items-center gap-2">
-          <span className={`${textSizes[size]} font-semibold tracking-[-0.03em] text-[#171717] dark:text-[#ededed]`}>
+          <span className={`${textSizes[size]} font-semibold whitespace-nowrap tracking-[-0.03em] text-[#141413] dark:text-[#faf9f5]`}>
             Pod Studio
           </span>
-          <span className="font-mono text-[10px] uppercase font-medium tracking-wider px-1.5 py-0.5 rounded-[6px] border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400">
+          <span className="hidden sm:inline font-mono text-[10px] uppercase font-medium tracking-wider px-1.5 py-0.5 rounded-[6px] border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400">
             TOOLS
           </span>
         </div>

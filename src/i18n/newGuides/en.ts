@@ -12,7 +12,7 @@ export const enNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "How Much Do Podcasts Make in 2026?",
         paragraphs: [
           "Podcast earnings range from zero for casual hobby shows to millions of dollars a year for top-charting networks. But for the vast majority of independent creators, podcast revenue is directly tied to verified 30-day download volume, listener purchasing power, and how aggressively the host monetizes beyond standard advertising.",
-          "According to industry benchmarks from AdvertiseCast, the IAB/PwC Podcast Advertising Revenue Study, and creator earnings data from Patreon, audio creators make money through a blend of host-read sponsorships, affiliate marketing, listener memberships, and proprietary products or services. Use our free <a href=\"/tools/monetization-calculator\" class=\"text-[#0070f3] underline font-medium\">Podcast Income Calculator</a> to model your show's potential revenue based on your exact download numbers.",
+          "According to industry benchmarks from AdvertiseCast, the IAB/PwC Podcast Advertising Revenue Study, and creator earnings data from Patreon, audio creators make money through a blend of host-read sponsorships, affiliate marketing, listener memberships, and proprietary products or services. Use our free <a href=\"/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Podcast Income Calculator</a> to model your show's potential revenue based on your exact download numbers.",
         ],
       },
       {
@@ -91,7 +91,7 @@ export const enNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "The 8 Proven Ways to Monetize a Podcast",
         paragraphs: [
           "Monetizing a podcast is no longer restricted to shows with tens of thousands of downloads. Modern podcasters build resilient income by stacking multiple complementary monetization channels rather than waiting for an ad network to invite them.",
-          "Whether you have 300 listeners or 30,000, you can begin generating revenue immediately by aligning your monetization model with your audience's unique intent and trust. Plan your episode format and ad breaks with our <a href=\"/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Episode Outline Builder</a>.",
+          "Whether you have 300 listeners or 30,000, you can begin generating revenue immediately by aligning your monetization model with your audience's unique intent and trust. Plan your episode format and ad breaks with our <a href=\"/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Episode Outline Builder</a>.",
         ],
         list: [
           {
@@ -131,7 +131,7 @@ export const enNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "How to Get Sponsors for a Podcast",
         paragraphs: [
-          "Landing your first podcast sponsor does not require an agent. It requires finding brands that already spend money to reach your exact audience and demonstrating that your listeners trust your recommendations. You can craft targeted pitch letters using our <a href=\"/tools/collab-finder\" class=\"text-[#0070f3] underline font-medium\">Guest Pitch & Collab Outreach Builder</a>.",
+          "Landing your first podcast sponsor does not require an agent. It requires finding brands that already spend money to reach your exact audience and demonstrating that your listeners trust your recommendations. You can craft targeted pitch letters using our <a href=\"/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">Guest Pitch & Collab Outreach Builder</a>.",
           "According to the IAB and Edison Research, host-read podcast ads achieve an average brand recall rate of over 70% — significantly higher than digital display banners or social media video ads. When pitching prospective sponsors, lead with audience alignment, listener engagement, and verified download numbers.",
         ],
       },
@@ -179,7 +179,7 @@ export const enNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Never Run Out of Episode Ideas Again",
         paragraphs: [
           "The number one reason podcasters burn out or stop publishing is the weekly scramble to find something compelling to talk about. Top podcasts maintain high listener retention not by inventing new concepts from scratch every Tuesday, but by drawing from a structured bank of proven topic archetypes and recurring segments.",
-          "Below is a curated collection of 100 concrete podcast topic ideas, episode frameworks, and recurring segment concepts organized across the most popular podcasting genres. Once you select a topic, use our <a href=\"/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Podcast Title Generator</a> to craft high-CTR headlines.",
+          "Below is a curated collection of 100 concrete podcast topic ideas, episode frameworks, and recurring segment concepts organized across the most popular podcasting genres. Once you select a topic, use our <a href=\"/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Podcast Title Generator</a> to craft high-CTR headlines.",
         ],
       },
       {
@@ -233,7 +233,7 @@ export const enNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "Podcast segment ideas",
         paragraphs: [
-          "Recurring segments give regular listeners familiarity and make solo or co-hosted shows much easier to outline with our <a href=\"/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Episode Outline Builder</a>. Here are 20 engaging segment ideas:",
+          "Recurring segments give regular listeners familiarity and make solo or co-hosted shows much easier to outline with our <a href=\"/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Episode Outline Builder</a>. Here are 20 engaging segment ideas:",
         ],
         list: [
           {
@@ -269,13 +269,13 @@ export const enNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Step 1: Define Your Concept, Format, and Audience",
         paragraphs: [
           "A successful podcast begins with a focused promise: Who is this show for, and what tangible value do they receive from every episode? Narrow your niche so that when a potential listener reads your description, they immediately think, “This was made specifically for me.”",
-          "Decide on your primary format: solo commentary, co-hosted discussion, or guest interviews. Use our free <a href=\"/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Episode Outline Builder</a> to structure your run of show and plan segment timings.",
+          "Decide on your primary format: solo commentary, co-hosted discussion, or guest interviews. Use our free <a href=\"/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Episode Outline Builder</a> to structure your run of show and plan segment timings.",
         ],
       },
       {
         heading: "Step 2: Choose a Memorable Show Name",
         paragraphs: [
-          "Your podcast name should be memorable, easy to pronounce, and contain searchable keywords. Avoid puns that obscure what your show covers. Test ideas across genres and check availability with our <a href=\"/tools/podcast-name-generator\" class=\"text-[#0070f3] underline font-medium\">Podcast Name Generator</a>.",
+          "Your podcast name should be memorable, easy to pronounce, and contain searchable keywords. Avoid puns that obscure what your show covers. Test ideas across genres and check availability with our <a href=\"/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">Podcast Name Generator</a>.",
         ],
       },
       {
@@ -306,27 +306,27 @@ export const enNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Step 4: Design Directory-Compliant Cover Art",
         paragraphs: [
           "Your podcast cover art is your visual storefront on Apple Podcasts and Spotify. Both platforms enforce strict technical standards: exactly square 1:1 ratio, minimum 1400x1400px, maximum 3000x3000px, in RGB color space.",
-          "Ensure your show title is legible even at 50x50 pixel thumbnail sizes. Verify your artwork locally using our <a href=\"/tools/cover-art-preview\" class=\"text-[#0070f3] underline font-medium\">Podcast Cover Art Size Checker</a>.",
+          "Ensure your show title is legible even at 50x50 pixel thumbnail sizes. Verify your artwork locally using our <a href=\"/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">Podcast Cover Art Size Checker</a>.",
         ],
       },
       {
         heading: "Step 5: Record Your Show Trailer and First Episodes",
         paragraphs: [
-          "Before launching, produce a 60-to-90 second show trailer that outlines your premise and invites listeners to subscribe. Draft your trailer using our <a href=\"/tools/trailer-script-builder\" class=\"text-[#0070f3] underline font-medium\">Trailer Script Builder</a>, and craft captivating episode hooks with our <a href=\"/tools/intro-script-generator\" class=\"text-[#0070f3] underline font-medium\">Intro Script Generator</a>.",
-          "If your format includes interviews, prepare insightful questions that avoid generic resume recaps with our <a href=\"/tools/guest-question-generator\" class=\"text-[#0070f3] underline font-medium\">Podcast Interview Questions Generator</a>.",
+          "Before launching, produce a 60-to-90 second show trailer that outlines your premise and invites listeners to subscribe. Draft your trailer using our <a href=\"/tools/trailer-script-builder\" class=\"text-[#a9583e] underline font-medium\">Trailer Script Builder</a>, and craft captivating episode hooks with our <a href=\"/tools/intro-script-generator\" class=\"text-[#a9583e] underline font-medium\">Intro Script Generator</a>.",
+          "If your format includes interviews, prepare insightful questions that avoid generic resume recaps with our <a href=\"/tools/guest-question-generator\" class=\"text-[#a9583e] underline font-medium\">Podcast Interview Questions Generator</a>.",
         ],
       },
       {
         heading: "Step 6: Choose a Host and Validate Your RSS Feed",
         paragraphs: [
           "You do not upload audio directly to Apple Podcasts or Spotify. Instead, you upload your MP3 files to a dedicated podcast media host (such as Buzzsprout, Podbean, Libsyn, or Spotify for Podcasters), which generates an RSS XML feed.",
-          "Before submitting your feed to directory aggregators, inspect it for missing tags, enclosure errors, and GUID problems using our <a href=\"/tools/rss-feed-validator\" class=\"text-[#0070f3] underline font-medium\">Podcast RSS Feed Validator</a>.",
+          "Before submitting your feed to directory aggregators, inspect it for missing tags, enclosure errors, and GUID problems using our <a href=\"/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">Podcast RSS Feed Validator</a>.",
         ],
       },
       {
         heading: "Step 7: Optimize Titles, Show Notes & Categories",
         paragraphs: [
-          "Discoverability depends on metadata. Generate click-worthy episode titles with our <a href=\"/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Podcast Title Generator</a>, format structured episode notes with our <a href=\"/tools/show-notes-generator\" class=\"text-[#0070f3] underline font-medium\">Show Notes Generator</a>, and select the optimal Apple category with our <a href=\"/tools/category-finder\" class=\"text-[#0070f3] underline font-medium\">Apple Podcast Category Finder</a>.",
+          "Discoverability depends on metadata. Generate click-worthy episode titles with our <a href=\"/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Podcast Title Generator</a>, format structured episode notes with our <a href=\"/tools/show-notes-generator\" class=\"text-[#a9583e] underline font-medium\">Show Notes Generator</a>, and select the optimal Apple category with our <a href=\"/tools/category-finder\" class=\"text-[#a9583e] underline font-medium\">Apple Podcast Category Finder</a>.",
         ],
       },
       {

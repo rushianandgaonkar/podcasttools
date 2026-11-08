@@ -28,7 +28,7 @@ export function ContactForm({ lang = defaultLocale }: ContactFormProps) {
   return (
     <div className="p-5 sm:p-6 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-4">
       <h2 className="text-sm font-semibold text-neutral-900 dark:text-white flex items-center gap-2">
-        <MessageSquare className="w-4 h-4 text-[#0070f3]" />
+        <MessageSquare className="w-4 h-4 text-[#a9583e]" />
         {f.heading}
       </h2>
 
@@ -85,7 +85,7 @@ export function ContactForm({ lang = defaultLocale }: ContactFormProps) {
 
           <a
             href={mailtoLink}
-            className="px-4 py-2 rounded-md bg-[#171717] dark:bg-white text-white dark:text-black font-medium text-xs inline-flex items-center gap-1.5 hover:opacity-90 transition-opacity"
+            className="px-4 py-2 rounded-md bg-[#a9583e] hover:bg-[#8f4630] text-white font-medium text-xs inline-flex items-center gap-1.5 hover:opacity-90 transition-opacity"
           >
             <Send className="w-3 h-3" /> {f.sendButton}
           </a>

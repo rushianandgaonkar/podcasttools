@@ -12,7 +12,7 @@ export const jaNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "2026年におけるポッドキャストの収益実態",
         paragraphs: [
           "ポッドキャストの収入は、趣味の0円からトップ番組の年間数千万円まで千差万別です。しかし、多くの独立系クリエイターにとって、実際の売上は「公開30日間の検証済みダウンロード数」「リスナー層の購買力」「広告以外の多角的な収益モデル」によって決定されます。",
-          "AdvertiseCastの市場調査やIAB/PwCによるポッドキャスト広告レポート、Patreonのデータによれば、収益性の高い配信者はホスト読み広告、アフィリエイト、月額メンバーシップ、独自商品・サービスの販売を巧みに組み合わせています。無料の<a href=\"/ja/tools/monetization-calculator\" class=\"text-[#0070f3] underline font-medium\">ポッドキャスト収益計算ツール</a>で想定売上を試算してみてください。",
+          "AdvertiseCastの市場調査やIAB/PwCによるポッドキャスト広告レポート、Patreonのデータによれば、収益性の高い配信者はホスト読み広告、アフィリエイト、月額メンバーシップ、独自商品・サービスの販売を巧みに組み合わせています。無料の<a href=\"/ja/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">ポッドキャスト収益計算ツール</a>で想定売上を試算してみてください。",
         ],
       },
       {
@@ -91,7 +91,7 @@ export const jaNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "ポッドキャストで稼ぐ8つの実践的収益モデル",
         paragraphs: [
           "ポッドキャストのマネタイズは、何万人ものリスナーを抱える大規模番組だけの特権ではありません。現代のクリエイターは広告代理店に頼るのではなく、複数の補完的な収益チャネルを組み合わせることで強固な売上基盤を築いています。",
-          "リスナーが300人であっても30,000人であっても、番組に対するリスナーの信頼度を適切に価値化すれば今すぐ収益化を開始できます。番組の広告挿入ポイントは無料の<a href=\"/ja/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">構成案ビルダー</a>で設計しましょう。",
+          "リスナーが300人であっても30,000人であっても、番組に対するリスナーの信頼度を適切に価値化すれば今すぐ収益化を開始できます。番組の広告挿入ポイントは無料の<a href=\"/ja/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">構成案ビルダー</a>で設計しましょう。",
         ],
         list: [
           {
@@ -131,7 +131,7 @@ export const jaNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "ポッドキャストで最初のスポンサーを獲得する方法",
         paragraphs: [
-          "最初のスポンサーを見つけるのに代理店は不要です。重要なのは「あなたの番組のリスナー層にアプローチしたいと考えている企業」を見つけ出し、リスナーがいかに番組を信頼しているかを伝えることです。提案文の作成には<a href=\"/ja/tools/collab-finder\" class=\"text-[#0070f3] underline font-medium\">コラボ＆出演依頼メール作成ツール</a>をご活用ください。",
+          "最初のスポンサーを見つけるのに代理店は不要です。重要なのは「あなたの番組のリスナー層にアプローチしたいと考えている企業」を見つけ出し、リスナーがいかに番組を信頼しているかを伝えることです。提案文の作成には<a href=\"/ja/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">コラボ＆出演依頼メール作成ツール</a>をご活用ください。",
           "米IABおよびEdison Researchの調査によると、パーソナリティが自らの言葉で語るホスト読み広告は、70%以上の極めて高いブランド認知率を誇ります。企業の担当者に提案する際は、全体のダウンロード数だけでなく、リスナー属性の親和性を強調しましょう。",
         ],
       },
@@ -179,7 +179,7 @@ export const jaNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "ポッドキャストのネタ切れを根本から解決する",
         paragraphs: [
           "ポッドキャストの更新が途絶える最大の原因は、毎週「何を話せばいいのか」と頭を抱えてしまうことです。長く愛される人気番組は、毎回ゼロから奇抜な話題を考えているわけではありません。実績のあるテーマの型や定番コーナーのストックを上手に活用しています。",
-          "以下に、主要ジャンルを網羅した100個の実践的なポッドキャストテーマ案、企画フォーマット、定番コーナーのアイデアをまとめました。テーマを決めたら、当サイトの<a href=\"/ja/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">エピソードタイトル生成ツール</a>で高クリック率のタイトルを作成しましょう。",
+          "以下に、主要ジャンルを網羅した100個の実践的なポッドキャストテーマ案、企画フォーマット、定番コーナーのアイデアをまとめました。テーマを決めたら、当サイトの<a href=\"/ja/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">エピソードタイトル生成ツール</a>で高クリック率のタイトルを作成しましょう。",
         ],
       },
       {
@@ -233,7 +233,7 @@ export const jaNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "ポッドキャストの定番コーナーのアイデア（20選）",
         paragraphs: [
-          "定番コーナーを用意しておくと、リスナーが愛着を持ちやすくなり、<a href=\"/ja/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">構成案ビルダー</a>での収録準備が劇的に楽になります：",
+          "定番コーナーを用意しておくと、リスナーが愛着を持ちやすくなり、<a href=\"/ja/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">構成案ビルダー</a>での収録準備が劇的に楽になります：",
         ],
         list: [
           {
@@ -269,13 +269,13 @@ export const jaNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "ステップ1：ニッチ分野、番組形式、ターゲット層を決める",
         paragraphs: [
           "成功する番組は「この番組は誰に向けたもので、リスナーは毎回どんな価値を得られるのか」という明確な約束を持っています。テーマを絞り込み、見込みリスナーが説明文を読んだ瞬間に「これは自分のための番組だ」と感じられるようにしましょう。",
-          "ソロ配信、共同ホストとの掛け合い、対談インタビューなど、主な形式を決定します。無料の<a href=\"/ja/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">構成案ビルダー</a>を使って、エピソードの進行スケジュールを組み立てましょう。",
+          "ソロ配信、共同ホストとの掛け合い、対談インタビューなど、主な形式を決定します。無料の<a href=\"/ja/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">構成案ビルダー</a>を使って、エピソードの進行スケジュールを組み立てましょう。",
         ],
       },
       {
         heading: "ステップ2：覚えやすく検索されやすい番組名を決める",
         paragraphs: [
-          "ポッドキャストの番組名は、耳で聞いてすぐ覚えられ、検索されやすいキーワードを含んでいる必要があります。難解な造語は避け、<a href=\"/ja/tools/podcast-name-generator\" class=\"text-[#0070f3] underline font-medium\">ポッドキャスト番組名ジェネレーター</a>で魅力的な候補を比較検討しましょう。",
+          "ポッドキャストの番組名は、耳で聞いてすぐ覚えられ、検索されやすいキーワードを含んでいる必要があります。難解な造語は避け、<a href=\"/ja/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">ポッドキャスト番組名ジェネレーター</a>で魅力的な候補を比較検討しましょう。",
         ],
       },
       {
@@ -306,27 +306,27 @@ export const jaNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "ステップ4：公式仕様を満たすカバーアートをデザインする",
         paragraphs: [
           "カバーアートは、Apple PodcastsやSpotify上で番組の看板となる最も重要なビジュアルです。両プラットフォーム共通で「縦横比1:1の正方形」「1400×1400px〜3000×3000px」「RGBカラー」が義務付けられています。",
-          "50×50pxの極小サムネイルでも番組名がはっきりと読めるか、当サイトの<a href=\"/ja/tools/cover-art-preview\" class=\"text-[#0070f3] underline font-medium\">カバーアート確認・プレビューツール</a>で事前検証しましょう。",
+          "50×50pxの極小サムネイルでも番組名がはっきりと読めるか、当サイトの<a href=\"/ja/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">カバーアート確認・プレビューツール</a>で事前検証しましょう。",
         ],
       },
       {
         heading: "ステップ5：予告編（トレーラー）と第1〜3回を収録する",
         paragraphs: [
-          "本格配信の前に、番組のコンセプトを60〜90秒で紹介しフォローを呼びかける「予告編」を制作します。台本は<a href=\"/ja/tools/trailer-script-builder\" class=\"text-[#0070f3] underline font-medium\">予告編トレーラー台本作成ツール</a>で作成し、エピソード冒頭の掴みは<a href=\"/ja/tools/intro-script-generator\" class=\"text-[#0070f3] underline font-medium\">オープニング台本生成ツール</a>を活用しましょう。",
-          "ゲストを迎える対談回では、ありきたりの経歴確認に終始しない深い質問を<a href=\"/ja/tools/guest-question-generator\" class=\"text-[#0070f3] underline font-medium\">インタビュー質問生成ツール</a>で準備します。",
+          "本格配信の前に、番組のコンセプトを60〜90秒で紹介しフォローを呼びかける「予告編」を制作します。台本は<a href=\"/ja/tools/trailer-script-builder\" class=\"text-[#a9583e] underline font-medium\">予告編トレーラー台本作成ツール</a>で作成し、エピソード冒頭の掴みは<a href=\"/ja/tools/intro-script-generator\" class=\"text-[#a9583e] underline font-medium\">オープニング台本生成ツール</a>を活用しましょう。",
+          "ゲストを迎える対談回では、ありきたりの経歴確認に終始しない深い質問を<a href=\"/ja/tools/guest-question-generator\" class=\"text-[#a9583e] underline font-medium\">インタビュー質問生成ツール</a>で準備します。",
         ],
       },
       {
         heading: "ステップ6：ポッドキャスト専用ホスティングを選びRSSを検証する",
         paragraphs: [
           "音声ファイルはAppleやSpotifyに直接アップロードするのではなく、専用のホスティングサービス（Buzzsprout、Podbean、Libsyn、Spotify for Podcastersなど）に保存し、そこから自動生成されるRSSフィード（XML）を利用します。",
-          "ディレクトリに登録申請する前に、タグの欠落やファイル破損がないか<a href=\"/ja/tools/rss-feed-validator\" class=\"text-[#0070f3] underline font-medium\">RSSフィード検証ツール</a>でチェックしましょう。",
+          "ディレクトリに登録申請する前に、タグの欠落やファイル破損がないか<a href=\"/ja/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">RSSフィード検証ツール</a>でチェックしましょう。",
         ],
       },
       {
         heading: "ステップ7：タイトル・ショーノート・カテゴリのSEO最適化",
         paragraphs: [
-          "検索からの新規リスナー獲得にはメタデータが命です。クリックされる見出しを<a href=\"/ja/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">タイトル生成ツール</a>で作成し、詳細なタイムスタンプ付き概要文を<a href=\"/ja/tools/show-notes-generator\" class=\"text-[#0070f3] underline font-medium\">ショーノート作成ツール</a>でまとめ、<a href=\"/ja/tools/category-finder\" class=\"text-[#0070f3] underline font-medium\">カテゴリ検索ツール</a>で最適な公式分類を選択します。",
+          "検索からの新規リスナー獲得にはメタデータが命です。クリックされる見出しを<a href=\"/ja/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">タイトル生成ツール</a>で作成し、詳細なタイムスタンプ付き概要文を<a href=\"/ja/tools/show-notes-generator\" class=\"text-[#a9583e] underline font-medium\">ショーノート作成ツール</a>でまとめ、<a href=\"/ja/tools/category-finder\" class=\"text-[#a9583e] underline font-medium\">カテゴリ検索ツール</a>で最適な公式分類を選択します。",
         ],
       },
       {

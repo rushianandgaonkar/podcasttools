@@ -12,7 +12,7 @@ export const itNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Quanto Guadagna un Podcast nel 2026?",
         paragraphs: [
           "I guadagni di un podcast spaziano da zero euro per trasmissioni amatoriali a decine di migliaia di euro al mese per i grandi network. Per la stragrande maggioranza dei creator indipendenti, gli incassi sono strettamente collegati ai download certificati nei primi 30 giorni, al potere di spesa degli ascoltatori e alla varietà dei canali di monetizzazione adottati.",
-          "Studi di settore condotti da AdvertiseCast, il rapporto IAB/PwC sulla pubblicità audio e i dati di Patreon confermano che i podcaster di successo combinano annunci letti dal conduttore, affiliazioni, abbonamenti diretti dei sostenitori e vendita di prodotti o servizi propri. Usa il nostro <a href=\"/it/tools/monetization-calculator\" class=\"text-[#0070f3] underline font-medium\">Calcolatore Guadagni Podcast</a> gratuito per stimare le tue entrate.",
+          "Studi di settore condotti da AdvertiseCast, il rapporto IAB/PwC sulla pubblicità audio e i dati di Patreon confermano che i podcaster di successo combinano annunci letti dal conduttore, affiliazioni, abbonamenti diretti dei sostenitori e vendita di prodotti o servizi propri. Usa il nostro <a href=\"/it/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Calcolatore Guadagni Podcast</a> gratuito per stimare le tue entrate.",
         ],
       },
       {
@@ -91,7 +91,7 @@ export const itNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Gli 8 Metodi Collaudati per Monetizzare un Podcast",
         paragraphs: [
           "Guadagnare con un podcast non è più un traguardo riservato a produzioni con decine di migliaia di download. I creator contemporanei costruiscono entrate durature combinando più fonti tra loro, senza dover attendere le agenzie pubblicitarie.",
-          "Che tu abbia 300 ascoltatori fidelizzati o 30.000, puoi monetizzare da subito allineando la tua offerta alla fiducia della tua community. Progetta le interruzioni pubblicitarie con la nostra <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Scaletta Episodio Podcast</a>.",
+          "Che tu abbia 300 ascoltatori fidelizzati o 30.000, puoi monetizzare da subito allineando la tua offerta alla fiducia della tua community. Progetta le interruzioni pubblicitarie con la nostra <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Scaletta Episodio Podcast</a>.",
         ],
         list: [
           {
@@ -131,7 +131,7 @@ export const itNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "Come trovare sponsor per un podcast",
         paragraphs: [
-          "Trovare il primo sponsor non richiede intermediari. Consiste nell'individuare aziende che già investono per parlare con il tuo stesso target e nel dimostrare la forte credibilità del tuo show. Redigi proposte commerciali persuasive con il nostro <a href=\"/it/tools/collab-finder\" class=\"text-[#0070f3] underline font-medium\">Generatore di Proposte e Collaborazioni</a>.",
+          "Trovare il primo sponsor non richiede intermediari. Consiste nell'individuare aziende che già investono per parlare con il tuo stesso target e nel dimostrare la forte credibilità del tuo show. Redigi proposte commerciali persuasive con il nostro <a href=\"/it/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">Generatore di Proposte e Collaborazioni</a>.",
           "Secondo l'IAB e le ricerche di Edison Research, gli annunci letti dal conduttore raggiungono un ricordo spontaneo del brand superiore al 70%. Quando scrivi a un'azienda, valorizza la profilazione del pubblico e numeri di ascolto certificati.",
         ],
       },
@@ -179,7 +179,7 @@ export const itNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Non Rimanere Mai Più Senza Argomenti per il Tuo Podcast",
         paragraphs: [
           "Il motivo principale che spinge molti podcaster a fermarsi è l'ansia settimanale di trovare qualcosa di interessante di cui parlare. I programmi di successo non improvvisano ogni volta da zero: attingono a una banca strutturata di temi validati e a rubriche ricorrenti.",
-          "Di seguito trovi una raccolta di 100 idee pratiche tra argomenti per podcast, format di puntata e rubriche suddivise per le categorie più seguite. Una volta scelto il tema, usa il nostro <a href=\"/it/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Generatore di Titoli per Podcast</a> per formulare titoli accattivanti.",
+          "Di seguito trovi una raccolta di 100 idee pratiche tra argomenti per podcast, format di puntata e rubriche suddivise per le categorie più seguite. Una volta scelto il tema, usa il nostro <a href=\"/it/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Titoli per Podcast</a> per formulare titoli accattivanti.",
         ],
       },
       {
@@ -233,7 +233,7 @@ export const itNewGuides: Record<string, LocalizedGuideArticle> = {
       {
         heading: "Idee per rubriche di podcast",
         paragraphs: [
-          "Le rubriche ricorrenti creano familiarità con gli ascoltatori e rendono agevole compilare la <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Scaletta del Podcast</a>. Ecco 20 idee:",
+          "Le rubriche ricorrenti creano familiarità con gli ascoltatori e rendono agevole compilare la <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Scaletta del Podcast</a>. Ecco 20 idee:",
         ],
         list: [
           {
@@ -269,13 +269,13 @@ export const itNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Passo 1: Definisci Nicchia, Format e Pubblico di Riferimento",
         paragraphs: [
           "Ogni podcast di successo si fonda su una promessa editoriale trasparente: a chi si rivolge e quale vantaggio concreto riceve chi ascolta ogni puntata? Scegli una nicchia precisa così che l'ascoltatore ideale pensi subito: «questo podcast è pensato esattamente per me».",
-          "Stabilisci il format principale: monologo, conduzione in coppia o interviste con ospiti. Usa la nostra <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#0070f3] underline font-medium\">Scaletta Episodio Podcast</a> gratuita per pianificare i minuti di ogni blocco.",
+          "Stabilisci il format principale: monologo, conduzione in coppia o interviste con ospiti. Usa la nostra <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Scaletta Episodio Podcast</a> gratuita per pianificare i minuti di ogni blocco.",
         ],
       },
       {
         heading: "Passo 2: Scegli un Nome Accattivante e Facile da Trovare",
         paragraphs: [
-          "Il nome del tuo podcast deve essere facile da ricordare, fluido da pronunciare e contenere parole chiave che gli ascoltatori cercano nelle app. Evita giochi di parole poco chiari e testa decine di opzioni con il nostro <a href=\"/it/tools/podcast-name-generator\" class=\"text-[#0070f3] underline font-medium\">Generatore di Nomi per Podcast</a>.",
+          "Il nome del tuo podcast deve essere facile da ricordare, fluido da pronunciare e contenere parole chiave che gli ascoltatori cercano nelle app. Evita giochi di parole poco chiari e testa decine di opzioni con il nostro <a href=\"/it/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Nomi per Podcast</a>.",
         ],
       },
       {
@@ -306,27 +306,27 @@ export const itNewGuides: Record<string, LocalizedGuideArticle> = {
         heading: "Passo 4: Crea una Copertina Conforme agli Standard",
         paragraphs: [
           "La copertina è il biglietto da visita del tuo show nelle directory. Apple Podcasts e Spotify richiedono obbligatoriamente un formato perfettamente quadrato 1:1, risoluzione tra 1400x1400px e 3000x3000px e spazio colore RGB.",
-          "Verifica che il titolo rimanga chiaramente leggibile anche nel formato miniatura 50x50 pixel testandolo sul nostro <a href=\"/it/tools/cover-art-preview\" class=\"text-[#0070f3] underline font-medium\">Verificatore Dimensioni Copertina Podcast</a>.",
+          "Verifica che il titolo rimanga chiaramente leggibile anche nel formato miniatura 50x50 pixel testandolo sul nostro <a href=\"/it/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">Verificatore Dimensioni Copertina Podcast</a>.",
         ],
       },
       {
         heading: "Passo 5: Registra il Trailer e i Primi Episodi",
         paragraphs: [
-          "Prima del debutto ufficiale, registra un trailer di 60-90 secondi che illustri il concept e inviti a seguire lo show. Scrivi il testo con il nostro <a href=\"/it/tools/trailer-script-builder\" class=\"text-[#0070f3] underline font-medium\">Costruttore Script Trailer</a> e realizza introduzioni efficaci con il <a href=\"/it/tools/intro-script-generator\" class=\"text-[#0070f3] underline font-medium\">Generatore di Intro per Podcast</a>.",
-          "Se il programma prevede interviste, prepara domande memorabili che vadano oltre il classico curriculum con il <a href=\"/it/tools/guest-question-generator\" class=\"text-[#0070f3] underline font-medium\">Generatore Domande per Interviste</a>.",
+          "Prima del debutto ufficiale, registra un trailer di 60-90 secondi che illustri il concept e inviti a seguire lo show. Scrivi il testo con il nostro <a href=\"/it/tools/trailer-script-builder\" class=\"text-[#a9583e] underline font-medium\">Costruttore Script Trailer</a> e realizza introduzioni efficaci con il <a href=\"/it/tools/intro-script-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Intro per Podcast</a>.",
+          "Se il programma prevede interviste, prepara domande memorabili che vadano oltre il classico curriculum con il <a href=\"/it/tools/guest-question-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore Domande per Interviste</a>.",
         ],
       },
       {
         heading: "Passo 6: Scegli l'Hosting e Valida il Feed RSS",
         paragraphs: [
           "I file audio non si caricano direttamente su Spotify o Apple Podcasts. Vengono caricati su una piattaforma di hosting specializzata (Buzzsprout, Podbean, Libsyn, Spotify for Creators) che genera il feed RSS in formato XML.",
-          "Prima di inviare il feed alle directory, verifica che non vi siano tag mancanti o errori con il nostro <a href=\"/it/tools/rss-feed-validator\" class=\"text-[#0070f3] underline font-medium\">Validatore Feed RSS per Podcast</a>.",
+          "Prima di inviare il feed alle directory, verifica che non vi siano tag mancanti o errori con il nostro <a href=\"/it/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">Validatore Feed RSS per Podcast</a>.",
         ],
       },
       {
         heading: "Passo 7: Ottimizza Titoli, Show Notes e Categorie per la SEO",
         paragraphs: [
-          "La visibilità nelle ricerche dipende dai metadati. Componi titoli accattivanti con il <a href=\"/it/tools/episode-title-generator\" class=\"text-[#0070f3] underline font-medium\">Generatore di Titoli per Podcast</a>, prepara note dettagliate con il <a href=\"/it/tools/show-notes-generator\" class=\"text-[#0070f3] underline font-medium\">Generatore di Show Notes</a> e individua la categoria ideale con il <a href=\"/it/tools/category-finder\" class=\"text-[#0070f3] underline font-medium\">Ricerca Categorie Apple Podcasts</a>.",
+          "La visibilità nelle ricerche dipende dai metadati. Componi titoli accattivanti con il <a href=\"/it/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Titoli per Podcast</a>, prepara note dettagliate con il <a href=\"/it/tools/show-notes-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Show Notes</a> e individua la categoria ideale con il <a href=\"/it/tools/category-finder\" class=\"text-[#a9583e] underline font-medium\">Ricerca Categorie Apple Podcasts</a>.",
         ],
       },
       {

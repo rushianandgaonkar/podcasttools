@@ -7,18 +7,18 @@
   --font-mono: "Geist Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
   /* Vercel Geist Tokens from DESIGN.md */
-  --color-canvas: #fafafa;
-  --color-canvas-elevated: #ffffff;
-  --color-ink: #171717;
-  --color-body: #4d4d4d;
-  --color-mute: #8f8f8f;
+  --color-canvas: #faf9f5;
+  --color-canvas-elevated: #fffdf9;
+  --color-ink: #141413;
+  --color-body: #3d3d3a;
+  --color-mute: #6c6a64;
   --color-faint: #a1a1a1;
-  --color-hairline: #ebebeb;
-  --color-hairline-soft: #f2f2f2;
+  --color-hairline: #e6dfd8;
+  --color-hairline-soft: #ebe6df;
 
-  --color-vercel-blue: #0070f3;
-  --color-vercel-blue-deep: #0761d1;
-  --color-vercel-blue-soft: #d3e5ff;
+  --color-vercel-blue: #a9583e;
+  --color-vercel-blue-deep: #8f4630;
+  --color-vercel-blue-soft: #f3dfd6;
   --color-vercel-violet: #7928ca;
   --color-vercel-cyan: #50e3c2;
   --color-vercel-pink: #ff0080;
@@ -33,7 +33,7 @@
   --color-studio-border: var(--border-subtle);
   --color-studio-border-hover: var(--border-hover);
   --color-studio-muted: var(--text-mute);
-  --color-studio-accent: #0070f3;
+  --color-studio-accent: #a9583e;
 
   /* shadcn UI tokens */
   --color-border: var(--border);
@@ -59,69 +59,69 @@
 
 /* Base Root styles with Dark/Light transitions */
 :root {
-  --border: #e5e5e5;
-  --background: #fafafa;
-  --foreground: #171717;
-  --card: #ffffff;
-  --card-foreground: #171717;
-  --muted: #f5f5f5;
-  --muted-foreground: #737373;
-  --primary: #171717;
+  --border: #e6dfd8;
+  --background: #faf9f5;
+  --foreground: #141413;
+  --card: #fffdf9;
+  --card-foreground: #141413;
+  --muted: #f5f0e8;
+  --muted-foreground: #6c6a64;
+  --primary: #cc785c;
   --primary-foreground: #ffffff;
-  --secondary: #f5f5f5;
-  --secondary-foreground: #171717;
-  --ring: #a3a3a3;
+  --secondary: #efe9de;
+  --secondary-foreground: #141413;
+  --ring: #cc785c;
 
-  --bg-page: #fafafa;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f5f5f5;
-  --bg-inset: #f0f0f0;
-  --border-subtle: #ebebeb;
-  --border-hover: #d4d4d4;
-  --text-ink: #171717;
-  --text-body: #4d4d4d;
-  --text-mute: #8f8f8f;
+  --bg-page: #faf9f5;
+  --bg-card: #fffdf9;
+  --bg-card-hover: #f5f0e8;
+  --bg-inset: #efe9de;
+  --border-subtle: #e6dfd8;
+  --border-hover: #d6cdc0;
+  --text-ink: #141413;
+  --text-body: #3d3d3a;
+  --text-mute: #6c6a64;
 
   /* Elevated search button & interactive tokens */
-  --border-hairline: #e5e5e5;
-  --bg-canvas-elevated: #ffffff;
-  --bg-canvas-subtle: #f5f5f5;
-  --brand-accent: #0070f3;
-  --text-muted: #737373;
+  --border-hairline: #e6dfd8;
+  --bg-canvas-elevated: #fffdf9;
+  --bg-canvas-subtle: #f5f0e8;
+  --brand-accent: #a9583e;
+  --text-muted: #6c6a64;
   --shadow-button-elevated: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-button-elevated-hover: 0 4px 12px -2px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .dark {
-  --border: #262626;
-  --background: #000000;
-  --foreground: #ededed;
-  --card: #0a0a0a;
-  --card-foreground: #ededed;
-  --muted: #171717;
-  --muted-foreground: #a1a1a1;
-  --primary: #ffffff;
-  --primary-foreground: #000000;
-  --secondary: #262626;
-  --secondary-foreground: #ededed;
-  --ring: #525252;
+  --border: #34312c;
+  --background: #181715;
+  --foreground: #faf9f5;
+  --card: #1f1e1b;
+  --card-foreground: #faf9f5;
+  --muted: #252320;
+  --muted-foreground: #a09d96;
+  --primary: #cc785c;
+  --primary-foreground: #ffffff;
+  --secondary: #2c2a26;
+  --secondary-foreground: #faf9f5;
+  --ring: #cc785c;
 
-  --bg-page: #000000;
-  --bg-card: #0a0a0a;
-  --bg-card-hover: #141414;
-  --bg-inset: #050505;
-  --border-subtle: #222222;
-  --border-hover: #333333;
-  --text-ink: #ededed;
-  --text-body: #a1a1a1;
-  --text-mute: #666666;
+  --bg-page: #181715;
+  --bg-card: #1f1e1b;
+  --bg-card-hover: #252320;
+  --bg-inset: #131210;
+  --border-subtle: #34312c;
+  --border-hover: #4a463f;
+  --text-ink: #faf9f5;
+  --text-body: #c2beb4;
+  --text-mute: #8e8b82;
 
   /* Elevated search button & interactive tokens (Dark) */
-  --border-hairline: #262626;
-  --bg-canvas-elevated: #0f0f0f;
-  --bg-canvas-subtle: #1a1a1a;
-  --brand-accent: #0070f3;
-  --text-muted: #888888;
+  --border-hairline: #34312c;
+  --bg-canvas-elevated: #1f1e1b;
+  --bg-canvas-subtle: #252320;
+  --brand-accent: #a9583e;
+  --text-muted: #a09d96;
   --shadow-button-elevated: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-button-elevated-hover: 0 4px 14px rgba(0, 0, 0, 0.7);
 }
@@ -176,11 +176,11 @@ body {
 
 /* Hover state safety in light mode */
 :root:not(.dark) .tool-workspace .group:hover .group-hover\:text-white {
-  color: #0070f3 !important;
+  color: #a9583e !important;
 }
 
 :root:not(.dark) .tool-workspace .group:hover .group-hover\:text-slate-100 {
-  color: #0070f3 !important;
+  color: #a9583e !important;
 }
 
 /* Ensure solid action buttons preserve crisp white text (excluding hover-only modifiers) */

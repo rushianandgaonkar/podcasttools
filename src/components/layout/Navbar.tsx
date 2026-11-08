@@ -94,7 +94,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full border-b border-neutral-200 dark:border-[#222222] bg-[#fafafa]/80 dark:bg-[#000000]/80 backdrop-blur-md transition-colors duration-150">
+      <header className="sticky top-0 z-40 w-full border-b border-neutral-200 dark:border-[#222222] bg-[#faf9f5]/80 dark:bg-[#000000]/80 backdrop-blur-md transition-colors duration-150">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
           {/* Logo */}
           <a
@@ -310,7 +310,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
                       className="flex items-center justify-between p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900/80 group transition-colors"
                     >
                       <div>
-                        <div className="text-xs font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-[#0070f3] transition-colors">
+                        <div className="text-xs font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-[#a9583e] transition-colors">
                           {t.title}
                         </div>
                         <div className="text-[11px] text-neutral-500 dark:text-neutral-400 line-clamp-1">

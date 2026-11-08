@@ -201,7 +201,7 @@ export function HeroQuickTool({ lang = defaultLocale }: HeroQuickToolProps) {
         <div className="flex items-center gap-2">
           <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
           <h2 className="font-mono text-xs uppercase font-medium tracking-wider text-neutral-900 dark:text-neutral-100 flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-[#0070f3]" />
+            <Sparkles className="w-3.5 h-3.5 text-[#a9583e]" />
             {ui.testerTitle}
           </h2>
         </div>
@@ -254,7 +254,7 @@ export function HeroQuickTool({ lang = defaultLocale }: HeroQuickToolProps) {
             key={idx}
             className="flex items-center justify-between p-3 rounded-lg bg-neutral-50 dark:bg-[#111111] border border-neutral-200 dark:border-neutral-800/80 hover:border-neutral-300 dark:hover:border-neutral-700 transition-colors group"
           >
-            <span className="text-xs sm:text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-[#0070f3] dark:group-hover:text-[#0070f3] transition-colors">
+            <span className="text-xs sm:text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-[#a9583e] dark:group-hover:text-[#a9583e] transition-colors">
               {titleText}
             </span>
             <button
@@ -284,7 +284,7 @@ export function HeroQuickTool({ lang = defaultLocale }: HeroQuickToolProps) {
         <span className="text-neutral-500 text-[11px]">{ui.footerPrompt}</span>
         <a
           href={getLocalizedPath("/tools/episode-title-generator", lang)}
-          className="inline-flex items-center gap-1 font-medium text-xs text-[#0070f3] hover:underline"
+          className="inline-flex items-center gap-1 font-medium text-xs text-[#a9583e] hover:underline"
         >
           {ui.openBtn} <ArrowRight className="w-3.5 h-3.5" />
         </a>
