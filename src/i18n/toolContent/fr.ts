@@ -77,13 +77,13 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
     metaDescription:
       "Trouvez des idées de noms de podcast mémorables selon votre thématique avec notre générateur de noms de podcast gratuit. Testez la disponibilité. Gratuit.",
     overview: [
-      "Le Générateur de Noms de Podcast vous propose des idées de noms de podcast mémorables et distinctives adaptées à votre domaine, vos mots-clés et le positionnement recherché : du titre descriptif au nom créatif.",
-      "Utilisez ces idées de noms de podcast pour constituer une sélection resserrée, puis vérifiez la disponibilité sur Apple Podcasts, Spotify et les registres de noms de domaine avant le lancement officiel.",
+      "Le Générateur de Noms de Podcast vous aide à trouver des idées de noms mémorables pour votre émission dans chaque catégorie. Que vous cherchiez un générateur aléatoire de noms de podcast pour débloquer votre créativité ou une alternative d'intelligence artificielle pour concevoir une marque forte, découvrez des pistes du format descriptif à l'angle décalé.",
+      "Utilisez ces idées de noms de podcast pour bâtir votre sélection, puis vérifiez leur disponibilité sur Apple Podcasts, Spotify et les registres de noms de domaine avant le lancement officiel.",
     ],
     steps: [
-      { title: "Choisissez votre thématique", text: "Sélectionnez le genre de votre émission : tech, finance, true crime, développement personnel, etc." },
+      { title: "Choisissez votre thématique", text: "Sélectionnez le genre de votre émission : tech, finance, sport, comédie ou true crime." },
       { title: "Ajoutez un mot (facultatif)", text: "Saisissez un mot ou thème à intégrer au nom : un sujet, un lieu, une idée récurrente." },
-      { title: "Choisissez un style et sélectionnez", text: "Changez de style de marque et gardez les trois à cinq noms que vous pourriez prononcer à chaque épisode." },
+      { title: "Choisissez un style ou générez au hasard", text: "Changez de style de marque, testez des combinaisons aléatoires et gardez vos trois à cinq noms favoris." },
       { title: "Vérifiez avant le lancement", text: "Cherchez les doublons sur Apple Podcasts et Spotify, puis vérifiez vous-même le domaine et les réseaux sociaux." },
     ],
     tips: [
@@ -115,12 +115,21 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
             ],
           },
           {
-            category: "Humour et Culture",
+            category: "Humour et Comédie",
             items: [
               "Personne N'a Demandé",
               "Légèrement Cynique",
               "En Rire pour Survivre",
               "L'Absurde du Quotidien",
+            ],
+          },
+          {
+            category: "Sport et Athlétisme",
+            items: [
+              "Le Protocole du Bord de Terrain",
+              "Audio Temps Additionnel",
+              "Le Cahier d'Endurance",
+              "Plein Cadre Sport",
             ],
           },
           {
@@ -210,6 +219,10 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
 - Appel à l'action unique (CTA) : "Abonnez-vous sur Spotify et laissez un avis sur Apple Podcasts."
 - Teaser du prochain épisode.
 - Sortie musicale en fondu.`,
+        link: {
+          text: "Télécharger le modèle de script de podcast gratuit (PDF et Google Docs) →",
+          href: "/downloads/podcast-script-template.pdf",
+        },
       },
     ],
   },
@@ -275,17 +288,35 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
               "Où nos auditeurs peuvent-ils vous suivre et soutenir vos projets en cours ?",
             ],
           },
+          {
+            category: "Questions Business et Entrepreneuriat",
+            items: [
+              "Quelle a été votre plus grosse erreur de recrutement ou stratégique durant les deux premières années de votre entreprise ?",
+              "Quelle est la réalité opérationnelle la plus inconfortable sur le passage à l'échelle que personne n'admet publiquement ?",
+              "Si vous perdiez demain vos trois plus gros clients ou 50 % de vos revenus, quel serait votre plan d'action dès le premier jour ?",
+              "Quel indicateur financier ou opérationnel suivez-vous de manière obsessionnelle chaque lundi matin ?",
+            ],
+          },
+          {
+            category: "Questions Drôles et Décalées",
+            items: [
+              "Quel est le conseil professionnel le plus absurde qu'on vous ait donné avec le plus grand sérieux ?",
+              "Quelle est une opinion totalement futile ou ridicule que vous êtes prêt à défendre coûte que coûte ?",
+              "Si vous deviez remplacer notre générique par un morceau pop embarrassant des années 90, quel serait-il ?",
+              "Quelle a été votre pire catastrophe en direct, en présentation ou en visioconférence ?",
+            ],
+          },
         ],
       },
     ],
   },
   "monetization-calculator": {
-    metaTitle: "Calculateur de Revenus de Podcast | Pod Studio",
+    metaTitle: "Calculateur de Revenus et CPM Podcast | Pod Studio",
     metaDescription:
-      "Estimez les gains de votre émission avec notre calculateur de revenus de podcast gratuit. Modélisez les tarifs CPM, écoutes et sponsors. Sans inscription.",
+      "Estimez vos gains avec notre calculateur de revenus et CPM podcast. Simulez sponsors, tarifs CPM et valeur des auditeurs. Outil gratuit sans inscription.",
     overview: [
-      "Le Calculateur de Revenus de Podcast estime les rentrées financières de votre émission selon les formules standard de l'industrie : (écoutes ÷ 1 000) × CPM × espaces publicitaires commercialisés.",
-      "Projetez vos gains mensuels et annuels en intégrant les créneaux pré-roll, mid-roll et post-roll, votre taux de remplissage et les adhésions payantes de votre communauté pour négocier sereinement.",
+      "Le Calculateur de Revenus et CPM Podcast estime vos gains potentiels selon les normes publicitaires du secteur : (téléchargements ÷ 1 000) × CPM × créneaux publicitaires vendus.",
+      "Modélisez vos projections mensuelles et annuelles en intégrant les annonces pré-roll, mid-roll et post-roll, le taux de remplissage et les adhésions d'auditeurs pour négocier avec les sponsors en toute confiance.",
     ],
     steps: [
       { title: "Renseignez vos écoutes", text: "Indiquez votre moyenne de téléchargements par épisode sur les 30 premiers jours." },
@@ -313,9 +344,9 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
     ],
   },
   "cover-art-preview": {
-    metaTitle: "Taille de Pochette de Podcast: Vérificateur | Pod Studio",
+    metaTitle: "Dimensions Pochette de Podcast: Apple & Spotify | Pod Studio",
     metaDescription:
-      "Vérifiez la taille de pochette de podcast pour Apple et Spotify. Prévisualisez vos visuels 3000x3000px sur mobile, écran de veille et mode sombre. Gratuit.",
+      "Vérifiez la taille de votre pochette podcast pour Apple et Spotify. Prévisualisez vos visuels 3000x3000px sur mobile, écran verrouillé et flux. Gratuit.",
     overview: [
       "L'outil de Vérification de Taille et Aperçu de Pochette de Podcast simule votre visuel dans les flux réels d'Apple Podcasts, Spotify, les écrans de veille de smartphones et les vignettes en 50x50 pixels.",
       "Le contrôle s'effectue intégralement dans votre navigateur et vérifie la conformité aux spécifications officielles : ratio carré 1:1, espace colorimétrique RVB et résolution comprise entre 1400x1400px et 3000x3000px.",
@@ -330,6 +361,19 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
       "Si le titre est illisible en format vignette, raccourcissez-le ou augmentez la taille de la police.",
       "Ne collez aucun texte important sur les bords : certaines applications appliquent des coins arrondis.",
       "Vérifiez le rendu en mode clair et en mode sombre pour vous assurer que les textes sombres ne disparaissent pas.",
+    ],
+    sections: [
+      {
+        heading: "Exigences de taille de pochette de podcast",
+        paragraphs: [
+          "Apple Podcasts et Spotify exigent tous deux que l'illustration de podcast soit une image carrée au ratio 1:1 parfait, mesurant entre 1400 × 1400 et 3000 × 3000 pixels. Le standard recommandé par l'industrie est de 3000 × 3000 pixels à 72 DPI, garantissant un affichage net sur les écrans Retina de smartphones ainsi que sur les téléviseurs.",
+          "Les fichiers d'illustration doivent être encodés au format JPEG ou PNG avec le profil colorimétrique sRGB. Évitez les modes CMJN, qui entraînent des erreurs de validation ou des couleurs altérées sur mobile. Conservez les éléments visuels cruciaux, le titre et les photos d'hôtes dans la zone centrale sécurisée de 80 % pour éviter qu'ils ne soient masqués par les coins arrondis ou les boutons de lecture.",
+        ],
+        link: {
+          text: "Consultez le guide complet des spécifications : Guide des dimensions de pochettes pour Apple Podcasts et Spotify →",
+          href: "/guides/apple-spotify-cover-art-specs-guide",
+        },
+      },
     ],
   },
   "rss-feed-validator": {
@@ -402,8 +446,8 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
     ],
     sections: [
       {
-        heading: "Exemples d'intro de podcast",
-        intro: "Les trente premières secondes déterminent si un auditeur écoute l'épisode jusqu'au bout ou l'interrompt. Voici cinq exemples d'intro de podcast éprouvés :",
+        heading: "Exemples de scripts d'intro de podcast",
+        intro: "Les trente premières secondes déterminent si un auditeur écoute l'épisode jusqu'au bout ou l'interrompt. Voici cinq exemples de scripts d'intro de podcast éprouvés :",
         list: [
           {
             title: "1. L'Accroche Forte en Solo",
@@ -426,6 +470,24 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
             description: "« Vous souhaitez vous positionner en première page de Google sans passer vos journées à courir après les liens externes ? Durant les vingt prochaines minutes, nous décortiquons l'architecture de contenu exacte qui nous a permis de générer 450 000 visites mensuelles ». ",
           },
         ],
+      },
+      {
+        heading: "Modèle de script d'intro de podcast",
+        intro: "Utilisez ce modèle modulaire de script d'intro pour vos formats solo, co-animation ou interview :",
+        template: `[00:00 - 00:15] ACCROCHE INITIALE (COLD OPEN)
+HÔTE : « Et si le conseil que tout le monde répète dans votre secteur vous coûtait en réalité des milliers d'euros ? »
+
+[00:15 - 00:30] PRÉSENTATION DE L'ÉMISSION & PROMESSE DE L'ÉPISODE
+HÔTE : « Bienvenue dans [Nom du Podcast]. Je suis [Nom de l'Hôte]. Dans l'épisode d'aujourd'hui, nous décryptons [Thème de l'Épisode] pour vous aider à [bénéfice concret pour l'auditeur]. »
+
+[00:30 - 00:45] PRÉSENTATION DE L'INVITÉ OU ORDRE DU JOUR
+HÔTE : « [Format Interview] : Notre invité du jour est [Nom de l'Invité], [Titre/Entreprise]. Nous analysons les tournants décisifs et la méthode exacte qu'il a employée pour atteindre [Résultat Clé]. »
+HÔTE : « [Format Solo] : Durant les 20 prochaines minutes, je vous dévoile le plan en 3 étapes que nous avons conçu pour résoudre ce problème en partant de zéro. »
+
+[00:45 - 01:00] APPEL À L'ACTION & GÉNÉRIQUE
+HÔTE : « Pensez à vous abonner sur Apple Podcasts ou Spotify pour ne manquer aucun nouvel épisode. C'est parti ! »
+
+[MONTÉE DU GÉNÉRIQUE MUSICAL QUI LAISSE PLACE À L'ÉPISODE]`,
       },
     ],
   },
@@ -574,23 +636,51 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
     ],
   },
   "hook-generator": {
-    metaTitle: "Générateur d'Accroches de Podcast | Pod Studio",
+    metaTitle: "Générateur d'Accroches pour Clips Podcast | Pod Studio",
     metaDescription:
-      "Créez des accroches percutantes et ouvertures audio avec notre générateur d'accroches de podcast gratuit. Réduisez les abandons dès la 1ère minute. Gratuit.",
+      "Créez des accroches percutantes pour TikTok, Reels et Shorts avec notre générateur de hooks pour podcast. Boostez vos vidéos sur les réseaux. Gratuit.",
     overview: [
-      "Le Générateur d'Accroches de Podcast crée des ouvertures mémorables et des amorces vidéo intrigantes pour capter l'intérêt des auditeurs dès les toutes premières secondes de votre contenu.",
-      "Générez des formulations optimisées pour vos extraits sur TikTok, Instagram Reels, YouTube Shorts et pour vos amorces audio en début d'épisode.",
+      "Le Générateur d'Accroches pour Clips Podcast crée des premières phrases percutantes et des amorces vidéo intrigantes pour TikTok, Instagram Reels et YouTube Shorts à partir des thèmes de vos épisodes.",
+      "Conçu pour les créateurs qui souhaitent transformer les moments forts de leur audio en extraits vidéo viraux qui captivent les spectateurs en deux secondes et génèrent de nouveaux abonnés.",
     ],
     steps: [
-      { title: "Renseignez le sujet", text: "Décrivez la thématique de l'épisode ou le secteur auquel s'adresse l'extrait." },
-      { title: "Ajoutez un invité (facultatif)", text: "Mentionnez l'invité si sa présence représente un attrait fort." },
-      { title: "Sélectionnez un style", text: "Filtrez par type d'accroche et comparez plusieurs formulations proposées." },
-      { title: "Copiez et diffusez", text: "Reprenez l'accroche la plus percutante comme texte d'incrustation et liez l'épisode complet." },
+      { title: "Renseignez le sujet du clip", text: "Décrivez la thématique de l'épisode ou la révélation forte que couvre votre extrait court." },
+      { title: "Ajoutez un invité (facultatif)", text: "Mentionnez l'intervenant ou la citation lorsque son autorité retient l'attention." },
+      { title: "Filtrez par style d'accroche", text: "Basculez entre les angles contre-intuitifs, dramatiques, chiffres chocs, boucle de curiosité et rupture de schéma." },
+      { title: "Copiez le texte et publiez", text: "Collez l'accroche comme texte à l'écran et légende de votre vidéo, avec un lien vers l'épisode complet." },
     ],
     tips: [
-      "Votre première phrase ne dispose que de deux secondes pour retenir l'attention : commencez par l'affirmation la plus concrète.",
-      "Assurez-vous que l'extrait tienne réellement la promesse de l'accroche pour préserver la confiance de vos auditeurs.",
-      "Ajoutez des sous-titres à chacune de vos vidéos : une large part des utilisateurs les regardent sans le son.",
+      "Les trois premières secondes déterminent si l'internaute passe à la vidéo suivante : misez sur une forte tension ou une question ouverte.",
+      "Associez un texte lisible à l'écran à des sous-titres animés : plus de 70 % des vidéos sont regardées sans le son.",
+      "Veillez à ce que l'extrait apporte la réponse promise par l'accroche ; les pièges à clics détruisent la fidélité de votre communauté.",
+    ],
+    sections: [
+      {
+        heading: "Exemples d'accroches pour clips de podcast",
+        intro: "Sur TikTok, Instagram Reels et YouTube Shorts, le destin d'un clip se joue dans les deux premières secondes. Voici cinq formules d'accroches éprouvées avec des exemples concrets :",
+        list: [
+          {
+            title: "1. Le Démystificateur Contre-Intuitif",
+            description: "« Cessez de conseiller aux débutants de publier quotidiennement. Voici pourquoi cette recommandation épuise 95 % des podcasteurs avant le dixième épisode ». (Remet en cause une idée reçue pour susciter des réactions immédiates).",
+          },
+          {
+            title: "2. L'Amorce Narrative à Enjeu Élevé",
+            description: "« Un dimanche à 2 heures du matin, notre base de données principale a crashé avec 400 000 euros de paiements en attente. Voici exactement ce que nous avons fait durant les 60 minutes qui ont suivi ». (Installe immédiatement un suspense dramatique).",
+          },
+          {
+            title: "3. L'Accroche Basée sur la Donnée",
+            description: "« Nous avons analysé 1 200 épisodes de podcasts publiés cette année. Une seule technique de rétention a doublé le taux d'écoute complète dans toutes les thématiques ». (Promet une preuve tangible plutôt qu'une simple opinion).",
+          },
+          {
+            title: "4. La Boucle de Curiosité Ouverte",
+            description: "« Il y a une raison méconnue pour laquelle les émissions les plus écoutées sur Spotify ne mentionnent jamais de codes promo dans les cinq premières minutes. À la fin de ce clip, vous comprendrez pourquoi ». (Retient l'attention jusqu'au dénouement).",
+          },
+          {
+            title: "5. La Rupture de Schéma",
+            description: "« Fermez votre tableau de bord statistiques dès maintenant. Si votre émission stagne, consulter vos écoutes cinq fois par jour ne fait qu'aggraver la situation ». (Injonction directe et percutante qui stoppe le défilement).",
+          },
+        ],
+      },
     ],
   },
   "transcript-formatter": {

@@ -24,7 +24,7 @@ export const deToolContent: ToolContentRecord = {
   "show-notes-generator": {
     metaTitle: "Podcast-Show-Notes-Generator & Vorlage | Pod Studio",
     metaDescription:
-      "Erstelle strukturierte Folgentexte mit einer kostenlosen Podcast-Show-Notes-Vorlage. Exportiere Zusammenfassungen, Zeitstempel, Gäste-Infos und Links. Gratis.",
+      "Erstelle strukturierte Folgentexte mit unserer Podcast-Show-Notes-Vorlage. Exportiere Zusammenfassungen, Zeitstempel, Gast-Infos und Links. Gratis.",
     overview: [
       "Der Show-Notes-Generator strukturiert alle Angaben deiner Aufnahme in professionelle, suchmaschinenoptimierte Episoden-Texte: Folgen-Zusammenfassung, Gast-Kurzbiografie, Zeitstempel-Kapitel und Link-Listen.",
       "Die Ausgabe erfolgt wahlweise als Markdown, HTML oder reiner Text – bereit zum direkten Einfügen in Buzzsprout, Libsyn, Podbean, Spotify for Podcasters, YouTube oder deine eigene Website.",
@@ -77,13 +77,13 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
     metaDescription:
       "Finde einprägsame Podcast-Namen-Ideen nach Genre mit unserem kostenlosen Podcast-Namen-Generator. Prüfe Verfügbarkeit und Marken unkompliziert. Gratis.",
     overview: [
-      "Der Podcast-Namen-Generator liefert dir einprägsame Podcast-Namen-Ideen nach Genre, Themenstichworten und gewünschtem Markenton – von klar und suchbar bis hin zu originell und autoritär.",
-      "Nutze diese Podcast-Namen-Ideen, um eine aussagekräftige Favoritenliste zu erstellen, und überprüfe anschließend die Verfügbarkeit in Apple Podcasts, Spotify und Domain-Verzeichnissen vor der offiziellen Ankündigung.",
+      "Der Podcast-Namen-Generator hilft dir, einprägsame Namen für deine Show in jedem Genre zu entwickeln. Ob du einen Zufallsgenerator für Podcast-Namen suchst, um kreative Blockaden zu lösen, oder eine KI-Alternative für markenfähige Titel – entdecke vielfältige Ansätze von beschreibend bis verspielt.",
+      "Nutze diese Podcast-Namen-Ideen, um eine überzeugende Auswahlliste zu erstellen, und prüfe die Verfügbarkeit bei Apple Podcasts, Spotify und Domain-Registraren vor dem offiziellen Start.",
     ],
     steps: [
-      { title: "Genre auswählen", text: "Wähle die passende Kategorie: Tech, Finanzen, True Crime, persönliche Weiterentwicklung und mehr." },
+      { title: "Genre auswählen", text: "Wähle die passende Kategorie: Tech, Finanzen, Sport, Comedy, True Crime oder persönliche Weiterentwicklung." },
       { title: "Wunschbegriff ergänzen (optional)", text: "Gib ein Wort oder Motiv ein, das im Titel vorkommen soll: ein Ort, ein Kernbegriff oder ein Fachgebiet." },
-      { title: "Stil wählen & favorisieren", text: "Wechsle zwischen Marken-Stilen und sichere dir drei bis fünf Namen, die du in jeder Episode gerne aussprichst." },
+      { title: "Stil wählen oder zufällig generieren", text: "Wechsle zwischen Marken-Stilen, teste Zufallskombinationen und sichere dir deine drei bis fünf Favoriten." },
       { title: "Vor dem Launch prüfen", text: "Suche auf Apple Podcasts und Spotify nach Duplikaten und prüfe Webdomains und Social-Media-Handles." },
     ],
     tips: [
@@ -115,12 +115,21 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
             ],
           },
           {
-            category: "Comedy & Gesellschaft",
+            category: "Comedy & Humor",
             items: [
               "Niemand Hat Gefragt",
               "Leicht Zynisch",
               "Mit Humor Genommen",
               "Der Alltägliche Wahnsinn",
+            ],
+          },
+          {
+            category: "Sport & Athletik",
+            items: [
+              "Das Seitenlinien-Protokoll",
+              "Nachspielzeit Audio",
+              "Das Ausdauer-Playbook",
+              "Vollgas Sportfunk",
             ],
           },
           {
@@ -210,6 +219,10 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
 - Klarer Call-to-Action (CTA): "Abonniere die Show auf Spotify und bewerte uns auf Apple Podcasts."
 - Ausblick auf die nächste Episode.
 - Musikalisches Ausblenden.`,
+        link: {
+          text: "Kostenlose Podcast-Skript-Vorlage herunterladen (PDF & Google Docs) →",
+          href: "/downloads/podcast-script-template.pdf",
+        },
       },
     ],
   },
@@ -275,17 +288,35 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
               "Wo können Hörer dich finden und deine aktuellen Projekte unterstützen?",
             ],
           },
+          {
+            category: "Business & Unternehmertum",
+            items: [
+              "Was war der teuerste personelle oder strategische Fehler, den du in den ersten zwei Jahren deines Unternehmens gemacht hast?",
+              "Welche unangenehme operative Wahrheit über das Skalieren von Unternehmen gibt niemand öffentlich zu?",
+              "Wenn du morgen deine drei größten Kunden oder 50 % deines Umsatzes verlieren würdest: Wie sieht dein Rettungsplan für Tag eins aus?",
+              "Welche finanzielle oder operative Kennzahl überprüfst du jeden Montagmorgen mit größter Akribie?",
+            ],
+          },
+          {
+            category: "Lustige & Unterhaltsame Fragen",
+            items: [
+              "Was ist der absolut bizarrste Karriererat, den dir jemals jemand mit völlig ernster Miene gegeben hat?",
+              "Welche völlig banale oder absurde Meinung verteidigst du bis aufs Blut?",
+              "Wenn du unsere Intro-Musik durch einen peinlichen 90er-Jahre-Popsong ersetzen müsstest: Welcher Track läuft?",
+              "Was war dein bisher peinlichster Moment bei einem Live-Auftritt, Podcast oder Video-Call?",
+            ],
+          },
         ],
       },
     ],
   },
   "monetization-calculator": {
-    metaTitle: "Podcast-Einnahmen-Rechner: TKP & Sponsoring | Pod Studio",
+    metaTitle: "Podcast-Einnahmen & CPM-Rechner | Pod Studio",
     metaDescription:
-      "Berechne deine Einnahmen mit unserem kostenlosen Podcast-Einnahmen-Rechner. Modelliere Host-Read-TKP-Werbung, Hörerzahlen und Sponsoring-Deals. Gratis.",
+      "Berechne deine Einnahmen mit dem Podcast-Einnahmen- & CPM-Rechner. Plane Werbeumsätze, CPM-Preise und Hörer-Werte. Gratis und ohne Anmeldung.",
     overview: [
-      "Der Podcast-Einnahmen-Rechner prognostiziert dein Erlöspotenzial anhand gängiger Branchenformeln: (Downloads ÷ 1.000) × TKP × belegte Werbeplätze.",
-      "Kalkuliere Monats- und Jahresumsätze für Pre-Roll-, Mid-Roll- und Post-Roll-Slots, variiere Belegungsquoten und berücksichtige Einnahmen aus Hörer-Abonnements für fundierte Verhandlungen.",
+      "Der Podcast-Einnahmen- & CPM-Rechner ermittelt dein potenzielles Einkommen anhand branchenüblicher CPM-Preise und Download-Zahlen: (Downloads ÷ 1.000) × CPM × belegte Werbeplätze.",
+      "Modelliere Monats- und Jahresprognosen für Pre-Roll-, Mid-Roll- und Post-Roll-Plätze, Auslastungsquoten und Mitgliedschaften, um Sponsoring-Gespräche mit fundierten Zahlen zu führen.",
     ],
     steps: [
       { title: "Downloads eingeben", text: "Trage deine durchschnittlichen Downloads pro Episode in den ersten 30 Tagen laut Hoster ein." },
@@ -313,9 +344,9 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
     ],
   },
   "cover-art-preview": {
-    metaTitle: "Podcast-Cover-Größenprüfer: Apple & Spotify | Pod Studio",
+    metaTitle: "Podcast-Cover-Größe & Vorgaben: Apple & Spotify | Pod Studio",
     metaDescription:
-      "Prüfe die Podcast-Cover-Größe und Spezifikationen für Apple und Spotify. Teste 3000x3000px Grafiken auf Sperrbildschirmen, Dark Mode und Feeds. Gratis.",
+      "Prüfe deine Podcast-Cover-Größe für Apple und Spotify. Teste 3000x3000px Grafiken auf Smartphones, Sperrbildschirmen und Feeds. Kostenlos.",
     overview: [
       "Der Podcast-Cover-Größenprüfer simuliert dein Cover-Design in realistischen Verzeichnis-Ansichten von Apple Podcasts und Spotify, auf Smartphone-Sperrbildschirmen und als 50x50px Miniaturansicht.",
       "Die Prüfung erfolgt zu 100 % lokal in deinem Browser und verifiziert offizielle Richtlinien: quadratisches 1:1-Seitenverhältnis, RGB-Farbraum und Abmessungen zwischen 1400x1400px und 3000x3000px.",
@@ -330,6 +361,19 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
       "Wenn der Show-Name in der Miniaturansicht unlesbar ist, wähle weniger Text oder eine größere Typografie.",
       "Platziere wichtige Elemente nicht zu nah am Rand – manche Apps schneiden die Ecken abgerundet ab.",
       "Teste die Darstellung im Hell- und Dunkelmodus; filigrane dunkle Schriften gehen auf schwarzem Grund schnell verloren.",
+    ],
+    sections: [
+      {
+        heading: "Anforderungen an die Podcast-Cover-Größe",
+        paragraphs: [
+          "Sowohl Apple Podcasts als auch Spotify verlangen für Podcast-Coverbilder ein quadratisches 1:1-Seitenverhältnis mit Abmessungen zwischen 1400 × 1400 und 3000 × 3000 Pixeln. Der empfohlene Industriestandard liegt bei 3000 × 3000 Pixeln bei 72 DPI, was eine gestochen scharfe Darstellung auf hochauflösenden Retina-Displays und TV-Geräten gewährleistet.",
+          "Bilddateien müssen im JPEG- oder PNG-Format mit dem sRGB-Farbprofil vorliegen. Vermeide CMYK-Farbmodelle, da diese bei Verzeichnissen zu Validierungsfehlern oder Farbverfälschungen auf Mobilgeräten führen. Platziere alle wichtigen Bildelemente, Host-Fotos und Schriften innerhalb des mittleren Sicherheitsbereichs von 80 %, damit sie nicht durch abgerundete Ecken oder Bedienelemente verdeckt werden.",
+        ],
+        link: {
+          text: "Vollständige Vorgabenliste ansehen: Leitfaden für Apple Podcasts & Spotify Cover-Spezifikationen →",
+          href: "/guides/apple-spotify-cover-art-specs-guide",
+        },
+      },
     ],
   },
   "rss-feed-validator": {
@@ -382,9 +426,9 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
     ],
   },
   "intro-script-generator": {
-    metaTitle: "Podcast-Intro-Skript-Generator & Hooks | Pod Studio",
+    metaTitle: "Podcast-Intro-Skript-Generator & Beispiele | Pod Studio",
     metaDescription:
-      "Schreibe fesselnde Eröffnungen mit unserem Podcast-Intro-Skript-Generator. Entdecke bewährte Intro-Beispiele für Solo-, Co-Host- und Gast-Shows. Gratis.",
+      "Schreibe ein Podcast-Intro-Skript in wenigen Minuten. Entdecke Beispiele und eine kostenlose Skript-Vorlage für Solos und Interviews. Gratis.",
     overview: [
       "Der Podcast-Intro-Skript-Generator hilft dir beim Verfassen der ersten 30 bis 60 Sekunden einer Episode: eine mitreißende Hook gefolgt von einer präzisen Begrüßung, die Absprungraten drastisch senkt.",
       "Wähle Sendeformat, Gastdetails und Vortragston, um teleprompter-taugliche Manuskripte mit Neugier-Triggern und klaren Hörer-Mehrwerten zu erstellen.",
@@ -402,7 +446,7 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
     ],
     sections: [
       {
-        heading: "Podcast-Intro-Beispiele",
+        heading: "Podcast-Intro-Skript-Beispiele",
         intro: "Die ersten dreißig Sekunden entscheiden darüber, ob ein Hörer die Folge beendet oder weiterspringt. Hier sind fünf praxiserprobte Podcast-Intro-Beispiele:",
         list: [
           {
@@ -426,6 +470,24 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
             description: "«Möchtest du auf Platz eins bei Google ranken, ohne hunderte Backlinks aufzubauen? In den nächsten zwanzig Minuten zerlegen wir exakt jene Content-Architektur, mit der wir monatlich 450.000 Besucher generieren».",
           },
         ],
+      },
+      {
+        heading: "Podcast-Intro-Skript-Vorlage",
+        intro: "Nutze diese modulare Podcast-Intro-Vorlage für Solo-Episoden, Co-Host-Gespräche oder Interviews:",
+        template: `[00:00 - 00:15] COLD-OPEN-HOOK
+HOST: „Was wäre, wenn der eine Ratschlag, den jeder in deiner Branche gibt, dich in Wahrheit tausende Euro kostet?“
+
+[00:15 - 00:30] SHOW-INTRO & EPISODENVERSPRECHEN
+HOST: „Willkommen zurück bei [Name der Show]. Ich bin [Name des Hosts]. In der heutigen Episode analysieren wir [Thema der Folge], damit du [konkreter Nutzen für den Hörer] erreichst.“
+
+[00:30 - 00:45] GAST-VORSTELLUNG ODER AGENDA
+HOST: „[Interview-Show]: Unser heutiger Gast ist [Name des Gastes], [Titel/Unternehmen]. Wir sprechen über die Wendepunkte und den genauen Plan, mit dem er [Meilenstein] erreicht hat.“
+HOST: „[Solo-Show]: In den nächsten 20 Minuten teile ich den 3-Schritte-Plan, mit dem wir dieses Problem von Grund auf gelöst haben.“
+
+[00:45 - 01:00] CALL-TO-ACTION & INTRO-MUSIK
+HOST: „Abonniere die Show am besten direkt auf Apple Podcasts oder Spotify, um keine neue Folge zu verpassen. Legen wir direkt los.“
+
+[INTRO-MUSIK BLENDET EIN UND LEITET ZUR FOLGE ÜBER]`,
       },
     ],
   },
@@ -574,23 +636,51 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
     ],
   },
   "hook-generator": {
-    metaTitle: "Podcast-Hook- & Cold-Open-Generator | Pod Studio",
+    metaTitle: "Podcast-Hook-Generator für Social Clips | Pod Studio",
     metaDescription:
-      "Schreibe packende Cold Opens und Audio-Hooks mit unserem kostenlosen Podcast-Hook-Generator. Verhindere Hörer-Absprünge in den ersten 60 Sekunden. Gratis.",
+      "Erstelle virale Video-Hooks für TikTok, Reels und Shorts mit unserem Podcast-Hook-Generator. Steigere Interaktionen auf Social Media. Gratis.",
     overview: [
-      "Der Podcast-Hook- & Cold-Open-Generator formuliert packende Einstiegszitate und neugierig machende Video-Hooks aus deinen Themen, um Hörer von der ersten Sekunde an zu fesseln.",
-      "Erstelle prägnante Textzeilen, optimiert für Kurzvideos auf TikTok, Instagram Reels und YouTube Shorts sowie für aufmerksamkeitsstarke Cold Opens zu Episodenbeginn.",
+      "Der Podcast-Hook-Generator für Social Clips erstellt scroll-stoppende Eröffnungszeilen und neugierig machende Video-Hooks für TikTok, Instagram Reels und YouTube Shorts aus deinen Episodenthemen.",
+      "Entwickelt für Podcaster, die Audio-Highlights in virale Kurzvideos verwandeln wollen, die Zuschauer in den ersten zwei Sekunden fesseln und neue Abonnenten zur vollständigen Folge führen.",
     ],
     steps: [
-      { title: "Thema eingeben", text: "Beschreibe den Inhalt der Folge oder die Branche, an die sich der Clip richtet." },
-      { title: "Gast erwähnen (optional)", text: "Füge den Gast hinzu, wenn dessen Bekanntheit oder Fachwissen der Hauptanreiz ist." },
-      { title: "Hook-Stil wählen", text: "Filtere nach Stil und vergleiche verschiedene provokante oder neugierig machende Ansätze." },
-      { title: "Kopieren & posten", text: "Nutze die beste Zeile als Text-Overlay oder Caption und verlinke auf die vollständige Episode." },
+      { title: "Thema des Clips eingeben", text: "Beschreibe den Kernaspekt oder die zentrale Erkenntnis, die das Social-Video behandelt." },
+      { title: "Gast erwähnen (optional)", text: "Füge den Gast oder dessen Zitat hinzu, wenn dessen Bekanntheit Aufmerksamkeit stiftet." },
+      { title: "Hook-Stil wählen", text: "Wähle zwischen konträren Thesen, hohem Einsatz, überraschenden Zahlen, Neugier-Lücken und Musterunterbrechungen." },
+      { title: "Kopieren & posten", text: "Verwende die Hook als Text-Overlay im Video und Caption, verlinkt mit der ganzen Folge." },
     ],
     tips: [
-      "Die erste Zeile hat etwa zwei Sekunden, um die Aufmerksamkeit zu sichern: Beginne mit der konkretesten Aussage.",
-      "Achte darauf, dass der Clip das Versprechen der Hook auch einlöst, um das Vertrauen deiner Hörer zu erhalten.",
-      "Versehe jedes Video mit Untertiteln; viele Nutzer schauen Social-Media-Videos ohne Ton an.",
+      "Die ersten drei Sekunden entscheiden, ob Zuschauer weiterscrollen – beginne mit hoher Spannung oder einer offenen Frage.",
+      "Kombiniere markanten On-Screen-Text mit animierten Untertiteln; über 70 % der Social Feeds werden stumm konsumiert.",
+      "Achte darauf, dass der Clip das Versprechen der Hook einlöst; irreführende Klick-Köder zerstören langfristiges Vertrauen.",
+    ],
+    sections: [
+      {
+        heading: "Podcast-Social-Clip-Hook-Beispiele",
+        intro: "Kurzvideos auf TikTok, Instagram Reels und YouTube Shorts stehen und fallen mit den ersten zwei Sekunden. Hier sind fünf bewährte Hook-Formeln mit Beispielen:",
+        list: [
+          {
+            title: "1. Der provokante Mythos-Zerstörer",
+            description: "«Hört auf, neuen Creatorn zu sagen, sie sollen täglich posten. Genau dieser Rat führt bei 95 % aller Podcasts vor Folge 10 zum Burnout». (Widerspricht der gängigen Meinung und provoziert sofortige Kommentare).",
+          },
+          {
+            title: "2. Der dramatische Story-Opener",
+            description: "«An einem Sonntag um 2 Uhr nachts stürzte unsere Hauptdatenbank ab – mit 400.000 Euro an ausstehenden Kundenzahlungen. Hier ist, was wir in den nächsten 60 Minuten taten». (Baut sofortige narrative Spannung auf).",
+          },
+          {
+            title: "3. Die überraschende Daten-Hook",
+            description: "«Wir haben 1.200 Podcast-Episoden analysiert, die dieses Jahr erschienen sind. Genau eine Retention-Taktik hat die Durchhörquote über alle Genres hinweg verdoppelt». (Verspricht harte Fakten statt Meinungen).",
+          },
+          {
+            title: "4. Die offene Neugier-Lücke",
+            description: "«Es gibt einen geheimen Grund, warum die erfolgreichsten Spotify-Shows in den ersten fünf Minuten niemals Rabattcodes erwähnen. Am Ende dieses Clips wisst ihr, warum». (Hält die Auflösung zurück, damit das Video bis zum Ende geschaut wird).",
+          },
+          {
+            title: "5. Die Musterunterbrechung",
+            description: "«Schließe dein Analytics-Dashboard sofort. Wenn deine Show stagniert, macht der fünfmal tägliche Blick auf deine Downloads alles nur noch schlimmer». (Direkter, fordernder Appell, der das Weiterscrollen stoppt).",
+          },
+        ],
+      },
     ],
   },
   "transcript-formatter": {

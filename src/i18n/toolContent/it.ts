@@ -4,7 +4,7 @@ export const itToolContent: ToolContentRecord = {
   "episode-title-generator": {
     metaTitle: "Generatore di Titoli per Episodi Podcast | Pod Studio",
     metaDescription:
-      "Crea titoli accattivanti per episodi podcast con il nostro generatore gratuito. Formule per curiosità, tutorial e ospiti testate. Gratis e senza registrazione.",
+      "Crea titoli per episodi podcast con il nostro generatore gratuito. Formule per curiosità, how-to e ospiti testate su Apple e Spotify. Gratis.",
     overview: [
       "Il Generatore di Titoli trasforma un argomento, e facoltativamente il nome di un ospite, in una lista di idee ad alto CTR basate su schemi psicologici collaudati: curiosità, promesse pratiche, opinioni controcorrente e ganci incentrati sull'ospite.",
       "Creato per i creator che sanno cosa tratta l'episodio ma cercano titoli accattivanti testati per massimizzare gli ascolti sugli schermi smartphone di Apple Podcasts e Spotify.",
@@ -24,7 +24,7 @@ export const itToolContent: ToolContentRecord = {
   "show-notes-generator": {
     metaTitle: "Generatore di Show Notes e Modello Podcast | Pod Studio",
     metaDescription:
-      "Crea note per episodi ordinate con il modello di show notes gratuito. Riassunti, timestamp, bio ospiti e link esportabili in Markdown. Gratis, senza iscrizione.",
+      "Crea note per episodi ordinate con il modello di show notes gratuito. Riassunti, timestamp, bio ospiti e link in Markdown. Gratis, senza iscrizione.",
     overview: [
       "Il Generatore di Show Notes organizza i dati dell'episodio in note strutturate e ottimizzate per la ricerca: riassunto coinvolgente, biografia dell'ospite, capitoli con timestamp, punti chiave e risorse citate.",
       "Il risultato è formattato in Markdown, HTML o testo semplice, pronto da incollare direttamente su Buzzsprout, Libsyn, Podbean, Spotify for Creators, YouTube o sul tuo sito senza riformattare.",
@@ -75,15 +75,15 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
   "podcast-name-generator": {
     metaTitle: "Generatore di Nomi per Podcast: Idee di Nomi | Pod Studio",
     metaDescription:
-      "Trova idee per nomi di podcast originali e memorabili per nicchia con il generatore gratuito. Verifica la disponibilità del tuo show. Gratis, senza registrazione.",
+      "Trova idee per nomi di podcast originali per nicchia con il generatore gratuito. Verifica la disponibilità del tuo show. Gratis, senza registrazione.",
     overview: [
-      "Il Generatore di Nomi per Podcast ti aiuta a trovare idee per nomi di podcast memorabili e accattivanti, suddivisi per nicchia tematica, parole chiave personalizzate e tono del brand.",
-      "Usa queste idee per creare una lista selezionata per il tuo nuovo programma audio e controlla la disponibilità su Apple Podcasts, Spotify e registrar di domini prima del debutto.",
+      "Il Generatore di Nomi per Podcast ti aiuta a trovare idee originali e memorabili per il tuo show in ogni categoria. Che tu stia cercando un generatore casuale di nomi per podcast per superare il blocco creativo o un'alternativa basata su intelligenza artificiale per creare un brand autorevole, scopri angolature che spaziano dai titoli descrittivi a quelli più brillanti.",
+      "Usa queste idee per creare una lista ristretta per il tuo nuovo programma audio e controlla la disponibilità su Apple Podcasts, Spotify e registrar di domini prima del debutto.",
     ],
     steps: [
-      { title: "Scegli la nicchia", text: "Seleziona il genere del programma: tecnologia, finanza, true crime, crescita personale e altro." },
+      { title: "Scegli la nicchia", text: "Seleziona il genere del programma: tecnologia, finanza, sport, comicità, true crime o crescita personale." },
       { title: "Aggiungi una parola (facoltativo)", text: "Inserisci una parola o un tema da includere nel nome: un argomento, un luogo, un'idea ricorrente." },
-      { title: "Scegli uno stile e salva", text: "Cambia stile di brand e salva i tre-cinque nomi che ti immagini di pronunciare a ogni episodio." },
+      { title: "Scegli uno stile o genera a caso", text: "Cambia stile di brand, testa combinazioni casuali e salva i tre-cinque nomi che preferisci." },
       { title: "Verifica prima del lancio", text: "Cerca doppioni su Apple Podcasts e Spotify e controlla tu stesso dominio e profili social." },
     ],
     tips: [
@@ -124,6 +124,15 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
             ],
           },
           {
+            category: "Sport e Atletica",
+            items: [
+              "Il Protocollo da Bordo Campo",
+              "Recupero Audio",
+              "Il Manuale di Resistenza",
+              "Fuorigioco e Tattica",
+            ],
+          },
+          {
             category: "Salute e Benessere",
             items: [
               "Mente e Prestazione",
@@ -157,7 +166,7 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
   "episode-outline-builder": {
     metaTitle: "Modello di Scaletta e Script per Podcast | Pod Studio",
     metaDescription:
-      "Struttura l'episodio con il modello di scaletta e script per podcast. Pianifica blocchi, pause sponsor, tempi precisi e argomenti. Gratis, senza registrazione.",
+      "Struttura l'episodio con il modello di scaletta per podcast. Pianifica blocchi, pause sponsor, tempi precisi e argomenti. Gratis, senza registrazione.",
     overview: [
       "La Scaletta Episodio crea un piano di produzione dettagliato e cadenzato: una roadmap interattiva che distribuisce i minuti tra gancio, stacco musicale, argomenti cardine, sponsor e call to action.",
       "Aiuta conduttori, co-host e produttori a mantenere il ritmo della conversazione e a rispettare la durata prestabilita senza dover scrivere ogni singola battuta.",
@@ -210,6 +219,10 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
 - Unica Call to Action: "Lascia una recensione su Apple Podcasts o seguici su Spotify."
 - Anticipazione del prossimo episodio.
 - Dissolvenza della sigla finale.`,
+        link: {
+          text: "Scarica il modello gratuito di script per podcast (PDF e Google Docs) →",
+          href: "/downloads/podcast-script-template.pdf",
+        },
       },
     ],
   },
@@ -275,6 +288,24 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
               "Dove possono trovarti i nostri ascoltatori per sostenere il tuo lavoro e seguire i tuoi progetti?",
             ],
           },
+          {
+            category: "Domande su Business e Imprenditoria",
+            items: [
+              "Qual è stato l'errore di assunzione o strategico più costoso che hai commesso nei primi due anni della tua attività?",
+              "Qual è una realtà operativa scomoda sulla crescita aziendale che nessuno ammette pubblicamente?",
+              "Se domani perdessi i tuoi 3 clienti principali o il 50% del fatturato, qual è il tuo piano d'azione per il primo giorno?",
+              "Qual è una metrica finanziaria o operativa che controlli ossessivamente ogni lunedì mattina?",
+            ],
+          },
+          {
+            category: "Domande Divertenti e Leggere",
+            items: [
+              "Qual è il consiglio professionale più bizzarro che qualcuno ti abbia mai dato con la massima serietà?",
+              "Qual è una collina futile o ridicola su cui sei pronto a dare battaglia?",
+              "Se potessi sostituire la nostra sigla con una canzone pop anni '90 imbarazzante, quale sceglieresti?",
+              "Qual è stata la tua peggiore gaffe o disastro durante una diretta, presentazione o chiamata Zoom?",
+            ],
+          },
         ],
       },
     ],
@@ -282,9 +313,9 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
   "monetization-calculator": {
     metaTitle: "Calcolatore Guadagni e CPM per Podcast | Pod Studio",
     metaDescription:
-      "Calcola le entrate del tuo podcast con il calcolatore di guadagni e CPM. Modella sponsorizzazioni, download e spazi pubblicitari. Gratis, senza registrazione.",
+      "Calcola le entrate del podcast con il calcolatore di guadagni e CPM. Modella sponsorizzazioni, download e spazi pubblicitari. Gratis, senza registrazione.",
     overview: [
-      "Il Calcolatore di Guadagni per Podcast stima il tuo potenziale di guadagno basandosi sui tassi CPM standard del settore: (download ÷ 1.000) × CPM × spazi pubblicitari venduti.",
+      "Il Calcolatore di Guadagni e CPM per Podcast stima il tuo potenziale di guadagno basandosi sui tassi CPM standard del settore: (download ÷ 1.000) × CPM × spazi pubblicitari venduti.",
       "Simula proiezioni mensili e annuali su spazi pre-roll, mid-roll e post-roll, tassi di riempimento e abbonamenti ascoltatori per negoziare accordi con gli sponsor in modo consapevole.",
     ],
     steps: [
@@ -331,6 +362,19 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
       "Evita di posizionare testi importanti troppo vicini ai bordi: molte app arrotondano gli angoli della grafica.",
       "Effettua la verifica sia in modalità chiara sia in modalità scura: testi scuri e sottili possono sparire sui temi dark.",
     ],
+    sections: [
+      {
+        heading: "Requisiti di dimensione della copertina del podcast",
+        paragraphs: [
+          "Sia Apple Podcasts che Spotify richiedono che l'immagine di copertina del podcast sia un quadrato perfetto 1:1 con dimensioni comprese tra 1400 × 1400 e 3000 × 3000 pixel. Lo standard industriale consigliato è di 3000 × 3000 pixel a 72 DPI, garantendo una visualizzazione nitida sia sui display Retina degli smartphone che sugli schermi TV.",
+          "I file grafici devono essere salvati in formato JPEG o PNG nello spazio colore sRGB. Evita i profili colore CMYK, che causano errori di validazione o colori alterati sui dispositivi mobili. Mantieni tutti gli elementi visivi critici, il titolo e i ritratti all'interno dell'area sicura centrale dell'80%, per evitare che vengano coperti da angoli arrotondati o pulsanti di riproduzione.",
+        ],
+        link: {
+          text: "Consulta la checklist completa dei requisiti: Guida alle Specifiche di Copertina per Apple Podcasts e Spotify →",
+          href: "/guides/apple-spotify-cover-art-specs-guide",
+        },
+      },
+    ],
   },
   "rss-feed-validator": {
     metaTitle: "Validatore e Controllo Feed RSS per Podcast | Pod Studio",
@@ -355,7 +399,7 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
   "episode-timestamp-generator": {
     metaTitle: "Generatore Timestamp e Capitoli per Podcast | Pod Studio",
     metaDescription:
-      "Genera timestamp nel formato corretto e capitoli YouTube per descrizioni e show notes. Crea marcatori cliccabili per Spotify e Apple. Gratis e senza iscrizione.",
+      "Genera timestamp e capitoli YouTube per descrizioni e show notes. Crea marcatori cliccabili per Spotify e Apple Podcasts. Gratis e senza iscrizione.",
     overview: [
       "Il Generatore di Timestamp e Capitoli converte le note di produzione in marcatori temporali standard e capitoli per YouTube, abilitando le barre di navigazione interattive su YouTube, Spotify e player di podcast.",
       "Permetti al tuo pubblico di raggiungere subito gli argomenti di interesse e aiuta i motori di ricerca a indicizzare i singoli capitoli per migliorare la reperibilità del tuo show.",
@@ -402,7 +446,7 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
     ],
     sections: [
       {
-        heading: "Esempi di introduzione per podcast",
+        heading: "Esempi di script di introduzione per podcast",
         intro: "I primi trenta secondi determinano se l'ascoltatore completerà la puntata o passerà a un altro programma. Ecco cinque esempi comprovati di introduzione da riadattare al tuo podcast:",
         list: [
           {
@@ -427,12 +471,30 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
           },
         ],
       },
+      {
+        heading: "Modello di script di introduzione per podcast",
+        intro: "Usa questo modello modulare di script per intro di puntate in singolo, a due voci o interviste:",
+        template: `[00:00 - 00:15] COLD OPEN HOOK
+HOST: "E se l'unico consiglio che tutti ripetono nel tuo settore ti stesse in realtà costando migliaia di euro?"
+
+[00:15 - 00:30] INTRO DELLO SHOW E PROMESSA DELLA PUNTATA
+HOST: "Bentornati su [Nome Podcast]. Sono [Nome Host]. Nella puntata di oggi analizzeremo [Argomento della Puntata] per aiutarti a [beneficio specifico per l'ascoltatore]."
+
+[00:30 - 00:45] PRESENTAZIONE OSPITE O SCALETTA
+HOST: "[Intervista]: L'ospite di oggi è [Nome Ospite], [Ruolo/Azienda]. Esploriamo i punti di svolta cruciali e la strategia esatta che ha utilizzato per raggiungere [Traguardo Chiave]."
+HOST: "[Puntata Singola]: Nei prossimi 20 minuti condividerò il framework in 3 passaggi che abbiamo ideato per risolvere questo problema partendo da zero."
+
+[00:45 - 01:00] CALL TO ACTION E SIGLA
+HOST: "Assicurati di iscriverti su Apple Podcasts o Spotify per non perdere le prossime uscite. Iniziamo subito!"
+
+[LA SIGLA MUSICALE SALE E SFUMA NELL'EPISODIO]`,
+      },
     ],
   },
   "audience-growth-estimator": {
     metaTitle: "Previsione di Crescita Ascolti del Podcast | Pod Studio",
     metaDescription:
-      "Calcola le proiezioni di download del tuo podcast a 12 mesi in base ai dati attuali, alla frequenza e al tasso di crescita mensile. Gratis, senza iscrizione.",
+      "Calcola le proiezioni di download del tuo podcast a 12 mesi in base a dati attuali, frequenza e tasso di crescita mensile. Gratis, senza iscrizione.",
     overview: [
       "Il Simulatore di Crescita del Pubblico stima i download futuri applicando un tasso di crescita mensile ai tuoi ascolti attuali per episodio, moltiplicato per la frequenza di pubblicazione.",
       "È un modello matematico di crescita composta a scopo orientativo, non una previsione assoluta: non calcola stagionalità o picchi virali. Usalo per impostare traguardi realistici e monitorare l'evoluzione annuale.",
@@ -472,7 +534,7 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
   "category-finder": {
     metaTitle: "Elenco Categorie Apple Podcasts e Trova Nick | Pod Studio",
     metaDescription:
-      "Esplora l'elenco ufficiale delle categorie Apple Podcasts e dei generi Spotify. Trova le sottocategorie ideali per posizionare il tuo show. Gratis e veloce.",
+      "Esplora l'elenco ufficiale delle categorie Apple Podcasts e generi Spotify. Trova le sottocategorie ideali per posizionare il tuo show. Gratis e veloce.",
     overview: [
       "Il Ricerca Categorie ti guida attraverso la tassonomia ufficiale di Apple Podcasts e i generi Spotify per identificare categorie primarie e secondarie in cui il tuo show può distinguersi e scalare le classifiche.",
       "Esplora la gerarchia completa, cerca per argomento e confronta i livelli di concorrenza di nicchia per posizionare al meglio il tuo podcast.",
@@ -574,29 +636,57 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
     ],
   },
   "hook-generator": {
-    metaTitle: "Generatore di Ganci e Cold Open per Podcast | Pod Studio",
+    metaTitle: "Generatore di Ganci per Clip Podcast | Pod Studio",
     metaDescription:
-      "Crea ganci irresistibili e cold open per clip podcast su TikTok, Reels, YouTube Shorts e social network. Cattura subito l'attenzione. Gratis, senza iscrizione.",
+      "Crea ganci irresistibili per clip su TikTok, Reels e YouTube Shorts con il generatore di hook per podcast. Aumenta l'engagement video. Gratis.",
     overview: [
-      "Il Generatore di Ganci e Cold Open crea incipit magnetici e aperture video ad alta curiosità partendo dalle idee del tuo episodio, coinvolgendo gli utenti fin dai primi istanti.",
-      "Inserisci argomento e ospite per generare formule ottimizzate per TikTok, Instagram Reels, YouTube Shorts e aperture audio in studio.",
+      "Il Generatore di Ganci per Clip Podcast crea frasi di apertura ad alto impatto e spunti video intriganti per TikTok, Instagram Reels e YouTube Shorts partendo dai temi delle tue puntate.",
+      "Pensato per i podcaster che vogliono trasformare i momenti salienti dell'audio in video social virali che catturano gli spettatori nei primi due secondi e attirano nuovi ascoltatori alle puntate complete.",
     ],
     steps: [
-      { title: "Indica l'argomento", text: "Descrivi il tema dell'episodio o il settore affrontato nello spezzone." },
-      { title: "Aggiungi l'ospite (facoltativo)", text: "Includi l'ospite speciale quando il suo nome o la sua autorevolezza costituiscono l'attrattiva principale." },
-      { title: "Scegli lo stile del gancio", text: "Filtra per approccio e confronta diverse frasi di apertura." },
-      { title: "Copia e condividi", text: "Usa il gancio come testo a schermo o didascalia e inserisci il link all'episodio integrale." },
+      { title: "Inserisci l'argomento del clip", text: "Descrivi il tema centrale o la rivelazione chiave trattata nel video breve." },
+      { title: "Aggiungi un ospite (opzionale)", text: "Includi l'ospite o la citazione quando la sua notorietà fa da gancio immediato." },
+      { title: "Scegli lo stile del gancio", text: "Scegli tra prospettive contrarie, alta posta in gioco, dati sorprendenti, open loop e rottura di schema." },
+      { title: "Copia e condividi", text: "Incolla il gancio come testo a schermo e didascalia, rimandando all'episodio completo." },
     ],
     tips: [
-      "La prima frase ha meno di due secondi per catturare l'attenzione: parti subito con l'affermazione più incisiva.",
-      "Accertati che lo spezzone mantenga la promessa del gancio: promesse disattese minano la fiducia degli ascoltatori.",
-      "Aggiungi sempre i sottotitoli a tutti i video: moltissimi utenti guardano i contenuti a volume disattivato.",
+      "I primi tre secondi decidono se l'utente scorre via: parti con alta tensione o con una domanda aperta.",
+      "Abbina un testo visibile a schermo a sottotitoli dinamici: oltre il 70% dei feed social viene guardato senza audio.",
+      "Assicurati che il clip mantenga la promessa del gancio: i titoli ingannevoli distruggono la fiducia del pubblico.",
+    ],
+    sections: [
+      {
+        heading: "Esempi di ganci per clip podcast",
+        intro: "Sui video brevi di TikTok, Instagram Reels e YouTube Shorts tutto si decide nei primi due secondi. Ecco cinque formule comprovate con esempi pratici:",
+        list: [
+          {
+            title: "1. Lo Sfatatore di Miti Controintuitivo",
+            description: "«Smettetela di dire ai nuovi creator di pubblicare ogni giorno. È il consiglio che porta al burnout il 95% dei podcast prima dell'episodio 10». (Mette in discussione un luogo comune per stimolare commenti immediati).",
+          },
+          {
+            title: "2. L'Apertura Narrativa ad Alta Tensione",
+            description: "«Domenica alle 2 di notte il nostro database principale è andato in crash con 400.000 euro di pagamenti in sospeso. Ecco esattamente cosa abbiamo fatto nei successivi 60 minuti». (Crea suspense narrativa istantanea).",
+          },
+          {
+            title: "3. Il Gancio Basato sui Dati",
+            description: "«Abbiamo analizzato 1.200 episodi di podcast pubblicati quest'anno. Una sola tattica di fidelizzazione ha raddoppiato la percentuale di completamento in ogni genere». (Promette evidenze concrete invece di opinioni).",
+          },
+          {
+            title: "4. L'Open Loop della Curiosità",
+            description: "«C'è un motivo segreto per cui i podcast più ascoltati su Spotify non nominano codici sconto nei primi cinque minuti. Entro la fine di questo clip scoprirai il perché». (Trattiene l'attenzione fino alla rivelazione).",
+          },
+          {
+            title: "5. L'Interruzione di Schema",
+            description: "«Chiudi subito la tua dashboard delle statistiche. Se il tuo show non cresce, controllare i download cinque volte al giorno peggiora solo le cose». (Invito diretto e perentorio che blocca lo scrolling).",
+          },
+        ],
+      },
     ],
   },
   "transcript-formatter": {
     metaTitle: "Formattatore di Trascrizioni per Podcast | Pod Studio",
     metaDescription:
-      "Formatta trascrizioni audio nello standard ideale per podcast. Inserisci etichette speaker, organizza paragrafi e rimuovi i riempitivi. Gratis, nel browser.",
+      "Formatta trascrizioni audio nello standard ideale per podcast. Inserisci etichette speaker, organizza paragrafi ed elimina riempitivi. Gratis nel browser.",
     overview: [
       "Il Formattatore di Trascrizioni per Podcast rielabora i testi grezzi generati dai software di trascrizione automatica trasformandoli in formati standard con identificazione degli interlocutori, rimozione delle intercalari e paragrafi ordinati.",
       "Funziona al 100% nel tuo browser tutelando la privacy, preparando testi accessibili ideali per pagine dedicate, show notes orientate alla SEO e articoli per il blog.",
@@ -653,7 +743,7 @@ Si riduce essenzialmente a tre elementi: un'apertura ripetibile che promette val
   "review-response-generator": {
     metaTitle: "Risposte a Recensioni e Ringraziamenti Show | Pod Studio",
     metaDescription:
-      "Rispondi alle recensioni degli ascoltatori e crea ringraziamenti da leggere in onda, per elogi e critiche costruttive. Modelli professionali e rapidi. Gratis.",
+      "Rispondi alle recensioni degli ascoltatori e crea ringraziamenti da leggere in puntata, per complimenti e critiche. Modelli pronti. Gratis.",
     overview: [
       "Il Generatore di Risposte a Recensioni ti aiuta a replicare ai feedback degli utenti e a scrivere ringraziamenti in onda che valorizzano la community e stimolano nuove recensioni positive.",
       "Gestisce con misura recensioni entusiaste a 5 stelle, osservazioni costruttive e critiche ingenerose, mantenendo toni cortesi ed evidenziando miglioramenti concreti.",

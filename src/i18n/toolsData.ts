@@ -305,8 +305,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "アイデア & ブランディング",
     },
     "monetization-calculator": {
-      title: "ポッドキャスト収益計算ツール",
-      shortTitle: "CPM・収益計算機",
+      title: "ポッドキャスト収益＆CPM計算ツール",
+      shortTitle: "ポッドキャスト収益＆CPM計算ツール",
       description: "再生回数に基づき、月間広告収益、ホストリードCPM料率、プログラマティック収益を予測。",
       longDescription: "2026年の業界CPM相場（$18〜$35）に基づき収益を試算。プレロール、ミッドロール、ポストロール、有料ファンコミュニティの推定売上を明確に把握できます。",
       categoryLabel: "成長 & 収益化",
@@ -348,7 +348,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "description-generator": {
       title: "ポッドキャスト 番組・エピソード説明文生成ツール",
-      shortTitle: "説明文ジェネレーター",
+      shortTitle: "番組＆エピソード説明文ジェネレーター",
       description: "Apple PodcastsとSpotifyの検索上位表示を意識した、SEOに強い概要文を作成。",
       longDescription: "ディレクトリ検索での露出を高める。キーワード、SNSリンク、明確なリスナー価値を盛り込んだ魅力的な番組紹介文とエピソード要約を生成します。",
       categoryLabel: "コンテンツ & 構成",
@@ -361,8 +361,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "オーディオ & 技術",
     },
     "hook-generator": {
-      title: "ポッドキャストフック＆オープニング生成ツール",
-      shortTitle: "SNSフック生成",
+      title: "ポッドキャストSNSクリップ＆フック生成ツール",
+      shortTitle: "SNSクリップフック生成",
       description: "エピソードからTikTokやリール動画でスクロールを止める引用とキャプションを抽出。",
       longDescription: "音声をバイラル動画に変える。TikTok、Instagramリール、YouTubeショートに最適化されたインパクト抜群の見出しとキャプションを瞬時に作成します。",
       categoryLabel: "アイデア & ブランディング",
@@ -390,7 +390,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "collab-finder": {
       title: "ゲスト出演依頼 & コラボ提案文ビルダー",
-      shortTitle: "ゲスト依頼 & コラボ提案",
+      shortTitle: "ゲスト出演・ピッチ作成",
       description: "承諾率の高いゲストオファー文や、他番組ホストへの相互プロモーション提案書を作成。",
       longDescription: "定型文の依頼メールは卒業。相互のリスナー親和性と具体的な提供価値を的確にアピールする、プロフェッショナルなゲスト依頼文を作成できます。",
       categoryLabel: "成長 & 収益化",
@@ -434,8 +434,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Idéation & Marque",
     },
     "monetization-calculator": {
-      title: "Calculateur de Revenus de Podcast",
-      shortTitle: "Calculateur de Revenus",
+      title: "Calculateur de Revenus et CPM de Podcast",
+      shortTitle: "Calculateur de Revenus et CPM",
       description: "Estimez vos revenus mensuels, tarifs CPM de lecture hôte et sponsoring programmatique selon vos écoutes.",
       longDescription: "Estimez le potentiel de revenus de votre émission selon les standards CPM 2026 (18 $ à 35 $). Projetez vos revenus en pré-roll, mid-roll, post-roll et abonnements de fans.",
       categoryLabel: "Croissance & Monétisation",
@@ -477,7 +477,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "description-generator": {
       title: "Générateur de Descriptions de Podcast et d'Épisodes",
-      shortTitle: "Générateur de Descriptions",
+      shortTitle: "Générateur de Descriptions de Podcast et Épisodes",
       description: "Créez des descriptions riches en mots-clés optimisées pour le référencement Apple Podcasts et Spotify.",
       longDescription: "Améliorez votre visibilité dans les annuaires de podcasts. Rédigez des résumés attrayants avec mots-clés ciblés, liens utiles et appels à l'action précis.",
       categoryLabel: "Contenu & Écriture",
@@ -490,8 +490,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio & Technique",
     },
     "hook-generator": {
-      title: "Générateur d'Accroches et d'Introductions de Podcast",
-      shortTitle: "Accroches Réseaux Sociaux",
+      title: "Générateur d'Accroches pour Clips Sociaux",
+      shortTitle: "Accroches Clips Sociaux",
       description: "Extrayez des accroches captivantes et citations percutantes de vos épisodes pour TikTok et Reels.",
       longDescription: "Transformez vos enregistrements en vidéos virales. Créez des titres accrocheurs, des fils de discussion et des descriptions optimisées pour TikTok, Reels et YouTube Shorts.",
       categoryLabel: "Idéation & Marque",
@@ -519,7 +519,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "collab-finder": {
       title: "Générateur d'Invitations d'Invités et Propositions de Collab",
-      shortTitle: "Invitations & Collabs",
+      shortTitle: "Créateur de Pitchs",
       description: "Rédigez des demandes d'interview personnalisées et des propositions de promotion croisée entre créateurs.",
       longDescription: "En finissez avec les e-mails génériques. Générez des propositions d'interview soignées et des échanges de diffusion mettant en valeur la complémentarité de vos audiences.",
       categoryLabel: "Croissance & Monétisation",
@@ -563,8 +563,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Ideen & Branding",
     },
     "monetization-calculator": {
-      title: "Podcast-Einnahmen-Rechner",
-      shortTitle: "TKP & Umsatzrechner",
+      title: "Podcast-Einnahmen- & CPM-Rechner",
+      shortTitle: "Podcast-Einnahmen- & CPM-Rechner",
       description: "Berechne monatliche Werbeeinnahmen, Host-Read-TKP-Raten und Sponsoring-Umsätze anhand deiner Downloads.",
       longDescription: "Ermittle dein Umsatzpotenzial mit realistischen 2026er TKP-Richtwerten ($18–$35). Berechne Einnahmen aus Pre-Roll-, Mid-Roll- und Post-Roll-Slots sowie Fan-Abonnements.",
       categoryLabel: "Wachstum & Monetarisierung",
@@ -606,7 +606,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "description-generator": {
       title: "Podcast-Kanal- und Folgen-Beschreibungs-Generator",
-      shortTitle: "Beschreibungs-Generator",
+      shortTitle: "Show- & Episoden-Beschreibungs-Generator",
       description: "Erstelle suchmaschinenoptimierte Beschreibungen für Apple Podcasts und Spotify mit passenden Keywords.",
       longDescription: "Werde in Podcast-Verzeichnissen besser gefunden. Verfasse überzeugende Kanalbeschreibungen und Episoden-Teaser mit Suchbegriffen, Social-Links und klarem Mehrwert.",
       categoryLabel: "Inhalt & Skripte",
@@ -619,8 +619,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio & Technik",
     },
     "hook-generator": {
-      title: "Podcast-Hook- & Cold-Open-Generator",
-      shortTitle: "Social-Media-Hooks",
+      title: "Social-Clip- & Hook-Generator",
+      shortTitle: "Social-Clip-Hooks",
       description: "Extrahiere aufmerksamkeitsstarke Zitate und Video-Hooks aus deinen Folgen für TikTok, Reels und Shorts.",
       longDescription: "Mache aus deinen Audio-Aufnahmen virale Video-Clips. Generiere griffige Überschriften, Social-Threads und Video-Captions für TikTok, Instagram Reels und YouTube Shorts.",
       categoryLabel: "Ideen & Branding",
@@ -648,7 +648,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "collab-finder": {
       title: "Gast-Anfragen & Kooperations-Pitch-Generator",
-      shortTitle: "Gast- & Kooperations-Pitch",
+      shortTitle: "Gast-Pitch-Builder",
       description: "Verfasse überzeugende Interview-Anfragen und Vorschläge für gegenseitige Podcast-Empfehlungen.",
       longDescription: "Schluss mit unpersönlichen Standard-Mails. Generiere individuelle Anfragen für Wunsch-Gäste und gemeinsame Aktionen, die den beiderseitigen Nutzen herausstellen.",
       categoryLabel: "Wachstum & Monetarisierung",
@@ -692,8 +692,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Ideação e Marca",
     },
     "monetization-calculator": {
-      title: "Calculadora de Renda e Receita de Podcast",
-      shortTitle: "Calculadora de Renda",
+      title: "Calculadora de Receita e CPM de Podcast",
+      shortTitle: "Calculadora de Receita e CPM",
       description: "Estime ganhos mensais com patrocínios, anúncios lidos pelo apresentador e publicidade por downloads.",
       longDescription: "Calcule o potencial financeiro do seu podcast com benchmarks reais de CPM para 2026 ($18 a $35). Projete receitas com pre-roll, mid-roll, post-roll e assinaturas.",
       categoryLabel: "Crescimento e Monetização",
@@ -735,7 +735,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "description-generator": {
       title: "Gerador de Descrições para Podcasts e Episódios",
-      shortTitle: "Gerador de Descrições",
+      shortTitle: "Gerador de Descrições de Programa e Episódios",
       description: "Crie descrições ricas em palavras-chave otimizadas para SEO no Apple Podcasts e Spotify.",
       longDescription: "Seja encontrado com facilidade nos diretórios. Crie apresentações cativantes e resumos de episódios com termos estratégicos, links e chamadas claras.",
       categoryLabel: "Conteúdo e Roteiro",
@@ -748,8 +748,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Áudio e Técnico",
     },
     "hook-generator": {
-      title: "Gerador de Ganchos e Aberturas de Podcast",
-      shortTitle: "Ganchos para Vídeos e Redes",
+      title: "Gerador de Ganchos para Clipes Sociais",
+      shortTitle: "Ganchos para Clipes Sociais",
       description: "Extraia frases de impacto e ganchos em vídeo a partir das transcrições para bombar no TikTok e Reels.",
       longDescription: "Transforme áudios em vídeos virais. Crie títulos atrativos, sequências de posts e legendas dinâmicas para TikTok, Instagram Reels e YouTube Shorts.",
       categoryLabel: "Ideação e Marca",
@@ -777,7 +777,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "collab-finder": {
       title: "Criador de Convites para Convidados e Parcerias",
-      shortTitle: "Convites e Colaborações",
+      shortTitle: "Criador de Propostas de Pitch",
       description: "Elabore convites personalizados para entrevistas e propostas de divulgação mútua entre criadores.",
       longDescription: "Esqueça e-mails genéricos. Crie propostas de entrevista e trocas de divulgação personalizadas que destacam a afinidade de público e valor mútuo.",
       categoryLabel: "Crescimento e Monetização",
@@ -821,8 +821,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "기획 및 브랜딩",
     },
     "monetization-calculator": {
-      title: "팟캐스트 수익 계산기",
-      shortTitle: "CPM 수익 계산기",
+      title: "팟캐스트 수익 및 CPM 계산기",
+      shortTitle: "팟캐스트 수익 및 CPM 계산기",
       description: "다운로드 수를 바탕으로 월간 광고 수익, 호스트 리드 CPM 단가, 프로그래매틱 광고 매출을 예측합니다.",
       longDescription: "2026년 업계 표준 CPM($18~$35)을 적용해 내 방송의 예상 수익을 계산하세요. 프리롤, 미드롤, 포스트롤 광고 및 팬 후원 모델의 매출을 분석합니다.",
       categoryLabel: "성장 및 수익화",
@@ -864,7 +864,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "description-generator": {
       title: "팟캐스트 프로그램 및 에피소드 설명문 생성기",
-      shortTitle: "설명문 생성기",
+      shortTitle: "방송 및 에피소드 설명문 생성기",
       description: "Apple Podcasts와 Spotify 검색 상위 노출에 최적화된 키워드 중심의 방송 소개글을 만듭니다.",
       longDescription: "오디오 검색 결과에서 주목받으세요. 주요 검색 키워드, 소셜 링크, 명확한 청취 혜택을 담은 완성도 높은 에피소드 소개글을 자동으로 작성합니다.",
       categoryLabel: "콘텐츠 및 대본",
@@ -877,8 +877,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "오디오 및 기술",
     },
     "hook-generator": {
-      title: "팟캐스트 훅 및 콜드 오프닝 생성기",
-      shortTitle: "쇼츠 훅 생성기",
+      title: "팟캐스트 소셜 클립 및 훅 생성기",
+      shortTitle: "소셜 클립 훅 생성기",
       description: "에피소드 녹취록에서 TikTok, Reels, Shorts 영상의 스크롤을 멈추게 할 강력한 인용구를 추출합니다.",
       longDescription: "오디오를 바이럴 숏폼 영상으로 바꾸세요. 틱톡, 인스타그램 릴스, 유튜브 쇼츠에 딱 맞는 시선 강탈 헤드라인과 자막 카피를 제공합니다.",
       categoryLabel: "기획 및 브랜딩",
@@ -906,7 +906,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "collab-finder": {
       title: "게스트 섭외 및 팟캐스트 콜라보 제안서 작성기",
-      shortTitle: "섭외 및 콜라보 제안서",
+      shortTitle: "게스트 섭외 피치 작성기",
       description: "게스트 섭외 성공률을 높이는 정중한 제안 메일과 타 팟캐스트와의 교차 홍보 제안서를 작성합니다.",
       longDescription: "형식적인 섭외 메일은 그만. 두 방송의 청취자 교집합과 서로에게 줄 수 있는 가치를 부각하는 세련된 섭외 제안서를 생성해 드립니다.",
       categoryLabel: "성장 및 수익화",
@@ -950,8 +950,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Ideazione e Brand",
     },
     "monetization-calculator": {
-      title: "Calcolatore di Guadagni e Riconoscimenti Podcast",
-      shortTitle: "Calcolatore CPM e Ricavi",
+      title: "Calcolatore di Guadagni e CPM per Podcast",
+      shortTitle: "Calcolatore Guadagni e CPM",
       description: "Stima i ricavi pubblicitari mensili, le tariffe CPM di lettura host e gli annunci programmatici in base ai download.",
       longDescription: "Calcola il potenziale di guadagno del tuo podcast con i benchmark CPM del 2026 ($18–$35). Proietta i ricavi da pre-roll, mid-roll, post-roll e abbonamenti dei fan.",
       categoryLabel: "Crescita e Guadagni",
@@ -993,7 +993,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "description-generator": {
       title: "Generatore di Descrizioni per Podcast ed Episodi",
-      shortTitle: "Generatore di Descrizioni",
+      shortTitle: "Descrizioni Show ed Episodi",
       description: "Crea descrizioni ricche di parole chiave ottimizzate per il posizionamento SEO su Apple e Spotify.",
       longDescription: "Fatti trovare più facilmente nelle directory di podcast. Crea sinossi avvincenti con parole chiave mirate, collegamenti social e un chiaro invito all'ascolto.",
       categoryLabel: "Contenuti e Testi",
@@ -1006,7 +1006,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio e Tecnico",
     },
     "hook-generator": {
-      title: "Generatore di Ganci e Aperture per Podcast",
+      title: "Generatore di Ganci per Clip Social",
       shortTitle: "Ganci per Clip Social",
       description: "Estrai citazioni a effetto e ganci video dalle tue trascrizioni per attirare l'attenzione su TikTok e Reels.",
       longDescription: "Trasforma i tuoi audio in video virali. Genera titoli d'impatto, discussioni social e didascalie ottimizzate per TikTok, Instagram Reels e YouTube Shorts.",
@@ -1035,7 +1035,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "collab-finder": {
       title: "Creatore di Proposte per Ospiti e Collaborazioni",
-      shortTitle: "Proposte di Collaborazione",
+      shortTitle: "Creatore di Pitch",
       description: "Redigi inviti efficaci per interviste e proposte di promozione incrociata con altri conduttori di podcast.",
       longDescription: "Dimentica le email generiche. Crea proposte di intervista personalizzate e scambi di promozione che evidenzino il valore reciproco e l'affinità tra i vostri pubblici.",
       categoryLabel: "Crescita e Guadagni",

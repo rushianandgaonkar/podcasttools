@@ -77,13 +77,13 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
     metaDescription:
       "Descubra ideias criativas de nomes para podcast por nicho com nosso gerador gratuito. Nomes marcantes para seu novo programa de áudio. Grátis e rápido.",
     overview: [
-      "O Gerador de Nomes para Podcast ajuda você a criar ideias de nomes de podcast memoráveis e com força de marca, organizadas por nicho, palavras-chave e tom desejado.",
-      "Use essas ideias de nomes de podcast para criar uma lista sólida para seu novo programa e verifique a disponibilidade nos diretórios do Apple Podcasts, Spotify e registradores de domínios antes de lançar.",
+      "O Gerador de Nomes para Podcast ajuda você a encontrar ideias memoráveis e marcantes para seu programa em qualquer nicho. Seja procurando um gerador aleatório de nomes para podcast para superar bloqueios criativos ou uma alternativa com inteligência artificial para títulos de marca, explore abordagens desde as descritivas até as mais autênticas.",
+      "Use essas ideias para montar uma lista selecionada para seu novo podcast e verifique a disponibilidade no Apple Podcasts, Spotify e registradores de domínio antes do lançamento.",
     ],
     steps: [
-      { title: "Escolha seu nicho", text: "Selecione o gênero do programa: tecnologia, finanças, true crime, desenvolvimento pessoal e outros." },
+      { title: "Escolha seu nicho", text: "Selecione o gênero do programa: tecnologia, finanças, esportes, comédia, true crime ou desenvolvimento pessoal." },
       { title: "Adicione uma palavra (opcional)", text: "Digite uma palavra ou tema que deve aparecer no nome — um assunto, um lugar ou uma ideia recorrente." },
-      { title: "Escolha um estilo e favorite", text: "Troque o estilo de marca e salve os três a cinco nomes que você se imagina dizendo em cada episódio." },
+      { title: "Escolha um estilo ou gere aleatório", text: "Troque o estilo de marca, experimente combinações aleatórias e salve os três a cinco nomes favoritos." },
       { title: "Confira antes de lançar", text: "Procure duplicados no Apple Podcasts e no Spotify e verifique você mesmo o domínio e as redes sociais." },
     ],
     tips: [
@@ -115,12 +115,21 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
             ],
           },
           {
-            category: "Comédia e Entretenimento",
+            category: "Comédia e Humor",
             items: [
               "Ninguém Pediu Minha Opinião",
               "Levemente Cínico",
               "Rindo do Imprevisto",
               "O Absurdo do Dia",
+            ],
+          },
+          {
+            category: "Esportes e Atletismo",
+            items: [
+              "O Protocolo de Lateral",
+              "Áudio da Prorrogação",
+              "O Manual de Resistência",
+              "Na Zona de Ataque",
             ],
           },
           {
@@ -210,6 +219,10 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
 - Chamada para Ação Única: "Deixe sua avaliação no Apple Podcasts ou siga no Spotify."
 - Prévia do próximo episódio.
 - Vinheta final em fade out.`,
+        link: {
+          text: "Baixar modelo de roteiro de podcast grátis (PDF e Google Docs) →",
+          href: "/downloads/podcast-script-template.pdf",
+        },
       },
     ],
   },
@@ -275,6 +288,24 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
               "Onde os ouvintes podem encontrar você, acompanhar seus projetos e apoiar seu trabalho?",
             ],
           },
+          {
+            category: "Negócios e Empreendedorismo",
+            items: [
+              "Qual foi o erro de contratação ou estratégico mais caro que você cometeu nos primeiros dois anos do seu negócio?",
+              "Qual é uma realidade operacional desconfortável sobre escalar empresas que ninguém admite publicamente?",
+              "Se você perdesse seus 3 maiores clientes ou 50% da sua receita amanhã, qual seria o seu plano de ação para o primeiro dia?",
+              "Qual é a métrica financeira ou operacional que você acompanha obsessivamente toda segunda-feira de manhã?",
+            ],
+          },
+          {
+            category: "Perguntas Divertidas e Descontraídas",
+            items: [
+              "Qual é o conselho profissional mais bizarro que alguém já lhe deu com a maior seriedade do mundo?",
+              "Qual é uma opinião fútil ou ridícula que você está pronto para defender até o fim?",
+              "Se você pudesse substituir nossa música de abertura por qualquer hit pop constrangedor dos anos 90, qual tocaria?",
+              "Qual foi o seu pior desastre ao vivo, em palestra ou em reunião no Zoom?",
+            ],
+          },
         ],
       },
     ],
@@ -330,6 +361,19 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
       "Se o título não for legível na miniatura, use menos palavras ou uma fonte maior.",
       "Não coloque textos importantes perto das bordas — alguns apps arredondam os cantos.",
       "Teste nos modos claro e escuro; texto fino e escuro some em fundos escuros.",
+    ],
+    sections: [
+      {
+        heading: "Requisitos de tamanho de capa de podcast",
+        paragraphs: [
+          "Tanto o Apple Podcasts quanto o Spotify exigem que a arte de capa do podcast seja uma imagem quadrada com proporção perfeita de 1:1, medindo entre 1400 × 1400 e 3000 × 3000 pixels. A recomendação padrão do setor é de 3000 × 3000 pixels a 72 DPI, garantindo máxima nitidez em telas Retina de smartphones e televisores.",
+          "Os arquivos devem ser salvos no formato JPEG ou PNG no espaço de cores sRGB. Evite perfis de cor CMYK, que geram erros de validação nos diretórios ou causam cores desbotadas em aparelhos móveis. Mantenha todos os textos essenciais, o nome do programa e fotos dos apresentadores na área de segurança central de 80%, evitando que cantos arredondados ou botões do tocador cubram as informações.",
+        ],
+        link: {
+          text: "Consulte o guia completo de especificações: Guia de Medidas e Requisitos de Capas para Apple Podcasts e Spotify →",
+          href: "/guides/apple-spotify-cover-art-specs-guide",
+        },
+      },
     ],
   },
   "rss-feed-validator": {
@@ -402,7 +446,7 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
     ],
     sections: [
       {
-        heading: "Exemplos de introdução para podcast",
+        heading: "Exemplos de roteiro de introdução de podcast",
         intro: "Os primeiros trinta segundos definem se o ouvinte continuará ouvindo ou passará para o próximo programa. Aqui estão cinco exemplos de introdução comprovados para adaptar ao seu show:",
         list: [
           {
@@ -426,6 +470,24 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
             description: "“Quer ranquear na primeira página do Google sem gastar fortunas com anúncios? Nos próximos vinte minutos, vamos revelar a arquitetura de conteúdo exata que utilizamos para gerar 400.000 visitas mensais.”",
           },
         ],
+      },
+      {
+        heading: "Modelo de roteiro de introdução de podcast",
+        intro: "Use este modelo modular de roteiro de introdução para episódios solo, em dupla ou com convidados:",
+        template: `[00:00 - 00:15] COLD OPEN HOOK
+APRESENTADOR: "E se o conselho que todo mundo repete no seu setor estivesse, na verdade, custando milhares de reais a você?"
+
+[00:15 - 00:30] INTRO DO SHOW E PROMESSA DO EPISÓDIO
+APRESENTADOR: "Bem-vindos de volta ao [Nome do Podcast]. Eu sou [Nome do Apresentador]. No episódio de hoje, vamos dissecar [Tema do Episódio] para que você possa [benefício concreto para o ouvinte]."
+
+[00:30 - 00:45] APRESENTAÇÃO DO CONVIDADO OU PAUTA
+APRESENTADOR: "[Entrevista]: O convidado de hoje é [Nome do Convidado], [Cargo/Empresa]. Conversamos sobre os momentos decisivos e a metodologia exata que ele usou para alcançar [Grande Meta]."
+APRESENTADOR: "[Episódio Solo]: Nos próximos 20 minutos, compartilho a estrutura em 3 passos que desenvolvemos para solucionar esse problema do zero."
+
+[00:45 - 01:00] CHAMADA PARA AÇÃO E VINHETA
+APRESENTADOR: "Inscreva-se no Apple Podcasts ou Spotify para não perder nenhum episódio novo. Vamos direto ao assunto!"
+
+[VINHETA MUSICAL SOBE E ABRE O EPISÓDIO]`,
       },
     ],
   },
@@ -574,23 +636,51 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
     ],
   },
   "hook-generator": {
-    metaTitle: "Gerador de Ganchos para Podcast e Vídeos | Pod Studio",
+    metaTitle: "Gerador de Ganchos para Cortes de Podcast | Pod Studio",
     metaDescription:
-      "Crie ganchos irresistíveis e cold opens marcantes para cortes de podcast no TikTok, Reels, Shorts e redes sociais. Prenda a atenção. Grátis, sem cadastro.",
+      "Crie ganchos irresistíveis para TikTok, Reels e Shorts com o gerador de hooks de podcast. Aumente o engajamento dos seus cortes. Grátis.",
     overview: [
-      "O Gerador de Ganchos e Cold Opens para Podcast cria frases de abertura magnéticas para cortes de vídeo e inícios de programas, retendo a audiência desde os segundos iniciais.",
-      "Insira o tema do episódio e convidados para receber ganchos adaptados para TikTok, Instagram Reels, YouTube Shorts e introduções diretas no microfone.",
+      "O Gerador de Ganchos para Cortes de Podcast cria aberturas impactantes e ganchos de alta curiosidade para TikTok, Instagram Reels e YouTube Shorts a partir das ideias dos seus episódios.",
+      "Projetado para podcasters que desejam transformar trechos de áudio em vídeos virais nas redes sociais, prendendo a atenção dos espectadores nos primeiros dois segundos e conquistando novos assinantes.",
     ],
     steps: [
-      { title: "Informe o tema", text: "Descreva o tema ou setor do episódio de onde sai o corte." },
-      { title: "Adicione um convidado (opcional)", text: "Inclua o convidado quando o nome ou a experiência dele for o atrativo." },
-      { title: "Escolha um estilo", text: "Filtre por estilo de gancho e compare várias aberturas." },
-      { title: "Copie e publique", text: "Use o melhor gancho como texto na tela ou legenda e coloque o link do episódio completo." },
+      { title: "Insira o tema do corte", text: "Descreva o assunto principal ou o grande aprendizado que o vídeo curto apresenta." },
+      { title: "Mencione o convidado (opcional)", text: "Inclua o convidado ou uma frase de impacto quando sua autoridade chamar a atenção." },
+      { title: "Filtre por estilo de gancho", text: "Escolha entre ângulos contrários, alta tensão, métricas surpreendentes, looping de curiosidade e quebra de padrão." },
+      { title: "Copie e publique", text: "Cole o gancho como legenda ou texto na tela do vídeo, com link para o episódio completo." },
     ],
     tips: [
-      "A primeira linha tem uns dois segundos para prender a atenção — comece pela afirmação mais específica.",
-      "Garanta que o corte cumpre o que o gancho promete; ganchos enganosos minam a confiança.",
-      "Coloque legendas em todos os vídeos; muita gente assiste sem som.",
+      "Os primeiros três segundos definem se o espectador vai deslizar a tela: comece com alta tensão ou uma pergunta aberta.",
+      "Combine texto destacado na tela com legendas animadas: mais de 70% dos vídeos nas redes sociais são assistidos sem som.",
+      "Certifique-se de que o corte realmente entregue o que o gancho promete; promessas falsas arruínam a confiança do público.",
+    ],
+    sections: [
+      {
+        heading: "Exemplos de ganchos para cortes de podcast",
+        intro: "Em plataformas como TikTok, Instagram Reels e YouTube Shorts, o sucesso de um vídeo é definido nos dois primeiros segundos. Aqui estão cinco fórmulas comprovadas com exemplos práticos:",
+        list: [
+          {
+            title: "1. O Quebrador de Mitos Contraintuitivo",
+            description: "«Parem de dizer aos novos criadores para postar todos os dias. É exatamente esse conselho que esgota 95% dos podcasts antes do episódio 10». (Contesta a sabedoria popular para gerar comentários imediatos).",
+          },
+          {
+            title: "2. A Abertura de História de Alta Tensão",
+            description: "«Num domingo às 2 da manhã, nosso banco de dados principal caiu com 400 mil reais em pagamentos de clientes pendentes. Isto foi exatamente o que fizemos nos 60 minutos seguintes». (Cria suspense e narrativa envolvente na hora).",
+          },
+          {
+            title: "3. O Gancho com Dados Reveladores",
+            description: "«Analisamos 1.200 episódios de podcasts lançados este ano. Uma única tática de retenção dobrou a taxa de conclusão em todos os gêneros». (Promete evidências sólidas em vez de achismos).",
+          },
+          {
+            title: "4. O Loop Aberto de Curiosidade",
+            description: "«Existe um motivo secreto pelo qual os maiores podcasts do Spotify nunca falam cupons de desconto nos primeiros cinco minutos. Até o final deste corte, você vai entender por quê». (Segura a resolução até o fim).",
+          },
+          {
+            title: "5. A Quebra de Padrão",
+            description: "«Feche o painel de estatísticas agora mesmo. Se o seu programa não está crescendo, checar downloads cinco vezes ao dia só piora as coisas». (Ordem direta e enérgica que interrompe a rolagem da tela).",
+          },
+        ],
+      },
     ],
   },
   "transcript-formatter": {
@@ -653,7 +743,7 @@ Tudo se resume a três pilares: uma abertura consistente que promete valor diret
   "review-response-generator": {
     metaTitle: "Respostas a Avaliações e Menções no Podcast | Pod Studio",
     metaDescription:
-      "Responda a avaliações de ouvintes e crie menções no ar com simpatia para elogios e críticas construtivas. Modelos profissionais e rápidos. Ferramenta grátis.",
+      "Responda a avaliações de ouvintes e crie menções no ar para elogios e críticas construtivas. Modelos profissionais e rápidos. Ferramenta grátis.",
     overview: [
       "O Gerador de Respostas a Avaliações ajuda você a responder avaliações nos diretórios e escrever agradecimentos no ar que valorizam os ouvintes e incentivam novos reviews positivos.",
       "Abrange avaliações entusiasmadas de 5 estrelas, sugestões construtivas e críticas duras, mantendo tom profissional, sem atitudes defensivas e com foco em melhorias reais.",

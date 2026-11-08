@@ -75,15 +75,15 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
   "podcast-name-generator": {
     metaTitle: "Generador de Nombres de Podcast Gratis | Pod Studio",
     metaDescription:
-      "Genera ideas de nombres de podcast memorables según tu nicho con nuestro generador de nombres de podcast gratuito. Comprueba disponibilidad hoy. Gratis.",
+      "Crea nombres originales con nuestro generador de nombres de podcast gratuito. Explora ideas por temática y comprueba disponibilidad. Gratis.",
     overview: [
-      "El Generador de Nombres de Podcast te ayuda a descubrir ideas de nombres de podcast memorables y con fuerza de marca según tu temática, palabras clave y estilo deseado: desde nombres directos hasta opciones ingeniosas.",
-      "Utiliza estas ideas de nombres de podcast para crear una lista sólida de opciones y luego verifica su disponibilidad en Apple Podcasts, Spotify y registros de dominios antes del lanzamiento.",
+      "El Generador de Nombres de Podcast te ayuda a descubrir ideas de nombres de podcast memorables para cualquier nicho. Tanto si buscas un generador aleatorio de nombres de podcast para romper bloqueos creativos como una alternativa con inteligencia artificial para títulos de marca, explora enfoques desde descriptivos hasta ingeniosos.",
+      "Utiliza estas ideas de nombres de podcast para crear una lista sólida de opciones y verifica su disponibilidad en Apple Podcasts, Spotify y registros de dominios antes del lanzamiento.",
     ],
     steps: [
-      { title: "Elige tu nicho", text: "Selecciona el género que encaja con tu programa: tecnología, finanzas, true crime, desarrollo personal y más." },
+      { title: "Elige tu nicho", text: "Selecciona el género que encaja con tu programa: tecnología, finanzas, deportes, comedia o crímenes reales." },
       { title: "Añade una palabra (opcional)", text: "Escribe una palabra o tema que quieras en el nombre: un asunto, un lugar o una idea recurrente." },
-      { title: "Elige un estilo y preselecciona", text: "Cambia de estilo de marca y guarda los tres a cinco nombres que te imagines diciendo en cada episodio." },
+      { title: "Elige un estilo o genera al azar", text: "Cambia de estilo de marca, prueba combinaciones aleatorias y guarda los tres a cinco nombres favoritos." },
       { title: "Verifica antes de lanzar", text: "Busca duplicados en Apple Podcasts y Spotify y comprueba tú mismo el dominio y las redes sociales." },
     ],
     tips: [
@@ -121,6 +121,15 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
               "Ligeramente Cínicos",
               "Riendo en el Intento",
               "El Ridículo Cotidiano",
+            ],
+          },
+          {
+            category: "Deportes y Atletismo",
+            items: [
+              "El Protocolo de Banda",
+              "Tiempo Añadido Audio",
+              "Zona de Campeones",
+              "El Cuaderno del Atleta",
             ],
           },
           {
@@ -210,6 +219,10 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
 - Llamada a la acción (CTA): "Suscríbete en Spotify y deja tu reseña en Apple Podcasts".
 - Avance del próximo episodio.
 - Despedida y fundido musical de salida.`,
+        link: {
+          text: "Descargar plantilla de guion de podcast gratis (PDF y Google Docs) →",
+          href: "/downloads/podcast-script-template.pdf",
+        },
       },
     ],
   },
@@ -275,16 +288,34 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
               "¿Dónde pueden encontrarte los oyentes y apoyar tus proyectos actuales?",
             ],
           },
+          {
+            category: "Negocios y Emprendimiento",
+            items: [
+              "¿Cuál fue el error de contratación o estratégico más costoso que cometiste en los dos primeros años de tu empresa?",
+              "¿Cuál es una realidad incómoda sobre escalar un negocio que nadie admite públicamente?",
+              "Si mañana perdieras tus 3 mejores clientes o el 50% de tus ingresos, ¿cuál es tu plan de acción para el primer día?",
+              "¿Qué métrica financiera u operativa analizas de forma obsesiva todos los lunes por la mañana?",
+            ],
+          },
+          {
+            category: "Preguntas Divertidas y Desenfadadas",
+            items: [
+              "¿Cuál es el consejo profesional más absurdo que alguien te ha dado con total seriedad?",
+              "¿Cuál es una opinión trivial o ridícula por la que estarías dispuesto a discutir sin fin?",
+              "Si pudieras sustituir nuestra sintonía por cualquier canción pop de los 90, ¿cuál sonaría?",
+              "¿Cuál ha sido tu peor desastre en directo, presentación o reunión por videollamada?",
+            ],
+          },
         ],
       },
     ],
   },
   "monetization-calculator": {
-    metaTitle: "Calculadora de Ingresos de Podcast | Pod Studio",
+    metaTitle: "Calculadora de Ingresos y CPM para Podcast | Pod Studio",
     metaDescription:
-      "Calcula cuánto gana tu programa con nuestra calculadora de ingresos de podcast gratuita. Modela tarifas CPM, descargas y acuerdos de patrocinio. Gratis.",
+      "Calcula tus ingresos con la calculadora de ingresos y CPM para podcast. Simula patrocinios, tarifas CPM y valor de oyentes. Gratis, sin registro.",
     overview: [
-      "La Calculadora de Ingresos de Podcast estima las ganancias potenciales de tu programa aplicando la fórmula publicitaria estándar: (descargas ÷ 1.000) × CPM × menciones comercializadas.",
+      "La Calculadora de Ingresos y CPM para Podcast estima las ganancias potenciales de tu programa aplicando la fórmula publicitaria estándar: (descargas ÷ 1.000) × CPM × menciones comercializadas.",
       "Modela ingresos mensuales y anuales considerando espacios pre-roll, mid-roll y post-roll, porcentaje de ocupación y suscripciones de oyentes para negociar tarifas con datos reales.",
     ],
     steps: [
@@ -313,9 +344,9 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
     ],
   },
   "cover-art-preview": {
-    metaTitle: "Tamaño de Portada de Podcast: Verificador | Pod Studio",
+    metaTitle: "Medidas de Portadas de Podcast: Apple y Spotify | Pod Studio",
     metaDescription:
-      "Comprueba el tamaño de portada de podcast para Apple y Spotify. Previsualiza tu diseño de 3000x3000px en móviles, pantallas de bloqueo y modo oscuro. Gratis.",
+      "Comprueba las medidas y requisitos de tu portada de podcast para Apple y Spotify. Previsualiza carátulas 3000x3000px en móvil y feeds. Gratis.",
     overview: [
       "La herramienta de Verificación de Tamaño y Vista Previa de Portadas de Podcast comprueba tu diseño en interfaces reales de Apple Podcasts, Spotify, pantallas de bloqueo de móviles y miniaturas de 50x50 píxeles.",
       "La comprobación se realiza 100% en tu navegador y valida los estándares técnicos oficiales: relación de aspecto cuadrada 1:1, espacio de color RGB y resolución de entre 1400x1400px y 3000x3000px.",
@@ -330,6 +361,19 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
       "Si el título no se lee bien en tamaño miniatura, reduce palabras o amplía la tipografía.",
       "Evita colocar textos esenciales cerca de los bordes: algunas plataformas redondean las esquinas.",
       "Comprueba el diseño en modo claro y oscuro para evitar que los textos se pierdan en fondos oscuros.",
+    ],
+    sections: [
+      {
+        heading: "Requisitos de tamaño para portadas de podcast",
+        paragraphs: [
+          "Tanto Apple Podcasts como Spotify exigen que la portada del podcast sea una imagen cuadrada exacta 1:1 con unas dimensiones entre 1400 × 1400 y 3000 × 3000 píxeles. El estándar recomendado por la industria es de 3000 × 3000 píxeles a 72 ppp, lo que garantiza una visualización nítida tanto en pantallas Retina de smartphones como en televisores.",
+          "Los archivos deben guardarse en formato JPEG o PNG y utilizar el espacio de color sRGB. Evita perfiles CMYK, que provocan errores de validación o se ven decolorados en dispositivos móviles. Mantén los elementos gráficos clave, el nombre del programa y las fotografías dentro del área segura central del 80% para evitar que las esquinas redondeadas o la interfaz del reproductor tapen la información.",
+        ],
+        link: {
+          text: "Consulta la guía completa de especificaciones: Medidas y Requisitos de Portadas para Apple Podcasts y Spotify →",
+          href: "/guides/apple-spotify-cover-art-specs-guide",
+        },
+      },
     ],
   },
   "rss-feed-validator": {
@@ -402,7 +446,7 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
     ],
     sections: [
       {
-        heading: "Ejemplos de intro para podcast",
+        heading: "Ejemplos de guiones de intro de podcast",
         intro: "Los primeros treinta segundos deciden si un oyente continúa el episodio o se marcha. Aquí tienes cinco ejemplos probados que puedes adaptar a tu estilo:",
         list: [
           {
@@ -426,6 +470,24 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
             description: "«¿Quieres posicionarte en la primera página de Google sin dedicar meses a conseguir enlaces externos? En los próximos veinte minutos desglosamos la arquitectura de contenidos exacta que utilizamos para alcanzar 450.000 visitas al mes».",
           },
         ],
+      },
+      {
+        heading: "Plantilla de guion de intro de podcast",
+        intro: "Utiliza esta plantilla modular de guion de intro para episodios en solitario, con copresentador o entrevistas:",
+        template: `[00:00 - 00:15] GANCHO DE APERTURA (COLD OPEN)
+PRESENTADOR: "¿Qué pasaría si el consejo que todos te dan en tu sector te estuviera costando miles de dólares?"
+
+[00:15 - 00:30] INTRO DEL PROGRAMA Y PROMESA DEL EPISODIO
+PRESENTADOR: "Bienvenidos de nuevo a [Nombre del Podcast]. Soy [Nombre del Presentador]. En el episodio de hoy desglosamos [Tema del Episodio] para que puedas [beneficio concreto para el oyente]."
+
+[00:30 - 00:45] PRESENTACIÓN DEL INVITADO O AGENDA
+PRESENTADOR: "[Con Invitado]: Nuestro invitado de hoy es [Nombre del Invitado], [Cargo/Empresa]. Analizamos los momentos clave y la estrategia exacta que utilizó para lograr [Hito Principal]."
+PRESENTADOR: "[Episodio Solo]: En los próximos 20 minutos, comparto el método de 3 pasos que creamos para solucionar este problema desde cero."
+
+[00:45 - 01:00] LLAMADA A LA ACCIÓN Y SINTONÍA
+PRESENTADOR: "Asegúrate de suscribirte en Apple Podcasts o Spotify para no perderte ningún episodio. ¡Empezamos!"
+
+[LA SINTONÍA SUBE Y DA PASO AL EPISODIO]`,
       },
     ],
   },
@@ -574,23 +636,51 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
     ],
   },
   "hook-generator": {
-    metaTitle: "Generador de Ganchos y Aperturas de Podcast | Pod Studio",
+    metaTitle: "Generador de Ganchos para Clips de Podcast | Pod Studio",
     metaDescription:
-      "Crea ganchos de apertura atractivos con nuestro generador de ganchos para podcast gratuito. Evita el abandono de oyentes en los primeros 60 segundos. Gratis.",
+      "Crea ganchos virales para TikTok, Reels y Shorts con nuestro generador de ganchos para podcast. Aumenta la interacción en redes sociales. Gratis.",
     overview: [
-      "El Generador de Ganchos y Aperturas de Podcast crea frases de impacto y aperturas intrigantes a partir del tema de tu episodio para enganchar a los oyentes desde el primer instante.",
-      "Genera titulares diseñados para clips de TikTok, Instagram Reels, YouTube Shorts y cold opens de audio que despiertan el interés inmediato de la audiencia.",
+      "El Generador de Ganchos para Clips de Podcast crea frases de impacto y aperturas intrigantes para TikTok, Instagram Reels y YouTube Shorts a partir de las ideas de tu episodio.",
+      "Diseñado para creadores que quieren transformar momentos destacados en clips sociales virales que enganchen a los espectadores en los primeros dos segundos y atraigan nuevos oyentes.",
     ],
     steps: [
-      { title: "Escribe la temática", text: "Describe el asunto del episodio o el sector al que va dirigido el clip." },
-      { title: "Añade un invitado (opcional)", text: "Indica el invitado especial cuando su presencia sea el gancho principal." },
-      { title: "Elige un estilo", text: "Filtra por estilo de gancho y compara varias opciones de apertura." },
-      { title: "Copia y comparte", text: "Usa la mejor frase como subtítulo o texto en pantalla y enlaza al episodio completo." },
+      { title: "Escribe el tema del clip", text: "Describe el asunto del episodio o la idea clave que aborda el clip para redes sociales." },
+      { title: "Añade un invitado (opcional)", text: "Indica el invitado especial cuando su presencia o cita capte la atención." },
+      { title: "Filtra por estilo", text: "Alterna entre ángulos contraintuitivos, alto impacto, datos sorprendentes, bucle de curiosidad e interrupción de patrón." },
+      { title: "Copia y comparte", text: "Pega el gancho como texto en pantalla y subtítulo de tu vídeo, enlazando al episodio completo." },
     ],
     tips: [
-      "La primera frase tiene apenas un par de segundos para captar la atención: empieza con la afirmación más concreta.",
-      "Asegúrate de que el contenido del audio cumpla la expectativa del gancho para no defraudar al oyente.",
-      "Añade subtítulos a todos tus clips de video: una gran parte de la audiencia los reproduce sin sonido.",
+      "Los primeros tres segundos deciden si el usuario pasa al siguiente vídeo: empieza con tensión o una pregunta abierta.",
+      "Combina texto grande en pantalla con subtítulos animados; más del 70% de los usuarios ven vídeos en redes sin sonido.",
+      "Asegúrate de que el clip responda a la promesa del gancho; las trampas de clics destruyen la confianza de tu audiencia.",
+    ],
+    sections: [
+      {
+        heading: "Ejemplos de ganchos para clips de podcast",
+        intro: "Los clips en TikTok, Instagram Reels y YouTube Shorts viven o mueren en los dos primeros segundos. Aquí tienes cinco fórmulas de ganchos probadas con ejemplos reales:",
+        list: [
+          {
+            title: "1. El Cazador de Mitos Contraintuitivo",
+            description: "«Deja de decirle a los nuevos creadores que publiquen a diario. Esta recomendación agota al 95% de los podcasts antes del episodio 10». (Desafía la sabiduría convencional para desatar comentarios inmediatos).",
+          },
+          {
+            title: "2. La Historia de Alto Impacto",
+            description: "«Un domingo a las 2 de la madrugada, nuestra base de datos se cayó con 400.000 dólares en pagos pendientes. Esto es lo que hicimos en los siguientes 60 minutos». (Genera tensión narrativa al instante).",
+          },
+          {
+            title: "3. El Gancho Basado en Datos",
+            description: "«Analizamos 1.200 episodios de podcast publicados este año. Una única táctica de retención duplicó el porcentaje de escucha completa en todos los géneros». (Promete evidencia empírica en lugar de opiniones).",
+          },
+          {
+            title: "4. El Bucle de Curiosidad Abierto",
+            description: "«Hay una razón secreta por la que los podcasts top de Spotify nunca mencionan códigos de descuento en los primeros cinco minutos. Al final de este clip sabrás por qué». (Mantiene el misterio para que lo vean hasta el final).",
+          },
+          {
+            title: "5. La Interrupción de Patrón",
+            description: "«Cierra tus estadísticas ahora mismo. Si tu programa no crece, mirar las descargas cinco veces al día solo lo empeora». (Llamada directa y enérgica que frena el scroll).",
+          },
+        ],
+      },
     ],
   },
   "transcript-formatter": {
