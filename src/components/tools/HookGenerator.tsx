@@ -71,12 +71,13 @@ export function HookGenerator() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
-              Episode Subject / Industry
+              Social Clip Topic / Industry <span className="text-neutral-500 font-normal">(TikTok, Reels, Shorts)</span>
             </label>
             <input
               type="text"
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
+              placeholder="e.g. Venture Capital Funding, Fitness Myths, True Crime..."
               className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
             />
           </div>

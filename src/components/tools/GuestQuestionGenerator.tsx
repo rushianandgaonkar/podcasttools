@@ -135,6 +135,26 @@ const DICTIONARY: Record<SupportedLocale, QuestionDictionary> = {
         category: "Closing",
         context: "Reflective, memorable final takeaway that sticks with listeners.",
       },
+      {
+        question: (g, p, t) => `What was the single most expensive hiring or strategic mistake you made in the first two years of building around ${t}?`,
+        category: "Tactical",
+        context: "Reveals the messy operational reality of business scaling and capital allocation.",
+      },
+      {
+        question: (g, p, t) => `If your business lost its top 20% of revenue tomorrow, what is your day-one recovery playbook?`,
+        category: "Tactical",
+        context: "High-stakes business resilience question that forces concrete risk-management advice.",
+      },
+      {
+        question: (g, p, t) => `What is the most hilariously terrible piece of professional advice you've ever received with a straight face?`,
+        category: "Icebreaker",
+        context: "Lighthearted question that immediately breaks tension and elicits authentic laughter.",
+      },
+      {
+        question: (g, p, t) => `What is a completely petty or ridiculous opinion about ${t} that you are ready to die on a hill for?`,
+        category: "Hot Take",
+        context: "Playful contrarian prompt that reveals entertaining personality traits.",
+      },
     ],
   },
   fr: {

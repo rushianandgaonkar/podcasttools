@@ -77,6 +77,16 @@ export function PodcastNameGenerator() {
     return generatedNames.filter((item) => item.style.toLowerCase() === selectedStyle.toLowerCase());
   }, [generatedNames, selectedStyle]);
 
+  const handleRandomize = () => {
+    const randomKeywords = [
+      "AI Frontier", "Sunday Long Run", "Midnight Mystery", "Unfiltered Hustle",
+      "The Daily Grind", "Inside Edge", "Behind The Scenes", "Silicon Valley",
+      "Fourth Quarter", "True Crime Files", "Laugh Track", "Coffee Break",
+    ];
+    const pick = randomKeywords[Math.floor(Math.random() * randomKeywords.length)];
+    setCustomKeyword(pick);
+  };
+
   const handleCopy = (name: string) => {
     navigator.clipboard.writeText(name);
     setCopiedName(name);
@@ -117,8 +127,11 @@ export function PodcastNameGenerator() {
               className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-white text-xs focus:outline-none focus:border-orange-500/70"
             >
               <option value="Tech & Startups">Tech & Startups</option>
+              <option value="Business & Entrepreneurship">Business & Entrepreneurship</option>
+              <option value="Sports & Athletics">Sports & Athletics</option>
               <option value="Finance & Crypto">Finance & Crypto</option>
               <option value="True Crime & Mystery">True Crime & Mystery</option>
+              <option value="Funny & Satire">Funny & Satire</option>
               <option value="Health & Longevity">Health & Longevity</option>
               <option value="Personal Growth & Mindset">Personal Growth & Mindset</option>
               <option value="Pop Culture & Movies">Pop Culture & Movies</option>
@@ -133,13 +146,24 @@ export function PodcastNameGenerator() {
             <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300">
               Custom Word or Theme <span className="text-neutral-500 font-normal">(Optional)</span>
             </label>
-            <input
-              type="text"
-              value={customKeyword}
-              onChange={(e) => setCustomKeyword(e.target.value)}
-              placeholder="e.g. AI Agents, Marathon, Indie Hacker..."
-              className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
-            />
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={customKeyword}
+                onChange={(e) => setCustomKeyword(e.target.value)}
+                placeholder="e.g. AI Agents, Sports, True Crime, Startup..."
+                className="w-full px-3.5 py-2.5 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white text-xs focus:outline-none focus:border-orange-500/70"
+              />
+              <button
+                type="button"
+                onClick={handleRandomize}
+                title="Generate random / AI topic ideas"
+                className="px-3 py-2 rounded-xl bg-studio-elevated hover:bg-studio-border text-orange-500 border border-studio-border text-xs font-semibold flex items-center gap-1.5 shrink-0 transition-colors cursor-pointer"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Random / AI</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -200,9 +224,9 @@ export function PodcastNameGenerator() {
                   </button>
                 </div>
 
-                <h3 className="text-base font-bold text-neutral-900 dark:text-white group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors mb-1.5">
+                <p className="text-base font-bold text-neutral-900 dark:text-white group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors mb-1.5">
                   {item.name}
-                </h3>
+                </p>
                 <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                   {item.tagline}
                 </p>

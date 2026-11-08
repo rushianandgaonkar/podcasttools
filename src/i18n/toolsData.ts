@@ -47,8 +47,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Ideation & Branding",
     },
     "monetization-calculator": {
-      title: "Podcast Income Calculator",
-      shortTitle: "Monetization Calculator",
+      title: "Podcast Income & CPM Calculator",
+      shortTitle: "Podcast Income & CPM Calculator",
       description: "Estimate monthly ad earnings, CPM host-read rates, and programmatic sponsorship revenue across downloads.",
       longDescription: "Calculate your podcast revenue potential using industry-standard 2026 CPM benchmarks ($18–$35). Project gross earnings from pre-roll, mid-roll, post-roll, and fan memberships based on verified download numbers.",
       categoryLabel: "Growth & Monetization",
@@ -75,7 +75,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio & Technical",
     },
     "intro-script-generator": {
-      title: "Podcast Hook & Intro Script Generator",
+      title: "Podcast Intro Script Generator",
       shortTitle: "Intro Script Generator",
       description: "Write high-retention 30-second cold open hooks and host introductions that reduce early listener drop-off.",
       longDescription: "Hook listeners in the critical first 30 seconds. Choose from 5 proven intro structures including high-stakes teasers, provocative questions, curiosity gaps, and guest highlight reels.",
@@ -90,7 +90,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "description-generator": {
       title: "Podcast Show & Episode Description Generator",
-      shortTitle: "Show Description Generator",
+      shortTitle: "Show & Episode Description Generator",
       description: "Generate keyword-rich descriptions for your overall podcast channel optimized for Apple & Spotify SEO.",
       longDescription: "Rank higher in podcast directory search results. Craft compelling channel bios and episode summaries that incorporate target search terms, social links, and clear listening value propositions.",
       categoryLabel: "Content & Scripting",
@@ -103,10 +103,10 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio & Technical",
     },
     "hook-generator": {
-      title: "Podcast Hook & Cold Open Generator",
-      shortTitle: "Hook Generator",
-      description: "Extract attention-grabbing social captions and video hooks from your episode transcripts for TikTok & Reels.",
-      longDescription: "Turn audio into viral social clips and podcast cold opens. Generate scroll-stopping headline hooks, Twitter threads, and short-form video captions.",
+      title: "Podcast Social Clip & Hook Generator",
+      shortTitle: "Social Clip Hook Generator",
+      description: "Extract attention-grabbing social captions and video hooks from your episode transcripts for TikTok, Reels, and Shorts.",
+      longDescription: "Turn audio into viral social clips. Generate scroll-stopping headline hooks, curiosity gaps, and short-form video captions for TikTok, Reels, and Shorts.",
       categoryLabel: "Ideation & Branding",
     },
     "transcript-formatter": {
@@ -132,7 +132,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "collab-finder": {
       title: "Podcast Guest Pitch & Collab Outreach Builder",
-      shortTitle: "Guest Pitch & Collab Outreach",
+      shortTitle: "Guest Pitch Builder",
       description: "Craft high-converting guest interview pitches and cross-promotion swap proposals tailored to other podcast hosts.",
       longDescription: "Stop sending generic pitch emails. Generate customized guest pitches, feed drop proposals, and interview swap requests that highlight mutual value and listener overlap.",
       categoryLabel: "Growth & Monetization",
@@ -176,8 +176,8 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Ideación y Marca",
     },
     "monetization-calculator": {
-      title: "Calculadora de Ingresos de Podcast",
-      shortTitle: "Calculadora de Ingresos",
+      title: "Calculadora de Ingresos y CPM de Podcast",
+      shortTitle: "Calculadora de Ingresos y CPM",
       description: "Calcula ingresos por publicidad, tarifas CPM de lecturas de anfitrión y patrocinio programático según descargas.",
       longDescription: "Calcula el potencial de ingresos de tu podcast usando puntos de referencia de CPM de 2026 ($18–$35). Proyecta ingresos brutos de pre-roll, mid-roll, post-roll y membresías de oyentes.",
       categoryLabel: "Crecimiento y Monetización",
@@ -204,7 +204,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio y Técnico",
     },
     "intro-script-generator": {
-      title: "Generador de Guiones de Intro y Ganchos de Podcast",
+      title: "Generador de Guiones de Intro de Podcast",
       shortTitle: "Generador de Intros",
       description: "Escribe ganchos de 30 segundos y presentaciones de anfitrión que reducen el abandono temprano de oyentes.",
       longDescription: "Engancha a tus oyentes en los primeros 30 segundos críticos. Elige entre 5 estructuras comprobadas: avances de alto impacto, preguntas provocadoras y citas destacadas del invitado.",
@@ -219,7 +219,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
     },
     "description-generator": {
       title: "Generador de Descripciones de Podcast y Episodios",
-      shortTitle: "Generador de Descripciones",
+      shortTitle: "Generador de Descripciones de Programa y Episodios",
       description: "Crea descripciones ricas en palabras clave optimizadas para el SEO de Apple Podcasts y Spotify.",
       longDescription: "Posiciónate mejor en los buscadores de podcasts. Crea biografías del canal y resúmenes de episodios atractivos con términos de búsqueda clave, enlaces y llamados a la acción claros.",
       categoryLabel: "Contenido y Guiones",
@@ -232,7 +232,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio y Técnico",
     },
     "hook-generator": {
-      title: "Generador de Ganchos y Aperturas de Podcast",
+      title: "Generador de Ganchos para Clips Sociales",
       shortTitle: "Ganchos Sociales y Clips",
       description: "Extrae ganchos atractivos y citas llamativas de tus episodios para TikTok, Reels y redes sociales.",
       longDescription: "Convierte tu audio en clips virales. Genera titulares de alto impacto, hilos de redes y subtítulos para videos cortos optimizados para TikTok, Instagram Reels y YouTube Shorts.",
@@ -333,7 +333,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "オーディオ & 技術",
     },
     "intro-script-generator": {
-      title: "冒頭フック & イントロ原稿ジェネレーター",
+      title: "ポッドキャスト イントロ原稿ジェネレーター",
       shortTitle: "イントロ原稿生成",
       description: "冒頭30秒の離脱を防ぐ、高エンゲージメントなフックとオープニング原稿を作成。",
       longDescription: "最初の30秒でリスナーを惹きつける。疑問提起、核心への切り込み、ゲストの印象的な発言引用など、離脱を防ぐ5つの実証済みフォーマットから原稿を生成します。",
@@ -462,7 +462,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio & Technique",
     },
     "intro-script-generator": {
-      title: "Générateur de Scripts d'Introduction et Accroches",
+      title: "Générateur de Scripts d'Introduction de Podcast",
       shortTitle: "Générateur d'Intros",
       description: "Rédigez des accroches de 30 secondes et des introductions percutantes pour limiter l'abandon précoce.",
       longDescription: "Captez vos auditeurs dès les 30 premières secondes décisives. Choisissez parmi 5 structures éprouvées pour introduire vos sujets et susciter la curiosité.",
@@ -591,7 +591,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio & Technik",
     },
     "intro-script-generator": {
-      title: "Podcast-Intro- und Hook-Skript-Generator",
+      title: "Podcast-Intro-Skript-Generator",
       shortTitle: "Intro-Skript-Generator",
       description: "Schreibe fesselnde 30-Sekunden-Hooks und Begrüßungen, die Absprungraten zu Beginn minimieren.",
       longDescription: "Fessle deine Hörer in den ersten 30 Sekunden. Wähle aus 5 bewährten Strukturen: spannungsgeladene Teaser, provokante Thesen, Curiosity Gaps und prägnante O-Töne.",
@@ -720,7 +720,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Áudio e Técnico",
     },
     "intro-script-generator": {
-      title: "Gerador de Roteiros de Abertura e Ganchos",
+      title: "Gerador de Roteiros de Abertura de Podcast",
       shortTitle: "Roteiro de Introdução",
       description: "Escreva aberturas dinâmicas de 30 segundos para prender a atenção e evitar abandonos no início do episódio.",
       longDescription: "Conquiste ouvintes nos primeiros 30 segundos essenciais. Escolha entre 5 fórmulas testadas: ganchos de curiosidade, perguntas instigantes e destaques da entrevista.",
@@ -849,7 +849,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "오디오 및 기술",
     },
     "intro-script-generator": {
-      title: "오프닝 훅(Hook) 및 인트로 대본 생성기",
+      title: "팟캐스트 인트로 대본 생성기",
       shortTitle: "인트로 대본 생성기",
       description: "초반 이탈을 방지하고 청취자의 귀를 사로잡는 30초 오프닝 훅과 호스트 인사말을 작성합니다.",
       longDescription: "청취 결정이 이루어지는 첫 30초를 장악하세요. 흥미 유발 질문, 핵심 내용 요약, 게스트 하이라이트 등 입증된 5가지 공식의 인트로 대본을 제공합니다.",
@@ -978,7 +978,7 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       categoryLabel: "Audio e Tecnico",
     },
     "intro-script-generator": {
-      title: "Generatore di Script per Intro e Ganci d'Apertura",
+      title: "Generatore di Script per Intro di Podcast",
       shortTitle: "Script per Introduzione",
       description: "Scrivi ganci di 30 secondi e introduzioni coinvolgenti per azzerare l'abbandono all'inizio della puntata.",
       longDescription: "Cattura gli ascoltatori nei primi 30 secondi decisivi. Scegli tra 5 formule efficaci: anticipazioni ad alta tensione, domande provocatorie e citazioni salienti dell'ospite.",

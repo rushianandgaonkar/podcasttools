@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ListOrdered, Plus, Trash2, Copy, Check, Download, Clock, Sparkles } from "lucide-react";
+import { ListOrdered, Plus, Trash2, Copy, Check, Download, Clock, Sparkles, FileText, ExternalLink } from "lucide-react";
 
 interface Segment {
   id: string;
@@ -210,10 +210,27 @@ export function EpisodeOutlineBuilder() {
             </button>
             <button
               onClick={handleDownload}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-studio-card hover:bg-studio-elevated text-slate-300 hover:text-white border border-studio-border text-xs font-semibold transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-studio-card hover:bg-studio-elevated text-slate-300 hover:text-white border border-studio-border text-xs font-semibold transition-colors cursor-pointer"
             >
               <Download className="w-3.5 h-3.5" /> Export MD
             </button>
+            <a
+              href="/downloads/podcast-script-template.pdf"
+              download="podcast-script-template.pdf"
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-studio-card hover:bg-studio-elevated text-slate-300 hover:text-white border border-studio-border text-xs font-semibold transition-colors cursor-pointer"
+              title="Download Podcast Script Template PDF"
+            >
+              <FileText className="w-3.5 h-3.5 text-orange-400" /> PDF
+            </a>
+            <a
+              href="https://docs.google.com/document/create"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-studio-card hover:bg-studio-elevated text-slate-300 hover:text-white border border-studio-border text-xs font-semibold transition-colors cursor-pointer"
+              title="Open Template in Google Docs"
+            >
+              <ExternalLink className="w-3.5 h-3.5 text-blue-400" /> Google Docs
+            </a>
           </div>
         </div>
 

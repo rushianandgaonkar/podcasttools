@@ -185,8 +185,8 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: "monetization-calculator",
     slug: "monetization-calculator",
-    title: "Podcast Income Calculator",
-    shortTitle: "Monetization Calculator",
+    title: "Podcast Income & CPM Calculator",
+    shortTitle: "Podcast Income & CPM Calculator",
     description:
       "Calculate potential ad revenue based on download numbers, episode frequency, and 2026 industry CPM rates.",
     longDescription:
@@ -194,7 +194,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: "growth",
     categoryLabel: "Growth & Monetization",
     primaryKeyword: "podcast income calculator",
-    secondaryKeywords: ["how much do podcasts make", "podcast cpm calculator", "podcast sponsorship calculator"],
+    secondaryKeywords: ["podcast cpm calculator", "podcast revenue calculator", "how much do podcasts make", "podcast sponsorship calculator"],
     searchIntent: "podcast income calculator",
     status: "available",
     icon: "DollarSign",
@@ -273,7 +273,7 @@ export const toolRegistry: ToolDefinition[] = [
     category: "content",
     categoryLabel: "Content & Scripting",
     primaryKeyword: "podcast intro script",
-    secondaryKeywords: ["podcast intro examples", "podcast intro generator", "how to start a podcast intro"],
+    secondaryKeywords: ["podcast intro script examples", "podcast intro script template", "podcast intro examples", "how to start a podcast intro"],
     searchIntent: "podcast intro script",
     status: "available",
     icon: "Headphones",
@@ -301,7 +301,7 @@ export const toolRegistry: ToolDefinition[] = [
     id: "description-generator",
     slug: "description-generator",
     title: "Podcast Show & Episode Description Generator",
-    shortTitle: "Description Generator",
+    shortTitle: "Show & Episode Description Generator",
     description:
       "Craft searchable, conversion-focused podcast descriptions that boost your show in Apple and Spotify search algorithms.",
     longDescription:
@@ -336,17 +336,17 @@ export const toolRegistry: ToolDefinition[] = [
   {
     id: "hook-generator",
     slug: "hook-generator",
-    title: "Podcast Hook & Cold Open Generator",
-    shortTitle: "Hook Generator",
+    title: "Podcast Social Clip & Hook Generator",
+    shortTitle: "Social Clip Hook Generator",
     description:
-      "Create irresistible cold opens and curiosity hooks that keep listeners from dropping off in the first 60 seconds.",
+      "Extract attention-grabbing social captions and video hooks from your episode transcripts for TikTok, Reels, and Shorts.",
     longDescription:
-      "Select from 8 psychological retention hooks: Contrarian Opinion, High-Stakes Story, Big Promise, Pattern Interrupt, Behind-the-Scenes Secret, and Shocking Statistic.",
+      "Turn podcast audio into viral short-form social clips. Generate scroll-stopping headline hooks, curiosity gaps, and caption copy for TikTok, Instagram Reels, and YouTube Shorts.",
     category: "ideation",
     categoryLabel: "Ideation & Branding",
-    primaryKeyword: "podcast hook ideas",
-    secondaryKeywords: ["podcast hook generator", "podcast cold open ideas", "how to hook podcast listeners"],
-    searchIntent: "podcast hook ideas",
+    primaryKeyword: "podcast hook generator",
+    secondaryKeywords: ["podcast social clips", "video hooks for tiktok", "reels hooks for podcasts", "podcast short form clips"],
+    searchIntent: "podcast hook generator",
     status: "available",
     icon: "Zap",
     image: "/images/tools/podcasttools_14_social-hook-clip-quotes-lg.webp",
@@ -409,7 +409,7 @@ export const toolRegistry: ToolDefinition[] = [
     id: "collab-finder",
     slug: "collab-finder",
     title: "Podcast Guest Pitch & Collab Outreach Builder",
-    shortTitle: "Guest Pitch & Collab Outreach",
+    shortTitle: "Guest Pitch Builder",
     description:
       "Craft high-converting guest interview pitches and cross-promotion swap proposals tailored to other podcast hosts.",
     longDescription:

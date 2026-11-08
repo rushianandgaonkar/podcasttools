@@ -4,7 +4,7 @@ export const enToolContent: ToolContentRecord = {
   "episode-title-generator": {
     metaTitle: "Free Podcast Title Generator for Episodes | Pod Studio",
     metaDescription:
-      "Generate high-CTR episode titles with our free podcast title generator. Browse curiosity, how-to, and guest formulas for Apple and Spotify. Free, no sign-up.",
+      "Generate high-CTR titles with our podcast title generator. Browse tested curiosity, how-to, and guest formulas for Apple and Spotify. Free, no sign-up.",
     overview: [
       "The Podcast Title Generator turns your episode topic, and optionally a guest name, into high-CTR title ideas built on proven psychological frameworks: curiosity gaps, how-to promises, contrarian viewpoints, and guest-led hooks.",
       "Built for podcast hosts who know what their episode covers but need click-worthy headlines tested for high listener conversion across Apple Podcasts and Spotify phone screens.",
@@ -77,13 +77,13 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
     metaDescription:
       "Generate catchy show names with our free podcast name generator. Explore creative podcast name ideas by niche and check availability. Free, no sign-up.",
     overview: [
-      "The Podcast Name Generator helps you brainstorm memorable, brandable podcast name ideas categorized by niche, custom keywords, and creative tone — from direct and searchable to playful and authoritative.",
+      "The Podcast Name Generator helps you brainstorm memorable, brandable podcast name ideas across every niche. Whether you need a random podcast name generator to break creative block or a podcast name generator AI alternative for brandable titles, explore curated angles from descriptive to playful.",
       "Use these podcast name ideas to build a strong shortlist for your new show, then verify directory availability on Apple Podcasts, Spotify, and domain registrars before announcing your brand.",
     ],
     steps: [
-      { title: "Pick your niche", text: "Choose the genre that fits your show, such as tech, finance, true crime or personal growth." },
+      { title: "Pick your niche", text: "Choose the genre that fits your show, such as tech, finance, sports, funny comedy, or true crime." },
       { title: "Add a custom word (optional)", text: "Enter a word or theme you want in the name — a topic, place or recurring idea." },
-      { title: "Choose a brand style and shortlist", text: "Switch brand styles, then save the three to five names you could imagine saying out loud every episode." },
+      { title: "Choose a brand style or randomize", text: "Switch brand styles, test random combinations, and save the three to five names you could imagine saying out loud." },
       { title: "Verify before you launch", text: "Search Apple Podcasts and Spotify for duplicates, then check the domain and social handles yourself." },
     ],
     tips: [
@@ -94,10 +94,10 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
     sections: [
       {
         heading: "Podcast name ideas by niche",
-        intro: "Looking for creative podcast name ideas? Browse these curated title concepts across top podcasting categories:",
+        intro: "Looking for creative podcast name ideas? Browse these curated title concepts across sports, funny comedy, true crime, and business categories:",
         groups: [
           {
-            category: "Business & Startups",
+            category: "Business & Startup Names",
             items: [
               "The Bootstrapped Founder",
               "Scale & Strategy",
@@ -106,7 +106,7 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
             ],
           },
           {
-            category: "True Crime & Mystery",
+            category: "True Crime & Mystery Names",
             items: [
               "Unsolved & Unspoken",
               "Cold Case Almanac",
@@ -115,7 +115,7 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
             ],
           },
           {
-            category: "Comedy & Entertainment",
+            category: "Funny & Comedy Names",
             items: [
               "Nobody Asked For This",
               "Slightly Cynical",
@@ -124,16 +124,16 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
             ],
           },
           {
-            category: "Health & Wellness",
+            category: "Sports & Athletics Names",
             items: [
-              "Mind & Muscle Protocol",
-              "The Longevity Habit",
-              "Root Cause Radio",
-              "Modern Wellness Lab",
+              "Fourth & Goal Breakdown",
+              "The Sideline Protocol",
+              "Overtime Audio",
+              "The Endurance Playbook",
             ],
           },
           {
-            category: "Tech & Artificial Intelligence",
+            category: "Tech & Artificial Intelligence Names",
             items: [
               "Prompt & Paradigm",
               "The Neural Shift",
@@ -142,12 +142,12 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
             ],
           },
           {
-            category: "Faith & Spirituality",
+            category: "Health & Wellness Names",
             items: [
-              "Grace in the Quiet",
-              "The Pilgrim Way",
-              "Rooted & Reaching",
-              "Everyday Faith",
+              "Mind & Muscle Protocol",
+              "The Longevity Habit",
+              "Root Cause Radio",
+              "Modern Wellness Lab",
             ],
           },
         ],
@@ -176,7 +176,7 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
     sections: [
       {
         heading: "Free podcast script template",
-        intro: "Use this battle-tested, modular podcast script template to structure your episodes cleanly, whether you record solo, with a co-host, or with an interview guest:",
+        intro: "Use this battle-tested, modular podcast script template to structure your episodes cleanly, whether you record solo, with a co-host, or with an interview guest. Download our free podcast script template PDF or make a copy in Google Docs to customize your episode run of show:",
         template: `[00:00 - 01:00] COLD OPEN / HOOK
 - Hook: High-stakes quote, provocative statement, or open loop that grabs attention.
 - Episode Promise: "In today's episode, you're going to learn..."
@@ -210,6 +210,10 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
 - Single Call to Action (CTA): "Leave a review on Apple Podcasts / Subscribe on Spotify."
 - Next episode teaser.
 - Outro music fade out.`,
+        link: {
+          text: "Download Free Podcast Script Template (PDF & Google Docs) →",
+          href: "/downloads/podcast-script-template.pdf",
+        },
       },
     ],
   },
@@ -275,16 +279,34 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
               "Where can listeners find you, support your work, and follow your latest projects?",
             ],
           },
+          {
+            category: "Business & Entrepreneurship Questions",
+            items: [
+              "What was the single most expensive hiring or strategic mistake you made in the first two years of building your business?",
+              "What is an uncomfortable operational reality about scaling that nobody admits publicly?",
+              "If you lost your top 3 clients or 50% of your revenue tomorrow, what is your day-one recovery playbook?",
+              "What is one financial or operational metric you track obsessively every single Monday morning?",
+            ],
+          },
+          {
+            category: "Funny & Lighthearted Questions",
+            items: [
+              "What is the absolute most bizarre piece of professional advice anyone has ever given you with a straight face?",
+              "What is a completely petty or ridiculous hill you are prepared to die on?",
+              "If you could replace our intro theme song with any embarrassing 90s pop track, what are we playing?",
+              "What is your absolute worst live presentation, podcast, or Zoom disaster story?",
+            ],
+          },
         ],
       },
     ],
   },
   "monetization-calculator": {
-    metaTitle: "Podcast Income Calculator: Ad Revenue & CPM | Pod Studio",
+    metaTitle: "Podcast Income & CPM Calculator: Ad Revenue | Pod Studio",
     metaDescription:
       "Calculate your show earnings with our free podcast income calculator. Model host-read CPM ad revenue, downloads, and sponsorship deals. Free, no sign-up.",
     overview: [
-      "The Podcast Income Calculator estimates your potential earnings using standard industry CPM rates and download benchmarks: (downloads ÷ 1,000) × CPM × filled ad inventory slots.",
+      "The Podcast Income & CPM Calculator estimates your potential earnings using standard industry CPM rates and download benchmarks: (downloads ÷ 1,000) × CPM × filled ad inventory slots.",
       "Model monthly and annual projections across pre-roll, mid-roll, and post-roll slots, dynamic fill rates, and direct listener memberships to negotiate sponsorship deals with confidence.",
     ],
     steps: [
@@ -331,11 +353,24 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
       "Avoid placing important text near the edges — some apps round the corners.",
       "Test in both light and dark mode; thin dark text can disappear on dark backgrounds.",
     ],
+    sections: [
+      {
+        heading: "Podcast cover art size requirements",
+        paragraphs: [
+          "Both Apple Podcasts and Spotify require podcast cover art to be a perfect 1:1 square image measuring between 1400 × 1400 and 3000 × 3000 pixels. The industry standard recommendation is 3000 × 3000 pixels at 72 DPI, ensuring crisp presentation across high-density Retina phone screens and large TV displays.",
+          "Artwork files must be encoded in either JPEG or PNG format using the sRGB color profile. Avoid CMYK color models, which fail directory validation or appear heavily discolored on mobile screens. Keep all critical show branding, typography, and host photos within the center 80% safe area so text remains legible and avoids being obscured by rounded corners or player UI overlays.",
+        ],
+        link: {
+          text: "Read the complete specification checklist: Apple Podcasts & Spotify Cover Art Specs Guide →",
+          href: "/guides/apple-spotify-cover-art-specs-guide",
+        },
+      },
+    ],
   },
   "rss-feed-validator": {
     metaTitle: "Free Podcast RSS Feed Validator & Checker | Pod Studio",
     metaDescription:
-      "Check your podcast RSS feed for missing tags, broken enclosures, artwork and GUID problems before submitting to Apple Podcasts or Spotify. Free and private.",
+      "Check your podcast RSS feed for missing tags, broken audio, artwork, and GUID issues before submitting to Apple or Spotify. Free and private.",
     overview: [
       "The RSS Feed Validator inspects your podcast feed for the issues that most often block or delay publishing: invalid XML, missing show metadata, artwork problems, duplicate or missing GUIDs and episodes without a usable audio enclosure.",
       "Each finding is explained in plain language with a pointer to what to fix, so you can resolve problems in your hosting dashboard before Apple Podcasts or Spotify rejects the feed.",
@@ -355,7 +390,7 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
   "episode-timestamp-generator": {
     metaTitle: "Podcast Timestamp & Chapter Marker Generator | Pod Studio",
     metaDescription:
-      "Generate clean podcast timestamp format and YouTube chapters generator timecodes. Create clickable markers for Spotify, Apple, and web. Free, no sign-up.",
+      "Create clickable podcast chapters and YouTube timestamps in seconds. Free, no sign-up.",
     overview: [
       "The Timestamp Generator converts your production notes into formatted timecodes and YouTube chapter markers that trigger interactive scrub bars on YouTube, Spotify, and podcast player apps.",
       "Give listeners easy navigation between topics and help search engines index individual segments to improve discoverability across Google and directory charts.",
@@ -384,9 +419,9 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
   "intro-script-generator": {
     metaTitle: "Podcast Intro Script Generator + Intro Examples | Pod Studio",
     metaDescription:
-      "Write hook-driven hooks with our podcast intro script generator. Explore proven intro examples for solo, co-host, and interview shows. Free, no sign-up.",
+      "Write a podcast intro script in minutes. See intro examples and a free template for solo, co-host and interview shows. Free, no sign-up.",
     overview: [
-      "The Podcast Intro Script Generator drafts punchy 30-to-60 second cold opens and episode introductions that hook listener attention and drastically reduce first-minute abandonment rates.",
+      "The Podcast Intro Script Generator drafts punchy 30-to-60 second podcast intro scripts and episode introductions that hook listener attention and drastically reduce first-minute abandonment rates.",
       "Select your show format, guest details, and delivery tone to generate teleprompter-ready scripts built on curiosity triggers, bold promises, and high-stakes teasers.",
     ],
     steps: [
@@ -402,8 +437,8 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
     ],
     sections: [
       {
-        heading: "Podcast intro examples",
-        intro: "The first thirty seconds decide whether a listener finishes your episode or taps away. Here are five proven podcast intro examples you can adapt for your show:",
+        heading: "Podcast intro script examples",
+        intro: "The first thirty seconds decide whether a listener finishes your episode or taps away. Here are five proven podcast intro script examples you can adapt for your show:",
         list: [
           {
             title: "1. The Solo High-Stakes Hook",
@@ -426,6 +461,24 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
             description: "“Want to rank on page one of Google without building hundreds of backlinks? In the next twenty minutes, we're breaking down the exact programmatic content architecture we used to generate 450,000 monthly visits.”",
           },
         ],
+      },
+      {
+        heading: "Podcast intro script template",
+        intro: "Use this clean, modular podcast intro script template for solo, co-hosted, or interview formats:",
+        template: `[00:00 - 00:15] COLD OPEN HOOK
+HOST: "What if the one piece of advice everyone gives in your industry is actually costing you thousands of dollars?"
+
+[00:15 - 00:30] SHOW INTRO & EPISODE PROMISE
+HOST: "Welcome back to [Show Name]. I'm [Host Name]. In today's episode, we're breaking down [Episode Topic] so you can [specific listener takeaway]."
+
+[00:30 - 00:45] GUEST INTRODUCTION OR AGENDA
+HOST: "[Guest Show]: Today's guest is [Guest Name], [Title/Company]. We explore the pivotal turning points and the exact playbook they used to achieve [Key Milestone]."
+HOST: "[Solo Show]: In the next 20 minutes, I'm sharing the 3-step framework we used to solve this problem from scratch."
+
+[00:45 - 01:00] CALL TO ACTION & INTRO MUSIC
+HOST: "Make sure you're subscribed on Apple Podcasts or Spotify so you never miss a new episode. Let's get right into it."
+
+[THEME MUSIC SWELLS & TRANSITIONS INTO EPISODE]`,
       },
     ],
   },
@@ -452,9 +505,9 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
   "description-generator": {
     metaTitle: "Podcast Show & Episode Description Generator | Pod Studio",
     metaDescription:
-      "Write clear podcast show and episode descriptions for Apple Podcasts and Spotify. Separate modes for your show summary and each episode. Free, no sign-up.",
+      "Write clear podcast show and episode descriptions for Apple and Spotify. Separate modes for your show summary and each episode. Free, no sign-up.",
     overview: [
-      "The Description Generator drafts two kinds of copy: a show description that explains your podcast’s promise and audience, and episode descriptions that summarize a single recording.",
+      "The Show & Episode Description Generator drafts two kinds of copy: a show description that explains your podcast’s promise and audience, and episode descriptions that summarize a single recording.",
       "Good descriptions help listeners decide to follow and help podcast apps understand what your show is about, so the tool keeps the key information at the start where apps display it.",
     ],
     steps: [
@@ -574,23 +627,51 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
     ],
   },
   "hook-generator": {
-    metaTitle: "Podcast Hook & Cold Open Generator | Pod Studio",
+    metaTitle: "Podcast Hook Generator for Social Clips | Pod Studio",
     metaDescription:
-      "Craft punchy cold opens and audio hooks with our free podcast hook generator. Stop listener drop-off in the first 60 seconds of show. Free, no sign-up.",
+      "Create scroll-stopping hooks for TikTok, Reels, and YouTube Shorts with our podcast hook generator. Boost social video engagement. Free, no sign-up.",
     overview: [
-      "The Podcast Hook & Cold Open Generator creates scroll-stopping opening lines and high-curiosity video hooks from your episode concepts, keeping listeners engaged from the first few seconds.",
-      "Enter your episode topic and guest to generate hooks optimized for TikTok, Instagram Reels, YouTube Shorts, and on-air podcast cold opens.",
+      "The Podcast Social Clip & Hook Generator creates scroll-stopping opening lines and high-curiosity video hooks for TikTok, Instagram Reels, and YouTube Shorts from your podcast episode concepts.",
+      "Designed for podcast creators who want to turn audio highlights into viral short-form social clips that hook viewers in the first two seconds and drive new subscribers back to full episodes.",
     ],
     steps: [
-      { title: "Enter the subject", text: "Describe the episode subject or industry the clip is about." },
-      { title: "Add a guest (optional)", text: "Include the featured guest when their name or expertise is the draw." },
-      { title: "Pick a hook style", text: "Filter by hook style and compare several opening lines." },
-      { title: "Copy and post", text: "Use the best hook as on-screen text or caption, and link back to the full episode." },
+      { title: "Enter the clip topic", text: "Describe the episode subject or core breakthrough the social clip covers." },
+      { title: "Add featured guest (optional)", text: "Include the featured speaker or quote when their authority hooks viewers." },
+      { title: "Filter by hook style", text: "Switch between Contrarian, High Stakes, Big Metric, Open Loop, and Pattern Interrupt angles." },
+      { title: "Copy caption and on-screen text", text: "Paste the hook as your on-screen video text and caption, with a link to your full show." },
     ],
     tips: [
-      "The first line has about two seconds to earn attention — lead with the most specific claim.",
-      "Make sure the clip actually delivers on the hook; misleading hooks hurt trust.",
-      "Add captions to every video clip; many people watch with the sound off.",
+      "The first three seconds determine whether a viewer swipes away—lead with high tension or an open loop.",
+      "Pair bold on-screen text with animated captions; over 70% of social feeds are watched without sound.",
+      "Make sure the clip actually resolves the hook; misleading claims destroy long-term audience trust.",
+    ],
+    sections: [
+      {
+        heading: "Podcast social clip hook examples",
+        intro: "Short-form clips on TikTok, Instagram Reels, and YouTube Shorts live or die by the first two seconds. Here are five proven podcast social clip hook formulas with real examples:",
+        list: [
+          {
+            title: "1. The Contrarian Myth-Buster",
+            description: "“Stop telling new creators to post daily. Here's why that advice is burning out 95% of podcasts before episode 10.” (Challenges conventional wisdom to trigger immediate comments).",
+          },
+          {
+            title: "2. The High-Stakes Story Opener",
+            description: "“At 2 AM on a Sunday, our main database crashed with $400,000 in pending client payments on the line. Here is what we did in the next 60 minutes.” (Establishes immediate drama and narrative momentum).",
+          },
+          {
+            title: "3. The Data Outlier Hook",
+            description: "“We analyzed 1,200 podcast episodes released this year. Exactly one retention tactic doubled listener completion rates across every genre.” (Promises hard empirical evidence rather than opinions).",
+          },
+          {
+            title: "4. The Open Loop Curiosity Gap",
+            description: "“There is a secret reason why top Spotify shows never mention sponsor promo codes in the first five minutes. By the end of this clip, you'll see why.” (Withholds resolution so viewers watch to completion).",
+          },
+          {
+            title: "5. The Pattern Interrupt",
+            description: "“Close your analytics dashboard right now. If your show isn't growing, checking download stats five times a day is actually making it worse.” (Direct, commanding call to reset viewer attention).",
+          },
+        ],
+      },
     ],
   },
   "transcript-formatter": {
@@ -675,7 +756,7 @@ It comes down to three things: a repeatable episode opening that promises clear 
     metaDescription:
       "Write podcast guest pitches and cross-promotion emails that get replies. Explain mutual value, format and next steps clearly. Free outreach templates.",
     overview: [
-      "The Guest Pitch & Collab Outreach builder drafts emails for pitching yourself as a guest, inviting a guest onto your show or proposing a cross-promotion with another podcast.",
+      "The Guest Pitch Builder drafts emails for pitching yourself as a guest, inviting a guest onto your show or proposing a cross-promotion with another podcast.",
       "Each draft explains who your show serves, the proposed format, the value for both sides and a simple next step — the elements busy hosts look for before saying yes.",
     ],
     steps: [

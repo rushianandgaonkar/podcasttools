@@ -109,10 +109,10 @@ export function CategoryFinder() {
       <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white flex items-center gap-2">
+            <p className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white flex items-center gap-2">
               <FolderSearch className="w-4 h-4 text-orange-500 dark:text-orange-400" />
               Apple Podcasts & Spotify 2026 Taxonomy Explorer
-            </h2>
+            </p>
             <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">
               Search official genres to find high-growth, low-competition subcategories for your show.
             </p>
@@ -140,9 +140,9 @@ export function CategoryFinder() {
           >
             <div>
               <div className="flex items-center justify-between mb-2">
-                <h3 className="text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+                <p className="text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
                   {cat.primary}
-                </h3>
+                </p>
                 <span
                   className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
                     cat.competition === "Low Opportunity"
