@@ -357,5 +357,570 @@ export const koNewGuides: Record<string, LocalizedGuideArticle> = {
       toolSlug: "podcast-name-generator",
     },
   },
-};
 
+  "how-to-start-a-podcast-on-spotify": {
+    title: "Spotify에서 팟캐스트 시작하는 법: 2026 단계별 가이드",
+    description: "Spotify에서 팟캐스트 시작하는 법을 2026년 최신 기준으로 완벽 정리. Spotify for Creators, RSS 연동, 비디오 팟캐스트, 론칭 전략.",
+    readTime: "읽는 시간 9분",
+    publishedAt: "2026-11-08",
+    category: "제작 가이드",
+    sections: [
+      {
+        heading: "Spotify에서 팟캐스트 시작하는 법 (2026년 최신판)",
+        paragraphs: [
+          "spotify에서 팟캐스트 시작하는 법을 익히는 것은 전 세계 180개국 6억 명 이상의 월간 활성 청취자에게 다가가기 위한 가장 확실한 선택입니다. 세계 최고의 오디오 스트리밍 플랫폼인 Spotify는 탁월한 글로벌 배포력, 상세한 에피소드 분석 대시보드, 그리고 투표 및 Q&A 같은 쌍방향 인터랙티브 기능을 제공합니다.",
+          "프로그램을 등록하기 전, <a href=\"/ko/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 시작하는 법 완전 가이드</a>를 통해 방송 기획의 기초를 단단히 다지세요. 본 가이드에서는 Spotify for Creators를 통한 무료 호스팅과 외부 RSS 피드 연동의 차이점, 기술적 규격, 비디오 팟캐스트 업로드, 검색 순위 최적화 팁을 구체적으로 소개합니다.",
+        ],
+      },
+      {
+        heading: "방법 1 vs 방법 2: Spotify for Creators vs 외부 호스팅",
+        paragraphs: [
+          "Spotify에 방송을 배포하는 방법은 크게 두 가지로 나뉩니다:",
+        ],
+        cards: [
+          {
+            title: "방법 1: Spotify for Creators (직접 호스팅)",
+            value: "100% 무료",
+            description: "구 Anchor 공식 플랫폼. 비디오 팟캐스트 직접 업로드, 청취자 투표 생성, 오픈 RSS 피드를 통한 타 앱 자동 배포를 지원합니다.",
+            highlight: true,
+          },
+          {
+            title: "방법 2: 외부 전문 호스팅 (RSS 피드 연동)",
+            value: "완벽한 소유권",
+            description: "Buzzsprout, Podbean 등에서 오디오를 호스팅하고 RSS로 Spotify에 연결합니다. 정교한 동적 광고 삽입과 독립적 데이터 관리에 유리합니다.",
+          },
+        ],
+      },
+      {
+        heading: "Spotify 기술 요구 사양 및 커버 아트 규격",
+        paragraphs: [
+          "Spotify에서 매끄러운 스트리밍을 구현하기 위한 필수 표준 규격입니다:",
+        ],
+        list: [
+          {
+            title: "오디오 포맷 및 비트레이트",
+            description: "토크 방송 기준 128kbps CBR(고정 비트레이트) MP3 포맷. 배경음악 중심 방송은 스테레오, 일반 대화형 토크는 모노 녹음을 권장합니다.",
+          },
+          {
+            title: "커버 아트 이미지 요구조건",
+            description: "1:1 정사각형 비율, 최소 1400x1400px ~ 최대 3000x3000px, RGB 색상 모드, JPG 또는 PNG 파일. 모바일 축소 화면에서의 가독성을 <a href=\"/ko/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 커버 아트 미리보기 검사기</a>로 미리 확인하세요.",
+          },
+          {
+            title: "필수 RSS 메타데이터",
+            description: "프로그램 제목, 설명문, 방송 언어 코드, 대표 카테고리, 유해성(Explicit) 여부 태그 및 최소 1개 이상의 공개 음원 파일.",
+          },
+        ],
+      },
+      {
+        heading: "Spotify에서 팟캐스트 시작하는 법 5단계",
+        paragraphs: [
+          "다음의 5단계를 따라 Spotify 배포를 완료하세요:",
+        ],
+        list: [
+          {
+            title: "1단계: 직관적인 방송 이름과 콘셉트 확정",
+            description: "기억하기 쉽고 키워드가 포함된 제목을 <a href=\"/ko/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 이름 생성기</a>에서 찾아보세요.",
+          },
+          {
+            title: "2단계: Spotify for Creators 계정 생성",
+            description: "creators.spotify.com에 Spotify 계정으로 로그인한 뒤 직접 호스팅 또는 RSS 피드 연결 중 하나를 선택합니다.",
+          },
+          {
+            title: "3단계: RSS 피드 유효성 검사 (외부 호스팅 시)",
+            description: "제출 전 태그 오류가 없는지 <a href=\"/ko/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">RSS 피드 유효성 검사기</a>로 사전 점검합니다.",
+          },
+          {
+            title: "4단계: 소유권 인증 및 카테고리 설정",
+            description: "피드 이메일로 발송된 보안 코드를 입력하고, <a href=\"/ko/tools/category-finder\" class=\"text-[#a9583e] underline font-medium\">카테고리 검색기</a>를 통해 최적의 카테고리를 지정합니다.",
+          },
+          {
+            title: "5단계: 최종 등록 및 공개",
+            description: "제출 버튼을 클릭합니다. 대개 1~24시간 이내에 Spotify 검색 및 라이브러리에 방송이 노출됩니다.",
+          },
+        ],
+      },
+      {
+        heading: "Spotify 비디오 팟캐스트 업로드",
+        paragraphs: [
+          "Spotify는 영상 팟캐스트에 막대한 투자를 집중하고 있습니다. 크리에이터는 1080p 고화질 영상(MP4/MOV, 16:9 가로 화면)을 등록할 수 있으며, 청취자는 화면 시청과 모바일 화면을 끈 상태에서의 백그라운드 오디오 재생을 자유자재로 넘나들 수 있습니다.",
+        ],
+      },
+      {
+        heading: "Spotify 내 검색 최적화(SEO) 및 청취자 확대",
+        paragraphs: [
+          "Spotify 검색에서 상위에 노출되려면 <a href=\"/ko/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">에피소드 제목 생성기</a>로 클릭을 유도하는 제목을 짓고, <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">에피소드 구성안 작성기</a>로 몰입도 높은 대본을 설계하세요.",
+          "재생 수에 따른 미래 광고 수익은 무료 <a href=\"/ko/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 수익 및 CPM 계산기</a>로 손쉽게 시뮬레이션할 수 있습니다.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Spotify 등록 전 커버 아트 규격을 확인하세요",
+      description: "Spotify 앱 플레이어, 잠금 화면, 축소 썸네일에서의 텍스트 가독성을 웹 브라우저에서 바로 테스트해 보세요.",
+      buttonText: "커버 아트 미리보기 테스트",
+      toolSlug: "cover-art-preview",
+    },
+  },
+
+  "how-to-start-a-podcast-for-free": {
+    title: "무료로 팟캐스트 시작하는 법: 0원 론칭 가이드 (2026)",
+    description: "완전 무료로 팟캐스트 시작하는 법을 확인하세요. 스마트폰 녹음 팁, 무료 호스팅, Canva 커버 디자인, Spotify·Apple 글로벌 배포.",
+    readTime: "읽는 시간 10분",
+    publishedAt: "2026-11-08",
+    category: "제작 가이드",
+    sections: [
+      {
+        heading: "무료로 팟캐스트 시작하는 법 (2026년 가이드)",
+        paragraphs: [
+          "무료로 팟캐스트 시작하는 법을 제대로 이해하면, 스마트폰이나 노트북 한 대만으로 초기 자본 0원으로 스튜디오 못지않은 고음질 방송을 론칭할 수 있습니다. 과거에는 고가의 하드웨어 믹서가 필수적이었지만, 오늘날에는 뛰어난 무료 디지털 툴만으로도 훌륭한 방송이 가능합니다.",
+          "새로운 사업 아이디어를 검증하든 개인 취미를 공유하든, 본 가이드는 녹음, 편집, 호스팅, 배포까지 전 과정을 비용 0원으로 완주하는 방법을 안내합니다. 전체적인 제작 프로세스는 <a href=\"/ko/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 시작하는 법 가이드</a>를 함께 참고하세요.",
+        ],
+      },
+      {
+        heading: "0원 세팅 vs 유료 장비 구성 비교",
+        paragraphs: [
+          "따뜻하고 명료한 목소리를 담는 데 많은 돈이 필요하지 않습니다. 실제 비교를 살펴보세요:",
+        ],
+        cards: [
+          {
+            title: "마이크 및 녹음 환경",
+            value: "0원 vs 30만 원 이상",
+            description: "옷장 속 패브릭 환경에서 스마트폰 마이크와 10cm 거리를 두고 말하는 것이 울림이 심한 방의 어설픈 USB 마이크보다 낫습니다.",
+            highlight: true,
+          },
+          {
+            title: "편집 소프트웨어 (DAW)",
+            value: "0원 vs 연간 30만 원",
+            description: "Audacity(오픈소스)나 GarageBand(Mac/iOS)는 멀티트랙 편집, 잡음 제거, EQ를 평생 무료로 지원합니다.",
+          },
+          {
+            title: "호스팅 및 RSS 배포",
+            value: "0원 vs 연간 25만 원",
+            description: "Spotify for Creators나 RedCircle을 이용하면 무제한 용량과 오픈 RSS 피드를 월 사용료 없이 이용할 수 있습니다.",
+            highlight: true,
+          },
+          {
+            title: "커버 아트 디자인",
+            value: "0원 vs 건당 20만 원 이상",
+            description: "Canva의 3000x3000px 무료 템플릿을 활용하면 전문 디자이너 고용 없이도 깔끔한 썸네일을 제작할 수 있습니다.",
+          },
+        ],
+      },
+      {
+        heading: "무료로 팟캐스트 시작하는 법 6단계",
+        paragraphs: [
+          "예산 0원으로 첫 회차를 완성하는 검증된 단계별 공식:",
+        ],
+        list: [
+          {
+            title: "1단계: 무료 생성기로 제목과 대본 기획",
+            description: "<a href=\"/ko/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 이름 생성기</a>로 프로그램명을 정하고 <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">에피소드 구성안 작성기</a>에서 대본 서식을 무료 다운로드합니다.",
+          },
+          {
+            title: "2단계: 스마트폰을 스튜디오 마이크로 변신",
+            description: "책을 쌓아 스마트폰을 입 높이에 맞추고 10cm 거리를 유지하세요. 얇은 양말을 씌우면 훌륭한 임시 팝필터가 됩니다.",
+          },
+          {
+            title: "3단계: 옷이 가득 찬 옷장 안에서 녹음",
+            description: "걸려 있는 옷들이 벽면 반사음을 흡수합니다. 마치 방음 부스에서 녹음한 것처럼 울림 없는 깔끔한 오디오를 얻을 수 있습니다.",
+          },
+          {
+            title: "4단계: 무료 Audacity로 오디오 다듬기",
+            description: "‘잡음 제거’로 배경 화이트노이즈를 지우고, 가벼운 컴프레서로 음량을 균일화한 뒤 표준 음량인 -16 LUFS로 노멀라이즈합니다.",
+          },
+          {
+            title: "5단계: Canva로 3000x3000px 커버 만들기",
+            description: "이미지 완성 후 <a href=\"/ko/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">커버 아트 미리보기 검사기</a>로 모바일 축소 화면에서의 시인성을 테스트합니다.",
+          },
+          {
+            title: "6단계: 무료 호스팅 가입 및 글로벌 배포",
+            description: "Spotify for Creators에 가입하고, <a href=\"/ko/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">RSS 피드 유효성 검사기</a>로 검증한 뒤 Apple 팟캐스트에도 피드를 등록합니다.",
+          },
+        ],
+      },
+      {
+        heading: "돈 들이지 않는 룸 어쿠스틱 노하우",
+        paragraphs: [
+          "오디오 퀄리티의 80%는 방의 울림이 결정합니다. 마이크와 손가락 네 마디 간격을 두고 입김이 직접 닿지 않게 비스듬히 45도 각도에서 이야기하면 고가의 팝필터 없이도 파열음을 방지할 수 있습니다.",
+        ],
+      },
+      {
+        heading: "언제 유료 장비로 업그레이드해야 할까?",
+        paragraphs: [
+          "매주 정기 발행이 몸에 배고 회당 다운로드 수가 500~1,000회에 도달할 때까지는 무료 구성을 유지하세요. 그 단계가 되면 첫 스폰서십 광고비로 XLR 마이크 세트 비용을 충분히 회수할 수 있습니다.",
+          "장비 회수 시점은 <a href=\"/ko/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 수익 및 CPM 계산기</a>로 계산해 보세요.",
+        ],
+      },
+    ],
+    cta: {
+      title: "무료 대본 템플릿으로 첫 회차를 설계하세요",
+      description: "에피소드 도입부부터 클로징까지의 시간 배분을 정리하고 PDF 및 Google Docs 서식을 무료로 다운로드하세요.",
+      buttonText: "무료 구성안 만들기",
+      toolSlug: "episode-outline-builder",
+    },
+  },
+
+  "best-podcast-equipment-for-beginners": {
+    title: "초보자용 팟캐스트 장비 추천 가이드 (2026년)",
+    description: "초보자용 팟캐스트 장비 완벽 비교: USB 및 XLR 마이크, 밀폐형 모니터링 헤드폰, 마이크 붐 암, 10만 원대부터 시작하는 예산별 추천 세트.",
+    readTime: "읽는 시간 11분",
+    publishedAt: "2026-11-08",
+    category: "제작 가이드",
+    sections: [
+      {
+        heading: "2026년 초보자용 팟캐스트 장비 완벽 가이드",
+        paragraphs: [
+          "초보자용 팟캐스트 장비를 고를 때 수많은 마이크, 오디오 인터페이스, 마이크 스탠드, 헤드폰 때문에 혼란스러울 수 있습니다. 하지만 라디오 방송처럼 따뜻하고 신뢰감 있는 음질을 만들기 위해 수백만 원을 쓸 필요는 전혀 없습니다.",
+          "방음이 되지 않은 일반 방에서 감도가 너무 높은 콘덴서 마이크를 쓰면 컴퓨터 쿨러 소리와 벽 울림까지 담겨 오히려 음질이 나빠집니다. 본 가이드는 예산별(15만 원 이하, 35만 원, 2인 스튜디오 70만 원) 최적의 검증된 구성을 추천합니다. 장비 구축 후 <a href=\"/ko/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 시작하는 법</a>도 함께 확인하세요.",
+        ],
+      },
+      {
+        heading: "가장 먼저 구비해야 할 4가지 핵심 장비",
+        paragraphs: [
+          "불필요한 부속품을 사기 전 다음 4가지 핵심 장비에 예산을 집중하세요:",
+        ],
+        list: [
+          {
+            title: "1. 다이내믹 마이크 (USB 또는 XLR)",
+            description: "다이내믹 마이크는 방 안의 잔향과 키보드 타건음을 물리적으로 걸러내어 비방음 홈 환경에 최적화되어 있습니다.",
+          },
+          {
+            title: "2. 밀폐형 모니터링 헤드폰",
+            description: "귀를 완전히 감싸 녹음 중 소리가 마이크로 재유입되어 피드백이 일어나는 현상을 막아줍니다.",
+          },
+          {
+            title: "3. 마이크 붐 암 및 팝필터",
+            description: "책상 진동과 마우스 클릭 충격을 차단하고 파열음(ㅍ, ㅂ)으로 인한 팝핑 노이즈를 억제합니다.",
+          },
+          {
+            title: "4. 오디오 인터페이스 (XLR 마이크 선택 시 필수)",
+            description: "아날로그 마이크 신호를 잡음 없이 디지털 USB로 변환하고 딜레이 없는 다이렉트 모니터링을 제공합니다.",
+          },
+        ],
+      },
+      {
+        heading: "입문자용 마이크: USB vs XLR 비교",
+        paragraphs: [
+          "USB 마이크는 PC에 꽂으면 즉시 작동합니다. XLR 마이크는 오디오 인터페이스가 필요하지만 향후 업그레이드 폭이 넓습니다:",
+        ],
+        cards: [
+          {
+            title: "오디오테크니카 ATR2100x-USB (~11만 원)",
+            value: "최고의 하이브리드",
+            description: "USB-C와 XLR 단자를 모두 지원합니다. 지금은 노트북에 USB로 쓰다가 나중에 오디오 인터페이스로 갈아탈 수 있습니다.",
+            highlight: true,
+          },
+          {
+            title: "삼손 Q2U (~9만 원)",
+            value: "가성비 끝판왕",
+            description: "탁상용 삼각대, 윈드스크린, 두 종류 케이블이 기본 동봉됩니다. 주변 소음 억제력이 탁월합니다.",
+            highlight: true,
+          },
+          {
+            title: "로데 PodMic (~15만 원, XLR 전용)",
+            value: "묵직한 방송국 사운드",
+            description: "단단한 풀메탈 하우징과 내부 팝필터를 탑재했습니다. Focusrite Scarlett 같은 인터페이스가 필요합니다.",
+          },
+          {
+            title: "슈어 MV7+ (~43만 원, USB/XLR 겸용)",
+            value: "프리미엄 라인업",
+            description: "전설적인 Shure SM7B의 계보. 온보드 DSP 오디오 프로세서, 디지털 리미터, 듀얼 단자를 지원합니다.",
+          },
+        ],
+      },
+      {
+        heading: "추천 밀폐형 스튜디오 헤드폰",
+        paragraphs: [
+          "오픈형 헤드폰(소리가 밖으로 샘)이나 블루투스 이어폰(지연 시간으로 인해 발음이 꼬임)은 피하고 유선 밀폐형을 선택하세요:",
+        ],
+        list: [
+          {
+            title: "오디오테크니카 ATH-M20x (~6만 원)",
+            value: "입문용 글로벌 표준. 가볍고 차음성이 뛰어나며 정직한 모니터링 사운드를 들려줍니다.",
+          },
+          {
+            title: "소니 MDR-7506 (~13만 원)",
+            description: "수십 년간 전 세계 방송 현장을 지켜온 명기. 견고한 내구성, 접이식 설계, 명확한 보컬 대역 표현력.",
+          },
+          {
+            title: "베이어다이나믹 DT 770 Pro (~23만 원)",
+            description: "부드러운 벨루어 이어패드로 장시간 녹음 및 편집에도 귀가 편안하며 공간 분리도가 뛰어납니다.",
+          },
+        ],
+      },
+      {
+        heading: "예산대별 완성형 추천 세트",
+        paragraphs: [
+          "준비된 예산에 맞춰 가장 합리적인 구성을 선택하세요:",
+        ],
+        cards: [
+          {
+            title: "15만 원 이하 실속 세트",
+            value: "총 약 15만 원",
+            description: "Samson Q2U(9만 원) + 오디오테크니카 ATH-M20x(6만 원). 받자마자 바로 녹음 가능.",
+            highlight: true,
+          },
+          {
+            title: "35만 원 1인 크리에이터 완성 세트",
+            value: "총 약 30만 원",
+            description: "오디오테크니카 ATR2100x(11만 원) + InnoGear 붐 암(3만 원) + Sony MDR-7506(13만 원).",
+          },
+          {
+            title: "70만 원 2인 대담 스튜디오 세트",
+            value: "총 약 68만 원",
+            description: "Røde PodMic 2대 + Focusrite Scarlett 2i2 4세대 + 붐 암 2개 + ATH-M20x 2대.",
+          },
+        ],
+      },
+      {
+        heading: "장비 구비 후 첫 녹음 시작하기",
+        paragraphs: [
+          "장비 세팅이 끝나면 콘텐츠 완성도를 높여야 합니다. <a href=\"/ko/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 이름 생성기</a>로 인상 깊은 채널명을 짓고, <a href=\"/ko/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">커버 아트 미리보기 검사기</a>로 시각적 완성도를 확인하며, <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">에피소드 구성안 작성기</a>로 방송 흐름을 정리하세요.",
+          "투자한 장비 비용을 광고 수익으로 언제 회수할 수 있을지는 <a href=\"/ko/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 수익 및 CPM 계산기</a>로 확인해 보세요.",
+        ],
+      },
+    ],
+    cta: {
+      title: "장비 투자 회수 시점을 계산해 보세요",
+      description: "목표 청취자 수와 주간 에피소드 발행 빈도를 입력하고 스폰서십을 통해 장비 비용을 몇 달 만에 회수할 수 있는지 시뮬레이션합니다.",
+      buttonText: "수익 계산기 열기",
+      toolSlug: "monetization-calculator",
+    },
+  },
+
+  "how-to-start-a-podcast-on-youtube": {
+    title: "YouTube에서 팟캐스트 시작하는 법: 영상 가이드 (2026)",
+    description: "YouTube에서 팟캐스트 시작하는 법을 단계별로 안내합니다. RSS 자동 연동, 비디오 촬영 세팅, 클릭을 부르는 썸네일, 챕터 타임스탬프.",
+    readTime: "읽는 시간 10분",
+    publishedAt: "2026-11-08",
+    category: "제작 가이드",
+    sections: [
+      {
+        heading: "YouTube에서 팟캐스트 시작하는 법 (2026년 최신판)",
+        paragraphs: [
+          "youtube에서 팟캐스트 시작하는 법을 익히는 것은 오늘날 콘텐츠 제작자에게 가장 큰 잠재 고객을 확보할 수 있는 기회입니다. 글로벌 시장 조사에 따르면 전 세계 팟캐스트 청취자의 30% 이상이 YouTube 및 YouTube Music을 통해 새로운 프로그램을 발견하고 청취합니다.",
+          "스튜디오 카메라를 이용해 진행자와 게스트의 모습을 담아내는 풀 비디오 팟캐스트든, 기존 오디오 RSS 피드를 연결해 자동으로 송출하는 방식이든 본 가이드에서 명쾌한 해답을 찾을 수 있습니다. 오디오 제작의 기초는 <a href=\"/ko/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 시작하는 법 가이드</a>를 참고하세요.",
+        ],
+      },
+      {
+        heading: "YouTube 팟캐스트: RSS 자동 업로드 vs 풀 비디오 촬영",
+        paragraphs: [
+          "YouTube 배포 방식은 크리에이터의 여건에 따라 둘로 나뉩니다:",
+        ],
+        cards: [
+          {
+            title: "방식 A: 오디오 RSS 피드 자동 연동",
+            value: "편집 부담 제로",
+            description: "YouTube Studio에 기존 RSS를 연결하면 정지 화면 커버 영상이 자동 생성되어 YouTube Music에 즉시 배포됩니다.",
+            highlight: true,
+          },
+          {
+            title: "방식 B: 풀 비디오 팟캐스트 촬영",
+            value: "알고리즘 추천 극대화",
+            description: "진행자의 표정과 제스처를 촬영합니다. 16:9 썸네일과 긴 시청 시간 유지를 통해 홈 화면 추천에 폭발적으로 노출됩니다.",
+            highlight: true,
+          },
+        ],
+      },
+      {
+        heading: "YouTube에 RSS 피드를 연결하는 5단계",
+        paragraphs: [
+          "영상 편집 없이 기존 오디오 방송을 YouTube에 올리는 방법:",
+        ],
+        list: [
+          {
+            title: "1단계: YouTube 스튜디오 접속",
+            description: "studio.youtube.com에 접속해 우측 상단 '만들기'를 누르고 '새 팟캐스트'를 클릭합니다.",
+          },
+          {
+            title: "2단계: 'RSS 피드 제출' 선택",
+            description: "팟캐스트 서비스 약관과 저작권 및 광고 관련 가이드라인에 동의합니다.",
+          },
+          {
+            title: "3단계: RSS 피드 링크 유효성 검사",
+            description: "신청 전 피드 링크에 오류가 없는지 <a href=\"/ko/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">RSS 피드 유효성 검사기</a>로 체크합니다.",
+          },
+          {
+            title: "4단계: 소유권 인증 코드 입력",
+            description: "RSS 피드 관리자 이메일로 전송된 보안 인증 코드를 입력합니다.",
+          },
+          {
+            title: "5단계: 재생목록 자동 생성 및 공개",
+            description: "YouTube가 팟캐스트 전용 재생목록을 만들고 오디오 에피소드를 비디오로 변환해 자동 업로드합니다.",
+          },
+        ],
+      },
+      {
+        heading: "영상 장비, 조명 및 화면 구도 세팅",
+        paragraphs: [
+          "비디오 팟캐스트를 촬영할 때는 스마트폰 4K 카메라나 Sony ZV-E10 같은 미러리스 카메라를 활용하세요. 얼굴을 향해 비스듬히 45도 각도에 부드러운 소프트박스 조명을 두고, 눈높이를 화면 상단 3분의 1 지점에 맞추며, 마이크를 화면 프레임 안에 멋스럽게 노출시켜 스튜디오 분위기를 살립니다.",
+        ],
+      },
+      {
+        heading: "YouTube 검색 최적화: 제목, 썸네일 및 챕터",
+        paragraphs: [
+          "<a href=\"/ko/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">에피소드 제목 생성기</a>로 클릭률 높은 제목을 구성하고, <a href=\"/ko/tools/episode-timestamp-generator\" class=\"text-[#a9583e] underline font-medium\">타임스탬프 및 YouTube 챕터 생성기</a>로 클릭 가능한 목차를 상세 설명에 추가하세요.",
+          "또한 YouTube Shorts용 45초 하이라이트를 추출하고 <a href=\"/ko/tools/hook-generator\" class=\"text-[#a9583e] underline font-medium\">SNS 훅 문구 생성기</a>로 첫 2초 이탈을 방지하세요.",
+        ],
+      },
+      {
+        heading: "YouTube 팟캐스트 수익화",
+        paragraphs: [
+          "비디오 포맷은 YouTube AdSense 광고 수익과 협찬 광고, 제휴 마케팅을 유기적으로 결합할 수 있습니다. 예상 매출은 무료 <a href=\"/ko/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 수익 및 CPM 계산기</a>로 확인해 보세요.",
+        ],
+      },
+    ],
+    cta: {
+      title: "몇 초 만에 YouTube 챕터 타임스탬프를 생성하세요",
+      description: "녹음 메모를 붙여넣기만 하면 YouTube 영상 설명란에 바로 붙여넣을 수 있는 정돈된 챕터 목차가 완성됩니다.",
+      buttonText: "YouTube 챕터 생성하기",
+      toolSlug: "episode-timestamp-generator",
+    },
+  },
+
+  "how-to-start-a-podcast-with-no-audience": {
+    title: "팬 없이 팟캐스트 시작하는 법: 0명 성장 가이드 (2026)",
+    description: "팬 없이 팟캐스트 시작하는 법을 알아보세요. 게스트 섭외, 검색 SEO, 숏폼 클립 제작, 초반 알고리즘을 타는 3개 에피소드 론칭 공식.",
+    readTime: "읽는 시간 10분",
+    publishedAt: "2026-11-08",
+    category: "마케팅 및 청취자 확보",
+    sections: [
+      {
+        heading: "팬 없이 팟캐스트 시작하는 법 (2026년 가이드)",
+        paragraphs: [
+          "팬 없이 팟캐스트 시작하는 법을 터득하는 것은 모든 신규 크리에이터가 마주하는 가장 큰 숙제입니다. 소셜 미디어 팔로워도 없고, 뉴스레터 구독자도 없으며, 팟캐스트 차트에 이름을 올리지 못한 채 1회를 올리면 아무도 듣지 않는 텅 빈 방에서 혼잣말을 하는 기분이 들 수 있습니다.",
+          "하지만 오늘날 수십만 명의 청취자를 보유한 인기 팟캐스트 역시 완전한 청취자 0명에서 시작했습니다. 초기 급성장의 비밀은 '알고리즘의 요행을 바라는 것'이 아니라, '게스트의 기존 청취자층을 빌려오고', '니치 키워드 검색을 장악하며', '숏폼 영상 클립으로 외부 유입을 만드는 것'입니다. 론칭 전 필수 항목은 <a href=\"/ko/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 시작하는 법 가이드</a>를 참고하세요.",
+        ],
+      },
+      {
+        heading: "팟캐스트 특유의 콜드 스타트 문제",
+        paragraphs: [
+          "팟캐스트 앱에는 TikTok처럼 콘텐츠를 자동으로 띄워주는 바이럴 피드가 없습니다. 첫 단골 청취자를 모으려면 검색엔진, 소셜 미디어, 커뮤니티 등 외부 플랫폼에서 오디오 피드로 유입을 능동적으로 이끌어내야 합니다.",
+        ],
+      },
+      {
+        heading: "팬 0명에서 청취자를 폭발적으로 늘리는 5가지 전략",
+        paragraphs: [
+          "초반 충성 오디언스를 구축하는 5대 실전 전략:",
+        ],
+        list: [
+          {
+            title: "전략 1: 게스트의 기존 팬덤 레버리지",
+            description: "발언력 있는 업계 전문가를 섭외하세요. <a href=\"/ko/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">콜라보 및 게스트 섭외 제안서 작성기</a>로 정중한 섭외 메일을 보내고 <a href=\"/ko/tools/guest-question-generator\" class=\"text-[#a9583e] underline font-medium\">게스트 인터뷰 질문 생성기</a>로 차별화된 질문을 준비합니다.",
+          },
+          {
+            title: "전략 2: 에피소드 제목과 쇼노트 검색 SEO",
+            description: "청취자가 직접 검색창에 치는 구체적 고민을 제목에 담으세요. <a href=\"/ko/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">에피소드 제목 생성기</a>와 <a href=\"/ko/tools/show-notes-generator\" class=\"text-[#a9583e] underline font-medium\">쇼노트 생성기</a>를 활용합니다.",
+          },
+          {
+            title: "전략 3: 유사 규모 팟캐스트 간 트레일러 맞교환",
+            description: "비슷한 규모의 팟캐스터와 서로의 트레일러를 소개하세요. 팟캐스트 청취 습관이 있는 사람은 일반 SNS 사용자보다 다른 팟캐스트를 구독할 확률이 10배 높습니다.",
+          },
+          {
+            title: "전략 4: TikTok, Reels, Shorts 세로형 클립",
+            description: "가장 흥미로운 45초를 자막과 함께 추출하세요. <a href=\"/ko/tools/hook-generator\" class=\"text-[#a9583e] underline font-medium\">SNS 훅 문구 생성기</a>로 첫 2초 안에 시청자를 사로잡습니다.",
+          },
+          {
+            title: "전략 5: 론칭 첫날 3개 에피소드 동시 공개의 법칙",
+            description: "오픈 당일 <a href=\"/ko/tools/trailer-script-builder\" class=\"text-[#a9583e] underline font-medium\">트레일러 대본 작성기</a>로 만든 티저와 본편 3개를 한꺼번에 공개하여 즉각적인 몰아듣기를 유도합니다.",
+          },
+        ],
+      },
+      {
+        heading: "성장 단계별 이정표와 핵심 과업",
+        paragraphs: [
+          "0~100회 다운로드 구간에서는 <a href=\"/ko/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">에피소드 구성안 작성기</a>를 활용해 규칙적인 주간 발행 습관을 확립합니다. 100~1,000회 구간에서는 게스트 협업에 집중하고, 회당 1,000회를 넘기면 <a href=\"/ko/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 수익 계산기</a>를 활용해 스폰서 유치에 나섭니다.",
+        ],
+      },
+      {
+        heading: "12개월 청취자 성장 시뮬레이션",
+        paragraphs: [
+          "팟캐스트 청취자 증가는 복리로 작동합니다. <a href=\"/ko/tools/audience-growth-estimator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 청취자 성장 예측기</a>로 1년간의 성장 곡선을 확인해 보세요.",
+        ],
+      },
+    ],
+    cta: {
+      title: "12개월 청취자 성장 추이를 시뮬레이션하세요",
+      description: "현재 다운로드 수와 주간 성장률을 입력해 1년 뒤 달성 가능한 청취자 규모를 실시간으로 확인해 보세요.",
+      buttonText: "성장 예측기 실행하기",
+      toolSlug: "audience-growth-estimator",
+    },
+  },
+
+  "how-to-start-a-podcast-and-make-money": {
+    title: "팟캐스트 시작해서 돈 버는 법: 7가지 수익화 모델 (2026)",
+    description: "팟캐스트 시작해서 돈 버는 법을 상세히 공개합니다. CPM 광고 단가, 제휴 마케팅, 유료 구독 멤버십, 고단가 전문 서비스 수주까지.",
+    readTime: "읽는 시간 10분",
+    publishedAt: "2026-11-08",
+    category: "팟캐스트 수익화",
+    sections: [
+      {
+        heading: "팟캐스트 시작해서 돈 버는 법 (2026년 최신판)",
+        paragraphs: [
+          "팟캐스트 시작해서 돈 버는 법을 실행하기 위해 수백만 명의 청취자나 거대 방송국과의 전속 계약이 필요하지 않습니다. 매스컴 광고에만 의존하던 기존 라디오와 달리, 독립 팟캐스터들은 다양한 비즈니스 파이프라인을 엮어 안정적인 현금 흐름을 창출하고 있습니다.",
+          "진행자 라이브 낭독 광고부터 제휴 마케팅, 유료 구독자 커뮤니티, 고단가 비즈니스 컨설팅 수주까지, 수익화의 핵심은 좁고 깊은 니치 오디언스와 얼마나 탄탄한 신뢰를 구축하느냐에 달려 있습니다. 광고주 제안 전 <a href=\"/ko/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 시작하는 법 가이드</a>로 방송의 품격을 높이세요.",
+        ],
+      },
+      {
+        heading: "팟캐스트로 수익을 창출하는 7가지 검증된 경로",
+        paragraphs: [
+          "수익성이 높은 팟캐스터들이 활용하는 7가지 머니타이제이션 모델:",
+        ],
+        list: [
+          {
+            title: "1. CPM 연동형 스폰서 광고",
+            description: "1,000회 다운로드당 약 25,000원~50,000원(18~35달러)이 지급됩니다. 최신 기준은 <a href=\"/ko/guides/podcast-sponsorship-cpm-guide-2026\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 광고 단가 및 CPM 가이드 2026</a>을 참조하세요.",
+          },
+          {
+            title: "2. 제휴 마케팅 (어필리에이트)",
+            description: "실제 사용하는 도구나 서적을 추천하고 10~40%의 수수료를 정산받습니다. 다운로드 1,000회 미만이어도 첫날부터 적용 가능합니다.",
+          },
+          {
+            title: "3. 유료 멤버십 구독 (Patreon, Apple Subscriptions)",
+            description: "월 5,000원~15,000원에 보너스 에피소드나 비공개 모임을 제공합니다. 200명의 팬이 1만 원씩 구독하면 매달 200만 원의 고정 수입이 됩니다.",
+          },
+          {
+            title: "4. 디지털 교육 콘텐츠 및 온라인 강의 판매",
+            description: "진행자의 전문 지식이 담긴 가이드북, 워크시트, VOD 강의를 청취자에게 직접 판매합니다.",
+          },
+          {
+            title: "5. 전문직 컨설팅 및 고단가 B2B 용역 수주",
+            description: "전문 지식 팟캐스트는 변호사, 세무사, 컨설턴트, 에이전시에게 가장 강력한 클라이언트 수주 파이프라인입니다.",
+          },
+          {
+            title: "6. 프로그래매틱 동적 광고 삽입",
+            description: "과거에 올린 백넘버 에피소드에도 최신 광고를 자동으로 끼워 넣어 지속적인 롱테일 수익을 만듭니다.",
+          },
+          {
+            title: "7. 유료 라이브 행사 및 공개방송 티켓 판매",
+            description: "충성 청취자를 대상으로 온·오프라인 팬미팅이나 워크숍을 열고 티켓을 판매합니다.",
+          },
+        ],
+      },
+      {
+        heading: "CPM 광고 수익 계산 공식",
+        paragraphs: [
+          "기본 계산 공식은: (30일 에피소드 다운로드 수 ÷ 1,000) × CPM 단가 × 광고 슬롯 수입니다. 회당 2,500회 청취되는 주 1회 방송에 2개 광고를 판매하면 월 약 50~70만 원의 순수 광고비가 발생하며, 여기에 제휴와 멤버십이 추가됩니다.",
+        ],
+      },
+      {
+        heading: "첫 번째 스폰서를 수주하는 방법",
+        paragraphs: [
+          "지난 30일간의 검증된 다운로드 수치와 청취자 프로필을 1페이지 미디어 키트로 정리하고, 핏이 맞는 브랜드에 <a href=\"/ko/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">콜라보 및 스폰서 제안서 작성기</a>로 직접 제안하세요. 3회 고정가 테스트 패키지를 제시하면 광고주의 부담을 크게 낮출 수 있습니다.",
+        ],
+      },
+      {
+        heading: "광고 단가를 높이는 프로페셔널한 연출",
+        paragraphs: [
+          "광고주는 프로그램의 시각적·내용적 신뢰도를 매우 중요하게 평가합니다. <a href=\"/ko/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">커버 아트 미리보기 검사기</a>로 브랜드 이미지를 점검하고, <a href=\"/ko/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">에피소드 제목 생성기</a>로 세련된 타이틀을 붙이세요.",
+          "여러분의 방송에 대한 구체적인 월 예상 수입은 무료 <a href=\"/ko/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">팟캐스트 수익 및 CPM 계산기</a>로 확인하실 수 있습니다.",
+        ],
+      },
+    ],
+    cta: {
+      title: "팟캐스트의 예상 잠재 수입을 계산해 보세요",
+      description: "회당 다운로드 수, 방송 주기, 광고 구좌 수를 입력하면 예상 월 광고 매출과 연간 수익을 자동으로 시뮬레이션합니다.",
+      buttonText: "수익 계산기 열기",
+      toolSlug: "monetization-calculator",
+    },
+  },
+};

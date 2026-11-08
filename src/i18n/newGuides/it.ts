@@ -357,5 +357,570 @@ export const itNewGuides: Record<string, LocalizedGuideArticle> = {
       toolSlug: "podcast-name-generator",
     },
   },
-};
 
+  "how-to-start-a-podcast-on-spotify": {
+    title: "Come Creare un Podcast su Spotify: Guida Passo Passo (2026)",
+    description: "Scopri come creare un podcast su Spotify nel 2026. Guida passo passo: Spotify for Creators, feed RSS esterno, video podcast e consigli di lancio.",
+    readTime: "9 min di lettura",
+    publishedAt: "2026-11-08",
+    category: "Produzione",
+    sections: [
+      {
+        heading: "Come Creare un Podcast su Spotify nel 2026",
+        paragraphs: [
+          "Imparare come creare un podcast su spotify è una delle scelte più efficaci per farsi ascoltare da oltre 600 milioni di utenti attivi in più di 180 mercati internazionali. Come piattaforma di riferimento mondiale per lo streaming audio, Spotify assicura una visibilità immediata, statistiche di ascolto dettagliate e funzionalità interattive come sondaggi e domande e risposte.",
+          "Prima di caricare il tuo programma, consolida le fondamenta della tua produzione con la nostra guida completa su <a href=\"/it/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">come creare un podcast</a>. In questo approfondimento dedicato esaminiamo i due metodi di pubblicazione (hosting gratuito Spotify for Creators o feed RSS esterno), i requisiti tecnici, i video podcast e le strategie di ottimizzazione.",
+        ],
+      },
+      {
+        heading: "Metodo 1 vs Metodo 2: Spotify for Creators o Hosting Esterno",
+        paragraphs: [
+          "Esistono due strade principali per rendere disponibile il tuo podcast su Spotify:",
+        ],
+        cards: [
+          {
+            title: "Metodo 1: Spotify for Creators (Hosting Diretto)",
+            value: "100% Gratuito",
+            description: "La piattaforma proprietaria di Spotify (ex Anchor). Consente di caricare direttamente video podcast, creare sondaggi ed emettere un feed RSS aperto verso altre app.",
+            highlight: true,
+          },
+          {
+            title: "Metodo 2: Hosting Esterno (Collegamento Feed RSS)",
+            value: "Pieno Controllo",
+            description: "Ospita i tuoi file audio su Buzzsprout, Podbean o Libsyn e collega il tuo feed RSS a Spotify. Scelta consigliata per inserimento pubblicitario dinamico avanzato e indipendenza dei file.",
+          },
+        ],
+      },
+      {
+        heading: "Specifiche Tecniche Spotify e Linee Guida Copertina",
+        paragraphs: [
+          "Spotify applica standard tecnici precisi per assicurare una riproduzione fluida su tutti i dispositivi:",
+        ],
+        list: [
+          {
+            title: "Formato Audio e Bitrate",
+            description: "File MP3 a 128 kbps CBR (velocità costante) per podcast parlati. Stereo per produzioni ricche di sound design, mono per registrazioni solo vocali.",
+          },
+          {
+            title: "Requisiti Copertina Podcast",
+            description: "Formato quadrato 1:1, risoluzione minima 1400x1400 px, massima 3000x3000px, spazio colore RGB, formato JPG o PNG. Valuta la leggibilità su mobile con il nostro <a href=\"/it/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">Verificatore di Copertine per Podcast</a>.",
+          },
+          {
+            title: "Metadati Obbligatori nel Feed",
+            description: "Titolo dello show, descrizione, lingua, categoria principale, indicazione contenuti espliciti e almeno un episodio pubblicato con file audio valido.",
+          },
+        ],
+      },
+      {
+        heading: "Come Creare un Podcast su Spotify in 5 Passaggi",
+        paragraphs: [
+          "Segui questo percorso pratico per debuttare su Spotify:",
+        ],
+        list: [
+          {
+            title: "Passo 1: Scegli Nome e Argomento dello Show",
+            description: "Individua un titolo memorabile e facilmente ricercabile con il nostro <a href=\"/it/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Nomi per Podcast</a>.",
+          },
+          {
+            title: "Passo 2: Crea un Account su Spotify for Creators",
+            description: "Accedi a creators.spotify.com con il tuo profilo Spotify e scegli se ospitare direttamente lo show o collegare un feed RSS.",
+          },
+          {
+            title: "Passo 3: Convalida il Feed RSS (se usi hosting esterno)",
+            description: "Prima dell'invio, verifica l'assenza di anomalie con il <a href=\"/it/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">Validatore Feed RSS per Podcast</a>.",
+          },
+          {
+            title: "Passo 4: Conferma la Proprietà e la Categoria",
+            description: "Inserisci il codice di sicurezza inviato via email e seleziona la tua categoria con lo strumento <a href=\"/it/tools/category-finder\" class=\"text-[#a9583e] underline font-medium\">Ricerca Categorie Apple Podcasts</a>.",
+          },
+          {
+            title: "Passo 5: Conferma la Pubblicazione",
+            description: "Fai clic su Invia. Il podcast apparirà su Spotify generalmente entro 1-24 ore.",
+          },
+        ],
+      },
+      {
+        heading: "Pubblicare Video Podcast su Spotify",
+        paragraphs: [
+          "Spotify sta puntando con decisione sui video podcast. I creator possono caricare video a 1080p (MP4 o MOV in formato 16:9). Gli ascoltatori possono alternare liberamente tra video a schermo intero e ascolto in background senza interruzioni, anche a schermo bloccato.",
+        ],
+      },
+      {
+        heading: "Ottimizzazione SEO e Crescita su Spotify",
+        paragraphs: [
+          "Per scalare i risultati di ricerca su Spotify, genera titoli efficaci con il <a href=\"/it/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Titoli per Podcast</a> e organizza i tempi delle sezioni con il <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Generatore di Scalette per Episodi</a>.",
+          "Stima le tue entrate pubblicitarie in base alle riproduzioni con il nostro <a href=\"/it/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Calcolatore di Guadagni e CPM per Podcast</a>.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Verifica la Tua Copertina per Spotify",
+      description: "Visualizza in anteprima la resa dell'immagine nell'app Spotify, su blocco schermo e nelle miniature da 50px.",
+      buttonText: "Testa la Copertina",
+      toolSlug: "cover-art-preview",
+    },
+  },
+
+  "how-to-start-a-podcast-for-free": {
+    title: "Come Creare un Podcast Gratis: Guida a Costo Zero (2026)",
+    description: "Scopri come creare un podcast gratis nel 2026: programmi di registrazione gratuiti, hosting a costo zero, copertine fai-da-te e distribuzione completa.",
+    readTime: "10 min di lettura",
+    publishedAt: "2026-11-08",
+    category: "Produzione",
+    sections: [
+      {
+        heading: "Come Creare un Podcast Gratis nel 2026",
+        paragraphs: [
+          "Capire come creare un podcast gratis permette a chiunque abbia uno smartphone o un computer portatile di lanciare un programma con resa professionale senza spendere un solo euro. Sebbene gli studi commerciali investano cifre importanti in outboard analogico, gli strumenti digitali gratuiti di oggi hanno democratizzato ogni fase di produzione.",
+          "Sia che tu voglia testare un progetto editoriale o condividere una passione, questa guida ti accompagna passo dopo passo tra registrazione, montaggio, hosting e distribuzione senza budget. Per conoscere l'intero flusso di lavoro, consulta la nostra guida su <a href=\"/it/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">come creare un podcast</a>.",
+        ],
+      },
+      {
+        heading: "Kit a 0 € vs Attrezzatura Professionale a Pagamento",
+        paragraphs: [
+          "Non occorrono investimenti per registrare una voce calda e nitida. Ecco il confronto diretto:",
+        ],
+        cards: [
+          {
+            title: "Microfono e Registrazione",
+            value: "0 € vs 200 €+",
+            description: "Il microfono del telefono a 10 cm dalla bocca in una stanza con tessuti morbidi rivaleggia con un microfono USB da studio.",
+            highlight: true,
+          },
+          {
+            title: "Software di Montaggio (DAW)",
+            value: "0 € vs 240 € / anno",
+            description: "Audacity (open source) o GarageBand (Mac/iOS) assicurano montaggio multitraccia, riduzione del rumore ed equalizzazione senza abbonamenti.",
+          },
+          {
+            title: "Hosting e Feed RSS",
+            value: "0 € vs 180 € / anno",
+            description: "Spotify for Creators o RedCircle archiviano i tuoi episodi senza limiti di spazio né canoni mensili, con feed RSS sempre attivo.",
+            highlight: true,
+          },
+          {
+            title: "Design Copertina",
+            value: "0 € vs 150 €+",
+            description: "I template gratuiti di Canva a 3000x3000px sostituiscono perfettamente un grafico professionista all'inizio.",
+          },
+        ],
+      },
+      {
+        heading: "In 6 Passaggi: Creare un Podcast a Costo Zero",
+        paragraphs: [
+          "Segui questa procedura testata per debuttare con budget pari a zero:",
+        ],
+        list: [
+          {
+            title: "Passo 1: Nome e Scaletta Episodio Gratuiti",
+            description: "Trova idee con il <a href=\"/it/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Nomi per Podcast</a> e scarica un modello con il <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Generatore di Scalette per Episodi</a>.",
+          },
+          {
+            title: "Passo 2: Trasforma lo Smartphone in Microfono da Studio",
+            description: "Appoggia il telefono su una pila di libri all'altezza della bocca, parla a circa 10 centimetri e usa un calzino leggero come filtro antipop improvvisato.",
+          },
+          {
+            title: "Passo 3: Registra Dentro un Guardaroba con Vestiti Appesi",
+            description: "I tessuti assorbono l'eco delle pareti. Registrare circondati da abiti produce un audio asciutto e professionale simile a una cabina insonorizzata.",
+          },
+          {
+            title: "Passo 4: Pulisci l'Audio con Audacity (Gratis)",
+            description: "Attiva la rimozione del rumore di fondo, applica una compressione morbida e normalizza il volume al target standard di -16 LUFS.",
+          },
+          {
+            title: "Passo 5: Crea la Copertina a 3000x3000px",
+            description: "Crea il visual su Canva e controllane la leggibilità su smartphone con il <a href=\"/it/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">Verificatore di Copertine per Podcast</a>.",
+          },
+          {
+            title: "Passo 6: Pubblica con un Hosting 100% Gratuito",
+            description: "Attiva il profilo su Spotify for Creators, verifica il link con il <a href=\"/it/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">Validatore Feed RSS</a> e invialo ad Apple Podcasts.",
+          },
+        ],
+      },
+      {
+        heading: "Trucchi Acustici Fai-da-Te a Budget Zero",
+        paragraphs: [
+          "L'acustica della stanza determina l'80% della qualità sonora finale. Applica la regola delle quattro dita di distanza tra bocca e microfono e parla a 45 gradi rispetto alla capsula per prevenire schiocchi senza spendere in filtri costosi.",
+        ],
+      },
+      {
+        heading: "Quando Conviene Investire in Attrezzatura a Pagamento?",
+        paragraphs: [
+          "Mantieni la configurazione a zero euro finché non pubblicherai regolarmente ogni settimana e raggiungerai 500-1.000 ascolti a puntata. A quel punto, le prime sponsorizzazioni finanzieranno microfoni XLR e un hosting dedicato.",
+          "Verifica quando coprirai le spese con il nostro <a href=\"/it/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Calcolatore di Guadagni per Podcast</a>.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Pianifica la Tua Prima Puntata con Modelli Gratuiti",
+      description: "Organizza i contenuti e scarica la scaletta in formato PDF e Google Docs senza costi.",
+      buttonText: "Crea Scaletta Gratuita",
+      toolSlug: "episode-outline-builder",
+    },
+  },
+
+  "best-podcast-equipment-for-beginners": {
+    title: "Migliore Attrezzatura Podcast per Principianti (2026)",
+    description: "Guida alla migliore attrezzatura podcast per principianti nel 2026: microfoni USB e XLR, cuffie da studio chiuse, bracci e kit economici da 60 €.",
+    readTime: "11 min di lettura",
+    publishedAt: "2026-11-08",
+    category: "Produzione",
+    sections: [
+      {
+        heading: "La Migliore Attrezzatura Podcast per Principianti nel 2026",
+        paragraphs: [
+          "Scegliere la migliore attrezzatura podcast per principianti può disorientare tra centinaia di microfoni, schede audio, bracci articolati e mixer. La buona notizia è che non serve investire cifre da capogiro per ottenere una voce calda e professionale da emittente radiofonica.",
+          "Comprare un microfono a condensatore ipersensibile in una stanza non trattata peggiora spesso la resa, registrando ventole del PC ed eco delle pareti. Questa guida ti consiglia la dotazione ideale per tre fasce di prezzo (sotto 100 €, 250 € e 500 € per due speaker). Una volta equipaggiato, segui il nostro tutorial su <a href=\"/it/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">come creare un podcast</a>.",
+        ],
+      },
+      {
+        heading: "I 4 Elementi Indispensabili per Iniziare",
+        paragraphs: [
+          "Concentra il tuo budget su queste quattro componenti chiave:",
+        ],
+        list: [
+          {
+            title: "1. Microfono Dinamico (USB o XLR)",
+            description: "I microfoni dinamici escludono naturalmente l'eco della stanza e i rumori della tastiera, risultando di gran lunga migliori rispetto ai condensatori in casa.",
+          },
+          {
+            title: "2. Cuffie da Studio Chiuse",
+            description: "Isolano i suoni impedendo che l'audio rientri nel microfono durante la registrazione o le interviste con ospiti remoti.",
+          },
+          {
+            title: "3. Braccio Articolato e Filtro Antipop",
+            description: "Isolano il microfono dalle vibrazioni della scrivania e dai colpi accidentali.",
+          },
+          {
+            title: "4. Scheda Audio / Interfaccia (solo per microfoni XLR)",
+            description: "Converte il segnale analogico in digitale via USB con preamplificatori puliti e ascolto a latenza zero.",
+          },
+        ],
+      },
+      {
+        heading: "Microfoni per Principianti: USB vs XLR a Confronto",
+        paragraphs: [
+          "I microfoni USB si collegano direttamente al computer senza componenti aggiuntivi. I modelli XLR richiedono una scheda audio ma assicurano massima espandibilità:",
+        ],
+        cards: [
+          {
+            title: "Audio-Technica ATR2100x-USB (~79 €)",
+            value: "Miglior Microfono Ibrido",
+            description: "Dotato sia di uscita USB-C che di uscita analogica XLR. Puoi iniziare con il cavo USB e passare a un mixer in un secondo momento.",
+            highlight: true,
+          },
+          {
+            title: "Samson Q2U (~69 €)",
+            value: "Miglior Rapporto Qualità/Prezzo",
+            description: "Fornito con treppiede da tavolo, filtro in spugna e entrambi i cavi. Ottimo isolamento dai rumori ambientali.",
+            highlight: true,
+          },
+          {
+            title: "Røde PodMic (~99 €, solo XLR)",
+            value: "Costruzione in Metallo Robusto",
+            description: "Capsula pesante con filtro antipop integrato. Richiede una scheda audio come la Focusrite Scarlett 2i2.",
+          },
+          {
+            title: "Shure MV7+ (~279 €, USB e XLR)",
+            value: "Gamma Professionale",
+            description: "Ispirato al leggendario Shure SM7B, con DSP integrato per il controllo del guadagno, limiter digitale e uscite doppie.",
+          },
+        ],
+      },
+      {
+        heading: "Cuffie di Monitoraggio Consigliate",
+        paragraphs: [
+          "Evita cuffie aperte o auricolari Bluetooth (che introducono un ritardo audio fastidioso). Usa sempre cuffie chiuse cablate:",
+        ],
+        list: [
+          {
+            title: "Audio-Technica ATH-M20x (~49 €)",
+            description: "La scelta migliore per chi comincia. Leggere, isolanti e con risposta in frequenza neutra per cogliere ogni sbavatura.",
+          },
+          {
+            title: "Sony MDR-7506 (~99 €)",
+            description: "Lo standard negli studi radiofonici da decenni. Indistruttibili, ripiegabili e con eccellente chiarezza vocale.",
+          },
+          {
+            title: "Beyerdynamic DT 770 Pro (~149 €)",
+            description: "Cuscinetti in velluto comodissimi per lunghe sessioni e spazialità sonora ai vertici della categoria.",
+          },
+        ],
+      },
+      {
+        heading: "Kit Completi per Ogni Budget",
+        paragraphs: [
+          "Scegli la configurazione più adatta al tuo budget:",
+        ],
+        cards: [
+          {
+            title: "Kit Base sotto i 100 €",
+            value: "99 € Totale",
+            description: "Samson Q2U (69 €) + Cuffie Audio-Technica ATH-M20x (49 € in offerta). Collega e registra subito.",
+            highlight: true,
+          },
+          {
+            title: "Kit Creator Singolo",
+            value: "240 € Totale",
+            description: "Audio-Technica ATR2100x (79 €) + Braccio da tavolo InnoGear (22 €) + Cuffie Sony MDR-7506 (99 €).",
+          },
+          {
+            title: "Studio Duo per 2 Speaker",
+            value: "490 € Totale",
+            description: "2x Røde PodMic (198 €) + Focusrite Scarlett 2i2 4th Gen (199 €) + 2 bracci e 2 cuffie ATH-M20x.",
+          },
+        ],
+      },
+      {
+        heading: "Dall'Attrezzatura alla Prima Registrazione",
+        paragraphs: [
+          "Con l'hardware pronto, dedica cura ai contenuti: trova un nome d'impatto con il <a href=\"/it/tools/podcast-name-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Nomi per Podcast</a>, verifica la copertina con il <a href=\"/it/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">Verificatore di Copertine per Podcast</a> e progetta la puntata con il <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Generatore di Scalette</a>.",
+          "Stima in quanto tempo ammortizzerai la spesa calcolando le entrate con il <a href=\"/it/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Calcolatore di Guadagni per Podcast</a>.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Calcola il Ritorno sull'Investimento della Tua Attrezzatura",
+      description: "Scopri quante puntate e ascolti ti occorrono per ripagare l'acquisto di microfoni e cuffie.",
+      buttonText: "Apri Calcolatore Guadagni",
+      toolSlug: "monetization-calculator",
+    },
+  },
+
+  "how-to-start-a-podcast-on-youtube": {
+    title: "Come Creare un Podcast su YouTube: Guida Video (2026)",
+    description: "Scopri come creare un podcast su YouTube nel 2026: feed RSS automatico, attrezzatura video, miniature accattivanti, capitoli e algoritmo.",
+    readTime: "10 min di lettura",
+    publishedAt: "2026-11-08",
+    category: "Produzione",
+    sections: [
+      {
+        heading: "Come Creare un Podcast su YouTube nel 2026",
+        paragraphs: [
+          "Comprendere come creare un podcast su youtube è fondamentale per qualsiasi podcaster contemporaneo. I dati di mercato confermano che YouTube è ormai la principale porta d'accesso per la scoperta di podcast nel mondo: oltre il 30% degli ascoltatori segue regolarmente le proprie trasmissioni preferite tramite YouTube e YouTube Music.",
+          "Sia che tu voglia registrare gli episodi in formato video con telecamere e illuminazione da studio, sia che tu preferisca pubblicare automaticamente le registrazioni audio connettendo il tuo feed RSS, questa guida ti offre tutte le risposte. Per le basi tecniche dell'audio, consulta la nostra guida su <a href=\"/it/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">come creare un podcast</a>.",
+        ],
+      },
+      {
+        heading: "Come Creare un Podcast su YouTube: Ingestione RSS vs Video Nativo",
+        paragraphs: [
+          "YouTube propone due approcci differenti per pubblicare uno show:",
+        ],
+        cards: [
+          {
+            title: "Approccio A: Ingestione Automatica RSS (Audio)",
+            value: "Minimo Sforzo",
+            description: "Collega il tuo feed RSS in YouTube Studio. La piattaforma creerà in automatico video statici con copertina da distribuire su YouTube Music.",
+            highlight: true,
+          },
+          {
+            title: "Approccio B: Produzione Video Integrale (Camere)",
+            value: "Massima Spinta Algoritmica",
+            description: "Filma speaker e ospiti. Le espressioni visive e le miniature 16:9 studiate moltiplicano i tassi di clic e i consigli nella home page di YouTube.",
+            highlight: true,
+          },
+        ],
+      },
+      {
+        heading: "In 5 Passi: Connettere il Feed RSS a YouTube",
+        paragraphs: [
+          "Ecco come portare i tuoi file audio su YouTube senza montare video:",
+        ],
+        list: [
+          {
+            title: "Passo 1: Accedi a YouTube Studio",
+            description: "Vai su studio.youtube.com, fai clic su Crea in alto a destra e seleziona 'Nuovo podcast'.",
+          },
+          {
+            title: "Passo 2: Seleziona 'Invia un feed RSS'",
+            description: "Accetta le condizioni contrattuali su diritti e contenuti pubblicitari.",
+          },
+          {
+            title: "Passo 3: Convalida la Correttezza del Feed",
+            description: "Assicurati che non vi siano link rotti con il nostro <a href=\"/it/tools/rss-feed-validator\" class=\"text-[#a9583e] underline font-medium\">Validatore Feed RSS per Podcast</a>.",
+          },
+          {
+            title: "Passo 4: Verifica la Proprietà dello Show",
+            description: "Inserisci il codice temporaneo inviato all'indirizzo email presente nel feed RSS.",
+          },
+          {
+            title: "Passo 5: Pubblica gli Episodi",
+            description: "YouTube creerà la playlist ufficiale del podcast e convertirà le puntate audio in video.",
+          },
+        ],
+      },
+      {
+        heading: "Attrezzatura Video, Illuminazione e Inquadratura",
+        paragraphs: [
+          "Per i video podcast, puoi usare il tuo smartphone in 4K o una mirrorless come la Sony ZV-E10. Posiziona una luce diffusa a 45 gradi dal volto, imposta l'inquadratura con gli occhi nel terzo superiore e lascia il microfono ben visibile nell'immagine per rafforzare l'identità da studio professionale.",
+        ],
+      },
+      {
+        heading: "SEO per YouTube: Titoli, Miniature e Capitoli",
+        paragraphs: [
+          "Migliora il CTR con titoli efficaci creati con il <a href=\"/it/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Titoli per Podcast</a> e struttura la descrizione con il <a href=\"/it/tools/episode-timestamp-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Timestamp e Capitoli per YouTube</a>.",
+          "Crea estratti dinamici per YouTube Shorts e aggancia lo spettatore nei primi 2 secondi con il <a href=\"/it/tools/hook-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Hook per i Social</a>.",
+        ],
+      },
+      {
+        heading: "Monetizzazione su YouTube",
+        paragraphs: [
+          "Il formato video permette di integrare i ricavi di YouTube AdSense con sponsorizzazioni dirette e link di affiliazione. Fai una stima con il nostro <a href=\"/it/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Calcolatore di Guadagni per Podcast</a>.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Genera Capitoli per YouTube in Pochi Secondi",
+      description: "Incolla la scaletta del tuo episodio per ottenere timestamp formattati pronti per la descrizione del video.",
+      buttonText: "Crea Capitoli YouTube",
+      toolSlug: "episode-timestamp-generator",
+    },
+  },
+
+  "how-to-start-a-podcast-with-no-audience": {
+    title: "Creare un Podcast Senza Pubblico: Guida 2026",
+    description: "Come creare un podcast senza pubblico nel 2026: strategie con ospiti, SEO nelle directory, video clip social e la formula di lancio a 3 episodi.",
+    readTime: "10 min di lettura",
+    publishedAt: "2026-11-08",
+    category: "Marketing",
+    sections: [
+      {
+        heading: "Come Creare un Podcast Senza Pubblico nel 2026",
+        paragraphs: [
+          "Sapere come creare un podcast senza pubblico è la sfida iniziale di ogni nuovo autore. Quando non si possiede una mailing list, né una base follower su Instagram o LinkedIn, pubblicare il primo episodio può sembrare un messaggio lanciato nel vuoto.",
+          "Tuttavia, anche i podcast più ascoltati sono partiti esattamente da zero. La chiave per crescere non sta nell'aspettare la fortuna degli algoritmi, ma nel prendere in prestito l'audience degli ospiti, ottimizzare i titoli per ricerche di nicchia e utilizzare video brevi. Prima di avviare la promozione, consulta la nostra guida su <a href=\"/it/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">come creare un podcast</a>.",
+        ],
+      },
+      {
+        heading: "Il Problema della Partenza a Freddo",
+        paragraphs: [
+          "Le app di podcast non hanno una bacheca algoritmica automatica come TikTok. Per trovare i primi fedeli ascoltatori, occorre attirare traffico qualificato da fonti esterne: motori di ricerca, social network e community online.",
+        ],
+      },
+      {
+        heading: "Come Creare un Podcast Senza Pubblico: 5 Strategie Collaudate",
+        paragraphs: [
+          "Applica queste cinque tattiche pratiche per costruire il tuo pubblico:",
+        ],
+        list: [
+          {
+            title: "Strategia 1: Prendere in Prestito il Pubblico degli Ospiti",
+            description: "Intervista professionisti che condivideranno la puntata. Invia proposte impeccabili con il <a href=\"/it/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">Generatore di Pitch per Collaborazioni</a> e prepara domande originali con il <a href=\"/it/tools/guest-question-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Domande per Interviste</a>.",
+          },
+          {
+            title: "Strategia 2: SEO per Titoli e Show Notes",
+            description: "Risolvi i problemi specifici cercati dagli ascoltatori. Trova parole chiave per i titoli con il <a href=\"/it/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Titoli</a> e scrivi note ricche con il <a href=\"/it/tools/show-notes-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Show Notes</a>.",
+          },
+          {
+            title: "Strategia 3: Scambio di Trailer tra Podcaster Simili",
+            description: "Accorda scambi di menzioni o trailer con show affini di pari dimensioni. Un ascoltatore di podcast ha una probabilità 10 volte superiore di abbonarsi rispetto a un normale utente social.",
+          },
+          {
+            title: "Strategia 4: Clip Brevi per TikTok, Reels e Shorts",
+            description: "Taglia passaggi memorabili di 45 secondi. Cattura l'attenzione nei primissimi istanti con il <a href=\"/it/tools/hook-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Hook per i Social</a>.",
+          },
+          {
+            title: "Strategia 5: La Formula di Lancio a 3 Episodi",
+            description: "Pubblica un breve trailer (creato con il <a href=\"/it/tools/trailer-script-builder\" class=\"text-[#a9583e] underline font-medium\">Generatore di Script per Trailer</a>) più 3 puntate complete il giorno del debutto per stimolare l'ascolto continuato.",
+          },
+        ],
+      },
+      {
+        heading: "Tappe di Crescita ed Obiettivi Chiave",
+        paragraphs: [
+          "Da 0 a 100 ascolti, concentrati su costanza e pianificazione con il <a href=\"/it/tools/episode-outline-builder\" class=\"text-[#a9583e] underline font-medium\">Generatore di Scalette</a>. Da 100 a 1.000 ascolti, intensifica collaborazioni e interviste. Oltre 1.000 download a puntata, avvia sponsorizzazioni stimate con il <a href=\"/it/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Calcolatore di Guadagni per Podcast</a>.",
+        ],
+      },
+      {
+        heading: "Simula la Crescita dell'Audience a 12 Mesi",
+        paragraphs: [
+          "La crescita di un podcast produce un effetto moltiplicatore nel tempo. Visualizza l'andamento dei tuoi ascolti su base annua con il nostro <a href=\"/it/tools/audience-growth-estimator\" class=\"text-[#a9583e] underline font-medium\">Calcolatore di Crescita del Pubblico</a>.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Simula la Crescita del Tuo Pubblico in 12 Mesi",
+      description: "Scopri come piccoli incrementi settimanali moltiplicano i tuoi ascolti nel corso di un intero anno.",
+      buttonText: "Calcola Crescita Pubblico",
+      toolSlug: "audience-growth-estimator",
+    },
+  },
+
+  "how-to-start-a-podcast-and-make-money": {
+    title: "Come Creare un Podcast e Guadagnare: 7 Metodi (2026)",
+    description: "Scopri come creare un podcast e guadagnare nel 2026: tariffe CPM pubblicitarie, affiliazioni, abbonamenti ascoltatori e servizi di consulenza.",
+    readTime: "10 min di lettura",
+    publishedAt: "2026-11-08",
+    category: "Monetizzazione",
+    sections: [
+      {
+        heading: "Come Creare un Podcast e Guadagnare nel 2026",
+        paragraphs: [
+          "Capire come creare un podcast e guadagnare non richiede milioni di ascolti né contratti esclusivi con grandi network. Se la radio convenzionale dipendeva unicamente da enormi budget promozionali, i podcaster indipendenti possono costruire entrate ricorrenti combinando diverse opportunità commerciali.",
+          "Dalle inserzioni lette dallo speaker al marketing di affiliazione, fino a canali in abbonamento e consulenze ad alto valore, la monetizzazione nasce dalla fiducia instaurata con una specifica nicchia. Prima di cercare sponsor, cura la qualità del tuo show con la nostra guida su <a href=\"/it/guides/how-to-start-a-podcast\" class=\"text-[#a9583e] underline font-medium\">come creare un podcast</a>.",
+        ],
+      },
+      {
+        heading: "Come Creare un Podcast e Guadagnare Fin da Subito: 7 Canali",
+        paragraphs: [
+          "I podcaster più profittevoli diversificano le entrate attraverso questi sette modelli:",
+        ],
+        list: [
+          {
+            title: "1. Sponsorizzazioni Pubblicitarie a CPM",
+            description: "I brand corrispondono tra 18 e 35 € ogni 1.000 ascolti. Trovi i dati di riferimento nella nostra <a href=\"/it/guides/podcast-sponsorship-cpm-guide-2026\" class=\"text-[#a9583e] underline font-medium\">Guida a Tariffe Pubblicitarie e CPM 2026</a>.",
+          },
+          {
+            title: "2. Marketing di Affiliazione",
+            description: "Commissioni dal 10% al 40% raccomandando prodotti e servizi utilizzati. Perfetto per programmi con meno di 1.000 download senza minimi di ascolto.",
+          },
+          {
+            title: "3. Abbonamenti e Club di Ascoltatori (Patreon, Apple)",
+            description: "Quote mensili da 5 a 15 € per contenuti esclusivi o community riservate. 200 iscritti a 10 € al mese generano 2.000 € ricorrenti.",
+          },
+          {
+            title: "4. Prodotti Digitali e Corsi",
+            description: "Vendita di guide, modelli e formazioni a chi vuole approfondire con te l'argomento.",
+          },
+          {
+            title: "5. Servizi Professionali e Consulenze",
+            description: "Un podcast focalizzato è il miglior strumento di acquisizione per consulenti, professionisti e agenzie.",
+          },
+          {
+            title: "6. Pubblicità Programmatica Dinamica",
+            description: "Inserimento automatico di annunci nelle puntate d'archivio senza gestione manuale.",
+          },
+          {
+            title: "7. Eventi e Registrazioni dal Vivo",
+            description: "Incontri a pagamento, workshop e registrazioni aperte al pubblico per i fan più legati al format.",
+          },
+        ],
+      },
+      {
+        heading: "Il Calcolo dei Ricavi Pubblicitari a CPM",
+        paragraphs: [
+          "La formula standard è: (Download a 30 giorni / 1.000) × Tariffa CPM × Numero di Spot. Per una trasmissione settimanale da 2.500 ascolti a episodio con due spot, i proventi pubblicitari ammontano a 400-500 € al mese, a cui sommare affiliazioni e abbonamenti.",
+        ],
+      },
+      {
+        heading: "Come Ottenere il Tuo Primo Sponsor",
+        paragraphs: [
+          "Prepara un media kit sintetico di una pagina con i tuoi download reali e contatta i brand affini con il nostro <a href=\"/it/tools/collab-finder\" class=\"text-[#a9583e] underline font-medium\">Generatore di Pitch per Collaborazioni</a>. Proponi pacchetti di test su 3 puntate a prezzo fisso per abbattere il rischio dell'inserzionista.",
+        ],
+      },
+      {
+        heading: "Cura la Presentazione per Alzare le Tariffe",
+        paragraphs: [
+          "I marchi attribuiscono grande importanza all'immagine editoriale e grafica. Verifica l'aspetto della copertina con il <a href=\"/it/tools/cover-art-preview\" class=\"text-[#a9583e] underline font-medium\">Verificatore di Copertine per Podcast</a> e cura i titoli con il <a href=\"/it/tools/episode-title-generator\" class=\"text-[#a9583e] underline font-medium\">Generatore di Titoli</a>.",
+          "Modella i tuoi guadagni potenziali con il nostro <a href=\"/it/tools/monetization-calculator\" class=\"text-[#a9583e] underline font-medium\">Calcolatore di Guadagni e CPM per Podcast</a>.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Calcola il Potenziale di Guadagno del Tuo Podcast",
+      description: "Inserisci download, periodicità e spazi pubblicitari per stimare le tue entrate mensili.",
+      buttonText: "Apri Calcolatore Guadagni",
+      toolSlug: "monetization-calculator",
+    },
+  },
+};

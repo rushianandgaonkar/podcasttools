@@ -404,4 +404,214 @@ export const frGuideExtras: GuideExtrasRecord = {
       },
     ],
   },
+  "how-to-start-a-podcast-on-spotify": {
+    metaTitle: "Comment Créer un Podcast sur Spotify (2026) | Pod Studio",
+    firstHeading: "Comment Créer un Podcast sur Spotify en 2026",
+    readMinutes: 9,
+    sections: [
+      {
+        heading: "Hébergement Direct Spotify vs Flux RSS Externe",
+        paragraphs: [
+          "Si vous hébergez directement via Spotify for Creators, vos épisodes sont indexés instantanément et vous bénéficiez des sondages interactifs, des vidéos et des chapitres. Si vous choisissez un hébergeur externe (Buzzsprout, Acast), Spotify se synchronise via votre flux RSS, vous conservant la totale maîtrise de vos données et régies publicitaires.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Est-ce gratuit de lancer un podcast sur Spotify ?",
+        answer:
+          "Oui, l'hébergement direct via Spotify for Creators (anciennement Anchor) est 100% gratuit, sans limite de stockage, de bande passante ni de diffusion RSS.",
+      },
+      {
+        question: "Combien de temps faut-il pour qu'un podcast apparaisse sur Spotify ?",
+        answer:
+          "En utilisant un flux RSS externe, Spotify valide généralement les nouvelles émissions en 1 à 24 heures. Les publications directes sur Spotify for Creators sont instantanées.",
+      },
+      {
+        question: "Peut-on publier des podcasts vidéo sur Spotify ?",
+        answer:
+          "Oui, Spotify prend en charge les podcasts vidéo haute définition (1080p en MP4 ou MOV) via Spotify for Creators ou les hébergeurs partenaires compatibles.",
+      },
+      {
+        question: "Faut-il avoir 1 000 auditeurs pour être sur Spotify ?",
+        answer:
+          "Non, Spotify n'impose aucun seuil minimal d'écoutes ou d'abonnés. Tout créateur disposant d'un flux RSS valide et d'un épisode peut être référencé.",
+      },
+    ],
+  },
+  "how-to-start-a-podcast-for-free": {
+    metaTitle: "Comment Créer un Podcast Gratuitement (2026) | Pod Studio",
+    firstHeading: "Comment Créer un Podcast Gratuitement en 2026",
+    readMinutes: 10,
+    sections: [
+      {
+        heading: "Logiciels d'Enregistrement Gratuits vs DAWs de Studio",
+        paragraphs: [
+          "Audacity est libre, totalement gratuit et rivalise avec Adobe Audition pour le traitement de la voix. Grâce à ses filtres de débruitage, son égalisation paramétrique et sa compression audio, vous produisez des fichiers MP3 de qualité professionnelle sans débourser un centime.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Peut-on réellement créer un podcast avec 0 € ?",
+        answer:
+          "Oui. En utilisant votre smartphone dans une pièce calme, le logiciel gratuit Audacity, les modèles de pochette Canva et l'hébergement offert par Spotify for Creators ou RedCircle, vous lancez une émission sans rien dépenser.",
+      },
+      {
+        question: "Quel est le meilleur hébergeur gratuit de podcast ?",
+        answer:
+          "Spotify for Creators est le service gratuit le plus populaire avec stockage illimité audio et vidéo. RedCircle et Acast proposent également d'excellentes formules gratuites.",
+      },
+      {
+        question: "Quel logiciel gratuit utiliser pour monter son audio ?",
+        answer:
+          "Audacity est la référence open source gratuite pour Windows, Mac et Linux. Les utilisateurs d'Apple peuvent également utiliser GarageBand sans frais.",
+      },
+      {
+        question: "Comment un podcast gratuit gagne-t-il de l'argent ?",
+        answer:
+          "Dès les débuts grâce aux liens d'affiliation dans les show notes, aux dons d'auditeurs (Tipeee, Buy Me a Coffee) puis aux contrats de sponsoring dès la montée en écoutes.",
+      },
+    ],
+  },
+  "best-podcast-equipment-for-beginners": {
+    metaTitle: "Matériel Podcast pour Débutants : Guide 2026 | Pod Studio",
+    firstHeading: "Le Meilleur Matériel de Podcast pour Débutants en 2026",
+    readMinutes: 11,
+    sections: [
+      {
+        heading: "Pourquoi une Pièce Ordinaire Exige un Micro Dynamique",
+        paragraphs: [
+          "Les micros à condensateur possèdent une membrane ultra-sensible qui capte le moindre bruit parasite : circulation extérieure, bruit d'ordinateur et résonance des murs. Les micros dynamiques requièrent une pression sonore proche et rejettent naturellement les bruits ambiants, ce qui les rend parfaits pour un bureau domestique.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Quel est le meilleur premier micro pour débuter ?",
+        answer:
+          "L'Audio-Technica ATR2100x-USB (79 €) ou le Samson Q2U (69 €). Tous deux intègrent des prises USB et XLR avec une capsule dynamique qui isole remarquablement la voix.",
+      },
+      {
+        question: "Pourquoi un micro dynamique est-il préférable à un condensateur ?",
+        answer:
+          "Les micros à condensateur (comme le Blue Yeti) sont trop sensibles et enregistrent l'écho et les bruits de frappe. Un micro dynamique ne capte que la voix à proximité immédiate pour un son net sans traitement acoustique lourd.",
+      },
+      {
+        question: "Faut-il acheter une carte son onéreuse au début ?",
+        answer:
+          "Non. Un micro dynamique USB se branche directement sur le port de votre ordinateur sans aucun boîtier additionnel. La carte son ne devient utile que si vous choisissez des micros XLR.",
+      },
+      {
+        question: "Peut-on enregistrer avec des écouteurs Bluetooth sans fil ?",
+        answer:
+          "Non. Le Bluetooth introduit une latence (décalage sonore) qui provoque un écho très déstabilisant en parlant. Utilisez toujours un casque filaire fermé comme l'Audio-Technica ATH-M20x (49 €).",
+      },
+    ],
+  },
+  "how-to-start-a-podcast-on-youtube": {
+    metaTitle: "Lancer un Podcast sur YouTube : Guide Vidéo | Pod Studio",
+    firstHeading: "Comment Lancer un Podcast sur YouTube en 2026",
+    readMinutes: 10,
+    sections: [
+      {
+        heading: "Comment l'Algorithme YouTube Évalue les Vidéos de Podcast",
+        paragraphs: [
+          "YouTube analyse en priorité le taux de clic sur les miniatures 16:9 et le pourcentage moyen de visionnage. Les épisodes longs qui retiennent l'audience plus de 20 minutes envoient de puissants signaux de satisfaction déclenchant des recommandations d'accueil massives.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Peut-on diffuser un flux RSS de podcast audio sur YouTube ?",
+        answer:
+          "Oui. YouTube Studio permet de connecter directement votre flux RSS existant. YouTube crée automatiquement des vidéos avec visuel statique diffusées sur YouTube et YouTube Music.",
+      },
+      {
+        question: "YouTube exige-t-il obligatoirement de la vidéo pour les podcasts ?",
+        answer:
+          "Non, la synchronisation RSS audio fonctionne seule. Néanmoins, les podcasts filmés avec caméra bénéficient d'un taux de clic et de recommandations algorithmiques nettement supérieurs.",
+      },
+      {
+        question: "Combien d'abonnés faut-il pour créer un podcast sur YouTube ?",
+        answer:
+          "Zéro. N'importe quelle chaîne YouTube validée peut créer une liste de lecture podcast, associer un flux RSS ou mettre en ligne des épisodes vidéo.",
+      },
+      {
+        question: "Comment créer les chapitres horodatés sur YouTube ?",
+        answer:
+          "Indiquez des minutages débutant à 00:00 avec des titres clairs dans la description de votre vidéo. Vous pouvez les formater en quelques secondes avec notre Générateur de Chapitres YouTube.",
+      },
+    ],
+  },
+  "how-to-start-a-podcast-with-no-audience": {
+    metaTitle: "Lancer un Podcast sans Audience (Guide 2026) | Pod Studio",
+    firstHeading: "Comment Lancer un Podcast sans Audience en 2026",
+    readMinutes: 10,
+    sections: [
+      {
+        heading: "La Dynamique des 30 Premiers Jours de Lancement",
+        paragraphs: [
+          "Durant votre premier mois, contactez directement 50 connaissances, collègues et professionnels ciblés en leur demandant un retour précis et un avis sur Apple Podcasts. La vélocité initiale des avis indique aux algorithmes que de vrais auditeurs interagissent avec votre émission.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Comment faire connaître son podcast en partant de zéro ?",
+        answer:
+          "En empruntant l'audience des autres : interviewer des invités qui partagent leur passage, intervenir sur des émissions établies, publier des extraits courts sur TikTok/Reels et cibler des requêtes précises dans vos titres.",
+      },
+      {
+        question: "Pourquoi les applications n'affichent-elles pas les nouveaux podcasts ?",
+        answer:
+          "Apple Podcasts et Spotify sont des annuaires et non des algorithmes de recommandation viraux. Vous devez activement attirer du trafic extérieur depuis Google, les réseaux sociaux et les listes d'emails.",
+      },
+      {
+        question: "Combien d'épisodes publier le jour du lancement ?",
+        answer:
+          "Publiez une bande-annonce de 60 à 90 secondes ainsi que 3 épisodes complets dès le premier jour. Cela donne assez de matière aux premiers auditeurs pour écouter en continu et fidéliser l'audience.",
+      },
+      {
+        question: "Combien de temps pour atteindre 1 000 écoutes par épisode ?",
+        answer:
+          "Pour un créateur régulier qui publie chaque semaine en soignant son SEO et ses invitations, le cap des 1 000 écoutes par épisode est généralement atteint en 6 à 12 mois.",
+      },
+    ],
+  },
+  "how-to-start-a-podcast-and-make-money": {
+    metaTitle: "Créer un Podcast et Gagner de l'Argent (2026) | Pod Studio",
+    firstHeading: "Comment Créer un Podcast et Gagner de l'Argent en 2026",
+    readMinutes: 10,
+    sections: [
+      {
+        heading: "Construire un Dossier de Partenariat Efficace",
+        paragraphs: [
+          "Les sponsors ont besoin de connaître trois informations essentielles : qui écoute votre émission (profil sociologique et intention d'achat), quel est votre volume d'écoutes certifié sur 30 jours et quels formats de visibilité vous proposez. Résumez tout cela dans un PDF clair d'une seule page.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Combien d'écoutes faut-il pour gagner de l'argent avec son podcast ?",
+        answer:
+          "Vous pouvez monétiser dès le premier épisode grâce à l'affiliation et à la vente de services. Les sponsors classiques au CPM s'intéressent généralement aux émissions à partir de 1 000 écoutes, mais des partenariats de niche se concluent dès 200 auditeurs qualifiés.",
+      },
+      {
+        question: "Combien rapporte la publicité de podcast en 2026 ?",
+        answer:
+          "Le CPM standard varie de 18 € à 35 € par millier d'écoutes. Un spot de 60 secondes au milieu de l'épisode lu par l'hôte rapporte 25 € à 35 € CPM, contre 15 € à 18 € pour une annonce de début.",
+      },
+      {
+        question: "Quelle est la source de revenus la plus rentable pour un petit podcast ?",
+        answer:
+          "La vente de ses propres prestations : conseil, coaching, formations ou produits spécialisés. La confiance tissée au fil des épisodes permet de signer des contrats à plusieurs milliers d'euros.",
+      },
+      {
+        question: "Comment calculer le revenu prévisionnel de son émission ?",
+        answer:
+          "Appliquez la formule CPM : (Écoutes à 30 jours / 1 000) × Tarif CPM × Nombre d'Annonces. Utilisez notre Calculateur de Revenus de Podcast gratuit pour simuler vos estimations personnalisées.",
+      },
+    ],
+  },
 };
