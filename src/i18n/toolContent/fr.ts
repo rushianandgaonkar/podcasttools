@@ -73,9 +73,9 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
     ],
   },
   "podcast-name-generator": {
-    metaTitle: "Générateur de Noms de Podcast Gratuit | Pod Studio",
+    metaTitle: "Générateur de Noms de Podcast : Idées de Noms Gratuites | Pod Studio",
     metaDescription:
-      "Trouvez des idées de noms de podcast mémorables selon votre thématique avec notre générateur de noms de podcast gratuit. Testez la disponibilité. Gratuit.",
+      "Trouvez un nom pour votre podcast avec notre générateur gratuit. Idées de noms de podcast par thématique, puis vérifiez la disponibilité. Gratuit.",
     overview: [
       "Le Générateur de Noms de Podcast vous aide à trouver des idées de noms mémorables pour votre émission dans chaque catégorie. Que vous cherchiez un générateur aléatoire de noms de podcast pour débloquer votre créativité ou une alternative d'intelligence artificielle pour concevoir une marque forte, découvrez des pistes du format descriptif à l'angle décalé.",
       "Utilisez ces idées de noms de podcast pour bâtir votre sélection, puis vérifiez leur disponibilité sur Apple Podcasts, Spotify et les registres de noms de domaine avant le lancement officiel.",
@@ -164,7 +164,7 @@ Si cet épisode vous a plu, laissez une note 5 étoiles sur Apple Podcasts et ab
     ],
   },
   "episode-outline-builder": {
-    metaTitle: "Modèle de Script et Conducteur de Podcast | Pod Studio",
+    metaTitle: "Modèle et Exemples de Script de Podcast | Pod Studio",
     metaDescription:
       "Structurez votre émission avec notre modèle de script de podcast gratuit et conducteur minuté. Planifiez séquences, sponsors et durées. Outil gratuit.",
     overview: [
@@ -512,7 +512,7 @@ HÔTE : « Pensez à vous abonner sur Apple Podcasts ou Spotify pour ne manquer 
     ],
   },
   "description-generator": {
-    metaTitle: "Générateur de Descriptions de Podcast | Pod Studio",
+    metaTitle: "Générateur de Descriptions de Podcast et Exemples | Pod Studio",
     metaDescription:
       "Rédigez des descriptions efficaces pour votre chaîne de podcast et chaque épisode individuel sur Apple Podcasts et Spotify. Outil SEO gratuit.",
     overview: [

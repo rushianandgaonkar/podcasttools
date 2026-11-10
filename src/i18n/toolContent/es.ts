@@ -73,9 +73,9 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
     ],
   },
   "podcast-name-generator": {
-    metaTitle: "Generador de Nombres de Podcast Gratis | Pod Studio",
+    metaTitle: "Generador de Nombres de Podcast: Ideas de Nombres Gratis | Pod Studio",
     metaDescription:
-      "Crea nombres originales con nuestro generador de nombres de podcast gratuito. Explora ideas por temática y comprueba disponibilidad. Gratis.",
+      "Encuentra un nombre para tu podcast con nuestro generador gratuito. Ideas de nombres de podcast por temática y comprobación de disponibilidad. Gratis.",
     overview: [
       "El Generador de Nombres de Podcast te ayuda a descubrir ideas de nombres de podcast memorables para cualquier nicho. Tanto si buscas un generador aleatorio de nombres de podcast para romper bloqueos creativos como una alternativa con inteligencia artificial para títulos de marca, explora enfoques desde descriptivos hasta ingeniosos.",
       "Utiliza estas ideas de nombres de podcast para crear una lista sólida de opciones y verifica su disponibilidad en Apple Podcasts, Spotify y registros de dominios antes del lanzamiento.",
@@ -164,7 +164,7 @@ Si disfrutaste este episodio, déjanos una valoración de 5 estrellas en Apple P
     ],
   },
   "episode-outline-builder": {
-    metaTitle: "Plantilla de Guion de Podcast y Escaleta | Pod Studio",
+    metaTitle: "Plantilla y Ejemplos de Guion de Podcast + Escaleta | Pod Studio",
     metaDescription:
       "Estructura tu programa con una plantilla de guion de podcast gratuita y creador de escaletas. Planifica bloques, pausas publicitarias y tiempos. Gratis.",
     overview: [
@@ -512,7 +512,7 @@ PRESENTADOR: "Asegúrate de suscribirte en Apple Podcasts o Spotify para no perd
     ],
   },
   "description-generator": {
-    metaTitle: "Generador de Descripciones para Podcast | Pod Studio",
+    metaTitle: "Generador de Descripciones de Podcast y Ejemplos | Pod Studio",
     metaDescription:
       "Redacta descripciones claras para tu canal de podcast y episodios individuales en Apple Podcasts y Spotify. Optimizado para SEO. Herramienta gratuita.",
     overview: [

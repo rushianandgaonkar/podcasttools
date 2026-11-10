@@ -2,7 +2,7 @@ import type { GuideExtrasRecord } from "./types";
 
 export const deGuideExtras: GuideExtrasRecord = {
   "podcast-sponsorship-cpm-guide-2026": {
-    metaTitle: "Podcast-Werbepreise & TKP 2026: Leitfaden | Pod Studio",
+    metaTitle: "Podcast-Sponsoring & Werbepreise 2026 | Pod Studio",
     firstHeading: "Podcast-Werbepreise und TKP-Kalkulation verstehen",
     readMinutes: 6,
     sections: [

@@ -73,9 +73,9 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
     ],
   },
   "podcast-name-generator": {
-    metaTitle: "Kostenloser Podcast-Namen-Generator | Pod Studio",
+    metaTitle: "Podcast-Namen-Generator: Kostenlose Namensideen | Pod Studio",
     metaDescription:
-      "Finde einprägsame Podcast-Namen-Ideen nach Genre mit unserem kostenlosen Podcast-Namen-Generator. Prüfe Verfügbarkeit und Marken unkompliziert. Gratis.",
+      "Finde einen Namen für deinen Podcast mit unserem kostenlosen Podcast-Namen-Generator. Podcast-Namen-Ideen nach Genre, dazu Verfügbarkeitscheck. Gratis.",
     overview: [
       "Der Podcast-Namen-Generator hilft dir, einprägsame Namen für deine Show in jedem Genre zu entwickeln. Ob du einen Zufallsgenerator für Podcast-Namen suchst, um kreative Blockaden zu lösen, oder eine KI-Alternative für markenfähige Titel – entdecke vielfältige Ansätze von beschreibend bis verspielt.",
       "Nutze diese Podcast-Namen-Ideen, um eine überzeugende Auswahlliste zu erstellen, und prüfe die Verfügbarkeit bei Apple Podcasts, Spotify und Domain-Registraren vor dem offiziellen Start.",
@@ -164,7 +164,7 @@ Wenn dir diese Folge gefallen hat, hinterlasse uns gerne eine 5-Sterne-Bewertung
     ],
   },
   "episode-outline-builder": {
-    metaTitle: "Podcast-Skript-Vorlage & Ablauf-Planer | Pod Studio",
+    metaTitle: "Podcast-Skript-Vorlage & Beispiele | Pod Studio",
     metaDescription:
       "Strukturiere deine Show mit einer kostenlosen Podcast-Skript-Vorlage und Ablauf-Planer. Plane Segmente, Werbepausen, Timecodes und Leitfäden. Gratis.",
     overview: [
@@ -512,7 +512,7 @@ HOST: „Abonniere die Show am besten direkt auf Apple Podcasts oder Spotify, um
     ],
   },
   "description-generator": {
-    metaTitle: "Podcast-Kanal- & Folgen-Beschreibungs-Generator | Pod Studio",
+    metaTitle: "Podcast-Beschreibung Generator & Beispiele | Pod Studio",
     metaDescription:
       "Schreibe treffende Beschreibungen für deinen Podcast-Kanal und einzelne Episoden auf Apple Podcasts und Spotify. Kostenloses SEO-Text-Werkzeug.",
     overview: [

@@ -2,7 +2,7 @@ import type { GuideExtrasRecord } from "./types";
 
 export const enGuideExtras: GuideExtrasRecord = {
   "podcast-sponsorship-cpm-guide-2026": {
-    metaTitle: "Podcast Ad Rates 2026: CPM Benchmarks & Pricing | Pod Studio",
+    metaTitle: "Podcast Sponsorship Rates & Ad Rates 2026 | Pod Studio",
     firstHeading: "Understanding Podcast Ad Rates & CPM Pricing",
     readMinutes: 6,
     sections: [

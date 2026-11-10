@@ -73,9 +73,9 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
     ],
   },
   "podcast-name-generator": {
-    metaTitle: "Generatore di Nomi per Podcast: Idee di Nomi | Pod Studio",
+    metaTitle: "Generatore di Nomi per Podcast: Idee di Nomi Gratis | Pod Studio",
     metaDescription:
-      "Trova idee per nomi di podcast originali per nicchia con il generatore gratuito. Verifica la disponibilità del tuo show. Gratis, senza registrazione.",
+      "Trova il nome giusto per il tuo podcast con il generatore gratuito. Idee di nomi per podcast per nicchia e verifica della disponibilità. Gratis.",
     overview: [
       "Il Generatore di Nomi per Podcast ti aiuta a trovare idee originali e memorabili per il tuo show in ogni categoria. Che tu stia cercando un generatore casuale di nomi per podcast per superare il blocco creativo o un'alternativa basata su intelligenza artificiale per creare un brand autorevole, scopri angolature che spaziano dai titoli descrittivi a quelli più brillanti.",
       "Usa queste idee per creare una lista ristretta per il tuo nuovo programma audio e controlla la disponibilità su Apple Podcasts, Spotify e registrar di domini prima del debutto.",
@@ -164,7 +164,7 @@ Se ti è piaciuto questo episodio, lascia una recensione a 5 stelle su Apple Pod
     ],
   },
   "episode-outline-builder": {
-    metaTitle: "Modello di Scaletta e Script per Podcast | Pod Studio",
+    metaTitle: "Modello ed Esempi di Copione per Podcast | Pod Studio",
     metaDescription:
       "Struttura l'episodio con il modello di scaletta per podcast. Pianifica blocchi, pause sponsor, tempi precisi e argomenti. Gratis, senza registrazione.",
     overview: [
@@ -512,7 +512,7 @@ HOST: "Assicurati di iscriverti su Apple Podcasts o Spotify per non perdere le p
     ],
   },
   "description-generator": {
-    metaTitle: "Generatore Descrizioni Podcast ed Episodi | Pod Studio",
+    metaTitle: "Generatore di Descrizioni Podcast ed Esempi | Pod Studio",
     metaDescription:
       "Scrivi descrizioni chiare per il podcast e gli episodi su Apple Podcasts e Spotify. Verifica l'anteprima del taglio mobile e le parole chiave. Gratis.",
     overview: [

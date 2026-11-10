@@ -73,9 +73,9 @@ export const koToolContent: ToolContentRecord = {
     ],
   },
   "podcast-name-generator": {
-    metaTitle: "팟캐스트 이름 생성기: 무료 프로그램 이름 아이디어 | Pod Studio",
+    metaTitle: "팟캐스트 이름 생성기: 무료 팟캐스트 이름 아이디어 | Pod Studio",
     metaDescription:
-      "기억에 남는 팟캐스트 이름 아이디어를 무료로 생성하세요. 비즈니스, 스포츠, 코미디, 범죄 등 카테고리별 네이밍 후보를 비교할 수 있습니다. 가입 불필요.",
+      "팟캐스트 이름이 고민이라면 무료 이름 생성기를 사용해 보세요. 카테고리별 팟캐스트 이름 아이디어를 확인하고 사용 가능 여부도 점검하세요. 가입 불필요.",
     overview: [
       "팟캐스트 이름 생성기는 프로그램의 분야, 맞춤 키워드, 지향하는 브랜드 스타일에 맞추어 기억하기 쉽고 브랜드 가치가 높은 팟캐스트 이름 아이디어를 제안합니다. 아이디어 막힘을 뚫어주는 랜덤 프로그램 이름 생성기로 활용하거나 브랜드 작명을 돕는 AI 도구의 훌륭한 대안으로 다양한 스타일을 탐색해 보세요.",
       "추천된 이름 아이디어를 바탕으로 후보군을 구성한 뒤, 공식 론칭 전에 Apple 팟캐스트, Spotify, 도메인 등록 사이트에서 동일한 이름이 이미 등록되어 있는지 확인하세요.",
@@ -164,7 +164,7 @@ export const koToolContent: ToolContentRecord = {
     ],
   },
   "episode-outline-builder": {
-    metaTitle: "팟캐스트 대본 템플릿 및 큐시트 작성기 | Pod Studio",
+    metaTitle: "팟캐스트 대본 템플릿·예시 및 큐시트 작성기 | Pod Studio",
     metaDescription:
       "팟캐스트 대본 템플릿과 큐시트 작성기. 오프닝 훅, 본문, 중간 광고, 엔딩의 시간 배분을 설계하고 녹음 탈선을 방지하세요. 완전 무료, 회원가입 불필요.",
     overview: [
@@ -506,7 +506,7 @@ export const koToolContent: ToolContentRecord = {
     ],
   },
   "description-generator": {
-    metaTitle: "팟캐스트 프로그램 소개 및 회차 설명 생성기 | Pod Studio",
+    metaTitle: "팟캐스트 설명 예시 및 생성기 | Pod Studio",
     metaDescription:
       "Apple 팟캐스트와 Spotify에 최적화된 프로그램 소개글과 회차별 설명을 작성하세요. 앱의 '더보기' 절단선을 고려한 키워드 배치로 신규 구독 전환율을 향상. 무료.",
     overview: [

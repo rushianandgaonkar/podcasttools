@@ -73,9 +73,9 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
     ],
   },
   "podcast-name-generator": {
-    metaTitle: "Gerador de Nomes para Podcast: Ideias de Nomes | Pod Studio",
+    metaTitle: "Gerador de Nomes para Podcast: Ideias de Nomes Grátis | Pod Studio",
     metaDescription:
-      "Descubra ideias criativas de nomes para podcast por nicho com nosso gerador gratuito. Nomes marcantes para seu novo programa de áudio. Grátis e rápido.",
+      "Encontre um nome para o seu podcast com nosso gerador gratuito. Ideias de nomes para podcast por nicho e checagem de disponibilidade. Grátis e rápido.",
     overview: [
       "O Gerador de Nomes para Podcast ajuda você a encontrar ideias memoráveis e marcantes para seu programa em qualquer nicho. Seja procurando um gerador aleatório de nomes para podcast para superar bloqueios criativos ou uma alternativa com inteligência artificial para títulos de marca, explore abordagens desde as descritivas até as mais autênticas.",
       "Use essas ideias para montar uma lista selecionada para seu novo podcast e verifique a disponibilidade no Apple Podcasts, Spotify e registradores de domínio antes do lançamento.",
@@ -164,7 +164,7 @@ Se gostou deste episódio, deixe uma avaliação de 5 estrelas no Apple Podcasts
     ],
   },
   "episode-outline-builder": {
-    metaTitle: "Modelo de Roteiro e Pauta de Podcast Grátis | Pod Studio",
+    metaTitle: "Modelo e Exemplos de Roteiro de Podcast Grátis | Pod Studio",
     metaDescription:
       "Estruture seu episódio com nosso modelo de roteiro de podcast gratuito. Planeje blocos, pausas de anúncios, tempos e tópicos-chave. Grátis, sem cadastro.",
     overview: [
@@ -512,7 +512,7 @@ APRESENTADOR: "Inscreva-se no Apple Podcasts ou Spotify para não perder nenhum 
     ],
   },
   "description-generator": {
-    metaTitle: "Gerador de Descrição de Podcast e Episódio | Pod Studio",
+    metaTitle: "Gerador de Descrição de Podcast e Exemplos | Pod Studio",
     metaDescription:
       "Escreva descrições claras para o podcast e episódios no Apple Podcasts e Spotify. Veja a prévia do corte móvel e otimize palavras-chave. Grátis e online.",
     overview: [

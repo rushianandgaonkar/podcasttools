@@ -2,7 +2,7 @@ import type { GuideExtrasRecord } from "./types";
 
 export const jaGuideExtras: GuideExtrasRecord = {
   "podcast-sponsorship-cpm-guide-2026": {
-    metaTitle: "ポッドキャスト広告料金＆CPM相場（2026年） | Pod Studio",
+    metaTitle: "ポッドキャストのスポンサー料金＆広告単価2026 | Pod Studio",
     firstHeading: "ポッドキャスト広告料金とCPMの仕組み",
     readMinutes: 6,
     sections: [

@@ -73,9 +73,9 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
     ],
   },
   "podcast-name-generator": {
-    metaTitle: "Podcast Name Generator: Free Podcast Name Ideas | Pod Studio",
+    metaTitle: "Podcast Name Generator: Free Name Ideas for Your Podcast | Pod Studio",
     metaDescription:
-      "Generate catchy show names with our free podcast name generator. Explore creative podcast name ideas by niche and check availability. Free, no sign-up.",
+      "Find a name for your podcast with our free podcast name generator. Get catchy podcast name ideas by niche, then check availability. Free, no sign-up.",
     overview: [
       "The Podcast Name Generator helps you brainstorm memorable, brandable podcast name ideas across every niche. Whether you need a random podcast name generator to break creative block or a podcast name generator AI alternative for brandable titles, explore curated angles from descriptive to playful.",
       "Use these podcast name ideas to build a strong shortlist for your new show, then verify directory availability on Apple Podcasts, Spotify, and domain registrars before announcing your brand.",
@@ -155,7 +155,7 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
     ],
   },
   "episode-outline-builder": {
-    metaTitle: "Podcast Script Template & Outline Builder | Pod Studio",
+    metaTitle: "Podcast Script Template, Examples & Outline Builder | Pod Studio",
     metaDescription:
       "Structure your show with a free podcast script template and outline builder. Plan segments, ad breaks, timecodes, and talking points. Free, no sign-up.",
     overview: [
@@ -302,7 +302,7 @@ If you enjoyed this episode, please leave a 5-star rating on Apple Podcasts and 
     ],
   },
   "monetization-calculator": {
-    metaTitle: "Podcast Income & CPM Calculator: Ad Revenue | Pod Studio",
+    metaTitle: "Podcast Income Calculator: CPM Ad Revenue | Pod Studio",
     metaDescription:
       "Calculate your show earnings with our free podcast income calculator. Model host-read CPM ad revenue, downloads, and sponsorship deals. Free, no sign-up.",
     overview: [
@@ -503,7 +503,7 @@ HOST: "Make sure you're subscribed on Apple Podcasts or Spotify so you never mis
     ],
   },
   "description-generator": {
-    metaTitle: "Podcast Show & Episode Description Generator | Pod Studio",
+    metaTitle: "Podcast Description Generator & Examples | Pod Studio",
     metaDescription:
       "Write clear podcast show and episode descriptions for Apple and Spotify. Separate modes for your show summary and each episode. Free, no sign-up.",
     overview: [

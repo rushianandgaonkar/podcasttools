@@ -73,9 +73,9 @@ export const jaToolContent: ToolContentRecord = {
     ],
   },
   "podcast-name-generator": {
-    metaTitle: "ポッドキャスト名前・番組名アイデア生成 | Pod Studio",
+    metaTitle: "ポッドキャスト名前ジェネレーター：番組名アイデアを無料生成 | Pod Studio",
     metaDescription:
-      "人気ジャンルから記憶に残るポッドキャスト番組名のアイデアを無料生成。スポーツ、ビジネス、コメディなど魅力的なタイトルを今すぐ探せます。",
+      "ポッドキャストの名前・番組名のアイデアを無料で生成。ジャンル別の候補から、覚えやすいポッドキャスト名を見つけて空き状況も確認できます。",
     overview: [
       "ポッドキャスト名前ジェネレーターは、あらゆるジャンルで記憶に残り、ブランド力のある番組名のアイデアを見つけるためのツールです。創作の壁を突破するためのランダム番組名ジェネレーターとしても、ブランド性の高いタイトルを考案するAIの代替ツールとしても、実用的なものから遊び心あるものまで多彩な切り口を探求できます。",
       "これらのポッドキャスト番組名アイデアをもとに候補リストを作成し、公開前にApple PodcastsやSpotify、ドメイン登録サービスで空き状況を確認しましょう。",
@@ -164,7 +164,7 @@ export const jaToolContent: ToolContentRecord = {
     ],
   },
   "episode-outline-builder": {
-    metaTitle: "ポッドキャスト台本テンプレート・構成案ビルダー | Pod Studio",
+    metaTitle: "ポッドキャスト台本テンプレート・例・構成案ビルダー | Pod Studio",
     metaDescription:
       "無料のポッドキャスト台本テンプレートと構成案ビルダー。オープニング、本編、スポンサー広告、エンディングの進行と時間配分を整理。完全無料・登録不要。",
     overview: [
@@ -506,7 +506,7 @@ export const jaToolContent: ToolContentRecord = {
     ],
   },
   "description-generator": {
-    metaTitle: "ポッドキャスト番組紹介＆エピソード概要生成 | Pod Studio",
+    metaTitle: "ポッドキャスト概要文の例＆生成ツール | Pod Studio",
     metaDescription:
       "Apple PodcastsやSpotifyで読まれるポッドキャスト番組紹介文とエピソード概要を自動作成。スマホアプリの省略位置を意識したキーワード設計で登録率を向上。無料ツール。",
     overview: [

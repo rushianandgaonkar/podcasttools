@@ -428,8 +428,8 @@ export const toolRegistry: ToolDefinition[] = [
 export const guidesRegistry: GuideDefinition[] = [
   {
     slug: "podcast-sponsorship-cpm-guide-2026",
-    title: "Podcast Ad Rates & CPM Benchmarks (2026)",
-    description: "Learn current podcast ad rates and industry CPM benchmarks for 2026. Explore pricing for pre-roll, mid-roll, and host-read sponsorships. Free complete guide.",
+    title: "Podcast Sponsorship Rates & Ad Rates (2026 CPM Benchmarks)",
+    description: "Podcast sponsorship rates and ad rates for 2026. See CPM benchmarks for pre-roll, mid-roll and host-read sponsorships, and how to price your show. Free guide.",
     readTime: "6 min read",
     publishedAt: "2026-10-15",
     updatedAt: "2026-11-06",
@@ -551,6 +551,24 @@ export const guidesRegistry: GuideDefinition[] = [
     publishedAt: "2026-11-08",
     updatedAt: "2026-11-08",
     category: "Monetization",
+  },
+  {
+    slug: "podcast-script-examples-template",
+    title: "Podcast Script Examples & Free Template (Solo, Interview, Intro)",
+    description: "See podcast script examples for solo and interview episodes, plus a free podcast script template with timing cues. Copy, adapt and record with confidence.",
+    readTime: "7 min read",
+    publishedAt: "2026-11-09",
+    updatedAt: "2026-11-09",
+    category: "Content",
+  },
+  {
+    slug: "what-is-a-podcast-rss-feed",
+    title: "What Is a Podcast RSS Feed? How to Find, Create and Validate It",
+    description: "A podcast RSS feed is the file that delivers your show to Apple Podcasts and Spotify. Learn how to find yours, what it must contain and how to validate it.",
+    readTime: "7 min read",
+    publishedAt: "2026-11-09",
+    updatedAt: "2026-11-09",
+    category: "Production",
   },
 ];
 

@@ -2,7 +2,7 @@ import type { GuideExtrasRecord } from "./types";
 
 export const koGuideExtras: GuideExtrasRecord = {
   "podcast-sponsorship-cpm-guide-2026": {
-    metaTitle: "팟캐스트 광고 단가 및 2026 CPM 기준 가이드 | Pod Studio",
+    metaTitle: "팟캐스트 스폰서십 비용·광고 단가 2026 | Pod Studio",
     firstHeading: "팟캐스트 광고 단가 및 CPM 요율 이해하기",
     readMinutes: 6,
     sections: [
