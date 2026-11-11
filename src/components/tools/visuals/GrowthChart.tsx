@@ -17,6 +17,7 @@ interface GrowthChartProps {
   thresholds?: Threshold[];
   unit?: string;
   title?: string;
+  tableLabel?: string;
 }
 
 const W = 900;
@@ -40,7 +41,7 @@ const fmt = (n: number) =>
  * dashed percentile threshold lines and a crosshair tooltip.
  * Dependency-free SVG, theme-aware via Tailwind classes.
  */
-export function GrowthChart({ points, thresholds = [], unit = "dl / ep", title }: GrowthChartProps) {
+export function GrowthChart({ points, thresholds = [], unit = "dl / ep", title, tableLabel = "View data table" }: GrowthChartProps) {
   const gid = useId().replace(/:/g, "");
   const [hover, setHover] = useState<number | null>(null);
 
@@ -199,7 +200,7 @@ export function GrowthChart({ points, thresholds = [], unit = "dl / ep", title }
 
       {/* accessible table view */}
       <details className="mt-2 text-[11px] text-neutral-500">
-        <summary className="cursor-pointer hover:text-neutral-900 dark:hover:text-white">View data table</summary>
+        <summary className="cursor-pointer hover:text-neutral-900 dark:hover:text-white">{tableLabel}</summary>
         <table className="mt-2 w-full font-mono">
           <tbody>
             {points.map((p) => (

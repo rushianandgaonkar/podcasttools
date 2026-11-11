@@ -15,6 +15,18 @@ interface MonetizationCalculatorProps {
   lang?: SupportedLocale;
 }
 
+// Benchmark block + "Off" label (the rest of this tool's text lives in toolUiTranslations)
+const BENCH: Record<SupportedLocale, { title: string; off: string; rows: [string, string, string, string]; note: string }> = {
+  en: { title: "2026 Industry CPM Benchmarks", off: "Off", rows: ["Standard Pre-roll (15-30s):", "Host-read Mid-roll (60s):", "Niche B2B / Finance Mid-roll:", "Standard Post-roll:"], note: "Note: Most podcast sponsorship networks (Gumball, Advertisecast, Midroll) typically look for shows averaging 2,500+ to 5,000+ downloads per episode before broker matching." },
+  es: { title: "Referencias de CPM del sector en 2026", off: "Desactivado", rows: ["Pre-roll estándar (15-30 s):", "Mid-roll leído por el anfitrión (60 s):", "Mid-roll de nicho B2B / finanzas:", "Post-roll estándar:"], note: "Nota: la mayoría de las redes de patrocinio de pódcast (Gumball, Advertisecast, Midroll) suelen buscar programas con una media de 2500 a 5000+ descargas por episodio antes de intermediar." },
+  fr: { title: "Références CPM du secteur en 2026", off: "Désactivé", rows: ["Pré-roll standard (15-30 s) :", "Mid-roll lu par l'animateur (60 s) :", "Mid-roll de niche B2B / finance :", "Post-roll standard :"], note: "Remarque : la plupart des réseaux de sponsoring de podcasts (Gumball, Advertisecast, Midroll) recherchent généralement des émissions avec une moyenne de 2 500 à 5 000+ téléchargements par épisode avant toute mise en relation." },
+  de: { title: "CPM-Richtwerte der Branche 2026", off: "Aus", rows: ["Standard-Pre-Roll (15–30 Sek.):", "Vom Host gelesener Mid-Roll (60 Sek.):", "Nischen-Mid-Roll B2B / Finanzen:", "Standard-Post-Roll:"], note: "Hinweis: Die meisten Podcast-Sponsoring-Netzwerke (Gumball, Advertisecast, Midroll) suchen in der Regel Shows mit durchschnittlich 2.500 bis 5.000+ Downloads pro Folge, bevor sie vermitteln." },
+  it: { title: "Parametri CPM del settore nel 2026", off: "Disattivato", rows: ["Pre-roll standard (15-30 s):", "Mid-roll letto dal conduttore (60 s):", "Mid-roll di nicchia B2B / finanza:", "Post-roll standard:"], note: "Nota: la maggior parte delle reti di sponsorizzazione podcast (Gumball, Advertisecast, Midroll) cerca di solito programmi con una media di 2.500-5.000+ download per episodio prima di fare da intermediaria." },
+  pt: { title: "Referências de CPM do setor em 2026", off: "Desativado", rows: ["Pre-roll padrão (15-30 s):", "Mid-roll lido pelo apresentador (60 s):", "Mid-roll de nicho B2B / finanças:", "Post-roll padrão:"], note: "Nota: a maioria das redes de patrocínio de podcast (Gumball, Advertisecast, Midroll) costuma buscar programas com média de 2.500 a 5.000+ downloads por episódio antes de intermediar." },
+  ja: { title: "2026年の業界CPMベンチマーク", off: "オフ", rows: ["標準プレロール（15〜30秒）：", "ホスト読みのミッドロール（60秒）：", "ニッチなBtoB／金融向けミッドロール：", "標準ポストロール："], note: "注：ほとんどのポッドキャスト広告ネットワーク（Gumball、Advertisecast、Midrollなど）は、仲介を始める前に、1エピソードあたり平均2,500〜5,000回以上のダウンロードがある番組を求めるのが一般的です。" },
+  ko: { title: "2026년 업계 CPM 벤치마크", off: "끔", rows: ["표준 프리롤 (15~30초):", "진행자 낭독 미드롤 (60초):", "틈새 B2B / 금융 미드롤:", "표준 포스트롤:"], note: "참고: 대부분의 팟캐스트 스폰서십 네트워크(Gumball, Advertisecast, Midroll)는 중개를 시작하기 전에 에피소드당 평균 2,500~5,000회 이상 다운로드되는 프로그램을 찾습니다." },
+};
+
 export function MonetizationCalculator({ lang = defaultLocale }: MonetizationCalculatorProps) {
   const [downloads, setDownloads] = useState<number>(5000);
   const [episodesPerMonth, setEpisodesPerMonth] = useState<number>(4);
@@ -30,6 +42,7 @@ export function MonetizationCalculator({ lang = defaultLocale }: MonetizationCal
   const [patreonPrice, setPatreonPrice] = useState<number>(7);
 
   const ui = getToolUi(lang).cpmCalculator;
+  const bench = BENCH[lang] || BENCH.en;
 
   // Calculations
   const effectiveDownloads = downloads * (fillRate / 100);
@@ -285,7 +298,7 @@ export function MonetizationCalculator({ lang = defaultLocale }: MonetizationCal
             <div className="flex items-center justify-between p-3 rounded-xl bg-studio-darkest border border-studio-border text-xs">
               <span className="text-neutral-700 dark:text-slate-300 inline-flex items-center gap-2">
                 <span aria-hidden="true" className="w-2.5 h-2.5 rounded-[3px]" style={{ backgroundColor: SLOT_COLORS.pre }} />
-                Pre-Roll ({hasPreRoll ? `$${preRollCpm} CPM` : "Off"})</span>
+                {shortLabel(ui.preRoll)} ({hasPreRoll ? `$${preRollCpm} CPM` : bench.off})</span>
               <span className="font-mono font-bold text-neutral-900 dark:text-white">
                 ${Math.round(preRollRevPerEp * episodesPerMonth).toLocaleString()}
               </span>
@@ -294,7 +307,7 @@ export function MonetizationCalculator({ lang = defaultLocale }: MonetizationCal
             <div className="flex items-center justify-between p-3 rounded-xl bg-studio-darkest border border-studio-border text-xs">
               <span className="text-neutral-700 dark:text-slate-300 inline-flex items-center gap-2">
                 <span aria-hidden="true" className="w-2.5 h-2.5 rounded-[3px]" style={{ backgroundColor: SLOT_COLORS.mid }} />
-                Mid-Roll ({hasMidRoll ? `$${midRollCpm} CPM` : "Off"})</span>
+                {shortLabel(ui.midRoll)} ({hasMidRoll ? `$${midRollCpm} CPM` : bench.off})</span>
               <span className="font-mono font-bold text-neutral-900 dark:text-white">
                 ${Math.round(midRollRevPerEp * episodesPerMonth).toLocaleString()}
               </span>
@@ -303,7 +316,7 @@ export function MonetizationCalculator({ lang = defaultLocale }: MonetizationCal
             <div className="flex items-center justify-between p-3 rounded-xl bg-studio-darkest border border-studio-border text-xs">
               <span className="text-neutral-700 dark:text-slate-300 inline-flex items-center gap-2">
                 <span aria-hidden="true" className="w-2.5 h-2.5 rounded-[3px]" style={{ backgroundColor: SLOT_COLORS.post }} />
-                Post-Roll ({hasPostRoll ? `$${postRollCpm} CPM` : "Off"})</span>
+                {shortLabel(ui.postRoll)} ({hasPostRoll ? `$${postRollCpm} CPM` : bench.off})</span>
               <span className="font-mono font-bold text-neutral-900 dark:text-white">
                 ${Math.round(postRollRevPerEp * episodesPerMonth).toLocaleString()}
               </span>
@@ -313,28 +326,28 @@ export function MonetizationCalculator({ lang = defaultLocale }: MonetizationCal
           {/* 2026 Industry CPM Benchmarks Guide */}
           <div className="p-4 rounded-xl bg-studio-darkest border border-studio-border space-y-2.5">
             <span className="text-xs font-bold text-neutral-900 dark:text-white uppercase tracking-wider block">
-              2026 Industry CPM Benchmarks
+              {bench.title}
             </span>
             <div className="text-xs text-neutral-600 dark:text-slate-400 space-y-1.5 leading-relaxed">
               <div className="flex justify-between">
-                <span>Standard Pre-roll (15-30s):</span>
+                <span>{bench.rows[0]}</span>
                 <span className="font-semibold text-neutral-900 dark:text-slate-200">$15 – $18 CPM</span>
               </div>
               <div className="flex justify-between">
-                <span>Host-read Mid-roll (60s):</span>
+                <span>{bench.rows[1]}</span>
                 <span className="font-semibold text-orange-600 dark:text-orange-400">$25 – $35 CPM</span>
               </div>
               <div className="flex justify-between">
-                <span>Niche B2B / Finance Mid-roll:</span>
+                <span>{bench.rows[2]}</span>
                 <span className="font-semibold text-indigo-600 dark:text-indigo-400">$40 – $75 CPM</span>
               </div>
               <div className="flex justify-between">
-                <span>Standard Post-roll:</span>
+                <span>{bench.rows[3]}</span>
                 <span className="font-semibold text-neutral-900 dark:text-slate-200">$10 – $14 CPM</span>
               </div>
             </div>
             <p className="text-[11px] text-neutral-500 pt-1">
-              Note: Most podcast sponsorship networks (Gumball, Advertisecast, Midroll) typically look for shows averaging 2,500+ to 5,000+ downloads per episode before broker matching.
+              {bench.note}
             </p>
           </div>
         </div>

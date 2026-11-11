@@ -1,23 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import { FileText, Copy, Check, Download, RotateCcw, Sparkles } from "lucide-react";
+import { FileText, Copy, Check, Download, RotateCcw } from "lucide-react";
+import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
+import { showNotesUi } from "@/i18n/showNotesUi";
 
-export function ShowNotesGenerator() {
-  const [title, setTitle] = useState("Ep. 42: How to Scale a Bootstrapped SaaS to $50k MRR");
-  const [guest, setGuest] = useState("Alex Rivera (Founder of GrowthPulse)");
-  const [summary, setSummary] = useState(
-    "In this episode, we sit down with Alex Rivera to break down the exact playbooks, cold email frameworks, and pricing experiments that took GrowthPulse from zero to $50,000 in monthly recurring revenue without taking outside capital."
-  );
-  const [timestamps, setTimestamps] = useState(
-    "00:00 - Introduction & Alex's backstory\n04:30 - The first 10 paying customers\n12:15 - Pricing mistakes to avoid in year one\n24:40 - How to build a referral engine\n38:20 - Rapid fire questions & wrap up"
-  );
-  const [keyTakeaways, setKeyTakeaways] = useState(
-    "1. Never launch with a lifetime deal unless you have a clear expansion model.\n2. Cold email works when you personalize the first line and offer immediate value.\n3. Retention is 5x more profitable than acquisition."
-  );
-  const [resources, setResources] = useState(
-    "- GrowthPulse: https://growthpulse.example\n- Alex's Twitter/X: @alexrivera\n- Book Recommendation: The Mom Test by Rob Fitzpatrick"
-  );
+export function ShowNotesGenerator({ lang = defaultLocale }: { lang?: SupportedLocale }) {
+  const ui = showNotesUi[lang] || showNotesUi.en;
+  const s = ui.sample;
+  const [title, setTitle] = useState(s.title);
+  const [guest, setGuest] = useState(s.guest);
+  const [summary, setSummary] = useState(s.summary);
+  const [timestamps, setTimestamps] = useState(s.timestamps);
+  const [keyTakeaways, setKeyTakeaways] = useState(s.takeaways);
+  const [resources, setResources] = useState(s.resources);
   const [outputTab, setOutputTab] = useState<"markdown" | "html" | "plain">("markdown");
   const [copied, setCopied] = useState(false);
 
@@ -28,66 +24,65 @@ ${summary}
 
 ---
 
-### Featured Guest
+### ${ui.outGuest}
 **${guest}**
 
 ---
 
-### ⏱️ Key Timestamps & Chapters
+### ⏱️ ${ui.outChapters}
 ${timestamps}
 
 ---
 
-### 💡 Key Takeaways & Lessons
+### 💡 ${ui.outTakeaways}
 ${keyTakeaways}
 
 ---
 
-### 🔗 Resources & Mentions
+### 🔗 ${ui.outResources}
 ${resources}
 
 ---
 
-**Enjoying the show?**
-Leave a 5-star review on Apple Podcasts and Spotify to help other creators discover the podcast!
+${ui.outCta}
 `;
 
   // HTML generator
   const htmlOutput = `<h2>${title}</h2>
 <p>${summary}</p>
 <hr />
-<h3>Featured Guest</h3>
+<h3>${ui.outGuest}</h3>
 <p><strong>${guest}</strong></p>
 <hr />
-<h3>⏱️ Key Timestamps & Chapters</h3>
+<h3>⏱️ ${ui.outChapters}</h3>
 <pre>${timestamps}</pre>
 <hr />
-<h3>💡 Key Takeaways & Lessons</h3>
+<h3>💡 ${ui.outTakeaways}</h3>
 <p>${keyTakeaways.replace(/\n/g, "<br />")}</p>
 <hr />
-<h3>🔗 Resources & Mentions</h3>
+<h3>🔗 ${ui.outResources}</h3>
 <p>${resources.replace(/\n/g, "<br />")}</p>
 <hr />
-<p><em>Enjoying the show? Leave a 5-star review on Apple Podcasts and Spotify!</em></p>`;
+<p><em>${ui.outCtaShort}</em></p>`;
 
   // Plain Text generator
   const plainTextOutput = `${title}
 
 ${summary}
 
-GUEST:
+${ui.outPlainGuest}:
 ${guest}
 
-TIMESTAMPS:
+${ui.outPlainChapters}:
 ${timestamps}
 
-KEY TAKEAWAYS:
+${ui.outPlainTakeaways}:
 ${keyTakeaways}
 
-RESOURCES MENTIONED:
+${ui.outPlainResources}:
 ${resources}
 
-Subscribe and leave a review on Apple Podcasts and Spotify!`;
+${ui.outPlainCta}`;
 
   const activeOutput =
     outputTab === "markdown"
@@ -114,12 +109,13 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
   };
 
   const handleLoadSample = () => {
-    setTitle("Ep. 78: The Psychology of High-Retention Storytelling");
-    setGuest("Elena Vance (Award-winning Audio Producer)");
-    setSummary("Elena reveals the secret audio narrative structures that keep listeners hooked across 45-minute episodes.");
-    setTimestamps("00:00 - The 30-second cold open rule\n05:20 - Character arcs in nonfiction audio\n18:45 - Sound design tips on a budget\n35:10 - Elena's final advice");
-    setKeyTakeaways("1. Cut your intro by 50%.\n2. Introduce tension before resolving backstory.\n3. Ambient audio creates an emotional theatre in the mind.");
-    setResources("- Elena's Audio Course: https://example.com\n- Free Sound Archive: freesound.org");
+    const x = ui.sample2;
+    setTitle(x.title);
+    setGuest(x.guest);
+    setSummary(x.summary);
+    setTimestamps(x.timestamps);
+    setKeyTakeaways(x.takeaways);
+    setResources(x.resources);
   };
 
   return (
@@ -131,18 +127,18 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
           <div className="flex items-center justify-between pb-2 border-b border-studio-border/60">
             <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white flex items-center gap-2">
               <FileText className="w-4 h-4 text-orange-500 dark:text-orange-400" />
-              Episode Details
+              {ui.details}
             </h2>
             <button
               onClick={handleLoadSample}
               className="text-xs text-orange-600 dark:text-orange-400 hover:text-orange-500 font-medium inline-flex items-center gap-1 cursor-pointer"
             >
-              <RotateCcw className="w-3.5 h-3.5" /> Load Sample
+              <RotateCcw className="w-3.5 h-3.5" /> {ui.loadSample}
             </button>
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Episode Title</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">{ui.titleLabel}</label>
             <input
               type="text"
               value={title}
@@ -152,7 +148,7 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Featured Guest(s)</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">{ui.guestLabel}</label>
             <input
               type="text"
               value={guest}
@@ -162,7 +158,7 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Episode Summary / Hook</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">{ui.summaryLabel}</label>
             <textarea
               rows={3}
               value={summary}
@@ -172,18 +168,18 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Timestamps & Chapters</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">{ui.timestampsLabel}</label>
             <textarea
               rows={4}
               value={timestamps}
               onChange={(e) => setTimestamps(e.target.value)}
-              placeholder="00:00 - Intro&#10;05:30 - Topic discussion"
+              placeholder={ui.timestampsPlaceholder}
               className="w-full px-3.5 py-2 rounded-xl bg-studio-darkest border border-studio-border text-neutral-900 dark:text-white font-mono text-xs focus:outline-none focus:border-orange-500/70 resize-y"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Key Takeaways & Lessons</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">{ui.takeawaysLabel}</label>
             <textarea
               rows={3}
               value={keyTakeaways}
@@ -193,7 +189,7 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
           </div>
 
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">Links & Resources Mentioned</label>
+            <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300">{ui.resourcesLabel}</label>
             <textarea
               rows={3}
               value={resources}
@@ -219,7 +215,7 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
                         : "bg-studio-elevated text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-studio-border"
                     }`}
                   >
-                    {tab}
+                    {tab === "plain" ? ui.plain : tab}
                   </button>
                 ))}
               </div>
@@ -231,12 +227,13 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 transition-all cursor-pointer"
                 >
                   {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                  {copied ? "Copied!" : "Copy Show Notes"}
+                  {copied ? ui.copied : ui.copy}
                 </button>
                 <button
                   onClick={handleDownload}
                   className="p-1.5 rounded-lg bg-studio-elevated hover:bg-studio-border text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white border border-studio-border transition-colors cursor-pointer"
-                  title="Download File"
+                  title={ui.download}
+                  aria-label={ui.download}
                 >
                   <Download className="w-4 h-4" />
                 </button>
@@ -250,7 +247,7 @@ Subscribe and leave a review on Apple Podcasts and Spotify!`;
           </div>
 
           <div className="text-[11px] text-neutral-500 pt-3 border-t border-studio-border/60">
-            Paste directly into Buzzsprout, Libsyn, Spotify for Podcasters, Podbean, or your website.
+            {ui.footer}
           </div>
         </div>
       </div>
