@@ -163,13 +163,13 @@ export interface UITranslations {
 export const translations: Record<SupportedLocale, UITranslations> = {
   en: {
     nav: {
-      allTools: "All 18 Tools",
+      allTools: "All 20 Tools",
       ideation: "Ideation",
       content: "Content",
       technical: "Technical",
       growth: "Growth & CPM",
       guides: "Guides",
-      searchPlaceholder: "Search 18 free podcast tools... (⌘K)",
+      searchPlaceholder: "Search 20 free podcast tools... (⌘K)",
       about: "About",
       contact: "Contact",
       privacy: "Privacy",
@@ -180,13 +180,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       titleStart: "Free podcast tools to create, polish &",
       titleHighlight: "monetize your show",
       description:
-        "18 free tools for podcast hosts and producers. Write better episode titles and show notes, check your RSS feed and cover art, and estimate sponsorship revenue — all in your browser, with no sign-up.",
-      primaryCta: "Explore All 18 Tools",
+        "20 free tools for podcast hosts and producers. Write better episode titles and show notes, check your RSS feed and cover art, and estimate sponsorship revenue — all in your browser, with no sign-up.",
+      primaryCta: "Explore All 20 Tools",
       secondaryCta: "Calculate Ad Revenue",
       clientSideNotice: "Runs 100% locally in your browser memory. Audio & files never leave your device.",
       trustPills: {
-        privacy: "Zero Cloud Uploads",
-        formulas: "IAB v2 CPM Formulas",
+        privacy: "Your Files Stay Private",
+        formulas: "Platform-Ready Output",
         free: "Always Free & Open",
       },
     },
@@ -229,10 +229,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     searchModal: {
       btnText: "Search tools...",
-      prompt: "Type to search all 18 tools, categories, and podcast calculators...",
+      prompt: "Type to search all 20 tools, categories, and podcast calculators...",
       noResults: "No tools found matching",
       shortcutHint: "Press / or ⌘K anywhere",
-      toolsIndexed: "18 tools indexed",
+      toolsIndexed: "20 tools indexed",
     },
     contactForm: {
       heading: "Compose Direct In-Browser Message",
@@ -253,13 +253,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     aboutPage: {
       badge: "ABOUT POD STUDIO",
       whyTitle: "Why Pod Studio",
-      cta: "Explore All 18 Tools",
+      cta: "Explore All 20 Tools",
     },
     legalPages: {
       lastUpdated: "Last updated: November 1, 2026 • Effective Date: November 1, 2026",
       privacyBadge: "PRIVACY-FIRST ARCHITECTURE",
       termsBadge: "TERMS OF USE",
-      exploreAllTools: "Explore All 18 Tools",
+      exploreAllTools: "Explore All 20 Tools",
       privacy: {
         s1Title: "1. The Client-Side Model",
         s1P1: "Pod Studio (\"we\", \"us\", or \"our\") provides free online utilities for podcast creators at podstudiotools.com.",
@@ -280,7 +280,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
         s1Title: "1. Agreement to Terms",
         s1Text: "By accessing or using podstudiotools.com ('Pod Studio'), you agree to be bound by these Terms of Service.",
         s2Title: "2. Free, Client-Side Utility Nature",
-        s2Text: "Pod Studio is engineered as a free, client-side toolkit for independent podcast creators and sound designers. We do not require accounts, logins, or payment to access our 18 utilities.",
+        s2Text: "Pod Studio is engineered as a free, client-side toolkit for independent podcast creators and sound designers. We do not require accounts, logins, or payment to access our 20 utilities.",
         s3Title: "3. Content Ownership",
         s3Text: "Any episode titles, show notes, scripts, hooks, or timestamps generated using Pod Studio belong 100% to you. We assert zero copyright or commercial claims over your generated works.",
         s4Title: "4. Calculators & Advisory Estimates",
@@ -303,15 +303,15 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     faq: {
       eyebrow: "FREQUENTLY ASKED QUESTIONS",
       title: "Frequently Asked Questions",
-      subtitle: "Answers to common questions about privacy, formulas, and client-side processing.",
+      subtitle: "Answers to common questions about privacy, pricing, and how the tools work.",
       items: [
         {
           question: "Are these tools really 100% free with no account required?",
-          answer: "Yes, entirely free with zero paywalls, account signups, or usage limits. All computation runs purely inside your browser memory using modern web standards.",
+          answer: "Yes, entirely free with zero paywalls, account signups, or usage limits. Everything runs in your browser.",
         },
         {
           question: "Do my audio files, show notes, or RSS feeds get saved to a server?",
-          answer: "No. Pod Studio is built strictly client-side. All processing (parsing RSS feeds, calculating CPM, validating artwork) happens in volatile browser memory. We never store, inspect, or log your content.",
+          answer: "No. Pod Studio is built strictly client-side. All processing (parsing RSS feeds, calculating CPM, validating artwork) happens in your browser, on your device. We never store, inspect, or log your content.",
         },
         {
           question: "Which podcast directories are supported for specs and validation?",
@@ -340,7 +340,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
   },  es: {
     nav: {
-      allTools: "Las 18 Herramientas",
+      allTools: "Las 20 Herramientas",
       ideation: "Ideación",
       content: "Contenido",
       technical: "Técnico",
@@ -357,13 +357,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       titleStart: "Herramientas gratis para crear, pulir y",
       titleHighlight: "monetizar tu podcast",
       description:
-        "18 herramientas gratuitas para presentadores y productores de podcasts. Escribe mejores títulos y notas de episodio, revisa tu feed RSS y tu portada, y calcula ingresos por patrocinio, todo en tu navegador y sin registro.",
-      primaryCta: "Ver Las 18 Herramientas",
+        "20 herramientas gratuitas para presentadores y productores de podcasts. Escribe mejores títulos y notas de episodio, revisa tu feed RSS y tu portada, y calcula ingresos por patrocinio, todo en tu navegador y sin registro.",
+      primaryCta: "Ver Las 20 Herramientas",
       secondaryCta: "Calcular Ingresos Publicitarios",
       clientSideNotice: "Se ejecuta 100% localmente en la memoria del navegador. Tus audios y datos nunca salen de tu dispositivo.",
       trustPills: {
-        privacy: "Cero Cargas a la Nube",
-        formulas: "Fórmulas CPM Estándar IAB",
+        privacy: "Tus Archivos Son Privados",
+        formulas: "Listo para las Plataformas",
         free: "Siempre Gratis y Abierto",
       },
     },
@@ -406,10 +406,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     searchModal: {
       btnText: "Buscar herramientas...",
-      prompt: "Escribe para buscar las 18 herramientas, categorías y calculadoras...",
+      prompt: "Escribe para buscar las 20 herramientas, categorías y calculadoras...",
       noResults: "No se encontraron herramientas para",
       shortcutHint: "Presiona / o ⌘K en cualquier lugar",
-      toolsIndexed: "18 herramientas indexadas",
+      toolsIndexed: "20 herramientas indexadas",
     },
     contactForm: {
       heading: "Redactar Mensaje Directo en el Navegador",
@@ -430,13 +430,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     aboutPage: {
       badge: "ACERCA DE POD STUDIO",
       whyTitle: "Por Qué Pod Studio",
-      cta: "Explorar las 18 Herramientas",
+      cta: "Explorar las 20 Herramientas",
     },
     legalPages: {
       lastUpdated: "Última actualización: 1 de noviembre de 2026 • Fecha de vigencia: 1 de noviembre de 2026",
       privacyBadge: "ARQUITECTURA DE PRIVACIDAD PRIMERO",
       termsBadge: "TÉRMINOS DE USO",
-      exploreAllTools: "Explorar las 18 Herramientas",
+      exploreAllTools: "Explorar las 20 Herramientas",
       privacy: {
         s1Title: "1. El Modelo del Lado del Cliente",
         s1P1: "Pod Studio («nosotros» o «nuestro») ofrece utilidades en línea gratuitas para creadores de pódcast en podstudiotools.com.",
@@ -517,7 +517,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
   },  ja: {
     nav: {
-      allTools: "全18種類のツール",
+      allTools: "全20種類のツール",
       ideation: "企画・アイデア",
       content: "構成・原稿",
       technical: "技術・規格",
@@ -534,13 +534,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       titleStart: "企画から収益化まで、すべて無料の",
       titleHighlight: "ポッドキャスト制作ツール",
       description:
-        "ポッドキャストのホストや制作者向けの無料ツール18種類。エピソードタイトルやショーノートの作成、RSSフィードやカバーアートのチェック、スポンサー収益の試算まで、登録不要でブラウザだけで完結します。",
-      primaryCta: "18種類のツールを見る",
+        "ポッドキャストのホストや制作者向けの無料ツール20種類。エピソードタイトルやショーノートの作成、RSSフィードやカバーアートのチェック、スポンサー収益の試算まで、登録不要でブラウザだけで完結します。",
+      primaryCta: "20種類のツールを見る",
       secondaryCta: "広告収益を計算する",
       clientSideNotice: "ブラウザのローカルメモリで100%動作。音声やファイルがサーバーに送信されることは一切ありません。",
       trustPills: {
-        privacy: "クラウド保存なし",
-        formulas: "IAB標準CPM算出",
+        privacy: "ファイルは非公開のまま",
+        formulas: "各プラットフォーム対応",
         free: "ずっと無料＆制限なし",
       },
     },
@@ -583,10 +583,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     searchModal: {
       btnText: "ツールを検索...",
-      prompt: "18種類のツール、カテゴリー、計算ツールを検索...",
+      prompt: "20種類のツール、カテゴリー、計算ツールを検索...",
       noResults: "一致するツールが見つかりません:",
       shortcutHint: "任意の場所で / または ⌘K を入力",
-      toolsIndexed: "18個のツールを収録",
+      toolsIndexed: "20個のツールを収録",
     },
     contactForm: {
       heading: "ブラウザ内直接メッセージ作成",
@@ -607,13 +607,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     aboutPage: {
       badge: "POD STUDIOについて",
       whyTitle: "Pod Studioの理念",
-      cta: "全18種類のツールを見る",
+      cta: "全20種類のツールを見る",
     },
     legalPages: {
       lastUpdated: "最終更新日: 2026年11月1日 • 発効日: 2026年11月1日",
       privacyBadge: "プライバシー最優先設計",
       termsBadge: "利用規約",
-      exploreAllTools: "全18種類のツールを見る",
+      exploreAllTools: "全20種類のツールを見る",
       privacy: {
         s1Title: "1. クライアントサイド動作モデル",
         s1P1: "Pod Studio（以下「当サイト」）は、ポッドキャスト制作者向けに無料のオンラインツールをpodstudiotools.comにて提供しています。",
@@ -694,7 +694,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
   },  fr: {
     nav: {
-      allTools: "Les 18 Outils",
+      allTools: "Les 20 Outils",
       ideation: "Idéation",
       content: "Contenu",
       technical: "Technique",
@@ -711,13 +711,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       titleStart: "Des outils podcast gratuits pour créer, peaufiner et",
       titleHighlight: "monétiser votre émission",
       description:
-        "18 outils gratuits pour animateurs et producteurs de podcasts. Rédigez de meilleurs titres et notes d'épisode, vérifiez votre flux RSS et votre pochette, et estimez vos revenus de sponsoring, directement dans votre navigateur, sans inscription.",
-      primaryCta: "Découvrir les 18 Outils",
+        "20 outils gratuits pour animateurs et producteurs de podcasts. Rédigez de meilleurs titres et notes d'épisode, vérifiez votre flux RSS et votre pochette, et estimez vos revenus de sponsoring, directement dans votre navigateur, sans inscription.",
+      primaryCta: "Découvrir les 20 Outils",
       secondaryCta: "Calculer les Revenus Publicitaires",
       clientSideNotice: "Fonctionne à 100% localement dans votre navigateur. Vos données et fichiers ne quittent jamais votre appareil.",
       trustPills: {
-        privacy: "Aucun Envoi sur le Cloud",
-        formulas: "Formules CPM Standard IAB",
+        privacy: "Vos Fichiers Restent Privés",
+        formulas: "Prêt pour les Plateformes",
         free: "Toujours Gratuit & Libre",
       },
     },
@@ -760,10 +760,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     searchModal: {
       btnText: "Rechercher des outils...",
-      prompt: "Tapez pour rechercher parmi les 18 outils, catégories et calculateurs...",
+      prompt: "Tapez pour rechercher parmi les 20 outils, catégories et calculateurs...",
       noResults: "Aucun outil trouvé pour",
       shortcutHint: "Appuyez sur / ou ⌘K n'importe où",
-      toolsIndexed: "18 outils indexés",
+      toolsIndexed: "20 outils indexés",
     },
     contactForm: {
       heading: "Rédiger un Message Direct dans le Navigateur",
@@ -784,13 +784,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     aboutPage: {
       badge: "À PROPOS DE POD STUDIO",
       whyTitle: "Pourquoi Pod Studio",
-      cta: "Explorer les 18 Outils",
+      cta: "Explorer les 20 Outils",
     },
     legalPages: {
       lastUpdated: "Dernière mise à jour : 1er novembre 2026 • Date d'effet : 1er novembre 2026",
       privacyBadge: "ARCHITECTURE RESPECTUEUSE DE LA VIE PRIVÉE",
       termsBadge: "CONDITIONS D'UTILISATION",
-      exploreAllTools: "Explorer les 18 Outils",
+      exploreAllTools: "Explorer les 20 Outils",
       privacy: {
         s1Title: "1. Le Modèle Côté Client",
         s1P1: "Pod Studio (« nous » ou « notre ») fournit des utilitaires en ligne gratuits pour les créateurs de podcasts sur podstudiotools.com.",
@@ -871,7 +871,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
   },  de: {
     nav: {
-      allTools: "Alle 18 Tools",
+      allTools: "Alle 20 Tools",
       ideation: "Ideenfindung",
       content: "Inhalt & Skripte",
       technical: "Technik & Audio",
@@ -888,13 +888,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       titleStart: "Kostenlose Podcast-Tools zum Planen, Produzieren und",
       titleHighlight: "Monetarisieren",
       description:
-        "18 kostenlose Tools für Podcast-Hosts und Produzenten. Schreiben Sie bessere Episodentitel und Shownotes, prüfen Sie RSS-Feed und Cover und schätzen Sie Sponsoring-Einnahmen – direkt im Browser, ohne Anmeldung.",
-      primaryCta: "Alle 18 Tools ansehen",
+        "20 kostenlose Tools für Podcast-Hosts und Produzenten. Schreiben Sie bessere Episodentitel und Shownotes, prüfen Sie RSS-Feed und Cover und schätzen Sie Sponsoring-Einnahmen – direkt im Browser, ohne Anmeldung.",
+      primaryCta: "Alle 20 Tools ansehen",
       secondaryCta: "Werbeeinnahmen berechnen",
       clientSideNotice: "Läuft zu 100% lokal im Browserspeicher. Ihre Dateien und Audiodaten verlassen niemals Ihr Gerät.",
       trustPills: {
-        privacy: "Keine Cloud-Uploads",
-        formulas: "IAB v2 CPM Formeln",
+        privacy: "Dateien bleiben privat",
+        formulas: "Bereit für alle Plattformen",
         free: "Dauerhaft Kostenlos & Offen",
       },
     },
@@ -937,10 +937,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     searchModal: {
       btnText: "Tools durchsuchen...",
-      prompt: "Tippen Sie, um alle 18 Tools, Kategorien und Rechner zu durchsuchen...",
+      prompt: "Tippen Sie, um alle 20 Tools, Kategorien und Rechner zu durchsuchen...",
       noResults: "Keine Tools gefunden für",
       shortcutHint: "Drücken Sie überall / oder ⌘K",
-      toolsIndexed: "18 Tools indexiert",
+      toolsIndexed: "20 Tools indexiert",
     },
     contactForm: {
       heading: "Direktnachricht im Browser verfassen",
@@ -961,13 +961,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     aboutPage: {
       badge: "ÜBER POD STUDIO",
       whyTitle: "Warum Pod Studio",
-      cta: "Alle 18 Tools Entdecken",
+      cta: "Alle 20 Tools Entdecken",
     },
     legalPages: {
       lastUpdated: "Zuletzt aktualisiert: 1. November 2026 • Gültig ab: 1. November 2026",
       privacyBadge: "DATENSCHUTZ-FIRST ARCHITEKTUR",
       termsBadge: "NUTZUNGSBEDINGUNGEN",
-      exploreAllTools: "Alle 18 Tools Entdecken",
+      exploreAllTools: "Alle 20 Tools Entdecken",
       privacy: {
         s1Title: "1. Das Client-Side Modell",
         s1P1: "Pod Studio («wir» oder «unser») stellt kostenlose Online-Tools für Podcast-Ersteller auf podstudiotools.com bereit.",
@@ -1048,7 +1048,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
   },  pt: {
     nav: {
-      allTools: "Todas as 18 Ferramentas",
+      allTools: "Todas as 20 Ferramentas",
       ideation: "Ideação",
       content: "Conteúdo",
       technical: "Técnico",
@@ -1065,13 +1065,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       titleStart: "Ferramentas grátis para criar, aprimorar e",
       titleHighlight: "monetizar seu podcast",
       description:
-        "18 ferramentas gratuitas para apresentadores e produtores de podcast. Escreva títulos e notas de episódio melhores, verifique seu feed RSS e sua capa e estime a receita de patrocínio, tudo no navegador e sem cadastro.",
-      primaryCta: "Explorar as 18 Ferramentas",
+        "20 ferramentas gratuitas para apresentadores e produtores de podcast. Escreva títulos e notas de episódio melhores, verifique seu feed RSS e sua capa e estime a receita de patrocínio, tudo no navegador e sem cadastro.",
+      primaryCta: "Explorar as 20 Ferramentas",
       secondaryCta: "Calcular Ganhos de Anúncios",
       clientSideNotice: "Executa 100% localmente na memória do seu navegador. Seus arquivos de áudio nunca saem do seu computador.",
       trustPills: {
-        privacy: "Zero Uploads em Nuvem",
-        formulas: "Fórmulas CPM Padrão IAB",
+        privacy: "Seus Arquivos Ficam Privados",
+        formulas: "Pronto para as Plataformas",
         free: "Sempre Grátis e Aberto",
       },
     },
@@ -1114,10 +1114,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     searchModal: {
       btnText: "Pesquisar ferramentas...",
-      prompt: "Digite para buscar nas 18 ferramentas, categorias e calculadoras...",
+      prompt: "Digite para buscar nas 20 ferramentas, categorias e calculadoras...",
       noResults: "Nenhuma ferramenta encontrada para",
       shortcutHint: "Pressione / ou ⌘K em qualquer lugar",
-      toolsIndexed: "18 ferramentas indexadas",
+      toolsIndexed: "20 ferramentas indexadas",
     },
     contactForm: {
       heading: "Escrever Mensagem Direta no Navegador",
@@ -1138,13 +1138,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     aboutPage: {
       badge: "SOBRE O POD STUDIO",
       whyTitle: "Por Que o Pod Studio",
-      cta: "Explorar Todas as 18 Ferramentas",
+      cta: "Explorar Todas as 20 Ferramentas",
     },
     legalPages: {
       lastUpdated: "Última atualização: 1 de novembro de 2026 • Data de vigência: 1 de novembro de 2026",
       privacyBadge: "ARQUITETURA COM PRIVACIDADE EM PRIMEIRO LUGAR",
       termsBadge: "TERMOS DE USO",
-      exploreAllTools: "Explorar Todas as 18 Ferramentas",
+      exploreAllTools: "Explorar Todas as 20 Ferramentas",
       privacy: {
         s1Title: "1. O Modelo do Lado do Cliente",
         s1P1: "O Pod Studio («nós» ou «nosso») fornece utilitários online gratuitos para criadores de podcast em podstudiotools.com.",
@@ -1225,7 +1225,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
   },  ko: {
     nav: {
-      allTools: "전체 18개 도구",
+      allTools: "전체 20개 도구",
       ideation: "아이디어",
       content: "콘텐츠·대본",
       technical: "기술·규격",
@@ -1242,13 +1242,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       titleStart: "기획부터 수익화까지, 무료",
       titleHighlight: "팟캐스트 제작 도구",
       description:
-        "팟캐스트 진행자와 제작자를 위한 무료 도구 18종. 에피소드 제목과 쇼노트 작성, RSS 피드와 커버 아트 점검, 스폰서 수익 예측까지 가입 없이 브라우저에서 바로 사용하세요.",
-      primaryCta: "18개 도구 전체 보기",
+        "팟캐스트 진행자와 제작자를 위한 무료 도구 20종. 에피소드 제목과 쇼노트 작성, RSS 피드와 커버 아트 점검, 스폰서 수익 예측까지 가입 없이 브라우저에서 바로 사용하세요.",
+      primaryCta: "20개 도구 전체 보기",
       secondaryCta: "광고 수익 계산하기",
       clientSideNotice: "브라우저 로컬 메모리에서 100% 안전하게 실행됩니다. 오디오와 텍스트 데이터가 외부 서버로 전송되지 않습니다.",
       trustPills: {
-        privacy: "클라우드 업로드 없음",
-        formulas: "IAB v2 CPM 표준 공식",
+        privacy: "파일은 내 기기에만",
+        formulas: "플랫폼 규격 대응",
         free: "평생 무료 & 무제한",
       },
     },
@@ -1291,10 +1291,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     searchModal: {
       btnText: "도구 검색...",
-      prompt: "18가지 팟캐스트 제작 도구, 카테고리, 계산기 검색...",
+      prompt: "20가지 팟캐스트 제작 도구, 카테고리, 계산기 검색...",
       noResults: "일치하는 도구가 없습니다:",
       shortcutHint: "어디서나 / 또는 ⌘K 누르기",
-      toolsIndexed: "18개 도구 등록됨",
+      toolsIndexed: "20개 도구 등록됨",
     },
     contactForm: {
       heading: "브라우저 내 직접 메시지 작성",
@@ -1315,13 +1315,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     aboutPage: {
       badge: "POD STUDIO 소개",
       whyTitle: "Pod Studio 설립 목적",
-      cta: "18가지 전체 도구 살펴보기",
+      cta: "20가지 전체 도구 살펴보기",
     },
     legalPages: {
       lastUpdated: "최종 수정일: 2026년 11월 1일 • 발효일: 2026년 11월 1일",
       privacyBadge: "프라이버시 최우선 아키텍처",
       termsBadge: "이용 약관",
-      exploreAllTools: "18가지 전체 도구 살펴보기",
+      exploreAllTools: "20가지 전체 도구 살펴보기",
       privacy: {
         s1Title: "1. 클라이언트 사이드 작동 원칙",
         s1P1: "Pod Studio(이하 '당사')는 podstudiotools.com에서 팟캐스트 제작자를 위한 무료 온라인 유틸리티를 제공합니다.",
@@ -1402,7 +1402,7 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
   },  it: {
     nav: {
-      allTools: "Tutti i 18 Strumenti",
+      allTools: "Tutti i 20 Strumenti",
       ideation: "Ideazione",
       content: "Contenuto",
       technical: "Tecnico",
@@ -1419,13 +1419,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
       titleStart: "Strumenti gratuiti per creare, rifinire e",
       titleHighlight: "monetizzare il tuo podcast",
       description:
-        "18 strumenti gratuiti per conduttori e produttori di podcast. Scrivi titoli e note degli episodi migliori, controlla feed RSS e copertina e stima i ricavi delle sponsorizzazioni, direttamente nel browser e senza registrazione.",
-      primaryCta: "Esplora i 18 Strumenti",
+        "20 strumenti gratuiti per conduttori e produttori di podcast. Scrivi titoli e note degli episodi migliori, controlla feed RSS e copertina e stima i ricavi delle sponsorizzazioni, direttamente nel browser e senza registrazione.",
+      primaryCta: "Esplora i 20 Strumenti",
       secondaryCta: "Calcola Ricavi Pubblicitari",
       clientSideNotice: "Funziona al 100% nella memoria del tuo browser. Audio e file non lasciano mai il tuo dispositivo.",
       trustPills: {
-        privacy: "Nessun Invio in Cloud",
-        formulas: "Formule CPM Standard IAB",
+        privacy: "I Tuoi File Restano Privati",
+        formulas: "Pronto per le Piattaforme",
         free: "Sempre Gratuito e Aperto",
       },
     },
@@ -1468,10 +1468,10 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     },
     searchModal: {
       btnText: "Cerca strumenti...",
-      prompt: "Digita per cercare tra i 18 strumenti, categorie e calcolatori...",
+      prompt: "Digita per cercare tra i 20 strumenti, categorie e calcolatori...",
       noResults: "Nessuno strumento trovato per",
       shortcutHint: "Premi / o ⌘K ovunque",
-      toolsIndexed: "18 strumenti indicizzati",
+      toolsIndexed: "20 strumenti indicizzati",
     },
     contactForm: {
       heading: "Componi Messaggio Diretto nel Browser",
@@ -1492,13 +1492,13 @@ export const translations: Record<SupportedLocale, UITranslations> = {
     aboutPage: {
       badge: "INFORMAZIONI SU POD STUDIO",
       whyTitle: "Perché Pod Studio",
-      cta: "Esplora Tutti i 18 Strumenti",
+      cta: "Esplora Tutti i 20 Strumenti",
     },
     legalPages: {
       lastUpdated: "Ultimo aggiornamento: 1 novembre 2026 • Data di efficacia: 1 novembre 2026",
       privacyBadge: "ARCHITETTURA ORIENTATA ALLA PRIVACY",
       termsBadge: "TERMINI DI SERVIZIO",
-      exploreAllTools: "Esplora Tutti i 18 Strumenti",
+      exploreAllTools: "Esplora Tutti i 20 Strumenti",
       privacy: {
         s1Title: "1. Il Modello Client-Side",
         s1P1: "Pod Studio («noi» o «nostro») fornisce utility online gratuite per creatori di podcast su podstudiotools.com.",

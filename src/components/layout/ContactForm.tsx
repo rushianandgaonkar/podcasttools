@@ -26,7 +26,7 @@ export function ContactForm({ lang = defaultLocale }: ContactFormProps) {
   )}`;
 
   return (
-    <div className="p-5 sm:p-6 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] space-y-4">
+    <div className="p-5 sm:p-6 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] space-y-4">
       <h2 className="text-sm font-semibold text-neutral-900 dark:text-white flex items-center gap-2">
         <MessageSquare className="w-4 h-4 text-[#a9583e]" />
         {f.heading}
@@ -41,7 +41,7 @@ export function ContactForm({ lang = defaultLocale }: ContactFormProps) {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder={f.namePlaceholder}
-              className="w-full px-3 py-1.5 rounded-md bg-neutral-50 dark:bg-black border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
+              className="w-full px-3 py-1.5 rounded-md bg-neutral-50 dark:bg-[#131210] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
             />
           </div>
           <div className="space-y-1">
@@ -51,7 +51,7 @@ export function ContactForm({ lang = defaultLocale }: ContactFormProps) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={f.emailPlaceholder}
-              className="w-full px-3 py-1.5 rounded-md bg-neutral-50 dark:bg-black border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
+              className="w-full px-3 py-1.5 rounded-md bg-neutral-50 dark:bg-[#131210] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
             />
           </div>
         </div>
@@ -62,7 +62,7 @@ export function ContactForm({ lang = defaultLocale }: ContactFormProps) {
             type="text"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="w-full px-3 py-1.5 rounded-md bg-neutral-50 dark:bg-black border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
+            className="w-full px-3 py-1.5 rounded-md bg-neutral-50 dark:bg-[#131210] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
           />
         </div>
 
@@ -73,7 +73,7 @@ export function ContactForm({ lang = defaultLocale }: ContactFormProps) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder={f.messagePlaceholder}
-            className="w-full px-3 py-2 rounded-md bg-neutral-50 dark:bg-black border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors resize-y"
+            className="w-full px-3 py-2 rounded-md bg-neutral-50 dark:bg-[#131210] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors resize-y"
           />
         </div>
 

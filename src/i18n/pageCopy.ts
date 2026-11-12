@@ -98,8 +98,8 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
     meta: {
       homeTitle: "Free Podcast Tools for Creators — No Sign-Up | Pod Studio",
       homeDescription:
-        "18 free podcast tools that run in your browser: episode title and show notes generators, an RSS feed validator, a cover art checker and a CPM calculator.",
-      toolsTitle: "All 18 Free Podcast Tools | Pod Studio",
+        "20 free podcast tools that run in your browser: episode title and show notes generators, an RSS feed validator, a cover art checker and a CPM calculator.",
+      toolsTitle: "All 20 Free Podcast Tools | Pod Studio",
       toolsDescription:
         "Browse every free Pod Studio tool for podcasters: title, name and show notes generators, RSS and cover art checkers, chapter markers and revenue calculators.",
       guidesTitle: "Podcasting Guides: CPM, Cover Art & Titles | Pod Studio",
@@ -120,7 +120,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
       trustSpecSub: "Apple & Spotify specs",
     },
     toolsIndex: {
-      eyebrow: "18 free tools",
+      eyebrow: "20 free tools",
       heading: "Free podcast tools for every step of your show",
       intro:
         "Plan episodes, write titles and show notes, check your RSS feed and cover art, and forecast downloads and sponsorship income. Every tool is free, works without an account and runs entirely in your browser.",
@@ -192,7 +192,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
           text: "Every tool page, guide and FAQ is available in English, Spanish, Japanese, French, German, Portuguese, Korean and Italian.",
         },
       ],
-      cta: "Explore all 18 free tools",
+      cta: "Explore all 20 free tools",
     },
   },
 
@@ -200,8 +200,8 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
     meta: {
       homeTitle: "Herramientas Gratis para Podcasts, Sin Registro | Pod Studio",
       homeDescription:
-        "18 herramientas gratuitas para podcasts en tu navegador: generadores de títulos y notas de episodio, validador de feed RSS, revisor de portadas y calculadora CPM.",
-      toolsTitle: "Las 18 Herramientas Gratis para Podcast | Pod Studio",
+        "20 herramientas gratuitas para podcasts en tu navegador: generadores de títulos y notas de episodio, validador de feed RSS, revisor de portadas y calculadora CPM.",
+      toolsTitle: "Las 20 Herramientas Gratis para Podcast | Pod Studio",
       toolsDescription:
         "Herramientas gratis de Pod Studio: generadores de títulos, nombres y notas de episodio, validadores de RSS y portada, capítulos y calculadoras de ingresos.",
       guidesTitle: "Guías de Podcasting: CPM, Portadas y Títulos | Pod Studio",
@@ -222,7 +222,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
       trustSpecSub: "Especificaciones de Apple y Spotify",
     },
     toolsIndex: {
-      eyebrow: "18 herramientas gratis",
+      eyebrow: "20 herramientas gratis",
       heading: "Herramientas gratis para cada paso de tu podcast",
       intro:
         "Planifica episodios, escribe títulos y notas de episodio, revisa tu feed RSS y tu portada, y proyecta descargas e ingresos por patrocinio. Todas las herramientas son gratuitas, no requieren cuenta y se ejecutan por completo en tu navegador.",
@@ -294,16 +294,16 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
           text: "Cada página de herramienta, guía y FAQ está en inglés, español, japonés, francés, alemán, portugués, coreano e italiano.",
         },
       ],
-      cta: "Ver las 18 herramientas gratis",
+      cta: "Ver las 20 herramientas gratis",
     },
   },
 
   ja: {
     meta: {
-      homeTitle: "無料ポッドキャスト制作ツール18選｜登録不要 | Pod Studio",
+      homeTitle: "無料ポッドキャスト制作ツール20選｜登録不要 | Pod Studio",
       homeDescription:
-        "ブラウザで使える無料ポッドキャストツール18種類。エピソードタイトル・ショーノート生成、RSSフィード検証、カバーアート確認、CPM収益計算まで登録不要。",
-      toolsTitle: "無料ポッドキャストツール全18種一覧 | Pod Studio",
+        "ブラウザで使える無料ポッドキャストツール20種類。エピソードタイトル・ショーノート生成、RSSフィード検証、カバーアート確認、CPM収益計算まで登録不要。",
+      toolsTitle: "無料ポッドキャストツール全20種一覧 | Pod Studio",
       toolsDescription:
         "Pod Studioの無料ポッドキャストツール一覧。タイトル・番組名・ショーノート生成、RSSとカバーアートのチェック、チャプター作成、収益シミュレーターなど。",
       guidesTitle: "ポッドキャスト運営ガイド：CPM・カバーアート・タイトル | Pod Studio",
@@ -324,7 +324,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
       trustSpecSub: "Apple・Spotify仕様に準拠",
     },
     toolsIndex: {
-      eyebrow: "無料ツール18種",
+      eyebrow: "無料ツール20種",
       heading: "番組づくりのすべての工程に使える無料ポッドキャストツール",
       intro:
         "エピソードの構成づくり、タイトルやショーノートの作成、RSSフィードやカバーアートのチェック、再生数とスポンサー収益の予測まで。すべて無料・登録不要で、ブラウザ内だけで動作します。",
@@ -396,7 +396,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
           text: "すべてのツールページ・ガイド・FAQを、英語・スペイン語・日本語・フランス語・ドイツ語・ポルトガル語・韓国語・イタリア語で提供しています。",
         },
       ],
-      cta: "無料ツール18種をすべて見る",
+      cta: "無料ツール20種をすべて見る",
     },
   },
 
@@ -404,8 +404,8 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
     meta: {
       homeTitle: "Outils Podcast Gratuits, Sans Inscription | Pod Studio",
       homeDescription:
-        "18 outils podcast gratuits dans votre navigateur : générateurs de titres et de notes d'épisode, validateur de flux RSS, vérificateur de pochette et calculateur CPM.",
-      toolsTitle: "Les 18 Outils Podcast Gratuits | Pod Studio",
+        "20 outils podcast gratuits dans votre navigateur : générateurs de titres et de notes d'épisode, validateur de flux RSS, vérificateur de pochette et calculateur CPM.",
+      toolsTitle: "Les 20 Outils Podcast Gratuits | Pod Studio",
       toolsDescription:
         "Tous les outils gratuits de Pod Studio : générateurs de titres, de noms et de notes d'épisode, vérificateurs RSS et pochette, chapitres et calculateurs de revenus.",
       guidesTitle: "Guides Podcast : CPM, Pochettes et Titres | Pod Studio",
@@ -426,7 +426,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
       trustSpecSub: "Normes Apple et Spotify",
     },
     toolsIndex: {
-      eyebrow: "18 outils gratuits",
+      eyebrow: "20 outils gratuits",
       heading: "Des outils podcast gratuits pour chaque étape de votre émission",
       intro:
         "Planifiez vos épisodes, rédigez titres et notes d'épisode, vérifiez votre flux RSS et votre pochette, et prévoyez vos écoutes et revenus de sponsoring. Chaque outil est gratuit, sans compte, et fonctionne entièrement dans votre navigateur.",
@@ -498,7 +498,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
           text: "Chaque page d'outil, guide et FAQ existe en anglais, espagnol, japonais, français, allemand, portugais, coréen et italien.",
         },
       ],
-      cta: "Découvrir les 18 outils gratuits",
+      cta: "Découvrir les 20 outils gratuits",
     },
   },
 
@@ -506,8 +506,8 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
     meta: {
       homeTitle: "Kostenlose Podcast-Tools ohne Anmeldung | Pod Studio",
       homeDescription:
-        "18 kostenlose Podcast-Tools im Browser: Generatoren für Episodentitel und Shownotes, RSS-Feed-Validator, Cover-Prüfung und CPM-Rechner – ganz ohne Anmeldung.",
-      toolsTitle: "Alle 18 kostenlosen Podcast-Tools | Pod Studio",
+        "20 kostenlose Podcast-Tools im Browser: Generatoren für Episodentitel und Shownotes, RSS-Feed-Validator, Cover-Prüfung und CPM-Rechner – ganz ohne Anmeldung.",
+      toolsTitle: "Alle 20 kostenlosen Podcast-Tools | Pod Studio",
       toolsDescription:
         "Alle kostenlosen Tools von Pod Studio: Generatoren für Titel, Namen und Shownotes, RSS- und Cover-Prüfung, Kapitelmarken sowie Rechner für Reichweite und Einnahmen.",
       guidesTitle: "Podcast-Ratgeber: CPM, Cover & Titel | Pod Studio",
@@ -528,7 +528,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
       trustSpecSub: "Apple- & Spotify-Vorgaben",
     },
     toolsIndex: {
-      eyebrow: "18 kostenlose Tools",
+      eyebrow: "20 kostenlose Tools",
       heading: "Kostenlose Podcast-Tools für jeden Schritt Ihrer Show",
       intro:
         "Episoden planen, Titel und Shownotes schreiben, RSS-Feed und Cover prüfen sowie Downloads und Sponsoring-Einnahmen prognostizieren. Jedes Tool ist kostenlos, braucht kein Konto und läuft vollständig in Ihrem Browser.",
@@ -600,7 +600,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
           text: "Jede Tool-Seite, jeder Ratgeber und jede FAQ gibt es auf Englisch, Spanisch, Japanisch, Französisch, Deutsch, Portugiesisch, Koreanisch und Italienisch.",
         },
       ],
-      cta: "Alle 18 kostenlosen Tools ansehen",
+      cta: "Alle 20 kostenlosen Tools ansehen",
     },
   },
 
@@ -608,8 +608,8 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
     meta: {
       homeTitle: "Ferramentas Grátis para Podcast, Sem Cadastro | Pod Studio",
       homeDescription:
-        "18 ferramentas grátis para podcast no navegador: geradores de títulos e notas de episódio, validador de feed RSS, verificador de capa e calculadora de CPM.",
-      toolsTitle: "As 18 Ferramentas Grátis para Podcast | Pod Studio",
+        "20 ferramentas grátis para podcast no navegador: geradores de títulos e notas de episódio, validador de feed RSS, verificador de capa e calculadora de CPM.",
+      toolsTitle: "As 20 Ferramentas Grátis para Podcast | Pod Studio",
       toolsDescription:
         "Todas as ferramentas gratuitas do Pod Studio: geradores de títulos, nomes e notas de episódio, validadores de RSS e capa, capítulos e calculadoras de receita.",
       guidesTitle: "Guias de Podcast: CPM, Capas e Títulos | Pod Studio",
@@ -630,7 +630,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
       trustSpecSub: "Padrões Apple e Spotify",
     },
     toolsIndex: {
-      eyebrow: "18 ferramentas grátis",
+      eyebrow: "20 ferramentas grátis",
       heading: "Ferramentas grátis para cada etapa do seu podcast",
       intro:
         "Planeje episódios, escreva títulos e notas de episódio, verifique seu feed RSS e sua capa e projete downloads e receita de patrocínio. Todas as ferramentas são gratuitas, dispensam conta e rodam inteiramente no seu navegador.",
@@ -702,16 +702,16 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
           text: "Cada página de ferramenta, guia e FAQ está em inglês, espanhol, japonês, francês, alemão, português, coreano e italiano.",
         },
       ],
-      cta: "Ver as 18 ferramentas grátis",
+      cta: "Ver as 20 ferramentas grátis",
     },
   },
 
   ko: {
     meta: {
-      homeTitle: "무료 팟캐스트 제작 도구 18종 · 가입 불필요 | Pod Studio",
+      homeTitle: "무료 팟캐스트 제작 도구 20종 · 가입 불필요 | Pod Studio",
       homeDescription:
-        "브라우저에서 바로 쓰는 무료 팟캐스트 도구 18종. 에피소드 제목·쇼노트 생성기, RSS 피드 검사기, 커버 아트 확인, CPM 수익 계산기를 가입 없이 사용하세요.",
-      toolsTitle: "무료 팟캐스트 도구 18종 전체 보기 | Pod Studio",
+        "브라우저에서 바로 쓰는 무료 팟캐스트 도구 20종. 에피소드 제목·쇼노트 생성기, RSS 피드 검사기, 커버 아트 확인, CPM 수익 계산기를 가입 없이 사용하세요.",
+      toolsTitle: "무료 팟캐스트 도구 20종 전체 보기 | Pod Studio",
       toolsDescription:
         "Pod Studio 무료 팟캐스트 도구 모음. 제목·채널명·쇼노트 생성기, RSS·커버 아트 검사, 챕터 마커, 다운로드·수익 계산기까지 한곳에서 사용하세요.",
       guidesTitle: "팟캐스트 가이드: CPM·커버 아트·제목 | Pod Studio",
@@ -732,7 +732,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
       trustSpecSub: "Apple·Spotify 규격 준수",
     },
     toolsIndex: {
-      eyebrow: "무료 도구 18종",
+      eyebrow: "무료 도구 20종",
       heading: "팟캐스트 제작 전 과정을 위한 무료 도구",
       intro:
         "에피소드 구성, 제목과 쇼노트 작성, RSS 피드와 커버 아트 점검, 다운로드와 스폰서 수익 예측까지. 모든 도구는 무료이며 계정 없이 브라우저 안에서만 동작합니다.",
@@ -804,7 +804,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
           text: "모든 도구 페이지, 가이드, FAQ를 영어, 스페인어, 일본어, 프랑스어, 독일어, 포르투갈어, 한국어, 이탈리아어로 제공합니다.",
         },
       ],
-      cta: "무료 도구 18종 모두 보기",
+      cta: "무료 도구 20종 모두 보기",
     },
   },
 
@@ -812,8 +812,8 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
     meta: {
       homeTitle: "Strumenti Podcast Gratis, Senza Registrazione | Pod Studio",
       homeDescription:
-        "18 strumenti gratuiti per podcast nel browser: generatori di titoli e note degli episodi, validatore di feed RSS, controllo della copertina e calcolatore CPM.",
-      toolsTitle: "Tutti i 18 Strumenti Gratis per Podcast | Pod Studio",
+        "20 strumenti gratuiti per podcast nel browser: generatori di titoli e note degli episodi, validatore di feed RSS, controllo della copertina e calcolatore CPM.",
+      toolsTitle: "Tutti i 20 Strumenti Gratis per Podcast | Pod Studio",
       toolsDescription:
         "Tutti gli strumenti gratuiti di Pod Studio: generatori di titoli, nomi e note degli episodi, controlli RSS e copertina, capitoli e calcolatori di ricavi.",
       guidesTitle: "Guide Podcast: CPM, Copertine e Titoli | Pod Studio",
@@ -834,7 +834,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
       trustSpecSub: "Specifiche Apple e Spotify",
     },
     toolsIndex: {
-      eyebrow: "18 strumenti gratuiti",
+      eyebrow: "20 strumenti gratuiti",
       heading: "Strumenti gratuiti per ogni fase del tuo podcast",
       intro:
         "Pianifica gli episodi, scrivi titoli e note, controlla feed RSS e copertina e prevedi download e ricavi dalle sponsorizzazioni. Ogni strumento è gratuito, non richiede un account e funziona interamente nel tuo browser.",
@@ -906,7 +906,7 @@ export const pageCopy: Record<SupportedLocale, PageCopy> = {
           text: "Ogni pagina strumento, guida e FAQ è disponibile in inglese, spagnolo, giapponese, francese, tedesco, portoghese, coreano e italiano.",
         },
       ],
-      cta: "Scopri tutti i 18 strumenti gratuiti",
+      cta: "Scopri tutti i 20 strumenti gratuiti",
     },
   },
 };

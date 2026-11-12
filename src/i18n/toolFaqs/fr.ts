@@ -396,6 +396,49 @@ export const frFaqs: ToolFaqsRecord = {
       question: "Quel délai respecter avant de relancer une proposition de participation à un podcast ?",
       answer: "Une relance courtoise après environ une à deux semaines constitue un délai raisonnable, modulable selon les contraintes de calendrier. Apportez un élément nouveau ou utile plutôt que de renvoyer le même message, et respectez tout refus exprimé."
     }
+  ],
+  "lufs-meter": [
+    {
+      question: "À combien de LUFS un podcast doit-il être ?",
+      answer: "Apple Podcasts recommande un niveau global d'environ −16 LUFS, à ±1 dB près, et une crête réelle ne dépassant pas −1 dBFS. Spotify ajuste la lecture à −14 LUFS. Beaucoup de podcasteurs masterisent à −16 LUFS pour qu'un seul fichier convienne à toutes les applications."
+    },
+    {
+      question: "Comment mesurer les LUFS d'un fichier audio ?",
+      answer: "Déposez le fichier exporté dans le mesureur. Il décode l'audio dans votre navigateur, applique le filtre de pondération K et les seuils définis par la norme ITU-R BS.1770, puis affiche le niveau intégré, la crête réelle et la plage de sonie. Rien n'est envoyé."
+    },
+    {
+      question: "Pourquoi mon fichier mono affiche-t-il −19 LUFS au lieu de −16 ?",
+      answer: "Un fichier mono mesuré sur un seul canal affiche environ 3 LU de moins que le même audio sur deux canaux. Les lecteurs envoient le mono sur les deux enceintes : un fichier mono à −19 LUFS s'entend donc aussi fort qu'un fichier stéréo à −16 LUFS. Le mesureur affiche les deux valeurs pour les fichiers mono."
+    },
+    {
+      question: "Quelle est la différence entre LUFS et crête réelle ?",
+      answer: "Le LUFS décrit le niveau sonore moyen perçu sur tout le fichier. La crête réelle est le niveau le plus élevé atteint par le signal une fois reconverti en analogique, y compris les crêtes entre deux échantillons. Un fichier peut atteindre la cible de niveau et malgré tout saturer si sa crête réelle est trop haute."
+    },
+    {
+      question: "Cet outil modifie-t-il ou normalise-t-il mon audio ?",
+      answer: "Non. Il mesure uniquement. Il vous indique de combien de décibels monter ou baisser le niveau, et vous appliquez ce changement dans votre éditeur audio. La crête réelle est une estimation par suréchantillonnage 4× : gardez une petite marge de sécurité."
+    }
+  ],
+  "script-timer": [
+    {
+      question: "Combien de mots par minute dit-on dans un podcast ?",
+      answer: "Beaucoup d'animateurs de podcast parlent à environ 150 à 160 mots par minute. La conversation courante est souvent un peu plus lente, autour de 120 à 150, et une émission narrée et posée peut se situer vers 130. Votre propre débit compte le plus : chronométrez-vous en lisant une minute de votre script."
+    },
+    {
+      question: "Combien de temps faut-il pour lire 1 000 mots à voix haute ?",
+      answer: "Environ 6 minutes 40 secondes à 150 mots par minute. À un débit plus lent de 130 mots par minute, il faut environ 7 minutes 42 secondes, et à un débit plus rapide de 170, environ 5 minutes 53 secondes."
+    },
+    {
+      question: "Combien de mots faut-il pour un épisode de podcast de 30 minutes ?",
+      answer: "Environ 4 500 mots à 150 mots par minute. La plupart des émissions d'interview ou de discussion ne sont pas entièrement écrites : servez-vous de ce chiffre pour les parties rédigées, comme l'intro, les lectures publicitaires et la conclusion, et gardez le reste du temps pour la discussion."
+    },
+    {
+      question: "Le minuteur compte-t-il les indications de réalisation et les noms des intervenants ?",
+      answer: "Non, par défaut. Le texte entre [crochets], comme [MUSIQUE], et les noms d'intervenants en début de ligne, comme HOST :, sont ignorés car personne ne les lit à voix haute. Les lignes qui commencent par # sont traitées comme des titres de segment. Décochez l'option si vous voulez que tout le reste soit compté."
+    },
+    {
+      question: "Fonctionne-t-il avec des scripts en japonais et en coréen ?",
+      answer: "Oui. Les scripts en japonais et en coréen sont comptés en caractères plutôt qu'en mots, avec leurs propres débits prédéfinis : environ 300 caractères par minute en japonais et environ 280 en coréen. En coréen, les espaces et la ponctuation ne sont pas comptés. Vous pouvez modifier le débit selon votre vitesse de lecture."
+    }
   ]
 };
-

@@ -122,7 +122,7 @@ export function LanguageSelector({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-300 dark:hover:border-neutral-700 text-xs transition-all shadow-2xs focus:outline-none focus:ring-1 focus:ring-neutral-400"
+        className="flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-300 dark:hover:border-neutral-700 text-xs transition-all shadow-2xs focus:outline-none focus:ring-1 focus:ring-neutral-400"
         aria-expanded={isOpen}
         aria-haspopup="true"
         aria-label={`Select language. Currently ${currentInfo.nativeName}`}
@@ -140,7 +140,7 @@ export function LanguageSelector({
         <div
           role="menu"
           aria-orientation="vertical"
-          className="absolute right-0 mt-1.5 w-48 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0c0c0c] shadow-lg py-1 z-50 animate-in fade-in zoom-in-95 duration-100 backdrop-blur-md"
+          className="absolute right-0 mt-1.5 w-48 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] shadow-lg py-1 z-50 animate-in fade-in zoom-in-95 duration-100 backdrop-blur-md"
         >
           <div className="px-3 py-1.5 border-b border-neutral-100 dark:border-neutral-800/80 text-[10px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
             {selectLanguageLabel[activeLang] ?? selectLanguageLabel.en}

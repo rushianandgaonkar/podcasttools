@@ -67,7 +67,7 @@ for (const p of samplePages) {
   console.log(`PASS: ${p.name} -> 5 FAQs verified in Schema and HTML accordion.`);
 }
 
-// Check comprehensive inventory: 18 tools * 8 locales = 144 tool pages
+// Check comprehensive inventory: 20 tools * 8 locales = 160 tool pages
 const locales = ["en", "es", "ja", "fr", "de", "pt", "ko", "it"];
 const slugs = [
   "episode-title-generator",
@@ -88,6 +88,8 @@ const slugs = [
   "trailer-script-builder",
   "review-response-generator",
   "collab-finder",
+  "lufs-meter",
+  "script-timer",
 ];
 
 let totalChecked = 0;
@@ -109,6 +111,6 @@ for (const locale of locales) {
   }
 }
 
-console.log(`\nTotal tool pages audited: ${totalChecked}/144. All passed: ${allPassed}`);
+console.log(`\nTotal tool pages audited: ${totalChecked}/160. All passed: ${allPassed}`);
 if (!allPassed) process.exit(1);
 

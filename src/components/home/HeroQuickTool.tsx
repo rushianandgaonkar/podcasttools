@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Sparkles, Copy, Check, ArrowRight } from "lucide-react";
 import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
 import { getLocalizedPath } from "@/i18n/utils";
@@ -80,7 +80,7 @@ const LOCALIZED_UI: Record<
 > = {
   en: {
     testerTitle: "Instant Episode Title Tester",
-    demoBadge: "Client-Side Demo",
+    demoBadge: "Live demo",
     inputLabel: "Enter your episode topic or guest angle:",
     inputPlaceholder: "e.g. Scaling a SaaS to $10k MRR...",
     quickLabel: "Quick:",
@@ -176,6 +176,27 @@ const LOCALIZED_UI: Record<
   },
 };
 
+const METER_BARS = 48;
+
+/**
+ * Deterministic "waveform" for a piece of text: the same topic always draws the
+ * same shape, so the meter visibly answers each keystroke without any audio.
+ */
+function meterLevels(text: string, count: number = METER_BARS): number[] {
+  let seed = 2166136261;
+  for (let i = 0; i < text.length; i++) {
+    seed = Math.imul(seed ^ text.charCodeAt(i), 16777619);
+  }
+  const levels: number[] = [];
+  for (let i = 0; i < count; i++) {
+    seed = Math.imul(seed ^ (seed >>> 13), 1274126177) + i;
+    const random = ((seed >>> 0) % 1000) / 1000;
+    const envelope = 0.3 + 0.7 * Math.sin((Math.PI * (i + 0.5)) / count);
+    levels.push(Math.round((0.1 + random * 0.9 * envelope) * 100));
+  }
+  return levels;
+}
+
 export function HeroQuickTool({ lang = defaultLocale }: HeroQuickToolProps) {
   const ui = LOCALIZED_UI[lang] || LOCALIZED_UI.en;
   const topics = LOCALIZED_TOPICS[lang] || LOCALIZED_TOPICS.en;
@@ -183,7 +204,14 @@ export function HeroQuickTool({ lang = defaultLocale }: HeroQuickToolProps) {
 
   const [topic, setTopic] = useState(topics[0] || "AI & Automation");
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  // Bars start flat and rise once after hydration: the page's single load animation.
+  const [live, setLive] = useState(false);
+  useEffect(() => {
+    const id = window.requestAnimationFrame(() => setLive(true));
+    return () => window.cancelAnimationFrame(id);
+  }, []);
 
+  const levels = useMemo(() => meterLevels(topic.trim() || "Podcasting"), [topic]);
   const titles = formulas.slice(0, 3).map((formula) => formula(topic.trim() || "Podcasting"));
 
   const handleCopy = (text: string, index: number) => {
@@ -195,99 +223,114 @@ export function HeroQuickTool({ lang = defaultLocale }: HeroQuickToolProps) {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto rounded-xl bg-white dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 p-5 sm:p-6 shadow-sm relative overflow-hidden transition-colors duration-150">
-      {/* Top Eyebrow & Status */}
-      <div className="flex items-center justify-between mb-4 pb-3 border-b border-neutral-100 dark:border-neutral-900">
-        <div className="flex items-center gap-2">
-          <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
-          <h2 className="font-mono text-xs uppercase font-medium tracking-wider text-neutral-900 dark:text-neutral-100 flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-[#a9583e]" />
-            {ui.testerTitle}
-          </h2>
-        </div>
-        <span className="font-mono text-[10px] text-neutral-500 uppercase px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900">
+    <div className="studio-console w-full max-w-2xl mx-auto rounded-2xl bg-[#141413] text-[#faf9f5] border border-[#34312c] shadow-[0_24px_60px_-28px_rgba(20,20,19,0.55)] relative overflow-hidden">
+      {/* Console header */}
+      <div className="flex items-center justify-between gap-3 px-5 sm:px-6 pt-4 pb-3">
+        <h2 className="text-sm font-semibold tracking-[-0.01em] flex items-center gap-2">
+          <Sparkles className="w-4 h-4 text-[#cc785c]" />
+          {ui.testerTitle}
+        </h2>
+        <span className="inline-flex items-center gap-1.5 text-[11px] text-[#c2beb4] whitespace-nowrap shrink-0">
+          <span className="studio-live-dot h-2 w-2 rounded-full bg-[#e5484d]" aria-hidden="true"></span>
           {ui.demoBadge}
         </span>
       </div>
 
-      {/* Input Field */}
-      <div className="space-y-2 mb-4">
-        <label htmlFor="quick-topic" className="block text-xs font-medium text-neutral-600 dark:text-neutral-400">
-          {ui.inputLabel}
-        </label>
-        <input
-          id="quick-topic"
-          type="text"
-          value={topic}
-          onChange={(e) => setTopic(e.target.value)}
-          placeholder={ui.inputPlaceholder}
-          className="w-full px-3.5 py-2 rounded-md bg-neutral-50 dark:bg-black border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 text-xs sm:text-sm focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
-        />
-
-        {/* Quick Suggestion Pills */}
-        <div className="flex flex-wrap items-center gap-1.5 pt-1">
-          <span className="text-[11px] font-mono text-neutral-400 mr-1">{ui.quickLabel}</span>
-          {topics.map((item) => (
-            <button
-              key={item}
-              type="button"
-              onClick={() => setTopic(item)}
-              className={`text-[11px] px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
-                topic === item
-                  ? "bg-neutral-900 text-white dark:bg-white dark:text-black font-medium"
-                  : "bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
-              }`}
-            >
-              {item}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Output Titles List */}
-      <div className="space-y-2 mb-4">
-        <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
-          {ui.previewHeading}
-        </div>
-        {titles.map((titleText, idx) => (
-          <div
+      {/* Level meter: redraws for every keystroke */}
+      <div
+        aria-hidden="true"
+        className="flex items-center gap-[3px] h-16 px-5 sm:px-6 border-y border-[#34312c] bg-[#0f0f0e]"
+      >
+        {levels.map((level, idx) => (
+          <span
             key={idx}
-            className="flex items-center justify-between p-3 rounded-lg bg-neutral-50 dark:bg-[#111111] border border-neutral-200 dark:border-neutral-800/80 hover:border-neutral-300 dark:hover:border-neutral-700 transition-colors group"
-          >
-            <span className="text-xs sm:text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-[#a9583e] dark:group-hover:text-[#a9583e] transition-colors">
-              {titleText}
-            </span>
-            <button
-              type="button"
-              onClick={() => handleCopy(titleText, idx)}
-              className="flex items-center gap-1 px-2 py-1 text-[11px] font-mono rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white ml-2 flex-shrink-0 transition-colors cursor-pointer"
-              title="Copy to clipboard"
-            >
-              {copiedIndex === idx ? (
-                <>
-                  <Check className="w-3 h-3 text-emerald-500" />
-                  <span className="text-emerald-500 font-semibold">{ui.copied}</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-3 h-3" />
-                  <span>{ui.copy}</span>
-                </>
-              )}
-            </button>
-          </div>
+            className="studio-meter-bar flex-1 rounded-full bg-[#cc785c]"
+            style={{
+              height: `${live ? level : 6}%`,
+              opacity: 0.45 + (level / 100) * 0.55,
+              transitionDelay: `${idx * 6}ms`,
+            }}
+          />
         ))}
       </div>
 
-      {/* Footer Link to Full Tool */}
-      <div className="pt-3 flex items-center justify-between border-t border-neutral-100 dark:border-neutral-900 text-xs">
-        <span className="text-neutral-500 text-[11px]">{ui.footerPrompt}</span>
-        <a
-          href={getLocalizedPath("/tools/episode-title-generator", lang)}
-          className="inline-flex items-center gap-1 font-medium text-xs text-[#a9583e] hover:underline"
-        >
-          {ui.openBtn} <ArrowRight className="w-3.5 h-3.5" />
-        </a>
+      <div className="p-5 sm:p-6">
+        {/* Input Field */}
+        <div className="space-y-2 mb-4">
+          <label htmlFor="quick-topic" className="block text-xs font-medium text-[#c2beb4]">
+            {ui.inputLabel}
+          </label>
+          <input
+            id="quick-topic"
+            type="text"
+            value={topic}
+            onChange={(e) => setTopic(e.target.value)}
+            placeholder={ui.inputPlaceholder}
+            className="w-full px-3.5 py-2.5 rounded-lg bg-[#1f1e1b] border border-[#34312c] text-[#faf9f5] placeholder-[#8e8b82] text-sm focus:outline-none focus-visible:border-[#cc785c] focus-visible:ring-2 focus-visible:ring-[#cc785c]/30 transition-colors"
+          />
+
+          {/* Quick Suggestion Pills */}
+          <div className="flex flex-wrap items-center gap-1.5 pt-1">
+            <span className="text-[11px] text-[#8e8b82] mr-1">{ui.quickLabel}</span>
+            {topics.map((item) => (
+              <button
+                key={item}
+                type="button"
+                onClick={() => setTopic(item)}
+                aria-pressed={topic === item}
+                className={`text-[11px] px-2.5 py-1 rounded-full transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#cc785c]/60 ${
+                  topic === item
+                    ? "bg-[#faf9f5] text-[#141413] font-medium"
+                    : "bg-[#1f1e1b] text-[#c2beb4] hover:text-[#faf9f5] border border-[#34312c]"
+                }`}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Output Titles List */}
+        <div className="space-y-2 mb-4">
+          <div className="text-[11px] text-[#8e8b82]">{ui.previewHeading}</div>
+          {titles.map((titleText, idx) => (
+            <div
+              key={idx}
+              className="flex items-center justify-between gap-2 p-3 rounded-lg bg-[#1f1e1b] border border-[#34312c]"
+            >
+              <span className="text-xs sm:text-sm font-medium text-[#faf9f5]">{titleText}</span>
+              <button
+                type="button"
+                onClick={() => handleCopy(titleText, idx)}
+                className="flex items-center gap-1 px-2 py-1 text-[11px] rounded-md border border-[#34312c] bg-[#141413] text-[#c2beb4] hover:text-[#faf9f5] flex-shrink-0 transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#cc785c]/60"
+                aria-label={`${ui.copy}: ${titleText}`}
+              >
+                {copiedIndex === idx ? (
+                  <>
+                    <Check className="w-3 h-3 text-emerald-400" />
+                    <span className="text-emerald-400 font-semibold">{ui.copied}</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3 h-3" />
+                    <span>{ui.copy}</span>
+                  </>
+                )}
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Footer Link to Full Tool */}
+        <div className="pt-3 flex items-center justify-between gap-3 border-t border-[#34312c] text-xs">
+          <span className="text-[#8e8b82] text-[11px]">{ui.footerPrompt}</span>
+          <a
+            href={getLocalizedPath("/tools/episode-title-generator", lang)}
+            className="inline-flex items-center gap-1 font-medium text-xs text-[#e08e73] hover:underline whitespace-nowrap"
+          >
+            {ui.openBtn} <ArrowRight className="w-3.5 h-3.5" />
+          </a>
+        </div>
       </div>
     </div>
   );

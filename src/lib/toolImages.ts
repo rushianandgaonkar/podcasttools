@@ -1,7 +1,7 @@
 import manifest from "@/config/toolImages.generated.json";
 
 /**
- * Responsive image helper for the 18 tool illustrations.
+ * Responsive image helper for the 20 tool illustrations.
  *
  * `tool.image` in config/site.ts stores the large WebP path
  * (e.g. /images/tools/podcasttools_01_title-generator-lg.webp).

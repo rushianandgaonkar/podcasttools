@@ -7,7 +7,6 @@ import { siteConfig, guidesRegistry } from "../../config/site";
 import { HeroQuickTool } from "../home/HeroQuickTool";
 import { HomeToolGrid } from "../home/HomeToolGrid";
 import HowItWorks from "../home/HowItWorks.astro";
-import { ShaderBackground } from "../ui/silk-shader";
 import type { SupportedLocale } from "../../i18n/languages";
 import { useTranslations, getLocalizedPath } from "../../i18n/utils";
 import { usePageCopy } from "../../i18n/pageCopy";
@@ -30,6 +29,9 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const copy = usePageCopy(lang);
+// The homepage shows a short selection; the full list lives on /guides.
+const HOME_GUIDE_LIMIT = 6;
+const homeGuides = guidesRegistry.slice(0, HOME_GUIDE_LIMIT);
 const homeUrl = `${siteConfig.url}${getLocalizedPath("/", lang)}`.replace(/\/$/, "");
 
 // FAQ Schema.org Structured Data
@@ -56,92 +58,79 @@ const faqSchema = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <div class="flex flex-col items-center w-full">
-    <!-- Hero Section with Vercel Mesh Gradient Bloom & Silk Shader -->
-    <section class="w-full relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden vercel-hero-mesh border-b border-neutral-200 dark:border-neutral-800">
-      <!-- Silk Shader Interactive WebGL Background -->
-      <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-60 dark:opacity-25 dark:invert" aria-hidden="true">
-        <ShaderBackground client:load className="w-full h-full object-cover" />
-      </div>
-
+    <!-- Hero: copy on the left, the live "studio console" demo on the right -->
+    <section class="studio-hero w-full relative pt-12 pb-16 md:pt-20 md:pb-20 overflow-hidden border-b border-neutral-200 dark:border-neutral-800">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center">
-        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center w-full">
-        <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
-        <!-- Eyebrow -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 text-neutral-600 dark:text-neutral-400 text-xs font-mono mb-6 shadow-2xs backdrop-blur-xs">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          <span>{t.hero.badge}</span>
-        </div>
+        <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] gap-10 lg:gap-14 items-center w-full">
+          <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <p class="inline-flex items-center gap-2 text-xs sm:text-[13px] text-neutral-600 dark:text-neutral-400 mb-5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true"></span>
+              <span>{t.hero.badge}</span>
+            </p>
 
-        <!-- Main Display Headline -->
-        <h1 class="text-3xl sm:text-5xl lg:text-5xl font-semibold tracking-[-0.04em] text-neutral-900 dark:text-white max-w-xl leading-[1.12] mb-5">
-          {t.hero.titleStart} <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-400 to-indigo-400">{t.hero.titleHighlight}</span>
-        </h1>
+            <h1 class="font-display text-[2.1rem] sm:text-5xl lg:text-[3.4rem] font-semibold tracking-[-0.035em] text-neutral-900 dark:text-white max-w-xl leading-[1.05] mb-5 text-balance">
+              {t.hero.titleStart}{lang === "ja" ? "" : " "}{t.hero.titleHighlight}
+            </h1>
 
-        <!-- Subheading -->
-        <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed mb-8">
-          {t.hero.description}
-        </p>
+            <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed mb-8">
+              {t.hero.description}
+            </p>
 
-        <!-- CTA Buttons -->
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
-          <a
-            href="#tools-section"
-            class="px-5 py-2.5 rounded-full bg-[#a9583e] hover:bg-[#8f4630] text-white font-medium text-xs sm:text-sm hover:opacity-90 transition-opacity flex items-center gap-2 shadow-sm"
-          >
-            {t.hero.primaryCta}
-            <ArrowRight className="w-3.5 h-3.5" />
-          </a>
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+              <a
+                href="#tools-section"
+                class="px-5 py-2.5 rounded-full bg-[#a9583e] hover:bg-[#8f4630] text-white font-medium text-sm transition-colors flex items-center gap-2 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#a9583e]"
+              >
+                {t.hero.primaryCta}
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
 
-          <a
-            href={getLocalizedPath("/tools/monetization-calculator", lang)}
-            class="px-5 py-2.5 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800 font-medium text-xs sm:text-sm transition-colors"
-          >
-            {t.hero.secondaryCta} &rarr;
-          </a>
-        </div>
-
-        </div>
-
-        <!-- Interactive Hero Quick Tool Island: live demo beside the copy -->
-        <div class="w-full">
-          <HeroQuickTool client:load lang={lang} />
-        </div>
-        </div>
-
-        <!-- 4 Trust Cards Strip -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-5xl w-full mt-14 text-left">
-          <div class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xs">
-            <div class="flex items-center gap-1.5 text-neutral-900 dark:text-white font-medium text-xs mb-0.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#a9583e]" />
-              {t.nav.allTools}
+              <a
+                href={getLocalizedPath("/tools/monetization-calculator", lang)}
+                class="px-5 py-2.5 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800 font-medium text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#a9583e]"
+              >
+                {t.hero.secondaryCta}
+              </a>
             </div>
-            <p class="text-[11px] text-neutral-500">{copy.home.trustToolsSub}</p>
           </div>
 
-          <div class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xs">
-            <div class="flex items-center gap-1.5 text-neutral-900 dark:text-white font-medium text-xs mb-0.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-              {t.hero.trustPills.privacy}
-            </div>
-            <p class="text-[11px] text-neutral-500">{copy.home.trustPrivacySub}</p>
-          </div>
-
-          <div class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xs">
-            <div class="flex items-center gap-1.5 text-neutral-900 dark:text-white font-medium text-xs mb-0.5">
-              <Layers className="w-3.5 h-3.5 text-indigo-500" />
-              {t.hero.trustPills.free}
-            </div>
-            <p class="text-[11px] text-neutral-500">{copy.home.trustFreeSub}</p>
-          </div>
-
-          <div class="p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xs">
-            <div class="flex items-center gap-1.5 text-neutral-900 dark:text-white font-medium text-xs mb-0.5">
-              <Zap className="w-3.5 h-3.5 text-amber-500" />
-              {t.hero.trustPills.formulas}
-            </div>
-            <p class="text-[11px] text-neutral-500">{copy.home.trustSpecSub}</p>
+          <!-- Interactive Hero Quick Tool Island: live demo beside the copy -->
+          <div class="w-full">
+            <HeroQuickTool client:load lang={lang} />
           </div>
         </div>
+
+        <!-- Trust row: one quiet line of facts instead of four boxed cards -->
+        <dl class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-5 w-full mt-14 pt-6 border-t border-neutral-200 dark:border-neutral-800 text-left">
+          <div class="flex items-start gap-2.5">
+            <Sparkles className="w-4 h-4 mt-0.5 shrink-0 text-[#a9583e]" />
+            <div>
+              <dt class="text-sm font-medium text-neutral-900 dark:text-white">{t.nav.allTools}</dt>
+              <dd class="text-xs text-neutral-500">{copy.home.trustToolsSub}</dd>
+            </div>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <ShieldCheck className="w-4 h-4 mt-0.5 shrink-0 text-[#a9583e]" />
+            <div>
+              <dt class="text-sm font-medium text-neutral-900 dark:text-white">{t.hero.trustPills.privacy}</dt>
+              <dd class="text-xs text-neutral-500">{copy.home.trustPrivacySub}</dd>
+            </div>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <Layers className="w-4 h-4 mt-0.5 shrink-0 text-[#a9583e]" />
+            <div>
+              <dt class="text-sm font-medium text-neutral-900 dark:text-white">{t.hero.trustPills.free}</dt>
+              <dd class="text-xs text-neutral-500">{copy.home.trustFreeSub}</dd>
+            </div>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <Zap className="w-4 h-4 mt-0.5 shrink-0 text-[#a9583e]" />
+            <div>
+              <dt class="text-sm font-medium text-neutral-900 dark:text-white">{t.hero.trustPills.formulas}</dt>
+              <dd class="text-xs text-neutral-500">{copy.home.trustSpecSub}</dd>
+            </div>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -152,7 +141,7 @@ const faqSchema = {
           <span class="font-mono text-xs uppercase tracking-wider text-neutral-500 block mb-1">
             {copy.home.toolsEyebrow}
           </span>
-          <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-neutral-900 dark:text-white">
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold tracking-[-0.025em] text-neutral-900 dark:text-white">
             {t.toolsSection.title}
           </h2>
         </div>
@@ -162,7 +151,7 @@ const faqSchema = {
       </div>
 
       <!-- Interactive Tool Grid Island -->
-      <HomeToolGrid client:load lang={lang} labels={copy.grid} />
+      <HomeToolGrid client:load lang={lang} labels={copy.grid} defaultView="grid" />
     </section>
 
     <!-- How It Works (3-step visual strip) -->
@@ -175,22 +164,22 @@ const faqSchema = {
           <span class="font-mono text-xs uppercase tracking-wider text-neutral-500 block mb-1">
             {copy.home.guidesEyebrow}
           </span>
-          <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-neutral-900 dark:text-white">
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold tracking-[-0.025em] text-neutral-900 dark:text-white">
             {copy.home.guidesHeading}
           </h2>
         </div>
         <a href={getLocalizedPath("/guides", lang)} class="text-xs font-medium text-[#a9583e] hover:underline inline-flex items-center gap-1">
-          {t.nav.guides} <ArrowUpRight className="w-3.5 h-3.5" />
+          {t.nav.guides} ({guidesRegistry.length}) <ArrowUpRight className="w-3.5 h-3.5" />
         </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {guidesRegistry.map((guide) => {
+        {homeGuides.map((guide) => {
           const loc = getLocalizedGuide(guide, lang);
           return (
             <a
               href={getLocalizedPath(`/guides/${guide.slug}`, lang)}
-              class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-5 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex flex-col justify-between"
+              class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] p-5 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex flex-col justify-between"
             >
               <div>
                 <GuideCover slug={guide.slug} class="aspect-[2/1] mb-4 -mt-1" />
@@ -226,7 +215,7 @@ const faqSchema = {
           <span class="font-mono text-xs uppercase tracking-wider text-neutral-500 block mb-1">
             {t.faq.eyebrow}
           </span>
-          <h2 class="text-xl sm:text-3xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white mb-2">
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold tracking-[-0.025em] text-neutral-900 dark:text-white mb-2">
             {t.faq.title}
           </h2>
           <p class="text-xs sm:text-sm text-neutral-500">
@@ -236,10 +225,10 @@ const faqSchema = {
 
         <div class="space-y-3">
           {t.faq.items.map((item) => (
-            <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] p-4 transition-all">
+            <details class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] p-4 transition-all">
               <summary class="flex items-center justify-between font-medium text-xs sm:text-sm text-neutral-900 dark:text-white cursor-pointer list-none">
                 <span>{item.question}</span>
-                <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+                <svg class="w-4 h-4 shrink-0 text-neutral-400 group-open:rotate-180 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
               <div class="pt-3 text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-900 mt-3">
                 {item.answer}

@@ -396,6 +396,49 @@ export const itFaqs: ToolFaqsRecord = {
       question: "Quanto tempo è opportuno attendere prima di inviare un sollecito per una proposta?",
       answer: "Un periodo di circa una o due settimane è solitamente ragionevole per un cortese messaggio di follow-up, tenuto conto di scadenze e contesto. Aggiungi un elemento informativo utile anziché ripetere lo stesso testo, e accetta con professionalità un eventuale rifiuto."
     }
+  ],
+  "lufs-meter": [
+    {
+      question: "A quanti LUFS deve essere un podcast?",
+      answer: "Apple Podcasts consiglia un loudness complessivo di circa −16 LUFS, entro ±1 dB, e un true peak non superiore a −1 dBFS. Spotify regola la riproduzione a −14 LUFS. Molti podcaster masterizzano a −16 LUFS così un solo file va bene in ogni app."
+    },
+    {
+      question: "Come misuro i LUFS di un file audio?",
+      answer: "Trascina il file esportato nel misuratore. Decodifica l'audio nel browser, applica il filtro di ponderazione K e il gating definiti dalla norma ITU-R BS.1770 e mostra loudness integrato, true peak e gamma di loudness. Non viene caricato nulla."
+    },
+    {
+      question: "Perché il mio file mono segna −19 LUFS invece di −16?",
+      answer: "Un file mono misurato come singolo canale segna circa 3 LU in meno rispetto allo stesso audio su due canali. I player inviano il mono a entrambi gli altoparlanti, quindi un file mono a −19 LUFS suona forte quanto un file stereo a −16 LUFS. Per i file mono il misuratore mostra entrambi i valori."
+    },
+    {
+      question: "Qual è la differenza tra LUFS e true peak?",
+      answer: "I LUFS descrivono il volume medio percepito dell'intero file. Il true peak è il livello più alto raggiunto dalla forma d'onda una volta riconvertita in analogico, compresi i picchi tra un campione e l'altro. Un file può centrare l'obiettivo di loudness e distorcere comunque se il true peak è troppo alto."
+    },
+    {
+      question: "Questo strumento modifica o normalizza il mio audio?",
+      answer: "No. Misura soltanto. Ti dice di quanti decibel alzare o abbassare il livello, e sei tu ad applicare la modifica nel tuo editor audio. Il true peak è una stima con sovracampionamento 4×, quindi lascia un piccolo margine di sicurezza."
+    }
+  ],
+  "script-timer": [
+    {
+      question: "Quante parole al minuto si dicono in un podcast?",
+      answer: "Molti conduttori di podcast parlano a circa 150-160 parole al minuto. La conversazione quotidiana è spesso un po' più lenta, intorno alle 120-150, e un programma narrato e pacato può stare vicino alle 130. Conta soprattutto la tua velocità, quindi cronometrati mentre leggi un minuto del tuo script."
+    },
+    {
+      question: "Quanto tempo serve per leggere 1.000 parole ad alta voce?",
+      answer: "Circa 6 minuti e 40 secondi a 150 parole al minuto. A una velocità più lenta di 130 parole al minuto servono circa 7 minuti e 42 secondi, e a una più rapida di 170 circa 5 minuti e 53 secondi."
+    },
+    {
+      question: "Quante parole servono per un episodio di podcast di 30 minuti?",
+      answer: "Circa 4.500 parole a 150 parole al minuto. La maggior parte dei programmi di interviste e conversazione non è interamente scritta, quindi usa il numero come guida per le parti scritte, come intro, spot e chiusura, e lascia il resto del tempo alla conversazione."
+    },
+    {
+      question: "Il timer conta le indicazioni di regia e i nomi di chi parla?",
+      answer: "No, per impostazione predefinita. Il testo tra [parentesi quadre], come [ENTRA LA MUSICA], e i nomi di chi parla a inizio riga, come HOST:, vengono ignorati perché nessuno li legge ad alta voce. Le righe che iniziano con # sono trattate come titoli di segmento. Togli la spunta se vuoi che venga conteggiato tutto il resto."
+    },
+    {
+      question: "Funziona con script in giapponese e coreano?",
+      answer: "Sì. Gli script in giapponese e coreano vengono contati in caratteri invece che in parole, con velocità predefinite proprie: circa 300 caratteri al minuto per il giapponese e circa 280 per il coreano. Per il coreano spazi e punteggiatura non vengono contati. Puoi cambiare la velocità in base al tuo ritmo di lettura."
+    }
   ]
 };
-

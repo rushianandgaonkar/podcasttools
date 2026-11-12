@@ -107,11 +107,11 @@ const jsonLdWebsite = {
       <link rel="alternate" hreflang={link.lang} href={link.href} />
     ))}
 
-    <!-- Geist & Geist Mono Typography -->
+    <!-- Typography: Bricolage Grotesque (display), Geist (text), Geist Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -174,7 +174,7 @@ const jsonLdWebsite = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdOrg)} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebsite)} />
   </head>
-  <body class="bg-[#faf9f5] dark:bg-[#000000] text-[#141413] dark:text-[#faf9f5] min-h-screen flex flex-col font-sans selection:bg-[#a9583e]/20 selection:text-[#a9583e] antialiased">
+  <body class="bg-[#faf9f5] dark:bg-[#181715] text-[#141413] dark:text-[#faf9f5] min-h-screen flex flex-col font-sans selection:bg-[#a9583e]/20 selection:text-[#a9583e] antialiased">
     <Navbar client:load lang={lang} />
     <main class="flex-1">
       <slot />

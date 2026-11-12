@@ -45,7 +45,7 @@ const categoryAccent: Record<string, string> = Object.fromEntries(
   toolCategories.map((cat) => [cat.id, cat.accent])
 );
 
-export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", labels = DEFAULT_LABELS }: HomeToolGridProps) {
+export function HomeToolGrid({ lang = defaultLocale, defaultView = "grid", labels = DEFAULT_LABELS }: HomeToolGridProps) {
   const [viewMode, setViewMode] = useState<"carousel" | "grid">(defaultView);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -89,6 +89,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
       const matchesSearch =
         !searchQuery.trim() ||
         tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        tool.shortTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
         tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         tool.primaryKeyword.toLowerCase().includes(searchQuery.toLowerCase());
 
@@ -116,17 +117,17 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
   });
 
   return (
-    <div className="w-full space-y-6" id="tools-section">
+    <div className="w-full space-y-6">
       {/* Category Pills, Live Search Bar & View Mode Switcher */}
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-3 pb-3 border-b border-neutral-200 dark:border-neutral-800">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 pb-3 border-b border-neutral-200 dark:border-neutral-800">
         {/* Category Tabs */}
-        <div className="flex items-center gap-1.5 overflow-x-auto w-full lg:w-auto pb-1 lg:pb-0 scrollbar-none">
+        <div className="flex items-center gap-1.5 overflow-x-auto lg:overflow-visible lg:flex-wrap w-full lg:w-auto lg:flex-1 pb-1 lg:pb-0 scrollbar-hide">
           <button
             onClick={() => setSelectedCategory("all")}
             className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
               selectedCategory === "all"
                 ? "bg-[#a9583e] hover:bg-[#8f4630] text-white shadow-2xs"
-                : "bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
+                : "bg-white dark:bg-[#1f1e1b] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
             }`}
           >
             {t.categories.all} ({toolRegistry.length})
@@ -145,7 +146,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
                 className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
                   isSelected
                     ? "bg-[#a9583e] hover:bg-[#8f4630] text-white shadow-2xs"
-                    : "bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
+                    : "bg-white dark:bg-[#1f1e1b] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800"
                 }`}
               >
                 <span
@@ -168,7 +169,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
               onClick={() => setViewMode("carousel")}
               className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
                 viewMode === "carousel"
-                  ? "bg-white dark:bg-[#1a1a1a] text-neutral-900 dark:text-white shadow-2xs"
+                  ? "bg-white dark:bg-[#2c2a26] text-neutral-900 dark:text-white shadow-2xs"
                   : "text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
               }`}
               aria-label={labels.carouselView}
@@ -182,7 +183,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
               onClick={() => setViewMode("grid")}
               className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
                 viewMode === "grid"
-                  ? "bg-white dark:bg-[#1a1a1a] text-neutral-900 dark:text-white shadow-2xs"
+                  ? "bg-white dark:bg-[#2c2a26] text-neutral-900 dark:text-white shadow-2xs"
                   : "text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
               }`}
               aria-label={labels.gridView}
@@ -202,7 +203,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={labels.filterPlaceholder}
               aria-label={labels.filterPlaceholder}
-              className="w-full pl-8 pr-3 py-1.5 rounded-md bg-white dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs placeholder-neutral-400 focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
+              className="w-full pl-8 pr-3 py-1.5 rounded-md bg-white dark:bg-[#1f1e1b] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-100 text-xs placeholder-neutral-400 focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 transition-colors"
             />
           </div>
         </div>
@@ -234,7 +235,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
               <a
                 key={tool.id}
                 href={getLocalizedPath(`/tools/${tool.slug}`, lang)}
-                className="group relative rounded-xl bg-white dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 p-5 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-2xs transition-all duration-200 flex flex-col justify-between"
+                className="group relative rounded-xl bg-white dark:bg-[#1f1e1b] border border-neutral-200 dark:border-neutral-800 p-5 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors duration-200 flex flex-col justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a9583e]"
               >
                 <div>
                   {/* Tool Image Preview */}
@@ -262,45 +263,35 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
                     );
                   })()}
 
-                  {/* Header: Icon + Category Badge */}
-                  <div className="flex items-center justify-between mb-3">
+                  {/* Category: icon + label, coloured by category */}
+                  <div className="flex items-center gap-2 mb-2.5">
                     <div
-                      className="w-8 h-8 rounded-md border flex items-center justify-center transition-colors"
+                      className="w-7 h-7 rounded-md border flex items-center justify-center"
                       style={{
                         color: categoryAccent[tool.category],
                         backgroundColor: `${categoryAccent[tool.category]}14`,
                         borderColor: `${categoryAccent[tool.category]}33`,
                       }}
                     >
-                      <ToolIcon name={tool.icon} className="w-4 h-4" />
+                      <ToolIcon name={tool.icon} className="w-3.5 h-3.5" />
                     </div>
-
-                    <div className="flex items-center gap-1.5">
-                      {tool.badge && (
-                        <span className="font-mono text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 font-semibold">
-                          {tool.badge}
-                        </span>
-                      )}
-                      <span className="font-mono text-[9px] px-1.5 py-0.5 rounded border border-neutral-200 dark:border-neutral-800 text-neutral-500">
-                        {tool.categoryLabel}
-                      </span>
-                    </div>
+                    <span className="text-[11px] text-neutral-500 dark:text-neutral-400">{tool.categoryLabel}</span>
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-sm font-semibold tracking-[-0.01em] text-neutral-900 dark:text-neutral-100 group-hover:text-[#a9583e] dark:group-hover:text-[#a9583e] transition-colors mb-1.5">
-                    {tool.title}
+                  {/* Short, scannable name; the long keyword title stays on the tool page */}
+                  <h3 className="text-base font-semibold tracking-[-0.015em] text-neutral-900 dark:text-neutral-100 group-hover:text-[#a9583e] dark:group-hover:text-[#cc785c] transition-colors mb-1.5">
+                    {tool.shortTitle}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed line-clamp-2 mb-4">
+                  <p className="text-[13px] text-neutral-600 dark:text-neutral-400 leading-relaxed line-clamp-2 mb-4">
                     {tool.description}
                   </p>
                 </div>
 
                 {/* Bottom Card Action */}
                 <div className="pt-3 border-t border-neutral-100 dark:border-neutral-900 flex items-center justify-between text-xs">
-                  <span className="font-mono text-[10px] text-neutral-400">{labels.inBrowser}</span>
+                  <span className="text-[11px] text-neutral-500">{labels.inBrowser}</span>
                   <span className="inline-flex items-center gap-1 font-medium text-xs text-neutral-700 dark:text-neutral-300 group-hover:text-[#a9583e] dark:group-hover:text-[#a9583e] transition-colors">
                     {t.toolsSection.launchTool} <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                   </span>
@@ -310,7 +301,7 @@ export function HomeToolGrid({ lang = defaultLocale, defaultView = "carousel", l
           </div>
         )
       ) : (
-        <div className="p-12 text-center border border-dashed border-neutral-300 dark:border-neutral-800 rounded-xl bg-white/40 dark:bg-[#0a0a0a]/40">
+        <div className="p-12 text-center border border-dashed border-neutral-300 dark:border-neutral-800 rounded-xl bg-white/40 dark:bg-[#1f1e1b]/40">
           <p className="text-sm text-neutral-500 mb-2">{labels.noResults}</p>
           <button
             onClick={() => {

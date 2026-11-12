@@ -423,6 +423,44 @@ export const toolRegistry: ToolDefinition[] = [
     icon: "Users",
     image: "/images/tools/podcasttools_18_guest-pitch-collab-outreach-lg.webp",
   },
+  {
+    id: "lufs-meter",
+    slug: "lufs-meter",
+    title: "LUFS Meter & Podcast Loudness Checker",
+    shortTitle: "LUFS Meter",
+    description:
+      "Measure the integrated loudness, true peak and loudness range of an audio file, then compare it with the −16 LUFS podcast target.",
+    longDescription:
+      "Drop in an episode to see its integrated LUFS, true peak and loudness range in seconds. Compare the result with the Apple Podcasts and Spotify targets and get the exact gain change you need. The file is measured on your device and never uploaded.",
+    category: "technical",
+    categoryLabel: "Audio & Technical",
+    primaryKeyword: "lufs meter",
+    secondaryKeywords: ["-16 lufs", "podcast loudness", "loudness normalization", "true peak meter"],
+    searchIntent: "lufs meter",
+    status: "available",
+    icon: "AudioLines",
+    badge: "Utility",
+    image: "/images/tools/podcasttools_19_lufs-loudness-meter-lg.webp",
+  },
+  {
+    id: "script-timer",
+    slug: "script-timer",
+    title: "Script Timer: Words to Minutes Calculator",
+    shortTitle: "Script Timer",
+    description:
+      "Paste a podcast script to see how long it takes to read aloud, how many words fit your target length and how long each segment runs.",
+    longDescription:
+      "Turn a word count into speaking time. Paste your script, pick a speaking pace and a target length, and see whether it runs over or under, how many words to cut or add, and a timed run of show for every segment. Nothing leaves your browser.",
+    category: "content",
+    categoryLabel: "Content & Scripting",
+    primaryKeyword: "script timer",
+    secondaryKeywords: ["words to minutes", "podcast script length", "words per minute calculator", "how long is my speech"],
+    searchIntent: "script timer",
+    status: "available",
+    icon: "Timer",
+    badge: "Utility",
+    image: "/images/tools/podcasttools_20_script-timer-lg.webp",
+  },
 ];
 
 export const guidesRegistry: GuideDefinition[] = [

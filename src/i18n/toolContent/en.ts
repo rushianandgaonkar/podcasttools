@@ -771,4 +771,93 @@ It comes down to three things: a repeatable episode opening that promises clear 
       "Follow up once after a week, then move on politely if you do not hear back.",
     ],
   },
+  "lufs-meter": {
+    metaTitle: "LUFS Meter: Free Online Loudness Checker | Pod Studio",
+    metaDescription:
+      "Free online LUFS meter. Drop in an audio file to check integrated loudness, true peak and loudness range against the −16 LUFS podcast target. No upload.",
+    overview: [
+      "The LUFS Meter measures how loud an episode really is. It reads the integrated loudness in LUFS, the true peak in dBTP and the loudness range, using the ITU-R BS.1770 method that podcast and streaming platforms rely on.",
+      "It then compares your file with a platform target and tells you how many decibels to raise or lower the level. The audio is decoded and measured in your browser, so the file never leaves your device.",
+    ],
+    steps: [
+      { title: "Pick a target", text: "Choose Apple Podcasts (−16 LUFS), Spotify (−14 LUFS) or the broadcast standard (−23 LUFS)." },
+      { title: "Drop in your file", text: "Add the exported episode as MP3, WAV, M4A, FLAC or OGG. Measuring a long episode can take a few seconds." },
+      { title: "Read the result", text: "Check integrated loudness and true peak against the target, and scan the timeline for sections that are much louder or quieter." },
+      { title: "Adjust and re-export", text: "Apply the suggested gain change in your editor, use a limiter if the peak gets too high, then measure the new file." },
+    ],
+    tips: [
+      "Measure the final exported file, not the project. Encoding to MP3 can raise the true peak slightly.",
+      "For a mono file, aim for about −19 LUFS measured as a single channel. It plays as loud as a −16 LUFS stereo file.",
+      "A loudness range above roughly 10 LU often means quiet passages will be hard to hear in a car or on a train. Gentle compression helps.",
+    ],
+    sections: [
+      {
+        heading: "What is −16 LUFS and why does it matter for podcasts?",
+        paragraphs: [
+          "LUFS (Loudness Units relative to Full Scale) measures the perceived loudness of a whole file instead of its highest peak. Apple Podcasts asks for an overall loudness of around −16 dB LKFS, with a tolerance of ±1 dB and a true peak no higher than −1 dBFS. LKFS and LUFS are the same unit under two names.",
+          "Spotify adjusts playback to −14 LUFS, so many podcasters still deliver at −16 LUFS and let each app make its own adjustment. Staying near the target keeps your show at a similar volume to the episodes played before and after it, so listeners do not have to reach for the volume control.",
+        ],
+      },
+    ],
+  },
+  "script-timer": {
+    metaTitle: "Script Timer: Words to Minutes Calculator | Pod Studio",
+    metaDescription:
+      "Free script timer for podcasts. Paste a script to convert words to minutes, check it against your target length and time each segment. No signup.",
+    overview: [
+      "The Script Timer converts the words in your script into speaking time. Paste an intro, an ad read or a full episode script and it shows how long it takes to read aloud at your pace, along with the word count and the number of paragraphs.",
+      "Set a target length to see whether the script runs over or under, and by how many words. Start lines with # to split the script into segments, and the timer builds a run of show with a start time and length for each one. Cues in [brackets] and speaker labels such as HOST: are left out of the count.",
+    ],
+    steps: [
+      { title: "Choose your pace", text: "Pick slow, natural or fast, or enter your own words per minute. Many podcast hosts speak at around 150 words per minute." },
+      { title: "Paste your script", text: "Type or paste the script. Mark segments with # headings, or paste a run of show exported from the Episode Outline Builder." },
+      { title: "Set a target length", text: "Choose a target such as 1, 15 or 30 minutes, and add time for music and ad breaks." },
+      { title: "Trim or expand", text: "Use the over or under message to cut or add words, then check the run of show for segments that run long." },
+    ],
+    tips: [
+      "Time yourself reading one minute of your script and enter that count as your custom pace. It is more accurate than any average.",
+      "Podcast ad reads are often sold as 30 or 60 seconds. At a natural pace that is roughly 75 or 150 words.",
+      "Leave some slack. Ad-libs, laughter and pauses usually make a recording run longer than the script.",
+    ],
+    sections: [
+      {
+        heading: "How many words is a 1, 5 or 30 minute podcast script?",
+        intro: "At a natural podcast pace of 150 words per minute, these are good starting points. Adjust them to your own pace.",
+        list: [
+          {
+            title: "30 seconds",
+            description: "About 75 words, the length of a short ad read.",
+          },
+          {
+            title: "1 minute",
+            description: "About 150 words, enough for a full intro or a 60-second ad read.",
+          },
+          {
+            title: "5 minutes",
+            description: "About 750 words.",
+          },
+          {
+            title: "10 minutes",
+            description: "About 1,500 words.",
+          },
+          {
+            title: "20 minutes",
+            description: "About 3,000 words.",
+          },
+          {
+            title: "30 minutes",
+            description: "About 4,500 words.",
+          },
+          {
+            title: "60 minutes",
+            description: "About 9,000 words.",
+          },
+        ],
+        link: {
+          text: "Plan your segments first with the Episode Outline Builder",
+          href: "/tools/episode-outline-builder",
+        },
+      },
+    ],
+  },
 };

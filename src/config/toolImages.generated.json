@@ -214,5 +214,29 @@
       "width": 768,
       "height": 1024
     }
+  },
+  "podcasttools_19_lufs-loudness-meter": {
+    "sm": {
+      "src": "/images/tools/podcasttools_19_lufs-loudness-meter-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_19_lufs-loudness-meter-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
+  },
+  "podcasttools_20_script-timer": {
+    "sm": {
+      "src": "/images/tools/podcasttools_20_script-timer-sm.webp",
+      "width": 480,
+      "height": 600
+    },
+    "lg": {
+      "src": "/images/tools/podcasttools_20_script-timer-lg.webp",
+      "width": 960,
+      "height": 1200
+    }
   }
 }

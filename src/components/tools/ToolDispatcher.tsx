@@ -19,6 +19,8 @@ import { TrailerScriptBuilder } from "./TrailerScriptBuilder";
 import { AudienceGrowthEstimator } from "./AudienceGrowthEstimator";
 import { ReviewResponseGenerator } from "./ReviewResponseGenerator";
 import { CollabFinder } from "./CollabFinder";
+import { LoudnessMeter } from "./LoudnessMeter";
+import { ScriptTimer } from "./ScriptTimer";
 
 import { defaultLocale, type SupportedLocale } from "@/i18n/languages";
 
@@ -66,6 +68,10 @@ export function ToolDispatcher({ slug, lang = defaultLocale }: ToolDispatcherPro
         return <ReviewResponseGenerator lang={lang} />;
       case "collab-finder":
         return <CollabFinder lang={lang} />;
+      case "lufs-meter":
+        return <LoudnessMeter lang={lang} />;
+      case "script-timer":
+        return <ScriptTimer lang={lang} />;
       default:
         return (
           <div className="p-8 text-center rounded-xl bg-studio-card border border-studio-border">

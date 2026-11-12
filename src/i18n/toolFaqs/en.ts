@@ -396,6 +396,49 @@ export const enFaqs: ToolFaqsRecord = {
       question: "How long should I wait before following up on a podcast pitch?",
       answer: "A single polite follow-up after roughly one to two weeks is often reasonable, adjusted for deadlines and context. Add a new useful detail rather than resending the exact same message. Respect a clear decline or a request not to contact the person again."
     }
+  ],
+  "lufs-meter": [
+    {
+      question: "What LUFS should a podcast be?",
+      answer: "Apple Podcasts recommends an overall loudness of about −16 LUFS, within ±1 dB, and a true peak no higher than −1 dBFS. Spotify adjusts playback to −14 LUFS. Many podcasters master to −16 LUFS so that one file works in every app."
+    },
+    {
+      question: "How do I measure the LUFS of an audio file?",
+      answer: "Drop the exported file into the meter. It decodes the audio in your browser, applies the K-weighting filter and gating defined in ITU-R BS.1770, and reports integrated loudness, true peak and loudness range. Nothing is uploaded."
+    },
+    {
+      question: "Why does my mono file read −19 LUFS instead of −16?",
+      answer: "A mono file measured as a single channel reads about 3 LU lower than the same audio in two channels. Players send mono to both speakers, so a −19 LUFS mono file sounds as loud as a −16 LUFS stereo file. The meter shows both values for mono files."
+    },
+    {
+      question: "What is the difference between LUFS and true peak?",
+      answer: "LUFS describes the average perceived loudness of the whole file. True peak is the highest level the waveform reaches once it is converted back to analog, including peaks between samples. A file can hit the loudness target and still distort if its true peak is too high."
+    },
+    {
+      question: "Does this tool change or normalize my audio?",
+      answer: "No. It only measures. It tells you how many decibels to raise or lower the level, and you apply that change in your audio editor. True peak is an estimate based on 4× oversampling, so leave a small safety margin."
+    }
+  ],
+  "script-timer": [
+    {
+      question: "How many words per minute do people speak on a podcast?",
+      answer: "Many podcast hosts speak at about 150 to 160 words per minute. Everyday conversation is often a little slower, at about 120 to 150, and a calm narrated show can sit closer to 130. Your own pace matters most, so time yourself reading one minute of your script."
+    },
+    {
+      question: "How long does it take to read 1,000 words aloud?",
+      answer: "About 6 minutes 40 seconds at 150 words per minute. At a slower 130 words per minute it takes about 7 minutes 42 seconds, and at a faster 170 it takes about 5 minutes 53 seconds."
+    },
+    {
+      question: "How many words do I need for a 30-minute podcast episode?",
+      answer: "About 4,500 words at 150 words per minute. Most interview and conversation shows are not fully scripted, so use the figure as a guide for the scripted parts, such as the intro, ad reads and outro, and leave the rest of the time for conversation."
+    },
+    {
+      question: "Does the timer count stage directions and speaker names?",
+      answer: "Not by default. Text in [square brackets], such as [MUSIC IN], and speaker labels at the start of a line, such as HOST:, are skipped because nobody reads them aloud. Lines that start with # are treated as segment headings. Untick the option if you want everything else counted."
+    },
+    {
+      question: "Does it work for Japanese and Korean scripts?",
+      answer: "Yes. Japanese and Korean scripts are counted in characters instead of words, with their own pace presets: about 300 characters per minute for Japanese and about 280 for Korean. Korean counts leave out spaces and punctuation. You can change the pace to match your own reading speed."
+    }
   ]
 };
-

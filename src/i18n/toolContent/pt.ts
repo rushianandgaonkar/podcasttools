@@ -780,4 +780,93 @@ Tudo se resume a três pilares: uma abertura consistente que promete valor diret
       "Faça um único follow-up depois de uma semana e, sem resposta, siga em frente com educação.",
     ],
   },
+  "lufs-meter": {
+    metaTitle: "Medidor LUFS Online Grátis para Podcast | Pod Studio",
+    metaDescription:
+      "Medidor LUFS online e grátis. Solte um áudio e confira loudness integrado, pico real e faixa de loudness em relação ao alvo de −16 LUFS. Sem upload.",
+    overview: [
+      "O Medidor LUFS mostra o volume real de um episódio. Ele calcula o loudness integrado em LUFS, o pico real em dBTP e a faixa de loudness pelo método ITU-R BS.1770, usado pelas plataformas de podcast e streaming.",
+      "Em seguida, compara o seu arquivo com o alvo da plataforma e indica quantos decibéis aumentar ou reduzir. O áudio é decodificado e medido no navegador, então o arquivo nunca sai do seu dispositivo.",
+    ],
+    steps: [
+      { title: "Escolha um alvo", text: "Selecione Apple Podcasts (−16 LUFS), Spotify (−14 LUFS) ou o padrão de radiodifusão (−23 LUFS)." },
+      { title: "Solte o arquivo", text: "Adicione o episódio exportado em MP3, WAV, M4A, FLAC ou OGG. Medir um episódio longo pode levar alguns segundos." },
+      { title: "Leia o resultado", text: "Compare o loudness integrado e o pico real com o alvo e percorra a linha do tempo para achar trechos muito mais altos ou mais baixos." },
+      { title: "Ajuste e exporte de novo", text: "Aplique no seu editor a mudança de ganho sugerida, use um limitador se o pico ficar alto demais e meça o novo arquivo." },
+    ],
+    tips: [
+      "Meça o arquivo final exportado, não o projeto. A codificação em MP3 pode aumentar um pouco o pico real.",
+      "Em um arquivo mono, mire em cerca de −19 LUFS medidos como um único canal. Ele soa tão alto quanto um arquivo estéreo em −16 LUFS.",
+      "Uma faixa de loudness acima de uns 10 LU costuma indicar que os trechos baixos serão difíceis de ouvir no carro ou no trem. Uma compressão suave ajuda.",
+    ],
+    sections: [
+      {
+        heading: "O que é −16 LUFS e por que isso importa para podcasts?",
+        paragraphs: [
+          "LUFS (unidades de loudness relativas à escala completa) mede o volume percebido do arquivo inteiro, e não o seu pico mais alto. O Apple Podcasts pede um loudness geral em torno de −16 dB LKFS, com tolerância de ±1 dB e pico real de no máximo −1 dBFS. LKFS e LUFS são a mesma unidade com dois nomes.",
+          "O Spotify ajusta a reprodução para −14 LUFS, por isso muitos podcasters continuam entregando em −16 LUFS e deixam cada aplicativo fazer o próprio ajuste. Ficar perto do alvo mantém o seu programa em um volume parecido com o dos episódios anteriores e seguintes, e o ouvinte não precisa mexer no volume.",
+        ],
+      },
+    ],
+  },
+  "script-timer": {
+    metaTitle: "Calculadora de Palavras em Minutos | Pod Studio",
+    metaDescription:
+      "Cronômetro de roteiro grátis para podcast. Cole um roteiro, converta palavras em minutos, compare com a duração-alvo e cronometre cada segmento. Sem cadastro.",
+    overview: [
+      "O Cronômetro de Roteiro converte as palavras do seu roteiro em tempo de fala. Cole uma abertura, um anúncio lido ou o roteiro completo de um episódio e veja quanto tempo leva para ler em voz alta no seu ritmo, além do número de palavras e de parágrafos.",
+      "Defina uma duração-alvo para saber se o roteiro passa ou fica abaixo do tempo, e por quantas palavras. Comece uma linha com # para dividir o roteiro em segmentos, e o cronômetro monta um espelho com o horário de início e a duração de cada um. Indicações entre [colchetes] e nomes de locutor como HOST: não entram na contagem.",
+    ],
+    steps: [
+      { title: "Escolha seu ritmo", text: "Selecione lento, natural ou rápido, ou digite suas próprias palavras por minuto. Muitos apresentadores de podcast falam cerca de 150 palavras por minuto." },
+      { title: "Cole seu roteiro", text: "Digite ou cole o roteiro. Marque os segmentos com títulos #, ou cole um espelho exportado do Criador de Pautas." },
+      { title: "Defina uma duração-alvo", text: "Escolha um alvo como 1, 15 ou 30 minutos e acrescente tempo para música e intervalos comerciais." },
+      { title: "Corte ou complemente", text: "Use o aviso de excesso ou falta para tirar ou incluir palavras e confira no espelho quais segmentos estão longos demais." },
+    ],
+    tips: [
+      "Cronometre-se lendo um minuto do seu roteiro e informe esse número como ritmo personalizado. É mais preciso do que qualquer média.",
+      "Anúncios lidos em podcasts costumam ser vendidos em 30 ou 60 segundos. Em ritmo natural, isso dá cerca de 75 ou 150 palavras.",
+      "Deixe uma folga. Improvisos, risadas e pausas costumam deixar a gravação mais longa do que o roteiro.",
+    ],
+    sections: [
+      {
+        heading: "Quantas palavras tem um roteiro de podcast de 1, 5 ou 30 minutos?",
+        intro: "Em um ritmo natural de podcast de 150 palavras por minuto, estes números são um bom ponto de partida. Ajuste-os ao seu próprio ritmo.",
+        list: [
+          {
+            title: "30 segundos",
+            description: "Cerca de 75 palavras, a duração de um anúncio curto.",
+          },
+          {
+            title: "1 minuto",
+            description: "Cerca de 150 palavras, o suficiente para uma abertura completa ou um anúncio de 60 segundos.",
+          },
+          {
+            title: "5 minutos",
+            description: "Cerca de 750 palavras.",
+          },
+          {
+            title: "10 minutos",
+            description: "Cerca de 1.500 palavras.",
+          },
+          {
+            title: "20 minutos",
+            description: "Cerca de 3.000 palavras.",
+          },
+          {
+            title: "30 minutos",
+            description: "Cerca de 4.500 palavras.",
+          },
+          {
+            title: "60 minutos",
+            description: "Cerca de 9.000 palavras.",
+          },
+        ],
+        link: {
+          text: "Planeje antes os segmentos com o Criador de Pautas",
+          href: "/tools/episode-outline-builder",
+        },
+      },
+    ],
+  },
 };

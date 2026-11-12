@@ -635,7 +635,7 @@ export const koNewGuides: Record<string, LocalizedGuideArticle> = {
         list: [
           {
             title: "오디오테크니카 ATH-M20x (~6만 원)",
-            value: "입문용 글로벌 표준. 가볍고 차음성이 뛰어나며 정직한 모니터링 사운드를 들려줍니다.",
+            description: "입문용 글로벌 표준. 가볍고 차음성이 뛰어나며 정직한 모니터링 사운드를 들려줍니다.",
           },
           {
             title: "소니 MDR-7506 (~13만 원)",

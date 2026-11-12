@@ -780,4 +780,93 @@ Si riduce essenzialmente a tre elementi: un'apertura ripetibile che promette val
       "Invia un solo promemoria cortese a distanza di una settimana; se non ricevi risposta, prosegui con garbo.",
     ],
   },
+  "lufs-meter": {
+    metaTitle: "Misuratore LUFS Online Gratis per Podcast | Pod Studio",
+    metaDescription:
+      "Misuratore LUFS online gratuito. Trascina un file audio e controlla loudness integrato, true peak e gamma di loudness rispetto a −16 LUFS. Nessun caricamento.",
+    overview: [
+      "Il Misuratore LUFS indica quanto è davvero forte un episodio. Calcola il loudness integrato in LUFS, il true peak in dBTP e la gamma di loudness con il metodo ITU-R BS.1770 usato dalle piattaforme di podcast e streaming.",
+      "Poi confronta il tuo file con l'obiettivo della piattaforma e ti dice di quanti decibel alzare o abbassare il livello. L'audio viene decodificato e misurato nel browser, quindi il file non lascia mai il tuo dispositivo.",
+    ],
+    steps: [
+      { title: "Scegli un obiettivo", text: "Seleziona Apple Podcasts (−16 LUFS), Spotify (−14 LUFS) o lo standard broadcast (−23 LUFS)." },
+      { title: "Trascina il file", text: "Aggiungi l'episodio esportato in MP3, WAV, M4A, FLAC o OGG. La misurazione di un episodio lungo può richiedere qualche secondo." },
+      { title: "Leggi il risultato", text: "Confronta loudness integrato e true peak con l'obiettivo e scorri la timeline per individuare i passaggi molto più forti o più deboli." },
+      { title: "Correggi ed esporta di nuovo", text: "Applica nel tuo editor la variazione di guadagno suggerita, usa un limiter se il picco sale troppo e misura il nuovo file." },
+    ],
+    tips: [
+      "Misura il file finale esportato, non il progetto. La codifica in MP3 può alzare leggermente il true peak.",
+      "Per un file mono punta a circa −19 LUFS misurati come singolo canale. Suona forte quanto un file stereo a −16 LUFS.",
+      "Una gamma di loudness oltre i 10 LU circa indica spesso che i passaggi più deboli saranno difficili da sentire in auto o in treno. Una compressione leggera aiuta.",
+    ],
+    sections: [
+      {
+        heading: "Che cos'è −16 LUFS e perché conta per i podcast?",
+        paragraphs: [
+          "LUFS (Loudness Units relative to Full Scale) misura il volume percepito dell'intero file invece del suo picco più alto. Apple Podcasts richiede un loudness complessivo di circa −16 dB LKFS, con una tolleranza di ±1 dB e un true peak non superiore a −1 dBFS. LKFS e LUFS sono la stessa unità con due nomi.",
+          "Spotify regola la riproduzione a −14 LUFS, perciò molti podcaster continuano a consegnare a −16 LUFS e lasciano che ogni app faccia la propria regolazione. Restare vicino all'obiettivo mantiene il tuo programma a un volume simile a quello degli episodi ascoltati prima e dopo, senza costringere chi ascolta a toccare il volume.",
+        ],
+      },
+    ],
+  },
+  "script-timer": {
+    metaTitle: "Calcolatore da Parole a Minuti per Script | Pod Studio",
+    metaDescription:
+      "Timer per script gratuito per podcast. Incolla uno script, converti le parole in minuti, confrontalo con la durata obiettivo e cronometra ogni segmento. Senza registrazione.",
+    overview: [
+      "Il Timer per Script converte le parole del tuo script in tempo di lettura. Incolla un'intro, uno spot letto o lo script completo di un episodio e vedrai quanto serve a leggerlo ad alta voce alla tua velocità, insieme al numero di parole e di paragrafi.",
+      "Imposta una durata obiettivo per sapere se lo script sfora o resta sotto, e di quante parole. Inizia una riga con # per dividere lo script in segmenti: il timer crea una scaletta con l'orario di inizio e la durata di ciascuno. Le indicazioni tra [parentesi quadre] e i nomi di chi parla come HOST: non vengono conteggiati.",
+    ],
+    steps: [
+      { title: "Scegli la velocità", text: "Seleziona lenta, naturale o veloce, oppure inserisci le tue parole al minuto. Molti conduttori di podcast parlano a circa 150 parole al minuto." },
+      { title: "Incolla lo script", text: "Scrivi o incolla lo script. Segna i segmenti con titoli #, oppure incolla una scaletta esportata da Scaletta Episodio." },
+      { title: "Imposta una durata obiettivo", text: "Scegli un obiettivo come 1, 15 o 30 minuti e aggiungi tempo per la musica e le pause pubblicitarie." },
+      { title: "Taglia o amplia", text: "Usa l'avviso di sforamento o di margine per togliere o aggiungere parole, poi controlla nella scaletta quali segmenti durano troppo." },
+    ],
+    tips: [
+      "Cronometrati mentre leggi un minuto del tuo script e inserisci quel numero come velocità personalizzata. È più preciso di qualsiasi media.",
+      "Gli spot letti nei podcast si vendono spesso da 30 o 60 secondi. A velocità naturale sono circa 75 o 150 parole.",
+      "Lascia un po' di margine. Battute improvvisate, risate e pause di solito allungano la registrazione rispetto allo script.",
+    ],
+    sections: [
+      {
+        heading: "Quante parole servono per uno script di podcast da 1, 5 o 30 minuti?",
+        intro: "A una velocità naturale di 150 parole al minuto, questi valori sono un buon punto di partenza. Adattali alla tua velocità.",
+        list: [
+          {
+            title: "30 secondi",
+            description: "Circa 75 parole, la durata di uno spot breve.",
+          },
+          {
+            title: "1 minuto",
+            description: "Circa 150 parole, abbastanza per un'intro completa o uno spot da 60 secondi.",
+          },
+          {
+            title: "5 minuti",
+            description: "Circa 750 parole.",
+          },
+          {
+            title: "10 minuti",
+            description: "Circa 1.500 parole.",
+          },
+          {
+            title: "20 minuti",
+            description: "Circa 3.000 parole.",
+          },
+          {
+            title: "30 minuti",
+            description: "Circa 4.500 parole.",
+          },
+          {
+            title: "60 minuti",
+            description: "Circa 9.000 parole.",
+          },
+        ],
+        link: {
+          text: "Pianifica prima i segmenti con Scaletta Episodio",
+          href: "/tools/episode-outline-builder",
+        },
+      },
+    ],
+  },
 };

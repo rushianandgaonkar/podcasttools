@@ -25,11 +25,11 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
     <div className={`flex items-center gap-2.5 select-none ${className}`}>
       {/* Studio Mic & Soundwave Emblem */}
       <div
-        className={`relative ${iconSizes[size]} rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-orange-500 p-[1.5px] shadow-sm flex-shrink-0 group`}
+        className={`relative ${iconSizes[size]} rounded-xl bg-gradient-to-br from-[#e9c2b0] via-[#cc785c] to-[#8f4630] p-[1.5px] shadow-sm flex-shrink-0 group`}
       >
-        <div className="w-full h-full bg-[#0B0B18] rounded-[10px] flex items-center justify-center overflow-hidden relative">
+        <div className="w-full h-full bg-[#141413] rounded-[10px] flex items-center justify-center overflow-hidden relative">
           {/* Subtle audio waveform background tint */}
-          <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/10 via-transparent to-orange-500/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#cc785c]/15 via-transparent to-[#cc785c]/5" />
 
           {/* Clean Studio Microphone Icon with dynamic sound pulses */}
           <svg
@@ -43,7 +43,7 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
             {/* Left Sound Wave */}
             <path
               d="M3.5 10V14M1.5 11.5V12.5"
-              stroke="#818CF8"
+              stroke="#E0AB93"
               strokeWidth="1.8"
               strokeLinecap="round"
             />
@@ -54,31 +54,31 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
               width="8"
               height="11"
               rx="4"
-              className="fill-indigo-950/80 stroke-orange-400"
+              className="fill-[#2c2a26] stroke-[#cc785c]"
               strokeWidth="1.6"
             />
             {/* Mic Grille Lines */}
-            <line x1="9.5" y1="5.5" x2="14.5" y2="5.5" stroke="#FB923C" strokeWidth="1.2" strokeLinecap="round" />
-            <line x1="9.5" y1="8" x2="14.5" y2="8" stroke="#FB923C" strokeWidth="1.2" strokeLinecap="round" />
+            <line x1="9.5" y1="5.5" x2="14.5" y2="5.5" stroke="#CC785C" strokeWidth="1.2" strokeLinecap="round" />
+            <line x1="9.5" y1="8" x2="14.5" y2="8" stroke="#CC785C" strokeWidth="1.2" strokeLinecap="round" />
             
             {/* Mic Stand Cradle */}
             <path
               d="M5.5 9.5C5.5 13.0899 8.41015 16 12 16C15.5899 16 18.5 13.0899 18.5 9.5"
-              stroke="#A5B4FC"
+              stroke="#FAF9F5"
               strokeWidth="1.8"
               strokeLinecap="round"
             />
             {/* Mic Stem and Base */}
             <path
               d="M12 16V20M8.5 20.5H15.5"
-              stroke="#A5B4FC"
+              stroke="#FAF9F5"
               strokeWidth="1.8"
               strokeLinecap="round"
             />
             {/* Right Sound Wave */}
             <path
               d="M20.5 10V14M22.5 11.5V12.5"
-              stroke="#FB923C"
+              stroke="#CC785C"
               strokeWidth="1.8"
               strokeLinecap="round"
             />

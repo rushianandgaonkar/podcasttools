@@ -137,6 +137,20 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       longDescription: "Stop sending generic pitch emails. Generate customized guest pitches, feed drop proposals, and interview swap requests that highlight mutual value and listener overlap.",
       categoryLabel: "Growth & Monetization",
     },
+    "lufs-meter": {
+      title: "LUFS Meter & Podcast Loudness Checker",
+      shortTitle: "LUFS Meter",
+      description: "Measure the integrated loudness, true peak and loudness range of an audio file, then compare it with the −16 LUFS podcast target.",
+      longDescription: "Drop in an episode to see its integrated LUFS, true peak and loudness range in seconds. Compare the result with the Apple Podcasts and Spotify targets and get the exact gain change you need. The file is measured on your device and never uploaded.",
+      categoryLabel: "Audio & Technical",
+    },
+    "script-timer": {
+      title: "Script Timer: Words to Minutes Calculator",
+      shortTitle: "Script Timer",
+      description: "Paste a podcast script to see how long it takes to read aloud, how many words fit your target length and how long each segment runs.",
+      longDescription: "Turn a word count into speaking time. Paste your script, pick a speaking pace and a target length, and see whether it runs over or under, how many words to cut or add, and a timed run of show for every segment. Nothing leaves your browser.",
+      categoryLabel: "Content & Scripting",
+    },
   },
 
   es: {
@@ -265,6 +279,20 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       description: "Redacta propuestas atractivas para invitar expertos y realizar intercambios de difusión con otros podcasts.",
       longDescription: "Deja de enviar correos genéricos. Genera propuestas personalizadas de entrevistas e intercambios de difusión que resalten el valor mutuo y la afinidad de audiencias.",
       categoryLabel: "Crecimiento y Monetización",
+    },
+    "lufs-meter": {
+      title: "Medidor LUFS y Comprobador de Sonoridad para Podcast",
+      shortTitle: "Medidor LUFS",
+      description: "Mide la sonoridad integrada, el pico real y el rango de sonoridad de un archivo de audio y compáralo con el objetivo de −16 LUFS para podcasts.",
+      longDescription: "Suelta un episodio y consulta en segundos su sonoridad integrada en LUFS, el pico real y el rango de sonoridad. Compara el resultado con los objetivos de Apple Podcasts y Spotify y obtén el ajuste de ganancia exacto. El archivo se mide en tu dispositivo y nunca se sube.",
+      categoryLabel: "Audio y Técnico",
+    },
+    "script-timer": {
+      title: "Temporizador de Guion: Calculadora de Palabras a Minutos",
+      shortTitle: "Temporizador de Guion",
+      description: "Pega el guion de tu podcast y descubre cuánto tarda en leerse en voz alta, cuántas palabras caben en tu duración objetivo y cuánto dura cada segmento.",
+      longDescription: "Convierte un número de palabras en tiempo de lectura. Pega tu guion, elige un ritmo y una duración objetivo, y comprueba si te pasas o te quedas corto, cuántas palabras recortar o añadir y una escaleta con el tiempo de cada segmento. Nada sale de tu navegador.",
+      categoryLabel: "Contenido y Guiones",
     },
   },
 
@@ -395,6 +423,20 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       longDescription: "定型文の依頼メールは卒業。相互のリスナー親和性と具体的な提供価値を的確にアピールする、プロフェッショナルなゲスト依頼文を作成できます。",
       categoryLabel: "成長 & 収益化",
     },
+    "lufs-meter": {
+      title: "LUFSメーター＆ポッドキャスト音量チェッカー",
+      shortTitle: "LUFSメーター",
+      description: "音声ファイルの統合ラウドネス、トゥルーピーク、ラウドネスレンジを測定し、ポッドキャストの目安である−16 LUFSと比較します。",
+      longDescription: "エピソードをドロップするだけで、統合ラウドネス（LUFS）、トゥルーピーク、ラウドネスレンジを数秒で確認できます。Apple PodcastsやSpotifyのターゲットと比較し、必要なゲイン調整量もわかります。ファイルは端末内で測定され、アップロードされません。",
+      categoryLabel: "オーディオ & 技術",
+    },
+    "script-timer": {
+      title: "原稿タイマー：文字数から読み上げ時間を計算",
+      shortTitle: "原稿タイマー",
+      description: "ポッドキャストの台本を貼り付けるだけで、読み上げにかかる時間、目標の長さに収まる文字数、セグメントごとの長さがわかります。",
+      longDescription: "文字数を読み上げ時間に換算します。台本を貼り付けて話す速さと目標の長さを選ぶと、時間オーバーか不足か、何文字削る・足すべきか、セグメントごとの時間入り進行表が表示されます。データはブラウザの外に出ません。",
+      categoryLabel: "コンテンツ & 構成",
+    },
   },
 
   fr: {
@@ -523,6 +565,20 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       description: "Rédigez des demandes d'interview personnalisées et des propositions de promotion croisée entre créateurs.",
       longDescription: "En finissez avec les e-mails génériques. Générez des propositions d'interview soignées et des échanges de diffusion mettant en valeur la complémentarité de vos audiences.",
       categoryLabel: "Croissance & Monétisation",
+    },
+    "lufs-meter": {
+      title: "Mesureur LUFS et Vérificateur de Niveau Sonore pour Podcast",
+      shortTitle: "Mesureur LUFS",
+      description: "Mesurez le niveau sonore intégré, la crête réelle et la plage de sonie d'un fichier audio, puis comparez-les à la cible podcast de −16 LUFS.",
+      longDescription: "Déposez un épisode pour afficher en quelques secondes son niveau intégré en LUFS, sa crête réelle et sa plage de sonie. Comparez le résultat aux cibles d'Apple Podcasts et de Spotify et obtenez le réglage de gain exact. Le fichier est mesuré sur votre appareil et n'est jamais envoyé.",
+      categoryLabel: "Audio & Technique",
+    },
+    "script-timer": {
+      title: "Minuteur de Script : Convertisseur Mots en Minutes",
+      shortTitle: "Minuteur de Script",
+      description: "Collez le script de votre podcast pour savoir combien de temps il faut pour le lire à voix haute, combien de mots tiennent dans votre durée cible et combien dure chaque segment.",
+      longDescription: "Transformez un nombre de mots en temps de parole. Collez votre script, choisissez un débit et une durée cible, et voyez s'il dépasse ou s'il manque du temps, combien de mots couper ou ajouter, ainsi qu'un conducteur minuté pour chaque segment. Rien ne quitte votre navigateur.",
+      categoryLabel: "Contenu & Écriture",
     },
   },
 
@@ -653,6 +709,20 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       longDescription: "Schluss mit unpersönlichen Standard-Mails. Generiere individuelle Anfragen für Wunsch-Gäste und gemeinsame Aktionen, die den beiderseitigen Nutzen herausstellen.",
       categoryLabel: "Wachstum & Monetarisierung",
     },
+    "lufs-meter": {
+      title: "LUFS-Meter & Lautheits-Check für Podcasts",
+      shortTitle: "LUFS-Meter",
+      description: "Miss integrierte Lautheit, True Peak und Lautheitsbereich einer Audiodatei und vergleiche sie mit dem Podcast-Zielwert von −16 LUFS.",
+      longDescription: "Lege eine Folge ab und sieh in Sekunden ihre integrierte Lautheit in LUFS, den True Peak und den Lautheitsbereich. Vergleiche das Ergebnis mit den Zielwerten von Apple Podcasts und Spotify und erhalte die exakte Pegeländerung. Die Datei wird auf deinem Gerät gemessen und nie hochgeladen.",
+      categoryLabel: "Audio & Technik",
+    },
+    "script-timer": {
+      title: "Skript-Timer: Wörter-in-Minuten-Rechner",
+      shortTitle: "Skript-Timer",
+      description: "Füge dein Podcast-Skript ein und sieh, wie lange das Vorlesen dauert, wie viele Wörter in deine Ziellänge passen und wie lang jedes Segment ist.",
+      longDescription: "Mach aus der Wortzahl eine Sprechdauer. Füge dein Skript ein, wähle Sprechtempo und Ziellänge und sieh, ob es zu lang oder zu kurz ist, wie viele Wörter du kürzen oder ergänzen solltest – plus einen getimten Ablaufplan für jedes Segment. Nichts verlässt deinen Browser.",
+      categoryLabel: "Inhalt & Skripte",
+    },
   },
 
   pt: {
@@ -781,6 +851,20 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       description: "Elabore convites personalizados para entrevistas e propostas de divulgação mútua entre criadores.",
       longDescription: "Esqueça e-mails genéricos. Crie propostas de entrevista e trocas de divulgação personalizadas que destacam a afinidade de público e valor mútuo.",
       categoryLabel: "Crescimento e Monetização",
+    },
+    "lufs-meter": {
+      title: "Medidor LUFS e Verificador de Volume para Podcast",
+      shortTitle: "Medidor LUFS",
+      description: "Meça o loudness integrado, o pico real e a faixa de loudness de um arquivo de áudio e compare com o alvo de −16 LUFS para podcasts.",
+      longDescription: "Solte um episódio e veja em segundos o loudness integrado em LUFS, o pico real e a faixa de loudness. Compare o resultado com os alvos do Apple Podcasts e do Spotify e receba o ajuste de ganho exato. O arquivo é medido no seu dispositivo e nunca é enviado.",
+      categoryLabel: "Áudio e Técnico",
+    },
+    "script-timer": {
+      title: "Cronômetro de Roteiro: Calculadora de Palavras em Minutos",
+      shortTitle: "Cronômetro de Roteiro",
+      description: "Cole o roteiro do seu podcast para ver quanto tempo leva para ler em voz alta, quantas palavras cabem na duração-alvo e quanto dura cada segmento.",
+      longDescription: "Transforme a contagem de palavras em tempo de fala. Cole seu roteiro, escolha um ritmo e uma duração-alvo e veja se ele passa ou fica abaixo do tempo, quantas palavras cortar ou acrescentar e um espelho cronometrado de cada segmento. Nada sai do seu navegador.",
+      categoryLabel: "Conteúdo e Roteiro",
     },
   },
 
@@ -911,6 +995,20 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       longDescription: "형식적인 섭외 메일은 그만. 두 방송의 청취자 교집합과 서로에게 줄 수 있는 가치를 부각하는 세련된 섭외 제안서를 생성해 드립니다.",
       categoryLabel: "성장 및 수익화",
     },
+    "lufs-meter": {
+      title: "LUFS 미터 & 팟캐스트 음량 검사기",
+      shortTitle: "LUFS 미터",
+      description: "오디오 파일의 통합 라우드니스, 트루 피크, 라우드니스 레인지를 측정하고 팟캐스트 기준인 −16 LUFS와 비교합니다.",
+      longDescription: "에피소드를 놓기만 하면 통합 라우드니스(LUFS), 트루 피크, 라우드니스 레인지를 몇 초 만에 확인할 수 있습니다. Apple Podcasts와 Spotify 목표값과 비교하고 필요한 게인 조정량까지 알려 드립니다. 파일은 기기 안에서 측정되며 업로드되지 않습니다.",
+      categoryLabel: "오디오 및 기술",
+    },
+    "script-timer": {
+      title: "대본 타이머: 글자 수로 말하기 시간 계산",
+      shortTitle: "대본 타이머",
+      description: "팟캐스트 대본을 붙여넣으면 소리 내어 읽는 데 걸리는 시간, 목표 길이에 맞는 글자 수, 구간별 길이를 확인할 수 있습니다.",
+      longDescription: "글자 수를 말하기 시간으로 바꿔 줍니다. 대본을 붙여넣고 말하기 속도와 목표 길이를 고르면 시간이 넘치는지 모자라는지, 몇 글자를 줄이거나 늘려야 하는지, 구간별 시간이 들어간 진행표까지 보여 줍니다. 데이터는 브라우저 밖으로 나가지 않습니다.",
+      categoryLabel: "콘텐츠 및 대본",
+    },
   },
 
   it: {
@@ -1039,6 +1137,20 @@ export const toolsData: Record<SupportedLocale, Record<string, LocalizedToolInfo
       description: "Redigi inviti efficaci per interviste e proposte di promozione incrociata con altri conduttori di podcast.",
       longDescription: "Dimentica le email generiche. Crea proposte di intervista personalizzate e scambi di promozione che evidenzino il valore reciproco e l'affinità tra i vostri pubblici.",
       categoryLabel: "Crescita e Guadagni",
+    },
+    "lufs-meter": {
+      title: "Misuratore LUFS e Controllo del Volume per Podcast",
+      shortTitle: "Misuratore LUFS",
+      description: "Misura il loudness integrato, il true peak e la gamma di loudness di un file audio e confrontali con l'obiettivo di −16 LUFS per i podcast.",
+      longDescription: "Trascina un episodio per vedere in pochi secondi il loudness integrato in LUFS, il true peak e la gamma di loudness. Confronta il risultato con gli obiettivi di Apple Podcasts e Spotify e ottieni la correzione di guadagno esatta. Il file viene misurato sul tuo dispositivo e non viene mai caricato.",
+      categoryLabel: "Audio e Tecnico",
+    },
+    "script-timer": {
+      title: "Timer per Script: Calcolatore da Parole a Minuti",
+      shortTitle: "Timer per Script",
+      description: "Incolla lo script del tuo podcast per vedere quanto tempo serve a leggerlo ad alta voce, quante parole entrano nella durata obiettivo e quanto dura ogni segmento.",
+      longDescription: "Trasforma il numero di parole in tempo di lettura. Incolla lo script, scegli una velocità e una durata obiettivo e scopri se sfori o resti sotto, quante parole tagliare o aggiungere e una scaletta con i tempi di ogni segmento. Nulla lascia il tuo browser.",
+      categoryLabel: "Contenuti e Testi",
     },
   },
 };

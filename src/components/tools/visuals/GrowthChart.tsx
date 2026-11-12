@@ -187,7 +187,7 @@ export function GrowthChart({ points, thresholds = [], unit = "dl / ep", title, 
 
         {hp && hover !== null && (
           <div
-            className="pointer-events-none absolute -translate-x-1/2 -translate-y-full px-2.5 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/95 dark:bg-[#0a0a0a]/95 shadow-md text-[11px] whitespace-nowrap"
+            className="pointer-events-none absolute -translate-x-1/2 -translate-y-full px-2.5 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white/95 dark:bg-[#1f1e1b]/95 shadow-md text-[11px] whitespace-nowrap"
             style={{ left: `${(xs[hover] / W) * 100}%`, top: `${(ys[hover] / H) * 100}%`, marginTop: -10 }}
           >
             <span className="block font-mono text-neutral-500">{hp.label}</span>

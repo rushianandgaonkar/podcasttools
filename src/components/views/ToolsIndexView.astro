@@ -19,7 +19,7 @@ const { lang } = Astro.props;
 const copy = usePageCopy(lang);
 const pageUrl = `${siteConfig.url}${getLocalizedPath("/tools", lang)}`;
 
-// ItemList lets search engines understand this page as a directory of the 18 tools
+// ItemList lets search engines understand this page as a directory of the 20 tools
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -54,11 +54,11 @@ const breadcrumbSchema = {
   <div class="w-full py-10 sm:py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-2xl mb-10">
-        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 font-mono text-[11px] mb-3 uppercase">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] text-neutral-600 dark:text-neutral-400 font-mono text-[11px] mb-3 uppercase">
           <Sparkles className="w-3 h-3 text-[#a9583e]" />
           {copy.toolsIndex.eyebrow}
         </div>
-        <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white mb-3">
+        <h1 class="font-display text-3xl sm:text-[2.6rem] font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white mb-3">
           {copy.toolsIndex.heading}
         </h1>
         <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">

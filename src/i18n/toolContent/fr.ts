@@ -780,4 +780,93 @@ Cela repose sur trois piliers : une amorce d'épisode prévisible qui annonce un
       "Effectuez une relance courtoise après sept jours si vous êtes resté sans réponse.",
     ],
   },
+  "lufs-meter": {
+    metaTitle: "Mesureur LUFS en Ligne Gratuit pour Podcast | Pod Studio",
+    metaDescription:
+      "Mesureur LUFS gratuit en ligne. Déposez un fichier audio pour vérifier niveau intégré, crête réelle et plage de sonie face à la cible de −16 LUFS. Sans envoi.",
+    overview: [
+      "Le Mesureur LUFS indique le niveau sonore réel d'un épisode. Il calcule le niveau intégré en LUFS, la crête réelle en dBTP et la plage de sonie selon la méthode ITU-R BS.1770 utilisée par les plateformes de podcast et de streaming.",
+      "Il compare ensuite votre fichier à la cible de la plateforme et vous indique de combien de décibels monter ou baisser le niveau. L'audio est décodé et mesuré dans votre navigateur : le fichier ne quitte jamais votre appareil.",
+    ],
+    steps: [
+      { title: "Choisissez une cible", text: "Sélectionnez Apple Podcasts (−16 LUFS), Spotify (−14 LUFS) ou la norme de diffusion (−23 LUFS)." },
+      { title: "Déposez votre fichier", text: "Ajoutez l'épisode exporté en MP3, WAV, M4A, FLAC ou OGG. La mesure d'un long épisode peut prendre quelques secondes." },
+      { title: "Lisez le résultat", text: "Comparez le niveau intégré et la crête réelle à la cible, puis parcourez la chronologie pour repérer les passages nettement plus forts ou plus faibles." },
+      { title: "Ajustez et réexportez", text: "Appliquez dans votre éditeur le changement de gain proposé, utilisez un limiteur si la crête monte trop, puis mesurez le nouveau fichier." },
+    ],
+    tips: [
+      "Mesurez le fichier final exporté, pas le projet. L'encodage en MP3 peut légèrement augmenter la crête réelle.",
+      "Pour un fichier mono, visez environ −19 LUFS mesurés sur un seul canal. Il s'entend aussi fort qu'un fichier stéréo à −16 LUFS.",
+      "Une plage de sonie supérieure à environ 10 LU signifie souvent que les passages faibles seront difficiles à entendre en voiture ou dans le train. Une compression légère aide.",
+    ],
+    sections: [
+      {
+        heading: "Qu'est-ce que −16 LUFS et pourquoi est-ce important pour un podcast ?",
+        paragraphs: [
+          "Le LUFS (Loudness Units relative to Full Scale) mesure le niveau sonore perçu sur l'ensemble du fichier plutôt que sa crête la plus haute. Apple Podcasts demande un niveau global d'environ −16 dB LKFS, avec une tolérance de ±1 dB et une crête réelle ne dépassant pas −1 dBFS. LKFS et LUFS désignent la même unité.",
+          "Spotify ajuste la lecture à −14 LUFS : beaucoup de podcasteurs livrent donc toujours à −16 LUFS et laissent chaque application faire son propre réglage. Rester proche de la cible garde votre émission à un volume comparable à celui des épisodes écoutés avant et après, sans obliger l'auditeur à toucher au volume.",
+        ],
+      },
+    ],
+  },
+  "script-timer": {
+    metaTitle: "Convertisseur Mots en Minutes pour Script | Pod Studio",
+    metaDescription:
+      "Minuteur de script gratuit pour podcast. Collez un script pour convertir les mots en minutes, le comparer à votre durée cible et minuter chaque segment. Sans inscription.",
+    overview: [
+      "Le Minuteur de Script convertit les mots de votre script en temps de parole. Collez une intro, une lecture publicitaire ou le script complet d'un épisode : il indique combien de temps il faut pour le lire à voix haute à votre débit, avec le nombre de mots et de paragraphes.",
+      "Fixez une durée cible pour savoir si le script dépasse ou reste en dessous, et de combien de mots. Commencez une ligne par # pour découper le script en segments : le minuteur crée un conducteur avec l'heure de début et la durée de chacun. Les indications entre [crochets] et les noms d'intervenants comme HOST : ne sont pas comptés.",
+    ],
+    steps: [
+      { title: "Choisissez votre débit", text: "Sélectionnez lent, naturel ou rapide, ou saisissez votre propre nombre de mots par minute. Beaucoup d'animateurs de podcast parlent à environ 150 mots par minute." },
+      { title: "Collez votre script", text: "Tapez ou collez le script. Marquez les segments avec des titres #, ou collez un conducteur exporté depuis le Créateur de Conducteur." },
+      { title: "Fixez une durée cible", text: "Choisissez une cible comme 1, 15 ou 30 minutes, et ajoutez du temps pour la musique et les pauses publicitaires." },
+      { title: "Coupez ou complétez", text: "Servez-vous du message de dépassement ou de manque pour retirer ou ajouter des mots, puis repérez dans le conducteur les segments trop longs." },
+    ],
+    tips: [
+      "Chronométrez-vous en lisant une minute de votre script et saisissez ce nombre comme débit personnalisé. C'est plus précis que n'importe quelle moyenne.",
+      "Les lectures publicitaires de podcast se vendent souvent en 30 ou 60 secondes. À un débit naturel, cela représente environ 75 ou 150 mots.",
+      "Gardez de la marge. Les improvisations, les rires et les pauses rallongent généralement l'enregistrement par rapport au script.",
+    ],
+    sections: [
+      {
+        heading: "Combien de mots pour un script de podcast de 1, 5 ou 30 minutes ?",
+        intro: "À un débit naturel de 150 mots par minute, ces repères constituent un bon point de départ. Adaptez-les à votre propre débit.",
+        list: [
+          {
+            title: "30 secondes",
+            description: "Environ 75 mots, la durée d'une courte lecture publicitaire.",
+          },
+          {
+            title: "1 minute",
+            description: "Environ 150 mots, assez pour une intro complète ou une lecture publicitaire de 60 secondes.",
+          },
+          {
+            title: "5 minutes",
+            description: "Environ 750 mots.",
+          },
+          {
+            title: "10 minutes",
+            description: "Environ 1 500 mots.",
+          },
+          {
+            title: "20 minutes",
+            description: "Environ 3 000 mots.",
+          },
+          {
+            title: "30 minutes",
+            description: "Environ 4 500 mots.",
+          },
+          {
+            title: "60 minutes",
+            description: "Environ 9 000 mots.",
+          },
+        ],
+        link: {
+          text: "Planifiez d'abord vos segments avec le Créateur de Conducteur",
+          href: "/tools/episode-outline-builder",
+        },
+      },
+    ],
+  },
 };

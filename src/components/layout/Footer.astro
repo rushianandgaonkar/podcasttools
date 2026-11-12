@@ -27,7 +27,7 @@ const footerColumns = [
 ].map((col) => ({ ...col, tools: toolRegistry.filter((tool) => tool.category === col.id) }));
 ---
 
-<footer class="w-full border-t border-neutral-200 dark:border-[#222222] bg-[#faf9f5] dark:bg-[#000000] text-neutral-600 dark:text-neutral-400 text-xs transition-colors duration-150">
+<footer class="w-full border-t border-neutral-200 dark:border-[#222222] bg-[#faf9f5] dark:bg-[#181715] text-neutral-600 dark:text-neutral-400 text-xs transition-colors duration-150">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
     <!-- Top Grid: Brand & Categorized Links -->
     <div class="grid grid-cols-2 md:grid-cols-6 gap-8 pb-10 border-b border-neutral-200 dark:border-[#222222]">
@@ -41,13 +41,13 @@ const footerColumns = [
         </p>
 
         <!-- Privacy Status Badge -->
-        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 text-[11px] font-mono">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] text-neutral-600 dark:text-neutral-400 text-[11px] font-mono">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
           <span>{t.footer.privacyBadge}</span>
         </div>
       </div>
 
-      <!-- One column per tool category: links to all 18 tools -->
+      <!-- One column per tool category: links to all 20 tools -->
       {footerColumns.map((col) => (
         <div class="space-y-2.5">
           <h3 class="font-mono text-[11px] uppercase tracking-wider text-neutral-900 dark:text-neutral-200 font-semibold">

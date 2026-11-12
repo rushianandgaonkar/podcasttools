@@ -1,0 +1,308 @@
+import type { SupportedLocale } from "@/i18n/languages";
+
+/** Interface copy for the LUFS Meter (LoudnessMeter.tsx), in all 8 site languages. */
+export interface LoudnessText {
+  target: string;
+  presets: { apple: string; spotify: string; ebu: string };
+  dropTitle: string;
+  dropSub: string;
+  choose: string;
+  analyzing: string;
+  decodeError: string;
+  silent: string;
+  another: string;
+  length: string;
+  channels: string;
+  sampleRate: string;
+  mono: string;
+  stereo: string;
+  integrated: string;
+  truePeak: string;
+  lra: string;
+  shortMax: string;
+  /** {platform} */
+  verdictOk: string;
+  /** {n} {platform} */
+  verdictQuiet: string;
+  /** {n} {platform} */
+  verdictLoud: string;
+  /** {n} {target} */
+  fixRaise: string;
+  /** {n} {target} */
+  fixLower: string;
+  /** {limit} */
+  peakOk: string;
+  /** {limit} */
+  peakOver: string;
+  /** {n} {limit} */
+  peakAfterGain: string;
+  monoToggle: string;
+  /** {raw} {dual} */
+  monoNote: string;
+  timelineTitle: string;
+  estimateNote: string;
+}
+
+/** Replaces {name} placeholders in a translated string. */
+export function fill(template: string, values: Record<string, string | number>): string {
+  return template.replace(/\{(\w+)\}/g, (_, key) => (key in values ? String(values[key]) : `{${key}}`));
+}
+
+export const LOUDNESS_TEXT: Record<SupportedLocale, LoudnessText> = {
+  en: {
+    target: "Target",
+    presets: { apple: "Apple Podcasts", spotify: "Spotify", ebu: "Broadcast (EBU R128)" },
+    dropTitle: "Drop an audio file here",
+    dropSub: "MP3, WAV, M4A, FLAC or OGG. The file is measured on your device and is never uploaded.",
+    choose: "Choose file",
+    analyzing: "Measuring loudness…",
+    decodeError: "This file could not be read. Try an MP3, WAV or M4A export. Very long files can run out of memory in the browser.",
+    silent: "The file is silent or too quiet to measure.",
+    another: "Measure another file",
+    length: "Length",
+    channels: "Channels",
+    sampleRate: "Sample rate",
+    mono: "Mono",
+    stereo: "Stereo",
+    integrated: "Integrated loudness",
+    truePeak: "True peak",
+    lra: "Loudness range",
+    shortMax: "Loudest 3 seconds",
+    verdictOk: "On target for {platform}",
+    verdictQuiet: "{n} LU quieter than the {platform} target",
+    verdictLoud: "{n} LU louder than the {platform} target",
+    fixRaise: "Raise the gain by {n} dB to reach {target} LUFS.",
+    fixLower: "Lower the gain by {n} dB to reach {target} LUFS.",
+    peakOk: "True peak is under the {limit} dBTP limit.",
+    peakOver: "True peak is over the {limit} dBTP limit. Lower the level or use a limiter.",
+    peakAfterGain: "After that gain change the true peak would be about {n} dBTP, over the {limit} dBTP limit. Use a limiter when you raise the level.",
+    monoToggle: "Count mono the way it plays on two speakers (+3 LU)",
+    monoNote: "This is a mono file. Measured as a single channel it reads {raw} LUFS. Players send mono to both speakers, so it sounds like {dual} LUFS.",
+    timelineTitle: "Loudness over time (3-second average)",
+    estimateNote: "Loudness follows ITU-R BS.1770. True peak is an estimate using 4× oversampling around the loudest samples.",
+  },
+  es: {
+    target: "Objetivo",
+    presets: { apple: "Apple Podcasts", spotify: "Spotify", ebu: "Radiodifusión (EBU R128)" },
+    dropTitle: "Suelta aquí un archivo de audio",
+    dropSub: "MP3, WAV, M4A, FLAC u OGG. El archivo se mide en tu dispositivo y nunca se sube.",
+    choose: "Elegir archivo",
+    analyzing: "Midiendo la sonoridad…",
+    decodeError: "No se pudo leer este archivo. Prueba con una exportación en MP3, WAV o M4A. Los archivos muy largos pueden agotar la memoria del navegador.",
+    silent: "El archivo está en silencio o es demasiado bajo para medirlo.",
+    another: "Medir otro archivo",
+    length: "Duración",
+    channels: "Canales",
+    sampleRate: "Frecuencia de muestreo",
+    mono: "Mono",
+    stereo: "Estéreo",
+    integrated: "Sonoridad integrada",
+    truePeak: "Pico real",
+    lra: "Rango de sonoridad",
+    shortMax: "Los 3 segundos más fuertes",
+    verdictOk: "Dentro del objetivo de {platform}",
+    verdictQuiet: "{n} LU por debajo del objetivo de {platform}",
+    verdictLoud: "{n} LU por encima del objetivo de {platform}",
+    fixRaise: "Sube la ganancia {n} dB para llegar a {target} LUFS.",
+    fixLower: "Baja la ganancia {n} dB para llegar a {target} LUFS.",
+    peakOk: "El pico real está por debajo del límite de {limit} dBTP.",
+    peakOver: "El pico real supera el límite de {limit} dBTP. Baja el nivel o usa un limitador.",
+    peakAfterGain: "Tras ese cambio de ganancia, el pico real quedaría en unos {n} dBTP, por encima del límite de {limit} dBTP. Usa un limitador al subir el nivel.",
+    monoToggle: "Contar el mono tal como suena en dos altavoces (+3 LU)",
+    monoNote: "Este archivo es mono. Medido como un solo canal marca {raw} LUFS. Los reproductores envían el mono a ambos altavoces, así que suena como {dual} LUFS.",
+    timelineTitle: "Sonoridad a lo largo del tiempo (media de 3 segundos)",
+    estimateNote: "La sonoridad sigue la norma ITU-R BS.1770. El pico real es una estimación con sobremuestreo 4× alrededor de las muestras más fuertes.",
+  },
+  ja: {
+    target: "ターゲット",
+    presets: { apple: "Apple Podcasts", spotify: "Spotify", ebu: "放送（EBU R128）" },
+    dropTitle: "音声ファイルをここにドロップ",
+    dropSub: "MP3・WAV・M4A・FLAC・OGGに対応。ファイルは端末内で測定され、アップロードされません。",
+    choose: "ファイルを選択",
+    analyzing: "ラウドネスを測定中…",
+    decodeError: "このファイルを読み込めませんでした。MP3・WAV・M4Aで書き出してお試しください。非常に長いファイルはブラウザのメモリが不足することがあります。",
+    silent: "ファイルが無音、または小さすぎて測定できません。",
+    another: "別のファイルを測定",
+    length: "長さ",
+    channels: "チャンネル",
+    sampleRate: "サンプルレート",
+    mono: "モノラル",
+    stereo: "ステレオ",
+    integrated: "統合ラウドネス",
+    truePeak: "トゥルーピーク",
+    lra: "ラウドネスレンジ",
+    shortMax: "最も大きい3秒間",
+    verdictOk: "{platform}のターゲットに収まっています",
+    verdictQuiet: "{platform}のターゲットより{n} LU小さい",
+    verdictLoud: "{platform}のターゲットより{n} LU大きい",
+    fixRaise: "ゲインを{n} dB上げると{target} LUFSになります。",
+    fixLower: "ゲインを{n} dB下げると{target} LUFSになります。",
+    peakOk: "トゥルーピークは上限の{limit} dBTP以内です。",
+    peakOver: "トゥルーピークが上限の{limit} dBTPを超えています。レベルを下げるか、リミッターを使ってください。",
+    peakAfterGain: "このゲイン変更後のトゥルーピークは約{n} dBTPとなり、上限の{limit} dBTPを超えます。レベルを上げるときはリミッターを使ってください。",
+    monoToggle: "モノラルを2つのスピーカーで鳴る状態として計算する（+3 LU）",
+    monoNote: "このファイルはモノラルです。1チャンネルとして測定すると{raw} LUFSです。再生時は左右両方のスピーカーから鳴るため、{dual} LUFS相当に聞こえます。",
+    timelineTitle: "時間ごとのラウドネス（3秒平均）",
+    estimateNote: "ラウドネスはITU-R BS.1770に準拠。トゥルーピークは、最も大きいサンプル周辺を4倍オーバーサンプリングした推定値です。",
+  },
+  fr: {
+    target: "Cible",
+    presets: { apple: "Apple Podcasts", spotify: "Spotify", ebu: "Diffusion (EBU R128)" },
+    dropTitle: "Déposez un fichier audio ici",
+    dropSub: "MP3, WAV, M4A, FLAC ou OGG. Le fichier est mesuré sur votre appareil et n'est jamais envoyé.",
+    choose: "Choisir un fichier",
+    analyzing: "Mesure du niveau sonore…",
+    decodeError: "Impossible de lire ce fichier. Essayez un export MP3, WAV ou M4A. Les fichiers très longs peuvent saturer la mémoire du navigateur.",
+    silent: "Le fichier est silencieux ou trop faible pour être mesuré.",
+    another: "Mesurer un autre fichier",
+    length: "Durée",
+    channels: "Canaux",
+    sampleRate: "Fréquence d'échantillonnage",
+    mono: "Mono",
+    stereo: "Stéréo",
+    integrated: "Niveau sonore intégré",
+    truePeak: "Crête réelle",
+    lra: "Plage de sonie",
+    shortMax: "Les 3 secondes les plus fortes",
+    verdictOk: "Dans la cible de {platform}",
+    verdictQuiet: "{n} LU en dessous de la cible {platform}",
+    verdictLoud: "{n} LU au-dessus de la cible {platform}",
+    fixRaise: "Augmentez le gain de {n} dB pour atteindre {target} LUFS.",
+    fixLower: "Réduisez le gain de {n} dB pour atteindre {target} LUFS.",
+    peakOk: "La crête réelle est sous la limite de {limit} dBTP.",
+    peakOver: "La crête réelle dépasse la limite de {limit} dBTP. Baissez le niveau ou utilisez un limiteur.",
+    peakAfterGain: "Après ce changement de gain, la crête réelle serait d'environ {n} dBTP, au-dessus de la limite de {limit} dBTP. Utilisez un limiteur en montant le niveau.",
+    monoToggle: "Compter le mono tel qu'il est diffusé sur deux enceintes (+3 LU)",
+    monoNote: "Ce fichier est en mono. Mesuré sur un seul canal, il affiche {raw} LUFS. Les lecteurs envoient le mono sur les deux enceintes : il s'entend donc comme {dual} LUFS.",
+    timelineTitle: "Niveau sonore dans le temps (moyenne sur 3 secondes)",
+    estimateNote: "La mesure suit la norme ITU-R BS.1770. La crête réelle est une estimation par suréchantillonnage 4× autour des échantillons les plus forts.",
+  },
+  de: {
+    target: "Zielwert",
+    presets: { apple: "Apple Podcasts", spotify: "Spotify", ebu: "Rundfunk (EBU R128)" },
+    dropTitle: "Audiodatei hier ablegen",
+    dropSub: "MP3, WAV, M4A, FLAC oder OGG. Die Datei wird auf deinem Gerät gemessen und nie hochgeladen.",
+    choose: "Datei auswählen",
+    analyzing: "Lautheit wird gemessen…",
+    decodeError: "Diese Datei konnte nicht gelesen werden. Versuche einen Export als MP3, WAV oder M4A. Bei sehr langen Dateien kann dem Browser der Speicher ausgehen.",
+    silent: "Die Datei ist stumm oder zu leise für eine Messung.",
+    another: "Weitere Datei messen",
+    length: "Länge",
+    channels: "Kanäle",
+    sampleRate: "Abtastrate",
+    mono: "Mono",
+    stereo: "Stereo",
+    integrated: "Integrierte Lautheit",
+    truePeak: "True Peak",
+    lra: "Lautheitsbereich",
+    shortMax: "Lauteste 3 Sekunden",
+    verdictOk: "Im Zielbereich für {platform}",
+    verdictQuiet: "{n} LU leiser als der Zielwert von {platform}",
+    verdictLoud: "{n} LU lauter als der Zielwert von {platform}",
+    fixRaise: "Erhöhe den Pegel um {n} dB, um {target} LUFS zu erreichen.",
+    fixLower: "Senke den Pegel um {n} dB, um {target} LUFS zu erreichen.",
+    peakOk: "Der True Peak liegt unter dem Grenzwert von {limit} dBTP.",
+    peakOver: "Der True Peak liegt über dem Grenzwert von {limit} dBTP. Senke den Pegel oder nutze einen Limiter.",
+    peakAfterGain: "Nach dieser Pegeländerung läge der True Peak bei etwa {n} dBTP und damit über dem Grenzwert von {limit} dBTP. Nutze beim Anheben einen Limiter.",
+    monoToggle: "Mono so werten, wie es auf zwei Lautsprechern klingt (+3 LU)",
+    monoNote: "Dies ist eine Mono-Datei. Als einzelner Kanal gemessen ergibt sie {raw} LUFS. Player geben Mono auf beiden Lautsprechern wieder, deshalb klingt sie wie {dual} LUFS.",
+    timelineTitle: "Lautheit im Zeitverlauf (3-Sekunden-Mittel)",
+    estimateNote: "Die Lautheit wird nach ITU-R BS.1770 gemessen. Der True Peak ist eine Schätzung mit 4-fachem Oversampling rund um die lautesten Samples.",
+  },
+  pt: {
+    target: "Alvo",
+    presets: { apple: "Apple Podcasts", spotify: "Spotify", ebu: "Radiodifusão (EBU R128)" },
+    dropTitle: "Solte um arquivo de áudio aqui",
+    dropSub: "MP3, WAV, M4A, FLAC ou OGG. O arquivo é medido no seu dispositivo e nunca é enviado.",
+    choose: "Escolher arquivo",
+    analyzing: "Medindo o volume…",
+    decodeError: "Não foi possível ler este arquivo. Tente exportar em MP3, WAV ou M4A. Arquivos muito longos podem esgotar a memória do navegador.",
+    silent: "O arquivo está em silêncio ou baixo demais para medir.",
+    another: "Medir outro arquivo",
+    length: "Duração",
+    channels: "Canais",
+    sampleRate: "Taxa de amostragem",
+    mono: "Mono",
+    stereo: "Estéreo",
+    integrated: "Loudness integrado",
+    truePeak: "Pico real",
+    lra: "Faixa de loudness",
+    shortMax: "Os 3 segundos mais altos",
+    verdictOk: "Dentro do alvo do {platform}",
+    verdictQuiet: "{n} LU abaixo do alvo do {platform}",
+    verdictLoud: "{n} LU acima do alvo do {platform}",
+    fixRaise: "Aumente o ganho em {n} dB para chegar a {target} LUFS.",
+    fixLower: "Reduza o ganho em {n} dB para chegar a {target} LUFS.",
+    peakOk: "O pico real está abaixo do limite de {limit} dBTP.",
+    peakOver: "O pico real passa do limite de {limit} dBTP. Reduza o nível ou use um limitador.",
+    peakAfterGain: "Depois dessa mudança de ganho, o pico real ficaria em cerca de {n} dBTP, acima do limite de {limit} dBTP. Use um limitador ao aumentar o nível.",
+    monoToggle: "Contar o mono como ele toca em dois alto-falantes (+3 LU)",
+    monoNote: "Este arquivo é mono. Medido como um único canal, ele marca {raw} LUFS. Os players enviam o mono para os dois alto-falantes, então ele soa como {dual} LUFS.",
+    timelineTitle: "Loudness ao longo do tempo (média de 3 segundos)",
+    estimateNote: "O loudness segue a norma ITU-R BS.1770. O pico real é uma estimativa com sobreamostragem de 4× em torno das amostras mais altas.",
+  },
+  ko: {
+    target: "목표",
+    presets: { apple: "Apple Podcasts", spotify: "Spotify", ebu: "방송(EBU R128)" },
+    dropTitle: "오디오 파일을 여기에 놓으세요",
+    dropSub: "MP3, WAV, M4A, FLAC, OGG 지원. 파일은 기기 안에서 측정되며 업로드되지 않습니다.",
+    choose: "파일 선택",
+    analyzing: "라우드니스 측정 중…",
+    decodeError: "이 파일을 읽을 수 없습니다. MP3, WAV 또는 M4A로 내보내 다시 시도해 보세요. 아주 긴 파일은 브라우저 메모리가 부족할 수 있습니다.",
+    silent: "파일이 무음이거나 너무 작아 측정할 수 없습니다.",
+    another: "다른 파일 측정",
+    length: "길이",
+    channels: "채널",
+    sampleRate: "샘플 레이트",
+    mono: "모노",
+    stereo: "스테레오",
+    integrated: "통합 라우드니스",
+    truePeak: "트루 피크",
+    lra: "라우드니스 레인지",
+    shortMax: "가장 큰 3초 구간",
+    verdictOk: "{platform} 목표 범위 안에 있습니다",
+    verdictQuiet: "{platform} 목표보다 {n} LU 작습니다",
+    verdictLoud: "{platform} 목표보다 {n} LU 큽니다",
+    fixRaise: "게인을 {n} dB 올리면 {target} LUFS가 됩니다.",
+    fixLower: "게인을 {n} dB 내리면 {target} LUFS가 됩니다.",
+    peakOk: "트루 피크가 한도 {limit} dBTP 이내입니다.",
+    peakOver: "트루 피크가 한도 {limit} dBTP를 넘었습니다. 레벨을 낮추거나 리미터를 사용하세요.",
+    peakAfterGain: "이 게인 변경 후 트루 피크는 약 {n} dBTP가 되어 한도 {limit} dBTP를 넘습니다. 레벨을 올릴 때는 리미터를 사용하세요.",
+    monoToggle: "모노를 두 스피커로 재생되는 기준으로 계산(+3 LU)",
+    monoNote: "모노 파일입니다. 단일 채널로 측정하면 {raw} LUFS입니다. 재생기는 모노를 양쪽 스피커로 내보내므로 {dual} LUFS처럼 들립니다.",
+    timelineTitle: "시간에 따른 라우드니스(3초 평균)",
+    estimateNote: "라우드니스는 ITU-R BS.1770을 따릅니다. 트루 피크는 가장 큰 샘플 주변을 4배 오버샘플링한 추정값입니다.",
+  },
+  it: {
+    target: "Obiettivo",
+    presets: { apple: "Apple Podcasts", spotify: "Spotify", ebu: "Broadcast (EBU R128)" },
+    dropTitle: "Trascina qui un file audio",
+    dropSub: "MP3, WAV, M4A, FLAC o OGG. Il file viene misurato sul tuo dispositivo e non viene mai caricato.",
+    choose: "Scegli file",
+    analyzing: "Misurazione del volume in corso…",
+    decodeError: "Impossibile leggere questo file. Prova a esportarlo in MP3, WAV o M4A. I file molto lunghi possono esaurire la memoria del browser.",
+    silent: "Il file è silenzioso o troppo basso per essere misurato.",
+    another: "Misura un altro file",
+    length: "Durata",
+    channels: "Canali",
+    sampleRate: "Frequenza di campionamento",
+    mono: "Mono",
+    stereo: "Stereo",
+    integrated: "Loudness integrato",
+    truePeak: "True peak",
+    lra: "Gamma di loudness",
+    shortMax: "I 3 secondi più forti",
+    verdictOk: "In linea con l'obiettivo di {platform}",
+    verdictQuiet: "{n} LU sotto l'obiettivo di {platform}",
+    verdictLoud: "{n} LU sopra l'obiettivo di {platform}",
+    fixRaise: "Alza il guadagno di {n} dB per arrivare a {target} LUFS.",
+    fixLower: "Abbassa il guadagno di {n} dB per arrivare a {target} LUFS.",
+    peakOk: "Il true peak è sotto il limite di {limit} dBTP.",
+    peakOver: "Il true peak supera il limite di {limit} dBTP. Abbassa il livello o usa un limiter.",
+    peakAfterGain: "Dopo questa modifica del guadagno il true peak sarebbe di circa {n} dBTP, oltre il limite di {limit} dBTP. Usa un limiter quando alzi il livello.",
+    monoToggle: "Considera il mono come suona su due altoparlanti (+3 LU)",
+    monoNote: "Questo file è mono. Misurato come singolo canale segna {raw} LUFS. I player inviano il mono a entrambi gli altoparlanti, quindi suona come {dual} LUFS.",
+    timelineTitle: "Loudness nel tempo (media su 3 secondi)",
+    estimateNote: "Il loudness segue la norma ITU-R BS.1770. Il true peak è una stima con sovracampionamento 4× attorno ai campioni più forti.",
+  },
+};

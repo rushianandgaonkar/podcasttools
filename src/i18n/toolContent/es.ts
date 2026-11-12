@@ -780,4 +780,93 @@ Se resume en tres pilares: una apertura predecible que prometa valor en los prim
       "Haz un seguimiento educado una semana después si no obtienes respuesta.",
     ],
   },
+  "lufs-meter": {
+    metaTitle: "Medidor LUFS Online Gratis para Podcast | Pod Studio",
+    metaDescription:
+      "Medidor LUFS online y gratis. Suelta un audio y comprueba la sonoridad integrada, el pico real y el rango frente al objetivo de −16 LUFS. Sin subir archivos.",
+    overview: [
+      "El Medidor LUFS mide lo fuerte que suena de verdad un episodio. Calcula la sonoridad integrada en LUFS, el pico real en dBTP y el rango de sonoridad con el método ITU-R BS.1770 que utilizan las plataformas de podcast y streaming.",
+      "Después compara tu archivo con el objetivo de la plataforma y te indica cuántos decibelios subir o bajar. El audio se decodifica y se mide en tu navegador, así que el archivo nunca sale de tu dispositivo.",
+    ],
+    steps: [
+      { title: "Elige un objetivo", text: "Selecciona Apple Podcasts (−16 LUFS), Spotify (−14 LUFS) o el estándar de radiodifusión (−23 LUFS)." },
+      { title: "Suelta tu archivo", text: "Añade el episodio exportado en MP3, WAV, M4A, FLAC u OGG. Medir un episodio largo puede tardar unos segundos." },
+      { title: "Lee el resultado", text: "Compara la sonoridad integrada y el pico real con el objetivo y revisa la línea de tiempo para detectar tramos mucho más fuertes o más bajos." },
+      { title: "Ajusta y vuelve a exportar", text: "Aplica en tu editor el cambio de ganancia sugerido, usa un limitador si el pico sube demasiado y mide el nuevo archivo." },
+    ],
+    tips: [
+      "Mide el archivo final exportado, no el proyecto. La codificación a MP3 puede subir ligeramente el pico real.",
+      "Si el archivo es mono, apunta a unos −19 LUFS medidos como un solo canal. Suena igual de fuerte que un archivo estéreo a −16 LUFS.",
+      "Un rango de sonoridad por encima de unos 10 LU suele indicar que los pasajes bajos costarán de oír en el coche o en el tren. Una compresión suave ayuda.",
+    ],
+    sections: [
+      {
+        heading: "Qué es −16 LUFS y por qué importa en los podcasts",
+        paragraphs: [
+          "LUFS (unidades de sonoridad relativas a escala completa) mide la sonoridad percibida de todo el archivo en lugar de su pico más alto. Apple Podcasts pide una sonoridad global en torno a −16 dB LKFS, con una tolerancia de ±1 dB y un pico real que no supere −1 dBFS. LKFS y LUFS son la misma unidad con dos nombres.",
+          "Spotify ajusta la reproducción a −14 LUFS, por lo que muchos podcasters siguen entregando a −16 LUFS y dejan que cada aplicación haga su propio ajuste. Mantenerte cerca del objetivo hace que tu programa suene a un volumen parecido al de los episodios anteriores y posteriores, y el oyente no tiene que tocar el volumen.",
+        ],
+      },
+    ],
+  },
+  "script-timer": {
+    metaTitle: "Calculadora de Palabras a Minutos | Pod Studio",
+    metaDescription:
+      "Temporizador de guion gratis para podcasts. Pega un guion, convierte palabras a minutos, compáralo con tu duración objetivo y mide cada segmento. Sin registro.",
+    overview: [
+      "El Temporizador de Guion convierte las palabras de tu guion en tiempo de lectura. Pega una intro, una cuña publicitaria o el guion completo de un episodio y verás cuánto tarda en leerse en voz alta a tu ritmo, junto con el número de palabras y de párrafos.",
+      "Fija una duración objetivo para saber si el guion se pasa o se queda corto, y por cuántas palabras. Empieza una línea con # para dividir el guion en segmentos y el temporizador crea una escaleta con la hora de inicio y la duración de cada uno. Las indicaciones entre [corchetes] y las etiquetas de locutor como HOST: no se cuentan.",
+    ],
+    steps: [
+      { title: "Elige tu ritmo", text: "Selecciona lento, natural o rápido, o escribe tus propias palabras por minuto. Muchos presentadores de podcast hablan a unas 150 palabras por minuto." },
+      { title: "Pega tu guion", text: "Escribe o pega el guion. Marca los segmentos con títulos #, o pega una escaleta exportada desde el Creador de Escaletas." },
+      { title: "Fija una duración objetivo", text: "Elige un objetivo como 1, 15 o 30 minutos y añade tiempo para la música y las pausas publicitarias." },
+      { title: "Recorta o amplía", text: "Usa el aviso de exceso o defecto para quitar o añadir palabras y revisa en la escaleta qué segmentos se alargan." },
+    ],
+    tips: [
+      "Cronométrate leyendo un minuto de tu guion e introduce esa cifra como ritmo personalizado. Es más preciso que cualquier promedio.",
+      "Las cuñas publicitarias de podcast suelen venderse en 30 o 60 segundos. A un ritmo natural son unas 75 o 150 palabras.",
+      "Deja algo de margen. Las improvisaciones, las risas y las pausas suelen alargar la grabación respecto al guion.",
+    ],
+    sections: [
+      {
+        heading: "¿Cuántas palabras tiene un guion de podcast de 1, 5 o 30 minutos?",
+        intro: "A un ritmo natural de podcast de 150 palabras por minuto, estas cifras son un buen punto de partida. Ajústalas a tu propio ritmo.",
+        list: [
+          {
+            title: "30 segundos",
+            description: "Unas 75 palabras, lo que dura una cuña publicitaria corta.",
+          },
+          {
+            title: "1 minuto",
+            description: "Unas 150 palabras, suficiente para una intro completa o una cuña de 60 segundos.",
+          },
+          {
+            title: "5 minutos",
+            description: "Unas 750 palabras.",
+          },
+          {
+            title: "10 minutos",
+            description: "Unas 1.500 palabras.",
+          },
+          {
+            title: "20 minutos",
+            description: "Unas 3.000 palabras.",
+          },
+          {
+            title: "30 minutos",
+            description: "Unas 4.500 palabras.",
+          },
+          {
+            title: "60 minutos",
+            description: "Unas 9.000 palabras.",
+          },
+        ],
+        link: {
+          text: "Planifica primero los segmentos con el Creador de Escaletas",
+          href: "/tools/episode-outline-builder",
+        },
+      },
+    ],
+  },
 };

@@ -41,6 +41,8 @@ export const EXPECTED_TOOL_SLUGS = [
   "trailer-script-builder",
   "review-response-generator",
   "collab-finder",
+  "lufs-meter",
+  "script-timer",
 ] as const;
 
 /**

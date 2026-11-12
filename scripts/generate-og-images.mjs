@@ -3,7 +3,7 @@
  * Generates the 1200x630 Open Graph / Twitter share cards.
  *
  *   public/og-image.png              → site-wide default card
- *   public/og/tools/<slug>.png       → one card per tool (18)
+ *   public/og/tools/<slug>.png       → one card per tool
  *   public/og/guides/<slug>.png      → one card per guide
  *   public/apple-touch-icon.png      → 180x180 iOS home-screen icon
  *
@@ -45,7 +45,7 @@ const fontCss = fontDir
   : `@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&display=block");`;
 
 const accentFor = (categoryId) =>
-  toolCategories.find((c) => c.id === categoryId)?.accent ?? "#7c3aed";
+  toolCategories.find((c) => c.id === categoryId)?.accent ?? "#a9583e";
 
 const imgCache = new Map();
 const imgUrl = (webPath) => {
@@ -77,11 +77,11 @@ function page({ eyebrow, accent, title, subtitle, images, footer }) {
 ${fontCss}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:${W}px;height:${H}px;overflow:hidden}
-body{font-family:Geist,system-ui,sans-serif;background:#0a0a0a;color:#ededed;position:relative}
+body{font-family:Geist,system-ui,sans-serif;background:#141413;color:#faf9f5;position:relative}
 .bloom{position:absolute;inset:0;background:
  radial-gradient(520px 380px at 88% 20%, ${accent}55, transparent 70%),
- radial-gradient(600px 420px at 10% 110%, #7928ca40, transparent 70%),
- radial-gradient(460px 320px at 60% 120%, #f9731633, transparent 70%)}
+ radial-gradient(600px 420px at 10% 110%, #cc785c40, transparent 70%),
+ radial-gradient(460px 320px at 60% 120%, #8f463040, transparent 70%)}
 .grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:40px 40px;mask-image:linear-gradient(90deg,#000 0%,transparent 70%)}
 .wrap{position:absolute;inset:0;padding:64px 0 56px 72px;display:flex;flex-direction:column;width:700px}
 .brand{display:flex;align-items:center;gap:14px;font-weight:600;font-size:26px;letter-spacing:-.02em}
@@ -100,7 +100,7 @@ p{margin-top:20px;font-size:23px;line-height:1.4;color:#a1a1a1;max-width:600px;d
 .art.stack .s0{right:200px;top:70px;transform:rotate(-8deg)}
 .art.stack .s1{right:60px;top:150px;transform:rotate(6deg);z-index:2}
 .art.stack .s2{right:150px;top:300px;transform:rotate(-2deg);z-index:3}
-.bar{position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,#6366f1,#a855f7,#f97316)}
+.bar{position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,#e9c2b0,#cc785c,#8f4630)}
 </style></head><body>
 <div class="bloom"></div><div class="grid"></div>
 ${art}
@@ -122,7 +122,7 @@ jobs.push({
   out: "public/og-image.png",
   html: page({
     eyebrow: `${toolRegistry.length} free podcast tools`,
-    accent: "#7c3aed",
+    accent: "#cc785c",
     title: "Create, polish & monetize your podcast.",
     subtitle: "Episode titles, show notes, CPM revenue, cover art checks, RSS validation and more.",
     images: [toolRegistry[0], toolRegistry[5], toolRegistry[6]].map((t) => imgUrl(t.image)),
@@ -152,7 +152,7 @@ const guideArt = {
   "how-to-write-clickable-episode-titles": ["episode-title-generator", "#7c3aed"],
 };
 for (const guide of guidesRegistry) {
-  const [toolSlug, accent] = guideArt[guide.slug] ?? ["episode-title-generator", "#7c3aed"];
+  const [toolSlug, accent] = guideArt[guide.slug] ?? ["episode-title-generator", "#cc785c"];
   const tool = toolRegistry.find((t) => t.slug === toolSlug);
   jobs.push({
     out: `public/og/guides/${guide.slug}.png`,
@@ -185,7 +185,7 @@ for (const job of jobs) {
 // 180x180 apple-touch-icon (iOS ignores SVG touch icons)
 await pg.setViewportSize({ width: 180, height: 180 });
 await pg.setContent(
-  `<html><body style="margin:0;background:#0B0B18"><img src="${iconDataUri}" style="width:180px;height:180px;display:block"/></body></html>`,
+  `<html><body style="margin:0;background:#141413"><img src="${iconDataUri}" style="width:180px;height:180px;display:block"/></body></html>`,
   { waitUntil: "load" }
 );
 await sharp(await pg.screenshot({ type: "png" })).png().toFile(path.join(root, "public/apple-touch-icon.png"));

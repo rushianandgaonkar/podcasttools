@@ -396,6 +396,49 @@ export const esFaqs: ToolFaqsRecord = {
       question: "¿Cuánto tiempo debo esperar antes de hacer seguimiento a una propuesta?",
       answer: "Esperar entre una y dos semanas suele ser un plazo prudencial, adaptado al contexto y calendario. Aporta algún dato nuevo o relevante en lugar de reenviar el mismo mensaje. Si recibes una negativa, acéptala con profesionalidad y respeto."
     }
+  ],
+  "lufs-meter": [
+    {
+      question: "¿A cuántos LUFS debe estar un podcast?",
+      answer: "Apple Podcasts recomienda una sonoridad global de unos −16 LUFS, con ±1 dB de margen y un pico real que no supere −1 dBFS. Spotify ajusta la reproducción a −14 LUFS. Muchos podcasters masterizan a −16 LUFS para que un mismo archivo sirva en todas las aplicaciones."
+    },
+    {
+      question: "¿Cómo mido los LUFS de un archivo de audio?",
+      answer: "Suelta el archivo exportado en el medidor. Decodifica el audio en tu navegador, aplica el filtro de ponderación K y las puertas definidas en ITU-R BS.1770 y muestra la sonoridad integrada, el pico real y el rango de sonoridad. No se sube nada."
+    },
+    {
+      question: "¿Por qué mi archivo mono marca −19 LUFS en lugar de −16?",
+      answer: "Un archivo mono medido como un solo canal marca unos 3 LU menos que el mismo audio en dos canales. Los reproductores envían el mono a ambos altavoces, así que un archivo mono a −19 LUFS suena igual de fuerte que uno estéreo a −16 LUFS. El medidor muestra ambos valores en los archivos mono."
+    },
+    {
+      question: "¿Qué diferencia hay entre LUFS y pico real?",
+      answer: "LUFS describe la sonoridad media percibida de todo el archivo. El pico real es el nivel más alto que alcanza la onda al convertirse de nuevo en señal analógica, incluidos los picos entre muestras. Un archivo puede cumplir el objetivo de sonoridad y aun así distorsionar si su pico real es demasiado alto."
+    },
+    {
+      question: "¿Esta herramienta modifica o normaliza mi audio?",
+      answer: "No. Solo mide. Te indica cuántos decibelios subir o bajar el nivel, y tú aplicas el cambio en tu editor de audio. El pico real es una estimación con sobremuestreo 4×, así que deja un pequeño margen de seguridad."
+    }
+  ],
+  "script-timer": [
+    {
+      question: "¿Cuántas palabras por minuto se dicen en un podcast?",
+      answer: "Muchos presentadores de podcast hablan a unas 150 a 160 palabras por minuto. La conversación cotidiana suele ser algo más lenta, de unas 120 a 150, y un programa narrado y tranquilo puede rondar las 130. Lo que más importa es tu propio ritmo, así que cronométrate leyendo un minuto de tu guion."
+    },
+    {
+      question: "¿Cuánto se tarda en leer 1.000 palabras en voz alta?",
+      answer: "Unos 6 minutos y 40 segundos a 150 palabras por minuto. A un ritmo más lento de 130 palabras por minuto se tarda unos 7 minutos y 42 segundos, y a uno más rápido de 170, unos 5 minutos y 53 segundos."
+    },
+    {
+      question: "¿Cuántas palabras necesito para un episodio de podcast de 30 minutos?",
+      answer: "Unas 4.500 palabras a 150 palabras por minuto. La mayoría de los programas de entrevista o conversación no van totalmente guionizados, así que usa la cifra como guía para las partes escritas, como la intro, las cuñas y el cierre, y deja el resto del tiempo para la conversación."
+    },
+    {
+      question: "¿El temporizador cuenta las acotaciones y los nombres de los locutores?",
+      answer: "No, por defecto. El texto entre [corchetes], como [ENTRA MÚSICA], y las etiquetas de locutor al principio de una línea, como HOST:, se omiten porque nadie los lee en voz alta. Las líneas que empiezan por # se tratan como títulos de segmento. Desmarca la opción si quieres que se cuente todo lo demás."
+    },
+    {
+      question: "¿Funciona con guiones en japonés y coreano?",
+      answer: "Sí. Los guiones en japonés y coreano se cuentan en caracteres en lugar de palabras, con sus propios ritmos predefinidos: unos 300 caracteres por minuto en japonés y unos 280 en coreano. En coreano no se cuentan los espacios ni los signos de puntuación. Puedes cambiar el ritmo para ajustarlo a tu velocidad de lectura."
+    }
   ]
 };
-

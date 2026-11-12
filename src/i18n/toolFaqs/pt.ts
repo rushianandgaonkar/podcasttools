@@ -396,6 +396,49 @@ export const ptFaqs: ToolFaqsRecord = {
       question: "Quanto tempo devo aguardar antes de fazer um follow-up de uma proposta?",
       answer: "Um intervalo de uma a duas semanas é geralmente adequado para uma mensagem cordial de acompanhamento. Acrescente um detalhe novo e relevante em vez de reenviar exatamente o mesmo texto, e respeite caso haja uma recusa."
     }
+  ],
+  "lufs-meter": [
+    {
+      question: "Qual deve ser o LUFS de um podcast?",
+      answer: "O Apple Podcasts recomenda um loudness geral de cerca de −16 LUFS, com margem de ±1 dB, e pico real de no máximo −1 dBFS. O Spotify ajusta a reprodução para −14 LUFS. Muitos podcasters masterizam em −16 LUFS para que um único arquivo sirva em todos os aplicativos."
+    },
+    {
+      question: "Como medir o LUFS de um arquivo de áudio?",
+      answer: "Solte o arquivo exportado no medidor. Ele decodifica o áudio no navegador, aplica o filtro de ponderação K e os gates definidos na ITU-R BS.1770 e mostra o loudness integrado, o pico real e a faixa de loudness. Nada é enviado."
+    },
+    {
+      question: "Por que meu arquivo mono marca −19 LUFS em vez de −16?",
+      answer: "Um arquivo mono medido como um único canal marca cerca de 3 LU a menos que o mesmo áudio em dois canais. Os players enviam o mono para os dois alto-falantes, então um arquivo mono em −19 LUFS soa tão alto quanto um estéreo em −16 LUFS. O medidor mostra os dois valores para arquivos mono."
+    },
+    {
+      question: "Qual é a diferença entre LUFS e pico real?",
+      answer: "LUFS descreve o volume médio percebido do arquivo inteiro. O pico real é o nível mais alto que a onda atinge ao ser convertida de volta para o analógico, incluindo os picos entre as amostras. Um arquivo pode atingir o alvo de loudness e ainda assim distorcer se o pico real estiver alto demais."
+    },
+    {
+      question: "Esta ferramenta altera ou normaliza o meu áudio?",
+      answer: "Não. Ela apenas mede. Ela indica quantos decibéis aumentar ou reduzir, e você aplica a mudança no seu editor de áudio. O pico real é uma estimativa com sobreamostragem de 4×, então deixe uma pequena margem de segurança."
+    }
+  ],
+  "script-timer": [
+    {
+      question: "Quantas palavras por minuto se fala em um podcast?",
+      answer: "Muitos apresentadores de podcast falam cerca de 150 a 160 palavras por minuto. A conversa do dia a dia costuma ser um pouco mais lenta, em torno de 120 a 150, e um programa narrado e calmo pode ficar perto de 130. O que mais importa é o seu ritmo, então cronometre-se lendo um minuto do seu roteiro."
+    },
+    {
+      question: "Quanto tempo leva para ler 1.000 palavras em voz alta?",
+      answer: "Cerca de 6 minutos e 40 segundos a 150 palavras por minuto. Em um ritmo mais lento, de 130 palavras por minuto, leva cerca de 7 minutos e 42 segundos, e em um mais rápido, de 170, cerca de 5 minutos e 53 segundos."
+    },
+    {
+      question: "Quantas palavras preciso para um episódio de podcast de 30 minutos?",
+      answer: "Cerca de 4.500 palavras a 150 palavras por minuto. A maioria dos programas de entrevista e conversa não é totalmente roteirizada, então use o número como guia para as partes escritas, como abertura, anúncios e encerramento, e reserve o restante do tempo para a conversa."
+    },
+    {
+      question: "O cronômetro conta as indicações técnicas e os nomes dos locutores?",
+      answer: "Por padrão, não. Texto entre [colchetes], como [ENTRA MÚSICA], e nomes de locutor no início da linha, como HOST:, são ignorados porque ninguém os lê em voz alta. Linhas que começam com # são tratadas como títulos de segmento. Desmarque a opção se quiser que todo o resto seja contado."
+    },
+    {
+      question: "Funciona com roteiros em japonês e coreano?",
+      answer: "Sim. Roteiros em japonês e coreano são contados em caracteres em vez de palavras, com ritmos predefinidos próprios: cerca de 300 caracteres por minuto em japonês e cerca de 280 em coreano. Em coreano, espaços e pontuação não são contados. Você pode alterar o ritmo para acompanhar sua velocidade de leitura."
+    }
   ]
 };
-

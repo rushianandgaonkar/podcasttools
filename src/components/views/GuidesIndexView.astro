@@ -42,11 +42,11 @@ const itemListSchema = {
   <div class="w-full py-10 sm:py-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-10">
       <div class="space-y-3">
-        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 font-mono text-[11px]">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] text-neutral-600 dark:text-neutral-400 font-mono text-[11px]">
           <BookOpen className="w-3 h-3 text-[#a9583e]" />
           {copy.guidesIndex.eyebrow}
         </div>
-        <h1 class="text-2xl sm:text-4xl font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white">
+        <h1 class="font-display text-3xl sm:text-[2.6rem] font-semibold tracking-[-0.03em] text-neutral-900 dark:text-white">
           {copy.guidesIndex.heading}
         </h1>
         <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl">
@@ -60,7 +60,7 @@ const itemListSchema = {
           return (
             <a
               href={getLocalizedPath(`/guides/${guide.slug}`, lang)}
-              class="group p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex flex-col justify-between"
+              class="group p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex flex-col justify-between"
             >
               <div>
                 <GuideCover slug={guide.slug} class="aspect-[2/1] mb-4 -mt-1" />

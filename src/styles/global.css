@@ -4,7 +4,22 @@
 
 @theme {
   --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Bricolage Grotesque", "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "Geist Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  /* Warm neutral scale: every text-/bg-/border-neutral-* utility picks these up,
+     so greys sit on the cream canvas instead of looking cold against it. */
+  --color-neutral-50: #faf8f3;
+  --color-neutral-100: #f3efe7;
+  --color-neutral-200: #e6dfd8;
+  --color-neutral-300: #d6cdc0;
+  --color-neutral-400: #a59f94;
+  --color-neutral-500: #716d64;
+  --color-neutral-600: #5a5750;
+  --color-neutral-700: #45433d;
+  --color-neutral-800: #34312c;
+  --color-neutral-900: #1f1e1b;
+  --color-neutral-950: #141413;
 
   /* Vercel Geist Tokens from DESIGN.md */
   --color-canvas: #faf9f5;
@@ -136,6 +151,40 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Inside a tool, Tailwind's orange scale is remapped to the brand terracotta,
+   so all tools share one accent without editing each component. */
+.tool-workspace {
+  --color-orange-50: #fbf1ec;
+  --color-orange-100: #f6e2d9;
+  --color-orange-200: #eccbbb;
+  --color-orange-300: #e0ab93;
+  --color-orange-400: #d58f72;
+  --color-orange-500: #b5613f;
+  --color-orange-600: #a9583e;
+  --color-orange-700: #8f4630;
+  --color-orange-800: #733929;
+  --color-orange-900: #5c2f23;
+  --color-orange-950: #33170f;
+  accent-color: #a9583e;
+}
+
+.tool-workspace :is(button, a, input, textarea, select, summary):focus-visible {
+  outline: 2px solid #cc785c;
+  outline-offset: 2px;
+}
+
+/* Links inside long-form guide copy */
+.guide-prose a {
+  color: #a9583e;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.dark .guide-prose a {
+  color: #e0ab93;
+}
+
 /* Adaptive Contrast for Tool Workspaces in Light Mode */
 :root:not(.dark) .tool-workspace .text-white:not(button[class*="bg-"]):not(a[class*="bg-"]):not([class*="bg-orange-"]):not([class*="bg-indigo-"]):not([class*="bg-blue-"]):not([class*="bg-emerald-"]):not(.dark-surface *),
 :root:not(.dark) .tool-workspace .text-slate-50:not(.dark-surface *),
@@ -214,44 +263,86 @@ body {
 :root:not(.dark) .tool-workspace input,
 :root:not(.dark) .tool-workspace textarea,
 :root:not(.dark) .tool-workspace select {
-  background-color: #fafafa !important;
-  color: #171717 !important;
-  border-color: #e5e5e5 !important;
+  background-color: #fffdf9 !important;
+  color: #141413 !important;
+  border-color: #d6cdc0 !important;
 }
 
 :root:not(.dark) .tool-workspace input:focus,
 :root:not(.dark) .tool-workspace textarea:focus,
 :root:not(.dark) .tool-workspace select:focus {
-  border-color: #171717 !important;
+  border-color: #a9583e !important;
+  box-shadow: 0 0 0 3px rgba(169, 88, 62, 0.16);
   outline: none !important;
 }
 
 .dark .tool-workspace input,
 .dark .tool-workspace textarea,
 .dark .tool-workspace select {
-  background-color: #050505 !important;
-  color: #ededed !important;
-  border-color: #262626 !important;
+  background-color: #131210 !important;
+  color: #faf9f5 !important;
+  border-color: #34312c !important;
 }
 
 .dark .tool-workspace input:focus,
 .dark .tool-workspace textarea:focus,
 .dark .tool-workspace select:focus {
-  border-color: #404040 !important;
+  border-color: #cc785c !important;
+  box-shadow: 0 0 0 3px rgba(204, 120, 92, 0.22);
   outline: none !important;
 }
 
-/* Vercel Hero Mesh Gradient effect */
-.vercel-hero-mesh {
-  background: radial-gradient(circle at 50% 30%, rgba(0, 112, 243, 0.08) 0%, transparent 60%),
-              radial-gradient(circle at 20% 20%, rgba(121, 40, 202, 0.06) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(0, 223, 216, 0.06) 0%, transparent 50%);
+/* ---------- Studio identity ---------- */
+
+/* Hero backdrop: one soft warm glow behind the console, nothing else. */
+.studio-hero {
+  background:
+    radial-gradient(60rem 28rem at 78% 38%, rgba(204, 120, 92, 0.13), transparent 70%),
+    var(--bg-page);
 }
 
-.dark .vercel-hero-mesh {
-  background: radial-gradient(circle at 50% 30%, rgba(0, 112, 243, 0.16) 0%, transparent 60%),
-              radial-gradient(circle at 20% 20%, rgba(121, 40, 202, 0.12) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(0, 223, 216, 0.10) 0%, transparent 50%);
+.dark .studio-hero {
+  background:
+    radial-gradient(60rem 28rem at 78% 38%, rgba(204, 120, 92, 0.16), transparent 70%),
+    var(--bg-page);
+}
+
+/* Level-meter bars in the hero console: they redraw when the visitor types. */
+.studio-meter-bar {
+  min-height: 3px;
+  transition: height 420ms cubic-bezier(0.22, 1, 0.36, 1), opacity 420ms ease;
+}
+
+/* "Live" indicator on the console */
+.studio-live-dot {
+  animation: studio-live 2.4s ease-in-out infinite;
+}
+
+@keyframes studio-live {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* Soft cross-fade between pages in browsers that support it (no JavaScript). */
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .studio-meter-bar {
+    transition: none;
+  }
+  .studio-live-dot {
+    animation: none;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Minimal Custom Scrollbar */

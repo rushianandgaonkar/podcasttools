@@ -780,4 +780,93 @@ Das steht und fällt mit drei Faktoren: einem verlässlichen Einstieg, der inner
       "Hake nach einer Woche freundlich nach, falls du noch keine Rückmeldung erhalten hast.",
     ],
   },
+  "lufs-meter": {
+    metaTitle: "LUFS-Meter: Lautheit online kostenlos messen | Pod Studio",
+    metaDescription:
+      "Kostenloses Online-LUFS-Meter. Audiodatei ablegen und integrierte Lautheit, True Peak und Lautheitsbereich mit dem Zielwert −16 LUFS vergleichen. Ohne Upload.",
+    overview: [
+      "Das LUFS-Meter misst, wie laut eine Folge wirklich ist. Es ermittelt die integrierte Lautheit in LUFS, den True Peak in dBTP und den Lautheitsbereich nach dem Verfahren ITU-R BS.1770, auf das sich Podcast- und Streaming-Plattformen stützen.",
+      "Anschließend vergleicht es deine Datei mit dem Zielwert der Plattform und zeigt dir, um wie viele Dezibel du den Pegel anheben oder absenken solltest. Das Audio wird in deinem Browser dekodiert und gemessen, die Datei verlässt dein Gerät also nie.",
+    ],
+    steps: [
+      { title: "Zielwert wählen", text: "Wähle Apple Podcasts (−16 LUFS), Spotify (−14 LUFS) oder den Rundfunkstandard (−23 LUFS)." },
+      { title: "Datei ablegen", text: "Füge die exportierte Folge als MP3, WAV, M4A, FLAC oder OGG hinzu. Bei langen Folgen kann die Messung einige Sekunden dauern." },
+      { title: "Ergebnis lesen", text: "Vergleiche integrierte Lautheit und True Peak mit dem Zielwert und prüfe im Zeitverlauf, ob einzelne Abschnitte deutlich lauter oder leiser sind." },
+      { title: "Anpassen und neu exportieren", text: "Übernimm die vorgeschlagene Pegeländerung in deinem Editor, nutze einen Limiter, falls der Spitzenpegel zu hoch wird, und miss die neue Datei." },
+    ],
+    tips: [
+      "Miss die fertig exportierte Datei, nicht das Projekt. Die MP3-Kodierung kann den True Peak leicht anheben.",
+      "Bei einer Mono-Datei solltest du etwa −19 LUFS anpeilen, gemessen als einzelner Kanal. Sie klingt so laut wie eine Stereo-Datei mit −16 LUFS.",
+      "Ein Lautheitsbereich über etwa 10 LU bedeutet oft, dass leise Passagen im Auto oder in der Bahn schwer zu hören sind. Sanfte Kompression hilft.",
+    ],
+    sections: [
+      {
+        heading: "Was bedeutet −16 LUFS und warum ist das für Podcasts wichtig?",
+        paragraphs: [
+          "LUFS (Loudness Units relative to Full Scale) misst die wahrgenommene Lautheit der gesamten Datei statt ihres höchsten Spitzenpegels. Apple Podcasts verlangt eine Gesamtlautheit von etwa −16 dB LKFS mit einer Toleranz von ±1 dB und einen True Peak von höchstens −1 dBFS. LKFS und LUFS sind dieselbe Einheit unter zwei Namen.",
+          "Spotify passt die Wiedergabe auf −14 LUFS an, deshalb liefern viele Podcaster weiterhin mit −16 LUFS und überlassen jeder App die eigene Anpassung. Wer nah am Zielwert bleibt, klingt ähnlich laut wie die Folgen davor und danach, und niemand muss zum Lautstärkeregler greifen.",
+        ],
+      },
+    ],
+  },
+  "script-timer": {
+    metaTitle: "Skript-Timer: Wörter in Minuten umrechnen | Pod Studio",
+    metaDescription:
+      "Kostenloser Skript-Timer für Podcasts. Skript einfügen, Wörter in Minuten umrechnen, mit der Ziellänge vergleichen und jedes Segment timen. Ohne Anmeldung.",
+    overview: [
+      "Der Skript-Timer rechnet die Wörter deines Skripts in Sprechdauer um. Füge ein Intro, einen Werbespot oder ein ganzes Folgenskript ein und sieh, wie lange das Vorlesen in deinem Tempo dauert – dazu Wortzahl und Anzahl der Absätze.",
+      "Lege eine Ziellänge fest, um zu sehen, ob das Skript zu lang oder zu kurz ist und um wie viele Wörter. Beginne Zeilen mit #, um das Skript in Segmente zu teilen; der Timer erstellt daraus einen Ablaufplan mit Startzeit und Dauer für jedes Segment. Hinweise in [eckigen Klammern] und Sprecherangaben wie HOST: werden nicht mitgezählt.",
+    ],
+    steps: [
+      { title: "Tempo wählen", text: "Wähle langsam, natürlich oder schnell oder gib deine eigenen Wörter pro Minute ein. Viele Podcast-Hosts sprechen etwa 150 Wörter pro Minute." },
+      { title: "Skript einfügen", text: "Tippe oder füge das Skript ein. Markiere Segmente mit #-Überschriften oder füge einen Ablaufplan aus dem Episoden-Ablauf-Planer ein." },
+      { title: "Ziellänge festlegen", text: "Wähle ein Ziel wie 1, 15 oder 30 Minuten und plane Zeit für Musik und Werbepausen ein." },
+      { title: "Kürzen oder ergänzen", text: "Nutze den Hinweis zu Über- oder Unterlänge, um Wörter zu streichen oder hinzuzufügen, und prüfe im Ablaufplan, welche Segmente zu lang sind." },
+    ],
+    tips: [
+      "Stopp die Zeit, während du eine Minute deines Skripts vorliest, und trag diese Zahl als eigenes Tempo ein. Das ist genauer als jeder Durchschnittswert.",
+      "Werbespots in Podcasts werden oft als 30 oder 60 Sekunden verkauft. Bei natürlichem Tempo sind das etwa 75 oder 150 Wörter.",
+      "Plane etwas Puffer ein. Spontane Einschübe, Lacher und Pausen machen die Aufnahme meist länger als das Skript.",
+    ],
+    sections: [
+      {
+        heading: "Wie viele Wörter hat ein Podcast-Skript für 1, 5 oder 30 Minuten?",
+        intro: "Bei einem natürlichen Podcast-Tempo von 150 Wörtern pro Minute sind diese Werte ein guter Ausgangspunkt. Passe sie an dein eigenes Tempo an.",
+        list: [
+          {
+            title: "30 Sekunden",
+            description: "Etwa 75 Wörter, so lang wie ein kurzer Werbespot.",
+          },
+          {
+            title: "1 Minute",
+            description: "Etwa 150 Wörter, genug für ein komplettes Intro oder einen 60-Sekunden-Spot.",
+          },
+          {
+            title: "5 Minuten",
+            description: "Etwa 750 Wörter.",
+          },
+          {
+            title: "10 Minuten",
+            description: "Etwa 1.500 Wörter.",
+          },
+          {
+            title: "20 Minuten",
+            description: "Etwa 3.000 Wörter.",
+          },
+          {
+            title: "30 Minuten",
+            description: "Etwa 4.500 Wörter.",
+          },
+          {
+            title: "60 Minuten",
+            description: "Etwa 9.000 Wörter.",
+          },
+        ],
+        link: {
+          text: "Plane zuerst deine Segmente mit dem Episoden-Ablauf-Planer",
+          href: "/tools/episode-outline-builder",
+        },
+      },
+    ],
+  },
 };

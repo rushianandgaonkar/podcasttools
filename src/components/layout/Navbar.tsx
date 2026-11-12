@@ -94,7 +94,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full border-b border-neutral-200 dark:border-[#222222] bg-[#faf9f5]/80 dark:bg-[#000000]/80 backdrop-blur-md transition-colors duration-150">
+      <header className="sticky top-0 z-40 w-full border-b border-neutral-200 dark:border-[#222222] bg-[#faf9f5]/80 dark:bg-[#181715]/80 backdrop-blur-md transition-colors duration-150">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
           {/* Logo */}
           <a
@@ -188,7 +188,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
             {/* Dark / Light Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-1.5 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-all shadow-2xs focus:outline-none"
+              className="p-1.5 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-all shadow-2xs focus:outline-none"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
               title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             >
@@ -202,7 +202,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
             {/* Mobile Hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-1.5 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] text-neutral-700 dark:text-neutral-300"
+              className="md:hidden p-1.5 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] text-neutral-700 dark:text-neutral-300"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -212,7 +212,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
 
         {/* Clean Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] px-4 py-3 space-y-1">
+          <div className="md:hidden border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1f1e1b] px-4 py-3 space-y-1">
             <a
               href={getLocalizedPath("/tools", currentLang)}
               onClick={() => setMobileMenuOpen(false)}
@@ -252,7 +252,7 @@ export function Navbar({ lang: initialLang }: NavbarProps) {
           onClick={() => setSearchOpen(false)}
         >
           <div
-            className="w-full max-w-xl bg-white dark:bg-[#0c0c0c] border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150"
+            className="w-full max-w-xl bg-white dark:bg-[#1f1e1b] border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Search Input Bar */}

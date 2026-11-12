@@ -396,6 +396,49 @@ export const deFaqs: ToolFaqsRecord = {
       question: "Wie lange sollte ich warten, bevor ich bei einer Anfrage nachhake?",
       answer: "Ein höfliches Nachhaken nach etwa ein bis zwei Wochen ist angemessen. Fügen Sie eine neue, nützliche Information hinzu, statt die gleiche Nachricht erneut zu senden, und respektieren Sie eine Absage stets professionell."
     }
+  ],
+  "lufs-meter": [
+    {
+      question: "Wie viel LUFS sollte ein Podcast haben?",
+      answer: "Apple Podcasts empfiehlt eine Gesamtlautheit von etwa −16 LUFS mit ±1 dB Toleranz und einen True Peak von höchstens −1 dBFS. Spotify passt die Wiedergabe auf −14 LUFS an. Viele Podcaster mastern auf −16 LUFS, damit eine Datei in jeder App funktioniert."
+    },
+    {
+      question: "Wie messe ich die LUFS einer Audiodatei?",
+      answer: "Legen Sie die exportierte Datei im Meter ab. Es dekodiert das Audio in Ihrem Browser, wendet die K-Gewichtung und das Gating nach ITU-R BS.1770 an und zeigt integrierte Lautheit, True Peak und Lautheitsbereich. Es wird nichts hochgeladen."
+    },
+    {
+      question: "Warum zeigt meine Mono-Datei −19 LUFS statt −16?",
+      answer: "Eine Mono-Datei, die als einzelner Kanal gemessen wird, liegt etwa 3 LU unter demselben Audio auf zwei Kanälen. Player geben Mono auf beiden Lautsprechern wieder, deshalb klingt eine Mono-Datei mit −19 LUFS so laut wie eine Stereo-Datei mit −16 LUFS. Das Meter zeigt bei Mono-Dateien beide Werte."
+    },
+    {
+      question: "Was ist der Unterschied zwischen LUFS und True Peak?",
+      answer: "LUFS beschreibt die durchschnittlich wahrgenommene Lautheit der gesamten Datei. Der True Peak ist der höchste Pegel, den die Wellenform nach der Rückwandlung ins Analoge erreicht, einschließlich der Spitzen zwischen zwei Samples. Eine Datei kann den Lautheitszielwert treffen und trotzdem verzerren, wenn ihr True Peak zu hoch ist."
+    },
+    {
+      question: "Verändert oder normalisiert dieses Tool mein Audio?",
+      answer: "Nein. Es misst nur. Es zeigt Ihnen, um wie viele Dezibel Sie den Pegel anheben oder absenken sollten, und Sie nehmen die Änderung in Ihrem Audio-Editor vor. Der True Peak ist eine Schätzung mit 4-fachem Oversampling, lassen Sie daher eine kleine Sicherheitsreserve."
+    }
+  ],
+  "script-timer": [
+    {
+      question: "Wie viele Wörter pro Minute spricht man in einem Podcast?",
+      answer: "Viele Podcast-Hosts sprechen etwa 150 bis 160 Wörter pro Minute. Alltagsgespräche sind oft etwas langsamer, etwa 120 bis 150, und eine ruhig erzählte Sendung liegt eher bei 130. Am wichtigsten ist Ihr eigenes Tempo: Stoppen Sie die Zeit, während Sie eine Minute Ihres Skripts vorlesen."
+    },
+    {
+      question: "Wie lange dauert es, 1.000 Wörter laut vorzulesen?",
+      answer: "Etwa 6 Minuten 40 Sekunden bei 150 Wörtern pro Minute. Bei langsameren 130 Wörtern pro Minute sind es etwa 7 Minuten 42 Sekunden, bei schnelleren 170 etwa 5 Minuten 53 Sekunden."
+    },
+    {
+      question: "Wie viele Wörter brauche ich für eine 30-minütige Podcast-Folge?",
+      answer: "Etwa 4.500 Wörter bei 150 Wörtern pro Minute. Die meisten Interview- und Gesprächsformate sind nicht komplett ausgeschrieben. Nutzen Sie den Wert daher als Richtschnur für die geskripteten Teile wie Intro, Werbespots und Outro und planen Sie die übrige Zeit für das Gespräch ein."
+    },
+    {
+      question: "Zählt der Timer Regieanweisungen und Sprechernamen mit?",
+      answer: "Standardmäßig nicht. Text in [eckigen Klammern], etwa [MUSIK EIN], und Sprecherangaben am Zeilenanfang wie HOST: werden übersprungen, weil sie niemand vorliest. Zeilen, die mit # beginnen, gelten als Segmentüberschriften. Deaktivieren Sie die Option, wenn alles andere mitgezählt werden soll."
+    },
+    {
+      question: "Funktioniert der Timer auch mit japanischen und koreanischen Skripten?",
+      answer: "Ja. Japanische und koreanische Skripte werden in Zeichen statt in Wörtern gezählt, mit eigenen Tempo-Voreinstellungen: etwa 300 Zeichen pro Minute für Japanisch und etwa 280 für Koreanisch. Bei Koreanisch werden Leerzeichen und Satzzeichen nicht mitgezählt. Sie können das Tempo an Ihre eigene Lesegeschwindigkeit anpassen."
+    }
   ]
 };
-

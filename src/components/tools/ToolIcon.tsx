@@ -18,6 +18,8 @@ import {
   Film,
   MessageSquare,
   Users,
+  AudioLines,
+  Timer,
   Wrench,
 } from "lucide-react";
 
@@ -64,6 +66,10 @@ export function ToolIcon({ name, className = "w-5 h-5" }: ToolIconProps) {
       return <MessageSquare className={className} />;
     case "Users":
       return <Users className={className} />;
+    case "AudioLines":
+      return <AudioLines className={className} />;
+    case "Timer":
+      return <Timer className={className} />;
     default:
       return <Wrench className={className} />;
   }
