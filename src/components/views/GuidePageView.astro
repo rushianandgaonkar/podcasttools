@@ -132,7 +132,7 @@ const faqSchema = locGuide.faqs?.length
       </div>
 
       <!-- Localized Guide Content -->
-      <article class="guide-prose space-y-10 text-[15px] sm:text-base text-neutral-700 dark:text-neutral-300 leading-[1.7]">
+      <article class="space-y-10 text-[15px] sm:text-base text-neutral-700 dark:text-neutral-300 leading-[1.7]">
         {locGuide.sections.map((section) => (
           <section class="space-y-3">
             <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-neutral-900 dark:text-white">
@@ -140,7 +140,7 @@ const faqSchema = locGuide.faqs?.length
             </h2>
 
             {section.paragraphs.map((p) => (
-              <p set:html={p} />
+              <p class="guide-prose" set:html={p} />
             ))}
 
             {section.formula && (

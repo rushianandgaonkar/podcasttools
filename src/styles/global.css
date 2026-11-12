@@ -173,16 +173,18 @@ body {
   outline-offset: 2px;
 }
 
-/* Links inside long-form guide copy */
-.guide-prose a {
-  color: #a9583e;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 500;
-}
+/* Links inside long-form guide copy (layered so utility classes like text-white always win) */
+@layer components {
+  .guide-prose a {
+    color: #a9583e;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+  }
 
-.dark .guide-prose a {
-  color: #e0ab93;
+  .dark .guide-prose a {
+    color: #e0ab93;
+  }
 }
 
 /* Adaptive Contrast for Tool Workspaces in Light Mode */
